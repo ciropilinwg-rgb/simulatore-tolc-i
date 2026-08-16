@@ -1,0 +1,10 @@
+[
+  {
+    "date": "2026-08-15",
+    "scope": "app",
+    "macrostructure": "Marquee Hero + Workbench + Long Document",
+    "theme": "design.md",
+    "enrichment": "Tier-A CSS preview on home only",
+    "brief": "Redesign completo della web app TOLC-I mantenendo logica, dati e route"
+  }
+]

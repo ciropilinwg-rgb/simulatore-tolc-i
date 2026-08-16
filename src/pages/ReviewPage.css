@@ -1,0 +1,107 @@
+/* Hallmark · genre: modern-minimal · macrostructure: Long Document · design-system: design.md · designed-as-app */
+.review-page__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  animation: reviewEnter var(--dur-medium) var(--ease-out);
+}
+
+.review-page__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.review-page__eyebrow {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.review-page__title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--color-ink);
+}
+
+.review-page__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-ink-2);
+}
+
+.review-page__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.review-page__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 1.05rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-rule);
+  background: var(--color-surface-frost);
+  box-shadow: var(--shadow-sm);
+}
+
+.review-page__stat span {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.review-page__stat strong {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+  color: var(--color-ink);
+}
+
+.review-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.review-page__actions {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-sm);
+}
+
+.review-page__actions .btn {
+  max-width: 22rem;
+}
+
+@keyframes reviewEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .review-page__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .review-page__actions .btn {
+    width: 100%;
+    max-width: none;
+  }
+}

@@ -1,0 +1,87 @@
+/* Hallmark · design-system tokens · genre: modern-minimal · anchor hue: cobalt */
+:root {
+  --color-paper: oklch(97.6% 0.010 85);
+  --color-paper-2: oklch(95.7% 0.013 85);
+  --color-paper-3: oklch(92.9% 0.016 85);
+  --color-surface: oklch(99.1% 0.004 95);
+  --color-surface-2: oklch(96.8% 0.010 250);
+  --color-ink: oklch(24.0% 0.022 258);
+  --color-ink-2: oklch(42.0% 0.016 255);
+  --color-ink-3: oklch(58.0% 0.013 255);
+  --color-rule: oklch(88.5% 0.008 255);
+  --color-rule-strong: oklch(79.5% 0.012 255);
+  --color-accent: oklch(56.5% 0.190 259);
+  --color-accent-strong: oklch(52.0% 0.190 259);
+  --color-accent-soft: oklch(94.4% 0.030 259);
+  --color-accent-ink: oklch(98.8% 0.006 250);
+  --color-accent-ink-soft: oklch(98.8% 0.006 250 / 0.45);
+  --color-focus: oklch(63.0% 0.170 259);
+  --color-success: oklch(63.0% 0.130 165);
+  --color-success-soft: oklch(96.1% 0.028 165);
+  --color-success-soft-strong: oklch(96.7% 0.022 165);
+  --color-success-line: oklch(63.0% 0.130 165 / 0.35);
+  --color-success-line-soft: oklch(63.0% 0.130 165 / 0.28);
+  --color-success-line-subtle: oklch(63.0% 0.130 165 / 0.22);
+  --color-danger: oklch(62.0% 0.160 28);
+  --color-danger-soft: oklch(95.9% 0.030 28);
+  --color-danger-line: oklch(62.0% 0.160 28 / 0.34);
+  --color-danger-line-soft: oklch(62.0% 0.160 28 / 0.24);
+  --color-danger-line-subtle: oklch(62.0% 0.160 28 / 0.22);
+  --color-danger-divider: oklch(62.0% 0.160 28 / 0.12);
+  --color-warning: oklch(76.0% 0.145 77);
+  --color-warning-soft: oklch(97.1% 0.028 77);
+  --color-warning-ink: oklch(59.0% 0.110 77);
+  --color-warning-line: oklch(76.0% 0.145 77 / 0.22);
+  --color-overlay: oklch(24.0% 0.022 258 / 0.34);
+  --color-shadow: oklch(20% 0.020 250 / 0.10);
+  --color-shadow-strong: oklch(20% 0.025 250 / 0.18);
+  --color-surface-frost-soft: oklch(99.1% 0.004 95 / 0.76);
+  --color-surface-frost: oklch(99.1% 0.004 95 / 0.80);
+  --color-surface-frost-strong: oklch(99.1% 0.004 95 / 0.82);
+  --color-surface-frost-stronger: oklch(99.1% 0.004 95 / 0.84);
+  --color-surface-frost-bold: oklch(99.1% 0.004 95 / 0.88);
+
+  --font-display: 'Manrope', 'Segoe UI', sans-serif;
+  --font-body: 'Instrument Sans', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Cascadia Code', monospace;
+
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
+  --space-3xl: 7rem;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: clamp(2.2rem, 4vw, 3.25rem);
+  --text-display: clamp(2.8rem, 6vw, 5.2rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --dur-short: 180ms;
+  --dur-medium: 280ms;
+  --dur-long: 420ms;
+
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 12px 24px -20px var(--color-shadow);
+  --shadow-md: 0 24px 44px -28px var(--color-shadow-strong);
+  --shadow-lg: 0 36px 72px -36px var(--color-shadow-strong);
+
+  --topbar-height: 4.5rem;
+  --max-width-app: 1180px;
+}

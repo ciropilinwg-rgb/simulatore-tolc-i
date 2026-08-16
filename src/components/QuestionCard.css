@@ -1,0 +1,60 @@
+/* Hallmark · genre: modern-minimal · macrostructure: Workbench component · design-system: design.md · designed-as-app */
+.question-card {
+  width: 100%;
+}
+
+.question-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.question-card__materia,
+.question-card__format {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.question-card__materia {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.question-card__format {
+  background: var(--color-paper-2);
+  color: var(--color-ink-3);
+}
+
+.question-card__text {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  color: var(--color-ink);
+  margin-bottom: var(--space-lg);
+  text-wrap: balance;
+}
+
+.question-card__options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .question-card__meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .question-card__text {
+    font-size: clamp(1.35rem, 8vw, 1.95rem);
+  }
+}

@@ -1,0 +1,110 @@
+/* Hallmark · genre: modern-minimal · macrostructure: Workbench Report · design-system: design.md · designed-as-app */
+.results-page__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: var(--space-lg);
+  animation: resultsEnter var(--dur-medium) var(--ease-out);
+}
+
+.results-page__panel {
+  min-width: 0;
+}
+
+.results-page__panel--summary,
+.results-page__panel--aside {
+  padding: var(--space-lg);
+}
+
+.results-page__panel--aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.results-page__eyebrow {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.results-page__heading {
+  margin-top: 0.35rem;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: var(--color-ink);
+}
+
+.results-page__text {
+  margin-top: 0.75rem;
+  font-size: var(--text-md);
+  color: var(--color-ink-2);
+}
+
+.results-page__facts {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.results-page__fact {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-sm);
+  padding: 0.95rem 1rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+}
+
+.results-page__fact dt {
+  font-size: var(--text-sm);
+  color: var(--color-ink-3);
+}
+
+.results-page__fact dd {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+}
+
+.results-page__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.results-page__actions .btn {
+  width: 100%;
+}
+
+@keyframes resultsEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 960px) {
+  .results-page__layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .results-page__panel--summary,
+  .results-page__panel--aside {
+    padding: var(--space-md);
+  }
+}

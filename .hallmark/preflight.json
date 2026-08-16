@@ -1,0 +1,47 @@
+{
+  "scannedAt": "2026-08-15",
+  "project": "Simulatore TOLC-I",
+  "designMd": null,
+  "fontStack": {
+    "value": "Inter",
+    "source": "src/App.css:6,74,98"
+  },
+  "palette": {
+    "value": "dark purple gradient + glassmorphism",
+    "source": "src/App.css:9-55"
+  },
+  "motion": {
+    "value": "CSS transitions only, no motion library detected",
+    "source": "package.json + src/**/*.css"
+  },
+  "spacing": {
+    "value": "ad hoc CSS spacing scale",
+    "source": "src/**/*.css"
+  },
+  "framework": {
+    "value": "React 19 + Vite 6",
+    "source": "package.json"
+  },
+  "pages": [
+    {
+      "file": "src/pages/HomePage.jsx",
+      "type": "marketing landing"
+    },
+    {
+      "file": "src/pages/ConfigPage.jsx",
+      "type": "setup workbench"
+    },
+    {
+      "file": "src/pages/QuizPage.jsx",
+      "type": "quiz workbench"
+    },
+    {
+      "file": "src/pages/ResultsPage.jsx",
+      "type": "results report"
+    },
+    {
+      "file": "src/pages/ReviewPage.jsx",
+      "type": "review ledger"
+    }
+  ]
+}

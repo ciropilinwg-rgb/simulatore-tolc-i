@@ -1,0 +1,494 @@
+/* Hallmark · genre: modern-minimal · macrostructure: Workbench · design-system: design.md · designed-as-app */
+.config-page {
+  min-height: calc(100vh - var(--topbar-height) - var(--space-lg));
+}
+
+.config-page__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  animation: configEnter var(--dur-medium) var(--ease-out);
+}
+
+.config-page__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.config-page__header-copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.config-page__back-btn {
+  width: fit-content;
+  padding-inline: 0;
+}
+
+.config-page__title {
+  margin-top: 0.4rem;
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--color-ink);
+}
+
+.config-page__subtitle {
+  margin-top: 0.75rem;
+  max-width: 46rem;
+  font-size: var(--text-lg);
+  color: var(--color-ink-2);
+}
+
+.config-page__workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.config-page__panel {
+  min-width: 0;
+}
+
+.config-page__panel--main {
+  padding: var(--space-lg);
+}
+
+.config-page__panel--summary {
+  position: sticky;
+  top: calc(var(--topbar-height) + var(--space-md));
+  padding: var(--space-lg);
+}
+
+.config-section + .config-section {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-rule);
+}
+
+.config-section__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.config-section__eyebrow {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.config-section__title {
+  margin-top: 0.25rem;
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--color-ink);
+}
+
+.config-section__hint,
+.config-number__helper,
+.config-summary__text,
+.config-summary__mode p {
+  font-size: var(--text-sm);
+  color: var(--color-ink-3);
+}
+
+.config-section__error {
+  margin-top: var(--space-sm);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-danger);
+}
+
+.config-materie__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.config-materie__action-btn {
+  min-height: 2.6rem;
+  padding-inline: 1rem;
+  font-size: var(--text-sm);
+}
+
+.config-materie__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.config-materia-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  cursor: pointer;
+  transition:
+    transform var(--dur-short) var(--ease-out),
+    border-color var(--dur-short) var(--ease-out),
+    background-color var(--dur-short) var(--ease-out),
+    box-shadow var(--dur-short) var(--ease-out);
+}
+
+.config-materia-checkbox:hover {
+  transform: translateY(-1px);
+  border-color: var(--color-rule-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.config-materia-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.config-materia-checkbox__check {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 0.45rem;
+  border: 1.5px solid var(--color-rule-strong);
+  background: var(--color-surface);
+  flex-shrink: 0;
+  transition:
+    border-color var(--dur-short) var(--ease-out),
+    background-color var(--dur-short) var(--ease-out),
+    box-shadow var(--dur-short) var(--ease-out);
+}
+
+.config-materia-checkbox__copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.config-materia-checkbox__label {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.config-materia-checkbox__count {
+  font-size: var(--text-sm);
+  color: var(--color-ink-3);
+}
+
+.config-materia-checkbox--selected {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.config-materia-checkbox--selected .config-materia-checkbox__check {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  box-shadow: inset 0 0 0 4px var(--color-accent-soft);
+}
+
+.config-number {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.config-number__label {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.config-number__input {
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  transition:
+    border-color var(--dur-short) var(--ease-out),
+    box-shadow var(--dur-short) var(--ease-out),
+    background-color var(--dur-short) var(--ease-out);
+}
+
+.config-number__input::placeholder {
+  color: var(--color-ink-3);
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.config-number__input:disabled {
+  background: var(--color-paper-2);
+  color: var(--color-ink-3);
+  cursor: not-allowed;
+}
+
+.config-number__input--error {
+  border-color: var(--color-danger);
+}
+
+.config-modes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.config-mode-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-sm);
+  align-items: flex-start;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  cursor: pointer;
+  transition:
+    transform var(--dur-short) var(--ease-out),
+    border-color var(--dur-short) var(--ease-out),
+    background-color var(--dur-short) var(--ease-out),
+    box-shadow var(--dur-short) var(--ease-out);
+}
+
+.config-mode-card:hover {
+  transform: translateY(-1px);
+  border-color: var(--color-rule-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.config-mode-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.config-mode-card__index {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  padding-top: 0.2rem;
+}
+
+.config-mode-card__copy {
+  min-width: 0;
+}
+
+.config-mode-card__title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+  margin-bottom: 0.25rem;
+}
+
+.config-mode-card__desc {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-ink-2);
+}
+
+.config-mode-card--selected {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+  box-shadow: var(--shadow-sm);
+}
+
+.config-summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.config-summary__title {
+  margin-top: 0.3rem;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--color-ink);
+}
+
+.config-summary__stats {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.config-summary__stat {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.config-summary__stat dt {
+  font-size: var(--text-sm);
+  color: var(--color-ink-3);
+}
+
+.config-summary__stat dd {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--color-ink);
+}
+
+.config-summary__subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.config-summary__subject {
+  padding: 0.55rem 0.85rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-paper-2);
+  color: var(--color-ink-2);
+  font-size: var(--text-sm);
+}
+
+.config-summary__mode {
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-paper-2);
+}
+
+.config-summary__mode-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.config-summary__mode strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+  margin-bottom: 0.25rem;
+}
+
+.config-page__start-btn {
+  width: 100%;
+  margin-top: var(--space-xs);
+}
+
+.config-page__loading {
+  min-height: calc(100vh - var(--topbar-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+  color: var(--color-ink-2);
+}
+
+.config-page__spinner {
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 3px solid var(--color-rule);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spinConfig 0.7s linear infinite;
+}
+
+.config-page__loading-title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+  margin-bottom: 0.15rem;
+}
+
+.config-page__loading-text {
+  font-size: var(--text-md);
+  color: var(--color-ink-3);
+}
+
+@keyframes spinConfig {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes configEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 960px) {
+  .config-page__workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .config-page__panel--summary {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .config-page__panel--main,
+  .config-page__panel--summary {
+    padding: var(--space-md);
+  }
+
+  .config-section__heading {
+    flex-direction: column;
+  }
+
+  .config-materie__actions {
+    width: 100%;
+  }
+
+  .config-materie__action-btn {
+    width: 100%;
+  }
+
+  .config-materie__list {
+    grid-template-columns: 1fr;
+  }
+}

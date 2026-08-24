@@ -1,4 +1,5 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench report component · design-system: design.md · designed-as-app */
+/* Hallmark · pre-emit critique: P5 H4 E5 S4 R5 V4 */
+/* Hallmark · genre: editorial-classic · macrostructure: report summary component · design-system: design.md · designed-as-app */
 .results-summary {
   --results-tone: var(--color-danger);
   display: flex;
@@ -24,6 +25,8 @@
   grid-template-columns: minmax(0, 1fr) auto;
   gap: var(--space-lg);
   align-items: center;
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-rule);
 }
 
 .results-summary__eyebrow {
@@ -96,9 +99,9 @@
 
 .results-summary__stat {
   padding: 1rem 0.95rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-rule);
-  background: var(--color-surface);
+  border-radius: 1.15rem;
+  border: 1px solid var(--color-rule-strong);
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-paper) 100%);
 }
 
 .results-summary__stat-label {
@@ -127,8 +130,9 @@
   justify-content: space-between;
   gap: var(--space-sm);
   padding: 1rem 1.1rem;
-  border-radius: var(--radius-lg);
-  background: var(--color-paper-2);
+  border-radius: 1.15rem;
+  background: linear-gradient(180deg, var(--color-paper) 0%, var(--color-accent-soft) 100%);
+  border: 1px solid var(--color-rule);
 }
 
 .results-summary__score-label {
@@ -159,6 +163,7 @@
   color: var(--results-tone);
   font-size: var(--text-sm);
   font-weight: 700;
+  border: 1px solid var(--color-rule);
 }
 
 @media (max-width: 768px) {

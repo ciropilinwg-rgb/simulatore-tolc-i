@@ -1,0 +1,171 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return signedIn() && request.auth.uid == userId;
+    }
+
+    function isVerified() {
+      return signedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isRequiredString(value, maxLength) {
+      return value is string && value.size() > 0 && value.size() <= maxLength;
+    }
+
+    function isOptionalString(value, maxLength) {
+      return value == null || (value is string && value.size() <= maxLength);
+    }
+
+    function isNonNegativeInteger(value) {
+      return value is int && value >= 0;
+    }
+
+    function isNonNegativeNumber(value) {
+      return (value is int || value is float) && value >= 0;
+    }
+
+    function isValidUserProfile() {
+      return request.resource.data.keys().hasOnly([
+        'firstName',
+        'lastName',
+        'email',
+        'phone',
+        'emailVerified',
+        'createdAt',
+        'updatedAt'
+      ])
+      && isRequiredString(request.resource.data.firstName, 80)
+      && isOptionalString(request.resource.data.lastName, 80)
+      && isRequiredString(request.resource.data.email, 160)
+      && request.resource.data.email == request.auth.token.email
+      && isOptionalString(request.resource.data.phone, 25)
+      && request.resource.data.emailVerified is bool
+      && isRequiredString(request.resource.data.createdAt, 40)
+      && isRequiredString(request.resource.data.updatedAt, 40);
+    }
+
+    function isValidQuestionStats() {
+      return request.resource.data.keys().hasOnly([
+        'questionId',
+        'bankVersion',
+        'materia',
+        'numeroVolteProposta',
+        'numeroRisposteCorrette',
+        'numeroRisposteErrate',
+        'percentualeErrore',
+        'lastShownAt',
+        'lastAnsweredAt',
+        'updatedAt'
+      ])
+      && isRequiredString(request.resource.data.questionId, 40)
+      && isRequiredString(request.resource.data.bankVersion, 80)
+      && isOptionalString(request.resource.data.materia, 80)
+      && isNonNegativeInteger(request.resource.data.numeroVolteProposta)
+      && isNonNegativeInteger(request.resource.data.numeroRisposteCorrette)
+      && isNonNegativeInteger(request.resource.data.numeroRisposteErrate)
+      && isNonNegativeNumber(request.resource.data.percentualeErrore)
+      && isOptionalString(request.resource.data.lastShownAt, 40)
+      && isOptionalString(request.resource.data.lastAnsweredAt, 40)
+      && isRequiredString(request.resource.data.updatedAt, 40);
+    }
+
+    function isValidQuizSession() {
+      return request.resource.data.keys().hasOnly([
+        'sessionKey',
+        'bankVersion',
+        'selectionMode',
+        'selectedSubjects',
+        'questionIds',
+        'requestedCount',
+        'totalQuestions',
+        'shownQuestionKeys',
+        'answeredByQuestion',
+        'correctCount',
+        'wrongCount',
+        'unansweredCount',
+        'percentage',
+        'status',
+        'createdAt',
+        'updatedAt',
+        'finishedAt'
+      ])
+      && isRequiredString(request.resource.data.sessionKey, 120)
+      && isRequiredString(request.resource.data.bankVersion, 80)
+      && isRequiredString(request.resource.data.selectionMode, 40)
+      && request.resource.data.selectedSubjects is list
+      && request.resource.data.questionIds is list
+      && request.resource.data.selectedSubjects.size() <= 10
+      && request.resource.data.questionIds.size() <= 400
+      && request.resource.data.shownQuestionKeys is map
+      && request.resource.data.answeredByQuestion is map
+      && isNonNegativeInteger(request.resource.data.requestedCount)
+      && isNonNegativeInteger(request.resource.data.totalQuestions)
+      && isNonNegativeInteger(request.resource.data.correctCount)
+      && isNonNegativeInteger(request.resource.data.wrongCount)
+      && isNonNegativeInteger(request.resource.data.unansweredCount)
+      && isNonNegativeNumber(request.resource.data.percentage)
+      && (request.resource.data.status == 'active' || request.resource.data.status == 'finished')
+      && isRequiredString(request.resource.data.createdAt, 40)
+      && isRequiredString(request.resource.data.updatedAt, 40)
+      && isOptionalString(request.resource.data.finishedAt, 40);
+    }
+
+    function isValidAdminRegistrationNotification(userId) {
+      return request.resource.data.keys().hasOnly([
+        'userId',
+        'firstName',
+        'lastName',
+        'email',
+        'phone',
+        'accountCreatedAt',
+        'registrationCompletedAt',
+        'createdAt',
+        'deliveryStatus',
+        'source'
+      ])
+      && request.resource.data.userId == userId
+      && isRequiredString(request.resource.data.firstName, 80)
+      && isRequiredString(request.resource.data.lastName, 80)
+      && isRequiredString(request.resource.data.email, 160)
+      && request.resource.data.email == request.auth.token.email
+      && isRequiredString(request.resource.data.phone, 25)
+      && isRequiredString(request.resource.data.accountCreatedAt, 40)
+      && isRequiredString(request.resource.data.registrationCompletedAt, 40)
+      && isRequiredString(request.resource.data.createdAt, 40)
+      && request.resource.data.deliveryStatus == 'pending'
+      && request.resource.data.source == 'firebase_profile_sync';
+    }
+
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create, update: if isOwner(userId) && isValidUserProfile();
+      allow delete: if false;
+
+      match /questionStats/{questionId} {
+        allow read: if isOwner(userId) && isVerified();
+        allow create, update: if isOwner(userId) && isVerified() && isValidQuestionStats();
+        allow delete: if false;
+      }
+
+      match /quizSessions/{sessionId} {
+        allow read: if isOwner(userId) && isVerified();
+        allow create, update: if isOwner(userId) && isVerified() && isValidQuizSession();
+        allow delete: if false;
+      }
+    }
+
+    match /adminRegistrationNotifications/{userId} {
+      allow create: if isOwner(userId)
+        && isVerified()
+        && !exists(/databases/$(database)/documents/adminRegistrationNotifications/$(userId))
+        && isValidAdminRegistrationNotification(userId);
+      allow read, update, delete: if false;
+    }
+  }
+}

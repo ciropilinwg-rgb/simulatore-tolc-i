@@ -79,27 +79,21 @@ export default function RegisterPage() {
 
   return (
     <AuthLayout
-      eyebrow="Registrazione"
-      title="Crea la tua utenza personale"
-      subtitle="Registrati una volta, verifica l’email e mantieni esercitazioni, errori e progressi sempre separati dagli altri utenti."
+      variant="centered"
+      title=""
+      subtitle=""
+      panelClassName="auth-layout__panel--register"
       footer="L’indirizzo email viene usato come username di accesso."
-      sideContent={(
-        <div className="auth-side-card">
-          <span className="auth-side-card__label">Dati richiesti</span>
-          <strong>Profilo completo</strong>
-          <p>Nome, cognome, email, cellulare e password vengono validati prima della creazione dell’account.</p>
-        </div>
-      )}
     >
-      <div className="auth-card">
-        <div>
+      <div className="auth-card auth-card--register">
+        <div className="auth-card__intro auth-card__intro--register">
           <p className="auth-card__title">Nuovo account</p>
           <p className="auth-card__subtitle">Completa i campi obbligatori e conferma il tuo indirizzo email.</p>
         </div>
 
         {generalError ? <div className="auth-form__error">{generalError}</div> : null}
 
-        <form className="auth-form" onSubmit={handleSubmit}>
+        <form className="auth-form auth-form--register" onSubmit={handleSubmit}>
           <div className="auth-form__grid">
             <label className="auth-field">
               <span className="auth-field__label">Nome</span>

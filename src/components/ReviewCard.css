@@ -1,11 +1,12 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Long Document component · design-system: design.md · designed-as-app */
+/* Hallmark · pre-emit critique: P5 H4 E5 S4 R5 V4 */
+/* Hallmark · genre: editorial-classic · macrostructure: correction dossier component · design-system: design.md · designed-as-app */
 .review-card {
   width: 100%;
   padding: var(--space-lg);
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--color-rule);
-  background: var(--color-surface-frost-stronger);
-  box-shadow: var(--shadow-md);
+  border-radius: 1.45rem;
+  border: 1px solid var(--color-rule-strong);
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-paper) 100%);
+  box-shadow: 0 20px 32px -30px var(--color-shadow);
 }
 
 .review-card__top {
@@ -65,11 +66,20 @@
   font-family: var(--font-display);
   font-size: var(--text-xl);
   font-weight: 700;
-  line-height: 1.3;
-  letter-spacing: -0.03em;
+  line-height: 1;
+  letter-spacing: -0.02em;
   color: var(--color-ink);
   margin-bottom: var(--space-md);
   text-wrap: balance;
+}
+
+.review-card__question .math-text__formula,
+.review-card__answer-text .math-text__formula {
+  margin-inline: 0.12em;
+}
+
+.review-card__question .math-text__formula .katex {
+  font-size: 1.03em;
 }
 
 .review-card__comparison {
@@ -81,8 +91,8 @@
 
 .review-card__answer {
   padding: 1rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-rule);
+  border-radius: 1rem;
+  border: 1px solid var(--color-rule-strong);
   background: var(--color-surface);
 }
 
@@ -115,13 +125,14 @@
 .review-card__answer-text {
   font-size: var(--text-md);
   color: var(--color-ink);
-  line-height: 1.55;
+  line-height: 1;
+  overflow-wrap: anywhere;
 }
 
 .review-card__explanation {
   padding: 1rem;
-  border-radius: var(--radius-lg);
-  background: var(--color-paper-2);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, var(--color-paper) 0%, var(--color-paper-2) 100%);
   border: 1px solid var(--color-rule);
   margin-bottom: var(--space-sm);
 }
@@ -129,7 +140,7 @@
 .review-card__explanation-text {
   font-size: var(--text-sm);
   color: var(--color-ink-2);
-  line-height: 1.6;
+  line-height: 1;
 }
 
 .review-card__foot {

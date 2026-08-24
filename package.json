@@ -8,15 +8,19 @@
   },
   "description": "Simulatore TOLC-I per esercitarsi con quiz a risposta multipla",
   "scripts": {
-    "dev": "node ./scripts/dev-server.mjs",
+    "dev": "vite",
     "build": "vite build --configLoader runner",
-    "preview": "node ./scripts/start-server.mjs",
-    "start": "node ./scripts/start-server.mjs",
-    "test:unit": "node ./src/tests/testQuiz.mjs",
+    "preview": "vite preview",
+    "start": "vite preview",
+    "rebuild:questions": "node ./scripts/rebuild-question-bank.mjs",
+    "test:unit": "node ./src/tests/testQuiz.mjs && node ./src/tests/testQuestionCatalog.mjs",
     "test:integration": "node ./tests/testMultiUser.mjs",
-    "test": "npm run test:unit && npm run test:integration"
+    "audit:questions": "node ./scripts/audit-question-bank.mjs",
+    "test": "npm run test:unit"
   },
   "dependencies": {
+    "firebase": "^12.3.0",
+    "katex": "^0.18.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

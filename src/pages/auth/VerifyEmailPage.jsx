@@ -5,7 +5,7 @@ import AuthLayout from './AuthLayout.jsx';
 
 export default function VerifyEmailPage({ searchParams }) {
   const { verifyEmail } = useAuth();
-  const token = searchParams.get('token') || '';
+  const token = searchParams.get('oobCode') || searchParams.get('token') || '';
   const [status, setStatus] = useState(token ? 'loading' : 'error');
   const [message, setMessage] = useState(token ? 'Sto verificando il tuo indirizzo email.' : 'Il link di conferma non contiene un token valido.');
 

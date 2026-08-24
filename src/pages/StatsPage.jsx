@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext.jsx';
+import MathText from '../components/MathText.jsx';
 import { getStatsHistory, getStatsOverview } from '../services/statsService.js';
 import './StatsPage.css';
 
@@ -20,7 +21,7 @@ export default function StatsPage() {
   const [overview, setOverview] = useState(null);
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     let active = true;
@@ -37,7 +38,17 @@ export default function StatsPage() {
         setHistory(historyResponse.items || []);
       } catch (apiError) {
         if (!active) return;
-        setError(apiError.message);
+        const code = String(apiError?.code || '');
+        const isPermissionIssue = code === 'PERMISSION_DENIED' || code === 'EMAIL_NOT_VERIFIED';
+
+        setError({
+          title: isPermissionIssue
+            ? 'Le statistiche personali non sono ancora disponibili'
+            : 'Non riesco a caricare lo storico personale',
+          message: isPermissionIssue
+            ? 'Sto ancora sincronizzando l’accesso sicuro del tuo account con Firebase. Ricarica la pagina oppure esci e rientra una sola volta.'
+            : apiError.message
+        });
       } finally {
         if (active) {
           setLoading(false);
@@ -68,31 +79,37 @@ export default function StatsPage() {
       ) : null}
 
       {loading ? <div className="stats-page__state page-card">Sto caricando il tuo storico personale.</div> : null}
-      {error ? <div className="stats-page__state stats-page__state--error page-card">{error}</div> : null}
+      {error ? (
+        <section className="stats-page__state stats-page__state--error page-card">
+          <p className="stats-page__state-label">Area statistiche</p>
+          <h2 className="stats-page__state-title">{error.title}</h2>
+          <p className="stats-page__state-text">{error.message}</p>
+        </section>
+      ) : null}
 
       {overview ? (
         <>
           <section className="stats-page__grid">
-            <article className="stats-page__card page-card">
+            <article className="stats-page__card stats-page__card--summary page-card">
               <span className="stats-page__label">Profilo</span>
               <h2 className="stats-page__card-title">{overview.user.firstName} {overview.user.lastName}</h2>
               <p className="stats-page__copy">{overview.user.email}</p>
               <p className="stats-page__copy">{overview.user.phone}</p>
             </article>
 
-            <article className="stats-page__card page-card">
+            <article className="stats-page__card stats-page__card--summary page-card">
               <span className="stats-page__label">Quiz completati</span>
               <strong className="stats-page__metric">{overview.totals.quizCompletati}</strong>
               <p className="stats-page__copy">Sessioni concluse e salvate nel tuo storico.</p>
             </article>
 
-            <article className="stats-page__card page-card">
+            <article className="stats-page__card stats-page__card--summary page-card">
               <span className="stats-page__label">Accuratezza media</span>
               <strong className="stats-page__metric">{overview.totals.accuratezzaMedia}%</strong>
               <p className="stats-page__copy">Calcolata solo sulle esercitazioni del tuo account.</p>
             </article>
 
-            <article className="stats-page__card page-card">
+            <article className="stats-page__card stats-page__card--summary page-card">
               <span className="stats-page__label">Domande monitorate</span>
               <strong className="stats-page__metric">{overview.totals.domandeMonitorate}</strong>
               <p className="stats-page__copy">Quesiti con statistiche personali registrate.</p>
@@ -129,7 +146,7 @@ export default function StatsPage() {
                   <div key={item.questionId} className="stats-page__list-item">
                     <div>
                       <strong>{item.materia}</strong>
-                      <p>{item.domanda}</p>
+                      <MathText as="p" text={item.domanda} />
                     </div>
                     <span>{item.percentualeErrore}% errori</span>
                   </div>
@@ -147,7 +164,7 @@ export default function StatsPage() {
                   <div key={item.questionId} className="stats-page__list-item">
                     <div>
                       <strong>{item.materia}</strong>
-                      <p>{item.domanda}</p>
+                      <MathText as="p" text={item.domanda} />
                     </div>
                     <span>{item.numeroVolteSvolta} svolgimenti</span>
                   </div>

@@ -1,139 +1,84 @@
-# Deploy Online
+# Deploy Online con Firebase
 
-Questa applicazione puo essere usata online da piu utenti mantenendo l'architettura attuale:
+Questa applicazione ora è pensata per essere pubblicata gratuitamente con:
 
-- frontend React gia buildato
-- backend Node HTTP interno
-- database SQLite su disco persistente
-- invio email tramite Resend oppure fallback `local_outbox`
+- `Firebase Hosting` per il frontend
+- `Firebase Authentication` per registrazione, login, verifica email e reset password
+- `Cloud Firestore` per profili, storico e statistiche personali
 
-## Scelta consigliata
+## Architettura online
 
-Per la versione attuale, la strada piu semplice e:
+La banca dati delle domande resta inclusa nel frontend.
 
-1. Render o Railway come hosting del servizio Node
-2. disco persistente montato dal provider
-3. URL pubblico HTTPS
-4. Resend per email di conferma account e reset password
+I dati personali e statistici vengono invece salvati su Firebase in modo separato per utente:
 
-Questa soluzione va bene per:
+- `users/{uid}` per il profilo
+- `users/{uid}/questionStats/{questionId}` per le statistiche delle singole domande
+- `users/{uid}/quizSessions/{sessionId}` per lo storico delle esercitazioni
 
-- un solo server applicativo
-- pochi o medi utenti contemporanei
-- statistiche isolate per account
+## Prerequisiti
 
-Non e invece la soluzione finale per scalare su piu istanze. Se in futuro vuoi piu server contemporanei, il passo successivo sara migrare da SQLite a PostgreSQL.
+Prima del deploy assicurati di aver completato in Firebase:
 
-## Variabili d'ambiente
+1. creazione del progetto
+2. attivazione di `Authentication`
+3. attivazione di `Firestore`
+4. registrazione della `Web App`
 
-Parti dal file `.env.example`.
+## Hosting
 
-Valori minimi consigliati in produzione:
+Configurazione inclusa nel progetto:
 
-```env
-NODE_ENV=production
-HOST=0.0.0.0
-PORT=10000
-APP_BASE_URL=https://tuo-dominio-pubblico
-DATA_DIR=/var/data
-RESEND_API_KEY=re_xxxxxxxxx
-MAIL_FROM=Simulatore TOLC-I <noreply@tuodominio.it>
+- [firebase.json](/C:/Users/Ciro/Documents/Codex/2026-08-15/sto/work/SimulatoreConcorso/SimulatoreConcorso/firebase.json)
+- [firestore.rules](/C:/Users/Ciro/Documents/Codex/2026-08-15/sto/work/SimulatoreConcorso/SimulatoreConcorso/firestore.rules)
+- [.firebaserc](/C:/Users/Ciro/Documents/Codex/2026-08-15/sto/work/SimulatoreConcorso/SimulatoreConcorso/.firebaserc)
+
+Il deploy pubblica la cartella `dist` e reindirizza tutte le route su `index.html`, così login, registrazione, statistiche e pagine protette funzionano correttamente anche aprendo un URL diretto.
+
+## Regole di sicurezza
+
+Le regole Firestore fanno in modo che:
+
+- ogni utente legga solo il proprio profilo
+- ogni utente scriva solo dentro il proprio spazio
+- le statistiche e le sessioni richiedano anche `email verificata`
+- i documenti abbiano una struttura minima valida
+
+Questo evita che l’isolamento multiutente sia solo grafico lato frontend.
+
+## Deploy pratico
+
+Comandi tipici:
+
+```bash
+npm install
+npm run build
+firebase login
+firebase deploy
 ```
-
-## Render
-
-Configurazione pratica:
-
-1. Pubblica il progetto su GitHub.
-2. Crea un nuovo `Web Service` su Render collegando il repository.
-3. Imposta:
-
-```text
-Build Command: npm install && npm run build
-Start Command: npm run start
-```
-
-4. Aggiungi una `Persistent Disk`.
-5. Monta il disco in:
-
-```text
-/var/data
-```
-
-6. Imposta le variabili d'ambiente:
-
-- `NODE_ENV=production`
-- `HOST=0.0.0.0`
-- `PORT=10000`
-- `APP_BASE_URL=https://<tuo-servizio>.onrender.com`
-- `DATA_DIR=/var/data`
-- `RESEND_API_KEY=...`
-- `MAIL_FROM=...`
-
-7. Come health check usa:
-
-```text
-/api/health
-```
-
-## Railway
-
-Configurazione pratica:
-
-1. Crea un nuovo servizio dal repository oppure con deploy da directory locale.
-2. Imposta build e start:
-
-```text
-Build: npm install && npm run build
-Start: npm run start
-```
-
-3. Aggiungi un `Volume`.
-4. Monta il volume in:
-
-```text
-/data
-```
-
-5. Imposta:
-
-- `NODE_ENV=production`
-- `HOST=0.0.0.0`
-- `APP_BASE_URL=https://<tuo-dominio-railway>`
-- `DATA_DIR=/data`
-- `RESEND_API_KEY=...`
-- `MAIL_FROM=...`
-
-## Email
-
-Di default l'app usa `local_outbox`, utile solo in locale per test.
-
-In produzione:
-
-- se imposti `RESEND_API_KEY` e `MAIL_FROM`, la conferma email e il reset password vengono inviati come email vere
-- se non li imposti, gli utenti non riceveranno email reali
 
 ## Verifiche dopo il deploy
 
 Controlla questi punti:
 
-1. `GET /api/health` risponde con `ok: true`
-2. la registrazione crea l'account
-3. arriva l'email di conferma
+1. la home pubblica si apre online
+2. la registrazione crea l’account
+3. arriva l’email di conferma
 4. il login prima della verifica viene bloccato
 5. il login dopo la verifica funziona
 6. due utenti diversi vedono statistiche diverse
-7. il logout invalida la sessione
-8. il reset password invalida le sessioni precedenti
+7. `Maggiori errori` usa solo i dati del singolo utente
+8. `Meno svolte` usa solo i dati del singolo utente
+9. il logout chiude davvero la sessione
+10. il reset password permette di rientrare con la nuova password
 
-## Limite attuale da conoscere
+## Nota importante sui link email
 
-La soluzione online preparata ora usa SQLite su disco persistente.
+Per una UX completamente coerente con le pagine interne dell’app, dopo il primo deploy conviene personalizzare in Firebase Authentication i template email di verifica e reset puntandoli alle route pubbliche dell’app.
 
-Questo significa:
+Anche senza questa personalizzazione:
 
-- bene per singola istanza applicativa
-- bene per un uso reale iniziale
-- non ideale per scalare su piu server in parallelo
+- la verifica email funziona
+- il reset password funziona
 
-Se vuoi, il passo successivo posso farlo io: migrazione a PostgreSQL mantenendo tutta la logica multiutente gia costruita.
+Con la personalizzazione, invece, anche quelle operazioni useranno le schermate grafiche della tua web app.

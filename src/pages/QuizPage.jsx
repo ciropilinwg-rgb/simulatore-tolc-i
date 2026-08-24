@@ -4,6 +4,7 @@ import { useQuiz } from '../context/QuizContext.jsx';
 import { SELECTION_MODE_LABELS } from '../engine/quizEngine.js';
 import ProgressBar from '../components/ProgressBar.jsx';
 import QuestionCard from '../components/QuestionCard.jsx';
+import MathText from '../components/MathText.jsx';
 import './QuizPage.css';
 
 export default function QuizPage() {
@@ -19,6 +20,7 @@ export default function QuizPage() {
     wrongCount,
     remainingCount,
     selectionMode,
+    syncIssue,
     selectAnswer,
     verifyAnswer,
     goNext,
@@ -104,12 +106,23 @@ export default function QuizPage() {
                   <p className="quiz-feedback__message">Risposta non corretta.</p>
                   <div className="quiz-feedback__correct-answer">
                     <span className="quiz-feedback__correct-label">Risposta corretta</span>
-                    <span className="quiz-feedback__correct-text">{currentQuestion.rispostaCorretta}</span>
+                    <MathText
+                      as="span"
+                      className="quiz-feedback__correct-text"
+                      text={currentQuestion.rispostaCorretta}
+                      preferWholeMath
+                    />
                   </div>
                 </>
               )}
             </div>
           )}
+
+          {syncIssue ? (
+            <div className="quiz-page__sync-issue" role="status" aria-live="polite">
+              {syncIssue}
+            </div>
+          ) : null}
 
           <div className="quiz-page__navigation">
             <div className="quiz-page__nav-slot">
@@ -123,7 +136,7 @@ export default function QuizPage() {
             <div className="quiz-page__nav-actions">
               {canVerify && (
                 <button className="btn btn--primary" onClick={verifyAnswer} type="button">
-                  Verifica risposta
+                  Conferma risposta
                 </button>
               )}
 

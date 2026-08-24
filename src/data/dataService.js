@@ -1,10 +1,14 @@
 // Data Service — Punto di accesso unico alla banca dati
 //
-// Oggi: legge le domande dal file locale questionBank.js
+// Oggi: legge le domande dal catalogo locale deduplicato
 // Domani: basterà modificare SOLO questo file per leggere da Supabase
 //         senza toccare la logica del quiz o i componenti.
 
-import questionBank from './questionBank.js';
+import {
+  getCanonicalQuestions,
+  getQuestionSubjectCounts,
+  QUESTION_CATALOG_SUMMARY
+} from './questionCatalog.js';
 
 /**
  * Restituisce tutte le domande disponibili nella banca dati.
@@ -13,8 +17,7 @@ import questionBank from './questionBank.js';
  * @returns {Promise<Array>} Array di oggetti domanda
  */
 export async function getQuestions() {
-  // Fase 1: dati locali (simuliamo una chiamata asincrona)
-  return Promise.resolve(questionBank);
+  return Promise.resolve(getCanonicalQuestions());
 }
 
 /**
@@ -23,9 +26,7 @@ export async function getQuestions() {
  * @returns {Promise<string[]>} Array di nomi di materie (senza duplicati)
  */
 export async function getMaterie() {
-  const questions = await getQuestions();
-  const materieSet = new Set(questions.map(q => q.materia));
-  return Array.from(materieSet);
+  return Object.keys(getQuestionSubjectCounts());
 }
 
 /**
@@ -40,4 +41,14 @@ export async function getQuestionsByMaterie(materie) {
     return questions;
   }
   return questions.filter(q => materie.includes(q.materia));
+}
+
+export async function getQuestionCatalogSummary() {
+  return Promise.resolve({
+    totalQuestions: QUESTION_CATALOG_SUMMARY.totalCanonicalQuestions,
+    rawQuestions: QUESTION_CATALOG_SUMMARY.totalRawQuestions,
+    exactDuplicateGroups: QUESTION_CATALOG_SUMMARY.totalExactDuplicateGroups,
+    exactDuplicateRows: QUESTION_CATALOG_SUMMARY.totalExactDuplicateRows,
+    bySubject: getQuestionSubjectCounts()
+  });
 }

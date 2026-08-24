@@ -1,0 +1,44 @@
+.math-text {
+  line-height: 1;
+  color: inherit;
+}
+
+.math-text--inline {
+  display: inline;
+}
+
+.math-text--block {
+  display: block;
+  width: 100%;
+}
+
+.math-text__copy {
+  white-space: pre-wrap;
+}
+
+.math-text__formula {
+  display: inline-flex;
+  align-items: baseline;
+  max-width: 100%;
+  vertical-align: -0.08em;
+  margin-inline: 0;
+}
+
+.math-text__formula .katex {
+  max-width: 100%;
+  font-size: 1.03em;
+  line-height: 1;
+  white-space: normal;
+}
+
+.math-text__formula .katex-display {
+  margin: 0;
+}
+
+.math-text__formula .katex-html {
+  max-width: 100%;
+}
+
+.math-text--has-formula .math-text__copy {
+  text-wrap: pretty;
+}

@@ -1,4 +1,5 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench component · design-system: design.md · designed-as-app */
+/* Hallmark · pre-emit critique: P5 H4 E5 S4 R5 V4 */
+/* Hallmark · genre: editorial-classic · macrostructure: question sheet component · design-system: design.md · designed-as-app */
 .question-card {
   width: 100%;
 }
@@ -9,37 +10,58 @@
   justify-content: space-between;
   gap: var(--space-sm);
   margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-rule);
 }
 
 .question-card__materia,
 .question-card__format {
   display: inline-flex;
   align-items: center;
-  padding: 0.5rem 0.85rem;
+  padding: 0.52rem 0.9rem;
   border-radius: var(--radius-pill);
   font-size: var(--text-sm);
   font-weight: 600;
+  border: 1px solid var(--color-rule);
 }
 
 .question-card__materia {
-  background: var(--color-accent-soft);
+  background: linear-gradient(180deg, var(--color-paper) 0%, var(--color-accent-soft) 100%);
   color: var(--color-accent);
 }
 
 .question-card__format {
-  background: var(--color-paper-2);
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-paper-2) 100%);
   color: var(--color-ink-3);
 }
 
 .question-card__text {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3vw, 2.35rem);
+  font-size: clamp(1.85rem, 3.3vw, 2.75rem);
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.04em;
+  line-height: 1;
+  letter-spacing: -0.03em;
   color: var(--color-ink);
   margin-bottom: var(--space-lg);
-  text-wrap: balance;
+  text-wrap: pretty;
+}
+
+.question-card__text--compact {
+  font-size: clamp(1.18rem, 2.1vw, 1.72rem);
+  letter-spacing: -0.03em;
+}
+
+.question-card__text--ultra-compact {
+  font-size: clamp(1.08rem, 1.86vw, 1.48rem);
+  letter-spacing: -0.02em;
+}
+
+.question-card__text .math-text__formula {
+  margin-inline: 0.14em;
+}
+
+.question-card__text .math-text__formula .katex {
+  font-size: 1.04em;
 }
 
 .question-card__options {

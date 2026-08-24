@@ -1,8 +1,9 @@
 // ConfigPage — Schermata di configurazione esercitazione (v2)
 
-import { useState, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useQuiz } from '../context/QuizContext.jsx';
 import {
+  DEFAULT_QUESTION_COUNT,
   SELECTION_MODES,
   SELECTION_MODE_LABELS,
   SELECTION_MODE_DESCRIPTIONS
@@ -19,11 +20,19 @@ export default function ConfigPage() {
   const { allQuestions, availableMaterie, isLoading, startQuiz, goHome } = useQuiz();
 
   // ── Stato locale ──
-  const [selectedMaterie, setSelectedMaterie] = useState([]);
-  const [questionCountInput, setQuestionCountInput] = useState('');
+  const [selectedMaterie, setSelectedMaterie] = useState(() => [...availableMaterie]);
+  const [questionCountInput, setQuestionCountInput] = useState(() => String(DEFAULT_QUESTION_COUNT));
   const [selectionMode, setSelectionMode] = useState(SELECTION_MODES.RANDOM);
+  const [startError, setStartError] = useState('');
+  const [hasCustomizedMaterieSelection, setHasCustomizedMaterieSelection] = useState(false);
 
   // ── Calcoli derivati ──
+
+  const resolvedSelectedMaterie = useMemo(() => (
+    !hasCustomizedMaterieSelection && selectedMaterie.length === 0 && availableMaterie.length > 0
+      ? availableMaterie
+      : selectedMaterie
+  ), [availableMaterie, hasCustomizedMaterieSelection, selectedMaterie]);
 
   const materiaCountMap = useMemo(() => {
     const map = {};
@@ -34,13 +43,13 @@ export default function ConfigPage() {
   }, [allQuestions]);
 
   const filteredCount = useMemo(() => {
-    if (selectedMaterie.length === 0) return 0;
-    return allQuestions.filter(q => selectedMaterie.includes(q.materia)).length;
-  }, [allQuestions, selectedMaterie]);
+    if (resolvedSelectedMaterie.length === 0) return 0;
+    return allQuestions.filter(q => resolvedSelectedMaterie.includes(q.materia)).length;
+  }, [allQuestions, resolvedSelectedMaterie]);
 
   const questionCount = parseInt(questionCountInput, 10);
   const isValidNumber = !isNaN(questionCount) && questionCount > 0;
-  const hasMaterie = selectedMaterie.length > 0;
+  const hasMaterie = resolvedSelectedMaterie.length > 0;
   const isWithinBounds = isValidNumber && questionCount <= filteredCount;
   const hasMode = !!selectionMode;
   const isFormValid = hasMaterie && isValidNumber && isWithinBounds && filteredCount > 0 && hasMode;
@@ -48,17 +57,27 @@ export default function ConfigPage() {
   const selectedModeDescription = SELECTION_MODE_DESCRIPTIONS[selectionMode];
 
   let validationMessage = '';
-  if (questionCountInput !== '' && !hasMaterie) {
-    validationMessage = 'Seleziona almeno una materia.';
-  } else if (questionCountInput !== '' && !isValidNumber) {
+  if (hasMaterie && questionCountInput !== '' && !isValidNumber) {
     validationMessage = 'Il numero delle domande deve essere un intero maggiore di zero.';
-  } else if (questionCountInput !== '' && hasMaterie && !isWithinBounds) {
+  } else if (hasMaterie && questionCountInput !== '' && !isWithinBounds) {
     validationMessage = `Il numero richiesto supera le ${filteredCount} domande disponibili.`;
   }
+
+  const isBootLoading = isLoading && allQuestions.length === 0;
+
+  useEffect(() => {
+    if (hasCustomizedMaterieSelection || selectedMaterie.length > 0 || availableMaterie.length === 0) {
+      return;
+    }
+
+    setSelectedMaterie([...availableMaterie]);
+  }, [availableMaterie, hasCustomizedMaterieSelection, selectedMaterie.length]);
 
   // ── Gestori eventi ──
 
   const handleToggleMateria = (materia) => {
+    setStartError('');
+    setHasCustomizedMaterieSelection(true);
     setSelectedMaterie(prev =>
       prev.includes(materia)
         ? prev.filter(m => m !== materia)
@@ -67,28 +86,46 @@ export default function ConfigPage() {
   };
 
   const handleSelectAll = () => {
+    setStartError('');
+    setHasCustomizedMaterieSelection(true);
     setSelectedMaterie([...availableMaterie]);
   };
 
   const handleDeselectAll = () => {
+    setStartError('');
+    setHasCustomizedMaterieSelection(true);
     setSelectedMaterie([]);
   };
 
   const handleQuestionCountChange = (e) => {
     const value = e.target.value;
     if (value === '' || /^\d+$/.test(value)) {
+      setStartError('');
       setQuestionCountInput(value);
     }
   };
 
-  const handleStart = () => {
+  const handleStart = async () => {
     if (!isFormValid) return;
-    startQuiz(questionCount, selectedMaterie, selectionMode);
+    setStartError('');
+
+    try {
+      await startQuiz(questionCount, resolvedSelectedMaterie, selectionMode);
+    } catch (error) {
+      const code = String(error?.code || '');
+      const isPermissionIssue = code === 'PERMISSION_DENIED' || code === 'EMAIL_NOT_VERIFIED';
+
+      setStartError(
+        isPermissionIssue
+          ? 'La sessione protetta non e ancora pronta. Ricarica la pagina oppure esci e accedi di nuovo, poi riprova.'
+          : (error?.message || 'Non riesco ad avviare l’esercitazione in questo momento.')
+      );
+    }
   };
 
   // ── Render ──
 
-  if (isLoading) {
+  if (isBootLoading) {
     return (
       <div className="config-page">
         <div className="config-page__loading">
@@ -148,7 +185,7 @@ export default function ConfigPage() {
 
               <div className="config-materie__list">
                 {availableMaterie.map(materia => {
-                  const isSelected = selectedMaterie.includes(materia);
+                  const isSelected = resolvedSelectedMaterie.includes(materia);
 
                   return (
                     <label
@@ -172,7 +209,7 @@ export default function ConfigPage() {
                 })}
               </div>
 
-              {!hasMaterie && questionCountInput === '' && (
+              {!hasMaterie && (
                 <p className="config-section__hint">Seleziona almeno una materia per abilitare il resto della configurazione.</p>
               )}
             </section>
@@ -229,7 +266,10 @@ export default function ConfigPage() {
                       name="selectionMode"
                       value={mode}
                       checked={selectionMode === mode}
-                      onChange={() => setSelectionMode(mode)}
+                      onChange={() => {
+                        setStartError('');
+                        setSelectionMode(mode);
+                      }}
                     />
                     <span className="config-mode-card__index" aria-hidden="true">
                       {`0${index + 1}`}
@@ -261,7 +301,7 @@ export default function ConfigPage() {
               <dl className="config-summary__stats">
                 <div className="config-summary__stat">
                   <dt>Materie selezionate</dt>
-                  <dd>{selectedMaterie.length}</dd>
+                  <dd>{resolvedSelectedMaterie.length}</dd>
                 </div>
                 <div className="config-summary__stat">
                   <dt>Quesiti disponibili</dt>
@@ -273,9 +313,9 @@ export default function ConfigPage() {
                 </div>
               </dl>
 
-              {selectedMaterie.length > 0 && (
+              {resolvedSelectedMaterie.length > 0 && (
                 <div className="config-summary__subjects">
-                  {selectedMaterie.map(materia => (
+                  {resolvedSelectedMaterie.map(materia => (
                     <span key={materia} className="config-summary__subject">
                       {materia}
                     </span>
@@ -289,13 +329,19 @@ export default function ConfigPage() {
                 <p>{selectedModeDescription}</p>
               </div>
 
+              {startError ? (
+                <div className="config-summary__error">
+                  {startError}
+                </div>
+              ) : null}
+
               <button
                 className="btn btn--primary btn--large config-page__start-btn"
                 onClick={handleStart}
-                disabled={!isFormValid}
+                disabled={!isFormValid || isLoading}
                 type="button"
               >
-                Avvia esercitazione
+                {isLoading ? 'Avvio in corso...' : 'Avvia esercitazione'}
               </button>
             </div>
           </aside>

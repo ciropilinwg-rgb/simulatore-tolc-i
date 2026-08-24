@@ -1,4 +1,5 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Workbench Report · design-system: design.md · designed-as-app */
+/* Hallmark · pre-emit critique: P5 H4 E5 S4 R5 V4 */
+/* Hallmark · genre: editorial-classic · macrostructure: report sheet + next-step rail · design-system: design.md · designed-as-app */
 .results-page__layout {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
@@ -12,13 +13,15 @@
 
 .results-page__panel--summary,
 .results-page__panel--aside {
-  padding: var(--space-lg);
+  padding: clamp(1.45rem, 2.7vw, 1.95rem);
 }
 
 .results-page__panel--aside {
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-paper-2) 100%);
+  border-color: var(--color-rule-strong);
 }
 
 .results-page__eyebrow {
@@ -30,12 +33,12 @@
 }
 
 .results-page__heading {
-  margin-top: 0.35rem;
+  margin-top: 0.2rem;
   font-family: var(--font-display);
   font-size: var(--text-2xl);
   font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+  line-height: 1;
+  letter-spacing: -0.03em;
   color: var(--color-ink);
 }
 
@@ -46,19 +49,18 @@
 }
 
 .results-page__facts {
-  display: grid;
-  gap: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .results-page__fact {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: var(--space-sm);
-  padding: 0.95rem 1rem;
-  border-radius: var(--radius-lg);
-  background: var(--color-surface);
-  border: 1px solid var(--color-rule);
+  align-items: baseline;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--color-rule);
 }
 
 .results-page__fact dt {
@@ -72,7 +74,7 @@
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.03em;
-  color: var(--color-ink);
+  color: var(--color-accent);
 }
 
 .results-page__actions {

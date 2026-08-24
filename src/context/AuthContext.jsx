@@ -8,25 +8,24 @@ import {
 } from 'react';
 import { navigate } from '../hooks/usePathname.js';
 import {
-  forgotPassword,
   getCurrentSession,
-  getHealth,
   loginUser,
   logoutUser,
+  observeAuthSession,
   registerUser,
   resendVerificationEmail,
   resetPassword,
+  forgotPassword,
   verifyEmailToken
 } from '../services/authService.js';
 import { backupLegacyClientStats, getLegacyMigrationStatus } from '../services/legacyMigration.js';
-import { setUnauthorizedHandler } from '../services/apiClient.js';
 
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   const [bootStatus, setBootStatus] = useState('loading');
   const [user, setUser] = useState(null);
-  const [mailDeliveryMode, setMailDeliveryMode] = useState('local_outbox');
+  const [mailDeliveryMode, setMailDeliveryMode] = useState('firebase');
   const [serverError, setServerError] = useState('');
   const [sessionNotice, setSessionNotice] = useState('');
   const [legacyStatus, setLegacyStatus] = useState({ hadLegacyData: false });
@@ -36,38 +35,45 @@ export function AuthProvider({ children }) {
     setServerError('');
 
     try {
-      const migration = backupLegacyClientStats();
-      setLegacyStatus(migration.hadLegacyData ? migration : getLegacyMigrationStatus());
-
-      const health = await getHealth();
-      setMailDeliveryMode(health.mailDeliveryMode || 'local_outbox');
-      setUser(health.user || null);
+      const session = await getCurrentSession();
+      setMailDeliveryMode(session.mailDeliveryMode || 'firebase');
+      setUser(session.user || null);
       setBootStatus('ready');
     } catch (error) {
-      setServerError(error.message || 'Il server locale non è disponibile.');
+      setServerError(error.message || 'Non riesco a inizializzare la sessione Firebase.');
       setBootStatus('error');
     }
   }, []);
 
   useEffect(() => {
-    refreshSession();
-  }, [refreshSession]);
+    const migration = backupLegacyClientStats();
+    setLegacyStatus(migration.hadLegacyData ? migration : getLegacyMigrationStatus());
 
-  useEffect(() => {
-    setUnauthorizedHandler(() => {
-      setUser(null);
-      setSessionNotice('La sessione è scaduta. Effettua di nuovo l’accesso.');
-      navigate('/login', { replace: true });
-    });
+    const unsubscribe = observeAuthSession(
+      ({ user: sessionUser, mailDeliveryMode: nextMode }) => {
+        setUser(sessionUser || null);
+        setMailDeliveryMode(nextMode || 'firebase');
+        setServerError('');
+        setBootStatus('ready');
+      },
+      (error) => {
+        setServerError(error.message || 'Non riesco a inizializzare la sessione Firebase.');
+        setBootStatus('error');
+      }
+    );
 
-    return () => setUnauthorizedHandler(null);
+    return unsubscribe;
   }, []);
 
   const login = useCallback(async ({ identifier, password, redirectTo = '/app' }) => {
     const result = await loginUser({ identifier, password });
-    setUser(result.user);
+    setUser(result.user || null);
     setSessionNotice('');
-    navigate(redirectTo || '/app', { replace: true });
+
+    if (result.user?.emailVerified) {
+      navigate(redirectTo || '/app', { replace: true });
+    }
+
     return result;
   }, []);
 
@@ -108,7 +114,8 @@ export function AuthProvider({ children }) {
 
   const value = useMemo(() => ({
     bootStatus,
-    isAuthenticated: Boolean(user),
+    isAuthenticated: Boolean(user?.emailVerified),
+    hasPendingVerification: Boolean(user && !user.emailVerified),
     user,
     mailDeliveryMode,
     serverError,

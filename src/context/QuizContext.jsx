@@ -48,6 +48,9 @@ const initialState = {
   // Risultati (calcolati al termine)
   results: null,
 
+  // Avvisi non bloccanti di sincronizzazione statistiche
+  syncIssue: '',
+
   // Caricamento
   isLoading: false
 };
@@ -61,6 +64,7 @@ const ACTIONS = {
   QUIZ_READY: 'QUIZ_READY',
   SELECT_ANSWER: 'SELECT_ANSWER',
   VERIFY_ANSWER: 'VERIFY_ANSWER',
+  SET_SYNC_ISSUE: 'SET_SYNC_ISSUE',
   MARK_QUESTION_SEEN: 'MARK_QUESTION_SEEN',
   GO_NEXT: 'GO_NEXT',
   GO_PREV: 'GO_PREV',
@@ -82,7 +86,8 @@ function quizReducer(state, action) {
         seenQuestionIds: {},
         sessionId: null,
         selectionMode: SELECTION_MODES.RANDOM,
-        results: null
+        results: null,
+        syncIssue: ''
       };
 
     case ACTIONS.START_LOADING:
@@ -111,6 +116,7 @@ function quizReducer(state, action) {
         sessionId: action.payload.sessionId,
         selectionMode: action.payload.selectionMode,
         results: null,
+        syncIssue: '',
         isLoading: false
       };
 
@@ -129,7 +135,8 @@ function quizReducer(state, action) {
             ...currentAnswer,
             selectedOptionId: newOptionId
           }
-        }
+        },
+        syncIssue: ''
       };
     }
 
@@ -152,9 +159,16 @@ function quizReducer(state, action) {
             isVerified: true,
             isCorrect
           }
-        }
+        },
+        syncIssue: ''
       };
     }
+
+    case ACTIONS.SET_SYNC_ISSUE:
+      return {
+        ...state,
+        syncIssue: action.payload.message || ''
+      };
 
     case ACTIONS.MARK_QUESTION_SEEN: {
       const questionId = action.payload.questionId;
@@ -259,8 +273,10 @@ export function QuizProvider({ children }) {
     dispatch({ type: ACTIONS.START_LOADING });
 
     try {
-      // Carica le statistiche utente per le modalità non-casuali
-      const userStats = await getUserStats();
+      // Le statistiche utente servono solo per le modalità personalizzate.
+      const userStats = selectionMode === SELECTION_MODES.RANDOM
+        ? {}
+        : await getUserStats();
 
       const questions = selectQuestions({
         questions: state.allQuestions,
@@ -282,6 +298,7 @@ export function QuizProvider({ children }) {
     } catch (error) {
       console.error('Errore nella preparazione del quiz:', error);
       dispatch({ type: ACTIONS.STOP_LOADING });
+      throw error;
     }
   }, [state.allQuestions]);
 
@@ -308,14 +325,33 @@ export function QuizProvider({ children }) {
 
     if (!selectedOpt) return;
 
-    // Registra la risposta (idempotente: sessionId + questionId)
-    await recordAnswer({
-      sessionId: state.sessionId,
-      questionId: currentQ.id,
-      selectedText: selectedOpt.text
-    });
-
     dispatch({ type: ACTIONS.VERIFY_ANSWER });
+
+    try {
+      // Registra la risposta (idempotente: sessionId + questionId)
+      await recordAnswer({
+        sessionId: state.sessionId,
+        questionId: currentQ.id,
+        selectedText: selectedOpt.text
+      });
+    } catch (error) {
+      console.error('Errore nella registrazione della risposta:', error);
+
+      const code = String(error?.code || '');
+      const isPermissionIssue = code === 'PERMISSION_DENIED' || code === 'EMAIL_NOT_VERIFIED';
+      const isNetworkIssue = code === 'NETWORK_ERROR';
+
+      dispatch({
+        type: ACTIONS.SET_SYNC_ISSUE,
+        payload: {
+          message: isPermissionIssue
+            ? 'Risposta confermata, ma le statistiche personali non si sono ancora sincronizzate con Firebase. Puoi continuare il quiz e poi ricaricare la pagina.'
+            : isNetworkIssue
+              ? 'Risposta confermata, ma la rete non mi ha permesso di aggiornare subito le statistiche personali.'
+              : 'Risposta confermata, ma non sono riuscito a salvare subito questa statistica personale.'
+        }
+      });
+    }
   }, [state.answers, state.currentIndex, state.questions, state.sessionId]);
 
   const goNext = useCallback(() => {

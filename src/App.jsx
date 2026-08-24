@@ -8,7 +8,6 @@ import ConfigPage from './pages/ConfigPage.jsx';
 import QuizPage from './pages/QuizPage.jsx';
 import ResultsPage from './pages/ResultsPage.jsx';
 import ReviewPage from './pages/ReviewPage.jsx';
-import StatsPage from './pages/StatsPage.jsx';
 import PublicLandingPage from './pages/auth/PublicLandingPage.jsx';
 import LoginPage from './pages/auth/LoginPage.jsx';
 import RegisterPage from './pages/auth/RegisterPage.jsx';
@@ -31,17 +30,15 @@ const KNOWN_PUBLIC_ROUTES = new Set([
 
 function GlobalFrame({ authenticated, children }) {
   const currentUser = authenticated?.user || null;
-  const homePath = currentUser ? '/app' : '/';
+  const homePath = currentUser?.emailVerified ? '/app' : currentUser ? '/verify-email/pending' : '/';
   const contextLabel = currentUser
-    ? 'Utente corrente'
-    : window.location.protocol === 'file:'
-      ? 'Avvio richiesto'
-      : 'Server locale';
+    ? currentUser.emailVerified ? 'Utente corrente' : 'Verifica email'
+    : 'Area riservata';
   const contextValue = currentUser
-    ? `${currentUser.firstName} ${currentUser.lastName}`
-    : window.location.protocol === 'file:'
-      ? 'Usa Apri-Simulatore.bat'
-      : window.location.origin;
+    ? currentUser.emailVerified
+      ? `${currentUser.firstName} ${currentUser.lastName}`
+      : currentUser.email
+    : 'Statistiche private per account';
 
   return (
     <div className="app">
@@ -51,7 +48,9 @@ function GlobalFrame({ authenticated, children }) {
           <span>
             <span className="app-shell__title">Simulatore TOLC-I</span>
             <span className="app-shell__subtitle">
-              {currentUser ? 'Area riservata personale' : 'Accesso protetto e statistiche isolate'}
+              {currentUser?.emailVerified
+                ? 'Area riservata personale'
+                : 'Accesso protetto e statistiche isolate'}
             </span>
           </span>
         </button>
@@ -76,7 +75,7 @@ function BootLoadingState() {
         <p className="eyebrow">Avvio applicazione</p>
         <h1 className="app-state__title">Sto preparando il tuo ambiente di studio</h1>
         <p className="app-state__text">
-          Verifico il server locale, la sessione corrente e la disponibilità dei dati personali.
+          Verifico la sessione corrente, il profilo autenticato e la disponibilità dei dati personali su Firebase.
         </p>
       </section>
     </GlobalFrame>
@@ -84,33 +83,29 @@ function BootLoadingState() {
 }
 
 function BootErrorState({ message, onRetry }) {
-  const openedFromFile = window.location.protocol === 'file:';
-
   return (
     <GlobalFrame authenticated={null}>
       <section className="app-state app-state--error page-card">
-        <p className="eyebrow">Server non raggiungibile</p>
-        <h1 className="app-state__title">La web app deve essere aperta tramite server locale</h1>
+        <p className="eyebrow">Configurazione non pronta</p>
+        <h1 className="app-state__title">Non riesco a inizializzare Firebase</h1>
         <p className="app-state__text">
-          {openedFromFile
-            ? 'Hai aperto direttamente il file index.html. Con la nuova architettura multiutente serve il server locale attivo per autenticazione, sessioni e isolamento dei dati.'
-            : message || 'Non riesco a raggiungere il server locale dell’applicazione.'}
+          {message || 'Controlla la connessione internet oppure la configurazione Firebase della web app.'}
         </p>
 
         <div className="app-state__steps">
           <div className="app-state__step">
             <span>1</span>
-            <p>Avvia `Apri-Simulatore.bat` dalla cartella del progetto oppure esegui `npm run dev`.</p>
+            <p>Verifica che Authentication e Firestore siano stati attivati nel progetto Firebase.</p>
           </div>
           <div className="app-state__step">
             <span>2</span>
-            <p>Apri l’indirizzo locale mostrato dal launcher, di solito `http://127.0.0.1:5173/`.</p>
+            <p>Riapri la web app dopo aver completato la configurazione o il deploy su Hosting.</p>
           </div>
         </div>
 
         <div className="app-state__actions">
           <button className="btn btn--primary btn--large" onClick={onRetry} type="button">
-            Riprova connessione
+            Riprova inizializzazione
           </button>
           <button className="btn btn--secondary" onClick={() => navigate('/', { replace: true })} type="button">
             Vai alla schermata iniziale
@@ -121,9 +116,9 @@ function BootErrorState({ message, onRetry }) {
   );
 }
 
-function AppRedirectingState() {
+function AppRedirectingState({ authenticated }) {
   return (
-    <GlobalFrame authenticated={null}>
+    <GlobalFrame authenticated={authenticated}>
       <section className="app-state page-card">
         <p className="eyebrow">Reindirizzamento</p>
         <h1 className="app-state__title">Sto aprendo la schermata corretta</h1>
@@ -150,9 +145,8 @@ function QuizWorkspace() {
   }
 }
 
-function ProtectedWorkspace({ pathname }) {
+function ProtectedWorkspace() {
   const { user, logout } = useAuth();
-  const isStatsRoute = pathname === '/app/stats';
 
   return (
     <GlobalFrame authenticated={{ user }}>
@@ -166,30 +160,13 @@ function ProtectedWorkspace({ pathname }) {
             </div>
 
             <div className="workspace-shell__toolbar">
-              <nav className="workspace-shell__nav" aria-label="Navigazione area riservata">
-                <button
-                  className={`workspace-shell__nav-link ${!isStatsRoute ? 'workspace-shell__nav-link--active' : ''}`}
-                  onClick={() => navigate('/app')}
-                  type="button"
-                >
-                  Esercitazione
-                </button>
-                <button
-                  className={`workspace-shell__nav-link ${isStatsRoute ? 'workspace-shell__nav-link--active' : ''}`}
-                  onClick={() => navigate('/app/stats')}
-                  type="button"
-                >
-                  Statistiche
-                </button>
-              </nav>
-
               <button className="btn btn--ghost" onClick={logout} type="button">
                 Esci
               </button>
             </div>
           </section>
 
-          {isStatsRoute ? <StatsPage /> : <QuizWorkspace />}
+          <QuizWorkspace />
         </div>
       </QuizProvider>
     </GlobalFrame>
@@ -229,13 +206,23 @@ function AppRouter() {
 
     const isProtectedRoute = pathname === '/app' || pathname.startsWith('/app/');
 
+    if (auth.hasPendingVerification) {
+      const pendingPath = `/verify-email/pending?email=${encodeURIComponent(auth.user?.email || '')}`;
+
+      if (pathname === '/verify-email' || pathname === '/verify-email/pending' || pathname === '/login') {
+        return null;
+      }
+
+      return pendingPath;
+    }
+
     if (auth.isAuthenticated) {
       if (pathname === '/login' || pathname === '/register' || pathname === '/forgot-password' || pathname === '/verify-email/pending' || pathname === '/') {
         return '/app';
       }
 
       if (pathname.startsWith('/app')) {
-        return pathname === '/app' || pathname === '/app/stats' ? null : '/app';
+        return pathname === '/app' ? null : '/app';
       }
 
       return KNOWN_PUBLIC_ROUTES.has(pathname) ? null : '/app';
@@ -246,7 +233,7 @@ function AppRouter() {
     }
 
     return KNOWN_PUBLIC_ROUTES.has(pathname) ? null : '/';
-  }, [auth.bootStatus, auth.isAuthenticated, pathname, search]);
+  }, [auth.bootStatus, auth.hasPendingVerification, auth.isAuthenticated, auth.user, pathname, search]);
 
   useEffect(() => {
     if (!redirectTarget) {
@@ -264,18 +251,18 @@ function AppRouter() {
   }
 
   if (redirectTarget) {
-    return <AppRedirectingState />;
+    return <AppRedirectingState authenticated={auth.user ? { user: auth.user } : null} />;
   }
 
   if (!auth.isAuthenticated) {
     return (
-      <GlobalFrame authenticated={null}>
+      <GlobalFrame authenticated={auth.user ? { user: auth.user } : null}>
         <PublicRoute pathname={pathname} searchParams={searchParams} />
       </GlobalFrame>
     );
   }
 
-  return <ProtectedWorkspace pathname={pathname} />;
+  return <ProtectedWorkspace />;
 }
 
 export default function App() {

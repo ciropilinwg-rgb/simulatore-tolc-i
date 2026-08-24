@@ -1,6 +1,7 @@
 node_modules/
 dist/
 server-data/
+.npm-cache/
 
 .env
 .env.local

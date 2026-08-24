@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react';
 import { useAuth } from '../../context/AuthContext.jsx';
-import { navigate } from '../../hooks/usePathname.js';
 import AuthLayout from './AuthLayout.jsx';
 
 function getRedirectTarget(searchParams) {
@@ -62,29 +61,15 @@ export default function LoginPage({ searchParams }) {
 
   return (
     <AuthLayout
-      eyebrow="Accesso"
-      title="Accedi con il tuo profilo"
-      subtitle="Usa il tuo indirizzo email come username e continua a lavorare solo sul tuo storico personale."
-      footer="Se non hai ancora un account, puoi registrarti in pochi passaggi."
-      sideContent={(
-        <div className="auth-side-card">
-          <span className="auth-side-card__label">Accesso personale</span>
-          <strong>Storico e progressi separati</strong>
-          <p>Ogni sessione caricata dopo il login usa esclusivamente i dati statistici del tuo account verificato.</p>
-        </div>
-      )}
+      variant="centered"
+      panelClassName="auth-layout__panel--login"
     >
-      <div className="auth-card">
-        <div>
-          <p className="auth-card__title">Bentornato</p>
-          <p className="auth-card__subtitle">Inserisci email e password per entrare nell’area riservata.</p>
-        </div>
-
+      <div className="auth-card auth-card--login">
         {sessionNotice ? <div className="auth-form__notice">{sessionNotice}</div> : null}
         {error ? <div className="auth-form__error">{error}</div> : null}
         {info ? <div className="auth-form__success">{info}</div> : null}
 
-        <form className="auth-form" onSubmit={handleSubmit}>
+        <form className="auth-form auth-form--login" onSubmit={handleSubmit}>
           <label className="auth-field">
             <span className="auth-field__label">Username / Email</span>
             <input
@@ -124,15 +109,6 @@ export default function LoginPage({ searchParams }) {
             ) : null}
           </div>
         </form>
-
-        <div className="auth-links">
-          <a className="auth-link" href="/forgot-password" onClick={(event) => { event.preventDefault(); navigate('/forgot-password'); }}>
-            Password dimenticata?
-          </a>
-          <a className="auth-link" href="/register" onClick={(event) => { event.preventDefault(); navigate('/register'); }}>
-            Non hai un account? Registrati
-          </a>
-        </div>
       </div>
     </AuthLayout>
   );

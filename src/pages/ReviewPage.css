@@ -1,4 +1,5 @@
-/* Hallmark · genre: modern-minimal · macrostructure: Long Document · design-system: design.md · designed-as-app */
+/* Hallmark · pre-emit critique: P5 H4 E5 S4 R5 V4 */
+/* Hallmark · genre: editorial-classic · macrostructure: revision ledger with compact summary rail · design-system: design.md · designed-as-app */
 .review-page__container {
   display: flex;
   flex-direction: column;
@@ -9,7 +10,7 @@
 .review-page__header {
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
+  gap: 0.65rem;
 }
 
 .review-page__eyebrow {
@@ -25,7 +26,7 @@
   font-size: var(--text-3xl);
   font-weight: 700;
   line-height: 1;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
   color: var(--color-ink);
 }
 
@@ -43,12 +44,15 @@
 .review-page__stat {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
   padding: 1rem 1.05rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-rule);
-  background: var(--color-surface-frost);
-  box-shadow: var(--shadow-sm);
+  border-radius: 1.2rem;
+  border: 1px solid var(--color-rule-strong);
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-paper) 100%);
+  box-shadow: inset 0 1px 0 var(--color-surface);
+  text-align: center;
 }
 
 .review-page__stat span {

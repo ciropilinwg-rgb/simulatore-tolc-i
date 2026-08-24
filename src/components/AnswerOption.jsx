@@ -1,5 +1,6 @@
 // AnswerOption — Singola opzione di risposta
 
+import MathText from './MathText.jsx';
 import './AnswerOption.css';
 
 function getVerifiedState(option, answer) {
@@ -53,7 +54,11 @@ export default function AnswerOption({
     >
       <span className="answer-option__marker">{optionLabel}</span>
       <span className="answer-option__content">
-        <span className="answer-option__text">{option.text}</span>
+        <MathText
+          className="answer-option__text"
+          text={option.text}
+          preferWholeMath
+        />
       </span>
       {stateLabel && <span className="answer-option__status">{stateLabel}</span>}
     </button>

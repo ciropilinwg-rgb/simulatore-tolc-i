@@ -4,8 +4,8 @@ import { navigate } from '../../hooks/usePathname.js';
 import AuthLayout from './AuthLayout.jsx';
 
 export default function PendingVerificationPage({ searchParams }) {
-  const { resendVerification, mailDeliveryMode } = useAuth();
-  const email = useMemo(() => searchParams.get('email') || '', [searchParams]);
+  const { resendVerification, user } = useAuth();
+  const email = useMemo(() => searchParams.get('email') || user?.email || '', [searchParams, user]);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
@@ -46,11 +46,6 @@ export default function PendingVerificationPage({ searchParams }) {
           <button className="btn btn--ghost" onClick={() => navigate('/login')} type="button">
             Torna al login
           </button>
-          {mailDeliveryMode === 'local_outbox' ? (
-            <button className="btn btn--ghost" onClick={() => navigate('/local-inbox')} type="button">
-              Apri inbox locale
-            </button>
-          ) : null}
         </div>
       </div>
     </AuthLayout>

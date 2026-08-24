@@ -1,5 +1,6 @@
 // ReviewCard — Card di revisione per singola domanda
 
+import MathText from './MathText.jsx';
 import './ReviewCard.css';
 
 export default function ReviewCard({ detail, index }) {
@@ -18,19 +19,25 @@ export default function ReviewCard({ detail, index }) {
         </span>
       </div>
 
-      <h2 className="review-card__question">{question.domanda}</h2>
+      <MathText
+        as="h2"
+        className="review-card__question"
+        text={question.domanda}
+      />
 
       <div className="review-card__comparison">
         <div className={`review-card__answer ${isUnanswered ? 'review-card__answer--unanswered' : 'review-card__answer--wrong'}`}>
           <span className="review-card__answer-label">La tua risposta</span>
           <p className="review-card__answer-text">
-            {isUnanswered ? 'Non hai risposto' : selectedText}
+            {isUnanswered ? 'Non hai risposto' : <MathText text={selectedText} preferWholeMath />}
           </p>
         </div>
 
         <div className="review-card__answer review-card__answer--correct">
           <span className="review-card__answer-label">Risposta corretta</span>
-          <p className="review-card__answer-text">{correctText}</p>
+          <p className="review-card__answer-text">
+            <MathText text={correctText} preferWholeMath />
+          </p>
         </div>
       </div>
 

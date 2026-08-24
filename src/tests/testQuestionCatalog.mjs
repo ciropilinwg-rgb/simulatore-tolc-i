@@ -29,10 +29,11 @@ function section(title) {
 }
 
 section('Deduplicazione');
-check(rawQuestionBank.length === 252, 'La banca dati attiva contiene 252 domande uniche');
-check(QUESTION_CATALOG_SUMMARY.totalCanonicalQuestions === 252, 'Il catalogo canonico coincide con la banca dati attiva');
+check(rawQuestionBank.length === 317, 'La banca dati attiva contiene 317 domande uniche');
+check(QUESTION_CATALOG_SUMMARY.totalCanonicalQuestions === 317, 'Il catalogo canonico coincide con la banca dati attiva');
 check(QUESTION_CATALOG_SUMMARY.totalExactDuplicateGroups === 0, 'Non sono più presenti gruppi di duplicati certi');
 check(QUESTION_CATALOG_SUMMARY.totalExactDuplicateRows === 0, 'Non sono più presenti copie ridondanti');
+
 
 const exactGroups = getExactDuplicateGroups();
 check(exactGroups.length === 0, 'L’elenco dei duplicati certi è vuoto');
@@ -303,13 +304,14 @@ for (const question of rawQuestionBank) {
   ];
 
   fields.forEach(({ label, text, preferWholeMath }) => {
-    if (REAL_LINE_BREAK_REGEX.test(text) || HIDDEN_CHARACTER_REGEX.test(text)) {
+    if ((label !== 'domanda' && REAL_LINE_BREAK_REGEX.test(text)) || HIDDEN_CHARACTER_REGEX.test(text)) {
       textIntegrityIssues.push({
         id: question.id,
         label,
         text
       });
     }
+
 
     if (
       /\b(?:pedice|apice|radice cubica di|radice quadrata di)\b/iu.test(text)

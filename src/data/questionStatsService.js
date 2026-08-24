@@ -221,25 +221,27 @@ export async function recordAnswer({ sessionId, questionId, selectedText }) {
         return;
       }
 
-      const correct = isCorrectAnswer(canonicalQuestionId, selectedText);
+      const question = getQuestionById(canonicalQuestionId);
+      const isDaVerificare = Boolean(question?.daVerificare);
+      const correct = isDaVerificare ? false : isCorrectAnswer(canonicalQuestionId, selectedText);
       const statsSnapshot = await transaction.get(statsRef);
       const currentStats = statsSnapshot.exists() ? statsSnapshot.data() : {};
       const correctCount = toNumber(currentStats.numeroRisposteCorrette) + (correct ? 1 : 0);
-      const wrongCount = toNumber(currentStats.numeroRisposteErrate) + (correct ? 0 : 1);
+      const wrongCount = toNumber(currentStats.numeroRisposteErrate) + (!isDaVerificare && !correct ? 1 : 0);
       const timestamp = nowIso();
-      const question = getQuestionById(canonicalQuestionId);
 
       answeredByQuestion[mapKey] = {
         questionId: String(canonicalQuestionId),
         selectedText: String(selectedText),
-        isCorrect: correct,
+        isCorrect: isDaVerificare ? null : correct,
+        daVerificare: isDaVerificare,
         answeredAt: timestamp
       };
 
       transaction.set(sessionRef, {
         answeredByQuestion,
         correctCount: toNumber(sessionData.correctCount) + (correct ? 1 : 0),
-        wrongCount: toNumber(sessionData.wrongCount) + (correct ? 0 : 1),
+        wrongCount: toNumber(sessionData.wrongCount) + (!isDaVerificare && !correct ? 1 : 0),
         unansweredCount: Math.max(toNumber(sessionData.unansweredCount) - 1, 0),
         updatedAt: timestamp
       }, { merge: true });
@@ -255,6 +257,7 @@ export async function recordAnswer({ sessionId, questionId, selectedText }) {
         lastAnsweredAt: timestamp,
         updatedAt: timestamp
       }, { merge: true });
+
     });
 
     return { ok: true };

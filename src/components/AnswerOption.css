@@ -129,6 +129,46 @@
   transform: none;
 }
 
+.answer-option--da-verificare {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.answer-option--da-verificare .answer-option__marker {
+  background: #f59e0b;
+  color: #fff;
+}
+
+.answer-option--da-verificare .answer-option__status {
+  color: #d97706;
+}
+
+.answer-option--with-image .answer-option__content {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.answer-option__image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 190px;
+  background: #fff;
+  padding: 0.4rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-rule);
+}
+
+.answer-option__image {
+  width: 100%;
+  height: auto;
+  max-height: 140px;
+  object-fit: contain;
+  display: block;
+}
+
 @media (max-width: 640px) {
   .answer-option {
     grid-template-columns: auto minmax(0, 1fr);

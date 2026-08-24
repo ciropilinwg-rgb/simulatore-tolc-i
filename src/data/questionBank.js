@@ -1,6 +1,5 @@
-// Banca dati TOLC-I — deduplicata e normalizzata per l’app multiutente
-// Rigenerata automaticamente dal catalogo canonico locale.
-// Ogni domanda attiva ha un ID univoco progressivo e non conserva lo storico di test precedente.
+// questionBank — Banca dati ufficiale integrata (317 quesiti)
+// 252 quesiti storici TOLC-I canonici deduplicati + 65 quesiti da NEW Test1.pdf
 
 const questionBank = [
   {
@@ -4286,6 +4285,1279 @@ const questionBank = [
     "numeroVolteProposta": 0,
     "numeroRisposteCorrette": 0,
     "numeroRisposteErrate": 0
+  },
+  {
+    "id": 258,
+    "materia": "Comprensione verbale",
+    "domanda": "Her brothers ________ in Jakarta.",
+    "rispostaCorretta": "were born",
+    "risposteErrate": [
+      "are born",
+      "have born",
+      "born",
+      "borned"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 1",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 1
+  },
+  {
+    "id": 259,
+    "materia": "Comprensione verbale",
+    "domanda": "________ that documentary on Winston Churchill last night?",
+    "rispostaCorretta": "Did you record",
+    "risposteErrate": [
+      "Did you recorded",
+      "Recorded you",
+      "Have you recorded",
+      "Recorded it you"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 2",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 2
+  },
+  {
+    "id": 260,
+    "materia": "Comprensione verbale",
+    "domanda": "I put the beer in the fridge ________.",
+    "rispostaCorretta": "four hours ago",
+    "risposteErrate": [
+      "since four hours",
+      "for four hours",
+      "before four hours",
+      "at four hours"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 3",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 3
+  },
+  {
+    "id": 261,
+    "materia": "Comprensione verbale",
+    "domanda": "We’re going to the cinema tonight. Would you like ________ us?",
+    "rispostaCorretta": "to join",
+    "risposteErrate": [
+      "join",
+      "joining",
+      "to joining",
+      "of joining"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 4",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 4
+  },
+  {
+    "id": 262,
+    "materia": "Comprensione verbale",
+    "domanda": "He needs a portable computer but he doesn’t have ________ money.",
+    "rispostaCorretta": "much",
+    "risposteErrate": [
+      "a lot",
+      "too",
+      "almost",
+      "many"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 5",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 5
+  },
+  {
+    "id": 263,
+    "materia": "Comprensione verbale",
+    "domanda": "The company has improved its income ________ five months.",
+    "rispostaCorretta": "for",
+    "risposteErrate": [
+      "since",
+      "during",
+      "until",
+      "last"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 6",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 6
+  },
+  {
+    "id": 264,
+    "materia": "Comprensione verbale",
+    "domanda": "You are a pirate! How many songs and films ________ from the Internet this week?",
+    "rispostaCorretta": "have you downloaded",
+    "risposteErrate": [
+      "do you download",
+      "did you download",
+      "want you to download",
+      "were you downloaded"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 7",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 7
+  },
+  {
+    "id": 265,
+    "materia": "Comprensione verbale",
+    "domanda": "I don’t know what my father ________ with his students. With me he’s always nice.",
+    "rispostaCorretta": "is like",
+    "risposteErrate": [
+      "likes",
+      "looks like",
+      "would like",
+      "likes all"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 8",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 8
+  },
+  {
+    "id": 266,
+    "materia": "Comprensione verbale",
+    "domanda": "Our holidays were not as expensive ________ we thought.",
+    "rispostaCorretta": "as",
+    "risposteErrate": [
+      "than",
+      "that",
+      "like",
+      "so"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 9",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 9
+  },
+  {
+    "id": 267,
+    "materia": "Comprensione verbale",
+    "domanda": "When the thieves broke in they ________.",
+    "rispostaCorretta": "were sleeping",
+    "risposteErrate": [
+      "slept",
+      "are sleeping",
+      "have been sleeping",
+      "had slept"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 10",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 10
+  },
+  {
+    "id": 268,
+    "materia": "Comprensione verbale",
+    "domanda": "“Are you meeting her tonight ?” - “Yes, I ________. Why?”",
+    "rispostaCorretta": "am",
+    "risposteErrate": [
+      "am meeting",
+      "meet",
+      "can meet",
+      "do"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 11",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 11
+  },
+  {
+    "id": 269,
+    "materia": "Comprensione verbale",
+    "domanda": "I ________ this watch since I got married.",
+    "rispostaCorretta": "have had",
+    "risposteErrate": [
+      "had",
+      "have",
+      "am having",
+      "had had"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 12",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 12
+  },
+  {
+    "id": 270,
+    "materia": "Comprensione verbale",
+    "domanda": "She’ll be at home between ________ and five. Call her.",
+    "rispostaCorretta": "half past two",
+    "risposteErrate": [
+      "two past half",
+      "thirty past two",
+      "two and half",
+      "two half past"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 13",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 13
+  },
+  {
+    "id": 271,
+    "materia": "Comprensione verbale",
+    "domanda": "Why don’t you want to go to the Far East? It’s ________ interesting.",
+    "rispostaCorretta": "very",
+    "risposteErrate": [
+      "much",
+      "many",
+      "a lot",
+      "too"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 14",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 14
+  },
+  {
+    "id": 272,
+    "materia": "Comprensione verbale",
+    "domanda": "“So that’s your new boyfriend. And ________ ?” - “He works in a bank.”",
+    "rispostaCorretta": "what does he do",
+    "risposteErrate": [
+      "what he makes",
+      "what job he does",
+      "where is he",
+      "which job does he"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 15",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 15
+  },
+  {
+    "id": 273,
+    "materia": "Comprensione verbale",
+    "domanda": "Last year I ________ on holiday with two friends of mine.",
+    "rispostaCorretta": "was",
+    "risposteErrate": [
+      "spent",
+      "passed",
+      "trip",
+      "stayed"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 16",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 16
+  },
+  {
+    "id": 274,
+    "materia": "Comprensione verbale",
+    "domanda": "The country was against the war ________ the president started it.",
+    "rispostaCorretta": "but",
+    "risposteErrate": [
+      "so",
+      "why",
+      "and",
+      "otherwise"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 17",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 17
+  },
+  {
+    "id": 275,
+    "materia": "Comprensione verbale",
+    "domanda": "________ something special for your next anniversary?",
+    "rispostaCorretta": "Are you doing",
+    "risposteErrate": [
+      "Do you do",
+      "Will you doing",
+      "Do you",
+      "Are you go"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 18",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 18
+  },
+  {
+    "id": 276,
+    "materia": "Comprensione verbale",
+    "domanda": "Don’t you think that ________ in Milan is dangerous?",
+    "rispostaCorretta": "cycling",
+    "risposteErrate": [
+      "you cycle",
+      "to cycle",
+      "by cycling",
+      "the cycling"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 19",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 19
+  },
+  {
+    "id": 277,
+    "materia": "Comprensione verbale",
+    "domanda": "Jayapura is ________ place they’ve been to.",
+    "rispostaCorretta": "the most distant",
+    "risposteErrate": [
+      "more distant",
+      "the distantest",
+      "distant than",
+      "the distant of"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 20",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 20
+  },
+  {
+    "id": 278,
+    "materia": "Comprensione verbale",
+    "domanda": "The room is ________ and nobody is allowed to enter it.",
+    "rispostaCorretta": "hers",
+    "risposteErrate": [
+      "of her",
+      "her",
+      "she’s",
+      "of she"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 21",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 21
+  },
+  {
+    "id": 279,
+    "materia": "Comprensione verbale",
+    "domanda": "I met a young lady ________ cousin lives near me.",
+    "rispostaCorretta": "whose",
+    "risposteErrate": [
+      "who’s",
+      "that",
+      "which",
+      "who her"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 22",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 22
+  },
+  {
+    "id": 280,
+    "materia": "Comprensione verbale",
+    "domanda": "If the restaurant is closed where ________ ?",
+    "rispostaCorretta": "shall we go",
+    "risposteErrate": [
+      "about we go",
+      "go we",
+      "let’s go",
+      "do we go"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 23",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 23
+  },
+  {
+    "id": 281,
+    "materia": "Comprensione verbale",
+    "domanda": "Have they cleaned their room ________ ?",
+    "rispostaCorretta": "yet",
+    "risposteErrate": [
+      "still",
+      "just",
+      "ready",
+      "ever"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 24",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 24
+  },
+  {
+    "id": 282,
+    "materia": "Comprensione verbale",
+    "domanda": "What time does she have ________ lunch?",
+    "rispostaCorretta": "- - - -",
+    "risposteErrate": [
+      "a",
+      "the",
+      "some",
+      "any"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 25",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 25
+  },
+  {
+    "id": 283,
+    "materia": "Comprensione verbale",
+    "domanda": "Look at ________ girls over there! They’re Mr White’s daughters.",
+    "rispostaCorretta": "those",
+    "risposteErrate": [
+      "they",
+      "them",
+      "these",
+      "their"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 26",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 26
+  },
+  {
+    "id": 284,
+    "materia": "Comprensione verbale",
+    "domanda": "“________ do you go to the dentist’s?” - “Once a year.”",
+    "rispostaCorretta": "How often",
+    "risposteErrate": [
+      "How many times",
+      "How long",
+      "How much",
+      "How old"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 27",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 27
+  },
+  {
+    "id": 285,
+    "materia": "Comprensione verbale",
+    "domanda": "When do you usually have ________ breakfast?",
+    "rispostaCorretta": "- - - -",
+    "risposteErrate": [
+      "a",
+      "the",
+      "any",
+      "first"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 28",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 28
+  },
+  {
+    "id": 286,
+    "materia": "Comprensione verbale",
+    "domanda": "This is our son James and ________ are our twin daughters, Sabrina and Jessica.",
+    "rispostaCorretta": "these",
+    "risposteErrate": [
+      "their",
+      "that",
+      "them",
+      "this"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 29",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 29
+  },
+  {
+    "id": 287,
+    "materia": "Comprensione verbale",
+    "domanda": "Those ________ are very efficient! What about a promotion?",
+    "rispostaCorretta": "policemen",
+    "risposteErrate": [
+      "policeman",
+      "policemens",
+      "policemans",
+      "policemen’s"
+    ],
+    "spiegazione": "",
+    "fonte": "NEW Test1.pdf — Quesito 30",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 30
+  },
+  {
+    "id": 288,
+    "materia": "Matematica",
+    "domanda": "Se x è un numero reale negativo, allora",
+    "rispostaCorretta": "x − |x| < 0",
+    "risposteErrate": [
+      "x · |x| > 0",
+      "x / |x| > 0",
+      "x + |x| > 0",
+      "−x · |x| < 0"
+    ],
+    "spiegazione": "Se x < 0, allora |x| = -x > 0. Ne segue che x - |x| = x - (-x) = 2x < 0.",
+    "fonte": "NEW Test1.pdf — Quesito 31",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 31
+  },
+  {
+    "id": 289,
+    "materia": "Matematica",
+    "domanda": "Se un polinomio P(x) è divisibile per x² − 4, allora",
+    "rispostaCorretta": "2 e −2 sono certamente radici di P(x)",
+    "risposteErrate": [
+      "P(x) non ha radici reali",
+      "2 non è una radice di P(x)",
+      "−2 non è una radice di P(x)",
+      "√2 e −√2 sono certamente radici di P(x)"
+    ],
+    "spiegazione": "Poiché x² - 4 = (x - 2)(x + 2), se P(x) è divisibile per x² - 4 si ha P(2) = 0 e P(-2) = 0.",
+    "fonte": "NEW Test1.pdf — Quesito 32",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 32
+  },
+  {
+    "id": 290,
+    "materia": "Matematica",
+    "domanda": "Indicato con x un angolo la cui misura in radianti può variare tra 0 e 2π, l’equazione\nsin x + cos x = 0\nammette",
+    "rispostaCorretta": "due soluzioni",
+    "risposteErrate": [
+      "quattro soluzioni",
+      "una soluzione",
+      "otto soluzioni",
+      "nessuna soluzione"
+    ],
+    "spiegazione": "sin x + cos x = 0 equivale a tan x = -1 (con cos x ≠ 0). Nell'intervallo [0, 2π] le soluzioni sono due: x = 3π/4 e x = 7π/4.",
+    "fonte": "NEW Test1.pdf — Quesito 33",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 33
+  },
+  {
+    "id": 291,
+    "materia": "Matematica",
+    "domanda": "Fissato nel piano un sistema di riferimento cartesiano ortogonale Oxy, si consideri la retta r di equazione\ny = (2x + 1) / −3\nLa retta passante per il punto di coordinate (1, 1) e perpendicolare ad r ha equazione",
+    "rispostaCorretta": "y = (3x − 1) / 2",
+    "risposteErrate": [
+      "y = (2x + 1) / 3",
+      "y = (3x + 1) / 2",
+      "y = (2x − 5) / 3",
+      "y = (2x − 5) / −3"
+    ],
+    "spiegazione": "La retta r ha coefficiente angolare m = -2/3. La perpendicolare ha m' = -1/m = 3/2. La retta per (1,1) ha equazione y - 1 = 3/2 (x - 1) ⇒ y = (3x - 1)/2.",
+    "fonte": "NEW Test1.pdf — Quesito 34",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 34
+  },
+  {
+    "id": 292,
+    "materia": "Logica",
+    "domanda": "Sapendo che l’affermazione\n«Tutti i sabati vado in pizzeria e poi al cinema»\nè falsa, se ne deduce che",
+    "rispostaCorretta": "qualche sabato non vado in pizzeria o al cinema",
+    "risposteErrate": [
+      "tutti i sabati non vado in pizzeria o al cinema",
+      "qualche sabato non vado né in pizzeria né al cinema",
+      "tutti i sabati non vado né in pizzeria né al cinema",
+      "tutti i giorni vado in pizzeria e al cinema"
+    ],
+    "spiegazione": "La negazione di «Per ogni sabato (pizzeria E cinema)» è «Esiste almeno un sabato in cui NON (pizzeria E cinema)», ossia «qualche sabato non vado in pizzeria O [non vado] al cinema» (legge di De Morgan).",
+    "fonte": "NEW Test1.pdf — Quesito 35",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 35
+  },
+  {
+    "id": 293,
+    "materia": "Matematica",
+    "domanda": "Siano α e β due angoli legati fra di loro dalla relazione β = π − α. Quale delle seguenti uguaglianze è vera?",
+    "rispostaCorretta": "tan α + tan β = 0",
+    "risposteErrate": [
+      "sin α + sin β = 0",
+      "cos α + cos β = −1",
+      "tan α = tan β",
+      "cos α = cos β"
+    ],
+    "spiegazione": "Per angoli supplementari si ha tan(π - α) = -tan α, dunque tan β = -tan α ⇒ tan α + tan β = 0.",
+    "fonte": "NEW Test1.pdf — Quesito 36",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 36
+  },
+  {
+    "id": 294,
+    "materia": "Matematica",
+    "domanda": "L’età media dei partecipanti ad una festa è di 24 anni. Se l’età media degli uomini è 28 anni e quella delle donne è 18 anni, qual è il rapporto tra il numero degli uomini e quello delle donne?",
+    "rispostaCorretta": "3/2",
+    "risposteErrate": [
+      "2",
+      "14/9",
+      "4/3",
+      "9/14"
+    ],
+    "spiegazione": "Posto U il numero di uomini e D quello di donne: 28U + 18D = 24(U + D) ⇒ 4U = 6D ⇒ U/D = 6/4 = 3/2.",
+    "fonte": "NEW Test1.pdf — Quesito 37",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 37
+  },
+  {
+    "id": 295,
+    "materia": "Matematica",
+    "domanda": "Un triangolo rettangolo ha perimetro lungo 12 cm. Allora i suoi due cateti sono lunghi",
+    "rispostaCorretta": "3 e 4 cm",
+    "risposteErrate": [
+      "1 e 2 cm",
+      "2 e 3 cm",
+      "4 e 5 cm",
+      "5 e 6 cm"
+    ],
+    "spiegazione": "Con cateti di 3 cm e 4 cm, l'ipotenusa è √(3² + 4²) = 5 cm. Il perimetro è 3 + 4 + 5 = 12 cm.",
+    "fonte": "NEW Test1.pdf — Quesito 38",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 38
+  },
+  {
+    "id": 296,
+    "materia": "Matematica",
+    "domanda": "Quale delle seguenti affermazioni è falsa?\nAffinché due frazioni siano uguali",
+    "rispostaCorretta": "è necessario che abbiano uguale numeratore e uguale denominatore",
+    "risposteErrate": [
+      "è sufficiente che abbiano lo stesso numeratore e lo stesso denominatore",
+      "è necessario che abbiano numeratori e denominatori proporzionali",
+      "non è necessario che abbiano uguale numeratore e uguale denominatore",
+      "è necessario e sufficiente che abbiano numeratori e denominatori proporzionali"
+    ],
+    "spiegazione": "Due frazioni possono essere uguali anche se hanno numeratori e denominatori diversi (es. 1/2 = 2/4). Dunque non è «necessario» avere numeratore e denominatore identici.",
+    "fonte": "NEW Test1.pdf — Quesito 39",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 39
+  },
+  {
+    "id": 297,
+    "materia": "Matematica",
+    "domanda": "La metà di (1/2)⁵⁰ è uguale a",
+    "rispostaCorretta": "(1/2)⁵¹",
+    "risposteErrate": [
+      "(1/4)⁵⁰",
+      "(1/2)²⁵",
+      "(1/2)⁴⁹",
+      "(1/4)²⁵"
+    ],
+    "spiegazione": "La metà di (1/2)⁵⁰ è (1/2) · (1/2)⁵⁰ = (1/2)⁵¹.",
+    "fonte": "NEW Test1.pdf — Quesito 40",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 40
+  },
+  {
+    "id": 298,
+    "materia": "Matematica",
+    "domanda": "La seguente tabella rappresenta la distribuzione dei redditi annuali (in migliaia di euro) di una certa collettività di persone.\nSe ne deduce che:",
+    "rispostaCorretta": "le persone con reddito inferiore a 20 000 sono tante quante quelle che hanno un reddito compreso fra 20 000 e 50 000",
+    "risposteErrate": [
+      "le persone con reddito inferiore a 10 000 sono meno di quelle che hanno un reddito superiore a 30 000",
+      "il 60% delle persone ha un reddito inferiore a 25 000",
+      "il 20% delle persone ha un reddito superiore a 40 000",
+      "nessuno ha un reddito di 5 000"
+    ],
+    "spiegazione": "La percentuale con reddito ≤ 20 (migliaia) è il 47%. La percentuale con reddito compreso fra 20 e 50 è pari a 94% - 47% = 47%. I due gruppi hanno pertanto la stessa consistenza.",
+    "fonte": "NEW Test1.pdf — Quesito 41",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 41,
+    "tabella": {
+      "headers": [
+        "reddito",
+        "≤ 10",
+        "≤ 20",
+        "≤ 30",
+        "≤ 50",
+        "> 50"
+      ],
+      "rows": [
+        [
+          "% di persone",
+          "28%",
+          "47%",
+          "73%",
+          "94%",
+          "6%"
+        ]
+      ]
+    }
+  },
+  {
+    "id": 299,
+    "materia": "Matematica",
+    "domanda": "Fissato nel piano un sistema di assi cartesiani ortogonali Oxy, quale tra le seguenti è la retta di equazione 4x − 2y + 1 = 0?",
+    "rispostaCorretta": "Grafico A",
+    "risposteErrate": [
+      "Grafico B",
+      "Grafico C",
+      "Grafico D",
+      "Grafico E"
+    ],
+    "spiegazione": "Riscrivendo l'equazione in forma esplicita: 2y = 4x + 1 ⇒ y = 2x + 1/2. La retta ha pendenza positiva (m = 2), intercetta sull'asse y positiva (y = 1/2 > 0) e intercetta sull'asse x negativa (x = -1/4 < 0), corrispondente esattamente al Grafico A.",
+    "fonte": "NEW Test1.pdf — Quesito 42",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 42,
+    "rispostaCorrettaImg": "/images/q42_a.svg",
+    "risposteErrateImg": [
+      "/images/q42_b.svg",
+      "/images/q42_c.svg",
+      "/images/q42_d.svg",
+      "/images/q42_e.svg"
+    ]
+  },
+  {
+    "id": 300,
+    "materia": "Matematica",
+    "domanda": "L’equazione nell’incognita reale x\n(x² − 3x) / (3 − x) = −2",
+    "rispostaCorretta": "ha un’unica soluzione la quale è diversa da 3",
+    "risposteErrate": [
+      "non ha soluzioni",
+      "ha due soluzioni",
+      "ha l’unica soluzione x = 3",
+      "ha più di due soluzioni"
+    ],
+    "spiegazione": "Il dominio richiede x ≠ 3. Scomponendo il numeratore x(x - 3) = -x(3 - x), per x ≠ 3 l'equazione si riduce a -x = -2 ⇒ x = 2, che è un'unica soluzione reale e diversa da 3.",
+    "fonte": "NEW Test1.pdf — Quesito 43",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 43
+  },
+  {
+    "id": 301,
+    "materia": "Logica",
+    "domanda": "Aldo Bruno e Carlo sono tre amici. Si sa che:\n(a) almeno uno di essi è laureato\n(b) se Aldo è laureato, anche Bruno lo è\n(c) se Carlo è laureato, anche Aldo lo è\n(d) solo uno tra Bruno e Carlo è laureato\n\nAllora si deduce che:",
+    "rispostaCorretta": "Bruno è laureato",
+    "risposteErrate": [
+      "Aldo e Bruno sono laureati",
+      "Aldo è laureato e Bruno non lo è",
+      "Carlo è laureato",
+      "i laureati sono due"
+    ],
+    "spiegazione": "Se Carlo fosse laureato, per la (c) anche Aldo lo sarebbe, e per la (b) anche Bruno lo sarebbe. Ma allora sia Bruno che Carlo sarebbero laureati, contraddicendo la (d). Dunque Carlo non è laureato. Dalla (d) ne consegue necessariamente che Bruno è laureato.",
+    "fonte": "NEW Test1.pdf — Quesito 44",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 44
+  },
+  {
+    "id": 302,
+    "materia": "Matematica",
+    "domanda": "Fissato nel piano un sistema di riferimento cartesiano ortogonale Oxy, quale delle seguenti è l’equazione di una circonferenza?",
+    "rispostaCorretta": "4x² − 3x + 4y² − 5y − 1 = 0",
+    "risposteErrate": [
+      "x² + y² − 2xy − 1 = 0",
+      "(x − 1)² − (y − 2)² − 1 = 0",
+      "x² + y² + 1 = 0",
+      "x⁴ + y⁴ − 1 = 0"
+    ],
+    "spiegazione": "Dividendo per 4: x² + y² - 3/4 x - 5/4 y - 1/4 = 0. Il raggio al quadrato r² = (3/8)² + (5/8)² + 1/4 = 50/64 > 0, che descrive una circonferenza reale.",
+    "fonte": "NEW Test1.pdf — Quesito 45",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 45
+  },
+  {
+    "id": 303,
+    "materia": "Matematica",
+    "domanda": "Un macchinario produce bulloni. Un bullone è ritenuto difettoso quando ha peso oppure dimensioni sbagliate. Il controllo di qualità mette in evidenza che il 5% dei bulloni prodotti ha almeno il peso sbagliato e che il 3% ha almeno le dimensioni sbagliate. Nell’ipotesi che il 2% dei bulloni prodotti abbia sia peso che dimensioni sbagliate, qual è la percentuale di bulloni difettosi che produce quel macchinario?",
+    "rispostaCorretta": "6%",
+    "risposteErrate": [
+      "8%",
+      "10%",
+      "4%",
+      "Non è possibile rispondere con i dati assegnati"
+    ],
+    "spiegazione": "Per il principio di inclusione-esclusione: P(Peso ∪ Dimensioni) = P(Peso) + P(Dimensioni) - P(Peso ∩ Dimensioni) = 5% + 3% - 2% = 6%.",
+    "fonte": "NEW Test1.pdf — Quesito 46",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 46
+  },
+  {
+    "id": 304,
+    "materia": "Matematica",
+    "domanda": "Posto\na = 0,21    b = 1/5    c = 1 / log₂ 5\nsi ha",
+    "rispostaCorretta": "b < a < c",
+    "risposteErrate": [
+      "c < a < b",
+      "a < b < c",
+      "c < b < a",
+      "a < c < b"
+    ],
+    "spiegazione": "b = 1/5 = 0,20; a = 0,21; c = 1 / log₂ 5 = log₅ 2 ≈ 0,43. Dunque b < a < c.",
+    "fonte": "NEW Test1.pdf — Quesito 47",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 47
+  },
+  {
+    "id": 305,
+    "materia": "Matematica",
+    "domanda": "Per trasmettere segnali Aldo issa 5 bandierine (3 gialle e 2 blu) su di un’asta. Quanti segnali diversi può ottenere Aldo?",
+    "rispostaCorretta": "10",
+    "risposteErrate": [
+      "6",
+      "5",
+      "25",
+      "20"
+    ],
+    "spiegazione": "Permutazioni con ripetizione di 5 elementi con 3 gialle e 2 blu: 5! / (3! · 2!) = 120 / (6 · 2) = 10.",
+    "fonte": "NEW Test1.pdf — Quesito 48",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 48
+  },
+  {
+    "id": 306,
+    "materia": "Logica",
+    "domanda": "L’affermazione\n«A nessuno studente sono antipatici tutti i professori»\nequivale a dire che:",
+    "rispostaCorretta": "ad ogni studente è simpatico almeno un professore",
+    "risposteErrate": [
+      "c’è uno studente a cui tutti i professori sono antipatici",
+      "tutti i professori sono antipatici a tutti gli studenti",
+      "a qualche studente sono simpatici tutti i professori",
+      "c’è un professore che è simpatico a tutti gli studenti"
+    ],
+    "spiegazione": "Negare che a uno studente siano antipatici tutti i professori significa affermare che per ogni studente esiste almeno un professore che non gli è antipatico (ossia gli è simpatico).",
+    "fonte": "NEW Test1.pdf — Quesito 49",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 49
+  },
+  {
+    "id": 307,
+    "materia": "Matematica",
+    "domanda": "L’ombra di un campanile è lunga la metà della sua altezza. Detta α la misura dell’angolo formato dal sole sull’orizzonte in quel momento, si può dire che",
+    "rispostaCorretta": "60° ≤ α",
+    "risposteErrate": [
+      "α < 30°",
+      "30° ≤ α < 45°",
+      "è notte",
+      "45° ≤ α < 60°"
+    ],
+    "spiegazione": "Posto H l'altezza del campanile e L = H/2 la lunghezza dell'ombra, tan α = H / L = 2. Poiché tan 60° = √3 ≈ 1,732 e tan α = 2 > √3, risulta α > 60°.",
+    "fonte": "NEW Test1.pdf — Quesito 50",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 50
+  },
+  {
+    "id": 308,
+    "materia": "Matematica",
+    "domanda": "Si consideri la seguente equazione per i valori reali della variabile x:\n8^(x − 1/3) = 4^(3/2 x + 1/2)\nL’equazione data ha",
+    "rispostaCorretta": "nessuna soluzione",
+    "risposteErrate": [
+      "quattro soluzioni",
+      "due soluzioni",
+      "infinite soluzioni",
+      "una soluzione"
+    ],
+    "spiegazione": "Esprimendo entrambe le basi in potenza di 2: (2³)^(x - 1/3) = 2^(3x - 1) e (2²)^(3/2 x + 1/2) = 2^(3x + 1). Uguagliando gli esponenti si ottiene 3x - 1 = 3x + 1 ⇒ -1 = 1, equazione impossibile.",
+    "fonte": "NEW Test1.pdf — Quesito 51",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 51
+  },
+  {
+    "id": 309,
+    "materia": "Matematica",
+    "domanda": "Un triangolo rettangolo, avente cateti di lunghezza rispettiva 1 cm e 2 cm, viene fatto ruotare di un giro completo una volta intorno al cateto minore, generando un cono C₁, e una volta intorno al cateto maggiore, generando un cono C₂. Allora il volume di C₁ è",
+    "rispostaCorretta": "il doppio del volume di C₂",
+    "risposteErrate": [
+      "uguale al volume di C₂",
+      "un quarto del volume di C₂",
+      "il quadruplo del volume di C₂",
+      "la metà del volume di C₂"
+    ],
+    "spiegazione": "Volume cono: V = 1/3 π r² h. Per C₁ (r = 2, h = 1): V₁ = 4/3 π. Per C₂ (r = 1, h = 2): V₂ = 2/3 π. Dunque V₁ / V₂ = 2.",
+    "fonte": "NEW Test1.pdf — Quesito 52",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 52
+  },
+  {
+    "id": 310,
+    "materia": "Matematica",
+    "domanda": "Due circonferenze concentriche hanno diametri rispettivamente uguali a 6 cm e a 2 cm. Qual è l’area della parte di piano compresa tra esse?",
+    "rispostaCorretta": "8π cm²",
+    "risposteErrate": [
+      "4π cm²",
+      "10π cm²",
+      "16π cm²",
+      "32π cm²"
+    ],
+    "spiegazione": "I raggi sono R = 3 cm e r = 1 cm. L'area della corona circolare è π (R² - r²) = π (9 - 1) = 8π cm².",
+    "fonte": "NEW Test1.pdf — Quesito 53",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 53
+  },
+  {
+    "id": 311,
+    "materia": "Matematica",
+    "domanda": "La disequazione x³ ≤ x⁴ è verificata se e solo se",
+    "rispostaCorretta": "x ≤ 0 oppure x ≥ 1",
+    "risposteErrate": [
+      "x ≥ 0",
+      "x ≥ 1",
+      "x ≤ −1 oppure x ≥ 1",
+      "x è un numero reale qualunque"
+    ],
+    "spiegazione": "x⁴ - x³ ≥ 0 ⇒ x³(x - 1) ≥ 0. Studiando il segno dei fattori, il prodotto è ≥ 0 per x ≤ 0 oppure x ≥ 1.",
+    "fonte": "NEW Test1.pdf — Quesito 54",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 54
+  },
+  {
+    "id": 312,
+    "materia": "Matematica",
+    "domanda": "In una città sono pubblicati tre giornali: il Mattino, il Pomeriggio e la Sera. Il 40% dei cittadini legge il Mattino, il 30% legge il Pomeriggio e il 10% legge la Sera. Inoltre, il 15% dei cittadini legge sia il Mattino che il Pomeriggio, il 7% sia il Mattino che la Sera e il 5% sia il Pomeriggio che la Sera. Infine, il 2% dei cittadini legge tutti e tre i giornali. Qual è la percentuale di cittadini che non legge alcun giornale?",
+    "rispostaCorretta": "45%",
+    "risposteErrate": [
+      "1%",
+      "20%",
+      "50%",
+      "60%"
+    ],
+    "spiegazione": "Percentuale che legge almeno un giornale = 40 + 30 + 10 - 15 - 7 - 5 + 2 = 55%. Chi non legge alcun giornale = 100% - 55% = 45%.",
+    "fonte": "NEW Test1.pdf — Quesito 55",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 55
+  },
+  {
+    "id": 313,
+    "materia": "Comprensione verbale",
+    "domanda": "Nel linguaggio politico degli Stati Uniti non si parlava esplicitamente di nazione",
+    "rispostaCorretta": "per evitare ogni suggestione centralistica",
+    "risposteErrate": [
+      "per garantire l’aggregazione di nuovi stati",
+      "perché il corpo sociale era multietnico",
+      "perché quel termine non era di uso comune",
+      "per differenziarsi dalla sudditanza all’Inghilterra"
+    ],
+    "spiegazione": "Il brano afferma: «Il linguaggio politico degli Stati Uniti d’America preferì in un primo tempo parlare di “popolo”, “unione”, “confederazione” ... nell’intento di evitare le implicazioni di tipo centralistico e unitario del termine “nazione”».",
+    "fonte": "NEW Test1.pdf — Quesito 56",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 56,
+    "brano": "Il significato primario di “nazione”, e uno dei più ricorrenti sul piano bibliografico, era politico. In pratica assimilava “popolo” e Stato allo stesso modo delle Rivoluzioni americana e francese: un’equazione che ritorna spesso in espressioni del tipo “Stato-nazione” e “Nazioni Unite”, o nel linguaggio dei presidenti degli ultimi decenni del secolo XX. Il linguaggio politico degli Stati Uniti d’America preferì in un primo tempo parlare di “popolo”, “unione”, “confederazione”, “nostra terra comune”, “pubblico”, “benessere pubblico”, “comunità”, nell’intento di evitare le implicazioni di tipo centralistico e unitario del termine “nazione” contrarie in qualche modo ai diritti dei singoli Stati federati. Infatti era, o dovette diventarlo prontamente, parte integrante del concetto di nazione, nell’Età della rivoluzione, l’essere questa “una e indivisibile”, secondo l’espressione francese. La “nazione” cui qui si faceva riferimento era il corpo dei cittadini la cui sovranità collettiva costituiva quello Stato che ne era l’espressione politica. Al di là di che cosa fosse precisamente una nazione, l’elemento di “cittadinanza”, di partecipazione di massa e di scelta risultava comunque sempre presente. Jonh Stuart Mill non si limitò a definire la nazione sulla scorta dell’esistenza di un sentimento nazionale, ma volle aggiungere che gli appartenenti a una nazionalità “desiderano di essere sottoposti a un governo, e altresì desiderano che si tratti di un governo composto esclusivamente da loro o da una parte di loro”.\nL’equazione nazione=Stato=popolo, e in particolare popolo sovrano, rapportò la nazione al territorio dato che la struttura e la definizione degli Stati erano diventate sostanzialmente territoriali. Implicava inoltre una molteplicità di Stati-nazione costituiti su questa base, quale necessaria conseguenza dell’autodeterminazione popolare. Come affermato nella Dichiarazione dei Diritti del 1795 in Francia: “Ogni popolo è indipendente e sovrano, quale che sia il numero degli individui che lo compone e l’estensione del territorio che occupa. Questa sovranità è inalienabile”.\nD’altra parte, però, si dice assai poco su che cosa costituisca un “popolo”. In particolare mancava una relazione logica tra, da una parte, il corpo dei cittadini di uno Stato territoriale e, dall’altra, l’identificazione della “nazione” su basi etniche, linguistiche o altre caratteristiche che consentissero un riconoscimento collettivo del gruppo di appartenenza.\nDa un punto di vista popolare-rivoluzionario l’elemento accomunante della “nazione” non poteva essere in senso sostanziale né l’etnia, né la lingua, né l’affinità, sebbene poi queste potessero indicare una qualche appartenenza collettiva.\nCom’è stato sottolineato da Pierre Vilar, ciò che caratterizzava il popolo-nazione visto dal basso era precisamente il fatto di rappresentare l’interesse comune in contrapposizione agli interessi particolari, il bene comune contro il privilegio, come del resto è adombrato dalla terminologia americana prima del 1800 per indicare la nazionalità e nello stesso tempo evitare l’uso del termine.\nNon possiamo pertanto rintracciare nella “nazione” rivoluzionaria alcunché di simile al successivo programma nazionalistico di fare dello Stato-nazione un corpo definibile sulla base dei criteri oggetto di accanita discussione da parte dei teorici del secolo XIX, quali etnia, lingua, religione, territorio e memoria storica comuni, per citare ancora una volta John Stuart Mill. Come abbiamo visto, ad esclusione del territorio, la cui estensione restava peraltro indefinita, e forse del colore della pelle, nessuno di questi costituiva un elemento unificante nel caso della neonata nazione americana.",
+    "titoloBrano": "Il concetto di nazione"
+  },
+  {
+    "id": 314,
+    "materia": "Comprensione verbale",
+    "domanda": "L’estensione del territorio condiziona la definizione di nazione?",
+    "rispostaCorretta": "No, l’estensione è ininfluente",
+    "risposteErrate": [
+      "Sì, per garantire la sovranità",
+      "Sì, perché occorrono dei confini definiti",
+      "No, perché l’estensione è variabile",
+      "Sì, una estensione ristretta non permette l’autonomia"
+    ],
+    "spiegazione": "La Dichiarazione del 1795 citata nel brano stabilisce: «Ogni popolo è indipendente e sovrano, quale che sia il numero degli individui che lo compone e l'estensione del territorio che occupa».",
+    "fonte": "NEW Test1.pdf — Quesito 57",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 57,
+    "brano": "Il significato primario di “nazione”, e uno dei più ricorrenti sul piano bibliografico, era politico. In pratica assimilava “popolo” e Stato allo stesso modo delle Rivoluzioni americana e francese: un’equazione che ritorna spesso in espressioni del tipo “Stato-nazione” e “Nazioni Unite”, o nel linguaggio dei presidenti degli ultimi decenni del secolo XX. Il linguaggio politico degli Stati Uniti d’America preferì in un primo tempo parlare di “popolo”, “unione”, “confederazione”, “nostra terra comune”, “pubblico”, “benessere pubblico”, “comunità”, nell’intento di evitare le implicazioni di tipo centralistico e unitario del termine “nazione” contrarie in qualche modo ai diritti dei singoli Stati federati. Infatti era, o dovette diventarlo prontamente, parte integrante del concetto di nazione, nell’Età della rivoluzione, l’essere questa “una e indivisibile”, secondo l’espressione francese. La “nazione” cui qui si faceva riferimento era il corpo dei cittadini la cui sovranità collettiva costituiva quello Stato che ne era l’espressione politica. Al di là di che cosa fosse precisamente una nazione, l’elemento di “cittadinanza”, di partecipazione di massa e di scelta risultava comunque sempre presente. Jonh Stuart Mill non si limitò a definire la nazione sulla scorta dell’esistenza di un sentimento nazionale, ma volle aggiungere che gli appartenenti a una nazionalità “desiderano di essere sottoposti a un governo, e altresì desiderano che si tratti di un governo composto esclusivamente da loro o da una parte di loro”.\nL’equazione nazione=Stato=popolo, e in particolare popolo sovrano, rapportò la nazione al territorio dato che la struttura e la definizione degli Stati erano diventate sostanzialmente territoriali. Implicava inoltre una molteplicità di Stati-nazione costituiti su questa base, quale necessaria conseguenza dell’autodeterminazione popolare. Come affermato nella Dichiarazione dei Diritti del 1795 in Francia: “Ogni popolo è indipendente e sovrano, quale che sia il numero degli individui che lo compone e l’estensione del territorio che occupa. Questa sovranità è inalienabile”.\nD’altra parte, però, si dice assai poco su che cosa costituisca un “popolo”. In particolare mancava una relazione logica tra, da una parte, il corpo dei cittadini di uno Stato territoriale e, dall’altra, l’identificazione della “nazione” su basi etniche, linguistiche o altre caratteristiche che consentissero un riconoscimento collettivo del gruppo di appartenenza.\nDa un punto di vista popolare-rivoluzionario l’elemento accomunante della “nazione” non poteva essere in senso sostanziale né l’etnia, né la lingua, né l’affinità, sebbene poi queste potessero indicare una qualche appartenenza collettiva.\nCom’è stato sottolineato da Pierre Vilar, ciò che caratterizzava il popolo-nazione visto dal basso era precisamente il fatto di rappresentare l’interesse comune in contrapposizione agli interessi particolari, il bene comune contro il privilegio, come del resto è adombrato dalla terminologia americana prima del 1800 per indicare la nazionalità e nello stesso tempo evitare l’uso del termine.\nNon possiamo pertanto rintracciare nella “nazione” rivoluzionaria alcunché di simile al successivo programma nazionalistico di fare dello Stato-nazione un corpo definibile sulla base dei criteri oggetto di accanita discussione da parte dei teorici del secolo XIX, quali etnia, lingua, religione, territorio e memoria storica comuni, per citare ancora una volta John Stuart Mill. Come abbiamo visto, ad esclusione del territorio, la cui estensione restava peraltro indefinita, e forse del colore della pelle, nessuno di questi costituiva un elemento unificante nel caso della neonata nazione americana.",
+    "titoloBrano": "Il concetto di nazione"
+  },
+  {
+    "id": 315,
+    "materia": "Comprensione verbale",
+    "domanda": "La comunità di linguaggio è essenziale per una nazione?",
+    "rispostaCorretta": "Soltanto se unita a fattori etnici ed economici",
+    "risposteErrate": [
+      "Sì, perché è il veicolo della cultura comune",
+      "Sì, è una condizione preliminare per il formarsi di una nazione",
+      "Solo se si tratta di una nazione multietnica",
+      "Sì, per garantire l’identità nazionale"
+    ],
+    "spiegazione": "Nel brano si specifica che «l'elemento accomunante della 'nazione' non poteva essere in senso sostanziale né l'etnia, né la lingua, né l'affinità». Le alternative del quesito nel PDF originale contengono solo risposte affermative o condizionate, senza una chiara corrispondenza con la tesi del testo.",
+    "fonte": "NEW Test1.pdf — Quesito 58",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 58,
+    "brano": "Il significato primario di “nazione”, e uno dei più ricorrenti sul piano bibliografico, era politico. In pratica assimilava “popolo” e Stato allo stesso modo delle Rivoluzioni americana e francese: un’equazione che ritorna spesso in espressioni del tipo “Stato-nazione” e “Nazioni Unite”, o nel linguaggio dei presidenti degli ultimi decenni del secolo XX. Il linguaggio politico degli Stati Uniti d’America preferì in un primo tempo parlare di “popolo”, “unione”, “confederazione”, “nostra terra comune”, “pubblico”, “benessere pubblico”, “comunità”, nell’intento di evitare le implicazioni di tipo centralistico e unitario del termine “nazione” contrarie in qualche modo ai diritti dei singoli Stati federati. Infatti era, o dovette diventarlo prontamente, parte integrante del concetto di nazione, nell’Età della rivoluzione, l’essere questa “una e indivisibile”, secondo l’espressione francese. La “nazione” cui qui si faceva riferimento era il corpo dei cittadini la cui sovranità collettiva costituiva quello Stato che ne era l’espressione politica. Al di là di che cosa fosse precisamente una nazione, l’elemento di “cittadinanza”, di partecipazione di massa e di scelta risultava comunque sempre presente. Jonh Stuart Mill non si limitò a definire la nazione sulla scorta dell’esistenza di un sentimento nazionale, ma volle aggiungere che gli appartenenti a una nazionalità “desiderano di essere sottoposti a un governo, e altresì desiderano che si tratti di un governo composto esclusivamente da loro o da una parte di loro”.\nL’equazione nazione=Stato=popolo, e in particolare popolo sovrano, rapportò la nazione al territorio dato che la struttura e la definizione degli Stati erano diventate sostanzialmente territoriali. Implicava inoltre una molteplicità di Stati-nazione costituiti su questa base, quale necessaria conseguenza dell’autodeterminazione popolare. Come affermato nella Dichiarazione dei Diritti del 1795 in Francia: “Ogni popolo è indipendente e sovrano, quale che sia il numero degli individui che lo compone e l’estensione del territorio che occupa. Questa sovranità è inalienabile”.\nD’altra parte, però, si dice assai poco su che cosa costituisca un “popolo”. In particolare mancava una relazione logica tra, da una parte, il corpo dei cittadini di uno Stato territoriale e, dall’altra, l’identificazione della “nazione” su basi etniche, linguistiche o altre caratteristiche che consentissero un riconoscimento collettivo del gruppo di appartenenza.\nDa un punto di vista popolare-rivoluzionario l’elemento accomunante della “nazione” non poteva essere in senso sostanziale né l’etnia, né la lingua, né l’affinità, sebbene poi queste potessero indicare una qualche appartenenza collettiva.\nCom’è stato sottolineato da Pierre Vilar, ciò che caratterizzava il popolo-nazione visto dal basso era precisamente il fatto di rappresentare l’interesse comune in contrapposizione agli interessi particolari, il bene comune contro il privilegio, come del resto è adombrato dalla terminologia americana prima del 1800 per indicare la nazionalità e nello stesso tempo evitare l’uso del termine.\nNon possiamo pertanto rintracciare nella “nazione” rivoluzionaria alcunché di simile al successivo programma nazionalistico di fare dello Stato-nazione un corpo definibile sulla base dei criteri oggetto di accanita discussione da parte dei teorici del secolo XIX, quali etnia, lingua, religione, territorio e memoria storica comuni, per citare ancora una volta John Stuart Mill. Come abbiamo visto, ad esclusione del territorio, la cui estensione restava peraltro indefinita, e forse del colore della pelle, nessuno di questi costituiva un elemento unificante nel caso della neonata nazione americana.",
+    "titoloBrano": "Il concetto di nazione",
+    "daVerificare": true
+  },
+  {
+    "id": 316,
+    "materia": "Comprensione verbale",
+    "domanda": "Per cittadinanza si intende",
+    "rispostaCorretta": "essere soggetti ad un unico governo",
+    "risposteErrate": [
+      "essere stabilmente residenti in un luogo",
+      "far parte di un solo gruppo etnico",
+      "avere i documenti in regola",
+      "non avere diritti politici e civili"
+    ],
+    "spiegazione": "Il brano cita John Stuart Mill, spiegando che gli appartenenti a una nazionalità «desiderano di essere sottoposti a un governo, e altresì desiderano che si tratti di un governo composto esclusivamente da loro o da una parte di loro».",
+    "fonte": "NEW Test1.pdf — Quesito 59",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 59,
+    "brano": "Il significato primario di “nazione”, e uno dei più ricorrenti sul piano bibliografico, era politico. In pratica assimilava “popolo” e Stato allo stesso modo delle Rivoluzioni americana e francese: un’equazione che ritorna spesso in espressioni del tipo “Stato-nazione” e “Nazioni Unite”, o nel linguaggio dei presidenti degli ultimi decenni del secolo XX. Il linguaggio politico degli Stati Uniti d’America preferì in un primo tempo parlare di “popolo”, “unione”, “confederazione”, “nostra terra comune”, “pubblico”, “benessere pubblico”, “comunità”, nell’intento di evitare le implicazioni di tipo centralistico e unitario del termine “nazione” contrarie in qualche modo ai diritti dei singoli Stati federati. Infatti era, o dovette diventarlo prontamente, parte integrante del concetto di nazione, nell’Età della rivoluzione, l’essere questa “una e indivisibile”, secondo l’espressione francese. La “nazione” cui qui si faceva riferimento era il corpo dei cittadini la cui sovranità collettiva costituiva quello Stato che ne era l’espressione politica. Al di là di che cosa fosse precisamente una nazione, l’elemento di “cittadinanza”, di partecipazione di massa e di scelta risultava comunque sempre presente. Jonh Stuart Mill non si limitò a definire la nazione sulla scorta dell’esistenza di un sentimento nazionale, ma volle aggiungere che gli appartenenti a una nazionalità “desiderano di essere sottoposti a un governo, e altresì desiderano che si tratti di un governo composto esclusivamente da loro o da una parte di loro”.\nL’equazione nazione=Stato=popolo, e in particolare popolo sovrano, rapportò la nazione al territorio dato che la struttura e la definizione degli Stati erano diventate sostanzialmente territoriali. Implicava inoltre una molteplicità di Stati-nazione costituiti su questa base, quale necessaria conseguenza dell’autodeterminazione popolare. Come affermato nella Dichiarazione dei Diritti del 1795 in Francia: “Ogni popolo è indipendente e sovrano, quale che sia il numero degli individui che lo compone e l’estensione del territorio che occupa. Questa sovranità è inalienabile”.\nD’altra parte, però, si dice assai poco su che cosa costituisca un “popolo”. In particolare mancava una relazione logica tra, da una parte, il corpo dei cittadini di uno Stato territoriale e, dall’altra, l’identificazione della “nazione” su basi etniche, linguistiche o altre caratteristiche che consentissero un riconoscimento collettivo del gruppo di appartenenza.\nDa un punto di vista popolare-rivoluzionario l’elemento accomunante della “nazione” non poteva essere in senso sostanziale né l’etnia, né la lingua, né l’affinità, sebbene poi queste potessero indicare una qualche appartenenza collettiva.\nCom’è stato sottolineato da Pierre Vilar, ciò che caratterizzava il popolo-nazione visto dal basso era precisamente il fatto di rappresentare l’interesse comune in contrapposizione agli interessi particolari, il bene comune contro il privilegio, come del resto è adombrato dalla terminologia americana prima del 1800 per indicare la nazionalità e nello stesso tempo evitare l’uso del termine.\nNon possiamo pertanto rintracciare nella “nazione” rivoluzionaria alcunché di simile al successivo programma nazionalistico di fare dello Stato-nazione un corpo definibile sulla base dei criteri oggetto di accanita discussione da parte dei teorici del secolo XIX, quali etnia, lingua, religione, territorio e memoria storica comuni, per citare ancora una volta John Stuart Mill. Come abbiamo visto, ad esclusione del territorio, la cui estensione restava peraltro indefinita, e forse del colore della pelle, nessuno di questi costituiva un elemento unificante nel caso della neonata nazione americana.",
+    "titoloBrano": "Il concetto di nazione"
+  },
+  {
+    "id": 317,
+    "materia": "Comprensione verbale",
+    "domanda": "Dal principio dell’autodeterminazione dipende",
+    "rispostaCorretta": "la pluralità degli stati-nazione",
+    "risposteErrate": [
+      "il carattere multietnico del popolo",
+      "il carattere democratico del governo",
+      "il federalismo",
+      "il principio di territorialità"
+    ],
+    "spiegazione": "Il brano recita: «Implicava inoltre una molteplicità di Stati-nazione costituiti su questa base, quale necessaria conseguenza dell’autodeterminazione popolare».",
+    "fonte": "NEW Test1.pdf — Quesito 60",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 60,
+    "brano": "Il significato primario di “nazione”, e uno dei più ricorrenti sul piano bibliografico, era politico. In pratica assimilava “popolo” e Stato allo stesso modo delle Rivoluzioni americana e francese: un’equazione che ritorna spesso in espressioni del tipo “Stato-nazione” e “Nazioni Unite”, o nel linguaggio dei presidenti degli ultimi decenni del secolo XX. Il linguaggio politico degli Stati Uniti d’America preferì in un primo tempo parlare di “popolo”, “unione”, “confederazione”, “nostra terra comune”, “pubblico”, “benessere pubblico”, “comunità”, nell’intento di evitare le implicazioni di tipo centralistico e unitario del termine “nazione” contrarie in qualche modo ai diritti dei singoli Stati federati. Infatti era, o dovette diventarlo prontamente, parte integrante del concetto di nazione, nell’Età della rivoluzione, l’essere questa “una e indivisibile”, secondo l’espressione francese. La “nazione” cui qui si faceva riferimento era il corpo dei cittadini la cui sovranità collettiva costituiva quello Stato che ne era l’espressione politica. Al di là di che cosa fosse precisamente una nazione, l’elemento di “cittadinanza”, di partecipazione di massa e di scelta risultava comunque sempre presente. Jonh Stuart Mill non si limitò a definire la nazione sulla scorta dell’esistenza di un sentimento nazionale, ma volle aggiungere che gli appartenenti a una nazionalità “desiderano di essere sottoposti a un governo, e altresì desiderano che si tratti di un governo composto esclusivamente da loro o da una parte di loro”.\nL’equazione nazione=Stato=popolo, e in particolare popolo sovrano, rapportò la nazione al territorio dato che la struttura e la definizione degli Stati erano diventate sostanzialmente territoriali. Implicava inoltre una molteplicità di Stati-nazione costituiti su questa base, quale necessaria conseguenza dell’autodeterminazione popolare. Come affermato nella Dichiarazione dei Diritti del 1795 in Francia: “Ogni popolo è indipendente e sovrano, quale che sia il numero degli individui che lo compone e l’estensione del territorio che occupa. Questa sovranità è inalienabile”.\nD’altra parte, però, si dice assai poco su che cosa costituisca un “popolo”. In particolare mancava una relazione logica tra, da una parte, il corpo dei cittadini di uno Stato territoriale e, dall’altra, l’identificazione della “nazione” su basi etniche, linguistiche o altre caratteristiche che consentissero un riconoscimento collettivo del gruppo di appartenenza.\nDa un punto di vista popolare-rivoluzionario l’elemento accomunante della “nazione” non poteva essere in senso sostanziale né l’etnia, né la lingua, né l’affinità, sebbene poi queste potessero indicare una qualche appartenenza collettiva.\nCom’è stato sottolineato da Pierre Vilar, ciò che caratterizzava il popolo-nazione visto dal basso era precisamente il fatto di rappresentare l’interesse comune in contrapposizione agli interessi particolari, il bene comune contro il privilegio, come del resto è adombrato dalla terminologia americana prima del 1800 per indicare la nazionalità e nello stesso tempo evitare l’uso del termine.\nNon possiamo pertanto rintracciare nella “nazione” rivoluzionaria alcunché di simile al successivo programma nazionalistico di fare dello Stato-nazione un corpo definibile sulla base dei criteri oggetto di accanita discussione da parte dei teorici del secolo XIX, quali etnia, lingua, religione, territorio e memoria storica comuni, per citare ancora una volta John Stuart Mill. Come abbiamo visto, ad esclusione del territorio, la cui estensione restava peraltro indefinita, e forse del colore della pelle, nessuno di questi costituiva un elemento unificante nel caso della neonata nazione americana.",
+    "titoloBrano": "Il concetto di nazione"
+  },
+  {
+    "id": 318,
+    "materia": "Scienze",
+    "domanda": "Un veicolo, che viaggia inizialmente alla velocità di 100 km/h, frena con decelerazione costante sino a fermarsi nello spazio di 200 m. La sua decelerazione è di circa",
+    "rispostaCorretta": "2 m/s²",
+    "risposteErrate": [
+      "5 m/s²",
+      "3 m/s²",
+      "9 m/s²",
+      "1 m/s²"
+    ],
+    "spiegazione": "v₀ = 100 km/h = 27,78 m/s. Usando la legge v² = v₀² - 2 a s con v = 0 e s = 200 m: a = v₀² / (2s) = (27,78)² / 400 ≈ 771,6 / 400 ≈ 1,93 m/s² ≈ 2 m/s².",
+    "fonte": "NEW Test1.pdf — Quesito 61",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 61
+  },
+  {
+    "id": 319,
+    "materia": "Scienze",
+    "domanda": "Una delle radiazioni sottoelencate non è un’onda elettromagnetica. Quale?",
+    "rispostaCorretta": "Raggi catodici",
+    "risposteErrate": [
+      "Raggi infrarossi",
+      "Raggi ultravioletti",
+      "Raggi X",
+      "Raggi laser"
+    ],
+    "spiegazione": "I raggi catodici sono fasci di elettroni (radiazione corpuscolare), non onde elettromagnetiche.",
+    "fonte": "NEW Test1.pdf — Quesito 62",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 62
+  },
+  {
+    "id": 320,
+    "materia": "Scienze",
+    "domanda": "Un segnale radio inviato da Milano impiega per arrivare a Napoli (circa 600 km)",
+    "rispostaCorretta": "0, 002 s",
+    "risposteErrate": [
+      "2 s",
+      "0, 1 s",
+      "1 min",
+      "1 µs"
+    ],
+    "spiegazione": "I segnali radio viaggiano alla velocità della luce c ≈ 300.000 km/s. Il tempo impiegato è t = d / c = 600 / 300.000 s = 0,002 s.",
+    "fonte": "NEW Test1.pdf — Quesito 63",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 63
+  },
+  {
+    "id": 321,
+    "materia": "Scienze",
+    "domanda": "Quanto pesano 2 dm³ di mercurio? (Peso specifico del mercurio = 13,59 g/cm³.)",
+    "rispostaCorretta": "27, 18 kg",
+    "risposteErrate": [
+      "2, 718 kg",
+      "271, 8 g",
+      "27, 18 g",
+      "271, 8 kg"
+    ],
+    "spiegazione": "13,59 g/cm³ = 13,59 kg/dm³. La massa di 2 dm³ è m = 13,59 kg/dm³ · 2 dm³ = 27,18 kg.",
+    "fonte": "NEW Test1.pdf — Quesito 64",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 64
+  },
+  {
+    "id": 322,
+    "materia": "Scienze",
+    "domanda": "Quanti litri d’acqua a 100 °C occorre aggiungere ad un litro d’acqua a 40 °C per ottenere acqua a 80 °C ?",
+    "rispostaCorretta": "Due litri",
+    "risposteErrate": [
+      "Un litro",
+      "Tre litri",
+      "Quattro litri",
+      "Cinque litri"
+    ],
+    "spiegazione": "All'equilibrio termico: m_calda · c · (100 - 80) = m_fredda · c · (80 - 40) ⇒ 20 · V = 40 · 1 ⇒ V = 2 litri.",
+    "fonte": "NEW Test1.pdf — Quesito 65",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0,
+    "sourceDocument": "NEW Test1.pdf",
+    "sourceQuestionNumber": 65
   }
 ];
 

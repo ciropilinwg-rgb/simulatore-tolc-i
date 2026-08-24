@@ -4,7 +4,7 @@ import {
   normalizeComparableText
 } from '../utils/textNormalization.js';
 
-export const QUESTION_BANK_VERSION = '2026-08-17-deduplicated-v5';
+export const QUESTION_BANK_VERSION = '2026-08-24-integrated-v6';
 
 const signatureMap = new Map();
 const rawQuestionMap = new Map();

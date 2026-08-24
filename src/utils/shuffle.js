@@ -44,18 +44,24 @@ export function pickRandom(array, count) {
  * @returns {Array} Array di opzioni randomizzate: { id, text, isCorrect }
  */
 export function prepareShuffledOptions(question) {
+  const isDaVerificare = !!question.daVerificare;
+
   // Crea l'opzione corretta con id stabile
   const correctOption = {
     id: `q${question.id}_correct`,
     text: question.rispostaCorretta,
-    isCorrect: true
+    image: question.rispostaCorrettaImg || null,
+    isCorrect: isDaVerificare ? false : true,
+    daVerificare: isDaVerificare
   };
 
   // Crea le opzioni errate con id stabili
   const wrongOptions = question.risposteErrate.map((text, index) => ({
     id: `q${question.id}_wrong_${index}`,
     text,
-    isCorrect: false
+    image: question.risposteErrateImg ? question.risposteErrateImg[index] : null,
+    isCorrect: false,
+    daVerificare: isDaVerificare
   }));
 
   // Mescola tutte le opzioni insieme

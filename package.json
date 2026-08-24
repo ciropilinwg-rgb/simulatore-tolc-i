@@ -13,10 +13,11 @@
     "preview": "vite preview",
     "start": "vite preview",
     "rebuild:questions": "node ./scripts/rebuild-question-bank.mjs",
-    "test:unit": "node ./src/tests/testQuiz.mjs && node ./src/tests/testQuestionCatalog.mjs",
+    "test:unit": "node ./src/tests/testQuiz.mjs && node ./src/tests/testQuestionCatalog.mjs && node ./src/tests/testNewTest1Integration.mjs",
     "test:integration": "node ./tests/testMultiUser.mjs",
     "audit:questions": "node ./scripts/audit-question-bank.mjs",
     "test": "npm run test:unit"
+
   },
   "dependencies": {
     "firebase": "^12.3.0",

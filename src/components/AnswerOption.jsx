@@ -6,6 +6,13 @@ import './AnswerOption.css';
 function getVerifiedState(option, answer) {
   if (!answer || !answer.isVerified) return null;
 
+  if (option.daVerificare) {
+    if (answer.selectedOptionId === option.id) {
+      return 'da-verificare';
+    }
+    return null;
+  }
+
   if (answer.selectedOptionId === option.id) {
     return option.isCorrect ? 'correct' : 'wrong';
   }
@@ -32,16 +39,19 @@ export default function AnswerOption({
   };
 
   let className = 'answer-option';
+  if (option.image) className += ' answer-option--with-image';
   if (isSelected && !verifiedState) className += ' answer-option--selected';
   if (isLocked) className += ' answer-option--locked';
   if (verifiedState === 'correct') className += ' answer-option--correct';
   if (verifiedState === 'wrong') className += ' answer-option--wrong';
   if (verifiedState === 'revealed') className += ' answer-option--revealed';
+  if (verifiedState === 'da-verificare') className += ' answer-option--da-verificare';
 
   let stateLabel = '';
   if (verifiedState === 'correct') stateLabel = 'Corretta';
   if (verifiedState === 'wrong') stateLabel = 'Errata';
   if (verifiedState === 'revealed') stateLabel = 'Corretta';
+  if (verifiedState === 'da-verificare') stateLabel = 'Da verificare';
 
   return (
     <button
@@ -54,6 +64,11 @@ export default function AnswerOption({
     >
       <span className="answer-option__marker">{optionLabel}</span>
       <span className="answer-option__content">
+        {option.image && (
+          <span className="answer-option__image-box">
+            <img src={option.image} alt={option.text} className="answer-option__image" />
+          </span>
+        )}
         <MathText
           className="answer-option__text"
           text={option.text}

@@ -14,6 +14,13 @@
   border-bottom: 1px solid var(--color-rule);
 }
 
+.question-card__materia-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .question-card__materia,
 .question-card__format {
   display: inline-flex;
@@ -30,9 +37,90 @@
   color: var(--color-accent);
 }
 
+.question-card__badge-warning {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.12);
+  color: #b45309;
+}
+
 .question-card__format {
   background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-paper-2) 100%);
   color: var(--color-ink-3);
+}
+
+/* ── Brano di riferimento (Q56-60) ── */
+.question-card__passage {
+  background: var(--color-paper);
+  border: 1px solid var(--color-rule);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 0.75rem;
+  padding: 1.15rem;
+  margin-bottom: 1.5rem;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.question-card__passage-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.question-card__passage-paragraph {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-ink-2);
+  margin-bottom: 0.65rem;
+}
+
+.question-card__passage-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Tabella dati semantica (Q41) ── */
+.question-card__table-wrapper {
+  overflow-x: auto;
+  margin: 1.25rem 0 1.75rem 0;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-rule-strong);
+  background: var(--color-surface);
+}
+
+.quiz-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: var(--text-sm);
+}
+
+.quiz-table th,
+.quiz-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-rule);
+  white-space: nowrap;
+}
+
+.quiz-table th {
+  background: var(--color-paper-2);
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
+.quiz-table td {
+  color: var(--color-ink-2);
 }
 
 .question-card__text {
@@ -70,6 +158,12 @@
   gap: 0.85rem;
 }
 
+.question-card__options--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
 @media (max-width: 640px) {
   .question-card__meta {
     flex-direction: column;
@@ -78,5 +172,9 @@
 
   .question-card__text {
     font-size: clamp(1.35rem, 8vw, 1.95rem);
+  }
+
+  .question-card__options--grid {
+    grid-template-columns: 1fr;
   }
 }

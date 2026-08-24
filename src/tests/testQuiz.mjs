@@ -41,13 +41,14 @@ function makeMockQuestion(id, materia) {
 }
 
 const expectedSubjectCounts = {
-  'Comprensione verbale': 45,
-  Logica: 46,
-  Matematica: 96,
-  Scienze: 65
+  'Comprensione verbale': 80,
+  Logica: 49,
+  Matematica: 118,
+  Scienze: 70
 };
 
 const totalExpected = Object.values(expectedSubjectCounts).reduce((sum, value) => sum + value, 0);
+
 const materie = [...new Set(questionBank.map((question) => question.materia))].sort();
 const [primarySubject, secondarySubject] = materie;
 const selectedSubjects = [primarySubject, secondarySubject];

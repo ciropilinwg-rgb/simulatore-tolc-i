@@ -39,16 +39,34 @@ export function calculateResults(questions, answers) {
         question,
         selectedOptionId: null,
         selectedText: null,
+        selectedImage: null,
         correctText: question.rispostaCorretta,
+        correctImage: question.rispostaCorrettaImg || null,
         isCorrect: false,
-        isUnanswered: true
+        isUnanswered: true,
+        daVerificare: !!question.daVerificare
       };
     }
 
-    // Domanda verificata — usa il flag isCorrect già calcolato
-    const selectedOption = question.shuffledOptions.find(
+    // Domanda verificata
+    const selectedOption = question.shuffledOptions?.find(
       opt => opt.id === answer.selectedOptionId
     );
+
+    if (question.daVerificare) {
+      return {
+        questionIndex: index,
+        question,
+        selectedOptionId: answer.selectedOptionId,
+        selectedText: selectedOption ? selectedOption.text : "Risposta non trovata",
+        selectedImage: selectedOption ? selectedOption.image : null,
+        correctText: question.rispostaCorretta,
+        correctImage: question.rispostaCorrettaImg || null,
+        isCorrect: null,
+        isUnanswered: false,
+        daVerificare: true
+      };
+    }
 
     if (answer.isCorrect) {
       correct++;
@@ -61,22 +79,27 @@ export function calculateResults(questions, answers) {
       question,
       selectedOptionId: answer.selectedOptionId,
       selectedText: selectedOption ? selectedOption.text : "Risposta non trovata",
+      selectedImage: selectedOption ? selectedOption.image : null,
       correctText: question.rispostaCorretta,
+      correctImage: question.rispostaCorrettaImg || null,
       isCorrect: answer.isCorrect,
-      isUnanswered: false
+      isUnanswered: false,
+      daVerificare: false
     };
   });
 
+  const evaluableQuestions = questions.filter(q => !q.daVerificare).length;
   const total = questions.length;
-  const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
+  const percentage = evaluableQuestions > 0 ? Math.round((correct / evaluableQuestions) * 100) : 0;
   const score =
     correct * SCORING_CONFIG.correct +
     wrong * SCORING_CONFIG.wrong +
     unanswered * SCORING_CONFIG.unanswered;
-  const maxScore = total * SCORING_CONFIG.correct;
+  const maxScore = evaluableQuestions * SCORING_CONFIG.correct;
 
   return {
     total,
+    evaluableQuestions,
     correct,
     wrong,
     unanswered,

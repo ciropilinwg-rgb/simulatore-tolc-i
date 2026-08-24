@@ -89,7 +89,8 @@ function buildWaitingHtml() {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simulatore TOLC-I</title>
+    <meta name="author" content="ing. Ciro Pili" />
+    <title>TOLC-I, il simulatore</title>
     <style>
       body {
         margin: 0;

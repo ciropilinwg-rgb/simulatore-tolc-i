@@ -92,7 +92,7 @@ buildProcess.on('exit', async (code) => {
 });
 
 app.server.listen(port, host, () => {
-  console.log(`[dev-server] Simulatore TOLC-I disponibile su ${appBaseUrl}`);
+  console.log(`[dev-server] TOLC-I, il simulatore disponibile su ${appBaseUrl}`);
   console.log('[dev-server] Build in watch mode attiva. La pagina si ricarica dopo ogni ricompilazione.');
 });
 

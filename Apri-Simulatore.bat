@@ -20,7 +20,7 @@ if errorlevel 1 (
 )
 
 echo Avvio l'applicazione in sviluppo sulla porta %PORT%...
-start "Simulatore TOLC-I" cmd /k "cd /d ""%~dp0"" && npm run dev -- --host localhost --port %PORT%"
+start "TOLC-I, il simulatore" cmd /k "cd /d ""%~dp0"" && npm run dev -- --host localhost --port %PORT%"
 
 timeout /t 3 /nobreak >nul
 start "" "http://localhost:%PORT%/"

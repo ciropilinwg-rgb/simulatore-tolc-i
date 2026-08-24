@@ -6,7 +6,7 @@
   "engines": {
     "node": ">=24"
   },
-  "description": "Simulatore TOLC-I per esercitarsi con quiz a risposta multipla",
+  "description": "TOLC-I, il simulatore per esercitarsi con quiz a risposta multipla",
   "scripts": {
     "dev": "vite",
     "build": "vite build --configLoader runner",

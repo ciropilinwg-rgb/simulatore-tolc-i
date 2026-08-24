@@ -76,7 +76,7 @@ export default function HomePage() {
       <section className="home-page__hero">
         <div className="home-page__copy">
           <p className="home-page__kicker">Preparazione personale e progressiva</p>
-          <h1 className="home-page__title">Simulatore TOLC-I</h1>
+          <h1 className="home-page__title">TOLC-I, il simulatore</h1>
           <p className="home-page__subtitle">
             Esercitati con la banca dati TOLC-I, scegli le materie che ti servono e lavora
             con un flusso di studio chiaro, rapido e professionale.

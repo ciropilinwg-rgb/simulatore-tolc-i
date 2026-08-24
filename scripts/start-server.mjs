@@ -46,7 +46,7 @@ const app = createSimulatoreServer({
 });
 
 app.server.listen(port, host, () => {
-  console.log(`[server] Simulatore TOLC-I disponibile su ${appBaseUrl}`);
+  console.log(`[server] TOLC-I, il simulatore disponibile su ${appBaseUrl}`);
 });
 
 async function shutdown() {

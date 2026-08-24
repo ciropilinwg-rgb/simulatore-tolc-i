@@ -46,7 +46,7 @@ function GlobalFrame({ authenticated, children }) {
         <button className="app-shell__brand app-shell__brand-button" onClick={() => navigate(homePath, { replace: true })} type="button">
           <span className="app-shell__mark">TI</span>
           <span>
-            <span className="app-shell__title">Simulatore TOLC-I</span>
+            <span className="app-shell__title">TOLC-I, il simulatore</span>
             <span className="app-shell__subtitle">
               {currentUser?.emailVerified
                 ? 'Area riservata personale'

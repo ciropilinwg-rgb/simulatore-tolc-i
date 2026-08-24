@@ -56,9 +56,7 @@ function isCorrectAnswer(questionId, selectedText) {
 export async function getUserStats() {
   const currentUser = await requireVerifiedUser();
   const items = await listQuestionStatDocs(currentUser.uid);
-  const merged = mergeQuestionStatsByCanonicalId(
-    items.filter((item) => item.bankVersion === QUESTION_BANK_VERSION)
-  );
+  const merged = mergeQuestionStatsByCanonicalId(items);
 
   return Object.fromEntries(
     Object.entries(merged).map(([questionId, item]) => {

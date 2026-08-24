@@ -7,6 +7,11 @@
     <meta name="description" content="Simulatore TOLC-I per esercitarsi con quiz a risposta multipla, selezione per materia, risultati dettagliati e revisione degli errori." />
     <title>Simulatore TOLC-I</title>
     <script>
+      if (window.location.hostname === 'simulatore-tolc-i.firebaseapp.com') {
+        const canonicalUrl = new URL(window.location.href);
+        canonicalUrl.hostname = 'simulatore-tolc-i.web.app';
+        window.location.replace(canonicalUrl.href);
+      }
       if (window.location.protocol === 'file:') {
         const normalizedPath = window.location.pathname.replace(/\\/g, '/');
         const isBuiltIndex = /\/dist\/index\.html$/i.test(normalizedPath);

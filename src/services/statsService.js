@@ -35,14 +35,11 @@ export async function getStatsOverview() {
     listQuizSessionDocs(currentUser.uid)
   ]);
 
-  const currentStatsDocs = statsDocs.filter((item) => item.bankVersion === QUESTION_BANK_VERSION);
-  const currentSessionDocs = sessionDocs.filter((item) => item.bankVersion === QUESTION_BANK_VERSION);
-
-  const completedSessions = currentSessionDocs
+  const completedSessions = sessionDocs
     .filter((session) => session.status === 'finished' || session.finishedAt)
     .sort((left, right) => compareIsoDesc(left.finishedAt, right.finishedAt));
 
-  const mergedStatsMap = mergeQuestionStatsByCanonicalId(currentStatsDocs);
+  const mergedStatsMap = mergeQuestionStatsByCanonicalId(statsDocs);
   const mergedStats = Object.values(mergedStatsMap);
 
   const totals = mergedStats.reduce((accumulator, item) => {
@@ -149,7 +146,6 @@ export async function getStatsHistory(limit = 20) {
   const sessions = await listQuizSessionDocs(currentUser.uid);
 
   const items = sessions
-    .filter((session) => session.bankVersion === QUESTION_BANK_VERSION)
     .filter((session) => session.status === 'finished' || session.finishedAt)
     .sort((left, right) => compareIsoDesc(left.finishedAt, right.finishedAt))
     .slice(0, limit)

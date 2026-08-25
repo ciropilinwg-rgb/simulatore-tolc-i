@@ -6018,6 +6018,431 @@ const questionBank = [
     "numeroVolteProposta": 0,
     "numeroRisposteCorrette": 0,
     "numeroRisposteErrate": 0
+  },
+  {
+    "id": 348,
+    "materia": "Matematica",
+    "domanda": "Nel piano cartesiano, quali sono le coordinate del punto $P'$, simmetrico del punto $P(-3, 5)$ rispetto all’origine degli assi $O(0,0)$?",
+    "rispostaCorretta": "$(3, -5)$",
+    "risposteErrate": [
+      "$(-3, -5)$",
+      "$(3, 5)$",
+      "$(5, -3)$",
+      "$(-5, 3)$"
+    ],
+    "spiegazione": "La simmetria centrale rispetto all’origine degli assi cartesiani trasforma un generico punto di coordinate $(x, y)$ nel punto $(-x, -y)$. Applicando la trasformazione al punto $P(-3, 5)$, si ottiene $P'(-(-3), -5) = (3, -5)$.",
+    "fonte": "Lotto M2 del progetto — M2-01 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 349,
+    "materia": "Matematica",
+    "domanda": "Qual è la distanza tra i punti $A(1, -2)$ e $B(4, 2)$ nel piano cartesiano?",
+    "rispostaCorretta": "$5$",
+    "risposteErrate": [
+      "$\\sqrt{7}$",
+      "$7$",
+      "$\\sqrt{13}$",
+      "$25$"
+    ],
+    "spiegazione": "La distanza euclidea tra due punti $A(x_A, y_A)$ e $B(x_B, y_B)$ è data dalla formula $d = \\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2}$. Sostituendo le coordinate di $A(1, -2)$ e $B(4, 2)$: $d = \\sqrt{(4 - 1)^2 + (2 - (-2))^2} = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+    "fonte": "Lotto M2 del progetto — M2-02 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 350,
+    "materia": "Matematica",
+    "domanda": "Il punto medio del segmento $AB$ ha coordinate $M(2, 3)$. Se il punto $A$ ha coordinate $(-1, 7)$, quali sono le coordinate del punto $B$?",
+    "rispostaCorretta": "$(5, -1)$",
+    "risposteErrate": [
+      "$(1/2, 5)$",
+      "$(3, -4)$",
+      "$(5, 1)$",
+      "$(1, 10)$"
+    ],
+    "spiegazione": "Le formule del punto medio $M(x_M, y_M)$ di un segmento $AB$ sono $x_M = \\frac{x_A + x_B}{2}$ e $y_M = \\frac{y_A + y_B}{2}$. Ricavando le coordinate incognite di $B$: $x_B = 2x_M - x_A = 2(2) - (-1) = 4 + 1 = 5$ e $y_B = 2y_M - y_A = 2(3) - 7 = 6 - 7 = -1$. Il punto $B$ ha coordinate $(5, -1)$.",
+    "fonte": "Lotto M2 del progetto — M2-03 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 351,
+    "materia": "Matematica",
+    "domanda": "Qual è il coefficiente angolare della retta passante per i punti $A(-2, 3)$ e $B(4, -1)$?",
+    "rispostaCorretta": "$-\\frac{2}{3}$",
+    "risposteErrate": [
+      "$\\frac{2}{3}$",
+      "$-\\frac{3}{2}$",
+      "$\\frac{3}{2}$",
+      "$-2$"
+    ],
+    "spiegazione": "Il coefficiente angolare $m$ della retta passante per due punti distinti $A(x_A, y_A)$ e $B(x_B, y_B)$ è dato dal rapporto $m = \\frac{y_B - y_A}{x_B - x_A}$. Sostituendo i valori: $m = \\frac{-1 - 3}{4 - (-2)} = \\frac{-4}{6} = -\\frac{2}{3}$.",
+    "fonte": "Lotto M2 del progetto — M2-04 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 352,
+    "materia": "Matematica",
+    "domanda": "Qual è il coefficiente angolare della retta di equazione $3x + 2y - 7 = 0$?",
+    "rispostaCorretta": "$-\\frac{3}{2}$",
+    "risposteErrate": [
+      "$\\frac{3}{2}$",
+      "$-\\frac{2}{3}$",
+      "$\\frac{2}{3}$",
+      "$-3$"
+    ],
+    "spiegazione": "Per una retta espressa in forma implicita $ax + by + c = 0$, il coefficiente angolare è dato da $m = -\\frac{a}{b}$. Nel caso dell’equazione $3x + 2y - 7 = 0$, si ha $a = 3$ e $b = 2$, da cui $m = -\\frac{3}{2}$.",
+    "fonte": "Lotto M2 del progetto — M2-05 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 353,
+    "materia": "Matematica",
+    "domanda": "Per quale valore del parametro reale $k$ il punto $P(k, 3)$ appartiene alla retta di equazione $2x - 5y + 7 = 0$?",
+    "rispostaCorretta": "$k = 4$",
+    "risposteErrate": [
+      "$k = -4$",
+      "$k = 11$",
+      "$k = -11$",
+      "$k = 1$"
+    ],
+    "spiegazione": "Un punto appartiene a una retta se e solo se le sue coordinate soddisfano l’equazione della retta. Sostituendo $x = k$ e $y = 3$ nell’equazione $2x - 5y + 7 = 0$: $2k - 5(3) + 7 = 0 \\implies 2k - 15 + 7 = 0 \\implies 2k - 8 = 0 \\implies 2k = 8 \\implies k = 4$.",
+    "fonte": "Lotto M2 del progetto — M2-06 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 354,
+    "materia": "Matematica",
+    "domanda": "Qual è l’equazione della retta parallela all’asse delle ascisse passante per il punto $P(-4, 6)$?",
+    "rispostaCorretta": "$y = 6$",
+    "risposteErrate": [
+      "$x = -4$",
+      "$y = -4$",
+      "$x = 6$",
+      "$6x - 4y = 0$"
+    ],
+    "spiegazione": "L’asse delle ascisse (asse $x$) ha equazione $y = 0$. Tutte le rette parallele all’asse $x$ sono orizzontali e hanno equazione del tipo $y = c$, dove $c$ è una costante reale. Poiché la retta deve passare per il punto $P(-4, 6)$, la sua ordinata è costante e pari a $6$, per cui l’equazione cercata è $y = 6$.",
+    "fonte": "Lotto M2 del progetto — M2-07 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 355,
+    "materia": "Matematica",
+    "domanda": "Qual è l’equazione della retta parallela alla retta $y = 3x - 1$ e passante per il punto $A(2, 1)$?",
+    "rispostaCorretta": "$y = 3x - 5$",
+    "risposteErrate": [
+      "$y = 3x + 5$",
+      "$y = -\\frac{1}{3}x + \\frac{5}{3}$",
+      "$y = 3x - 1$",
+      "$y = 3x - 7$"
+    ],
+    "spiegazione": "Due rette sono parallele se e solo se hanno lo stesso coefficiente angolare. La retta data ha $m = 3$. La retta cercata passa per il punto $A(2, 1)$ con pendenza $m = 3$: $y - 1 = 3(x - 2) \\implies y - 1 = 3x - 6 \\implies y = 3x - 5$.",
+    "fonte": "Lotto M2 del progetto — M2-08 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 356,
+    "materia": "Matematica",
+    "domanda": "Qual è il coefficiente angolare di una qualsiasi retta perpendicolare alla retta di equazione $4x - 2y + 5 = 0$?",
+    "rispostaCorretta": "$-\\frac{1}{2}$",
+    "risposteErrate": [
+      "$\\frac{1}{2}$",
+      "$-2$",
+      "$2$",
+      "$-\\frac{2}{5}$"
+    ],
+    "spiegazione": "Esplicitiamo l’equazione della retta data rispetto a $y$: $2y = 4x + 5 \\implies y = 2x + \\frac{5}{2}$, da cui il coefficiente angolare è $m_1 = 2$. La condizione di perpendicolarità tra due rette nel piano cartesiano impone che il prodotto dei coefficienti angolari sia uguale a $-1$: $m_1 \\cdot m_2 = -1 \\implies m_2 = -\\frac{1}{m_1} = -\\frac{1}{2}$.",
+    "fonte": "Lotto M2 del progetto — M2-09 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 357,
+    "materia": "Matematica",
+    "domanda": "In quali punti la retta di equazione $3x - 4y + 12 = 0$ interseca rispettivamente l’asse delle ascisse e l’asse delle ordinate?",
+    "rispostaCorretta": "$(-4, 0)$ e $(0, 3)$",
+    "risposteErrate": [
+      "$(4, 0)$ e $(0, -3)$",
+      "$(0, -4)$ e $(3, 0)$",
+      "$(-4, 0)$ e $(0, -3)$",
+      "$(4, 0)$ e $(0, 3)$"
+    ],
+    "spiegazione": "Per trovare l’intersezione con l’asse delle ascisse poniamo $y = 0$: $3x + 12 = 0 \\implies x = -4$, ottenendo il punto $(-4, 0)$. Per l’intersezione con l’asse delle ordinate poniamo $x = 0$: $-4y + 12 = 0 \\implies y = 3$, ottenendo il punto $(0, 3)$. I punti cercati sono $(-4, 0)$ e $(0, 3)$.",
+    "fonte": "Lotto M2 del progetto — M2-10 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 358,
+    "materia": "Matematica",
+    "domanda": "Quali sono le coordinate del centro $C$ e la misura del raggio $R$ della circonferenza di equazione $(x - 3)^2 + (y + 2)^2 = 16$?",
+    "rispostaCorretta": "$C(3, -2)$ e $R = 4$",
+    "risposteErrate": [
+      "$C(-3, 2)$ e $R = 4$",
+      "$C(3, -2)$ e $R = 16$",
+      "$C(-3, 2)$ e $R = 16$",
+      "$C(3, 2)$ e $R = 4$"
+    ],
+    "spiegazione": "L’equazione canonica della circonferenza con centro $C(x_0, y_0)$ e raggio $R$ è $(x - x_0)^2 + (y - y_0)^2 = R^2$. Confrontando con $(x - 3)^2 + (y + 2)^2 = 16$: $x_0 = 3$, $y_0 = -2$ e $R = \\sqrt{16} = 4$. Il centro è $C(3, -2)$ e il raggio è $R = 4$.",
+    "fonte": "Lotto M2 del progetto — M2-11 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 359,
+    "materia": "Matematica",
+    "domanda": "Quali sono le coordinate del vertice $V$ della parabola di equazione $y = x^2 - 4x + 1$?",
+    "rispostaCorretta": "$V(2, -3)$",
+    "risposteErrate": [
+      "$V(-2, 13)$",
+      "$V(2, 3)$",
+      "$V(4, 1)$",
+      "$V(2, -4)$"
+    ],
+    "spiegazione": "L’ascissa del vertice di una parabola con asse verticale $y = ax^2 + bx + c$ è data da $x_V = -\\frac{b}{2a}$. Per l’equazione $y = x^2 - 4x + 1$, con $a = 1$ e $b = -4$, si ha $x_V = -\\frac{-4}{2(1)} = 2$. Sostituendo $x = 2$ nell’equazione della parabola otteniamo l’ordinata: $y_V = (2)^2 - 4(2) + 1 = 4 - 8 + 1 = -3$. Il vertice è $V(2, -3)$.",
+    "fonte": "Lotto M2 del progetto — M2-12 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 360,
+    "materia": "Matematica",
+    "domanda": "Qual è l’equazione della retta passante per i punti $A(1, 4)$ e $B(3, -2)$ nel piano cartesiano?",
+    "rispostaCorretta": "$y = -3x + 7$",
+    "risposteErrate": [
+      "$y = -3x + 1$",
+      "$y = 3x + 1$",
+      "$y = -\\frac{1}{3}x + \\frac{13}{3}$",
+      "$y = -3x + 10$"
+    ],
+    "spiegazione": "Calcoliamo innanzitutto il coefficiente angolare della retta: $m = \\frac{y_B - y_A}{x_B - x_A} = \\frac{-2 - 4}{3 - 1} = \\frac{-6}{2} = -3$. Utilizzando l’equazione del fascio per il punto $A(1, 4)$: $y - 4 = -3(x - 1) \\implies y - 4 = -3x + 3 \\implies y = -3x + 7$.",
+    "fonte": "Lotto M2 del progetto — M2-13 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 361,
+    "materia": "Matematica",
+    "domanda": "Qual è il punto di intersezione $P$ tra le rette di equazione $2x - y - 1 = 0$ e $x + 2y - 8 = 0$ nel piano cartesiano?",
+    "rispostaCorretta": "$(2, 3)$",
+    "risposteErrate": [
+      "$(3, 2)$",
+      "$(2, -3)$",
+      "$(1, 1)$",
+      "$(4, 2)$"
+    ],
+    "spiegazione": "Il punto di intersezione è la soluzione del sistema lineare formato dalle due equazioni: $\\begin{cases} 2x - y = 1 \\\\ x + 2y = 8 \\end{cases}$. Dalla prima equazione ricaviamo $y = 2x - 1$ e la sostituiamo nella seconda: $x + 2(2x - 1) = 8 \\implies x + 4x - 2 = 8 \\implies 5x = 10 \\implies x = 2$. Sostituendo $x = 2$ nell’espressione di $y$: $y = 2(2) - 1 = 3$. Il punto di intersezione è $(2, 3)$.",
+    "fonte": "Lotto M2 del progetto — M2-14 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 362,
+    "materia": "Matematica",
+    "domanda": "Qual è l’equazione dell’asse del segmento avente per estremi i punti $A(-1, 2)$ e $B(3, 4)$ nel piano cartesiano?",
+    "rispostaCorretta": "$y = -2x + 5$",
+    "risposteErrate": [
+      "$y = -2x + 1$",
+      "$y = \\frac{1}{2}x + \\frac{5}{2}$",
+      "$y = 2x + 1$",
+      "$y = -2x - 5$"
+    ],
+    "spiegazione": "L’asse di un segmento è la retta perpendicolare al segmento passante per il suo punto medio $M$. Il punto medio di $AB$ è $M\\left(\\frac{-1 + 3}{2}, \\frac{2 + 4}{2}\\right) = (1, 3)$. Il coefficiente angolare della retta $AB$ è $m_{AB} = \\frac{4 - 2}{3 - (-1)} = \\frac{2}{4} = \\frac{1}{2}$. Il coefficiente angolare della retta perpendicolare è $m = -\\frac{1}{m_{AB}} = -2$. L’equazione dell’asse è: $y - 3 = -2(x - 1) \\implies y - 3 = -2x + 2 \\implies y = -2x + 5$.",
+    "fonte": "Lotto M2 del progetto — M2-15 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 363,
+    "materia": "Matematica",
+    "domanda": "Qual è la distanza del punto $P(2, -1)$ dalla retta di equazione $3x - 4y + 5 = 0$ nel piano cartesiano?",
+    "rispostaCorretta": "$3$",
+    "risposteErrate": [
+      "$\\frac{7}{5}$",
+      "$5$",
+      "$\\frac{15}{25}$",
+      "$15$"
+    ],
+    "spiegazione": "La distanza di un punto $P(x_0, y_0)$ da una retta $ax + by + c = 0$ è data da $d = \\frac{|a x_0 + b y_0 + c|}{\\sqrt{a^2 + b^2}}$. Sostituendo i valori: $d = \\frac{|3(2) - 4(-1) + 5|}{\\sqrt{3^2 + (-4)^2}} = \\frac{|6 + 4 + 5|}{\\sqrt{9 + 16}} = \\frac{15}{\\sqrt{25}} = \\frac{15}{5} = 3$.",
+    "fonte": "Lotto M2 del progetto — M2-16 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 364,
+    "materia": "Matematica",
+    "domanda": "I vertici di un triangolo nel piano cartesiano sono $A(0, 0)$, $B(6, 0)$ e $C(2, 4)$. Qual è l’area del triangolo?",
+    "rispostaCorretta": "$12$",
+    "risposteErrate": [
+      "$24$",
+      "$8$",
+      "$6$",
+      "$16$"
+    ],
+    "spiegazione": "I vertici $A(0,0)$ e $B(6,0)$ appartengono entrambi all’asse delle ascisse, pertanto il segmento $AB$ può essere assunto come base del triangolo, di lunghezza $b = 6 - 0 = 6$. L’altezza relativa a tale base è data dal valore assoluto dell’ordinata del terzo vertice $C(2, 4)$, ovvero $h = 4$. L’area del triangolo è: $\\text{Area} = \\frac{b \\cdot h}{2} = \\frac{6 \\cdot 4}{2} = 12$.",
+    "fonte": "Lotto M2 del progetto — M2-17 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 365,
+    "materia": "Matematica",
+    "domanda": "Quali sono le coordinate del centro $C$ e la misura del raggio $R$ della circonferenza di equazione $x^2 + y^2 - 6x + 4y - 12 = 0$?",
+    "rispostaCorretta": "$C(3, -2)$ e $R = 5$",
+    "risposteErrate": [
+      "$C(-3, 2)$ e $R = 5$",
+      "$C(3, -2)$ e $R = 25$",
+      "$C(3, -2)$ e $R = \\sqrt{12}$",
+      "$C(-6, 4)$ e $R = 5$"
+    ],
+    "spiegazione": "Dall’equazione generale $x^2 + y^2 + ax + by + c = 0$, le coordinate del centro sono $x_C = -\\frac{a}{2} = -\\frac{-6}{2} = 3$ e $y_C = -\\frac{b}{2} = -\\frac{4}{2} = -2$, quindi $C(3, -2)$. Il raggio è dato da $R = \\sqrt{x_C^2 + y_C^2 - c} = \\sqrt{3^2 + (-2)^2 - (-12)} = \\sqrt{9 + 4 + 12} = \\sqrt{25} = 5$.",
+    "fonte": "Lotto M2 del progetto — M2-18 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 366,
+    "materia": "Matematica",
+    "domanda": "Qual è la posizione reciproca della retta $x = 4$ rispetto alla circonferenza di equazione $x^2 + y^2 = 25$ nel piano cartesiano?",
+    "rispostaCorretta": "La retta è secante e interseca la circonferenza in due punti distinti",
+    "risposteErrate": [
+      "La retta è tangente alla circonferenza in un solo punto",
+      "La retta è esterna alla circonferenza e non ha punti in comune",
+      "La retta passa per il centro della circonferenza",
+      "La retta coincide con il diametro orizzontale"
+    ],
+    "spiegazione": "La circonferenza $x^2 + y^2 = 25$ ha centro nell’origine $O(0,0)$ e raggio $R = \\sqrt{25} = 5$. La retta verticale $x = 4$ dista $d = 4$ dall’origine. Essendo $d < R$ ($4 < 5$), la distanza del centro dalla retta è strettamente minore del raggio, per cui la retta è secante e interseca la circonferenza in due punti reali e distinti: $(4, 3)$ e $(4, -3)$.",
+    "fonte": "Lotto M2 del progetto — M2-19 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 367,
+    "materia": "Matematica",
+    "domanda": "Qual è l’equazione della circonferenza avente centro nel punto $C(2, -3)$ e passante per l’origine degli assi $O(0,0)$?",
+    "rispostaCorretta": "$x^2 + y^2 - 4x + 6y = 0$",
+    "risposteErrate": [
+      "$x^2 + y^2 + 4x - 6y = 0$",
+      "$x^2 + y^2 - 4x + 6y + 13 = 0$",
+      "$x^2 + y^2 - 2x + 3y = 0$",
+      "$x^2 + y^2 - 4x + 6y - 13 = 0$"
+    ],
+    "spiegazione": "Poiché la circonferenza passa per l’origine $O(0,0)$, il raggio al quadrato coincide con la distanza al quadrato tra il centro $C(2, -3)$ e l’origine: $R^2 = 2^2 + (-3)^2 = 4 + 9 = 13$. L’equazione è $(x - 2)^2 + (y + 3)^2 = 13$. Sviluppando i quadrati: $x^2 - 4x + 4 + y^2 + 6y + 9 = 13 \\implies x^2 + y^2 - 4x + 6y = 0$.",
+    "fonte": "Lotto M2 del progetto — M2-20 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 368,
+    "materia": "Matematica",
+    "domanda": "In quanti punti distinti la retta $y = 2x - 1$ interseca la parabola $y = x^2 - x + 1$ nel piano cartesiano?",
+    "rispostaCorretta": "In 2 punti distinti",
+    "risposteErrate": [
+      "In 1 solo punto (tangente)",
+      "In nessun punto (esterna)",
+      "In 3 punti",
+      "In infiniti punti"
+    ],
+    "spiegazione": "Per determinare i punti di intersezione impostiamo l’equazione risolvente uguagliando le espressioni di $y$: $x^2 - x + 1 = 2x - 1 \\implies x^2 - 3x + 2 = 0$. Il discriminante dell’equazione quadratica è $\\Delta = (-3)^2 - 4(1)(2) = 9 - 8 = 1 > 0$. Poiché $\\Delta > 0$, l’equazione ammette due soluzioni reali e distinte ($x = 1$ e $x = 2$), a cui corrispondono due punti di intersezione distinti: $(1, 1)$ e $(2, 3)$.",
+    "fonte": "Lotto M2 del progetto — M2-21 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 369,
+    "materia": "Matematica",
+    "domanda": "Qual è l’equazione dell’asse di simmetria della parabola di equazione $y = -2x^2 + 8x - 5$?",
+    "rispostaCorretta": "$x = 2$",
+    "risposteErrate": [
+      "$x = -2$",
+      "$x = 4$",
+      "$y = 2$",
+      "$y = 3$"
+    ],
+    "spiegazione": "L’asse di simmetria di una parabola con asse verticale di equazione $y = ax^2 + bx + c$ è la retta verticale passante per il vertice, avente equazione $x = -\\frac{b}{2a}$. Nel nostro caso $a = -2$ e $b = 8$, quindi $x = -\\frac{8}{2(-2)} = -\\frac{8}{-4} = 2$.",
+    "fonte": "Lotto M2 del progetto — M2-22 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 370,
+    "materia": "Matematica",
+    "domanda": "Nel fascio di rette di equazione $(k + 1)x + (2k - 1)y - 5 = 0$, quale retta si ottiene per il valore del parametro $k$ tale che la retta sia parallela all’asse delle ascisse?",
+    "rispostaCorretta": "$y = -\\frac{5}{3}$",
+    "risposteErrate": [
+      "$y = \\frac{5}{3}$",
+      "$x = 5$",
+      "$x = \\frac{10}{3}$",
+      "$y = -5$"
+    ],
+    "spiegazione": "Una retta del fascio è parallela all’asse delle ascisse (orizzontale) se e solo se il coefficiente di $x$ si annulla: $k + 1 = 0 \\implies k = -1$. Sostituendo $k = -1$ nell’equazione del fascio: $0 \\cdot x + (2(-1) - 1)y - 5 = 0 \\implies -3y - 5 = 0 \\implies -3y = 5 \\implies y = -\\frac{5}{3}$.",
+    "fonte": "Lotto M2 del progetto — M2-23 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 371,
+    "materia": "Matematica",
+    "domanda": "Quali sono le coordinate dei fuochi dell’ellisse di equazione $\\frac{x^2}{25} + \\frac{y^2}{9} = 1$ nel piano cartesiano?",
+    "rispostaCorretta": "$F_1(-4, 0)$ e $F_2(4, 0)$",
+    "risposteErrate": [
+      "$F_1(0, -4)$ e $F_2(0, 4)$",
+      "$F_1(-\\sqrt{34}, 0)$ e $F_2(\\sqrt{34}, 0)$",
+      "$F_1(-5, 0)$ e $F_2(5, 0)$",
+      "$F_1(-2, 0)$ e $F_2(2, 0)$"
+    ],
+    "spiegazione": "L’equazione canonica dell’ellisse è $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$. Qui $a^2 = 25$ e $b^2 = 9$. Essendo $a > b$, i fuochi si trovano sull’asse delle ascisse nei punti $(\\pm c, 0)$. La semidistanza focale $c$ è data da $c = \\sqrt{a^2 - b^2} = \\sqrt{25 - 9} = \\sqrt{16} = 4$. I fuochi dell’ellisse sono quindi $F_1(-4, 0)$ e $F_2(4, 0)$.",
+    "fonte": "Lotto M2 del progetto — M2-24 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 372,
+    "materia": "Matematica",
+    "domanda": "La parabola $y = 4 - x^2$ interseca l’asse delle ascisse nei punti $A$ e $B$ e ha vertice nel punto $V$. Qual è l’area del triangolo $ABV$ nel piano cartesiano?",
+    "rispostaCorretta": "$8$",
+    "risposteErrate": [
+      "$16$",
+      "$4$",
+      "$\\frac{32}{3}$",
+      "$12$"
+    ],
+    "spiegazione": "Troviamo innanzitutto i punti di intersezione con l’asse delle ascisse ($y = 0$): $4 - x^2 = 0 \\implies x = \\pm 2$, quindi $A(-2, 0)$ e $B(2, 0)$. La lunghezza della base $AB$ è $b = 2 - (-2) = 4$. Il vertice della parabola è $V(0, 4)$, per cui l’altezza relativa alla base $AB$ (che giace sull’asse $x$) è l’ordinata del vertice $h = 4$. L’area del triangolo $ABV$ è data da: $\\text{Area} = \\frac{b \\cdot h}{2} = \\frac{4 \\cdot 4}{2} = 8$.",
+    "fonte": "Lotto M2 del progetto — M2-25 (Geometria analitica)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
   }
 ];
 

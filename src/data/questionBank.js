@@ -6443,6 +6443,431 @@ const questionBank = [
     "numeroVolteProposta": 0,
     "numeroRisposteCorrette": 0,
     "numeroRisposteErrate": 0
+  },
+  {
+    id: 373,
+    materia: "Matematica",
+    domanda: "A quanti radianti corrisponde un angolo di ampiezza pari a $150^\\circ$?",
+    rispostaCorretta: "$\\frac{5}{6}\\pi$",
+    risposteErrate: [
+      "$\\frac{2}{3}\\pi$",
+      "$\\frac{3}{4}\\pi$",
+      "$\\frac{7}{6}\\pi$",
+      "$\\frac{5}{3}\\pi$"
+    ],
+    spiegazione: "Per convertire un angolo da gradi sessagesimali $\\alpha^\\circ$ a radianti si moltiplica per $\\frac{\\pi}{180^\\circ}$: $\\alpha_{\\text{rad}} = 150^\\circ \\cdot \\frac{\\pi}{180^\\circ} = \\frac{150}{180}\\pi = \\frac{5}{6}\\pi$.",
+    fonte: "Lotto M3 del progetto — M3-01 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 374,
+    materia: "Matematica",
+    domanda: "Qual è il valore numerico dell’espressione $\\sin\\left(\\frac{\\pi}{3}\\right) + \\cos\\left(\\frac{\\pi}{6}\\right)$?",
+    rispostaCorretta: "$\\sqrt{3}$",
+    risposteErrate: [
+      "$1$",
+      "$\\frac{\\sqrt{3}}{2}$",
+      "$\\sqrt{2}$",
+      "$2\\sqrt{3}$"
+    ],
+    spiegazione: "I valori notevoli per gli angoli fondamentali sono $\\sin\\left(\\frac{\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}$ e $\\cos\\left(\\frac{\\pi}{6}\\right) = \\frac{\\sqrt{3}}{2}$. Sommando i due termini si ottiene: $\\sin\\left(\\frac{\\pi}{3}\\right) + \\cos\\left(\\frac{\\pi}{6}\\right) = \\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{3}}{2} = \\sqrt{3}$.",
+    fonte: "Lotto M3 del progetto — M3-02 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 375,
+    materia: "Matematica",
+    domanda: "Se $\\alpha$ è un angolo appartenente al secondo quadrante ($\\frac{\\pi}{2} < \\alpha < \\pi$), quali sono i segni rispettivi di $\\sin\\alpha$, $\\cos\\alpha$ e $\\tan\\alpha$?",
+    rispostaCorretta: "$\\sin\\alpha > 0$, $\\cos\\alpha < 0$, $\\tan\\alpha < 0$",
+    risposteErrate: [
+      "$\\sin\\alpha < 0$, $\\cos\\alpha > 0$, $\\tan\\alpha < 0$",
+      "$\\sin\\alpha > 0$, $\\cos\\alpha > 0$, $\\tan\\alpha > 0$",
+      "$\\sin\\alpha < 0$, $\\cos\\alpha < 0$, $\\tan\\alpha > 0$",
+      "$\\sin\\alpha > 0$, $\\cos\\alpha < 0$, $\\tan\\alpha > 0$"
+    ],
+    spiegazione: "Nel secondo quadrante del piano cartesiano ($\\frac{\\pi}{2} < \\alpha < \\pi$), i punti sulla circonferenza goniometrica hanno ordinata positiva ($y > 0$) e ascissa negativa ($x < 0$). Di conseguenza, $\\sin\\alpha > 0$, $\\cos\\alpha < 0$ e $\\tan\\alpha = \\frac{\\sin\\alpha}{\\cos\\alpha} < 0$.",
+    fonte: "Lotto M3 del progetto — M3-03 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 376,
+    materia: "Matematica",
+    domanda: "Sapendo che $\\cos x = -\\frac{3}{5}$ e che $\\pi < x < \\frac{3}{2}\\pi$ (terzo quadrante), qual è il valore di $\\sin x$?",
+    rispostaCorretta: "$-\\frac{4}{5}$",
+    risposteErrate: [
+      "$\\frac{4}{5}$",
+      "$-\\frac{2}{5}$",
+      "$\\frac{2}{5}$",
+      "$-\\frac{16}{25}$"
+    ],
+    spiegazione: "Dalla prima relazione fondamentale $\\sin^2 x + \\cos^2 x = 1$, ricaviamo $\\sin^2 x = 1 - \\cos^2 x = 1 - \\left(-\\frac{3}{5}\\right)^2 = 1 - \\frac{9}{25} = \\frac{16}{25}$. Poiché $x$ appartiene al terzo quadrante ($\\pi < x < \\frac{3}{2}\\pi$), il seno è strettamente negativo, per cui $\\sin x = -\\sqrt{\\frac{16}{25}} = -\\frac{4}{5}$.",
+    fonte: "Lotto M3 del progetto — M3-04 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 377,
+    materia: "Matematica",
+    domanda: "A quale espressione equivale $\\cos(\\pi - x)$ per ogni valore reale di $x$?",
+    rispostaCorretta: "$-\\cos x$",
+    risposteErrate: [
+      "$\\cos x$",
+      "$-\\sin x$",
+      "$\\sin x$",
+      "$1 - \\cos x$"
+    ],
+    spiegazione: "Gli angoli $x$ e $\\pi - x$ sono supplementari. Sulla circonferenza goniometrica, i punti corrispondenti hanno la stessa ordinata e ascisse opposte, per cui $\\cos(\\pi - x) = -\\cos x$ e $\\sin(\\pi - x) = \\sin x$.",
+    fonte: "Lotto M3 del progetto — M3-05 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 378,
+    materia: "Matematica",
+    domanda: "Quante soluzioni ammette l’equazione $\\sin x = \\frac{1}{2}$ nell’intervallo $[0, 2\\pi)$?",
+    rispostaCorretta: "Esattamente 2 soluzioni",
+    risposteErrate: [
+      "Esattamente 1 soluzione",
+      "Esattamente 4 soluzioni",
+      "Nessuna soluzione",
+      "Infinite soluzioni"
+    ],
+    spiegazione: "Sulla circonferenza goniometrica, la retta orizzontale $y = \\frac{1}{2}$ interseca la circonferenza in due punti nel primo giro $[0, 2\\pi)$, corrispondenti agli angoli $x = \\frac{\\pi}{6}$ (nel primo quadrante) e $x = \\frac{5}{6}\\pi$ (nel secondo quadrante). L’equazione ammette quindi esattamente 2 soluzioni nell’intervallo considerato.",
+    fonte: "Lotto M3 del progetto — M3-06 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 379,
+    materia: "Matematica",
+    domanda: "In un triangolo rettangolo, l’ipotenusa misura $10\\text{ cm}$ e uno degli angoli acuti misura $30^\\circ$. Quanto misura il cateto opposto a tale angolo?",
+    rispostaCorretta: "$5\\text{ cm}$",
+    risposteErrate: [
+      "$5\\sqrt{3}\\text{ cm}$",
+      "$5\\sqrt{2}\\text{ cm}$",
+      "$20\\text{ cm}$",
+      "$\\frac{10}{3}\\text{ cm}$"
+    ],
+    spiegazione: "In un triangolo rettangolo, la lunghezza di un cateto è uguale al prodotto della lunghezza dell’ipotenusa per il seno dell’angolo opposto: $a = c \\cdot \\sin(30^\\circ) = 10 \\cdot \\frac{1}{2} = 5\\text{ cm}$.",
+    fonte: "Lotto M3 del progetto — M3-07 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 380,
+    materia: "Matematica",
+    domanda: "A quale espressione equivale $\\sin\\left(\\frac{\\pi}{2} - x\\right)$ per ogni $x \\in \\mathbb{R}$?",
+    rispostaCorretta: "$\\cos x$",
+    risposteErrate: [
+      "$-\\cos x$",
+      "$\\sin x$",
+      "$-\\sin x$",
+      "$1 - \\sin x$"
+    ],
+    spiegazione: "Gli angoli $x$ e $\\frac{\\pi}{2} - x$ sono complementari. Dalle relazioni degli angoli associati complementari si ha $\\sin\\left(\\frac{\\pi}{2} - x\\right) = \\cos x$ e $\\cos\\left(\\frac{\\pi}{2} - x\\right) = \\sin x$.",
+    fonte: "Lotto M3 del progetto — M3-08 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 381,
+    materia: "Matematica",
+    domanda: "Sapendo che per un angolo $\\alpha$ si ha $\\sin\\alpha = \\frac{4}{5}$ e $\\cos\\alpha = -\\frac{3}{5}$, quanto vale $\\tan\\alpha$?",
+    rispostaCorretta: "$-\\frac{4}{3}$",
+    risposteErrate: [
+      "$\\frac{4}{3}$",
+      "$-\\frac{3}{4}$",
+      "$\\frac{3}{4}$",
+      "$-\\frac{7}{5}$"
+    ],
+    spiegazione: "La seconda relazione fondamentale della goniometria definisce la tangente come rapporto tra seno e coseno: $\\tan\\alpha = \\frac{\\sin\\alpha}{\\cos\\alpha} = \\frac{4/5}{-3/5} = -\\frac{4}{3}$.",
+    fonte: "Lotto M3 del progetto — M3-09 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 382,
+    materia: "Matematica",
+    domanda: "Qual è il periodo fondamentale $T$ della funzione $f(x) = \\cos(3x)$?",
+    rispostaCorretta: "$\\frac{2}{3}\\pi$",
+    risposteErrate: [
+      "$6\\pi$",
+      "$3\\pi$",
+      "$2\\pi$",
+      "$\\frac{\\pi}{3}$"
+    ],
+    spiegazione: "La funzione coseno $\\cos(\\omega x)$ ha periodo fondamentale dato da $T = \\frac{2\\pi}{\\omega}$. Per la funzione $f(x) = \\cos(3x)$, con $\\omega = 3$, si ottiene $T = \\frac{2\\pi}{3}$.",
+    fonte: "Lotto M3 del progetto — M3-10 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 383,
+    materia: "Matematica",
+    domanda: "Per quale dei seguenti valori dell’angolo $x \\in [0, \\pi)$ la funzione $\\tan x$ non è definita?",
+    rispostaCorretta: "$x = \\frac{\\pi}{2}$",
+    risposteErrate: [
+      "$x = 0$",
+      "$x = \\frac{\\pi}{4}$",
+      "$x = \\frac{\\pi}{3}$",
+      "$x = \\frac{3}{4}\\pi$"
+    ],
+    spiegazione: "La funzione tangente $\\tan x = \\frac{\\sin x}{\\cos x}$ è definita per tutti i valori reali di $x$ in cui il denominatore non si annulla, ossia per $x \\ne \\frac{\\pi}{2} + k\\pi$ con $k \\in \\mathbb{Z}$. Nell’intervallo $[0, \\pi)$, l’unico valore escluso è $x = \\frac{\\pi}{2}$ (pari a $90^\\circ$).",
+    fonte: "Lotto M3 del progetto — M3-11 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 384,
+    materia: "Matematica",
+    domanda: "Semplificando l’espressione $\\frac{1 - \\sin^2 x}{\\cos x}$ per tutti i valori di $x$ in cui $\\cos x \\ne 0$, si ottiene:",
+    rispostaCorretta: "$\\cos x$",
+    risposteErrate: [
+      "$\\sin x$",
+      "$\\frac{1}{\\cos x}$",
+      "$1$",
+      "$\\tan x$"
+    ],
+    spiegazione: "Dalla prima relazione fondamentale della goniometria $\\sin^2 x + \\cos^2 x = 1$, si ha $1 - \\sin^2 x = \\cos^2 x$. Sostituendo al numeratore: $\\frac{1 - \\sin^2 x}{\\cos x} = \\frac{\\cos^2 x}{\\cos x} = \\cos x$.",
+    fonte: "Lotto M3 del progetto — M3-12 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 385,
+    materia: "Matematica",
+    domanda: "Se per un angolo acuto $x \\in \\left(0, \\frac{\\pi}{2}\\right)$ si ha $\\sin x = \\frac{3}{5}$, quanto vale $\\sin(2x)$?",
+    rispostaCorretta: "$\\frac{24}{25}$",
+    risposteErrate: [
+      "$\\frac{6}{5}$",
+      "$\\frac{12}{25}$",
+      "$\\frac{7}{25}$",
+      "$\\frac{16}{25}$"
+    ],
+    spiegazione: "Poiché $x$ è un angolo acuto, $\\cos x = \\sqrt{1 - \\sin^2 x} = \\sqrt{1 - \\frac{9}{25}} = \\frac{4}{5}$. Applicando la formula di duplicazione del seno: $\\sin(2x) = 2\\sin x \\cos x = 2 \\cdot \\frac{3}{5} \\cdot \\frac{4}{5} = \\frac{24}{25}$.",
+    fonte: "Lotto M3 del progetto — M3-13 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 386,
+    materia: "Matematica",
+    domanda: "Se $\\cos x = \\frac{1}{3}$, qual è il valore di $\\cos(2x)$?",
+    rispostaCorretta: "$-\\frac{7}{9}$",
+    risposteErrate: [
+      "$\\frac{7}{9}$",
+      "$\\frac{2}{3}$",
+      "$-\\frac{8}{9}$",
+      "$\\frac{1}{9}$"
+    ],
+    spiegazione: "Dalla formula di duplicazione del coseno $\\cos(2x) = 2\\cos^2 x - 1$, sostituendo $\\cos x = \\frac{1}{3}$: $\\cos(2x) = 2\\left(\\frac{1}{3}\\right)^2 - 1 = 2 \\cdot \\frac{1}{9} - 1 = \\frac{2}{9} - 1 = -\\frac{7}{9}$.",
+    fonte: "Lotto M3 del progetto — M3-14 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 387,
+    materia: "Matematica",
+    domanda: "Quali sono tutte le soluzioni dell’equazione $2\\cos^2 x - \\cos x = 0$ nell’intervallo $[0, 2\\pi)$?",
+    rispostaCorretta: "$x = \\frac{\\pi}{3},\\ \\frac{\\pi}{2},\\ \\frac{3}{2}\\pi,\\ \\frac{5}{3}\\pi$",
+    risposteErrate: [
+      "$x = \\frac{\\pi}{3},\\ \\frac{5}{3}\\pi$",
+      "$x = \\frac{\\pi}{2},\\ \\frac{3}{2}\\pi$",
+      "$x = \\frac{\\pi}{6},\\ \\frac{\\pi}{2},\\ \\frac{3}{2}\\pi,\\ \\frac{11}{6}\\pi$",
+      "$x = 0,\\ \\frac{\\pi}{3},\\ \\pi,\\ \\frac{5}{3}\\pi$"
+    ],
+    spiegazione: "Raccogliamo a fattor comune $\\cos x$: $\\cos x (2\\cos x - 1) = 0$. Per la legge di annullamento del prodotto abbiamo due casi: 1) $\\cos x = 0 \\implies x = \\frac{\\pi}{2}$ e $x = \\frac{3}{2}\\pi$; 2) $2\\cos x - 1 = 0 \\implies \\cos x = \\frac{1}{2} \\implies x = \\frac{\\pi}{3}$ e $x = \\frac{5}{3}\\pi$. Nell’intervallo $[0, 2\\pi)$ le soluzioni sono quattro: $\\frac{\\pi}{3}, \\frac{\\pi}{2}, \\frac{3}{2}\\pi, \\frac{5}{3}\\pi$.",
+    fonte: "Lotto M3 del progetto — M3-15 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 388,
+    materia: "Matematica",
+    domanda: "Per quali valori di $x \\in [0, 2\\pi)$ è verificata la disequazione $\\sin x > \\frac{\\sqrt{3}}{2}$?",
+    rispostaCorretta: "$\\frac{\\pi}{3} < x < \\frac{2}{3}\\pi$",
+    risposteErrate: [
+      "$0 \\le x < \\frac{\\pi}{3}$ oppure $\\frac{2}{3}\\pi < x < 2\\pi$",
+      "$\\frac{\\pi}{6} < x < \\frac{5}{6}\\pi$",
+      "$\\frac{\\pi}{3} \\le x \\le \\frac{4}{3}\\pi$",
+      "$\\frac{2}{3}\\pi < x < \\frac{4}{3}\\pi$"
+    ],
+    spiegazione: "Sulla circonferenza goniometrica, la condizione $\\sin x > \\frac{\\sqrt{3}}{2}$ corrisponde ai punti con ordinata strettamente maggiore di $\\frac{\\sqrt{3}}{2}$. I punti di confine nel primo giro sono $x = \\frac{\\pi}{3}$ e $x = \\pi - \\frac{\\pi}{3} = \\frac{2}{3}\\pi$. L’insieme delle soluzioni in $[0, 2\\pi)$ è quindi l’intervallo $\\frac{\\pi}{3} < x < \\frac{2}{3}\\pi$.",
+    fonte: "Lotto M3 del progetto — M3-16 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 389,
+    materia: "Matematica",
+    domanda: "In un triangolo, due lati misurano $6\\text{ cm}$ e $8\\text{ cm}$ e l’angolo tra essi compreso misura $60^\\circ$. Qual è l’area del triangolo?",
+    rispostaCorretta: "$12\\sqrt{3}\\text{ cm}^2$",
+    risposteErrate: [
+      "$24\\sqrt{3}\\text{ cm}^2$",
+      "$12\\text{ cm}^2$",
+      "$24\\text{ cm}^2$",
+      "$12\\sqrt{2}\\text{ cm}^2$"
+    ],
+    spiegazione: "L’area di un triangolo di cui si conoscono due lati $a, b$ e l’angolo compreso $\\gamma$ è data dalla formula trigonometrica $\\text{Area} = \\frac{1}{2} a b \\sin\\gamma$. Sostituendo i dati: $\\text{Area} = \\frac{1}{2} \\cdot 6 \\cdot 8 \\cdot \\sin(60^\\circ) = 24 \\cdot \\frac{\\sqrt{3}}{2} = 12\\sqrt{3}\\text{ cm}^2$.",
+    fonte: "Lotto M3 del progetto — M3-17 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 390,
+    materia: "Matematica",
+    domanda: "In un triangolo $ABC$, i lati $AB$ e $AC$ misurano rispettivamente $4\\text{ cm}$ e $5\\text{ cm}$ e l’angolo compreso $\\widehat{BAC}$ misura $60^\\circ$. Qual è la misura del terzo lato $BC$?",
+    rispostaCorretta: "$\\sqrt{21}\\text{ cm}$",
+    risposteErrate: [
+      "$\\sqrt{41}\\text{ cm}$",
+      "$\\sqrt{61}\\text{ cm}$",
+      "$\\sqrt{31}\\text{ cm}$",
+      "$6\\text{ cm}$"
+    ],
+    spiegazione: "Per il teorema del coseno (o di Carnot): $BC^2 = AB^2 + AC^2 - 2 \\cdot AB \\cdot AC \\cdot \\cos(\\widehat{BAC})$. Sostituendo i valori: $BC^2 = 4^2 + 5^2 - 2 \\cdot 4 \\cdot 5 \\cdot \\cos(60^\\circ) = 16 + 25 - 40 \\cdot \\frac{1}{2} = 41 - 20 = 21$. Quindi $BC = \\sqrt{21}\\text{ cm}$.",
+    fonte: "Lotto M3 del progetto — M3-18 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 391,
+    materia: "Matematica",
+    domanda: "In un triangolo $ABC$, l’angolo in $A$ misura $45^\\circ$, l’angolo in $B$ misura $30^\\circ$ e il lato opposto ad $A$ misura $a = 6\\sqrt{2}\\text{ cm}$. Quanto misura il lato $b$ opposto all’angolo $B$?",
+    rispostaCorretta: "$6\\text{ cm}$",
+    risposteErrate: [
+      "$6\\sqrt{2}\\text{ cm}$",
+      "$3\\sqrt{2}\\text{ cm}$",
+      "$12\\text{ cm}$",
+      "$3\\sqrt{3}\\text{ cm}$"
+    ],
+    spiegazione: "Per il teorema dei seni si ha $\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$, da cui $b = a \\cdot \\frac{\\sin B}{\\sin A}$. Sostituendo i valori noti: $b = 6\\sqrt{2} \\cdot \\frac{\\sin(30^\\circ)}{\\sin(45^\\circ)} = 6\\sqrt{2} \\cdot \\frac{1/2}{\\sqrt{2}/2} = 6\\sqrt{2} \\cdot \\frac{1}{\\sqrt{2}} = 6\\text{ cm}$.",
+    fonte: "Lotto M3 del progetto — M3-19 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 392,
+    materia: "Matematica",
+    domanda: "Un osservatore posto a $30\\text{ metri}$ dalla base di un edificio verticale ne misura la sommità con un angolo di elevazione di $30^\\circ$ rispetto al terreno orizzontale. Trascurando l’altezza dell’osservatore, qual è l’altezza dell’edificio?",
+    rispostaCorretta: "$10\\sqrt{3}\\text{ metri}$",
+    risposteErrate: [
+      "$30\\sqrt{3}\\text{ metri}$",
+      "$15\\text{ metri}$",
+      "$15\\sqrt{3}\\text{ metri}$",
+      "$10\\text{ metri}$"
+    ],
+    spiegazione: "Considerando il triangolo rettangolo formato dal terreno, dall’edificio e dalla linea di vista, l’altezza $h$ dell’edificio corrisponde al cateto opposto all’angolo di elevazione: $h = d \\cdot \\tan(30^\\circ) = 30 \\cdot \\frac{\\sqrt{3}}{3} = 10\\sqrt{3}\\text{ metri}$.",
+    fonte: "Lotto M3 del progetto — M3-20 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 393,
+    materia: "Matematica",
+    domanda: "Quali sono tutte le soluzioni dell’equazione $\\sin x - \\sqrt{3}\\cos x = 0$ nell’intervallo $[0, 2\\pi)$?",
+    rispostaCorretta: "$x = \\frac{\\pi}{3}$ e $x = \\frac{4}{3}\\pi$",
+    risposteErrate: [
+      "$x = \\frac{\\pi}{6}$ e $x = \\frac{7}{6}\\pi$",
+      "$x = \\frac{\\pi}{3}$ e $x = \\frac{2}{3}\\pi$",
+      "$x = \\frac{\\pi}{3}$",
+      "$x = \\frac{2}{3}\\pi$ e $x = \\frac{5}{3}\\pi$"
+    ],
+    spiegazione: "Poiché per i valori in cui $\\cos x = 0$ si avrebbe $\\sin x \\ne 0$, possiamo dividere entrambi i membri per $\\cos x \\ne 0$, ottenendo $\\frac{\\sin x}{\\cos x} - \\sqrt{3} = 0 \\implies \\tan x = \\sqrt{3}$. La tangente assume valore $\\sqrt{3}$ nel primo giro in corrispondenza degli angoli $x = \\frac{\\pi}{3}$ (I quadrante) e $x = \\frac{\\pi}{3} + \\pi = \\frac{4}{3}\\pi$ (III quadrante).",
+    fonte: "Lotto M3 del progetto — M3-21 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 394,
+    materia: "Matematica",
+    domanda: "Per quali valori di $x \\in [0, 2\\pi)$ è verificata la disequazione $\\cos x \\le -\\frac{1}{2}$?",
+    rispostaCorretta: "$\\frac{2}{3}\\pi \\le x \\le \\frac{4}{3}\\pi$",
+    risposteErrate: [
+      "$0 \\le x \\le \\frac{2}{3}\\pi$ oppure $\\frac{4}{3}\\pi \\le x < 2\\pi$",
+      "$\\frac{\\pi}{3} \\le x \\le \\frac{5}{3}\\pi$",
+      "$\\frac{5}{6}\\pi \\le x \\le \\frac{7}{6}\\pi$",
+      "$\\frac{\\pi}{2} \\le x \\le \\frac{3}{2}\\pi$"
+    ],
+    spiegazione: "Sulla circonferenza goniometrica, la disequazione $\\cos x \\le -\\frac{1}{2}$ individua i punti con ascissa minore o uguale a $-\\frac{1}{2}$. Gli angoli di confine sono $x_1 = \\pi - \\frac{\\pi}{3} = \\frac{2}{3}\\pi$ e $x_2 = \\pi + \\frac{\\pi}{3} = \\frac{4}{3}\\pi$. L’intervallo delle soluzioni in $[0, 2\\pi)$ è quindi $\\frac{2}{3}\\pi \\le x \\le \\frac{4}{3}\\pi$.",
+    fonte: "Lotto M3 del progetto — M3-22 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 395,
+    materia: "Matematica",
+    domanda: "Qual è l’espressione semplificata di $(\\sin x + \\cos x)^2 - \\sin(2x)$ per ogni $x \\in \\mathbb{R}$?",
+    rispostaCorretta: "$1$",
+    risposteErrate: [
+      "$0$",
+      "$1 - 2\\sin(2x)$",
+      "$\\cos(2x)$",
+      "$2\\sin^2 x$"
+    ],
+    spiegazione: "Sviluppiamo il quadrato di binomio: $(\\sin x + \\cos x)^2 = \\sin^2 x + \\cos^2 x + 2\\sin x \\cos x$. Poiché per la prima relazione fondamentale $\\sin^2 x + \\cos^2 x = 1$ e per la formula di duplicazione $2\\sin x \\cos x = \\sin(2x)$, l’espressione diventa: $(1 + \\sin(2x)) - \\sin(2x) = 1$.",
+    fonte: "Lotto M3 del progetto — M3-23 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 396,
+    materia: "Matematica",
+    domanda: "Per ogni $x \\ne \\frac{\\pi}{2} + k\\pi$, con $k \\in \\mathbb{Z}$, a quale delle seguenti espressioni equivale $1 + \\tan^2 x$?",
+    rispostaCorretta: "$\\frac{1}{\\cos^2 x}$",
+    risposteErrate: [
+      "$\\frac{1}{\\sin^2 x}$",
+      "$\\cos^2 x$",
+      "$\\sin^2 x$",
+      "$\\frac{1}{\\cos x}$"
+    ],
+    spiegazione: "Esprimendo la tangente come rapporto $\\tan x = \\frac{\\sin x}{\\cos x}$ e sommando i termini: $1 + \\tan^2 x = 1 + \\frac{\\sin^2 x}{\\cos^2 x} = \\frac{\\cos^2 x + \\sin^2 x}{\\cos^2 x}$. Poiché $\\sin^2 x + \\cos^2 x = 1$, si ottiene l’identità notevole $1 + \\tan^2 x = \\frac{1}{\\cos^2 x}$.",
+    fonte: "Lotto M3 del progetto — M3-24 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 397,
+    materia: "Matematica",
+    domanda: "In un triangolo isoscele di base $b = 12\\text{ cm}$, i due lati obliqui misurano ciascuno $10\\text{ cm}$. Detto $\\alpha$ ciascuno dei due angoli alla base, qual è il valore esatto di $\\sin(2\\alpha)$?",
+    rispostaCorretta: "$\\frac{24}{25}$",
+    risposteErrate: [
+      "$\\frac{7}{25}$",
+      "$\\frac{12}{25}$",
+      "$\\frac{4}{5}$",
+      "$\\frac{3}{5}$"
+    ],
+    spiegazione: "Tracciamo l’altezza $h$ relativa alla base del triangolo isoscele, che divide la base a metà in due segmenti lunghi $6\\text{ cm}$. Nel triangolo rettangolo avente come ipotenusa il lato obliquo di $10\\text{ cm}$, l’altezza misura per il teorema di Pitagora $h = \\sqrt{10^2 - 6^2} = \\sqrt{64} = 8\\text{ cm}$. Le funzioni goniometriche dell’angolo alla base $\\alpha$ sono quindi $\\cos\\alpha = \\frac{6}{10} = \\frac{3}{5}$ e $\\sin\\alpha = \\frac{8}{10} = \\frac{4}{5}$. Applicando la formula di duplicazione del seno: $\\sin(2\\alpha) = 2\\sin\\alpha\\cos\\alpha = 2 \\cdot \\frac{4}{5} \\cdot \\frac{3}{5} = \\frac{24}{25}$.",
+    fonte: "Lotto M3 del progetto — M3-25 (Trigonometria)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
   }
 ];
 

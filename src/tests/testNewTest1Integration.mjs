@@ -21,8 +21,8 @@ function section(title) {
   console.log(`\n=== ${title} ===`);
 }
 
-section('Integrità Globale Banca 317');
-check(questionBank.length === 317, `Totale quesiti esatto: 317 (trovati: ${questionBank.length})`);
+section('Integrità Globale Banca 342 (con 65 da NEW Test1.pdf)');
+check(questionBank.length === 342, `Totale quesiti esatto: 342 (trovati: ${questionBank.length})`);
 
 const idSet = new Set();
 let hasDuplicateId = false;
@@ -34,14 +34,14 @@ check(!hasDuplicateId, 'Tutti gli ID sono strettamente univoci (nessun ID duplic
 
 const allowedSubjects = new Set(['Matematica', 'Logica', 'Scienze', 'Comprensione verbale']);
 const invalidSubjects = questionBank.filter(q => !allowedSubjects.has(q.materia));
-check(invalidSubjects.length === 0, 'Tutti i 317 quesiti appartengono esclusivamente alle 4 materie ammesse');
+check(invalidSubjects.length === 0, 'Tutti i 342 quesiti appartengono esclusivamente alle 4 materie ammesse');
 
 const subjectCounts = {};
 questionBank.forEach(q => subjectCounts[q.materia] = (subjectCounts[q.materia] || 0) + 1);
-check(subjectCounts['Matematica'] === 118, `Matematica: 118 (trovati: ${subjectCounts['Matematica']})`);
-check(subjectCounts['Logica'] === 49, `Logica: 49 (trovati: ${subjectCounts['Logica']})`);
-check(subjectCounts['Scienze'] === 70, `Scienze: 70 (trovati: ${subjectCounts['Scienze']})`);
-check(subjectCounts['Comprensione verbale'] === 80, `Comprensione verbale: 80 (trovati: ${subjectCounts['Comprensione verbale']})`);
+check(subjectCounts['Matematica'] === 143, `Matematica fisica: 143 (118 base + 25 M1) (trovati: ${subjectCounts['Matematica']})`);
+check(subjectCounts['Logica'] === 49, `Logica fisica: 49 (trovati: ${subjectCounts['Logica']})`);
+check(subjectCounts['Scienze'] === 70, `Scienze fisica: 70 (trovati: ${subjectCounts['Scienze']})`);
+check(subjectCounts['Comprensione verbale'] === 80, `Comprensione verbale fisica: 80 (trovati: ${subjectCounts['Comprensione verbale']})`);
 
 section('65 Quesiti NEW Test1.pdf');
 const newTest1Questions = questionBank.filter(q => q.sourceDocument === 'NEW Test1.pdf');

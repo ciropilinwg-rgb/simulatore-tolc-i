@@ -1,4 +1,6 @@
 import questionBank from '../data/questionBank.js';
+import { getQuestions, getAllQuestions, getMaterie, getQuestionsByMaterie, getQuestionById } from '../data/dataService.js';
+import { getRawQuestionById, QUESTION_CATALOG_SUMMARY } from '../data/questionCatalog.js';
 import { prepareShuffledOptions } from '../utils/shuffle.js';
 import {
   createEmptyAnswers,
@@ -40,124 +42,254 @@ function makeMockQuestion(id, materia) {
   };
 }
 
-const expectedSubjectCounts = {
-  'Comprensione verbale': 80,
-  Logica: 49,
-  Matematica: 118,
-  Scienze: 70
-};
+// ─── 1. BANCA DATI FISICA (342 RECORD) ───
+section('1. Banca Dati Fisica (342 Record)');
+check(Array.isArray(questionBank), 'questionBank è un array');
+check(questionBank.length === 342, `questionBank contiene esattamente 342 record fisici (trovati: ${questionBank.length})`);
 
-const totalExpected = Object.values(expectedSubjectCounts).reduce((sum, value) => sum + value, 0);
+const allAllQuestions = await getAllQuestions();
+check(allAllQuestions.length === 342, `getAllQuestions() restituisce tutti i 342 record fisici (trovati: ${allAllQuestions.length})`);
 
-const materie = [...new Set(questionBank.map((question) => question.materia))].sort();
-const [primarySubject, secondarySubject] = materie;
-const selectedSubjects = [primarySubject, secondarySubject];
+const allIds = questionBank.map((q) => q.id);
+const uniqueIds = new Set(allIds);
+check(uniqueIds.size === 342, `Tutti i 342 ID sono univoci (trovati: ${uniqueIds.size})`);
+check(Math.min(...allIds) === 1, `ID minimo = 1 (trovato: ${Math.min(...allIds)})`);
+check(Math.max(...allIds) === 347, `ID massimo = 347 (trovato: ${Math.max(...allIds)})`);
 
-section('Banca dati');
-check(Array.isArray(questionBank), 'La banca dati è un array');
-check(questionBank.length === totalExpected, `La banca dati contiene ${totalExpected} domande`);
+// Preservazione buchi storici
+const historicalHoles = [2, 18, 25, 78, 202];
+const preservedHoles = historicalHoles.every((holeId) => !uniqueIds.has(holeId));
+check(preservedHoles, 'Assenza tassativa degli ID storici non riutilizzabili (2, 18, 25, 78, 202)');
+
+// ─── 2. CENSIMENTO LOTTO M1 (ID 323–347) ───
+section('2. Censimento e Validazione Lotto M1 (ID 323–347)');
+const m1Questions = questionBank.filter((q) => q.id >= 323 && q.id <= 347);
+check(m1Questions.length === 25, `Lotto M1: esattamente 25 quesiti nel range ID 323–347 (trovati: ${m1Questions.length})`);
+
+const m1AllMath = m1Questions.every((q) => q.materia === 'Matematica');
+check(m1AllMath, 'Tutti i 25 quesiti di M1 appartengono alla materia Matematica');
+
+const m1OptionsCheck = m1Questions.every((q) => (
+  typeof q.rispostaCorretta === 'string' &&
+  Array.isArray(q.risposteErrate) &&
+  q.risposteErrate.length === 4
+));
+check(m1OptionsCheck, 'Tutti i 25 quesiti di M1 hanno 1 risposta corretta e 4 errate (5 opzioni totali)');
+
+const m1StatsZeroed = m1Questions.every((q) => (
+  q.numeroVolteProposta === 0 &&
+  q.numeroRisposteCorrette === 0 &&
+  q.numeroRisposteErrate === 0
+));
+check(m1StatsZeroed, 'Tutti i 25 quesiti di M1 hanno i contatori statistici azzerati (numeroVolteProposta=0, corrette=0, errate=0)');
+
+const m1FonteCheck = m1Questions.every((q) => (
+  typeof q.fonte === 'string' &&
+  q.fonte.includes('Lotto M1 del progetto') &&
+  !q.fonte.toLowerCase().includes('cisia')
+));
+check(m1FonteCheck, 'Tutti i 25 quesiti di M1 indicano chiaramente "Lotto M1 del progetto" nella fonte senza attribuzioni esterne');
+
+const q334 = questionBank.find((q) => q.id === 334);
 check(
-  materie.length === Object.keys(expectedSubjectCounts).length,
-  `Le materie distinte sono ${Object.keys(expectedSubjectCounts).length}`
-);
-check(
-  Object.entries(expectedSubjectCounts).every(([materia, count]) => (
-    questionBank.filter((question) => question.materia === materia).length === count
-  )),
-  'Ogni materia mantiene il numero di quesiti atteso'
+  Boolean(q334 && q334.domanda.includes('x \\ne 0') && q334.domanda.includes('x \\ne -2')),
+  'Quesito M1-12 (ID 334) contiene il dominio esplicito x ≠ 0 e x ≠ -2'
 );
 
-section('Modalità di selezione');
-check(SELECTION_MODE_LABELS[SELECTION_MODES.RANDOM] === 'Casuale', 'Label RANDOM coerente');
-check(SELECTION_MODE_LABELS[SELECTION_MODES.HIGHEST_ERROR_RATE] === 'Maggiori errori', 'Label HIGHEST_ERROR_RATE coerente');
-check(SELECTION_MODE_LABELS[SELECTION_MODES.LEAST_PRACTICED] === 'Meno svolte', 'Label LEAST_PRACTICED coerente');
+// ─── 3. ISOLAMENTO 35 RECORD LEGACY ED ESCLUSIONE ───
+section('3. Isolamento 35 Record Legacy (excludedFromTolcPool: true)');
+const legacyRecords = questionBank.filter((q) => q.excludedFromTolcPool === true);
+check(legacyRecords.length === 35, `Esattamente 35 record fisici possiedono excludedFromTolcPool: true (trovati: ${legacyRecords.length})`);
 
-const randomSelection = selectRandomQuestions(questionBank, 10);
-check(randomSelection.length === 10, 'La selezione casuale restituisce il numero richiesto');
-check(new Set(randomSelection.map((question) => question.id)).size === 10, 'La selezione casuale non contiene duplicati');
+const nonLegacyWithFalse = questionBank.filter((q) => q.excludedFromTolcPool === false);
+check(nonLegacyWithFalse.length === 0, 'Nessun record possiede excludedFromTolcPool: false (flag omesso per i record attivi)');
 
-const mockPool = [
-  makeMockQuestion('A', 'M1'),
-  makeMockQuestion('B', 'M1'),
-  makeMockQuestion('C', 'M1'),
-  makeMockQuestion('D', 'M1')
+const expectedLegacyIds = [31, 69, 76, 85, ...Array.from({ length: 30 }, (_, i) => 258 + i), 315];
+const allExpectedLegacyFlagged = expectedLegacyIds.every((id) => (
+  questionBank.find((q) => q.id === id)?.excludedFromTolcPool === true
+));
+check(allExpectedLegacyFlagged, 'Tutti i 35 ID legacy previsti (4 duplicati, 30 inglesi, ID 315) sono contrassegnati');
+
+// ─── 4. TEST DEDICATO ID 315 (ESCLUSIONE E RECUPERABILITÀ) ───
+section('4. Test Dedicato ID 315 (Esclusione da Estrazioni e Piena Recuperabilità)');
+const activeQuestionsFromService = await getQuestions();
+const id315InActive = activeQuestionsFromService.some((q) => q.id === 315);
+check(!id315InActive, 'ID 315 è ESCLUSO da getQuestions()');
+
+// Verifica non estraibilità nelle 3 modalità con count sufficiente a coprire l'intero pool di Comprensione verbale
+const modesToTest = [
+  { mode: SELECTION_MODES.RANDOM, name: 'RANDOM' },
+  { mode: SELECTION_MODES.HIGHEST_ERROR_RATE, name: 'HIGHEST_ERROR_RATE' },
+  { mode: SELECTION_MODES.LEAST_PRACTICED, name: 'LEAST_PRACTICED' }
 ];
 
+const mockStatsWith315 = {
+  315: { numeroRisposteCorrette: 0, numeroRisposteErrate: 100 },
+  '315': { numeroRisposteCorrette: 0, numeroRisposteErrate: 100 }
+};
+
+for (const { mode, name } of modesToTest) {
+  const selection = selectQuestions({
+    questions: questionBank,
+    selectedSubjects: ['Comprensione verbale'],
+    count: 100, // supera il totale di 49 quesiti attivi di Comprensione verbale
+    selectionMode: mode,
+    userStats: mockStatsWith315
+  });
+
+  check(!selection.some((q) => q.id === 315), `ID 315 non viene mai estratto in modalità ${name} su Comprensione verbale`);
+  check(selection.length === 49, `Selezione ${name} su Comprensione verbale restituisce tutti e soli i 49 quesiti attivi`);
+}
+
+const id315FromCatalog = await getQuestionById(315);
+check(Boolean(id315FromCatalog && id315FromCatalog.id === 315), 'ID 315 è pienamente recuperabile tramite getQuestionById(315)');
+check(typeof id315FromCatalog?.brano === 'string' && id315FromCatalog.brano.length > 500, 'ID 315 recuperato contiene il brano integrale');
+
+const id315Raw = getRawQuestionById(315);
+check(Boolean(id315Raw && id315Raw.id === 315), 'ID 315 è recuperabile tramite getRawQuestionById(315)');
+
+// ─── 5. POOL ATTIVO 307 QUESITI E RIPARTIZIONE PER MATERIA ───
+section('5. Pool Attivo 307 Quesiti e Ripartizione per Materia');
+check(activeQuestionsFromService.length === 307, `getQuestions() restituisce esattamente 307 quesiti attivi (trovati: ${activeQuestionsFromService.length})`);
+
+const activeSubjects = {
+  Matematica: 142,
+  Logica: 48,
+  Scienze: 68,
+  'Comprensione verbale': 49
+};
+
+const activeDistribution = {};
+activeQuestionsFromService.forEach((q) => {
+  activeDistribution[q.materia] = (activeDistribution[q.materia] || 0) + 1;
+});
+
+check(activeDistribution['Matematica'] === 142, `Matematica attiva: 142 (trovati: ${activeDistribution['Matematica']})`);
+check(activeDistribution['Logica'] === 48, `Logica attiva: 48 (trovati: ${activeDistribution['Logica']})`);
+check(activeDistribution['Scienze'] === 68, `Scienze attiva: 68 (trovati: ${activeDistribution['Scienze']})`);
+check(activeDistribution['Comprensione verbale'] === 49, `Comprensione verbale attiva: 49 (trovati: ${activeDistribution['Comprensione verbale']})`);
+
+const totalActiveSum = Object.values(activeDistribution).reduce((sum, v) => sum + v, 0);
+check(totalActiveSum === 307, `Somma per materia pool attivo = 307 (142 + 48 + 68 + 49 = ${totalActiveSum})`);
+
+const serviceMaterie = (await getMaterie()).sort();
+check(serviceMaterie.length === 4, `getMaterie() restituisce esattamente 4 materie attive (${serviceMaterie.join(', ')})`);
+
+for (const [mat, expectedCount] of Object.entries(activeSubjects)) {
+  const filtered = await getQuestionsByMaterie([mat]);
+  check(filtered.length === expectedCount, `getQuestionsByMaterie(['${mat}']) restituisce ${expectedCount} quesiti`);
+  check(filtered.every((q) => q.materia === mat), `Tutti i quesiti filtrati per '${mat}' appartengono a '${mat}'`);
+}
+
+// ─── 6. MODALITÀ DI SELEZIONE E ORDINAMENTO SU POOL ATTIVO ───
+section('6. Modalità di Selezione su Pool Attivo');
+check(SELECTION_MODE_LABELS[SELECTION_MODES.RANDOM] === 'Casuale', 'Label RANDOM = Casuale');
+check(SELECTION_MODE_LABELS[SELECTION_MODES.HIGHEST_ERROR_RATE] === 'Maggiori errori', 'Label HIGHEST_ERROR_RATE = Maggiori errori');
+check(SELECTION_MODE_LABELS[SELECTION_MODES.LEAST_PRACTICED] === 'Meno svolte', 'Label LEAST_PRACTICED = Meno svolte');
+
+// Test 6A: Casuale
+const randomSelection = selectRandomQuestions(activeQuestionsFromService, 10);
+check(randomSelection.length === 10, 'Selezione casuale: estrae 10 quesiti richiesti');
+check(new Set(randomSelection.map((q) => q.id)).size === 10, 'Selezione casuale: nessun duplicato');
+check(randomSelection.every((q) => !q.excludedFromTolcPool), 'Selezione casuale: nessun record legacy estratto');
+
+// Test 6B: Maggiori errori
+const mockPool = [
+  makeMockQuestion('A', 'Matematica'),
+  makeMockQuestion('B', 'Matematica'),
+  makeMockQuestion('C', 'Matematica'),
+  makeMockQuestion('D', 'Matematica')
+];
 const errorStats = {
-  A: { numeroRisposteCorrette: 1, numeroRisposteErrate: 4 },
-  B: { numeroRisposteCorrette: 2, numeroRisposteErrate: 2 },
-  C: { numeroRisposteCorrette: 3, numeroRisposteErrate: 0 }
+  A: { numeroRisposteCorrette: 1, numeroRisposteErrate: 4 }, // 80% errore
+  B: { numeroRisposteCorrette: 2, numeroRisposteErrate: 2 }, // 50% errore
+  C: { numeroRisposteCorrette: 3, numeroRisposteErrate: 0 }  // 0% errore
 };
-
 const highestErrors = selectHighestErrorQuestions(mockPool, 4, errorStats);
-check(highestErrors[0].id === 'A', 'Le domande con più errori vengono prioritarizzate');
-check(highestErrors.at(-1).id === 'D', 'Le domande mai svolte completano la selezione se necessario');
+check(highestErrors[0].id === 'A', 'Maggiori errori: A (80% errore) priorità 1');
+check(highestErrors[1].id === 'B', 'Maggiori errori: B (50% errore) priorità 2');
+check(highestErrors[2].id === 'C', 'Maggiori errori: C (0% errore) priorità 3');
+check(highestErrors[3].id === 'D', 'Maggiori errori: D (mai svolta) completa la selezione');
 
+// Test 6C: Meno svolte
 const leastPracticedStats = {
-  A: { numeroRisposteCorrette: 5, numeroRisposteErrate: 5 },
-  B: { numeroRisposteCorrette: 1, numeroRisposteErrate: 0 },
-  C: { numeroRisposteCorrette: 2, numeroRisposteErrate: 1 }
+  A: { numeroRisposteCorrette: 5, numeroRisposteErrate: 5 }, // 10 svolgimenti
+  B: { numeroRisposteCorrette: 1, numeroRisposteErrate: 0 }, // 1 svolgimento
+  C: { numeroRisposteCorrette: 2, numeroRisposteErrate: 1 }  // 3 svolgimenti
 };
-
 const leastPracticed = selectLeastPracticedQuestions(mockPool, 4, leastPracticedStats);
-check(leastPracticed[0].id === 'D', 'Le domande mai svolte hanno priorità nella modalità meno svolte');
-check(leastPracticed[1].id === 'B', 'Tra le svolte, passa prima chi ha meno tentativi');
+check(leastPracticed[0].id === 'D', 'Meno svolte: D (0 svolgimenti) priorità 1');
+check(leastPracticed[1].id === 'B', 'Meno svolte: B (1 svolgimento) priorità 2');
+check(leastPracticed[2].id === 'C', 'Meno svolte: C (3 svolgimenti) priorità 3');
+check(leastPracticed[3].id === 'A', 'Meno svolte: A (10 svolgimenti) priorità 4');
 
-section('Filtro per materia e opzioni');
+// Test 6D: selectQuestions con filtro multi-materia
 for (const mode of Object.values(SELECTION_MODES)) {
   const selection = selectQuestions({
     questions: questionBank,
-    selectedSubjects,
-    count: 12,
+    selectedSubjects: ['Matematica', 'Logica'],
+    count: 20,
     selectionMode: mode,
     userStats: {}
   });
 
-  check(selection.length === 12, `${mode}: restituisce 12 domande`);
+  check(selection.length === 20, `selectQuestions [${mode}]: restituisce 20 quesiti`);
   check(
-    selection.every((question) => selectedSubjects.includes(question.materia)),
-    `${mode}: rispetta il filtro per materia`
+    selection.every((q) => ['Matematica', 'Logica'].includes(q.materia)),
+    `selectQuestions [${mode}]: rispetta il filtro per materia`
   );
   check(
-    selection.every((question) => Array.isArray(question.shuffledOptions) && question.shuffledOptions.length >= 4),
-    `${mode}: prepara sempre le opzioni randomizzate`
+    selection.every((q) => !q.excludedFromTolcPool),
+    `selectQuestions [${mode}]: esclude difensivamente tutti i record legacy`
+  );
+  check(
+    selection.every((q) => Array.isArray(q.shuffledOptions) && q.shuffledOptions.length >= 4),
+    `selectQuestions [${mode}]: opzioni randomizzate presenti`
   );
 }
 
-const preparedOptions = prepareShuffledOptions(questionBank[0]);
-check(preparedOptions.filter((option) => option.isCorrect).length === 1, 'Ogni domanda ha una sola risposta corretta');
-
-section('Stato risposte e punteggio');
+// ─── 7. STATO RISPOSTE, SCORING E SESSIONI ───
+section('7. Stato Risposte, Calcolo Risultati e Session IDs');
 const emptyAnswers = createEmptyAnswers(3);
-check(Object.keys(emptyAnswers).length === 3, 'Viene creato lo stato iniziale per tutte le domande');
-check(emptyAnswers[0].selectedOptionId === null, 'Le risposte iniziali partono vuote');
-check(emptyAnswers[0].isVerified === false, 'Le risposte iniziali non sono verificate');
+check(Object.keys(emptyAnswers).length === 3, 'createEmptyAnswers crea lo stato per tutte le domande');
+check(emptyAnswers[0].selectedOptionId === null, 'Risposta iniziale: selectedOptionId = null');
+check(emptyAnswers[0].isVerified === false, 'Risposta iniziale: isVerified = false');
 
 const quizQuestions = selectQuestions({
   questions: questionBank,
-  selectedSubjects: materie,
+  selectedSubjects: serviceMaterie,
   count: 4,
   selectionMode: SELECTION_MODES.RANDOM,
   userStats: {}
 });
 const quizAnswers = createEmptyAnswers(4);
-const firstCorrect = quizQuestions[0].shuffledOptions.find((option) => option.isCorrect);
-const secondWrong = quizQuestions[1].shuffledOptions.find((option) => !option.isCorrect);
+const firstCorrect = quizQuestions[0].shuffledOptions.find((opt) => opt.isCorrect);
+const secondWrong = quizQuestions[1].shuffledOptions.find((opt) => !opt.isCorrect);
 
 quizAnswers[0] = { selectedOptionId: firstCorrect.id, isVerified: true, isCorrect: true };
 quizAnswers[1] = { selectedOptionId: secondWrong.id, isVerified: true, isCorrect: false };
 
 const results = calculateResults(quizQuestions, quizAnswers);
-check(results.total === 4, 'Il riepilogo mantiene il totale delle domande');
-check(results.correct === 1, 'Il conteggio delle corrette è coerente');
-check(results.wrong === 1, 'Il conteggio delle errate è coerente');
-check(results.unanswered === 2, 'Le domande non verificate restano non risposte');
+check(results.total === 4, 'calculateResults: totale 4 domande');
+check(results.correct === 1, 'calculateResults: 1 risposta corretta');
+check(results.wrong === 1, 'calculateResults: 1 risposta errata');
+check(results.unanswered === 2, 'calculateResults: 2 non risposte');
 
-section('Session IDs');
 const generatedIds = new Set(Array.from({ length: 100 }, () => generateSessionId()));
-check(generatedIds.size === 100, 'I session ID generati sono univoci in un campione di 100');
+check(generatedIds.size === 100, 'generateSessionId produce ID univoci su 100 chiamate');
 
-console.log(`\nRisultato: ${passed} test passati, ${failed} falliti.`);
+// ─── 8. EQUAZIONE DI BILANCIO FINALE ───
+section('8. Equazione di Bilancio Finale');
+const baseCount = 317;
+const m1Count = 25;
+const physicalTotal = questionBank.length;
+const legacyCount = questionBank.filter((q) => q.excludedFromTolcPool === true).length;
+const activeTotal = activeQuestionsFromService.length;
+
+check(baseCount + m1Count === physicalTotal, `Uguaglianza fisica verificata: ${baseCount} (base) + ${m1Count} (M1) = ${physicalTotal} (fisici)`);
+check(physicalTotal - legacyCount === activeTotal, `Uguaglianza attiva verificata: ${physicalTotal} (fisici) - ${legacyCount} (legacy) = ${activeTotal} (attivi)`);
+
+console.log(`\nRisultato testQuiz.mjs: ${passed} test passati, ${failed} falliti.`);
 
 if (failed > 0) {
   process.exit(1);

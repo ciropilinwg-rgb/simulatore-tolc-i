@@ -3,7 +3,7 @@ import { QUESTION_CATALOG_SUMMARY } from '../../data/questionCatalog.js';
 import AuthLayout from './AuthLayout.jsx';
 
 export default function PublicLandingPage() {
-  const questionBankCount = QUESTION_CATALOG_SUMMARY.totalCanonicalQuestions;
+  const questionBankCount = QUESTION_CATALOG_SUMMARY.totalTolcPoolQuestions || QUESTION_CATALOG_SUMMARY.totalCanonicalQuestions;
 
   return (
     <AuthLayout

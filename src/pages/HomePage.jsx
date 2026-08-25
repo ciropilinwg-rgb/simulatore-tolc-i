@@ -28,7 +28,7 @@ export default function HomePage() {
   const [statsLoading, setStatsLoading] = useState(true);
   const [statsError, setStatsError] = useState(null);
 
-  const questionBankCount = allQuestions.length || QUESTION_CATALOG_SUMMARY.totalCanonicalQuestions;
+  const questionBankCount = allQuestions.length || QUESTION_CATALOG_SUMMARY.totalTolcPoolQuestions || QUESTION_CATALOG_SUMMARY.totalCanonicalQuestions;
   const subjectCount = availableMaterie.length || 4;
   const latestSession = history[0] || null;
   const focusQuestions = overview?.hardestQuestions?.length

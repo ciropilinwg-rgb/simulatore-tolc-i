@@ -61,6 +61,8 @@ canonicalQuestions.forEach((question) => {
 export const QUESTION_CATALOG_SUMMARY = {
   totalRawQuestions: rawQuestionBank.length,
   totalCanonicalQuestions: canonicalQuestions.length,
+  totalTolcPoolQuestions: canonicalQuestions.filter((question) => !question.excludedFromTolcPool).length,
+  totalLegacyExcluded: canonicalQuestions.filter((question) => question.excludedFromTolcPool === true).length,
   totalExactDuplicateGroups: exactDuplicateGroups.length,
   totalExactDuplicateRows: rawQuestionBank.length - canonicalQuestions.length
 };
@@ -112,6 +114,15 @@ export function getCanonicalQuestions() {
   }));
 }
 
+export function getTolcPoolQuestions() {
+  return canonicalQuestions
+    .filter((question) => !question.excludedFromTolcPool)
+    .map((question) => ({
+      ...question,
+      duplicateSourceIds: [...question.duplicateSourceIds]
+    }));
+}
+
 export function getExactDuplicateGroups() {
   return exactDuplicateGroups.map((group) => ({
     ...group,
@@ -126,6 +137,15 @@ export function getQuestionSubjectCounts() {
     accumulator[question.materia] = (accumulator[question.materia] || 0) + 1;
     return accumulator;
   }, {});
+}
+
+export function getActiveQuestionSubjectCounts() {
+  return canonicalQuestions
+    .filter((question) => !question.excludedFromTolcPool)
+    .reduce((accumulator, question) => {
+      accumulator[question.materia] = (accumulator[question.materia] || 0) + 1;
+      return accumulator;
+    }, {});
 }
 
 export function mergeQuestionStatsByCanonicalId(items = []) {

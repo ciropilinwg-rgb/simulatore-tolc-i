@@ -190,8 +190,8 @@ export function selectLeastPracticedQuestions(pool, count, userStats) {
  * @returns {Array} Domande preparate con opzioni randomizzate
  */
 export function selectQuestions({ questions, selectedSubjects, count, selectionMode, userStats }) {
-  // 1. Filtra per materie
-  let pool = questions;
+  // 1. Filtra per materie e garantisce l'esclusione di quesiti legacy
+  let pool = (questions || []).filter(q => !q.excludedFromTolcPool);
   if (selectedSubjects && selectedSubjects.length > 0) {
     pool = pool.filter(q => selectedSubjects.includes(q.materia));
   }

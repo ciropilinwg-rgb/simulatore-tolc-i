@@ -463,6 +463,7 @@ const questionBank = [
   },
   {
     "id": 31,
+    "excludedFromTolcPool": true,
     "materia": "Scienze",
     "domanda": "Viaggiando in treno, un passeggero percepisce gli urti di una ruota sui giunti delle rotaie. Se egli ne conta 240 ogni due minuti e le tratte di rotaia sono lunghe 15 metri, qual è lavelocità del treno, supposta costante?",
     "rispostaCorretta": "30 metri al secondo",
@@ -1109,6 +1110,7 @@ const questionBank = [
   },
   {
     "id": 69,
+    "excludedFromTolcPool": true,
     "materia": "Matematica",
     "domanda": "Il 30% degli studenti iscritti ad un corso universitario ha supe- rato l’esame relativo al corso al primo appello. Se, dei restan- ti studenti iscritti, il 10% supera l’esame al secondo appello, gli studenti che devono ancora superare l’esame dopo i primi due appelli saranno:",
     "rispostaCorretta": "il 63% del numero totale di studenti iscritti al corso",
@@ -1228,6 +1230,7 @@ const questionBank = [
   },
   {
     "id": 76,
+    "excludedFromTolcPool": true,
     "materia": "Logica",
     "domanda": "Gli archeobatteri sono organismi unicellulari che vivono in stagni e si riproducono per scissione (cioè ogni batterio si divide in due e forma due altri batteri uguali). Se si immette un archeobatterio in un certo stagno, esso ogni giorno si riproduce per scissione una sola volta, e dopo 30 giorni la superficie dello stagno è completamente ricoper- ta dai batteri. Quanti giorni ci vorranno affinché la superficie dello stes- so stagno sia completamente ricoperta, se inizialmente vi si immettono due archeobatteri?",
     "rispostaCorretta": "29 giorni.",
@@ -1364,6 +1367,7 @@ const questionBank = [
   },
   {
     "id": 85,
+    "excludedFromTolcPool": true,
     "materia": "Scienze",
     "domanda": "Il suono è:",
     "rispostaCorretta": "un’onda che si propaga in un mezzo elastico con una velocità che dipende dal mezzo",
@@ -4288,6 +4292,7 @@ const questionBank = [
   },
   {
     "id": 258,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "Her brothers ________ in Jakarta.",
     "rispostaCorretta": "were born",
@@ -4307,6 +4312,7 @@ const questionBank = [
   },
   {
     "id": 259,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "________ that documentary on Winston Churchill last night?",
     "rispostaCorretta": "Did you record",
@@ -4326,6 +4332,7 @@ const questionBank = [
   },
   {
     "id": 260,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "I put the beer in the fridge ________.",
     "rispostaCorretta": "four hours ago",
@@ -4345,6 +4352,7 @@ const questionBank = [
   },
   {
     "id": 261,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "We’re going to the cinema tonight. Would you like ________ us?",
     "rispostaCorretta": "to join",
@@ -4364,6 +4372,7 @@ const questionBank = [
   },
   {
     "id": 262,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "He needs a portable computer but he doesn’t have ________ money.",
     "rispostaCorretta": "much",
@@ -4383,6 +4392,7 @@ const questionBank = [
   },
   {
     "id": 263,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "The company has improved its income ________ five months.",
     "rispostaCorretta": "for",
@@ -4402,6 +4412,7 @@ const questionBank = [
   },
   {
     "id": 264,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "You are a pirate! How many songs and films ________ from the Internet this week?",
     "rispostaCorretta": "have you downloaded",
@@ -4421,6 +4432,7 @@ const questionBank = [
   },
   {
     "id": 265,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "I don’t know what my father ________ with his students. With me he’s always nice.",
     "rispostaCorretta": "is like",
@@ -4440,6 +4452,7 @@ const questionBank = [
   },
   {
     "id": 266,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "Our holidays were not as expensive ________ we thought.",
     "rispostaCorretta": "as",
@@ -4459,6 +4472,7 @@ const questionBank = [
   },
   {
     "id": 267,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "When the thieves broke in they ________.",
     "rispostaCorretta": "were sleeping",
@@ -4478,6 +4492,7 @@ const questionBank = [
   },
   {
     "id": 268,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "“Are you meeting her tonight ?” - “Yes, I ________. Why?”",
     "rispostaCorretta": "am",
@@ -4497,6 +4512,7 @@ const questionBank = [
   },
   {
     "id": 269,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "I ________ this watch since I got married.",
     "rispostaCorretta": "have had",
@@ -4516,6 +4532,7 @@ const questionBank = [
   },
   {
     "id": 270,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "She’ll be at home between ________ and five. Call her.",
     "rispostaCorretta": "half past two",
@@ -4535,6 +4552,7 @@ const questionBank = [
   },
   {
     "id": 271,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "Why don’t you want to go to the Far East? It’s ________ interesting.",
     "rispostaCorretta": "very",
@@ -4554,6 +4572,7 @@ const questionBank = [
   },
   {
     "id": 272,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "“So that’s your new boyfriend. And ________ ?” - “He works in a bank.”",
     "rispostaCorretta": "what does he do",
@@ -4573,6 +4592,7 @@ const questionBank = [
   },
   {
     "id": 273,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "Last year I ________ on holiday with two friends of mine.",
     "rispostaCorretta": "was",
@@ -4592,6 +4612,7 @@ const questionBank = [
   },
   {
     "id": 274,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "The country was against the war ________ the president started it.",
     "rispostaCorretta": "but",
@@ -4611,6 +4632,7 @@ const questionBank = [
   },
   {
     "id": 275,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "________ something special for your next anniversary?",
     "rispostaCorretta": "Are you doing",
@@ -4630,6 +4652,7 @@ const questionBank = [
   },
   {
     "id": 276,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "Don’t you think that ________ in Milan is dangerous?",
     "rispostaCorretta": "cycling",
@@ -4649,6 +4672,7 @@ const questionBank = [
   },
   {
     "id": 277,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "Jayapura is ________ place they’ve been to.",
     "rispostaCorretta": "the most distant",
@@ -4668,6 +4692,7 @@ const questionBank = [
   },
   {
     "id": 278,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "The room is ________ and nobody is allowed to enter it.",
     "rispostaCorretta": "hers",
@@ -4687,6 +4712,7 @@ const questionBank = [
   },
   {
     "id": 279,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "I met a young lady ________ cousin lives near me.",
     "rispostaCorretta": "whose",
@@ -4706,6 +4732,7 @@ const questionBank = [
   },
   {
     "id": 280,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "If the restaurant is closed where ________ ?",
     "rispostaCorretta": "shall we go",
@@ -4725,6 +4752,7 @@ const questionBank = [
   },
   {
     "id": 281,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "Have they cleaned their room ________ ?",
     "rispostaCorretta": "yet",
@@ -4744,6 +4772,7 @@ const questionBank = [
   },
   {
     "id": 282,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "What time does she have ________ lunch?",
     "rispostaCorretta": "- - - -",
@@ -4763,6 +4792,7 @@ const questionBank = [
   },
   {
     "id": 283,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "Look at ________ girls over there! They’re Mr White’s daughters.",
     "rispostaCorretta": "those",
@@ -4782,6 +4812,7 @@ const questionBank = [
   },
   {
     "id": 284,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "“________ do you go to the dentist’s?” - “Once a year.”",
     "rispostaCorretta": "How often",
@@ -4801,6 +4832,7 @@ const questionBank = [
   },
   {
     "id": 285,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "When do you usually have ________ breakfast?",
     "rispostaCorretta": "- - - -",
@@ -4820,6 +4852,7 @@ const questionBank = [
   },
   {
     "id": 286,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "This is our son James and ________ are our twin daughters, Sabrina and Jessica.",
     "rispostaCorretta": "these",
@@ -4839,6 +4872,7 @@ const questionBank = [
   },
   {
     "id": 287,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "Those ________ are very efficient! What about a promotion?",
     "rispostaCorretta": "policemen",
@@ -5402,6 +5436,7 @@ const questionBank = [
   },
   {
     "id": 315,
+    "excludedFromTolcPool": true,
     "materia": "Comprensione verbale",
     "domanda": "La comunità di linguaggio è essenziale per una nazione?",
     "rispostaCorretta": "Soltanto se unita a fattori etnici ed economici",
@@ -5558,6 +5593,431 @@ const questionBank = [
     "numeroRisposteErrate": 0,
     "sourceDocument": "NEW Test1.pdf",
     "sourceQuestionNumber": 65
+  },
+  {
+    "id": 323,
+    "materia": "Matematica",
+    "domanda": "Un abito da 120 euro viene scontato del 25% e poi del 10%. Il prezzo finale è:",
+    "rispostaCorretta": "81 euro",
+    "risposteErrate": [
+      "78 euro",
+      "84 euro",
+      "90 euro",
+      "108 euro"
+    ],
+    "spiegazione": "Dopo il primo sconto del 25%, il prezzo diventa $120 \\cdot (1 - 0{,}25) = 120 \\cdot 0{,}75 = 90$ euro. Con l’ulteriore sconto del 10% applicato a 90 euro, il prezzo finale risulta $90 \\cdot (1 - 0{,}10) = 90 \\cdot 0{,}90 = 81$ euro.",
+    "fonte": "Lotto M1 del progetto — M1-01 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 324,
+    "materia": "Matematica",
+    "domanda": "L’espressione $(2^5 \\cdot 4^{-2}) : 8^{-1}$ è uguale a:",
+    "rispostaCorretta": "$16$",
+    "risposteErrate": [
+      "$4$",
+      "$8$",
+      "$32$",
+      "$64$"
+    ],
+    "spiegazione": "Esprimiamo tutti i termini come potenze in base 2: $4^{-2} = (2^2)^{-2} = 2^{-4}$ e $8^{-1} = (2^3)^{-1} = 2^{-3}$. L’espressione diventa $(2^5 \\cdot 2^{-4}) : 2^{-3} = 2^{5 - 4} : 2^{-3} = 2^1 : 2^{-3} = 2^{1 - (-3)} = 2^4 = 16$.",
+    "fonte": "Lotto M1 del progetto — M1-02 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 325,
+    "materia": "Matematica",
+    "domanda": "Semplificando $(2a - 3b)^2 - (2a + 3b)(2a - 3b)$ si ottiene:",
+    "rispostaCorretta": "$18b^2 - 12ab$",
+    "risposteErrate": [
+      "$-12ab$",
+      "$8a^2 - 12ab$",
+      "$18b^2 + 12ab$",
+      "$-18b^2 - 12ab$"
+    ],
+    "spiegazione": "Sviluppiamo il quadrato di binomio: $(2a - 3b)^2 = 4a^2 - 12ab + 9b^2$. Sviluppiamo il prodotto somma per differenza: $(2a + 3b)(2a - 3b) = 4a^2 - 9b^2$. Sottraendo le due espressioni: $(4a^2 - 12ab + 9b^2) - (4a^2 - 9b^2) = 4a^2 - 12ab + 9b^2 - 4a^2 + 9b^2 = 18b^2 - 12ab$.",
+    "fonte": "Lotto M1 del progetto — M1-03 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 326,
+    "materia": "Matematica",
+    "domanda": "La soluzione dell’equazione $\\frac{3x - 1}{2} = 2x - 3$ è:",
+    "rispostaCorretta": "$x = 5$",
+    "risposteErrate": [
+      "$x = -5$",
+      "$x = 7$",
+      "$x = \\frac{7}{4}$",
+      "$x = \\frac{5}{7}$"
+    ],
+    "spiegazione": "Moltiplichiamo ambo i membri per 2: $3x - 1 = 2(2x - 3) \\implies 3x - 1 = 4x - 6 \\implies 4x - 3x = 6 - 1 \\implies x = 5$.",
+    "fonte": "Lotto M1 del progetto — M1-04 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 327,
+    "materia": "Matematica",
+    "domanda": "Due tubi riempiono una vasca in 6 ore. Il primo da solo impiega 10 ore. Il secondo impiega:",
+    "rispostaCorretta": "15 ore",
+    "risposteErrate": [
+      "4 ore",
+      "8 ore",
+      "12 ore",
+      "16 ore"
+    ],
+    "spiegazione": "La portata congiunta è pari a $\\frac{1}{6}$ di vasca all’ora. Il primo tubo ha portata $\\frac{1}{10}$ di vasca all’ora. La portata del secondo tubo è data dalla differenza $\\frac{1}{6} - \\frac{1}{10} = \\frac{5 - 3}{30} = \\frac{2}{30} = \\frac{1}{15}$ di vasca all’ora. Il secondo tubo impiega quindi $15$ ore da solo.",
+    "fonte": "Lotto M1 del progetto — M1-05 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 328,
+    "materia": "Matematica",
+    "domanda": "Scomponendo $x^3 - 2x^2 - 9x + 18$ in fattori irriducibili si ottiene:",
+    "rispostaCorretta": "$(x - 2)(x - 3)(x + 3)$",
+    "risposteErrate": [
+      "$(x + 2)(x - 3)(x + 3)$",
+      "$(x - 2)(x - 3)^2$",
+      "$(x - 2)(x^2 + 9)$",
+      "$(x + 2)(x - 9)(x + 1)$"
+    ],
+    "spiegazione": "Applichiamo il raccoglimento parziale a fattor comune: $x^3 - 2x^2 - 9x + 18 = x^2(x - 2) - 9(x - 2) = (x - 2)(x^2 - 9)$. Riconoscendo la differenza di quadrati $x^2 - 9 = (x - 3)(x + 3)$, la scomposizione completa è $(x - 2)(x - 3)(x + 3)$.",
+    "fonte": "Lotto M1 del progetto — M1-06 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 329,
+    "materia": "Matematica",
+    "domanda": "L’espressione $\\sqrt{75} - \\sqrt{48} + \\sqrt{12}$ equivale a:",
+    "rispostaCorretta": "$3\\sqrt{3}$",
+    "risposteErrate": [
+      "$\\sqrt{39}$",
+      "$5\\sqrt{3}$",
+      "$7\\sqrt{3}$",
+      "$\\sqrt{3}$"
+    ],
+    "spiegazione": "Scomponiamo i radicandi estraendo i fattori quadrati perfetti: $\\sqrt{75} = \\sqrt{25 \\cdot 3} = 5\\sqrt{3}$, $\\sqrt{48} = \\sqrt{16 \\cdot 3} = 4\\sqrt{3}$, $\\sqrt{12} = \\sqrt{4 \\cdot 3} = 2\\sqrt{3}$. Quindi: $5\\sqrt{3} - 4\\sqrt{3} + 2\\sqrt{3} = (5 - 4 + 2)\\sqrt{3} = 3\\sqrt{3}$.",
+    "fonte": "Lotto M1 del progetto — M1-07 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 330,
+    "materia": "Matematica",
+    "domanda": "Le radici reali dell’equazione $2x^2 - 5x = 0$ sono:",
+    "rispostaCorretta": "$x_1 = 0$ e $x_2 = \\frac{5}{2}$",
+    "risposteErrate": [
+      "$x_1 = 0$ e $x_2 = -\\frac{5}{2}$",
+      "$x_1 = 0$ e $x_2 = 5$",
+      "L’unica radice è $x = \\frac{5}{2}$",
+      "$x_1 = \\sqrt{\\frac{5}{2}}$ e $x_2 = -\\sqrt{\\frac{5}{2}}$"
+    ],
+    "spiegazione": "Si tratta di un’equazione di secondo grado spuria. Raccogliamo a fattor comune $x$: $x(2x - 5) = 0$. Per la legge di annullamento del prodotto, si ottiene $x_1 = 0$ oppure $2x - 5 = 0 \\implies x_2 = \\frac{5}{2}$.",
+    "fonte": "Lotto M1 del progetto — M1-08 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 331,
+    "materia": "Matematica",
+    "domanda": "Semplificando l’espressione $(-2a^2 b)^3 : (4a^4 b^2)$ si ottiene:",
+    "rispostaCorretta": "$-2a^2 b$",
+    "risposteErrate": [
+      "$2a^2 b$",
+      "$-2ab$",
+      "$-4a^2 b$",
+      "$-2a^2 b^2$"
+    ],
+    "spiegazione": "Calcoliamo la potenza del monomo: $(-2a^2 b)^3 = (-2)^3 (a^2)^3 b^3 = -8a^6 b^3$. Eseguiamo la divisione per $4a^4 b^2$: $\\frac{-8a^6 b^3}{4a^4 b^2} = \\frac{-8}{4} a^{6-4} b^{3-2} = -2a^2 b$.",
+    "fonte": "Lotto M1 del progetto — M1-09 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 332,
+    "materia": "Matematica",
+    "domanda": "Un bene costa 610 euro inclusa IVA al 22%. Il prezzo netto è:",
+    "rispostaCorretta": "500 euro",
+    "risposteErrate": [
+      "475 euro e 80 centesimi",
+      "488 euro",
+      "510 euro",
+      "520 euro"
+    ],
+    "spiegazione": "Indicando con $P$ il prezzo al netto dell’IVA, il prezzo lordo è dato da $P \\cdot (1 + 0{,}22) = 1{,}22 \\cdot P = 610$. Ricavando $P$: $P = \\frac{610}{1{,}22} = \\frac{61000}{122} = 500$ euro.",
+    "fonte": "Lotto M1 del progetto — M1-10 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 333,
+    "materia": "Matematica",
+    "domanda": "Il valore numerico di $10{,}5^2 - 9{,}5^2$ è:",
+    "rispostaCorretta": "$20$",
+    "risposteErrate": [
+      "$1$",
+      "$10$",
+      "$40$",
+      "$2$"
+    ],
+    "spiegazione": "Utilizzando l’identità della differenza di quadrati $a^2 - b^2 = (a - b)(a + b)$ con $a = 10{,}5$ e $b = 9{,}5$: $(10{,}5 - 9{,}5)(10{,}5 + 9{,}5) = 1 \\cdot 20 = 20$.",
+    "fonte": "Lotto M1 del progetto — M1-11 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 334,
+    "materia": "Matematica",
+    "domanda": "Semplificando $(2x^2 - 8)/(x^2 + 2x)$ per $x \\ne 0$ e $x \\ne -2$ si ottiene:",
+    "rispostaCorretta": "$\\frac{2(x - 2)}{x}$",
+    "risposteErrate": [
+      "$\\frac{2(x + 2)}{x}$",
+      "$\\frac{x - 2}{x}$",
+      "$\\frac{2(x - 2)}{x + 2}$",
+      "$2x - 4$"
+    ],
+    "spiegazione": "Scomponiamo numeratore e denominatore: al numeratore raccogliamo $2(x^2 - 4) = 2(x - 2)(x + 2)$; al denominatore raccogliamo $x(x + 2)$. Semplificando il fattore comune non nullo $(x + 2)$ per le condizioni di esistenza $x \\ne -2$ e $x \\ne 0$, otteniamo $\\frac{2(x - 2)}{x}$.",
+    "fonte": "Lotto M1 del progetto — M1-12 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 335,
+    "materia": "Matematica",
+    "domanda": "L’insieme di tutte le soluzioni reali della disequazione $4(x - 1) - 3(2x + 1) \\ge 5$ è dato da:",
+    "rispostaCorretta": "$x \\le -6$",
+    "risposteErrate": [
+      "$x \\ge -6$",
+      "$x \\le 6$",
+      "$x \\ge -3$",
+      "$x \\le -3$"
+    ],
+    "spiegazione": "Svolgiamo i calcoli: $4x - 4 - 6x - 3 \\ge 5 \\implies -2x - 7 \\ge 5 \\implies -2x \\ge 12$. Dividendo entrambi i membri per $-2$ e invertendo il verso della disuguaglianza si ottiene $x \\le -6$.",
+    "fonte": "Lotto M1 del progetto — M1-13 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 336,
+    "materia": "Matematica",
+    "domanda": "L’insieme delle soluzioni reali della disequazione fratta $\\frac{2x - 5}{3 - x} \\ge 0$ è:",
+    "rispostaCorretta": "$\\frac{5}{2} \\le x < 3$",
+    "risposteErrate": [
+      "$\\frac{5}{2} \\le x \\le 3$",
+      "$x \\le \\frac{5}{2}$ oppure $x > 3$",
+      "$x < 3$",
+      "$\\frac{5}{2} < x < 3$"
+    ],
+    "spiegazione": "Studiamo il segno di numeratore e denominatore. Numeratore: $2x - 5 \\ge 0 \\iff x \\ge \\frac{5}{2}$. Denominatore: $3 - x > 0 \\iff x < 3$ (strettamente maggiore di 0 per condizione di esistenza $x \\ne 3$). Il prodotto dei segni è positivo o nullo per $\\frac{5}{2} \\le x < 3$, con estremo $3$ escluso poiché annullerebbe il denominatore.",
+    "fonte": "Lotto M1 del progetto — M1-14 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 337,
+    "materia": "Matematica",
+    "domanda": "Per quale valore del parametro reale $k$ la somma delle radici dell’equazione $2x^2 + (k - 3)x - 8 = 0$ è uguale a $-4$?",
+    "rispostaCorretta": "$k = 11$",
+    "risposteErrate": [
+      "$k = -5$",
+      "$k = 5$",
+      "$k = -11$",
+      "$k = 8$"
+    ],
+    "spiegazione": "In un’equazione di secondo grado $ax^2 + bx + c = 0$, la somma delle radici è data dalla relazione di Viète $x_1 + x_2 = -\\frac{b}{a}$. Nel nostro caso $a = 2$ e $b = k - 3$, quindi $-\\frac{k - 3}{2} = -4 \\implies \\frac{k - 3}{2} = 4 \\implies k - 3 = 8 \\implies k = 11$. Poiché per $k = 11$ il discriminante è $\\Delta = (8)^2 - 4(2)(-8) = 64 + 64 = 128 > 0$, le radici reali esistono e la loro somma è $-4$.",
+    "fonte": "Lotto M1 del progetto — M1-15 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 338,
+    "materia": "Matematica",
+    "domanda": "In un bar, 3 caffè e 2 cornetti costano in totale 6,20 euro, mentre 2 caffè e 3 cornetti costano 6,80 euro. Quanto costa un singolo cornetto?",
+    "rispostaCorretta": "1,60 euro",
+    "risposteErrate": [
+      "1,00 euro",
+      "1,20 euro",
+      "1,40 euro",
+      "1,80 euro"
+    ],
+    "spiegazione": "Indichiamo con $c$ il prezzo del caffè e con $k$ il prezzo del cornetto. Impostiamo il sistema lineare: $\\begin{cases} 3c + 2k = 6{,}20 \\\\ 2c + 3k = 6{,}80 \\end{cases}$. Sottraendo la prima equazione dalla seconda: $(2c + 3k) - (3c + 2k) = 6{,}80 - 6{,}20 \\implies k - c = 0{,}60 \\implies c = k - 0{,}60$. Sostituendo nella prima: $3(k - 0{,}60) + 2k = 6{,}20 \\implies 3k - 1{,}80 + 2k = 6{,}20 \\implies 5k = 8{,}00 \\implies k = 1{,}60$ euro (e $c = 1{,}00$ euro).",
+    "fonte": "Lotto M1 del progetto — M1-16 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 339,
+    "materia": "Matematica",
+    "domanda": "Qual è l’insieme delle soluzioni reali della disequazione quadratica $3x^2 - 5x - 2 \\le 0$?",
+    "rispostaCorretta": "$-\\frac{1}{3} \\le x \\le 2$",
+    "risposteErrate": [
+      "$x \\le -\\frac{1}{3}$ oppure $x \\ge 2$",
+      "$-2 \\le x \\le \\frac{1}{3}$",
+      "$-\\frac{1}{3} < x < 2$",
+      "$x \\le 2$"
+    ],
+    "spiegazione": "Troviamo le radici dell’equazione associata $3x^2 - 5x - 2 = 0$: $\\Delta = (-5)^2 - 4(3)(-2) = 25 + 24 = 49 = 7^2$. Le radici sono $x = \\frac{5 \\pm 7}{6}$, da cui $x_1 = -\\frac{2}{6} = -\\frac{1}{3}$ e $x_2 = \\frac{12}{6} = 2$. Poiché il coefficiente di $x^2$ è positivo ($a = 3 > 0$) e il verso è $\\le 0$, la disequazione è verificata per i valori interni all’intervallo delle radici: $-\\frac{1}{3} \\le x \\le 2$.",
+    "fonte": "Lotto M1 del progetto — M1-17 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 340,
+    "materia": "Matematica",
+    "domanda": "Determinare tutte le soluzioni reali dell’equazione con valore assoluto $|2x - 3| = x + 1$ nell’insieme dei numeri reali:",
+    "rispostaCorretta": "Due soluzioni: $x = 4$ e $x = \\frac{2}{3}$",
+    "risposteErrate": [
+      "Una sola soluzione: $x = 4$",
+      "Una sola soluzione: $x = \\frac{2}{3}$",
+      "Due soluzioni: $x = 4$ e $x = -4$",
+      "Nessuna soluzione reale"
+    ],
+    "spiegazione": "L’equazione $|2x - 3| = x + 1$ richiede la condizione di esistenza/positività del secondo membro: $x + 1 \\ge 0 \\iff x \\ge -1$. Spezzando nei due casi: 1) $2x - 3 = x + 1 \\implies x = 4$ (accettabile, poiché $4 \\ge -1$); 2) $2x - 3 = -(x + 1) = -x - 1 \\implies 3x = 2 \\implies x = \\frac{2}{3}$ (accettabile, poiché $\\frac{2}{3} \\ge -1$). L’equazione ha quindi due soluzioni distinte: $x = 4$ e $x = \\frac{2}{3}$.",
+    "fonte": "Lotto M1 del progetto — M1-18 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 341,
+    "materia": "Matematica",
+    "domanda": "Semplificando l’espressione $\\frac{1}{x - 2} - \\frac{4}{x^2 - 4}$ nel suo insieme di definizione si ottiene:",
+    "rispostaCorretta": "$\\frac{1}{x + 2}$ con $x \\ne 2$ e $x \\ne -2$",
+    "risposteErrate": [
+      "$\\frac{1}{x + 2}$ con $x \\ne -2$",
+      "$\\frac{x - 6}{x^2 - 4}$ con $x \\ne 2$ e $x \\ne -2$",
+      "$\\frac{1}{x - 2}$ con $x \\ne 2$ e $x \\ne -2$",
+      "$\\frac{3}{x^2 - 4}$ con $x \\ne 2$ e $x \\ne -2$"
+    ],
+    "spiegazione": "Scomponiamo il denominatore $x^2 - 4 = (x - 2)(x + 2)$. Le condizioni di esistenza dell’espressione originaria impongono $x \\ne 2$ e $x \\ne -2$. Il minimo comune denominatore è $(x - 2)(x + 2)$. Eseguiamo la sottrazione: $\\frac{1}{x - 2} - \\frac{4}{(x - 2)(x + 2)} = \\frac{1 \\cdot (x + 2) - 4}{(x - 2)(x + 2)} = \\frac{x - 2}{(x - 2)(x + 2)}$. Semplificando per il fattore non nullo $(x - 2)$, otteniamo $\\frac{1}{x + 2}$, mantenendo le condizioni di esistenza $x \\ne 2$ e $x \\ne -2$.",
+    "fonte": "Lotto M1 del progetto — M1-19 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 342,
+    "materia": "Matematica",
+    "domanda": "Razionalizzando il denominatore della frazione $\\frac{4}{\\sqrt{5} + 1}$, quale espressione equivalente si ottiene?",
+    "rispostaCorretta": "$\\sqrt{5} - 1$",
+    "risposteErrate": [
+      "$\\sqrt{5} + 1$",
+      "$\\frac{\\sqrt{5} - 1}{4}$",
+      "$2(\\sqrt{5} - 1)$",
+      "$\\frac{2\\sqrt{5} - 2}{3}$"
+    ],
+    "spiegazione": "Moltiplichiamo numeratore e denominatore per il binomio coniugato $(\\sqrt{5} - 1)$: $\\frac{4}{\\sqrt{5} + 1} = \\frac{4(\\sqrt{5} - 1)}{(\\sqrt{5} + 1)(\\sqrt{5} - 1)} = \\frac{4(\\sqrt{5} - 1)}{(\\sqrt{5})^2 - 1^2} = \\frac{4(\\sqrt{5} - 1)}{5 - 1} = \\frac{4(\\sqrt{5} - 1)}{4} = \\sqrt{5} - 1$.",
+    "fonte": "Lotto M1 del progetto — M1-20 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 343,
+    "materia": "Matematica",
+    "domanda": "Mescolando 200 grammi di una soluzione acquosa con concentrazione del 10% in massa di sale con 300 grammi di una soluzione al 20% in massa di sale, qual è la concentrazione percentuale in massa della miscela risultante?",
+    "rispostaCorretta": "$16\\%$",
+    "risposteErrate": [
+      "$15\\%$",
+      "$14\\%$",
+      "$12\\%$",
+      "$18\\%$"
+    ],
+    "spiegazione": "Calcoliamo la massa totale di sale disciolto: nella prima soluzione ci sono $200 \\cdot 0{,}10 = 20$ g di sale; nella seconda ci sono $300 \\cdot 0{,}20 = 60$ g di sale. La massa totale della miscela è $200 + 300 = 500$ g e il sale totale è $20 + 60 = 80$ g. La concentrazione percentuale in massa è data da $\\frac{80}{500} = \\frac{16}{100} = 16\\%$.",
+    "fonte": "Lotto M1 del progetto — M1-21 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 344,
+    "materia": "Matematica",
+    "domanda": "In una biblioteca scolastica ci sono in totale 280 libri tra narrativa e saggistica. Se i libri di narrativa superano di 40 unità il triplo dei libri di saggistica, quanti sono i libri di narrativa?",
+    "rispostaCorretta": "220",
+    "risposteErrate": [
+      "60",
+      "180",
+      "200",
+      "240"
+    ],
+    "spiegazione": "Indichiamo con $N$ il numero di libri di narrativa e con $S$ il numero di libri di saggistica. Impostiamo il sistema lineare: $\\begin{cases} N + S = 280 \\\\ N = 3S + 40 \\end{cases}$. Sostituendo la seconda equazione nella prima: $(3S + 40) + S = 280 \\implies 4S + 40 = 280 \\implies 4S = 240 \\implies S = 60$. Ricaviamo quindi il numero di libri di narrativa: $N = 280 - 60 = 220$ (oppure $N = 3(60) + 40 = 180 + 40 = 220$).",
+    "fonte": "Lotto M1 del progetto — M1-22 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 345,
+    "materia": "Matematica",
+    "domanda": "Qual è il numero complessivo di soluzioni reali distinte dell’equazione biquadratica $x^4 - 10x^2 + 9 = 0$?",
+    "rispostaCorretta": "4 soluzioni",
+    "risposteErrate": [
+      "2 soluzioni",
+      "3 soluzioni",
+      "1 soluzione",
+      "Nessuna soluzione reale"
+    ],
+    "spiegazione": "Poniamo $t = x^2$ con il vincolo $t \\ge 0$. L’equazione ausiliaria diventa $t^2 - 10t + 9 = 0$, le cui radici sono $t_1 = 1$ e $t_2 = 9$. Poiché entrambi i valori sono strettamente positivi, risostituendo $x^2 = 1 \\implies x = \\pm 1$ e $x^2 = 9 \\implies x = \\pm 3$. L’equazione ammette quindi 4 soluzioni reali distinte: $\\{-3, -1, 1, 3\\}$.",
+    "fonte": "Lotto M1 del progetto — M1-23 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 346,
+    "materia": "Matematica",
+    "domanda": "Qual è l’insieme delle soluzioni reali del sistema di disequazioni lineari $\\begin{cases} 3x - 2 > 4 \\\\ 5 - 2x \\ge -1 \\end{cases}$?",
+    "rispostaCorretta": "$2 < x \\le 3$",
+    "risposteErrate": [
+      "$x > 2$",
+      "$x \\le 3$",
+      "$2 \\le x \\le 3$",
+      "Il sistema non ammette soluzioni"
+    ],
+    "spiegazione": "Risolviamo la prima disequazione: $3x - 2 > 4 \\implies 3x > 6 \\implies x > 2$. Risolviamo la seconda disequazione: $5 - 2x \\ge -1 \\implies -2x \\ge -6 \\implies x \\le 3$. L’insieme delle soluzioni del sistema è dato dall’intersezione dei due intervalli: $x > 2$ e $x \\le 3$, ovvero $2 < x \\le 3$.",
+    "fonte": "Lotto M1 del progetto — M1-24 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
+  },
+  {
+    "id": 347,
+    "materia": "Matematica",
+    "domanda": "Qual è l’insieme di tutte le soluzioni reali della disequazione di terzo grado $x^3 - 3x^2 - 4x + 12 \\ge 0$?",
+    "rispostaCorretta": "$-2 \\le x \\le 2$ oppure $x \\ge 3$",
+    "risposteErrate": [
+      "$x \\le -2$ oppure $2 \\le x \\le 3$",
+      "$-2 \\le x \\le 3$",
+      "$x \\ge 3$",
+      "$x \\le 2$ oppure $x \\ge 3$"
+    ],
+    "spiegazione": "Scomponiamo il polinomio di terzo grado mediante raccoglimento parziale a fattor comune: $x^3 - 3x^2 - 4x + 12 = x^2(x - 3) - 4(x - 3) = (x - 3)(x^2 - 4) = (x - 3)(x - 2)(x + 2)$. La disequazione è quindi $(x + 2)(x - 2)(x - 3) \\ge 0$. Studiamo i segni dei singoli fattori: $(x + 2) \\ge 0 \\iff x \\ge -2$; $(x - 2) \\ge 0 \\iff x \\ge 2$; $(x - 3) \\ge 0 \\iff x \\ge 3$. Compilando la tabella dei segni: per $x < -2$ il prodotto è negativo; per $-2 \\le x \\le 2$ due fattori sono negativi e uno positivo, quindi il prodotto è $\\ge 0$; per $2 < x < 3$ un fattore è negativo e due positivi, quindi il prodotto è negativo; per $x \\ge 3$ tutti i tre fattori sono $\\ge 0$, quindi il prodotto è $\\ge 0$. L’insieme delle soluzioni è pertanto $[-2, 2] \\cup [3, +\\infty)$, ovvero $-2 \\le x \\le 2$ oppure $x \\ge 3$.",
+    "fonte": "Lotto M1 del progetto — M1-25 (Aritmetica e algebra)",
+    "numeroVolteProposta": 0,
+    "numeroRisposteCorrette": 0,
+    "numeroRisposteErrate": 0
   }
 ];
 

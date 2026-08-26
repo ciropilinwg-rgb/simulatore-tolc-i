@@ -9045,6 +9045,601 @@ const questionBank = [
     numeroVolteProposta: 0,
     numeroRisposteCorrette: 0,
     numeroRisposteErrate: 0
+  },
+  {
+    id: 526,
+    materia: "Scienze",
+    domanda: "Un conduttore metallico isolato possiede una carica elettrica netta negativa $Q = -3{,}2 \\times 10^{-8}\\text{ C}$. Sapendo che la carica elementare dell’elettrone è $e = 1{,}6 \\times 10^{-19}\\text{ C}$, a quanti elettroni in eccesso corrisponde tale carica?",
+    rispostaCorretta: "$2{,}0 \\times 10^{11}\\text{ elettroni}$",
+    risposteErrate: [
+      "$2{,}0 \\times 10^{-27}\\text{ elettroni}$",
+      "$1{,}0 \\times 10^{11}\\text{ elettroni}$",
+      "$4{,}0 \\times 10^{11}\\text{ elettroni}$",
+      "Nessun elettrone in eccesso, poiché la carica negativa indica una carenza netta di elettroni"
+    ],
+    spiegazione: "La carica elettrica è quantizzata secondo la relazione $|Q| = N \\cdot e$. Il numero di elettroni in eccesso è dato da: $N = \\frac{|Q|}{e} = \\frac{3{,}2 \\times 10^{-8}\\text{ C}}{1{,}6 \\times 10^{-19}\\text{ C}} = 2{,}0 \\times 10^{11}\\text{ elettroni}$.",
+    fonte: "Lotto S3 del progetto — S3-01 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 527,
+    materia: "Scienze",
+    domanda: "Due cariche elettriche puntiformi positive $q_1 = +2{,}0\\text{ }\\mu\\text{C} = 2{,}0 \\times 10^{-6}\\text{ C}$ e $q_2 = +3{,}0\\text{ }\\mu\\text{C} = 3{,}0 \\times 10^{-6}\\text{ C}$ sono poste nel vuoto a una distanza $r = 0{,}30\\text{ m}$. Assumendo la costante di Coulomb $k = 9{,}0 \\times 10^9\\text{ N}\\cdot\\text{m}^2/\\text{C}^2$, qual è il modulo della forza elettrostatica repulsiva esercitata tra le due cariche?",
+    rispostaCorretta: "$0{,}60\\text{ N}$",
+    risposteErrate: [
+      "$0{,}18\\text{ N}$",
+      "$6{,}0 \\times 10^5\\text{ N}$",
+      "$1{,}30\\text{ N}$",
+      "Modulo pari a $0{,}60\\text{ N}$, ma con forza di tipo attrattivo"
+    ],
+    spiegazione: "Per la legge di Coulomb, il modulo della forza elettrostatica tra due cariche puntiformi nel vuoto è dato da: $F = k \\cdot \\frac{q_1 \\cdot q_2}{r^2} = 9{,}0 \\times 10^9 \\cdot \\frac{2{,}0 \\times 10^{-6} \\cdot 3{,}0 \\times 10^{-6}}{(0{,}30)^2} = 9{,}0 \\times 10^9 \\cdot \\frac{6{,}0 \\times 10^{-12}}{0{,}09} = \\frac{54 \\times 10^{-3}}{0{,}09} = 0{,}60\\text{ N}$.",
+    fonte: "Lotto S3 del progetto — S3-02 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 528,
+    materia: "Scienze",
+    domanda: "Due particelle cariche stazionarie si attraggono nel vuoto con una forza elettrostatica di modulo $F$. Se la distanza reciproca tra le due cariche viene triplicata ($r' = 3r$) mantenendo invariate le cariche, quale valore assume il modulo della nuova forza elettrostatica $F'$?",
+    rispostaCorretta: "$F' = \\frac{F}{9}$",
+    risposteErrate: [
+      "$F' = \\frac{F}{3}$",
+      "$F' = 3F$",
+      "$F' = 9F$",
+      "$F' = \\frac{F}{6}$"
+    ],
+    spiegazione: "Per la legge di Coulomb, la forza elettrostatica è inversamente proporzionale al quadrato della distanza tra le cariche ($F \\propto \\frac{1}{r^2}$). Triplicando la distanza ($r' = 3r$), la forza si riduce di un fattore $3^2 = 9$, divenendo: $F' = \\frac{k q_1 q_2}{(3r)^2} = \\frac{1}{9} \\left(\\frac{k q_1 q_2}{r^2}\\right) = \\frac{F}{9}$.",
+    fonte: "Lotto S3 del progetto — S3-03 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 529,
+    materia: "Scienze",
+    domanda: "Nel vuoto, una carica puntiforme positiva $Q = +4{,}0 \\times 10^{-8}\\text{ C}$ genera un campo elettrostatico radiale. Assumendo la costante $k = 9{,}0 \\times 10^9\\text{ N}\\cdot\\text{m}^2/\\text{C}^2$, qual è l’intensità del campo elettrico $E$ a una distanza $r = 2{,}0\\text{ m}$ dalla carica?",
+    rispostaCorretta: "$90\\text{ N/C}$",
+    risposteErrate: [
+      "$22{,}5\\text{ N/C}$",
+      "$180\\text{ N/C}$",
+      "$45\\text{ N/C}$",
+      "Il campo elettrico è nullo ($E = 0\\text{ N/C}$) all’esterno di una carica isolata stazionaria"
+    ],
+    spiegazione: "Il modulo del campo elettrico generato da una carica puntiforme nel vuoto è dato da: $E = k \\cdot \\frac{|Q|}{r^2} = 9{,}0 \\times 10^9\\text{ N}\\cdot\\text{m}^2/\\text{C}^2 \\cdot \\frac{4{,}0 \\times 10^{-8}\\text{ C}}{(2{,}0\\text{ m})^2} = \\frac{360}{4} = 90\\text{ N/C}$ (pari a $90\\text{ V/m}$).",
+    fonte: "Lotto S3 del progetto — S3-04 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 530,
+    materia: "Scienze",
+    domanda: "Una particella con carica negativa $q = -5{,}0\\text{ }\\mu\\text{C} = -5{,}0 \\times 10^{-6}\\text{ C}$ è immersa in una regione di spazio in cui è presente un campo elettrico uniforme di modulo $E = 4{,}0 \\times 10^3\\text{ N/C}$ diretto orizzontalmente verso destra. Quali sono il modulo e il verso della forza elettrica agente sulla particella?",
+    rispostaCorretta: "Modulo pari a $0{,}020\\text{ N}$, diretta orizzontalmente verso sinistra",
+    risposteErrate: [
+      "Modulo pari a $0{,}020\\text{ N}$, diretta orizzontalmente verso destra",
+      "Modulo pari a $0{,}020\\text{ N}$, diretta verticalmente verso l’alto",
+      "Modulo pari a $8{,}0 \\times 10^8\\text{ N}$, diretta orizzontalmente verso sinistra",
+      "La forza elettrica è nulla ($F = 0\\text{ N}$), poiché una carica stazionaria non interagisce con un campo elettrostatico"
+    ],
+    spiegazione: "La forza elettrica agente su una carica immersa in un campo $\\vec{E}$ è data da $\\vec{F} = q \\vec{E}$. Il modulo è $F = |q| \\cdot E = 5{,}0 \\times 10^{-6}\\text{ C} \\cdot 4{,}0 \\times 10^3\\text{ N/C} = 2{,}0 \\times 10^{-2}\\text{ N} = 0{,}020\\text{ N}$. Essendo la carica $q$ negativa, il vettore forza $\\vec{F}$ ha verso opposto rispetto a quello del campo elettrico, quindi è diretta verso sinistra.",
+    fonte: "Lotto S3 del progetto — S3-05 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 531,
+    materia: "Scienze",
+    domanda: "In una regione sede di un campo elettrostatico conservativo, una carica puntiforme positiva $q = +3{,}0\\text{ mC} = 3{,}0 \\times 10^{-3}\\text{ C}$ si sposta spontaneamente da un punto $A$ a un punto $B$. Sapendo che la differenza di potenziale tra i due punti è $V_A - V_B = 120\\text{ V}$, qual è il lavoro meccanico $L$ compiuto dalle forze del campo elettrico durante lo spostamento?",
+    rispostaCorretta: "$0{,}36\\text{ J}$",
+    risposteErrate: [
+      "$360\\text{ J}$",
+      "$40\\text{ J}$",
+      "$0{,}18\\text{ J}$",
+      "$L = 0\\text{ J}$, poiché le forze di un campo elettrostatico conservativo non compiono mai lavoro"
+    ],
+    spiegazione: "Il lavoro compiuto dalle forze del campo elettrostatico per spostare una carica $q$ da un punto $A$ a un punto $B$ è legato alla differenza di potenziale dalla relazione: $L = q \\cdot (V_A - V_B) = 3{,}0 \\times 10^{-3}\\text{ C} \\cdot 120\\text{ V} = 0{,}36\\text{ J}$.",
+    fonte: "Lotto S3 del progetto — S3-06 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 532,
+    materia: "Scienze",
+    domanda: "Un condensatore piano di capacità $C = 50\\text{ }\\mu\\text{F} = 50 \\times 10^{-6}\\text{ F}$ viene collegato ai morsetti di una batteria che fornisce una differenza di potenziale costante $\\Delta V = 12\\text{ V}$. Qual è il valore della carica elettrica $Q$ accumulata su ciascuna delle sue armature all’equilibrio?",
+    rispostaCorretta: "$0{,}60\\text{ mC}$",
+    risposteErrate: [
+      "$600\\text{ C}$",
+      "$4{,}17\\text{ mC}$",
+      "$0{,}24\\text{ mC}$",
+      "La carica netta accumulata sulle armature è nulla ($Q = 0\\text{ C}$), pertanto il condensatore non immagazzina carica"
+    ],
+    spiegazione: "Dalla definizione fondamentale di capacità elettrica $C = \\frac{Q}{\\Delta V}$, la carica accumulata sulle armature è: $Q = C \\cdot \\Delta V = 50 \\times 10^{-6}\\text{ F} \\cdot 12\\text{ V} = 600 \\times 10^{-6}\\text{ C} = 6{,}0 \\times 10^{-4}\\text{ C} = 0{,}60\\text{ mC}$.",
+    fonte: "Lotto S3 del progetto — S3-07 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 533,
+    materia: "Scienze",
+    domanda: "Un condensatore di capacità $C = 20\\text{ }\\mu\\text{F} = 20 \\times 10^{-6}\\text{ F}$ è carico con una differenza di potenziale tra le armature pari a $\\Delta V = 100\\text{ V}$. Qual è l’energia potenziale elettrostatica $U_e$ immagazzinata all’interno del condensatore?",
+    rispostaCorretta: "$0{,}10\\text{ J}$",
+    risposteErrate: [
+      "$0{,}20\\text{ J}$",
+      "$100\\text{ kJ}$",
+      "$2{,}0\\text{ mJ}$",
+      "$U_e = 0\\text{ J}$, poiché l’energia è immagazzinata solo sotto forma di campo magnetico"
+    ],
+    spiegazione: "L’energia potenziale elettrostatica immagazzinata in un condensatore di capacità $C$ carico alla tensione $\\Delta V$ è data da: $U_e = \\frac{1}{2} C (\\Delta V)^2 = \\frac{1}{2} \\cdot 20 \\times 10^{-6}\\text{ F} \\cdot (100\\text{ V})^2 = 10 \\times 10^{-6} \\cdot 10\\,000 = 0{,}10\\text{ J}$.",
+    fonte: "Lotto S3 del progetto — S3-08 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 534,
+    materia: "Scienze",
+    domanda: "In un conduttore metallico scorre una corrente continua di intensità costante $I = 2{,}5\\text{ A}$ per un intervallo di tempo $\\Delta t = 2\\text{ minuti}$. Qual è la quantità complessiva di carica elettrica $Q$ che attraversa una sezione trasversale del conduttore?",
+    rispostaCorretta: "$300\\text{ C}$",
+    risposteErrate: [
+      "$5{,}0\\text{ C}$",
+      "$150\\text{ C}$",
+      "$48\\text{ C}$",
+      "$1{,}25\\text{ C}$"
+    ],
+    spiegazione: "L’intensità di corrente è il rapporto tra la carica transitata e l’intervallo di tempo ($I = \\frac{Q}{\\Delta t}$). Convertendo il tempo in secondi: $\\Delta t = 2\\text{ min} = 120\\text{ s}$. La carica è: $Q = I \\cdot \\Delta t = 2{,}5\\text{ A} \\cdot 120\\text{ s} = 300\\text{ C}$.",
+    fonte: "Lotto S3 del progetto — S3-09 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 535,
+    materia: "Scienze",
+    domanda: "Un resistore ohmico avente resistenza $R = 40\\text{ }\\Omega$ è alimentato da un generatore che mantiene ai suoi capi una differenza di potenziale costante $\\Delta V = 24\\text{ V}$. Qual è l’intensità della corrente elettrica $I$ che attraversa il resistore?",
+    rispostaCorretta: "$0{,}60\\text{ A}$",
+    risposteErrate: [
+      "$1{,}67\\text{ A}$",
+      "$960\\text{ A}$",
+      "La corrente è nulla ($I = 0\\text{ A}$) poiché un resistore ohmico ideale non lascia transitare cariche",
+      "La corrente non può essere determinata senza conoscere la lunghezza e la sezione del conduttore"
+    ],
+    spiegazione: "Per la prima legge di Ohm, la relazione tra tensione, resistenza e corrente è $\\Delta V = R \\cdot I$. Ricavando l’intensità di corrente si ha: $I = \\frac{\\Delta V}{R} = \\frac{24\\text{ V}}{40\\text{ }\\Omega} = 0{,}60\\text{ A}$ (pari a $600\\text{ mA}$).",
+    fonte: "Lotto S3 del progetto — S3-10 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 536,
+    materia: "Scienze",
+    domanda: "Un filo metallico cilindrico di lunghezza $L$ e sezione trasversale $A$ possiede una resistenza elettrica $R = 8\\text{ }\\Omega$. Se si realizza un secondo filo dello stesso materiale avente lunghezza doppia ($2L$) e sezione quadrupla ($4A$), qual è la resistenza elettrica $R'$ del nuovo filo?",
+    rispostaCorretta: "$4\\text{ }\\Omega$",
+    risposteErrate: [
+      "$64\\text{ }\\Omega$",
+      "$16\\text{ }\\Omega$",
+      "$2\\text{ }\\Omega$",
+      "$R' = 8\\text{ }\\Omega$, poiché la resistenza dipende esclusivamente dal materiale e non dalla geometria"
+    ],
+    spiegazione: "Per la seconda legge di Ohm, la resistenza di un conduttore omogeneo è data da $R = \\rho \\frac{L}{A}$. Raddoppiando la lunghezza e quadruplicando la sezione, la nuova resistenza diventa: $R' = \\rho \\frac{2L}{4A} = \\frac{2}{4} \\left(\\rho \\frac{L}{A}\\right) = \\frac{1}{2} R = \\frac{8\\text{ }\\Omega}{2} = 4\\text{ }\\Omega$.",
+    fonte: "Lotto S3 del progetto — S3-11 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 537,
+    materia: "Scienze",
+    domanda: "Due resistori $R_1 = 20\\text{ }\\Omega$ e $R_2 = 30\\text{ }\\Omega$ sono collegati in serie a un generatore ideale di tensione continua da $\\Delta V = 50\\text{ V}$. Qual è la differenza di potenziale $V_2$ presente ai capi del resistore $R_2$?",
+    rispostaCorretta: "$30\\text{ V}$",
+    risposteErrate: [
+      "$20\\text{ V}$",
+      "$50\\text{ V}$",
+      "$25\\text{ V}$",
+      "$10\\text{ V}$"
+    ],
+    spiegazione: "In un collegamento in serie, la resistenza equivalente è $R_{\\text{eq}} = R_1 + R_2 = 20 + 30 = 50\\text{ }\\Omega$. La corrente che attraversa il circuito è $I = \\frac{\\Delta V}{R_{\\text{eq}}} = \\frac{50\\text{ V}}{50\\text{ }\\Omega} = 1{,}0\\text{ A}$. La caduta di potenziale ai capi di $R_2$ vale: $V_2 = R_2 \\cdot I = 30\\text{ }\\Omega \\cdot 1{,}0\\text{ A} = 30\\text{ V}$.",
+    fonte: "Lotto S3 del progetto — S3-12 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 538,
+    materia: "Scienze",
+    domanda: "Due resistori di resistenza $R_1 = 30\\text{ }\\Omega$ e $R_2 = 60\\text{ }\\Omega$ sono collegati in parallelo a un generatore ideale che eroga una tensione $\\Delta V = 12\\text{ V}$. Qual è l’intensità della corrente totale $I_{\\text{tot}}$ erogata dal generatore al circuito?",
+    rispostaCorretta: "$0{,}60\\text{ A}$",
+    risposteErrate: [
+      "$0{,}133\\text{ A}$",
+      "$0{,}40\\text{ A}$",
+      "$0{,}20\\text{ A}$",
+      "La corrente totale è nulla ($I_{\\text{tot}} = 0\\text{ A}$) poiché due rami in parallelo si annullano a vicenda"
+    ],
+    spiegazione: "La resistenza equivalente di due resistori in parallelo è $R_{\\text{eq}} = \\frac{R_1 \\cdot R_2}{R_1 + R_2} = \\frac{30 \\cdot 60}{30 + 60} = \\frac{1800}{90} = 20\\text{ }\\Omega$. La corrente totale erogata dal generatore è: $I_{\\text{tot}} = \\frac{\\Delta V}{R_{\\text{eq}}} = \\frac{12\\text{ V}}{20\\text{ }\\Omega} = 0{,}60\\text{ A}$ (corrispondente alla somma delle correnti nei rami: $I_1 = 0{,}40\\text{ A}$ e $I_2 = 0{,}20\\text{ A}$).",
+    fonte: "Lotto S3 del progetto — S3-13 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 539,
+    materia: "Scienze",
+    domanda: "In un circuito elettrico, un resistore $R_1 = 4\\text{ }\\Omega$ è posto in serie al parallelo formato da altri due resistori $R_2 = 6\\text{ }\\Omega$ e $R_3 = 12\\text{ }\\Omega$. Qual è la resistenza equivalente totale $R_{\\text{tot}}$ dell’intera rete di resistori?",
+    rispostaCorretta: "$8\\text{ }\\Omega$",
+    risposteErrate: [
+      "$22\\text{ }\\Omega$",
+      "$2\\text{ }\\Omega$",
+      "$10\\text{ }\\Omega$",
+      "$16\\text{ }\\Omega$"
+    ],
+    spiegazione: "Calcoliamo prima la resistenza equivalente del gruppo in parallelo ($R_2 \\parallel R_3$): $R_{23} = \\frac{R_2 \\cdot R_3}{R_2 + R_3} = \\frac{6 \\cdot 12}{6 + 12} = \\frac{72}{18} = 4\\text{ }\\Omega$. Poiché $R_1$ è in serie con questo blocco, la resistenza totale vale: $R_{\\text{tot}} = R_1 + R_{23} = 4\\text{ }\\Omega + 4\\text{ }\\Omega = 8\\text{ }\\Omega$.",
+    fonte: "Lotto S3 del progetto — S3-14 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 540,
+    materia: "Scienze",
+    domanda: "Un conduttore ohmico di resistenza $R = 50\\text{ }\\Omega$ è attraversato da una corrente continua costante di intensità $I = 2{,}0\\text{ A}$. Qual è la potenza termica $P$ dissipata dal conduttore per effetto Joule?",
+    rispostaCorretta: "$200\\text{ W}$",
+    risposteErrate: [
+      "$100\\text{ W}$",
+      "$25\\text{ W}$",
+      "$12{,}5\\text{ W}$",
+      "$P = 0\\text{ W}$, poiché in regime stazionario un conduttore ohmico non dissipa potenza termica"
+    ],
+    spiegazione: "La potenza elettrica dissipata per effetto Joule da un resistore percorso da corrente è espressa dalla formula $P = R \\cdot I^2$. Sostituendo i dati numerici: $P = 50\\text{ }\\Omega \\cdot (2{,}0\\text{ A})^2 = 50 \\cdot 4 = 200\\text{ W}$.",
+    fonte: "Lotto S3 del progetto — S3-15 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 541,
+    materia: "Scienze",
+    domanda: "Una stufa elettrica con potenza nominale costante $P = 1500\\text{ W} = 1{,}5\\text{ kW}$ rimane accesa ininterrottamente per un periodo di tempo pari a $\\Delta t = 4\\text{ ore}$. Quanta energia elettrica complessiva consuma la stufa, espressa in kilowattora ($\\text{kWh}$)?",
+    rispostaCorretta: "$6{,}0\\text{ kWh}$",
+    risposteErrate: [
+      "$6000\\text{ kWh}$",
+      "$0{,}375\\text{ kWh}$",
+      "$375\\text{ kWh}$",
+      "Il consumo in kilowattora è nullo perché il kilowattora misura esclusivamente la potenza istantanea e non l’energia"
+    ],
+    spiegazione: "L’energia elettrica consumata è data dal prodotto tra la potenza assorbita e l’intervallo di tempo di funzionamento ($E = P \\cdot \\Delta t$). Esprimendo la potenza in kilowatt e il tempo in ore si ottiene direttamente: $E = 1{,}5\\text{ kW} \\cdot 4\\text{ h} = 6{,}0\\text{ kWh}$ (pari a $21{,}6 \\times 10^6\\text{ J} = 21{,}6\\text{ MJ}$).",
+    fonte: "Lotto S3 del progetto — S3-16 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 542,
+    materia: "Scienze",
+    domanda: "Una particella carica con $q = +2{,}0\\text{ }\\mu\\text{C} = 2{,}0 \\times 10^{-6}\\text{ C}$ entra con una velocità $v = 3{,}0 \\times 10^5\\text{ m/s}$ in una regione in cui è presente un campo magnetico uniforme di modulo $B = 0{,}40\\text{ T}$. Se la velocità della particella è perpendicolare alle linee di induzione magnetica ($\\theta = 90^\\circ$), qual è il modulo della forza di Lorentz esercitata sulla particella?",
+    rispostaCorretta: "$0{,}24\\text{ N}$",
+    risposteErrate: [
+      "$2{,}4 \\times 10^5\\text{ N}$",
+      "$0{,}60\\text{ N}$",
+      "$1{,}5\\text{ N}$",
+      "$F = 0\\text{ N}$, poiché una carica in moto perpendicolare a un campo magnetico non subisce alcuna forza"
+    ],
+    spiegazione: "Il modulo della forza di Lorentz su una carica in moto in un campo magnetico è $F = |q| \\cdot v \\cdot B \\cdot \\sin(\\theta)$. Essendo il moto perpendicolare al campo ($\\sin(90^\\circ) = 1$): $F = 2{,}0 \\times 10^{-6}\\text{ C} \\cdot 3{,}0 \\times 10^5\\text{ m/s} \\cdot 0{,}40\\text{ T} = 0{,}60 \\cdot 0{,}40 = 0{,}24\\text{ N}$.",
+    fonte: "Lotto S3 del progetto — S3-17 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 543,
+    materia: "Scienze",
+    domanda: "Un filo conduttore rettilineo di lunghezza $L = 0{,}50\\text{ m}$ percorso da una corrente continua $I = 4{,}0\\text{ A}$ è immerso ortogonalmente in un campo magnetico uniforme $B = 0{,}20\\text{ T}$. Qual è il modulo della forza magnetica agente sul tratto di filo?",
+    rispostaCorretta: "$0{,}40\\text{ N}$",
+    risposteErrate: [
+      "$2{,}0\\text{ N}$",
+      "$10\\text{ N}$",
+      "$1{,}6\\text{ N}$",
+      "$F = 0\\text{ N}$, poiché un filo conduttore rettilineo immerso ortogonalmente in un campo magnetico non è soggetto ad alcuna forza meccanica"
+    ],
+    spiegazione: "Per la seconda legge di Laplace, la forza magnetica su un conduttore rettilineo percorso da corrente è $F = I \\cdot L \\cdot B \\cdot \\sin(\\theta)$. Essendo il conduttore ortogonale al campo ($\\theta = 90^\\circ$): $F = 4{,}0\\text{ A} \\cdot 0{,}50\\text{ m} \\cdot 0{,}20\\text{ T} = 0{,}40\\text{ N}$.",
+    fonte: "Lotto S3 del progetto — S3-18 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 544,
+    materia: "Scienze",
+    domanda: "Una particella carica positiva viene iniettata con velocità $\\vec{v}$ in una regione sede di un campo magnetico uniforme $\\vec{B}$, muovendosi perpendicolarmente alle linee di campo. Quale tra le seguenti affermazioni descrive correttamente l’azione della forza di Lorentz sull’energia cinetica e sulla velocità della particella?",
+    rispostaCorretta: "La forza magnetica compie lavoro nullo ($L = 0$), pertanto l’energia cinetica e il modulo della velocità rimangono rigorosamente costanti",
+    risposteErrate: [
+      "La forza magnetica compie lavoro positivo accelerando continuamente la particella in modulo",
+      "L’energia cinetica aumenta proporzionalmente all’intensità del campo magnetico $\\vec{B}$",
+      "La velocità vettoriale rimane costante sia in modulo sia in direzione",
+      "La forza magnetica compie lavoro negativo arrestando gradualmente il moto della particella"
+    ],
+    spiegazione: "Poiché la forza di Lorentz $\\vec{F} = q \\vec{v} \\times \\vec{B}$ è in ogni istante ortogonale al vettore velocità istantanea $\\vec{v}$ (e quindi allo spostamento infinitesimo), la potenza istantanea $P = \\vec{F} \\cdot \\vec{v} = 0$ e il lavoro compiuto è nullo. Di conseguenza, per il teorema dell’energia cinetica, il modulo della velocità (e l’energia cinetica) rimane costante, mentre varia unicamente la direzione del moto (traiettoria circolare uniforme).",
+    fonte: "Lotto S3 del progetto — S3-19 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 545,
+    materia: "Scienze",
+    domanda: "Per un filo conduttore rettilineo indefinito percorso da una corrente continua costante $I$, come varia l’intensità del campo magnetico $B$ al variare della distanza radiale $r$ dal filo?",
+    rispostaCorretta: "L’intensità del campo magnetico è inversamente proporzionale alla distanza $r$ ($B \\propto \\frac{1}{r}$)",
+    risposteErrate: [
+      "L’intensità del campo magnetico è inversamente proporzionale al quadrato della distanza ($B \\propto \\frac{1}{r^2}$)",
+      "L’intensità del campo magnetico è direttamente proporzionale alla distanza $r$ ($B \\propto r$)",
+      "L’intensità del campo magnetico rimane rigorosamente costante a qualsiasi distanza dal filo",
+      "L’intensità del campo magnetico è direttamente proporzionale al quadrato della distanza ($B \\propto r^2$)"
+    ],
+    spiegazione: "In base alla legge di Biot-Savart (o applicando la legge di Ampère su una linea circolare coassiale), il campo magnetico generato da un filo rettilineo indefinito è dato da $B = \\frac{\\mu_0 I}{2\\pi r}$. L’intensità è quindi inversamente proporzionale alla prima potenza della distanza $r$.",
+    fonte: "Lotto S3 del progetto — S3-20 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 546,
+    materia: "Scienze",
+    domanda: "Una spira piana quadrata di area $A = 0{,}05\\text{ m}^2$ è immersa in un campo magnetico uniforme di modulo $B = 0{,}40\\text{ T}$. Sapendo che il vettore normale alla superficie della spira è parallelo alle linee di forza del campo magnetico ($\\theta = 0^\\circ$), qual è il flusso magnetico $\\Phi(\\vec{B})$ concatenato con la spira?",
+    rispostaCorretta: "$0{,}020\\text{ Wb}$",
+    risposteErrate: [
+      "$8{,}0\\text{ Wb}$",
+      "$0{,}125\\text{ Wb}$",
+      "$0{,}40\\text{ Wb}$",
+      "$\\Phi = 0\\text{ Wb}$, poiché per $\\theta = 0^\\circ$ il flusso del campo magnetico è rigorosamente nullo"
+    ],
+    spiegazione: "Il flusso del campo magnetico uniforme attraverso una superficie piana $A$ è dato da $\\Phi(\\vec{B}) = B \\cdot A \\cdot \\cos(\\theta)$. Essendo il vettore normale parallelo al campo ($\\theta = 0^\\circ \\implies \\cos(0^\\circ) = 1$): $\\Phi(\\vec{B}) = 0{,}40\\text{ T} \\cdot 0{,}05\\text{ m}^2 = 0{,}020\\text{ Wb}$ (pari a $20\\text{ mWb}$).",
+    fonte: "Lotto S3 del progetto — S3-21 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 547,
+    materia: "Scienze",
+    domanda: "Il flusso magnetico concatenato con una singola spira conduttrice chiusa varia uniformemente nel tempo diminuendo da un valore iniziale $\\Phi_1 = 0{,}18\\text{ Wb}$ a un valore finale $\\Phi_2 = 0{,}06\\text{ Wb}$ in un intervallo $\\Delta t = 0{,}04\\text{ s}$. Qual è il valore assoluto della forza elettromotrice media indotta nella spira?",
+    rispostaCorretta: "$3{,}0\\text{ V}$",
+    risposteErrate: [
+      "$4{,}5\\text{ V}$",
+      "$1{,}5\\text{ V}$",
+      "$6{,}0\\text{ V}$",
+      "$|\\text{fem}| = 0\\text{ V}$, poiché un campo magnetico uniforme non può indurre alcuna forza elettromotrice"
+    ],
+    spiegazione: "Per la legge di induzione elettromagnetica di Faraday-Neumann, il valore assoluto della forza elettromotrice media indotta in una spira ($N = 1$) è dato da: $|\\text{fem}| = \\frac{|\\Delta \\Phi|}{\\Delta t} = \\frac{|0{,}06\\text{ Wb} - 0{,}18\\text{ Wb}|}{0{,}04\\text{ s}} = \\frac{0{,}12\\text{ Wb}}{0{,}04\\text{ s}} = 3{,}0\\text{ V}$.",
+    fonte: "Lotto S3 del progetto — S3-22 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 548,
+    materia: "Scienze",
+    domanda: "Un diapason acustico oscilla producendo un’onda sonora pura avente un periodo di oscillazione $T = 2{,}5\\text{ ms} = 2{,}5 \\times 10^{-3}\\text{ s}$. Qual è la frequenza $f$ del suono emesso dal diapason?",
+    rispostaCorretta: "$400\\text{ Hz}$",
+    risposteErrate: [
+      "$0{,}40\\text{ Hz}$",
+      "$2{,}5\\text{ Hz}$",
+      "$2500\\text{ Hz}$",
+      "La frequenza non può essere determinata senza conoscere la velocità di propagazione del suono nell’aria"
+    ],
+    spiegazione: "La frequenza è l’inverso del periodo di oscillazione: $f = \\frac{1}{T} = \\frac{1}{2{,}5 \\times 10^{-3}\\text{ s}} = \\frac{1000}{2{,}5} = 400\\text{ Hz}$.",
+    fonte: "Lotto S3 del progetto — S3-23 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 549,
+    materia: "Scienze",
+    domanda: "Un’onda trasversale periodica si propaga lungo una corda elastica tesa con una velocità $v = 18\\text{ m/s}$. Sapendo che la distanza tra due creste d’onda consecutive (lunghezza d’onda) è $\\lambda = 0{,}60\\text{ m}$, qual è la frequenza di oscillazione $f$ della sorgente?",
+    rispostaCorretta: "$30\\text{ Hz}$",
+    risposteErrate: [
+      "$10{,}8\\text{ Hz}$",
+      "$0{,}033\\text{ Hz}$",
+      "$300\\text{ Hz}$",
+      "La frequenza dipende esclusivamente dall’ampiezza dell’onda e non dalla velocità di propagazione sulla corda"
+    ],
+    spiegazione: "Dalla relazione fondamentale di propagazione delle onde periodiche $v = \\lambda \\cdot f$, ricavando la frequenza si ottiene: $f = \\frac{v}{\\lambda} = \\frac{18\\text{ m/s}}{0{,}60\\text{ m}} = 30\\text{ Hz}$.",
+    fonte: "Lotto S3 del progetto — S3-24 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 550,
+    materia: "Scienze",
+    domanda: "Due altoparlanti identici e coerenti $S_1$ e $S_2$ emettono in concordanza di fase due onde sonore sinusoidali con la stessa lunghezza d’onda $\\lambda = 0{,}80\\text{ m}$. Un microfono ricevitore è posizionato a una distanza $d_1 = 3{,}60\\text{ m}$ da $S_1$ e a una distanza $d_2 = 2{,}00\\text{ m}$ da $S_2$. Qual è la differenza di cammino $\\Delta d = d_1 - d_2$ e quale tipo di interferenza si produce nella posizione del microfono?",
+    rispostaCorretta: "$\\Delta d = 1{,}60\\text{ m}$, con interferenza costruttiva",
+    risposteErrate: [
+      "$\\Delta d = 1{,}60\\text{ m}$, con interferenza distruttiva",
+      "$\\Delta d = 5{,}60\\text{ m}$, con interferenza distruttiva",
+      "$\\Delta d = 0{,}80\\text{ m}$, con interferenza costruttiva",
+      "$\\Delta d = 2{,}80\\text{ m}$, con interferenza distruttiva"
+    ],
+    spiegazione: "La differenza di cammino tra le due sorgenti in fase è: $\\Delta d = d_1 - d_2 = 3{,}60\\text{ m} - 2{,}00\\text{ m} = 1{,}60\\text{ m}$. Poiché $\\Delta d = 1{,}60\\text{ m} = 2 \\cdot (0{,}80\\text{ m}) = 2\\lambda$ (un multiplo intero esatto della lunghezza d’onda, cioè $\\Delta d = k\\lambda$ con $k=2$), le due onde giungono al microfono perfettamente in fase, dando luogo a un’interferenza costruttiva con ampiezza sonora massima.",
+    fonte: "Lotto S3 del progetto — S3-25 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 551,
+    materia: "Scienze",
+    domanda: "In quale tipologia di onde meccaniche la direzione lungo cui oscillano le particelle del mezzo materiale coincide ed è parallela alla direzione di propagazione dell’onda nello spazio?",
+    rispostaCorretta: "Esclusivamente nelle onde longitudinali (come il suono nei fluidi)",
+    risposteErrate: [
+      "Esclusivamente nelle onde trasversali (come la luce nel vuoto)",
+      "In tutte le onde elettromagnetiche",
+      "Nelle onde su una corda tesa pizzicata",
+      "In nessun tipo di onda, poiché l’oscillazione è sempre rigorosamente perpendicolare"
+    ],
+    spiegazione: "Nelle onde longitudinali (ad esempio le onde sonore che si propagano nei fluidi come sequenze di compressioni e rarefazioni), le particelle del mezzo oscillano avanti e indietro parallelamente alla direzione di propagazione dell’onda. Nelle onde trasversali, invece, l’oscillazione avviene perpendicolarmente alla direzione di propagazione.",
+    fonte: "Lotto S3 del progetto — S3-26 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 552,
+    materia: "Scienze",
+    domanda: "Un escursionista emette un breve grido in direzione di una parete rocciosa verticale e percepisce l’eco riflessa della propria voce dopo un intervallo di tempo $\\Delta t = 0{,}80\\text{ s}$. Assumendo che la velocità del suono nell’aria sia costante e pari a $v = 340\\text{ m/s}$, a quale distanza $d$ dall’escursionista si trova la parete rocciosa?",
+    rispostaCorretta: "$136\\text{ m}$",
+    risposteErrate: [
+      "$272\\text{ m}$",
+      "$425\\text{ m}$",
+      "$544\\text{ m}$",
+      "La distanza non può essere calcolata perché l’eco dipende unicamente dalla frequenza del suono emesso"
+    ],
+    spiegazione: "Nel fenomeno dell’eco, il segnale sonoro compie un percorso di andata e ritorno percorrendo una distanza totale pari a $2d$. Pertanto: $2d = v \\cdot \\Delta t \\implies d = \\frac{v \\cdot \\Delta t}{2} = \\frac{340\\text{ m/s} \\cdot 0{,}80\\text{ s}}{2} = 340 \\cdot 0{,}40 = 136\\text{ m}$.",
+    fonte: "Lotto S3 del progetto — S3-27 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 553,
+    materia: "Scienze",
+    domanda: "Ordinando le seguenti regioni dello spettro delle onde elettromagnetiche in senso crescente di frequenza (dalla frequenza più bassa alla frequenza più elevata), quale sequenza risulta rigorosamente corretta?",
+    rispostaCorretta: "Onde radio < Microonde < Luce visibile < Raggi X < Raggi gamma",
+    risposteErrate: [
+      "Raggi gamma < Raggi X < Luce visibile < Microonde < Onde radio",
+      "Microonde < Onde radio < Luce visibile < Raggi gamma < Raggi X",
+      "Onde radio < Luce visibile < Microonde < Raggi X < Raggi gamma",
+      "Raggi X < Onde radio < Microonde < Luce visibile < Raggi gamma"
+    ],
+    spiegazione: "Nello spettro elettromagnetico, la frequenza aumenta procedendo da: onde radio ($f \\approx 10^4 - 10^9\\text{ Hz}$), microonde ($10^9 - 10^{12}\\text{ Hz}$), infrarossi, luce visibile ($4 \\times 10^{14} - 7{,}5 \\times 10^{14}\\text{ Hz}$), ultravioletti, raggi X ($10^{16} - 10^{19}\\text{ Hz}$) fino ai raggi gamma ($f > 10^{19}\\text{ Hz}$).",
+    fonte: "Lotto S3 del progetto — S3-28 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 554,
+    materia: "Scienze",
+    domanda: "Un raggio di luce incide sulla superficie piana di uno specchio formando un angolo di incidenza $\\theta_i = 35^\\circ$ rispetto alla retta normale alla superficie. Qual è l’angolo $\\alpha$ che il raggio riflesso forma rispetto al piano della superficie dello specchio?",
+    rispostaCorretta: "$55^\\circ$",
+    risposteErrate: [
+      "$35^\\circ$",
+      "$70^\\circ$",
+      "$145^\\circ$",
+      "$110^\\circ$"
+    ],
+    spiegazione: "Per la legge della riflessione, l’angolo di riflessione rispetto alla normale è identico all’angolo di incidenza: $\\theta_r = \\theta_i = 35^\\circ$. Poiché la normale forma un angolo di $90^\\circ$ con il piano dello specchio, l’angolo compreso tra il raggio riflesso e la superficie dello specchio è il complementare: $\\alpha = 90^\\circ - \\theta_r = 90^\\circ - 35^\\circ = 55^\\circ$.",
+    fonte: "Lotto S3 del progetto — S3-29 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 555,
+    materia: "Scienze",
+    domanda: "Un fascio di luce si propaga nel vuoto con velocità $c = 3{,}0 \\times 10^8\\text{ m/s}$ e penetra in un blocco di vetro trasparente avente indice di rifrazione assoluto $n = 1{,}50$. Qual è la velocità di propagazione $v$ della luce all’interno del vetro?",
+    rispostaCorretta: "$2{,}0 \\times 10^8\\text{ m/s}$",
+    risposteErrate: [
+      "$4{,}5 \\times 10^8\\text{ m/s}$",
+      "$3{,}0 \\times 10^8\\text{ m/s}$",
+      "$1{,}5 \\times 10^8\\text{ m/s}$",
+      "$5{,}0 \\times 10^{-9}\\text{ m/s}$"
+    ],
+    spiegazione: "L’indice di rifrazione assoluto di un mezzo trasparente è il rapporto tra la velocità della luce nel vuoto $c$ e quella nel mezzo $v$ ($n = \\frac{c}{v}$). Ricavando la velocità nel mezzo: $v = \\frac{c}{n} = \\frac{3{,}0 \\times 10^8\\text{ m/s}}{1{,}50} = 2{,}0 \\times 10^8\\text{ m/s}$.",
+    fonte: "Lotto S3 del progetto — S3-30 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 556,
+    materia: "Scienze",
+    domanda: "Un raggio luminoso passa dall’aria (indice di rifrazione $n_1 = 1{,}0$) a un mezzo ottico trasparente con indice $n_2 = \\sqrt{3} \\approx 1{,}73$. Se l’angolo di incidenza nell’aria rispetto alla normale è $\\theta_1 = 60^\\circ$ (sapendo che $\\sin(60^\\circ) = \\frac{\\sqrt{3}}{2}$), qual è l’angolo di rifrazione $\\theta_2$ all’interno del mezzo?",
+    rispostaCorretta: "$30^\\circ$",
+    risposteErrate: [
+      "$60^\\circ$",
+      "$90^\\circ$",
+      "$45^\\circ$",
+      "Il raggio non penetra nel mezzo perché subisce riflessione totale per qualsiasi angolo di incidenza"
+    ],
+    spiegazione: "Per la legge di Snell: $n_1 \\sin(\\theta_1) = n_2 \\sin(\\theta_2)$. Sostituendo i valori: $1{,}0 \\cdot \\sin(60^\\circ) = \\sqrt{3} \\cdot \\sin(\\theta_2) \\implies 1{,}0 \\cdot \\frac{\\sqrt{3}}{2} = \\sqrt{3} \\sin(\\theta_2) \\implies \\sin(\\theta_2) = \\frac{1}{2}$. Poiché l’angolo cercato è compreso nel primo quadrante, si ottiene: $\\theta_2 = 30^\\circ$.",
+    fonte: "Lotto S3 del progetto — S3-31 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 557,
+    materia: "Scienze",
+    domanda: "Un raggio di luce si propaga all’interno di un mezzo ottico denso avente indice di rifrazione $n_1 = 2{,}0$ e incide sulla superficie piana di separazione con l’aria ($n_2 = 1{,}0$). Qual è il valore dell’angolo limite $\\theta_L$ di incidenza oltre il quale si manifesta il fenomeno della riflessione totale interna?",
+    rispostaCorretta: "$30^\\circ$",
+    risposteErrate: [
+      "$60^\\circ$",
+      "$90^\\circ$",
+      "$45^\\circ$",
+      "L’angolo limite non esiste perché la riflessione totale si verifica solo passando dall’aria a un mezzo più denso"
+    ],
+    spiegazione: "Il fenomeno della riflessione totale può avvenire quando la luce passa da un mezzo più denso a uno meno denso ($n_1 > n_2$). L’angolo limite $\\theta_L$ corrisponde a un angolo di rifrazione di $90^\\circ$: $\\sin(\\theta_L) = \\frac{n_2}{n_1} = \\frac{1{,}0}{2{,}0} = 0{,}50$. Da cui: $\\theta_L = 30^\\circ$. Per angoli di incidenza $\\theta_i > 30^\\circ$ la luce viene interamente riflessa nel primo mezzo.",
+    fonte: "Lotto S3 del progetto — S3-32 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 558,
+    materia: "Scienze",
+    domanda: "Un oggetto reale puntiforme è posizionato a una distanza $p = 40\\text{ cm}$ davanti alla superficie riflettente di uno specchio piano verticale. Quali sono le proprietà dell’immagine ottica formata dallo specchio e la sua posizione?",
+    rispostaCorretta: "L’immagine è virtuale, diritta, delle stesse dimensioni dell’oggetto e posizionata simmetricamente a $40\\text{ cm}$ dietro la superficie dello specchio",
+    risposteErrate: [
+      "L’immagine è reale, capovolta, ingrandita del doppio e posizionata a $80\\text{ cm}$ davanti allo specchio",
+      "L’immagine è reale, diritta, rimpicciolita e posizionata a $20\\text{ cm}$ davanti allo specchio",
+      "L’immagine è virtuale, capovolta e posizionata a $40\\text{ cm}$ dietro lo specchio",
+      "L’immagine è virtuale, diritta, rimpicciolita della metà e posizionata a $20\\text{ cm}$ dietro lo specchio"
+    ],
+    spiegazione: "Uno specchio piano forma sempre un’immagine virtuale (data dal prolungamento dei raggi riflessi), diritta, con ingrandimento unitario ($G = 1$, stesse dimensioni) e collocata simmetricamente dietro il piano riflettente alla medesima distanza dell’oggetto reale ($q = p = 40\\text{ cm}$).",
+    fonte: "Lotto S3 del progetto — S3-33 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 559,
+    materia: "Scienze",
+    domanda: "Una lente sottile convergente ha una distanza focale positiva $f = 25\\text{ cm} = 0{,}25\\text{ m}$. Qual è il potere diottrico (convergenza $D$) di tale lente espresso in diottrie ($\\text{m}^{-1}$)?",
+    rispostaCorretta: "$+4{,}0\\text{ diottrie}$",
+    risposteErrate: [
+      "$+0{,}040\\text{ diottrie}$",
+      "$-4{,}0\\text{ diottrie}$",
+      "$+0{,}25\\text{ diottrie}$",
+      "$+25\\text{ diottrie}$"
+    ],
+    spiegazione: "La convergenza o potere diottrico di una lente è definita come il reciproco della distanza focale espressa in metri: $D = \\frac{1}{f} = \\frac{1}{0{,}25\\text{ m}} = +4{,}0\\text{ diottrie}$ ($\\text{m}^{-1}$). Il segno positivo indica che la lente è convergente.",
+    fonte: "Lotto S3 del progetto — S3-34 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 560,
+    materia: "Scienze",
+    domanda: "Un oggetto reale è posto a una distanza $p = 30\\text{ cm}$ davanti a una lente sottile convergente avente distanza focale $f = 20\\text{ cm}$. A quale distanza $q$ dalla lente si forma l’immagine e qual è il modulo dell’ingrandimento lineare $|G|$ dell’immagine prodotta?",
+    rispostaCorretta: "$q = +60\\text{ cm}$ con ingrandimento $|G| = 2{,}0$",
+    risposteErrate: [
+      "$q = +12\\text{ cm}$ con ingrandimento $|G| = 0{,}40$",
+      "$q = +60\\text{ cm}$ con ingrandimento $|G| = 0{,}50$",
+      "$q = +50\\text{ cm}$ con ingrandimento $|G| = 1{,}67$",
+      "$q = +30\\text{ cm}$ con ingrandimento $|G| = 1{,}0$"
+    ],
+    spiegazione: "Applicando l’equazione dei punti coniugati per le lenti sottili: $\\frac{1}{p} + \\frac{1}{q} = \\frac{1}{f} \\implies \\frac{1}{q} = \\frac{1}{f} - \\frac{1}{p} = \\frac{1}{20\\text{ cm}} - \\frac{1}{30\\text{ cm}} = \\frac{3 - 2}{60\\text{ cm}} = \\frac{1}{60\\text{ cm}} \\implies q = +60\\text{ cm}$ (immagine reale). Il modulo dell’ingrandimento lineare è dato dal rapporto tra la distanza dell’immagine e quella dell’oggetto: $|G| = \\frac{q}{p} = \\frac{60\\text{ cm}}{30\\text{ cm}} = 2{,}0$ (l’immagine risulta reale, capovolta e ingrandita di un fattore 2).",
+    fonte: "Lotto S3 del progetto — S3-35 (Elettromagnetismo, onde e ottica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
   }
 ];
 

@@ -7293,6 +7293,567 @@ const questionBank = [
     numeroVolteProposta: 0,
     numeroRisposteCorrette: 0,
     numeroRisposteErrate: 0
+  },
+  {
+    id: 423,
+    materia: "Matematica",
+    domanda: "Per ogni numero reale positivo $a$, a quale delle seguenti espressioni equivale $\\sqrt[3]{a^2 \\cdot \\sqrt{a}}$?",
+    rispostaCorretta: "$a^{\\frac{5}{6}}$",
+    risposteErrate: [
+      "$a^{\\frac{2}{3}}$",
+      "$a^{\\frac{7}{6}}$",
+      "$a^{\\frac{1}{3}}$",
+      "$a^{\\frac{5}{3}}$"
+    ],
+    spiegazione: "Esprimiamo i radicali come potenze a esponente frazionario: $\\sqrt{a} = a^{\\frac{1}{2}}$. All’interno della radice cubica si ha: $a^2 \\cdot a^{\\frac{1}{2}} = a^{2 + \\frac{1}{2}} = a^{\\frac{5}{2}}$. Applicando la radice cubica esterna: $\\sqrt[3]{a^{\\frac{5}{2}}} = (a^{\\frac{5}{2}})^{\\frac{1}{3}} = a^{\\frac{5}{2} \\cdot \\frac{1}{3}} = a^{\\frac{5}{6}}$.",
+    fonte: "Lotto M5 del progetto — M5-01 (Potenze ed esponenziali)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 424,
+    materia: "Matematica",
+    domanda: "Qual è l’ordinamento corretto, dal più piccolo al più grande, dei tre numeri $A = 2^{30}$, $B = 3^{20}$ e $C = 5^{10}$?",
+    rispostaCorretta: "$C < A < B$",
+    risposteErrate: [
+      "$A < B < C$",
+      "$C < B < A$",
+      "$B < A < C$",
+      "$A < C < B$"
+    ],
+    spiegazione: "Riconduciamo le tre potenze al medesimo esponente $10$: $A = 2^{30} = (2^3)^{10} = 8^{10}$, $B = 3^{20} = (3^2)^{10} = 9^{10}$, $C = 5^{10} = 5^{10}$. Poiché la funzione esponenziale con base maggiore di $1$ è strettamente crescente e $5 < 8 < 9$, si ha: $5^{10} < 8^{10} < 9^{10}$, ovvero $C < A < B$.",
+    fonte: "Lotto M5 del progetto — M5-02 (Potenze ed esponenziali)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 425,
+    materia: "Matematica",
+    domanda: "Qual è la soluzione dell’equazione esponenziale $27^{x - 1} = 9^{x + 2}$?",
+    rispostaCorretta: "$x = 7$",
+    risposteErrate: [
+      "$x = 5$",
+      "$x = 3$",
+      "$x = -1$",
+      "$x = \\frac{7}{5}$"
+    ],
+    spiegazione: "Esprimiamo entrambe le basi come potenze di $3$: $27 = 3^3$ e $9 = 3^2$. L’equazione diventa: $(3^3)^{x-1} = (3^2)^{x+2} \\implies 3^{3(x-1)} = 3^{2(x+2)}$. Uguagliando gli esponenti: $3x - 3 = 2x + 4 \\implies 3x - 2x = 4 + 3 \\implies x = 7$.",
+    fonte: "Lotto M5 del progetto — M5-03 (Potenze ed esponenziali)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 426,
+    materia: "Matematica",
+    domanda: "Una popolazione di batteri raddoppia ogni $3$ ore. Se la popolazione iniziale è di $500$ individui, quanti batteri saranno presenti dopo $12$ ore?",
+    rispostaCorretta: "$8000$",
+    risposteErrate: [
+      "$2000$",
+      "$4000$",
+      "$6000$",
+      "$16000$"
+    ],
+    spiegazione: "In $12$ ore si compiono $\\frac{12}{3} = 4$ cicli di raddoppio. La popolazione finale è data dalla legge di crescita esponenziale: $N = N_0 \\cdot 2^k = 500 \\cdot 2^4 = 500 \\cdot 16 = 8000$ batteri.",
+    fonte: "Lotto M5 del progetto — M5-04 (Potenze ed esponenziali)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 427,
+    materia: "Matematica",
+    domanda: "Qual è l’insieme delle soluzioni reali dell’equazione esponenziale $4^x - 5 \\cdot 2^x + 4 = 0$?",
+    rispostaCorretta: "$\\{0, 2\\}$",
+    risposteErrate: [
+      "$\\{1, 4\\}$",
+      "$\\{1, 2\\}$",
+      "$\\{0, 4\\}$",
+      "$\\{-2, 0\\}$"
+    ],
+    spiegazione: "Poiché $4^x = (2^x)^2$, poniamo l’incognita ausiliaria $t = 2^x$ con la condizione $t > 0$. L’equazione diventa: $t^2 - 5t + 4 = 0 \\implies (t - 1)(t - 4) = 0$. Si ottengono le soluzioni $t_1 = 1$ e $t_2 = 4$. Risostituendo $t = 2^x$: da $2^x = 1$ si ottiene $x = 0$; da $2^x = 4 = 2^2$ si ottiene $x = 2$. L’insieme delle soluzioni è $\\{0, 2\\}$.",
+    fonte: "Lotto M5 del progetto — M5-05 (Potenze ed esponenziali)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 428,
+    materia: "Matematica",
+    domanda: "Qual è l’insieme delle soluzioni della disequazione esponenziale $\\left(\\frac{1}{2}\\right)^{3x - 1} > \\left(\\frac{1}{4}\\right)^{x + 2}$?",
+    rispostaCorretta: "$x < 5$",
+    risposteErrate: [
+      "$x > 5$",
+      "$x < -5$",
+      "$x > 3$",
+      "$x < \\frac{5}{2}$"
+    ],
+    spiegazione: "Esprimiamo il secondo membro in base $\\frac{1}{2}$: $\\frac{1}{4} = \\left(\\frac{1}{2}\\right)^2$, quindi $\\left(\\frac{1}{4}\\right)^{x+2} = \\left(\\frac{1}{2}\\right)^{2(x+2)} = \\left(\\frac{1}{2}\\right)^{2x+4}$. La disequazione diventa $\\left(\\frac{1}{2}\\right)^{3x-1} > \\left(\\frac{1}{2}\\right)^{2x+4}$. Poiché la base $0 < \\frac{1}{2} < 1$, la funzione esponenziale è strettamente decrescente e il verso della disuguaglianza si inverte nel confronto degli esponenti: $3x - 1 < 2x + 4 \\implies 3x - 2x < 4 + 1 \\implies x < 5$.",
+    fonte: "Lotto M5 del progetto — M5-06 (Potenze ed esponenziali)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 429,
+    materia: "Matematica",
+    domanda: "Per ogni intero $n$, a quale valore numerico costante equivale la frazione $\\frac{2^{n+3} + 2^{n+1}}{2^{n+2} - 2^n}$?",
+    rispostaCorretta: "$\\frac{10}{3}$",
+    risposteErrate: [
+      "$\\frac{5}{3}$",
+      "$2$",
+      "$\\frac{4}{3}$",
+      "$\\frac{8}{3}$"
+    ],
+    spiegazione: "Raccogliamo a fattor comune la potenza $2^n$ sia a numeratore che a denominatore: $\\frac{2^{n+3} + 2^{n+1}}{2^{n+2} - 2^n} = \\frac{2^n \\cdot (2^3 + 2^1)}{2^n \\cdot (2^2 - 2^0)} = \\frac{2^n \\cdot (8 + 2)}{2^n \\cdot (4 - 1)} = \\frac{10}{3}$.",
+    fonte: "Lotto M5 del progetto — M5-07 (Potenze ed esponenziali)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 430,
+    materia: "Matematica",
+    domanda: "Qual è la soluzione reale dell’equazione esponenziale $3^{x+1} + 3^{x-1} = 90$?",
+    rispostaCorretta: "$x = 3$",
+    risposteErrate: [
+      "$x = 2$",
+      "$x = 4$",
+      "$x = 1$",
+      "$x = \\frac{9}{2}$"
+    ],
+    spiegazione: "Scomponiamo le potenze applicando le proprietà: $3^{x+1} = 3^x \\cdot 3$ e $3^{x-1} = 3^x \\cdot \\frac{1}{3}$. Raccogliendo $3^x$: $3^x \\left(3 + \\frac{1}{3}\\right) = 90 \\implies 3^x \\left(\\frac{10}{3}\\right) = 90$. Moltiplicando ambo i membri per $\\frac{3}{10}$: $3^x = 90 \\cdot \\frac{3}{10} = 9 \\cdot 3 = 27 = 3^3 \\implies x = 3$.",
+    fonte: "Lotto M5 del progetto — M5-08 (Potenze ed esponenziali)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 431,
+    materia: "Matematica",
+    domanda: "Qual è il valore numerico dell’espressione $\\log_2(32) + \\log_3\\left(\\frac{1}{27}\\right) - \\log_5(\\sqrt{5})$?",
+    rispostaCorretta: "$\\frac{3}{2}$",
+    risposteErrate: [
+      "$\\frac{5}{2}$",
+      "$1$",
+      "$2$",
+      "$\\frac{15}{2}$"
+    ],
+    spiegazione: "Calcoliamo i singoli termini applicando la definizione di logaritmo: 1) $\\log_2(32) = \\log_2(2^5) = 5$; 2) $\\log_3\\left(\\frac{1}{27}\\right) = \\log_3(3^{-3}) = -3$; 3) $\\log_5(\\sqrt{5}) = \\log_5(5^{\\frac{1}{2}}) = \\frac{1}{2}$. Sostituendo: $5 + (-3) - \\frac{1}{2} = 2 - \\frac{1}{2} = \\frac{3}{2}$.",
+    fonte: "Lotto M5 del progetto — M5-09 (Logaritmi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 432,
+    materia: "Matematica",
+    domanda: "Posto $\\log_{10} 2 = a$ e $\\log_{10} 3 = b$, a quale espressione corrisponde $\\log_{10} 18$?",
+    rispostaCorretta: "$a + 2b$",
+    risposteErrate: [
+      "$2a + b$",
+      "$a + b^2$",
+      "$2ab$",
+      "$a^2 + b$"
+    ],
+    spiegazione: "Scomponiamo l’argomento in fattori primi: $18 = 2 \\cdot 3^2$. Applicando i teoremi sul logaritmo del prodotto e della potenza: $\\log_{10} 18 = \\log_{10}(2 \\cdot 3^2) = \\log_{10} 2 + \\log_{10}(3^2) = \\log_{10} 2 + 2\\log_{10} 3 = a + 2b$.",
+    fonte: "Lotto M5 del progetto — M5-10 (Logaritmi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 433,
+    materia: "Matematica",
+    domanda: "Qual è il dominio naturale (o campo di esistenza) della funzione reale $f(x) = \\log_2\\left(\\frac{x - 3}{5 - x}\\right)$?",
+    rispostaCorretta: "$3 < x < 5$",
+    risposteErrate: [
+      "$x < 3 \\lor x > 5$",
+      "$x > 3$",
+      "$x \\ne 5$",
+      "$x \\le 3 \\lor x \\ge 5$"
+    ],
+    spiegazione: "L’argomento del logaritmo deve essere strettamente positivo: $\\frac{x - 3}{5 - x} > 0$. Studiamo il segno della frazione: Numeratore $> 0 \\iff x - 3 > 0 \\iff x > 3$; Denominatore $> 0 \\iff 5 - x > 0 \\iff x < 5$. La frazione è strettamente positiva nell’intervallo interno in cui numeratore e denominatore sono concordi (entrambi positivi): $3 < x < 5$.",
+    fonte: "Lotto M5 del progetto — M5-11 (Logaritmi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 434,
+    materia: "Matematica",
+    domanda: "Qual è la soluzione dell’equazione $\\log_4(2x + 6) = 2$?",
+    rispostaCorretta: "$x = 5$",
+    risposteErrate: [
+      "$x = 1$",
+      "$x = 8$",
+      "$x = 2$",
+      "$x = 10$"
+    ],
+    spiegazione: "Condizione di esistenza: $2x + 6 > 0 \\implies x > -3$. Applicando la definizione di logaritmo: $2x + 6 = 4^2 = 16 \\implies 2x = 16 - 6 = 10 \\implies x = 5$. Poiché $5 > -3$, la soluzione è pienamente accettabile.",
+    fonte: "Lotto M5 del progetto — M5-12 (Logaritmi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 435,
+    materia: "Matematica",
+    domanda: "Sapendo che $\\log_2 3 = k$, a quale delle seguenti espressioni equivale $\\log_3 16$?",
+    rispostaCorretta: "$\\frac{4}{k}$",
+    risposteErrate: [
+      "$\\frac{k}{4}$",
+      "$4k$",
+      "$\\frac{2}{k}$",
+      "$k^4$"
+    ],
+    spiegazione: "Applichiamo la formula del cambiamento di base passando alla base $2$: $\\log_3 16 = \\frac{\\log_2 16}{\\log_2 3}$. Poiché $16 = 2^4$, si ha $\\log_2 16 = 4$. Sostituendo $\\log_2 3 = k$, si ottiene immediatamente: $\\log_3 16 = \\frac{4}{k}$.",
+    fonte: "Lotto M5 del progetto — M5-13 (Logaritmi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 436,
+    materia: "Matematica",
+    domanda: "Qual è l’insieme delle soluzioni reali dell’equazione $\\log_2(x) + \\log_2(x - 2) = 3$?",
+    rispostaCorretta: "$\\{4\\}$",
+    risposteErrate: [
+      "$\\{-2, 4\\}$",
+      "$\\{2, 4\\}$",
+      "$\\{8\\}$",
+      "$\\{6\\}$"
+    ],
+    spiegazione: "Condizioni di esistenza: $x > 0$ e $x - 2 > 0 \\implies x > 2$. Applicando la proprietà della somma di logaritmi: $\\log_2(x(x - 2)) = 3 \\implies x^2 - 2x = 2^3 = 8 \\implies x^2 - 2x - 8 = 0$. Fattorizzando: $(x - 4)(x + 2) = 0$, da cui $x_1 = 4$ e $x_2 = -2$. Il valore $x_2 = -2$ non appartiene al dominio ($x > 2$) ed è da scartare. L’unica soluzione reale è $x = 4$.",
+    fonte: "Lotto M5 del progetto — M5-14 (Logaritmi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 437,
+    materia: "Matematica",
+    domanda: "Qual è l’insieme delle soluzioni reali della disequazione $\\log_{\\frac{1}{2}}(2x - 1) \\ge -2$?",
+    rispostaCorretta: "$\\frac{1}{2} < x \\le \\frac{5}{2}$",
+    risposteErrate: [
+      "$x \\le \\frac{5}{2}$",
+      "$x \\ge \\frac{5}{2}$",
+      "$\\frac{1}{2} < x < 5$",
+      "$x > \\frac{1}{2}$"
+    ],
+    spiegazione: "1) Condizione di esistenza: $2x - 1 > 0 \\implies x > \\frac{1}{2}$. 2) Poiché la base è $0 < \\frac{1}{2} < 1$, la funzione logaritmica è strettamente decrescente e il verso della disuguaglianza si inverte: $2x - 1 \\le \\left(\\frac{1}{2}\\right)^{-2} = 2^2 = 4 \\implies 2x \\le 5 \\implies x \\le \\frac{5}{2}$. Mettendo a sistema con la C.E.: $\\frac{1}{2} < x \\le \\frac{5}{2}$.",
+    fonte: "Lotto M5 del progetto — M5-15 (Logaritmi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 438,
+    materia: "Matematica",
+    domanda: "Qual è la somma di tutte le soluzioni reali dell’equazione $(\\log_3 x)^2 - \\log_3(x^3) + 2 = 0$?",
+    rispostaCorretta: "$12$",
+    risposteErrate: [
+      "$3$",
+      "$9$",
+      "$27$",
+      "$6$"
+    ],
+    spiegazione: "Condizione di esistenza: $x > 0$. Applichiamo la proprietà della potenza: $\\log_3(x^3) = 3\\log_3 x$. Ponendo $t = \\log_3 x$, l’equazione diventa: $t^2 - 3t + 2 = 0 \\implies (t - 1)(t - 2) = 0$. Le radici sono $t_1 = 1$ e $t_2 = 2$. Risolvendo per $x$: da $\\log_3 x = 1$ si ha $x_1 = 3^1 = 3$; da $\\log_3 x = 2$ si ha $x_2 = 3^2 = 9$. Entrambe sono accettabili ($x > 0$). La somma delle soluzioni è: $x_1 + x_2 = 3 + 9 = 12$.",
+    fonte: "Lotto M5 del progetto — M5-16 (Logaritmi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 439,
+    materia: "Matematica",
+    domanda: "Lanciando una sola volta un dado a $6$ facce non truccato, qual è la probabilità di ottenere un numero primo?",
+    rispostaCorretta: "$\\frac{1}{2}$",
+    risposteErrate: [
+      "$\\frac{1}{3}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{1}{6}$",
+      "$\\frac{5}{6}$"
+    ],
+    spiegazione: "I casi possibili sono $6$: $\\{1, 2, 3, 4, 5, 6\\}$. I numeri primi presenti sul dado sono $3$: $\\{2, 3, 5\\}$ (ricordando che $1$ non è primo). La probabilità classica è il rapporto tra casi favorevoli e casi possibili: $P = \\frac{3}{6} = \\frac{1}{2}$.",
+    fonte: "Lotto M5 del progetto — M5-17 (Probabilità)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 440,
+    materia: "Matematica",
+    domanda: "La probabilità che un tiratore colpisca il bersaglio con un singolo colpo è pari a $0{,}75$. Qual è la probabilità che, effettuando un tiro, il bersaglio non venga colpito?",
+    rispostaCorretta: "$\\frac{1}{4}$",
+    risposteErrate: [
+      "$\\frac{3}{4}$",
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{5}$",
+      "$0{,}05$"
+    ],
+    spiegazione: "L’evento \"non colpire il bersaglio\" è l’evento complementare di \"colpire il bersaglio\". La probabilità dell’evento complementare è: $P(\\bar{E}) = 1 - P(E) = 1 - 0{,}75 = 0{,}25 = \\frac{1}{4}$.",
+    fonte: "Lotto M5 del progetto — M5-18 (Probabilità)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 441,
+    materia: "Matematica",
+    domanda: "Un’urna contiene $5$ palline rosse, $7$ palline blu e $8$ palline verdi, tutte identiche per forma e peso. Estraendo a caso una sola pallina, qual è la probabilità che essa sia rossa oppure verde?",
+    rispostaCorretta: "$\\frac{13}{20}$",
+    risposteErrate: [
+      "$\\frac{7}{20}$",
+      "$\\frac{1}{4}$",
+      "$\\frac{2}{5}$",
+      "$\\frac{3}{5}$"
+    ],
+    spiegazione: "Il numero totale di palline nell’urna (casi possibili) è $5 + 7 + 8 = 20$. Le palline favorevoli (rosse oppure verdi) sono $5 + 8 = 13$. La probabilità è data da: $P = \\frac{13}{20}$.",
+    fonte: "Lotto M5 del progetto — M5-19 (Probabilità)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 442,
+    materia: "Matematica",
+    domanda: "Lanciando contemporaneamente due dadi equi a $6$ facce, qual è la probabilità che la somma dei punteggi ottenuti sia pari a $7$?",
+    rispostaCorretta: "$\\frac{1}{6}$",
+    risposteErrate: [
+      "$\\frac{1}{12}$",
+      "$\\frac{7}{36}$",
+      "$\\frac{5}{36}$",
+      "$\\frac{1}{4}$"
+    ],
+    spiegazione: "I casi possibili lanciando due dadi sono $6 \\times 6 = 36$. Le coppie ordinate la cui somma è $7$ sono $6$: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$. La probabilità è: $P = \\frac{6}{36} = \\frac{1}{6}$.",
+    fonte: "Lotto M5 del progetto — M5-20 (Probabilità)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 443,
+    materia: "Matematica",
+    domanda: "Da un mazzo di $40$ carte italiane ben mescolate si estraggono consecutivamente due carte senza reinserire la prima nel mazzo. Qual è la probabilità che entrambe le carte estratte siano assi?",
+    rispostaCorretta: "$\\frac{1}{130}$",
+    risposteErrate: [
+      "$\\frac{1}{100}$",
+      "$\\frac{1}{10}$",
+      "$\\frac{1}{13}$",
+      "$\\frac{1}{65}$"
+    ],
+    spiegazione: "In un mazzo di $40$ carte ci sono $4$ assi. La probabilità che la prima carta sia un asso è $\\frac{4}{40} = \\frac{1}{10}$. Senza reinserimento, restano $39$ carte di cui $3$ assi. La probabilità che anche la seconda carta sia un asso è $\\frac{3}{39} = \\frac{1}{13}$. Per il teorema delle probabilità composte: $P = \\frac{1}{10} \\cdot \\frac{1}{13} = \\frac{1}{130}$.",
+    fonte: "Lotto M5 del progetto — M5-21 (Probabilità)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 444,
+    materia: "Matematica",
+    domanda: "Si lancia una moneta non truccata e contemporaneamente un dado regolare a $6$ facce. Qual è la probabilità di ottenere \"Testa\" sulla moneta e un numero strettamente maggiore di $4$ sul dado?",
+    rispostaCorretta: "$\\frac{1}{6}$",
+    risposteErrate: [
+      "$\\frac{1}{3}$",
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{12}$",
+      "$\\frac{5}{6}$"
+    ],
+    spiegazione: "I due eventi sono stocasticamente indipendenti. La probabilità di ottenere \"Testa\" è $P(T) = \\frac{1}{2}$. I numeri strettamente maggiori di $4$ sul dado sono $\\{5, 6\\}$, quindi $P(D > 4) = \\frac{2}{6} = \\frac{1}{3}$. La probabilità dell’evento congiunto è il prodotto delle singole probabilità: $P = P(T) \\cdot P(D > 4) = \\frac{1}{2} \\cdot \\frac{1}{3} = \\frac{1}{6}$.",
+    fonte: "Lotto M5 del progetto — M5-22 (Probabilità)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 445,
+    materia: "Matematica",
+    domanda: "Lanciando $3$ volte consecutive una moneta perfettamente bilanciata, qual è la probabilità di ottenere almeno una volta \"Testa\"?",
+    rispostaCorretta: "$\\frac{7}{8}$",
+    risposteErrate: [
+      "$\\frac{1}{8}$",
+      "$\\frac{3}{8}$",
+      "$\\frac{1}{2}$",
+      "$\\frac{3}{4}$"
+    ],
+    spiegazione: "L’evento contrario di \"ottenere almeno una volta Testa\" è \"ottenere zero volte Testa\", ovvero ottenere $3$ volte consecutive \"Croce\". Poiché i lanci sono indipendenti, la probabilità di $3$ croci è $P(\\text{CCC}) = \\left(\\frac{1}{2}\\right)^3 = \\frac{1}{8}$. La probabilità richiesta è quindi: $P = 1 - P(\\text{CCC}) = 1 - \\frac{1}{8} = \\frac{7}{8}$.",
+    fonte: "Lotto M5 del progetto — M5-23 (Probabilità)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 446,
+    materia: "Matematica",
+    domanda: "Un’urna contiene $4$ palline bianche e $6$ palline nere. Si estrae una pallina, se ne annota il colore, la si reinserisce nell’urna e si procede a una seconda estrazione. Qual è la probabilità di estrarre prima una pallina bianca e poi una nera?",
+    rispostaCorretta: "$\\frac{6}{25}$",
+    risposteErrate: [
+      "$\\frac{4}{15}$",
+      "$\\frac{12}{25}$",
+      "$\\frac{1}{5}$",
+      "$\\frac{2}{15}$"
+    ],
+    spiegazione: "Essendoci reinserimento, la composizione dell’urna rimane invariata ($10$ palline: $4$ bianche e $6$ nere) e le due estrazioni sono indipendenti. La probabilità di estrarre bianca alla prima estrazione è $\\frac{4}{10} = \\frac{2}{5}$. La probabilità di estrarre nera alla seconda è $\\frac{6}{10} = \\frac{3}{5}$. La probabilità dell’evento ordinato (Bianca, Nera) è: $P = \\frac{2}{5} \\cdot \\frac{3}{5} = \\frac{6}{25}$.",
+    fonte: "Lotto M5 del progetto — M5-24 (Probabilità)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 447,
+    materia: "Matematica",
+    domanda: "Si lanciano due dadi a $6$ facce non truccati. Sapendo che i due punteggi ottenuti sono diversi tra loro, qual è la probabilità che la loro somma sia pari a $6$?",
+    rispostaCorretta: "$\\frac{2}{15}$",
+    risposteErrate: [
+      "$\\frac{5}{36}$",
+      "$\\frac{1}{9}$",
+      "$\\frac{1}{6}$",
+      "$\\frac{4}{35}$"
+    ],
+    spiegazione: "Lo spazio campionario ridotto dalla condizione \"punteggi diversi\" esclude le $6$ coppie con esiti uguali $(1,1), (2,2), (3,3), (4,4), (5,5), (6,6)$, contando quindi $36 - 6 = 30$ casi possibili equiprobabili. Tra questi, le coppie con somma pari a $6$ e punteggi diversi sono $4$: $(1,5), (2,4), (4,2), (5,1)$ (la coppia $(3,3)$ è esclusa dalla condizione). La probabilità condizionata è: $P = \\frac{4}{30} = \\frac{2}{15}$.",
+    fonte: "Lotto M5 del progetto — M5-25 (Probabilità)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 448,
+    materia: "Matematica",
+    domanda: "Quanti codici PIN di $4$ cifre tutte diverse tra loro è possibile formare utilizzando esclusivamente le cifre da $1$ a $9$?",
+    rispostaCorretta: "$3024$",
+    risposteErrate: [
+      "$6561$",
+      "$126$",
+      "$504$",
+      "$24$"
+    ],
+    spiegazione: "Poiché l’ordine delle cifre è rilevante e le cifre devono essere tutte distinte, si calcolano le disposizioni semplici di $9$ elementi distinti presi a gruppi di $4$: $D(9, 4) = 9 \\cdot 8 \\cdot 7 \\cdot 6 = 3024$.",
+    fonte: "Lotto M5 del progetto — M5-26 (Calcolo combinatorio)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 449,
+    materia: "Matematica",
+    domanda: "Quanti anagrammi, anche privi di significato linguistico, si possono comporre permutando tutte le lettere della parola \"PRISMA\"?",
+    rispostaCorretta: "$720$",
+    risposteErrate: [
+      "$120$",
+      "$360$",
+      "$5040$",
+      "$64$"
+    ],
+    spiegazione: "La parola \"PRISMA\" è composta da $6$ lettere tutte distinte tra loro (P, R, I, S, M, A). Il numero totale di anagrammi è dato dalle permutazioni semplici di $6$ elementi: $P_6 = 6! = 6 \\cdot 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1 = 720$.",
+    fonte: "Lotto M5 del progetto — M5-27 (Calcolo combinatorio)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 450,
+    materia: "Matematica",
+    domanda: "In un gruppo di $10$ studenti, in quanti modi diversi è possibile scegliere una commissione formata da $3$ studenti?",
+    rispostaCorretta: "$120$",
+    risposteErrate: [
+      "$720$",
+      "$30$",
+      "$240$",
+      "$60$"
+    ],
+    spiegazione: "Poiché l’ordine di scelta all’interno della commissione non ha alcuna importanza, il numero di possibili commissioni è dato dalle combinazioni semplici di $10$ elementi a gruppi di $3$: $C(10, 3) = \\binom{10}{3} = \\frac{10 \\cdot 9 \\cdot 8}{3 \\cdot 2 \\cdot 1} = 120$.",
+    fonte: "Lotto M5 del progetto — M5-28 (Calcolo combinatorio)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 451,
+    materia: "Matematica",
+    domanda: "Un ristorante propone un menù a prezzo fisso che prevede la scelta di $1$ antipasto tra $4$ disponibili, $1$ primo piatto tra $5$ disponibili e $1$ dolce tra $3$ disponibili. Quanti menù diversi e completi è possibile comporre?",
+    rispostaCorretta: "$60$",
+    risposteErrate: [
+      "$12$",
+      "$20$",
+      "$120$",
+      "$23$"
+    ],
+    spiegazione: "Per il principio fondamentale del moltiplicazione del conteggio, il numero totale di combinazioni indipendenti di scelte è il prodotto del numero di opzioni per ciascuna portata: $N = 4 \\cdot 5 \\cdot 3 = 60$.",
+    fonte: "Lotto M5 del progetto — M5-29 (Calcolo combinatorio)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 452,
+    materia: "Matematica",
+    domanda: "Quanti anagrammi distinti, anche privi di senso, si possono formare utilizzando tutte le lettere della parola \"MATEMATICA\"?",
+    rispostaCorretta: "$151200$",
+    risposteErrate: [
+      "$3628800$",
+      "$302400$",
+      "$75600$",
+      "$181440$"
+    ],
+    spiegazione: "La parola \"MATEMATICA\" contiene $n = 10$ lettere in totale, con le seguenti frequenze di ripetizione: M compare $2$ volte, A compare $3$ volte, T compare $2$ volte, E compare $1$ volta, I compare $1$ volta, C compare $1$ volta. Il numero di permutazioni con ripetizione è: $P_{10}^{(2,3,2)} = \\frac{10!}{2! \\cdot 3! \\cdot 2!} = \\frac{3628800}{2 \\cdot 6 \\cdot 2} = \\frac{3628800}{24} = 151200$.",
+    fonte: "Lotto M5 del progetto — M5-30 (Calcolo combinatorio)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 453,
+    materia: "Matematica",
+    domanda: "Da un gruppo composto da $6$ ingegneri e $4$ architetti si deve formare una squadra di lavoro composta da $3$ ingegneri e $2$ architetti. In quanti modi diversi è possibile selezionare i componenti della squadra?",
+    rispostaCorretta: "$120$",
+    risposteErrate: [
+      "$240$",
+      "$720$",
+      "$26$",
+      "$252$"
+    ],
+    spiegazione: "I modi di scegliere i $3$ ingegneri tra i $6$ disponibili sono $C(6, 3) = \\frac{6 \\cdot 5 \\cdot 4}{3 \\cdot 2 \\cdot 1} = 20$. I modi di scegliere i $2$ architetti tra i $4$ disponibili sono $C(4, 2) = \\frac{4 \\cdot 3}{2 \\cdot 1} = 6$. Per il principio di moltiplicazione, i modi complessivi per formare la squadra sono: $N = C(6, 3) \\cdot C(4, 2) = 20 \\cdot 6 = 120$.",
+    fonte: "Lotto M5 del progetto — M5-31 (Calcolo combinatorio)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 454,
+    materia: "Matematica",
+    domanda: "$5$ amici, tra cui Anna, si mettono in fila indiana per una foto. Se Anna deve obbligatoriamente occupare il primo posto della fila, in quanti modi diversi possono disporsi complessivamente i $5$ amici?",
+    rispostaCorretta: "$24$",
+    risposteErrate: [
+      "$120$",
+      "$60$",
+      "$48$",
+      "$12$"
+    ],
+    spiegazione: "Fissata Anna nel primo posto della fila (1 sola scelta), rimangono $4$ posti liberi da assegnare agli altri $4$ amici. I modi possibili di ordinare $4$ persone sono le permutazioni di $4$ elementi: $P_4 = 4! = 4 \\cdot 3 \\cdot 2 \\cdot 1 = 24$.",
+    fonte: "Lotto M5 del progetto — M5-32 (Calcolo combinatorio)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 455,
+    materia: "Matematica",
+    domanda: "Ad una conferenza partecipano $8$ scienziati. Al termine della riunione, ciascun partecipante stringe la mano esattamente una volta a ciascuno degli altri. Quante strette di mano si verificano in totale?",
+    rispostaCorretta: "$28$",
+    risposteErrate: [
+      "$56$",
+      "$64$",
+      "$32$",
+      "$16$"
+    ],
+    spiegazione: "Ogni stretta di mano coinvolge in modo non ordinato ed univoco una coppia di partecipanti distinti. Il numero totale di strette di mano corrisponde al numero di combinazioni semplici di $8$ elementi presi a $2$ a $2$: $C(8, 2) = \\binom{8}{2} = \\frac{8 \\cdot 7}{2 \\cdot 1} = 28$.",
+    fonte: "Lotto M5 del progetto — M5-33 (Calcolo combinatorio)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
   }
 ];
 

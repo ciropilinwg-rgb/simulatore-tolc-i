@@ -21,8 +21,8 @@ function section(title) {
   console.log(`\n=== ${title} ===`);
 }
 
-section('Integrità Globale Banca 632 (con 65 da NEW Test1.pdf)');
-check(questionBank.length === 632, `Totale quesiti esatto: 632 (trovati: ${questionBank.length})`);
+section('Integrità Globale Banca 682 (con 65 da NEW Test1.pdf)');
+check(questionBank.length === 682, `Totale quesiti esatto: 682 (trovati: ${questionBank.length})`);
 
 const idSet = new Set();
 let hasDuplicateId = false;
@@ -34,12 +34,12 @@ check(!hasDuplicateId, 'Tutti gli ID sono strettamente univoci (nessun ID duplic
 
 const allowedSubjects = new Set(['Matematica', 'Logica', 'Scienze', 'Comprensione verbale']);
 const invalidSubjects = questionBank.filter(q => !allowedSubjects.has(q.materia));
-check(invalidSubjects.length === 0, 'Tutti i 632 quesiti appartengono esclusivamente alle 4 materie ammesse');
+check(invalidSubjects.length === 0, 'Tutti i 682 quesiti appartengono esclusivamente alle 4 materie ammesse');
 
 const subjectCounts = {};
 questionBank.forEach(q => subjectCounts[q.materia] = (subjectCounts[q.materia] || 0) + 1);
 check(subjectCounts['Matematica'] === 251, `Matematica fisica: 251 (118 base + 25 M1 + 25 M2 + 25 M3 + 25 M4 + 33 M5) (trovati: ${subjectCounts['Matematica']})`);
-check(subjectCounts['Logica'] === 49, `Logica fisica: 49 (trovati: ${subjectCounts['Logica']})`);
+check(subjectCounts['Logica'] === 99, `Logica fisica: 99 (49 base + 50 L1) (trovati: ${subjectCounts['Logica']})`);
 check(subjectCounts['Scienze'] === 252, `Scienze fisica: 252 (70 base + 35 S1 + 35 S2 + 35 S3 + 35 S4 + 42 S5) (trovati: ${subjectCounts['Scienze']})`);
 check(subjectCounts['Comprensione verbale'] === 80, `Comprensione verbale fisica: 80 (trovati: ${subjectCounts['Comprensione verbale']})`);
 

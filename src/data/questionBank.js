@@ -10991,6 +10991,906 @@ const questionBank = [
     numeroVolteProposta: 0,
     numeroRisposteCorrette: 0,
     numeroRisposteErrate: 0
+  },
+  {
+    id: 638,
+    materia: "Logica",
+    difficolta: "medio-facile",
+    domanda: "Nella logica proposizionale classica, che cosa si intende per «proposizione» (o enunciato dichiarativo)?",
+    rispostaCorretta: "Una frase di senso compiuto per la quale ha senso univoco stabilire se sia vera oppure falsa",
+    risposteErrate: [
+      "Qualsiasi frase che contenga almeno un verbo al modo congiuntivo o condizionale",
+      "Un’espressione linguistica di tipo esclamativo o interrogativo priva di soggetto",
+      "Una formula matematica che contiene obbligatoriamente almeno una variabile incognita non quantificata",
+      "Un comando o una prescrizione etica la cui validità dipende dal contesto"
+    ],
+    spiegazione: "In logica proposizionale classica (bivalente), una proposizione è un’affermazione dichiarativa suscettibile di assumere uno e uno solo dei due valori di verità: Vero ($V$) o Falso ($F$). Le domande, le esclamazioni, i comandi e le formule aperte con variabili libere non sono proposizioni.",
+    fonte: "Lotto L1 del progetto — L1-01 (ID 638)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 639,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Siano $P$ e $Q$ due proposizioni logiche. In quali condizioni la loro congiunzione logica, indicata con $P \\land Q$ (letta «$P$ e $Q$»), risulta essere VERA?",
+    rispostaCorretta: "Esclusivamente quando sia $P$ sia $Q$ sono entrambe contemporaneamente vere",
+    risposteErrate: [
+      "Quando almeno una delle due proposizioni $P$ o $Q$ è vera",
+      "Quando $P$ è vera, indipendentemente dal valore di verità assunto da $Q$",
+      "Esclusivamente quando una proposizione è vera e l’altra è falsa",
+      "Quando entrambe le proposizioni $P$ e $Q$ sono contemporaneamente false"
+    ],
+    spiegazione: "La tavola di verità della congiunzione logica $\\land$ stabilisce che $P \\land Q$ è vera se e solo se entrambi i congiunti $P$ e $Q$ sono veri ($V \\land V = V$). In tutti gli altri tre casi ($V \\land F$, $F \\land V$, $F \\land F$), la congiunzione è falsa.",
+    fonte: "Lotto L1 del progetto — L1-02 (ID 639)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 640,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Siano $P$ e $Q$ due proposizioni. In quali condizioni la loro disgiunzione inclusiva, indicata con $P \\lor Q$ (letta «$P$ o $Q$», corrispondente al latino *vel*), risulta essere FALSA?",
+    rispostaCorretta: "Esclusivamente quando sia $P$ sia $Q$ sono entrambe contemporaneamente false",
+    risposteErrate: [
+      "Quando entrambe le proposizioni $P$ e $Q$ sono contemporaneamente vere",
+      "Quando una delle due proposizioni è vera e l’altra è falsa",
+      "Quando $P$ è falsa ma $Q$ è vera",
+      "La disgiunzione inclusiva non può mai assumere valore di verità falso"
+    ],
+    spiegazione: "La disgiunzione inclusiva $\\lor$ è vera quando almeno una tra le proposizioni $P$ e $Q$ è vera (incluso il caso in cui siano entrambe vere). Essa risulta quindi falsa nell’unico caso in cui sia $P$ sia $Q$ siano entrambe false ($F \\lor F = F$).",
+    fonte: "Lotto L1 del progetto — L1-03 (ID 640)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 641,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "La disgiunzione esclusiva tra due proposizioni $P$ e $Q$, indicata con $P \\oplus Q$ (o *aut-aut*), è definita come vera se e solo se si verifica esattamente una delle due proposizioni, ma non entrambe. Se $P$ è VERA e $Q$ è VERA, quale valore di verità assume $P \\oplus Q$?",
+    rispostaCorretta: "Falso, perché la disgiunzione esclusiva esclude il caso in cui entrambe le proposizioni siano vere",
+    risposteErrate: [
+      "Vero, perché entrambe le proposizioni componenti sono vere",
+      "Vero, purché $P$ implichi logicamente $Q$",
+      "Indeterminato, perché il valore dipende dal contenuto semantico di $P$ e $Q$",
+      "Falso, ma solo se anche la negazione $\\neg P$ è vera"
+    ],
+    spiegazione: "A differenza della disgiunzione inclusiva (che è vera anche quando entrambi i termini sono veri), la disgiunzione esclusiva $P \\oplus Q$ richiede che una sola delle due proposizioni sia vera. Pertanto, se $P$ è vera e $Q$ è vera, $P \\oplus Q$ assume valore di verità Falso ($V \\oplus V = F$).",
+    fonte: "Lotto L1 del progetto — L1-04 (ID 641)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 642,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In base al principio della doppia negazione della logica classica, a quale proposizione equivale logicamente l’enunciato «Non è vero che Giorgio non ha superato la prova di ammissione»?",
+    rispostaCorretta: "Giorgio ha superato la prova di ammissione",
+    risposteErrate: [
+      "Giorgio non ha sostenuto la prova di ammissione",
+      "Giorgio è stato respinto alla prova di ammissione",
+      "Non è possibile stabilire se Giorgio abbia superato la prova",
+      "Tutti i candidati tranne Giorgio hanno superato la prova"
+    ],
+    spiegazione: "In logica classica vige la legge della doppia negazione: $\\neg(\\neg P) \\equiv P$. Negare che Giorgio non abbia superato la prova equivale logicamente ad affermare che Giorgio ha superato la prova.",
+    fonte: "Lotto L1 del progetto — L1-05 (ID 642)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 643,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Siano date le proposizioni $P$ (VERA), $Q$ (FALSA) e $R$ (VERA). Qual è il valore di verità della proposizione composta $(\\neg P \\lor Q) \\lor R$?",
+    rispostaCorretta: "Vero, perché la disgiunzione con $R$ (che è vera) rende vera l’intera espressione",
+    risposteErrate: [
+      "Falso, perché sia $\\neg P$ sia $Q$ sono entrambe false",
+      "Falso, perché la presenza di un termine falso ($Q$) rende sempre falsa la disgiunzione",
+      "Indeterminato, perché occorre conoscere se $P$ sia causa di $R$",
+      "Vero, ma solo a condizione che $Q$ sia logicamente equivalente a $R$"
+    ],
+    spiegazione: "Valutiamo passo per passo: 1) $P$ è vera $\\implies \\neg P$ è falsa ($F$). 2) $\\neg P \\lor Q$ diventa $F \\lor F = F$. 3) L’intera espressione $(\\neg P \\lor Q) \\lor R$ diventa $F \\lor V = V$ (Vero), poiché nella disgiunzione è sufficiente che almeno un disgiunto sia vero.",
+    fonte: "Lotto L1 del progetto — L1-06 (ID 643)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 644,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si consideri l’implicazione materiale $P \\to Q$ (letta «Se $P$, allora $Q$»). In quale unico caso l’implicazione $P \\to Q$ risulta essere FALSA?",
+    rispostaCorretta: "Quando l’antecedente $P$ è vero e il conseguente $Q$ è falso",
+    risposteErrate: [
+      "Quando l’antecedente $P$ è falso e il conseguente $Q$ è vero",
+      "Quando sia l’antecedente $P$ sia il conseguente $Q$ sono entrambi falsi",
+      "Quando sia l’antecedente $P$ sia il conseguente $Q$ sono entrambi veri",
+      "Quando l’antecedente $P$ è falso, indipendentemente dal valore di $Q$"
+    ],
+    spiegazione: "La tavola di verità dell’implicazione materiale $P \\to Q$ è falsa in un solo e unico caso: quando la premessa (antecedente) $P$ è vera e la conclusione (conseguente) $Q$ è falsa ($V \\to F = F$). Quando l’antecedente $P$ è falso, l’implicazione è sempre vera per vacuità ($F \\to V = V$ e $F \\to F = V$).",
+    fonte: "Lotto L1 del progetto — L1-07 (ID 644)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 645,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la corretta negazione logica dell’implicazione materiale $P \\to Q$ («Se $P$, allora $Q$»)?",
+    rispostaCorretta: "$P \\land \\neg Q$ («$P$ e non $Q$»)",
+    risposteErrate: [
+      "$\\neg P \\to \\neg Q$ («Se non $P$, allora non $Q$»)",
+      "$\\neg P \\land \\neg Q$ («Non $P$ e non $Q$»)",
+      "$\\neg P \\lor Q$ («Non $P$ oppure $Q$»)",
+      "$Q \\to P$ («Se $Q$, allora $P$»)"
+    ],
+    spiegazione: "L’implicazione $P \\to Q$ è falsa solo quando $P$ è vera e $Q$ è falsa. Di conseguenza, la sua negazione $\\neg(P \\to Q)$ è vera esattamente nelle stesse condizioni, ovvero quando si verifica la congiunzione $P \\land \\neg Q$.",
+    fonte: "Lotto L1 del progetto — L1-08 (ID 645)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 646,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "A quale delle seguenti proposizioni disgiuntive equivale logicamente l’implicazione materiale $P \\to Q$?",
+    rispostaCorretta: "$\\neg P \\lor Q$ («Non $P$ oppure $Q$»)",
+    risposteErrate: [
+      "$P \\lor Q$ («$P$ oppure $Q$»)",
+      "$\\neg P \\lor \\neg Q$ («Non $P$ oppure non $Q$»)",
+      "$P \\land Q$ («$P$ e $Q$»)",
+      "$\\neg P \\land Q$ («Non $P$ e $Q$»)"
+    ],
+    spiegazione: "L’equivalenza fondamentale dell’implicazione materiale afferma che $P \\to Q \\equiv \\neg P \\lor Q$. Entrambe le espressioni sono false unicamente quando $P$ è vera e $Q$ è falsa, e vere in tutti gli altri tre casi.",
+    fonte: "Lotto L1 del progetto — L1-09 (ID 646)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 647,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la proposizione «contrapositiva» (o contronominale) dell’enunciato «Se piove, allora la strada è bagnata», la quale è logicamente equivalente all’enunciato di partenza?",
+    rispostaCorretta: "Se la strada non è bagnata, allora non piove",
+    risposteErrate: [
+      "Se la strada è bagnata, allora piove",
+      "Se non piove, allora la strada non è bagnata",
+      "Piove e la strada non è bagnata",
+      "Se non piove, allora la strada è bagnata"
+    ],
+    spiegazione: "Data una proposizione condizionale $P \\to Q$, la sua contrapositiva è $\\neg Q \\to \\neg P$. La contrapositiva è sempre logicamente equivalente alla proposizione originaria ($P \\to Q \\equiv \\neg Q \\to \\neg P$). Nel nostro caso: «Se la strada non è bagnata ($\\neg Q$), allora non piove ($\\neg P$)».",
+    fonte: "Lotto L1 del progetto — L1-10 (ID 647)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 648,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si considerino le seguenti due premesse assunte come vere:\n1. «Se un dispositivo è in modalità Risparmio Energetico ($P$), allora la spia verde è accesa ($Q$)»;\n2. «La spia verde del dispositivo è accesa ($Q$)».\nQuale delle seguenti deduzioni costituisce la classica fallacia logica dell’«affermazione del conseguente» (traendo una conclusione non garantita dalle premesse)?",
+    rispostaCorretta: "Il dispositivo è sicuramente in modalità Risparmio Energetico ($P$)",
+    risposteErrate: [
+      "Se la spia verde non fosse accesa, allora il dispositivo non sarebbe in modalità Risparmio Energetico",
+      "La spia verde accesa è una condizione necessaria affinché il dispositivo sia in modalità Risparmio Energetico",
+      "La modalità Risparmio Energetico è una condizione sufficiente affinché la spia verde sia accesa",
+      "Dalle sole premesse date non è possibile dedurre con certezza se il dispositivo sia o meno in modalità Risparmio Energetico"
+    ],
+    spiegazione: "Lo schema d’inferenza dell’«affermazione del conseguente» assume la forma fallace: premesse $P \\to Q$ e $Q$, conclusione errata $\\therefore P$. Sapendo che $P \\implies Q$ e che $Q$ è vero, la spia potrebbe essere accesa anche per altri motivi (non essendo $Q \\to P$); dedurre che il dispositivo sia per forza in modalità $P$ è quindi una deduzione non valida (fallace).",
+    fonte: "Lotto L1 del progetto — L1-11 (ID 648)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 649,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si considerino le seguenti due premesse assunte come vere:\n1. «Se un candidato possiede la certificazione linguistica di livello C2 ($P$), allora riceve il punteggio massimo nella prova ($Q$)»;\n2. «Il candidato Luca NON possiede la certificazione linguistica di livello C2 ($\\neg P$)».\nQuale delle seguenti conclusioni commette la classica fallacia della «negazione dell’antecedente»?",
+    rispostaCorretta: "Il candidato Luca non riceverà il punteggio massimo nella prova ($\\neg Q$)",
+    risposteErrate: [
+      "Se un candidato non riceve il punteggio massimo nella prova, allora non possiede la certificazione C2",
+      "Possedere la certificazione C2 è condizione sufficiente per ricevere il punteggio massimo",
+      "Ricevere il punteggio massimo è condizione necessaria affinché sia presente la certificazione C2",
+      "Dalle premesse non è possibile stabilire con certezza se Luca riceverà o meno il punteggio massimo"
+    ],
+    spiegazione: "La fallacia della «negazione dell’antecedente» segue lo schema errato: premesse $P \\to Q$ e $\\neg P$, conclusione indebita $\\therefore \\neg Q$. Il fatto che la certificazione C2 garantisca il punteggio massimo non esclude che Luca possa ottenere il punteggio massimo per altri meriti previsti dal regolamento; concludere categoricamente $\\neg Q$ da $\\neg P$ è pertanto logicamente invalido.",
+    fonte: "Lotto L1 del progetto — L1-12 (ID 649)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 650,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si assuma come vera la seguente regola formale di ammissione a un torneo scientifico: «Aver vinto la fase eliminatoria d’istituto ($P$) è condizione sufficiente per partecipare alla finale regionale ($Q$)». In base a questa sola regola, quale delle seguenti conclusioni è logicamente inoppugnabile?",
+    rispostaCorretta: "Chiunque abbia vinto la fase eliminatoria d’istituto ha il diritto certo di partecipare alla finale regionale",
+    risposteErrate: [
+      "Solo chi ha vinto la fase eliminatoria d’istituto può partecipare alla finale regionale",
+      "Chi non ha vinto la fase eliminatoria d’istituto non può in nessun caso partecipare alla finale regionale",
+      "Tutti coloro che partecipano alla finale regionale hanno obbligatoriamente vinto la fase d’istituto",
+      "Aver vinto la fase d’istituto è sia necessario sia sufficiente per accedere alla finale regionale"
+    ],
+    spiegazione: "Dire che $P$ è «condizione sufficiente» per $Q$ significa che il verificarsi di $P$ garantisce in modo certo il verificarsi di $Q$ ($P \\to Q$). Dunque, chiunque abbia vinto la fase d’istituto ($P$) è ammesso alla finale ($Q$). La condizione sufficiente non è necessaria: altri concorrenti potrebbero accedere alla finale tramite canali alternativi (ad es. ripescaggi o wild card).",
+    fonte: "Lotto L1 del progetto — L1-13 (ID 650)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 651,
+    materia: "Logica",
+    difficolta: "medio-difficile",
+    domanda: "Si consideri l’enunciato: «Un cittadino può votare alle elezioni politiche *solo se* è maggiorenne». Qual è la corretta formalizzazione e interpretazione logica di questa proposizione, ponendo $V =$ «vota» e $M =$ «è maggiorenne»?",
+    rispostaCorretta: "$V \\to M$, il che significa che essere maggiorenne ($M$) è condizione necessaria per votare ($V$), e chi non è maggiorenne non può votare ($\\neg M \\to \\neg V$)",
+    risposteErrate: [
+      "$M \\to V$, il che significa che tutti i maggiorenni votano obbligatoriamente alle elezioni politiche",
+      "$V \\leftrightarrow M$, il che significa che votare ed essere maggiorenne sono condizioni reciprocamente sufficienti e necessarie",
+      "$\\neg V \\to \\neg M$, il che significa che chi non vota è sicuramente minorenne",
+      "$V \\land M$, il che significa che tutti i cittadini sono contemporaneamente votanti e maggiorenni"
+    ],
+    spiegazione: "La locuzione «$P$ solo se $Q$» introduce una condizione necessaria $Q$ per $P$, che si formalizza rigorosamente come $P \\to Q$ (e per contrapposizione $\\neg Q \\to \\neg P$: «se non sei maggiorenne, non puoi votare»). Non equivale a $M \\to V$ (un maggiorenne potrebbe decidere di astenersi o essere privo di diritti elettorali).",
+    fonte: "Lotto L1 del progetto — L1-14 (ID 651)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 652,
+    materia: "Logica",
+    difficolta: "medio-facile",
+    domanda: "Che cosa esprime il connettivo di coimplicazione (o doppio condizionale) $P \\leftrightarrow Q$, espresso in linguaggio naturale dalla formula «$P$ se e solo se $Q$»?",
+    rispostaCorretta: "Che le due proposizioni $P$ e $Q$ hanno sempre lo stesso identico valore di verità (entrambe vere o entrambe false)",
+    risposteErrate: [
+      "Che $P$ è vera ogni volta che $Q$ è falsa",
+      "Che $P$ è condizione sufficiente ma non necessaria per $Q$",
+      "Che $P$ e $Q$ non possono mai essere entrambe false",
+      "Che la verità di $P$ esclude logicamente la verità di $Q$"
+    ],
+    spiegazione: "Il bicondizionale $P \\leftrightarrow Q$ è vero quando $P$ e $Q$ concordano in valore di verità ($V \\leftrightarrow V = V$ e $F \\leftrightarrow F = V$) ed è falso quando i due valori discordano ($V \\leftrightarrow F = F$ e $F \\leftrightarrow V = F$).",
+    fonte: "Lotto L1 del progetto — L1-15 (ID 652)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 653,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quale delle seguenti formule logiche esprime in modo formalmente equivalente la coimplicazione (doppia implicazione) $P \\leftrightarrow Q$?",
+    rispostaCorretta: "$(P \\to Q) \\land (Q \\to P)$",
+    risposteErrate: [
+      "$(P \\to Q) \\lor (Q \\to P)$",
+      "$(P \\land Q) \\to (P \\lor Q)$",
+      "$\\neg P \\leftrightarrow \\neg Q$",
+      "$(P \\to Q) \\land (\\neg P \\to \\neg Q)$"
+    ],
+    spiegazione: "Per definizione, il bicondizionale $P \\leftrightarrow Q$ esprime la congiunzione delle due implicazioni dirette e inverse: $(P \\to Q) \\land (Q \\to P)$ («$P$ implica $Q$ E $Q$ implica $P$»).",
+    fonte: "Lotto L1 del progetto — L1-16 (ID 653)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 654,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la corretta negazione logica della coimplicazione $P \\leftrightarrow Q$?",
+    rispostaCorretta: "$(P \\land \\neg Q) \\lor (\\neg P \\land Q)$ (ossia la disgiunzione esclusiva $P \\oplus Q$)",
+    risposteErrate: [
+      "$\\neg P \\leftrightarrow \\neg Q$",
+      "$\\neg P \\land \\neg Q$",
+      "$(P \\lor \\neg Q) \\land (\\neg P \\lor Q)$",
+      "$\\neg(P \\to Q) \\land \\neg(Q \\to P)$"
+    ],
+    spiegazione: "Poiché $P \\leftrightarrow Q$ è vero quando $P$ e $Q$ hanno lo stesso valore di verità, la sua negazione $\\neg(P \\leftrightarrow Q)$ è vera quando $P$ e $Q$ hanno valori di verità discordi (uno vero e l’altro falso), il che corrisponde esattamente alla disgiunzione esclusiva $(P \\land \\neg Q) \\lor (\\neg P \\land Q) \\equiv P \\oplus Q$.",
+    fonte: "Lotto L1 del progetto — L1-17 (ID 654)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 655,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la differenza fondamentale tra l’implicazione semplice $P \\to Q$ («Se $P$, allora $Q$») e la coimplicazione $P \\leftrightarrow Q$ («$P$ se e solo se $Q$»)?",
+    rispostaCorretta: "Nell’implicazione $P \\to Q$, $Q$ può essere vera anche se $P$ è falsa; nella coimplicazione $P \\leftrightarrow Q$, se $P$ è falsa anche $Q$ deve essere obbligatoriamente falsa",
+    risposteErrate: [
+      "Nell’implicazione $P \\to Q$, $P$ e $Q$ devono essere entrambe vere; nella coimplicazione possono essere entrambe false",
+      "L’implicazione ammette solo proposizioni matematiche, mentre la coimplicazione si applica solo al linguaggio naturale",
+      "Nella coimplicazione $P$ è solo sufficiente per $Q$, mentre nell’implicazione è sia necessaria sia sufficiente",
+      "Non esiste alcuna differenza formale tra i due connettivi"
+    ],
+    spiegazione: "Nell’implicazione materiale $P \\to Q$, il caso $F \\to V$ è valido e vero (la premessa falsa non impedisce che la conclusione sia vera). Nella coimplicazione $P \\leftrightarrow Q$, invece, il legame è bidirezionale: la falsità di $P$ impone la falsità di $Q$ affinché l’enunciato sia vero.",
+    fonte: "Lotto L1 del progetto — L1-18 (ID 655)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 656,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In base alla prima legge di De Morgan, a quale espressione logica equivale la negazione di una congiunzione, $\\neg(P \\land Q)$?",
+    rispostaCorretta: "$\\neg P \\lor \\neg Q$ («Non $P$ oppure non $Q$»)",
+    risposteErrate: [
+      "$\\neg P \\land \\neg Q$ («Non $P$ e non $Q$»)",
+      "$P \\lor Q$ («$P$ oppure $Q$»)",
+      "$\\neg P \\to \\neg Q$ («Se non $P$, allora non $Q$»)",
+      "$\\neg(P \\lor Q)$ («Non ($P$ oppure $Q$)»)"
+    ],
+    spiegazione: "La prima legge di De Morgan stabilisce l’equivalenza logica $\\neg(P \\land Q) \\equiv \\neg P \\lor \\neg Q$. Negare che due eventi accadano entrambi contemporaneamente equivale ad affermare che almeno uno dei due non accade.",
+    fonte: "Lotto L1 del progetto — L1-19 (ID 656)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 657,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In base alla seconda legge di De Morgan, a quale espressione logica equivale la negazione di una disgiunzione inclusiva, $\\neg(P \\lor Q)$?",
+    rispostaCorretta: "$\\neg P \\land \\neg Q$ («Non $P$ e non $Q$»)",
+    risposteErrate: [
+      "$\\neg P \\lor \\neg Q$ («Non $P$ oppure non $Q$»)",
+      "$P \\land Q$ («$P$ e $Q$»)",
+      "$\\neg P \\to Q$ («Se non $P$, allora $Q$»)",
+      "$P \\lor \\neg Q$ («$P$ oppure non $Q$»)"
+    ],
+    spiegazione: "La seconda legge di De Morgan stabilisce che $\\neg(P \\lor Q) \\equiv \\neg P \\land \\neg Q$. Negare che si verifichi almeno uno tra $P$ e $Q$ equivale ad affermare che non si verifica né $P$ né $Q$ (ovvero «non $P$ E non $Q$»).",
+    fonte: "Lotto L1 del progetto — L1-20 (ID 657)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 658,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la corretta negazione logica della proposizione: «Marco studia ingegneria e lavora come programmatore»?",
+    rispostaCorretta: "Marco non studia ingegneria oppure non lavora come programmatore",
+    risposteErrate: [
+      "Marco non studia ingegneria e non lavora come programmatore",
+      "Se Marco non studia ingegneria, allora non lavora come programmatore",
+      "Marco studia ingegneria ma non lavora come programmatore",
+      "Nessun programmatore studia ingegneria come Marco"
+    ],
+    spiegazione: "Applicando la legge di De Morgan $\\neg(P \\land Q) \\equiv \\neg P \\lor \\neg Q$, la negazione della congiunzione è la disgiunzione delle singole negazioni: «Marco non studia ingegneria oppure non lavora come programmatore» (è sufficiente che almeno una delle due attività non sia svolta).",
+    fonte: "Lotto L1 del progetto — L1-21 (ID 658)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 659,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la corretta negazione logica dell’affermazione: «Nel fine settimana andrò al mare oppure andrò in montagna» (disgiunzione inclusiva)?",
+    rispostaCorretta: "Nel fine settimana non andrò al mare e non andrò in montagna",
+    risposteErrate: [
+      "Nel fine settimana non andrò al mare oppure non andrò in montagna",
+      "Nel fine settimana andrò sia al mare sia in montagna",
+      "Se non andrò al mare, allora andrò sicuramente in montagna",
+      "Nel fine settimana andrò al mare ma non in montagna"
+    ],
+    spiegazione: "Applicando la legge di De Morgan $\\neg(P \\lor Q) \\equiv \\neg P \\land \\neg Q$, la negazione della disgiunzione «al mare oppure in montagna» è la congiunzione delle negazioni: «non andrò al mare E non andrò in montagna».",
+    fonte: "Lotto L1 del progetto — L1-22 (ID 659)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 660,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Applicando le leggi di De Morgan e della doppia negazione, a quale formula equivale la negazione dell’enunciato $P \\land \\neg Q$?",
+    rispostaCorretta: "$\\neg P \\lor Q$",
+    risposteErrate: [
+      "$\\neg P \\land Q$",
+      "$\\neg P \\lor \\neg Q$",
+      "$P \\to \\neg Q$",
+      "$\\neg P \\land \\neg Q$"
+    ],
+    spiegazione: "$\\neg(P \\land \\neg Q) \\equiv \\neg P \\lor \\neg(\\neg Q) \\equiv \\neg P \\lor Q$.",
+    fonte: "Lotto L1 del progetto — L1-23 (ID 660)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 661,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "A quale espressione logica semplificata equivale la negazione della proposizione $\\neg P \\lor Q$?",
+    rispostaCorretta: "$P \\land \\neg Q$",
+    risposteErrate: [
+      "$P \\lor \\neg Q$",
+      "$\\neg P \\land \\neg Q$",
+      "$P \\to Q$",
+      "$\\neg P \\lor \\neg Q$"
+    ],
+    spiegazione: "Applicando De Morgan e la doppia negazione: $\\neg(\\neg P \\lor Q) \\equiv \\neg(\\neg P) \\land \\neg Q \\equiv P \\land \\neg Q$. Si noti che questo coincide con la negazione dell’implicazione $P \\to Q$, essendo $P \\to Q \\equiv \\neg P \\lor Q$.",
+    fonte: "Lotto L1 del progetto — L1-24 (ID 661)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 662,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si consideri la proposizione «Non è vero che (il semaforo è rosso oppure il passaggio a livello è chiuso), ed è giorno». Ponendo $R =$ «semaforo rosso», $C =$ «passaggio a livello chiuso» e $G =$ «è giorno», quale formula la rappresenta fedelmente?",
+    rispostaCorretta: "$(\\neg R \\land \\neg C) \\land G$",
+    risposteErrate: [
+      "$\\neg(R \\land C) \\land G$",
+      "$(\\neg R \\lor \\neg C) \\land G$",
+      "$\\neg(R \\lor C \\lor G)$",
+      "$(R \\land C) \\lor \\neg G$"
+    ],
+    spiegazione: "L’espressione iniziale è $\\neg(R \\lor C) \\land G$. Applicando la legge di De Morgan alla parte tra parentesi, $\\neg(R \\lor C) \\equiv \\neg R \\land \\neg C$. Quindi l’enunciato complessivo diventa $(\\neg R \\land \\neg C) \\land G$.",
+    fonte: "Lotto L1 del progetto — L1-25 (ID 662)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 663,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quale delle seguenti coppie di formule logiche è costituita da due espressioni tra loro NON logicamente equivalenti?",
+    rispostaCorretta: "$P \\to Q$ e $Q \\to P$",
+    risposteErrate: [
+      "$\\neg(P \\land Q)$ e $\\neg P \\lor \\neg Q$",
+      "$\\neg(P \\lor Q)$ e $\\neg P \\land \\neg Q$",
+      "$P \\to Q$ e $\\neg Q \\to \\neg P$",
+      "$P \\to Q$ e $\\neg P \\lor Q$"
+    ],
+    spiegazione: "L’implicazione diretta $P \\to Q$ e la sua conversa $Q \\to P$ non sono logicamente equivalenti (la verità di una non garantisce la verità dell’altra). Tutte le altre coppie proposte rappresentano invece note equivalenze logiche (De Morgan, contrapposizione, definizione dell’implicazione).",
+    fonte: "Lotto L1 del progetto — L1-26 (ID 663)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 664,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la corretta negazione logica della promessa: «Se vincerò la gara, allora ti regalerò la mia medaglia»?",
+    rispostaCorretta: "Vincerò la gara e non ti regalerò la mia medaglia",
+    risposteErrate: [
+      "Se non vincerò la gara, allora non ti regalerò la mia medaglia",
+      "Non vincerò la gara oppure ti regalerò la mia medaglia",
+      "Non vincerò la gara e non ti regalerò la mia medaglia",
+      "Se ti regalerò la mia medaglia, allora avrò vinto la gara"
+    ],
+    spiegazione: "Una promessa condizionale del tipo «Se $P$, allora $Q$» viene smentita (negata) nell’unico caso in cui la condizione $P$ si avvera («vinco la gara») ma la conseguenza $Q$ non viene mantenuta («non ti regalo la medaglia»), ossia $P \\land \\neg Q$.",
+    fonte: "Lotto L1 del progetto — L1-27 (ID 664)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 665,
+    materia: "Logica",
+    difficolta: "medio-difficile",
+    domanda: "Qual è la corretta negazione logica della proposizione complessa $A \\to (B \\land C)$?",
+    rispostaCorretta: "$A \\land (\\neg B \\lor \\neg C)$",
+    risposteErrate: [
+      "$\\neg A \\to (\\neg B \\lor \\neg C)$",
+      "$A \\land \\neg B \\land \\neg C$",
+      "$\\neg A \\land (B \\land C)$",
+      "$A \\lor (\\neg B \\land \\neg C)$"
+    ],
+    spiegazione: "La negazione di un’implicazione $P \\to Q$ è $P \\land \\neg Q$. Ponendo $P = A$ e $Q = (B \\land C)$, si ha: $\\neg[A \\to (B \\land C)] \\equiv A \\land \\neg(B \\land C)$. Applicando ora la legge di De Morgan a $\\neg(B \\land C)$, otteniamo $A \\land (\\neg B \\lor \\neg C)$.",
+    fonte: "Lotto L1 del progetto — L1-28 (ID 665)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 666,
+    materia: "Logica",
+    difficolta: "medio-facile",
+    domanda: "Nella logica dei predicati, il quantificatore universale $\\forall$ (letto «per ogni» o «per tutti») associato alla formula $\\forall x P(x)$ esprime che:",
+    rispostaCorretta: "La proprietà $P$ è verificata da ogni singolo elemento del dominio di riferimento considerato",
+    risposteErrate: [
+      "Esiste almeno un elemento nel dominio che soddisfa la proprietà $P$",
+      "La maggior parte degli elementi del dominio soddisfa la proprietà $P$",
+      "La proprietà $P$ è vera per un numero infinito di elementi ma non necessariamente per tutti",
+      "Nessun elemento del dominio soddisfa la proprietà $P$"
+    ],
+    spiegazione: "L’enunciato universale $\\forall x P(x)$ afferma che la proprietà o predicato $P$ vale indistintamente per la totalità degli elementi appartenenti al dominio di discorso. È sufficiente un solo controesempio per renderlo falso.",
+    fonte: "Lotto L1 del progetto — L1-29 (ID 666)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 667,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Il quantificatore esistenziale $\\exists$ (letto «esiste» o «esiste almeno un») associato alla formula $\\exists x P(x)$ è vero se e solo se:",
+    rispostaCorretta: "Nel dominio di discorso considerato esiste almeno un elemento che soddisfa la proprietà $P$",
+    risposteErrate: [
+      "Tutti gli elementi del dominio soddisfano rigorosamente la proprietà $P$",
+      "Esattamente un solo ed unico elemento del dominio soddisfa la proprietà $P$",
+      "La proprietà $P$ è soddisfatta da almeno il $50\\%$ degli elementi del dominio",
+      "Nessun elemento del dominio soddisfa la proprietà $P$"
+    ],
+    spiegazione: "L’enunciato esistenziale $\\exists x P(x)$ richiede che vi sia almeno un elemento del dominio per cui il predicato $P(x)$ sia vero (possono essercene uno, molti o anche tutti).",
+    fonte: "Lotto L1 del progetto — L1-30 (ID 667)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 668,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la corretta negazione logica dell’affermazione universale «Tutti gli studenti iscritti al corso hanno superato la prova finale»?",
+    rispostaCorretta: "Esiste almeno uno studente iscritto al corso che non ha superato la prova finale",
+    risposteErrate: [
+      "Nessuno studente iscritto al corso ha superato la prova finale",
+      "Tutti gli studenti iscritti al corso sono stati respinti alla prova finale",
+      "La maggior parte degli studenti iscritti al corso non ha superato la prova finale",
+      "Esiste almeno uno studente iscritto al corso che ha superato la prova finale"
+    ],
+    spiegazione: "La negazione di un quantificatore universale è un quantificatore esistenziale con predicato negato: $\\neg[\\forall x P(x)] \\equiv \\exists x \\neg P(x)$. Per smentire che «tutti» abbiano superato la prova non serve che «nessuno» l’abbia superata; basta che vi sia almeno uno studente che non l’ha superata.",
+    fonte: "Lotto L1 del progetto — L1-31 (ID 668)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 669,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la distinzione logica fondamentale tra l’espressione «Non tutti gli $A$ sono $B$» e l’espressione «Nessun $A$ è $B$»?",
+    rispostaCorretta: "«Non tutti gli $A$ sono $B$» afferma che esiste almeno un $A$ che non è $B$ (ma altri potrebbero esserlo); «Nessun $A$ è $B$» esclude categoricamente che anche un solo $A$ sia $B$",
+    risposteErrate: [
+      "Le due espressioni sono perfettamente sinonime ed equivalenti in logica classica",
+      "«Non tutti gli $A$ sono $B$» implica che nessun $A$ possa essere $B$",
+      "«Nessun $A$ è $B$» ammette che una minoranza di $A$ sia $B$",
+      "«Non tutti gli $A$ sono $B$» si applica solo a insiemi finiti, «Nessun $A$ è $B$» solo a insiemi infiniti"
+    ],
+    spiegazione: "«Non tutti gli $A$ sono $B$» corrisponde a $\\exists x (A(x) \\land \\neg B(x))$ (esiste almeno un controesempio, compatibile con il fatto che molti altri $A$ siano $B$). «Nessun $A$ è $B$» corrisponde a $\\forall x (A(x) \\to \\neg B(x))$ (totale disgiunzione tra gli insiemi $A$ e $B$).",
+    fonte: "Lotto L1 del progetto — L1-32 (ID 669)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 670,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la corretta negazione logica dell’enunciato esistenziale «Esiste almeno un gatto a cui piace fare il bagno nell’acqua»?",
+    rispostaCorretta: "A nessun gatto piace fare il bagno nell’acqua (ossia a tutti i gatti non piace)",
+    risposteErrate: [
+      "Esiste almeno un gatto a cui non piace fare il bagno nell’acqua",
+      "A tutti i gatti piace fare il bagno nell’acqua",
+      "Alla maggior parte dei gatti non piace fare il bagno nell’acqua",
+      "Esistono gatti a cui piace fare il bagno ma solo se l’acqua è tiepida"
+    ],
+    spiegazione: "La negazione del quantificatore esistenziale è un quantificatore universale con predicato negato: $\\neg[\\exists x P(x)] \\equiv \\forall x \\neg P(x)$. Negare che esista almeno un gatto con tale preferenza equivale ad affermare che nessun gatto ha tale preferenza (tutti i gatti non amano il bagno).",
+    fonte: "Lotto L1 del progetto — L1-33 (ID 670)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 671,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la corretta negazione logica della proposizione «Nessun numero primo maggiore di 2 è un numero pari»?",
+    rispostaCorretta: "Esiste almeno un numero primo maggiore di 2 che è un numero pari",
+    risposteErrate: [
+      "Tutti i numeri primi maggiori di 2 sono numeri pari",
+      "Nessun numero pari maggiore di 2 è un numero primo",
+      "Tutti i numeri dispari maggiori di 2 sono numeri primi",
+      "Esiste almeno un numero primo maggiore di 2 che è dispari"
+    ],
+    spiegazione: "L’affermazione «Nessun $A$ è $B$» equivale a $\\forall x (A(x) \\to \\neg B(x))$. La sua negazione è $\\neg[\\forall x (A(x) \\to \\neg B(x))] \\equiv \\exists x (A(x) \\land B(x))$, ossia «Esiste almeno un $A$ che è $B$».",
+    fonte: "Lotto L1 del progetto — L1-34 (ID 671)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 672,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la corretta negazione logica dell’enunciato «Tutti gli alberi di questo parco sono pini oppure abeti» (disgiunzione inclusiva)?",
+    rispostaCorretta: "Esiste almeno un albero in questo parco che non è né un pino né un abete",
+    risposteErrate: [
+      "Nessun albero di questo parco è un pino oppure un abete",
+      "Tutti gli alberi di questo parco non sono né pini né abeti",
+      "Esiste almeno un albero in questo parco che è sia un pino sia un abete",
+      "Alcuni alberi del parco sono pini e altri sono abeti"
+    ],
+    spiegazione: "L’enunciato è $\\forall x (P(x) \\lor A(x))$. La sua negazione logica è $\\exists x \\neg(P(x) \\lor A(x))$. Applicando De Morgan alla disgiunzione, $\\neg(P(x) \\lor A(x)) \\equiv \\neg P(x) \\land \\neg A(x)$. Dunque: «Esiste almeno un albero che non è un pino E non è un abete» (cioè non è né l’uno né l’altro).",
+    fonte: "Lotto L1 del progetto — L1-35 (ID 672)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 673,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la corretta negazione logica dell’affermazione «Ogni volta che vado a correre all’aperto, indosso le scarpe da ginnastica»?",
+    rispostaCorretta: "Esiste almeno una volta in cui vado a correre all’aperto e non indosso le scarpe da ginnastica",
+    risposteErrate: [
+      "Non vado mai a correre all’aperto e non indosso mai le scarpe da ginnastica",
+      "Ogni volta che non vado a correre all’aperto, non indosso le scarpe da ginnastica",
+      "Ogni volta che vado a correre all’aperto, non indosso le scarpe da ginnastica",
+      "Indosso le scarpe da ginnastica solo quando non vado a correre all’aperto"
+    ],
+    spiegazione: "L’affermazione universale condizionale $\\forall t (C(t) \\to S(t))$ («Per ogni volta $t$, se corro allora metto le scarpe») viene smentita dall’esistenza di almeno un’occasione in cui la premessa è vera e la conseguenza è falsa: $\\exists t (C(t) \\land \\neg S(t))$.",
+    fonte: "Lotto L1 del progetto — L1-36 (ID 673)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 674,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "A quale delle seguenti proposizioni equivale logicamente l’affermazione categorica «Nessun rettile è un animale a sangue caldo»?",
+    rispostaCorretta: "Tutti gli animali a sangue caldo non sono rettili (e tutti i rettili non sono animali a sangue caldo)",
+    risposteErrate: [
+      "Tutti gli animali che non sono rettili sono a sangue caldo",
+      "Esiste almeno un rettile che non è un animale a sangue caldo",
+      "Nessun animale a sangue freddo è un rettile",
+      "Tutti i rettili sono animali a sangue freddo solo se sono ovipari"
+    ],
+    spiegazione: "La proposizione «Nessun $A$ è $B$» è simmetrica e stabilisce che l’intersezione tra l’insieme $A$ e l’insieme $B$ è vuota ($A \\cap B = \\emptyset$). Ciò equivale sia a «Tutti gli $A$ sono non-$B$» sia a «Tutti i $B$ sono non-$A$» («Nessun $B$ è $A$»).",
+    fonte: "Lotto L1 del progetto — L1-37 (ID 674)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 675,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Sapendo che l’enunciato universale «Tutti i quadrati sono parallelogrammi» è vero, quale delle seguenti affermazioni ne costituisce la contrapositiva logicamente equivalente?",
+    rispostaCorretta: "Se una figura geometrica non è un parallelogramma, allora non è un quadrato",
+    risposteErrate: [
+      "Se una figura geometrica è un parallelogramma, allora è sicuramente un quadrato",
+      "Se una figura geometrica non è un quadrato, allora non è un parallelogramma",
+      "Tutti i parallelogrammi sono figure con quattro lati uguali",
+      "Esiste almeno un quadrato che non è un parallelogramma"
+    ],
+    spiegazione: "L’enunciato «Tutti i quadrati sono parallelogrammi» si formalizza come $\\forall x (Q(x) \\to P(x))$. La sua contrapositiva logicamente equivalente è $\\forall x (\\neg P(x) \\to \\neg Q(x))$: «Se una figura non è un parallelogramma, allora non è un quadrato».",
+    fonte: "Lotto L1 del progetto — L1-38 (ID 675)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 676,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la corretta negazione logica dell’enunciato: «Esiste almeno un candidato che è sia residente a Roma sia laureato in informatica»?",
+    rispostaCorretta: "Tutti i candidati o non sono residenti a Roma oppure non sono laureati in informatica",
+    risposteErrate: [
+      "Nessun candidato è residente a Roma e nessun candidato è laureato in informatica",
+      "Tutti i candidati sono residenti a Roma ma non laureati in informatica",
+      "Esiste almeno un candidato che non è residente a Roma e non è laureato in informatica",
+      "Tutti i candidati laureati in informatica non risiedono a Roma"
+    ],
+    spiegazione: "L’enunciato è $\\exists x (R(x) \\land L(x))$. La sua negazione è $\\neg[\\exists x (R(x) \\land L(x))] \\equiv \\forall x \\neg(R(x) \\land L(x))$. Per De Morgan, $\\neg(R(x) \\land L(x)) \\equiv \\neg R(x) \\lor \\neg L(x)$. Dunque per ogni candidato vale che non è residente a Roma oppure non è laureato in informatica.",
+    fonte: "Lotto L1 del progetto — L1-39 (ID 676)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 677,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si considerino due insiemi $X$ e $Y$ e un predicato binario $P(x,y)$. Qual è la differenza di significato logico tra le formule $\\forall x \\exists y P(x,y)$ e $\\exists y \\forall x P(x,y)$?",
+    rispostaCorretta: "Nella prima l’elemento $y$ può dipendere da ciascun elemento $x$ scelto; nella seconda deve esistere un unico elemento $y$ comune che funziona contemporaneamente per tutti gli $x$",
+    risposteErrate: [
+      "Le due formule sono perfettamente equivalenti per la proprietà commutativa dei quantificatori",
+      "La prima formula è sempre falsa, mentre la seconda è sempre vera in qualsiasi dominio",
+      "Nella prima formula $x$ e $y$ devono coincidere, nella seconda devono essere distinti",
+      "La seconda formula afferma che nessun elemento $x$ soddisfa la proprietà $P$"
+    ],
+    spiegazione: "L’ordine dei quantificatori di tipo diverso non è commutativo: $\\forall x \\exists y P(x,y)$ significa che per ogni $x$ si può trovare un adeguato $y$ (ad es. «per ogni persona $x$ esiste una madre $y$»). $\\exists y \\forall x P(x,y)$ è un’affermazione molto più forte che richiede un $y$ universale identico per tutti (ad es. «esiste una madre $y$ comune a tutte le persone $x$»).",
+    fonte: "Lotto L1 del progetto — L1-40 (ID 677)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 678,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Applicando le regole di negazione per proposizioni con quantificatori multipli, a quale formula equivale la negazione di $\\forall x \\exists y P(x,y)$?",
+    rispostaCorretta: "$\\exists x \\forall y \\neg P(x,y)$",
+    risposteErrate: [
+      "$\\forall x \\forall y \\neg P(x,y)$",
+      "$\\exists x \\exists y \\neg P(x,y)$",
+      "$\\forall x \\exists y \\neg P(x,y)$",
+      "$\\neg(\\exists y \\forall x P(x,y))$"
+    ],
+    spiegazione: "Negare una sequenza di quantificatori trasforma ogni $\\forall$ in $\\exists$, ogni $\\exists$ in $\\forall$ e nega il predicato interno: $\\neg[\\forall x \\exists y P(x,y)] \\equiv \\exists x \\neg[\\exists y P(x,y)] \\equiv \\exists x \\forall y \\neg P(x,y)$.",
+    fonte: "Lotto L1 del progetto — L1-41 (ID 678)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 679,
+    materia: "Logica",
+    difficolta: "medio-difficile",
+    domanda: "Qual è la corretta negazione formale della proposizione universale condizionale $\\forall x [P(x) \\to Q(x)]$?",
+    rispostaCorretta: "$\\exists x [P(x) \\land \\neg Q(x)]$",
+    risposteErrate: [
+      "$\\forall x [P(x) \\land \\neg Q(x)]$",
+      "$\\exists x [\\neg P(x) \\to \\neg Q(x)]$",
+      "$\\forall x [\\neg P(x) \\lor Q(x)]$",
+      "$\\exists x [\\neg P(x) \\land Q(x)]$"
+    ],
+    spiegazione: "1) La negazione del quantificatore universale è $\\exists x \\neg[P(x) \\to Q(x)]$. 2) La negazione dell’implicazione interna è $\\neg[P(x) \\to Q(x)] \\equiv P(x) \\land \\neg Q(x)$. 3) Unendo i due passaggi si ottiene: $\\exists x [P(x) \\land \\neg Q(x)]$, ossia «Esiste almeno un elemento $x$ che soddisfa $P(x)$ ma non soddisfa $Q(x)$».",
+    fonte: "Lotto L1 del progetto — L1-42 (ID 679)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 680,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si considerino le due premesse:\n1. «Se l’allarme antincendio suona, allora l’edificio viene evacuato immediatamente»;\n2. «L’allarme antincendio sta suonando».\nIn base alla regola di inferenza classica del *Modus Ponens*, quale conclusione segue necessariamente?",
+    rispostaCorretta: "L’edificio viene evacuato immediatamente",
+    risposteErrate: [
+      "L’edificio non viene evacuato",
+      "C’è sicuramente un incendio reale all’interno dell’edificio",
+      "L’allarme ha suonato a causa di un guasto tecnico",
+      "Nessuna conclusione è possibile senza verificare la presenza di fumo"
+    ],
+    spiegazione: "Il *Modus Ponens* è la fondamentale regola d’inferenza della logica proposizionale: date le premesse $P \\to Q$ e $P$, ne consegue necessariamente $Q$. Essendo vere le premesse «Allarme $\\implies$ Evacuazione» e «Allarme suona», la conclusione necessaria e inoppugnabile è «L’edificio viene evacuato».",
+    fonte: "Lotto L1 del progetto — L1-43 (ID 680)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 681,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si considerino le seguenti premesse vere:\n1. «Se un numero intero $n$ è divisibile per 6, allora $n$ è divisibile per 2»;\n2. «Il numero intero $k$ NON è divisibile per 2».\nApplicando la regola di inferenza del *Modus Tollens*, quale conclusione è logicamente certa?",
+    rispostaCorretta: "Il numero $k$ non è divisibile per 6",
+    risposteErrate: [
+      "Il numero $k$ è divisibile per 3",
+      "Il numero $k$ è un numero primo",
+      "Il numero $k$ è divisibile per 6",
+      "Non è possibile dedurre alcuna informazione sulla divisibilità di $k$ per 6"
+    ],
+    spiegazione: "Il *Modus Tollens* stabilisce che dalle premesse $P \\to Q$ e $\\neg Q$ segue necessariamente $\\neg P$. Poiché «divisibile per 6» ($P$) implica «divisibile per 2» ($Q$), e sapendo che $k$ non è divisibile per 2 ($\\neg Q$), concludiamo con certezza assoluta che $k$ non è divisibile per 6 ($\\neg P$).",
+    fonte: "Lotto L1 del progetto — L1-44 (ID 681)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 682,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si considerino le premesse:\n1. «La riunione si terrà nell’Aula Magna oppure nella Sala Riunioni» (disgiunzione inclusiva);\n2. «La riunione NON si terrà nell’Aula Magna».\nIn base al sillogismo disgiuntivo, quale affermazione è necessariamente vera?",
+    rispostaCorretta: "La riunione si terrà nella Sala Riunioni",
+    risposteErrate: [
+      "La riunione è stata annullata",
+      "La riunione si terrà contemporaneamente in entrambe le aule",
+      "La riunione si terrà all’aperto",
+      "Non è possibile determinare dove si terrà la riunione"
+    ],
+    spiegazione: "La regola del sillogismo disgiuntivo afferma che da $P \\lor Q$ e $\\neg P$ si deduce necessariamente $Q$. Sapendo che una delle due opzioni deve verificarsi e che la prima è esclusa, la riunione deve obbligatoriamente svolgersi nella Sala Riunioni.",
+    fonte: "Lotto L1 del progetto — L1-45 (ID 682)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 683,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Date le due implicazioni vere: «Se un triangolo è equilatero, allora è equiangolo» e «Se un triangolo è equiangolo, allora tutti i suoi angoli interni misurano $60^\\circ$», quale conclusione deriva per la proprietà di transitività (sillogismo ipotetico)?",
+    rispostaCorretta: "Se un triangolo è equilatero, allora tutti i suoi angoli interni misurano $60^\\circ$",
+    risposteErrate: [
+      "Tutti i triangoli hanno angoli interni che misurano $60^\\circ$",
+      "Se un triangolo ha angoli di $60^\\circ$, allora non può essere equiangolo",
+      "Un triangolo è equilatero se e solo se ha almeno due lati uguali",
+      "La transitività non si applica alle proprietà geometriche"
+    ],
+    spiegazione: "La regola del sillogismo ipotetico stabilisce la transitività dell’implicazione: $(P \\to Q) \\land (Q \\to R) \\implies (P \\to R)$. Di conseguenza, «equilatero $\\implies$ angoli di $60^\\circ$».",
+    fonte: "Lotto L1 del progetto — L1-46 (ID 683)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 684,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Se si sa con certezza che la disgiunzione inclusiva $P \\lor Q$ è FALSA, quale valore di verità assume con certezza la proposizione composta $\\neg P \\land \\neg Q$?",
+    rispostaCorretta: "Vero, perché se $P \\lor Q$ è falsa sia $P$ sia $Q$ sono false, rendendo vere entrambe le loro negazioni",
+    risposteErrate: [
+      "Falso, perché la negazione di una proposizione falsa è sempre indeterminata",
+      "Falso, perché la congiunzione $\\land$ richiede che almeno una variabile sia $P$",
+      "Indeterminato, perché dipende dal fatto che $P$ sia o meno equivalente a $Q$",
+      "Vero solo se $P$ e $Q$ sono proposizioni tautologiche"
+    ],
+    spiegazione: "Se $P \\lor Q$ è falsa, allora per la tavola di verità della disgiunzione deve essere $P = F$ e $Q = F$. Di conseguenza $\\neg P = V$ e $\\neg Q = V$, per cui la loro congiunzione $\\neg P \\land \\neg Q$ è $V \\land V = V$ (Vero). Questo illustra direttamente la legge di De Morgan $\\neg(P \\lor Q) \\equiv \\neg P \\land \\neg Q$.",
+    fonte: "Lotto L1 del progetto — L1-47 (ID 684)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 685,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si considerino le premesse:\n1. «Tutti i soci del Circolo Nautico sanno nuotare»;\n2. «Valerio è un socio del Circolo Nautico».\nQuale affermazione rappresenta una deduzione corretta e necessaria?",
+    rispostaCorretta: "Valerio sa nuotare",
+    risposteErrate: [
+      "Tutti coloro che sanno nuotare sono soci del Circolo Nautico",
+      "Chi non è socio del Circolo Nautico non sa nuotare",
+      "Valerio è l’unico socio del Circolo Nautico che sa nuotare",
+      "Se una persona sa nuotare, allora si chiama Valerio"
+    ],
+    spiegazione: "Dall’enunciato universale $\\forall x (S(x) \\to N(x))$ e dall’istanziazione $S(\\text{Valerio})$, segue per Modus Ponens universale che $N(\\text{Valerio})$, ovvero che Valerio sa nuotare.",
+    fonte: "Lotto L1 del progetto — L1-48 (ID 685)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 686,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In logica proposizionale classica, per la proprietà di verità vacua dell’implicazione materiale, se sappiamo che la proposizione antecedente $P$ è FALSA, quale valore di verità assume l’implicazione $P \\to Q$?",
+    rispostaCorretta: "L’implicazione $P \\to Q$ è sicuramente VERA, indipendentemente dal valore di verità (vero o falso) assunto dal conseguente $Q$",
+    risposteErrate: [
+      "L’implicazione $P \\to Q$ è sicuramente FALSA",
+      "L’implicazione $P \\to Q$ è vera solo se anche il conseguente $Q$ è falso",
+      "L’implicazione $P \\to Q$ è vera solo se il conseguente $Q$ è vero",
+      "Il valore di verità dell’implicazione è indeterminato e non calcolabile senza conoscere $Q$"
+    ],
+    spiegazione: "In virtù della tavola di verità dell’implicazione materiale classica, quando l’antecedente $P$ è falso ($F$), l’enunciato condizionale è considerato vacuamente vero ($F \\to V = V$ e $F \\to F = V$). Pertanto, la falsità della premessa rende l’implicazione $P \\to Q$ sempre vera indipendentemente dal valore assunto da $Q$.",
+    fonte: "Lotto L1 del progetto — L1-49 (ID 686)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 687,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Siano date le seguenti tre premesse vere:\n1. «Se piove ($P$), allora prendo l’autobus ($A$)»;\n2. «Se prendo l’autobus ($A$), allora arrivo puntuale al lavoro ($L$)»;\n3. «Oggi NON sono arrivato puntuale al lavoro ($\\neg L$)».\nQuale conclusione segue logicamente in modo necessario e inconfutabile?",
+    rispostaCorretta: "Oggi non piove ($\\neg P$)",
+    risposteErrate: [
+      "Oggi piove ($P$)",
+      "Oggi ho preso l’autobus ($A$)",
+      "Oggi sono arrivato in ritardo perché c’era traffico",
+      "Non è possibile trarre alcuna conclusione meteorologica"
+    ],
+    spiegazione: "1) Dalle premesse 1 e 2, per transitività (sillogismo ipotetico) si ha $P \\to L$ («Se piove, arrivo puntuale»). 2) Dalla premessa 3 sappiamo che $\\neg L$ («Non sono arrivato puntuale»). 3) Applicando il *Modus Tollens* a $P \\to L$ e $\\neg L$, otteniamo con assoluta certezza logica $\\neg P$, ossia «Oggi non piove».",
+    fonte: "Lotto L1 del progetto — L1-50 (ID 687)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
   }
 ];
 

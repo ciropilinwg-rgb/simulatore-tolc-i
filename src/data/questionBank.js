@@ -8450,6 +8450,601 @@ const questionBank = [
     numeroVolteProposta: 0,
     numeroRisposteCorrette: 0,
     numeroRisposteErrate: 0
+  },
+  {
+    id: 491,
+    materia: "Scienze",
+    domanda: "La temperatura iniziale di uno pneumatico è pari a $27^\\circ\\text{C}$ ($300{,}15\\text{ K} \\approx 300\\text{ K}$). A seguito del rotolamento su strada, la temperatura assoluta dell’aria all’interno aumenta di una variazione $\\Delta T = 45\\text{ K}$. Qual è la temperatura finale dell’aria espressa in gradi Celsius ($^\\circ\\text{C}$)?",
+    rispostaCorretta: "$72^\\circ\\text{C}$",
+    risposteErrate: [
+      "$345^\\circ\\text{C}$",
+      "$18^\\circ\\text{C}$",
+      "$117^\\circ\\text{C}$",
+      "$27^\\circ\\text{C}$"
+],
+    spiegazione: "Una variazione di temperatura di $1\\text{ K}$ equivale esattamente a una variazione di $1^\\circ\\text{C}$ ($\\Delta T_{\\text{Celsius}} = \\Delta T_{\\text{Kelvin}}$). Pertanto, la temperatura finale in gradi Celsius è: $T_f = T_i + \\Delta T = 27^\\circ\\text{C} + 45^\\circ\\text{C} = 72^\\circ\\text{C}$ (equivalente a $345\\text{ K}$).",
+    fonte: "Lotto S2 del progetto — S2-01 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 492,
+    materia: "Scienze",
+    domanda: "Una rotaia d’acciaio ha una lunghezza iniziale $L_0 = 50\\text{ m}$ alla temperatura di $10^\\circ\\text{C}$. Durante una calda giornata estiva la sua temperatura sale a $40^\\circ\\text{C}$. Sapendo che il coefficiente di dilatazione lineare dell’acciaio è $\\lambda = 1{,}2 \\times 10^{-5}\\text{ K}^{-1}$, di quanti millimetri si allunga complessivamente la rotaia?",
+    rispostaCorretta: "$18\\text{ mm}$",
+    risposteErrate: [
+      "$1{,}8\\text{ mm}$",
+      "$24\\text{ mm}$",
+      "$6\\text{ mm}$",
+      "$180\\text{ mm}$"
+],
+    spiegazione: "La variazione di temperatura è $\\Delta T = 40^\\circ\\text{C} - 10^\\circ\\text{C} = 30\\text{ K}$. L’allungamento termico lineare è dato da $\\Delta L = L_0 \\cdot \\lambda \\cdot \\Delta T = 50\\text{ m} \\cdot 1{,}2 \\times 10^{-5}\\text{ K}^{-1} \\cdot 30\\text{ K} = 1800 \\times 10^{-5}\\text{ m} = 0{,}018\\text{ m} = 18\\text{ mm}$.",
+    fonte: "Lotto S2 del progetto — S2-02 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 493,
+    materia: "Scienze",
+    domanda: "Un blocco metallico di massa $m = 2\\text{ kg}$ assorbe una quantità di calore pari a $Q = 9000\\text{ J}$, incrementando la propria temperatura di $\\Delta T = 15^\\circ\\text{C}$. Qual è il calore specifico $c$ del metallo?",
+    rispostaCorretta: "$300\\text{ J}/(\\text{kg}\\cdot\\text{K})$",
+    risposteErrate: [
+      "$600\\text{ J}/(\\text{kg}\\cdot\\text{K})$",
+      "$150\\text{ J}/(\\text{kg}\\cdot\\text{K})$",
+      "$4500\\text{ J}/(\\text{kg}\\cdot\\text{K})$",
+      "$60\\text{ J}/(\\text{kg}\\cdot\\text{K})$"
+],
+    spiegazione: "Dalla legge fondamentale della calorimetria $Q = m \\cdot c \\cdot \\Delta T$, esplicitando il calore specifico si ha: $c = \\frac{Q}{m \\cdot \\Delta T} = \\frac{9000\\text{ J}}{2\\text{ kg} \\cdot 15\\text{ K}} = \\frac{9000}{30} = 300\\text{ J}/(\\text{kg}\\cdot\\text{K})$.",
+    fonte: "Lotto S2 del progetto — S2-03 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 494,
+    materia: "Scienze",
+    domanda: "In un calorimetro ideale privo di dispersioni termiche, un blocchetto di alluminio di massa $m_1 = 0{,}20\\text{ kg}$ e calore specifico $c_1 = 900\\text{ J}/(\\text{kg}\\cdot\\text{K})$ alla temperatura $T_1 = 100^\\circ\\text{C}$ viene immerso in una massa $m_2 = 0{,}10\\text{ kg}$ di acqua ($c_2 = 4200\\text{ J}/(\\text{kg}\\cdot\\text{K})$) inizialmente alla temperatura $T_2 = 20^\\circ\\text{C}$. Qual è la temperatura di equilibrio $T_{\\text{eq}}$ raggiunta dal sistema?",
+    rispostaCorretta: "$44^\\circ\\text{C}$",
+    risposteErrate: [
+      "$60^\\circ\\text{C}$",
+      "$73{,}3^\\circ\\text{C}$",
+      "$76^\\circ\\text{C}$",
+      "$30^\\circ\\text{C}$"
+],
+    spiegazione: "Le capacità termiche dei due corpi sono: $C_1 = m_1 c_1 = 0{,}20 \\cdot 900 = 180\\text{ J/K}$ e $C_2 = m_2 c_2 = 0{,}10 \\cdot 4200 = 420\\text{ J/K}$. La temperatura di equilibrio termico è data da: $T_{\\text{eq}} = \\frac{C_1 T_1 + C_2 T_2}{C_1 + C_2} = \\frac{180 \\cdot 100 + 420 \\cdot 20}{180 + 420} = \\frac{18000 + 8400}{600} = \\frac{26400}{600} = 44^\\circ\\text{C}$.",
+    fonte: "Lotto S2 del progetto — S2-04 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 495,
+    materia: "Scienze",
+    domanda: "Una massa $m = 0{,}50\\text{ kg}$ di ghiaccio si trova alla temperatura di fusione ($0^\\circ\\text{C}$). Sapendo che il calore latente di fusione del ghiaccio è $\\lambda_f = 334\\text{ kJ/kg}$, quanto calore occorre somministrare per sciogliere completamente l’intero blocco di ghiaccio trasformandolo in acqua liquida a $0^\\circ\\text{C}$?",
+    rispostaCorretta: "$167\\text{ kJ}$",
+    risposteErrate: [
+      "$334\\text{ kJ}$",
+      "$668\\text{ kJ}$",
+      "$83{,}5\\text{ kJ}$",
+      "$16{,}7\\text{ kJ}$"
+],
+    spiegazione: "Durante una transizione di fase a temperatura costante, il calore scambiato dipende unicamente dalla massa e dal calore latente: $Q = m \\cdot \\lambda_f = 0{,}50\\text{ kg} \\cdot 334\\text{ kJ/kg} = 167\\text{ kJ}$.",
+    fonte: "Lotto S2 del progetto — S2-05 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 496,
+    materia: "Scienze",
+    domanda: "Tra i tre meccanismi fondamentali di trasferimento del calore (conduzione, convezione e irraggiamento), quale può propagarsi anche attraverso il vuoto assoluto in totale assenza di materia?",
+    rispostaCorretta: "Esclusivamente l’irraggiamento, mediante propagazione di onde elettromagnetiche",
+    risposteErrate: [
+      "Sia la conduzione sia l’irraggiamento",
+      "Esclusivamente la convezione, mediante flussi di particelle",
+      "Sia la convezione sia la conduzione",
+      "Nessun meccanismo, poiché il calore richiede necessariamente un mezzo materiale"
+],
+    spiegazione: "La conduzione e la convezione necessitano della presenza di materia (contatto microscopico o moto convettivo di fluidi). L’irraggiamento termico, invece, avviene mediante emissione e assorbimento di onde elettromagnetiche (radiazione termica) e si propaga regolarmente nel vuoto, come avviene per l’energia solare che raggiunge la Terra.",
+    fonte: "Lotto S2 del progetto — S2-06 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 497,
+    materia: "Scienze",
+    domanda: "Durante una trasformazione termodinamica, una massa di gas ideale assorbe dall’ambiente circostante una quantità di calore $Q = 800\\text{ J}$ ed espandendosi compie verso l’esterno un lavoro meccanico $L = 300\\text{ J}$. Qual è la variazione di energia interna $\\Delta U$ del gas?",
+    rispostaCorretta: "$+500\\text{ J}$",
+    risposteErrate: [
+      "$+1100\\text{ J}$",
+      "$-500\\text{ J}$",
+      "$-1100\\text{ J}$",
+      "$+240\\text{ kJ}$"
+],
+    spiegazione: "Per il primo principio della termodinamica: $\\Delta U = Q - L$. Avendo calore assorbito ($Q = +800\\text{ J}$) e lavoro compiuto dal sistema ($L = +300\\text{ J}$), si ottiene: $\\Delta U = 800\\text{ J} - 300\\text{ J} = +500\\text{ J}$.",
+    fonte: "Lotto S2 del progetto — S2-07 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 498,
+    materia: "Scienze",
+    domanda: "Un gas ideale racchiuso in un cilindro a pareti termicamente isolanti subisce una rapida compressione adiabatica ($Q = 0$). Se durante la compressione le forze esterne compiono sul gas un lavoro di modulo pari a $450\\text{ J}$ ($L = -450\\text{ J}$), cosa accade alla sua energia interna $\\Delta U$ e alla sua temperatura?",
+    rispostaCorretta: "L’energia interna aumenta di $+450\\text{ J}$ e la temperatura del gas aumenta",
+    risposteErrate: [
+      "L’energia interna diminuisce di $-450\\text{ J}$ e la temperatura del gas diminuisce",
+      "L’energia interna rimane rigorosamente costante poiché $Q = 0$",
+      "L’energia interna aumenta di $+450\\text{ J}$, ma la temperatura rimane invariata",
+      "L’energia interna diminuisce di $-450\\text{ J}$, ma la temperatura aumenta"
+],
+    spiegazione: "In una trasformazione adiabatica $Q = 0$, per cui il primo principio della termodinamica diviene $\\Delta U = -L$. Essendo il lavoro subìto dal gas negativo ($L = -450\\text{ J}$), si ha $\\Delta U = -(-450\\text{ J}) = +450\\text{ J}$. Poiché l’energia interna di un gas ideale è proporzionale alla temperatura assoluta, all’aumentare di $U$ corrisponde un aumento della temperatura.",
+    fonte: "Lotto S2 del progetto — S2-08 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 499,
+    materia: "Scienze",
+    domanda: "Un gas ideale si espande a pressione costante $p = 2{,}0 \\times 10^5\\text{ Pa}$, aumentando il proprio volume da $V_1 = 3{,}0\\text{ L}$ a $V_2 = 7{,}0\\text{ L}$ ($1\\text{ L} = 10^{-3}\\text{ m}^3$). Qual è il lavoro $L$ compiuto dal gas durante l’espansione?",
+    rispostaCorretta: "$800\\text{ J}$",
+    risposteErrate: [
+      "$800\\text{ kJ}$",
+      "$1400\\text{ J}$",
+      "$600\\text{ J}$",
+      "$400\\text{ J}$"
+],
+    spiegazione: "In una trasformazione isobara, il lavoro è dato da $L = p \\cdot \\Delta V$. La variazione di volume in unità SI è $\\Delta V = (7{,}0 - 3{,}0)\\text{ L} = 4{,}0\\text{ L} = 4{,}0 \\times 10^{-3}\\text{ m}^3$. Sostituendo: $L = 2{,}0 \\times 10^5\\text{ Pa} \\cdot 4{,}0 \\times 10^{-3}\\text{ m}^3 = 800\\text{ J}$.",
+    fonte: "Lotto S2 del progetto — S2-09 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 500,
+    materia: "Scienze",
+    domanda: "Un gas ideale racchiuso in un contenitore rigido indeformabile subisce una trasformazione isocora (a volume costante) assorbendo una quantità di calore $Q = 600\\text{ J}$. Quanto valgono rispettivamente il lavoro $L$ compiuto dal gas e la variazione della sua energia interna $\\Delta U$?",
+    rispostaCorretta: "$L = 0\\text{ J}$ e $\\Delta U = +600\\text{ J}$",
+    risposteErrate: [
+      "$L = +600\\text{ J}$ e $\\Delta U = 0\\text{ J}$",
+      "$L = +300\\text{ J}$ e $\\Delta U = +300\\text{ J}$",
+      "$L = -600\\text{ J}$ e $\\Delta U = +1200\\text{ J}$",
+      "$L = 0\\text{ J}$ e $\\Delta U = -600\\text{ J}$"
+],
+    spiegazione: "In una trasformazione a volume costante non vi è alcuna variazione volumetrica ($\\Delta V = 0$), pertanto il lavoro meccanico di espansione è nullo ($L = 0\\text{ J}$). Dal primo principio della termodinamica ($\\Delta U = Q - L$) ne consegue che tutto il calore assorbito si traduce in variazione di energia interna: $\\Delta U = Q = +600\\text{ J}$.",
+    fonte: "Lotto S2 del progetto — S2-10 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 501,
+    materia: "Scienze",
+    domanda: "Una massa di gas ideale si trova inizialmente alla pressione $p_1 = 1{,}5\\text{ bar}$ occupando un volume $V_1 = 4{,}0\\text{ L}$. Se il gas subisce un’espansione isoterma a temperatura costante fino a raggiungere un volume finale $V_2 = 12{,}0\\text{ L}$, quale sarà la sua pressione finale $p_2$?",
+    rispostaCorretta: "$0{,}5\\text{ bar}$",
+    risposteErrate: [
+      "$4{,}5\\text{ bar}$",
+      "$3{,}0\\text{ bar}$",
+      "$0{,}125\\text{ bar}$",
+      "$6{,}0\\text{ bar}$"
+],
+    spiegazione: "Per la legge di Boyle-Mariotte sulle trasformazioni isoterme a temperatura costante: $p_1 \\cdot V_1 = p_2 \\cdot V_2$. Ricavando la pressione finale: $p_2 = \\frac{p_1 \\cdot V_1}{V_2} = \\frac{1{,}5\\text{ bar} \\cdot 4{,}0\\text{ L}}{12{,}0\\text{ L}} = \\frac{6{,}0}{12{,}0} = 0{,}5\\text{ bar}$.",
+    fonte: "Lotto S2 del progetto — S2-11 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 502,
+    materia: "Scienze",
+    domanda: "Una determinata quantità di gas perfetto mantenuta a pressione costante occupa un volume $V_1 = 2{,}0\\text{ L}$ alla temperatura assoluta $T_1 = 300\\text{ K}$. Se il gas viene riscaldato isobaricamente fino alla temperatura assoluta $T_2 = 450\\text{ K}$, quale volume $V_2$ occuperà al termine della trasformazione?",
+    rispostaCorretta: "$3{,}0\\text{ L}$",
+    risposteErrate: [
+      "$1{,}33\\text{ L}$",
+      "$1{,}0\\text{ L}$",
+      "$13{,}1\\text{ L}$",
+      "$1{,}5\\text{ L}$"
+],
+    spiegazione: "Per la prima legge di Gay-Lussac (legge di Charles), a pressione costante il volume è direttamente proporzionale alla temperatura assoluta: $\\frac{V_1}{T_1} = \\frac{V_2}{T_2}$. Ricavando il volume finale: $V_2 = V_1 \\cdot \\frac{T_2}{T_1} = 2{,}0\\text{ L} \\cdot \\frac{450\\text{ K}}{300\\text{ K}} = 2{,}0 \\cdot 1{,}5 = 3{,}0\\text{ L}$.",
+    fonte: "Lotto S2 del progetto — S2-12 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 503,
+    materia: "Scienze",
+    domanda: "Un recipiente rigido di volume $V = 8{,}31\\text{ L} = 8{,}31 \\times 10^{-3}\\text{ m}^3$ contiene un gas ideale alla pressione $p = 3{,}0 \\times 10^5\\text{ Pa}$ e alla temperatura $T = 300\\text{ K}$. Assumendo la costante universale dei gas $R = 8{,}31\\text{ J}/(\\text{mol}\\cdot\\text{K})$, quante moli $n$ di gas sono presenti all’interno del recipiente?",
+    rispostaCorretta: "$1{,}0\\text{ mol}$",
+    risposteErrate: [
+      "$1000\\text{ mol}$",
+      "$300\\text{ mol}$",
+      "$11{,}1\\text{ mol}$",
+      "$0{,}001\\text{ mol}$"
+],
+    spiegazione: "Dall’equazione di stato dei gas perfetti $p V = n R T$, esplicitando il numero di moli si ricava: $n = \\frac{p \\cdot V}{R \\cdot T} = \\frac{3{,}0 \\times 10^5\\text{ Pa} \\cdot 8{,}31 \\times 10^{-3}\\text{ m}^3}{8{,}31\\text{ J}/(\\text{mol}\\cdot\\text{K}) \\cdot 300\\text{ K}} = \\frac{2493}{2493} = 1{,}0\\text{ mol}$.",
+    fonte: "Lotto S2 del progetto — S2-13 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 504,
+    materia: "Scienze",
+    domanda: "Secondo la teoria cinetica dei gas, da quale grandezza fisica dipende direttamente l’energia cinetica media di traslazione delle molecole di un gas ideale monoatomico?",
+    rispostaCorretta: "Esclusivamente dalla temperatura assoluta $T$ del gas",
+    risposteErrate: [
+      "Dalla pressione $p$ esercitata sulle pareti del contenitore",
+      "Dal volume $V$ del recipiente a parità di temperatura",
+      "Dalla massa molare delle singole molecole del gas",
+      "Dalla densità volumetrica del gas nel recipiente"
+],
+    spiegazione: "In base all’interpretazione microscopica della termodinamica e al teorema di equipartizione dell’energia, l’energia cinetica media di traslazione di una molecola di gas ideale monoatomico è data da $\\langle E_c \\rangle = \\frac{3}{2} k_B T$ (dove $k_B$ è la costante di Boltzmann), dipendendo quindi unicamente dalla temperatura termodinamica assoluta $T$.",
+    fonte: "Lotto S2 del progetto — S2-14 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 505,
+    materia: "Scienze",
+    domanda: "Una macchina termica ideale di Carnot opera ciclicamente tra una sorgente calda a temperatura $T_{\\text{calda}} = 600\\text{ K}$ e una sorgente fredda a temperatura $T_{\\text{fredda}} = 300\\text{ K}$. Qual è il rendimento termodinamico teorico $\\eta$ di tale macchina?",
+    rispostaCorretta: "$50\\%$",
+    risposteErrate: [
+      "$100\\%$",
+      "$33{,}3\\%$",
+      "$91{,}7\\%$",
+      "$25\\%$"
+],
+    spiegazione: "Il rendimento massimo teorico di una macchina di Carnot reversibile che lavora tra due termostati è dato da: $\\eta = 1 - \\frac{T_{\\text{fredda}}}{T_{\\text{calda}}} = 1 - \\frac{300\\text{ K}}{600\\text{ K}} = 1 - 0{,}50 = 0{,}50 = 50\\%$.",
+    fonte: "Lotto S2 del progetto — S2-15 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 506,
+    materia: "Scienze",
+    domanda: "Un blocco rettangolare omogeneo ha dimensioni $10\\text{ cm} \\times 5\\text{ cm} \\times 4\\text{ cm}$ (volume $V = 200\\text{ cm}^3 = 2{,}0 \\times 10^{-4}\\text{ m}^3$) e possiede una massa $m = 1{,}6\\text{ kg}$. Qual è la densità $\\rho$ del materiale nel Sistema Internazionale?",
+    rispostaCorretta: "$8000\\text{ kg/m}^3$",
+    risposteErrate: [
+      "$800\\text{ kg/m}^3$",
+      "$3200\\text{ kg/m}^3$",
+      "$0{,}80\\text{ kg/m}^3$",
+      "$80\\text{ kg/m}^3$"
+],
+    spiegazione: "La densità è il rapporto tra massa e volume: $\\rho = \\frac{m}{V} = \\frac{1{,}6\\text{ kg}}{2{,}0 \\times 10^{-4}\\text{ m}^3} = \\frac{1{,}6}{0{,}0002} = 8000\\text{ kg/m}^3$ (pari a $8{,}0\\text{ g/cm}^3$).",
+    fonte: "Lotto S2 del progetto — S2-16 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 507,
+    materia: "Scienze",
+    domanda: "Una forza perpendicolare costante di modulo $F = 600\\text{ N}$ viene esercitata in modo uniforme su una piastra quadrata di lato $L = 20\\text{ cm} = 0{,}20\\text{ m}$. Qual è la pressione $p$ generata sulla superficie di contatto?",
+    rispostaCorretta: "$15\\text{ kPa}$",
+    risposteErrate: [
+      "$3\\text{ kPa}$",
+      "$60\\text{ kPa}$",
+      "$0{,}75\\text{ kPa}$",
+      "$1{,}5\\text{ kPa}$"
+],
+    spiegazione: "L’area della piastra quadrata è $A = L^2 = (0{,}20\\text{ m})^2 = 0{,}04\\text{ m}^2$. La pressione è data da: $p = \\frac{F}{A} = \\frac{600\\text{ N}}{0{,}04\\text{ m}^2} = 15\\,000\\text{ Pa} = 15\\text{ kPa}$.",
+    fonte: "Lotto S2 del progetto — S2-17 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 508,
+    materia: "Scienze",
+    domanda: "Un subacqueo nuota in un lago d’acqua dolce ($\rho = 1000\\text{ kg/m}^3$) a una profondità $h = 15\\text{ m}$ sotto la superficie. Assumendo $g = 10\\text{ m/s}^2$, qual è il valore della sola pressione idrostatica relativa esercitata dalla colonna d’acqua sovrastante?",
+    rispostaCorretta: "$1{,}5 \\times 10^5\\text{ Pa}$",
+    risposteErrate: [
+      "$1{,}5 \\times 10^4\\text{ Pa}$",
+      "$1{,}5 \\times 10^6\\text{ Pa}$",
+      "$3{,}0 \\times 10^5\\text{ Pa}$",
+      "$7{,}5 \\times 10^4\\text{ Pa}$"
+],
+    spiegazione: "Per la legge di Stevino, la pressione idrostatica relativa dovuta alla colonna di fluido è data da: $p_{\\text{idro}} = \\rho \\cdot g \\cdot h = 1000\\text{ kg/m}^3 \\cdot 10\\text{ m/s}^2 \\cdot 15\\text{ m} = 150\\,000\\text{ Pa} = 1{,}5 \\times 10^5\\text{ Pa}$ (pari a $1{,}5\\text{ bar}$).",
+    fonte: "Lotto S2 del progetto — S2-18 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 509,
+    materia: "Scienze",
+    domanda: "Assumendo la pressione atmosferica al livello della superficie libera pari a $p_{\\text{atm}} = 1{,}0 \\times 10^5\\text{ Pa}$, qual è la pressione assoluta totale agente a una profondità $h = 20\\text{ m}$ in un bacino d’acqua dolce ($\rho = 1000\\text{ kg/m}^3$, $g = 10\\text{ m/s}^2$)?",
+    rispostaCorretta: "$3{,}0 \\times 10^5\\text{ Pa}$",
+    risposteErrate: [
+      "$2{,}0 \\times 10^5\\text{ Pa}$",
+      "$1{,}0 \\times 10^5\\text{ Pa}$",
+      "$4{,}0 \\times 10^5\\text{ Pa}$",
+      "$2{,}0 \\times 10^6\\text{ Pa}$"
+],
+    spiegazione: "La pressione assoluta totale a profondità $h$ è la somma della pressione atmosferica e della pressione idrostatica: $p_{\\text{tot}} = p_{\\text{atm}} + \\rho g h = 1{,}0 \\times 10^5\\text{ Pa} + (1000 \\cdot 10 \\cdot 20)\\text{ Pa} = 1{,}0 \\times 10^5 + 2{,}0 \\times 10^5 = 3{,}0 \\times 10^5\\text{ Pa}$ (pari a $3\\text{ bar}$).",
+    fonte: "Lotto S2 del progetto — S2-19 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 510,
+    materia: "Scienze",
+    domanda: "In un torchio idraulico ideale, il pistone di ingresso ha un’area $A_1 = 10\\text{ cm}^2$, mentre il pistone di sollevamento ha un’area $A_2 = 250\\text{ cm}^2$. Se sul pistone piccolo viene applicata una forza $F_1 = 40\\text{ N}$, quale forza $F_2$ viene sviluppata sul pistone grande?",
+    rispostaCorretta: "$1000\\text{ N}$",
+    risposteErrate: [
+      "$1{,}6\\text{ N}$",
+      "$40\\text{ N}$",
+      "$250\\text{ N}$",
+      "$10\\,000\\text{ N}$"
+],
+    spiegazione: "Per il principio di Pascal, la pressione si trasmette inalterata in tutto il liquido incompressibile ($p_1 = p_2 \\implies \\frac{F_1}{A_1} = \\frac{F_2}{A_2}$). La forza sul pistone grande è quindi: $F_2 = F_1 \\cdot \\frac{A_2}{A_1} = 40\\text{ N} \\cdot \\frac{250\\text{ cm}^2}{10\\text{ cm}^2} = 40 \\cdot 25 = 1000\\text{ N}$.",
+    fonte: "Lotto S2 del progetto — S2-20 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 511,
+    materia: "Scienze",
+    domanda: "In un tubo a U aperto ad entrambe le estremità sono presenti due liquidi immiscibili in equilibrio: olio di densità $\\rho_1 = 800\\text{ kg/m}^3$ e acqua di densità $\\rho_2 = 1000\\text{ kg/m}^3$. Se nel ramo sinistro la colonna d’olio ha un’altezza $h_1 = 20\\text{ cm}$ al di sopra della superficie di separazione olio-acqua, quale altezza $h_2$ (misurata verticalmente dal livello della superficie di separazione fino alla superficie libera nel ramo destro) raggiunge la colonna d’acqua?",
+    rispostaCorretta: "$16\\text{ cm}$",
+    risposteErrate: [
+      "$25\\text{ cm}$",
+      "$20\\text{ cm}$",
+      "$10\\text{ cm}$",
+      "$12{,}5\\text{ cm}$"
+],
+    spiegazione: "In un tubo a U con liquidi immiscibili in equilibrio, le pressioni idrostatiche alla quota della superficie di separazione devono uguagliarsi: $\\rho_1 \\cdot g \\cdot h_1 = \\rho_2 \\cdot g \\cdot h_2 \\implies \\rho_1 h_1 = \\rho_2 h_2$. Da cui: $h_2 = h_1 \\cdot \\frac{\\rho_1}{\\rho_2} = 20\\text{ cm} \\cdot \\frac{800}{1000} = 20 \\cdot 0{,}8 = 16\\text{ cm}$.",
+    fonte: "Lotto S2 del progetto — S2-21 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 512,
+    materia: "Scienze",
+    domanda: "Nel barometro a mercurio di Torricelli a livello del mare, la pressione atmosferica standard sostiene un dislivello verticale della colonna di mercurio pari a $h = 76\\text{ cm}$ (equivalente a $76\\text{ cmHg}$). Se il tubo viene leggermente inclinato formando un angolo di $30^\\circ$ rispetto alla verticale, cosa accade all’altezza verticale del dislivello rispetto alla superficie libera della vaschetta?",
+    rispostaCorretta: "L’altezza verticale rimane invariata a $76\\text{ cm}$, mentre aumenta la lunghezza del tratto di tubo occupato dal mercurio",
+    risposteErrate: [
+      "L’altezza verticale diminuisce proporzionalmente al coseno dell’angolo",
+      "L’altezza verticale aumenta poiché il mercurio scorre più facilmente",
+      "La colonna di mercurio si svuota completamente nella vaschetta per assenza di equilibrio",
+      "Sia l’altezza verticale sia la lunghezza occupata nel tubo rimangono rigorosamente identiche"
+],
+    spiegazione: "Per la legge di Stevino, la pressione idrostatica dipende unicamente dal dislivello verticale $h$ tra la superficie libera e il menisco superiore ($p_{\\text{atm}} = \\rho g h$). Inclinando il tubo, l’altezza verticale $h$ rimane costante a $76\\text{ cm}$, mentre la lunghezza del mercurio lungo il tubo aumenta secondo la relazione $L = \\frac{h}{\\cos(30^\\circ)}$.",
+    fonte: "Lotto S2 del progetto — S2-22 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 513,
+    materia: "Scienze",
+    domanda: "Un manometro a tubo a U a estremità aperta contenente mercurio (densità $\\rho = 13\\,600\\text{ kg/m}^3$) è collegato a un serbatoio di gas. Se la superficie libera del mercurio nel ramo aperto all’atmosfera si trova $\\Delta h = 5\\text{ cm} = 0{,}05\\text{ m}$ più in alto rispetto alla superficie nel ramo collegato al serbatoio, assumendo $g = 10\\text{ m/s}^2$, qual è la pressione relativa (manometrica) del gas nel serbatoio?",
+    rispostaCorretta: "$6{,}8\\text{ kPa}$",
+    risposteErrate: [
+      "$680\\text{ Pa}$",
+      "$68\\text{ kPa}$",
+      "$0{,}5\\text{ kPa}$",
+      "$13{,}6\\text{ kPa}$"
+],
+    spiegazione: "La pressione relativa (o manometrica) in un manometro a tubo aperto è data direttamente dal dislivello della colonna di fluido: $p_{\\text{man}} = \\rho \\cdot g \\cdot \\Delta h = 13\\,600\\text{ kg/m}^3 \\cdot 10\\text{ m/s}^2 \\cdot 0{,}05\\text{ m} = 6800\\text{ Pa} = 6{,}8\\text{ kPa}$.",
+    fonte: "Lotto S2 del progetto — S2-23 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 514,
+    materia: "Scienze",
+    domanda: "Un solido metallico pesa in aria $P = 50\\text{ N}$. Quando viene completamente immerso in acqua dolce ($\rho = 1000\\text{ kg/m}^3$, $g = 10\\text{ m/s}^2$), riceve una spinta idrostatica di Archimede di modulo pari a $F_A = 20\\text{ N}$. Qual è il valore del suo peso apparente misurato da un dinamometro mentre è immerso?",
+    rispostaCorretta: "$30\\text{ N}$",
+    risposteErrate: [
+      "$70\\text{ N}$",
+      "$20\\text{ N}$",
+      "$50\\text{ N}$",
+      "$2{,}5\\text{ N}$"
+],
+    spiegazione: "Il peso apparente di un corpo immerso è la risultante tra la forza peso reale diretta verso il basso e la spinta di Archimede diretta verso l’alto: $P_{\\text{app}} = P - F_A = 50\\text{ N} - 20\\text{ N} = 30\\text{ N}$.",
+    fonte: "Lotto S2 del progetto — S2-24 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 515,
+    materia: "Scienze",
+    domanda: "Un blocco di legno omogeneo di densità $\\rho_{\\text{legno}} = 600\\text{ kg/m}^3$ galleggia liberamente in equilibrio sulla superficie dell’acqua dolce ($\rho_{\\text{acqua}} = 1000\\text{ kg/m}^3$). Quale percentuale del volume totale del blocco rimane immersa al di sotto del pelo libero dell’acqua?",
+    rispostaCorretta: "$60\\%$",
+    risposteErrate: [
+      "$40\\%$",
+      "$167\\%$",
+      "$37{,}5\\%$",
+      "$62{,}5\\%$"
+],
+    spiegazione: "In condizioni di galleggiamento statico, il peso del corpo eguaglia la spinta di Archimede sul volume immerso: $P = F_A \\implies \\rho_{\\text{corpo}} V_{\\text{tot}} g = \\rho_{\\text{fluido}} V_{\\text{imm}} g$. La frazione di volume immerso è quindi: $\\frac{V_{\\text{imm}}}{V_{\\text{tot}}} = \\frac{\\rho_{\\text{legno}}}{\\rho_{\\text{acqua}}} = \\frac{600}{1000} = 0{,}60 = 60\\%$.",
+    fonte: "Lotto S2 del progetto — S2-25 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 516,
+    materia: "Scienze",
+    domanda: "Una sfera solida omogenea viene rilasciata all’interno di una vaschetta riempita di olio sintetico avente densità pari a $\\rho_{\\text{olio}} = 850\\text{ kg/m}^3$. In quale circostanza la sfera affonderà inesorabilmente fino a raggiungere il fondo della vaschetta?",
+    rispostaCorretta: "Se la densità della sfera è strettamente maggiore di $850\\text{ kg/m}^3$",
+    risposteErrate: [
+      "Se la massa complessiva della sfera supera $1\\text{ kg}$, indipendentemente dal suo volume",
+      "Se la densità della sfera è compresa tra $400\\text{ kg/m}^3$ e $850\\text{ kg/m}^3$",
+      "Se il raggio della sfera supera la profondità della vaschetta",
+      "Se la densità della sfera è esattamente pari alla metà di quella dell’olio"
+],
+    spiegazione: "Un corpo completamente immerso affonda se la sua forza peso supera la spinta di Archimede massima: $P > F_A \\implies \\rho_{\\text{corpo}} V g > \\rho_{\\text{fluido}} V g \\implies \\rho_{\\text{corpo}} > \\rho_{\\text{fluido}}$. Pertanto, la sfera affonda solo se la sua densità è strettamente superiore a $850\\text{ kg/m}^3$.",
+    fonte: "Lotto S2 del progetto — S2-26 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 517,
+    materia: "Scienze",
+    domanda: "Un blocco di ghiaccio omogeneo di densità $\\rho_g = 920\\text{ kg/m}^3$ galleggia in acqua dolce ($\rho_a = 1000\\text{ kg/m}^3$). Se il volume della porzione che sporge al di sopra del livello dell’acqua (volume emerso) è pari a $V_{\\text{em}} = 80\\text{ dm}^3$, qual è il volume totale complessivo dell’intero blocco di ghiaccio?",
+    rispostaCorretta: "$1000\\text{ dm}^3$",
+    risposteErrate: [
+      "$920\\text{ dm}^3$",
+      "$87\\text{ dm}^3$",
+      "$73{,}6\\text{ dm}^3$",
+      "$800\\text{ dm}^3$"
+],
+    spiegazione: "La frazione di volume immerso è $\\frac{V_{\\text{imm}}}{V_{\\text{tot}}} = \\frac{\\rho_g}{\\rho_a} = \\frac{920}{1000} = 0{,}92$ ($92\\%$). Di conseguenza, la frazione di volume emerso corrisponde all’$8\\%$: $\\frac{V_{\\text{em}}}{V_{\\text{tot}}} = 1 - 0{,}92 = 0{,}08$. Il volume totale è: $V_{\\text{tot}} = \\frac{V_{\\text{em}}}{0{,}08} = \\frac{80\\text{ dm}^3}{0{,}08} = 1000\\text{ dm}^3$ ($1\\text{ m}^3$).",
+    fonte: "Lotto S2 del progetto — S2-27 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 518,
+    materia: "Scienze",
+    domanda: "Un pallone aerostatico occupa un volume complessivo $V = 500\\text{ m}^3$ nell’atmosfera terrestre. Sapendo che la densità dell’aria circostante a livello del suolo vale $\\rho_{\\text{aria}} = 1{,}2\\text{ kg/m}^3$ e assumendo $g = 10\\text{ m/s}^2$, qual è il modulo della spinta di Archimede esercitata dall’aria sul pallone?",
+    rispostaCorretta: "$6000\\text{ N}$",
+    risposteErrate: [
+      "$600\\text{ N}$",
+      "$3000\\text{ N}$",
+      "$60\\text{ N}$",
+      "$60\\text{ kN}$"
+],
+    spiegazione: "La spinta di Archimede si applica a tutti i fluidi, inclusi i gas: $F_A = \\rho_{\\text{aria}} \\cdot g \\cdot V = 1{,}2\\text{ kg/m}^3 \\cdot 10\\text{ m/s}^2 \\cdot 500\\text{ m}^3 = 6000\\text{ N} = 6\\text{ kN}$.",
+    fonte: "Lotto S2 del progetto — S2-28 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 519,
+    materia: "Scienze",
+    domanda: "In una conduttura idraulica a sezione circolare costante di area $A = 5{,}0\\text{ cm}^2 = 5{,}0 \\times 10^{-4}\\text{ m}^2$, l’acqua scorre a una velocità uniforme $v = 2{,}0\\text{ m/s}$. Qual è la portata volumetrica $Q$ del condotto espressa in litri al secondo ($\\text{L/s}$)?",
+    rispostaCorretta: "$1{,}0\\text{ L/s}$",
+    risposteErrate: [
+      "$10\\text{ L/s}$",
+      "$0{,}10\\text{ L/s}$",
+      "$0{,}50\\text{ L/s}$",
+      "$0{,}001\\text{ L/s}$"
+],
+    spiegazione: "La portata volumetrica è il prodotto dell’area della sezione per la velocità del fluido: $Q = A \\cdot v = 5{,}0 \\times 10^{-4}\\text{ m}^2 \\cdot 2{,}0\\text{ m/s} = 1{,}0 \\times 10^{-3}\\text{ m}^3/\\text{s}$. Ricordando che $1\\text{ m}^3 = 1000\\text{ L}$, si ottiene: $Q = 1{,}0 \\times 10^{-3} \\times 1000\\text{ L/s} = 1{,}0\\text{ L/s}$.",
+    fonte: "Lotto S2 del progetto — S2-29 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 520,
+    materia: "Scienze",
+    domanda: "Un rubinetto eroga acqua con una portata volumetrica costante $Q = 12\\text{ L/min}$. Quanto tempo impiega a riempire completamente una vasca avente una capacità complessiva di $180\\text{ litri}$?",
+    rispostaCorretta: "$15\\text{ minuti}$",
+    risposteErrate: [
+      "$150\\text{ minuti}$",
+      "$12\\text{ minuti}$",
+      "$900\\text{ minuti}$",
+      "$0{,}25\\text{ minuti}$"
+],
+    spiegazione: "Dalla definizione di portata $Q = \\frac{V}{\\Delta t}$, il tempo necessario per erogare il volume desiderato è: $\\Delta t = \\frac{V}{Q} = \\frac{180\\text{ L}}{12\\text{ L/min}} = 15\\text{ minuti}$ (pari a $900\\text{ s}$).",
+    fonte: "Lotto S2 del progetto — S2-30 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 521,
+    materia: "Scienze",
+    domanda: "In un tubo orizzontale a sezione variabile scorre un fluido ideale incompressibile. Nella sezione più larga di area $A_1 = 40\\text{ cm}^2$ il fluido scorre a velocità $v_1 = 1{,}5\\text{ m/s}$. Qual è la velocità $v_2$ del fluido in un tratto successivo in cui l’area della sezione si riduce a $A_2 = 10\\text{ cm}^2$?",
+    rispostaCorretta: "$6{,}0\\text{ m/s}$",
+    risposteErrate: [
+      "$0{,}375\\text{ m/s}$",
+      "$3{,}0\\text{ m/s}$",
+      "$15\\text{ m/s}$",
+      "$0{,}75\\text{ m/s}$"
+],
+    spiegazione: "Per l’equazione di continuità dei fluidi incompressibili, la portata volumetrica si conserva: $A_1 \\cdot v_1 = A_2 \\cdot v_2$. Ricavando la velocità nel restringimento: $v_2 = v_1 \\cdot \\frac{A_1}{A_2} = 1{,}5\\text{ m/s} \\cdot \\frac{40\\text{ cm}^2}{10\\text{ cm}^2} = 1{,}5 \\cdot 4 = 6{,}0\\text{ m/s}$.",
+    fonte: "Lotto S2 del progetto — S2-31 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 522,
+    materia: "Scienze",
+    domanda: "Un condotto cilindrico subisce una strozzatura per cui il suo diametro interno si dimezza ($d_2 = \\frac{d_1}{2}$). Se l’acqua scorre nel tratto iniziale più largo con velocità $v_1 = 2\\text{ m/s}$, quale velocità $v_2$ assume nel tratto ristretto?",
+    rispostaCorretta: "$8\\text{ m/s}$",
+    risposteErrate: [
+      "$4\\text{ m/s}$",
+      "$1\\text{ m/s}$",
+      "$16\\text{ m/s}$",
+      "$0{,}5\\text{ m/s}$"
+],
+    spiegazione: "L’area di una sezione circolare è proporzionale al quadrato del diametro ($A = \\frac{\\pi d^2}{4}$). Se il diametro si dimezza, l’area si riduce a un quarto: $A_2 = \\frac{A_1}{4}$. Per l’equazione di continuità $A_1 v_1 = A_2 v_2$, la velocità deve quadruplicare: $v_2 = v_1 \\cdot \\frac{A_1}{A_2} = 2\\text{ m/s} \\cdot 4 = 8\\text{ m/s}$.",
+    fonte: "Lotto S2 del progetto — S2-32 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 523,
+    materia: "Scienze",
+    domanda: "In un condotto orizzontale in cui scorre un fluido ideale in regime stazionario, cosa accade alla pressione statica del fluido nel punto in cui la sezione della conduttura si restringe provocando un incremento della velocità di scorrimento (effetto Venturi)?",
+    rispostaCorretta: "La pressione statica diminuisce all’aumentare della velocità di scorrimento",
+    risposteErrate: [
+      "La pressione statica aumenta proporzionalmente al quadrato della velocità",
+      "La pressione statica rimane rigorosamente invariata trattandosi di condotto orizzontale",
+      "La pressione statica si annulla completamente nel punto di restringimento",
+      "La pressione statica aumenta solo se il fluido è incomprimibile"
+],
+    spiegazione: "Per il teorema di Bernoulli lungo una linea di flusso orizzontale ($h = \\text{costante}$), la somma della pressione statica e della pressione dinamica è costante: $p + \\frac{1}{2}\\rho v^2 = \\text{costante}$. Dove la sezione diminuisce e la velocità $v$ aumenta, l’energia cinetica specifica $\\frac{1}{2}\\rho v^2$ cresce e, di conseguenza, la pressione statica $p$ deve necessariamente diminuire (effetto Venturi).",
+    fonte: "Lotto S2 del progetto — S2-33 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 524,
+    materia: "Scienze",
+    domanda: "Un ampio serbatoio aperto superiormente contiene acqua fino a un’altezza $h = 5\\text{ m}$ al di sopra di un piccolo foro circolare di area $A = 2{,}0\\text{ cm}^2 = 2{,}0 \\times 10^{-4}\\text{ m}^2$ praticato sulla parete laterale. Assumendo $g = 10\\text{ m/s}^2$ e trascurando gli attriti viscosi, qual è la portata volumetrica $Q$ con cui l’acqua fuoriesce inizialmente dal foro espressa in litri al secondo ($\\text{L/s}$)?",
+    rispostaCorretta: "$2{,}0\\text{ L/s}$",
+    risposteErrate: [
+      "$1{,}0\\text{ L/s}$",
+      "$20\\text{ L/s}$",
+      "$10\\text{ L/s}$",
+      "$0{,}20\\text{ L/s}$"
+],
+    spiegazione: "Per la legge di Torricelli, la velocità di efflusso dell’acqua dal foro è data da $v = \\sqrt{2 g h} = \\sqrt{2 \\cdot 10\\text{ m/s}^2 \\cdot 5\\text{ m}} = \\sqrt{100} = 10\\text{ m/s}$. La portata volumetrica è il prodotto dell’area del foro per la velocità: $Q = A \\cdot v = 2{,}0 \\times 10^{-4}\\text{ m}^2 \\cdot 10\\text{ m/s} = 2{,}0 \\times 10^{-3}\\text{ m}^3/\\text{s} = 2{,}0\\text{ L/s}$.",
+    fonte: "Lotto S2 del progetto — S2-34 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 525,
+    materia: "Scienze",
+    domanda: "In una conduttura orizzontale scorre acqua (densità $\\rho = 1000\\text{ kg/m}^3$) in regime stazionario. Assumendo l’acqua come fluido ideale incompressibile e trascurando ogni attrito viscoso, nella sezione 1 di area maggiore la velocità è $v_1 = 2\\text{ m/s}$ e la pressione statica è $p_1 = 1{,}80 \\times 10^5\\text{ Pa}$. In corrispondenza di una strozzatura (sezione 2), la velocità sale a $v_2 = 6\\text{ m/s}$. Qual è il valore della pressione statica $p_2$ all’interno della strozzatura?",
+    rispostaCorretta: "$1{,}64 \\times 10^5\\text{ Pa}$",
+    risposteErrate: [
+      "$1{,}96 \\times 10^5\\text{ Pa}$",
+      "$1{,}48 \\times 10^5\\text{ Pa}$",
+      "$1{,}62 \\times 10^5\\text{ Pa}$",
+      "$0{,}16 \\times 10^5\\text{ Pa}$"
+],
+    spiegazione: "Applicando il teorema di Bernoulli lungo la conduttura orizzontale: $p_1 + \\frac{1}{2}\\rho v_1^2 = p_2 + \\frac{1}{2}\\rho v_2^2 \\implies p_2 = p_1 - \\frac{1}{2}\\rho (v_2^2 - v_1^2)$. Calcoliamo la variazione di pressione dinamica: $\\Delta p_{\\text{cin}} = \\frac{1}{2} \\cdot 1000\\text{ kg/m}^3 \\cdot (6^2 - 2^2)\\text{ m}^2/\\text{s}^2 = 500 \\cdot (36 - 4) = 500 \\cdot 32 = 16\\,000\\text{ Pa} = 0{,}16 \\times 10^5\\text{ Pa}$. Pertanto la pressione statica finale è: $p_2 = 1{,}80 \\times 10^5\\text{ Pa} - 0{,}16 \\times 10^5\\text{ Pa} = 1{,}64 \\times 10^5\\text{ Pa}$ (pari a $164\\text{ kPa}$).",
+    fonte: "Lotto S2 del progetto — S2-35 (Termodinamica e fluidi)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
   }
 ];
 

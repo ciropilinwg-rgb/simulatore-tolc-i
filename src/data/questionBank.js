@@ -9640,6 +9640,601 @@ const questionBank = [
     numeroVolteProposta: 0,
     numeroRisposteCorrette: 0,
     numeroRisposteErrate: 0
+  },
+  {
+    id: 561,
+    materia: "Scienze",
+    domanda: "Il nuclide del ferro $^{56}_{26}\\text{Fe}$ è presente nel nucleo di molti atomi stabili. Quanti protoni, neutroni ed elettroni possiede un atomo neutro di $^{56}_{26}\\text{Fe}$?",
+    rispostaCorretta: "$26\\text{ protoni}$, $30\\text{ neutroni}$ e $26\\text{ elettroni}$",
+    risposteErrate: [
+      "$26\\text{ protoni}$, $56\\text{ neutroni}$ e $26\\text{ elettroni}$",
+      "$30\\text{ protoni}$, $26\\text{ neutroni}$ e $30\\text{ elettroni}$",
+      "$26\\text{ protoni}$, $30\\text{ neutroni}$ e $30\\text{ elettroni}$",
+      "$56\\text{ protoni}$, $26\\text{ neutroni}$ e $56\\text{ elettroni}$"
+    ],
+    spiegazione: "In un nuclide generico $^{A}_{Z}\\text{X}$, il numero atomico $Z$ indica il numero di protoni (qui $Z = 26$). In un atomo elettricamente neutro, il numero di elettroni eguaglia quello dei protoni ($26\\text{ elettroni}$). Il numero di massa $A = 56$ rappresenta la somma di protoni e neutroni ($A = Z + N$); pertanto il numero di neutroni è $N = A - Z = 56 - 26 = 30\\text{ neutroni}$.",
+    fonte: "Lotto S4 del progetto — S4-01 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 562,
+    materia: "Scienze",
+    domanda: "Lo ione alluminio $^{27}_{13}\\text{Al}^{3+}$ si forma quando un atomo di alluminio perde elettroni. Quanti protoni, neutroni ed elettroni sono presenti in un singolo ione $^{27}_{13}\\text{Al}^{3+}$?",
+    rispostaCorretta: "$13\\text{ protoni}$, $14\\text{ neutroni}$ e $10\\text{ elettroni}$",
+    risposteErrate: [
+      "$13\\text{ protoni}$, $14\\text{ neutroni}$ e $16\\text{ elettroni}$",
+      "$13\\text{ protoni}$, $27\\text{ neutroni}$ e $10\\text{ elettroni}$",
+      "$10\\text{ protoni}$, $14\\text{ neutroni}$ e $13\\text{ elettroni}$",
+      "$16\\text{ protoni}$, $11\\text{ neutroni}$ e $13\\text{ elettroni}$"
+    ],
+    spiegazione: "Per l'alluminio $^{27}_{13}\\text{Al}^{3+}$, il numero atomico $Z = 13$ stabilisce la presenza immutabile di $13\\text{ protoni}$ nel nucleo. Il numero di neutroni è $N = A - Z = 27 - 13 = 14\\text{ neutroni}$. La carica $+3$ indica la cessione di 3 elettroni rispetto allo stato neutro: $N_e = Z - 3 = 13 - 3 = 10\\text{ elettroni}$.",
+    fonte: "Lotto S4 del progetto — S4-02 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 563,
+    materia: "Scienze",
+    domanda: "Lo ione solfuro $^{32}_{16}\\text{S}^{2-}$ deriva dall'acquisto di elettroni da parte dell'atomo di zolfo. Qual è la corretta composizione subatomica di questo anione?",
+    rispostaCorretta: "$16\\text{ protoni}$, $16\\text{ neutroni}$ e $18\\text{ elettroni}$",
+    risposteErrate: [
+      "$16\\text{ protoni}$, $16\\text{ neutroni}$ e $14\\text{ elettroni}$",
+      "$18\\text{ protoni}$, $16\\text{ neutroni}$ e $16\\text{ elettroni}$",
+      "$16\\text{ protoni}$, $32\\text{ neutroni}$ e $18\\text{ elettroni}$",
+      "$14\\text{ protoni}$, $18\\text{ neutroni}$ e $16\\text{ elettroni}$"
+    ],
+    spiegazione: "Per lo zolfo $^{32}_{16}\\text{S}^{2-}$, il numero atomico è $Z = 16$ ($16\\text{ protoni}$). Il numero di neutroni è $N = A - Z = 32 - 16 = 16\\text{ neutroni}$. La carica $-2$ indica l'acquisto di 2 elettroni rispetto all'atomo neutro: $N_e = Z + 2 = 16 + 2 = 18\\text{ elettroni}$.",
+    fonte: "Lotto S4 del progetto — S4-03 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 564,
+    materia: "Scienze",
+    domanda: "Due atomi che costituiscono una coppia di isotopi dello stesso elemento chimico presentano necessariamente:",
+    rispostaCorretta: "Lo stesso numero atomico $Z$ ma differente numero di massa $A$",
+    risposteErrate: [
+      "Lo stesso numero di massa $A$ ma differente numero atomico $Z$",
+      "Lo stesso numero di neutroni ma differente numero di protoni",
+      "Differenti proprietà chimiche fondamentali e identica massa atomica",
+      "Lo stesso numero di neutroni e lo stesso numero di elettroni"
+    ],
+    spiegazione: "Gli isotopi sono atomi appartenenti allo stesso elemento chimico (quindi con lo stesso numero atomico $Z$, ossia medesimo numero di protoni ed elettroni nello stato neutro) che differiscono per il numero di neutroni $N$ nel nucleo, e di conseguenza presentano un diverso numero di massa $A = Z + N$ pur mantenendo identico comportamento chimico.",
+    fonte: "Lotto S4 del progetto — S4-04 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 565,
+    materia: "Scienze",
+    domanda: "Quale delle seguenti serie è formata esclusivamente da specie chimiche isoelettroniche fra loro (aventi lo stesso numero complessivo di elettroni)?",
+    rispostaCorretta: "$\\text{N}^{3-}$, $\\text{O}^{2-}$, $\\text{F}^-$, $\\text{Na}^+$, $\\text{Mg}^{2+}$",
+    risposteErrate: [
+      "$\\text{Li}^+$, $\\text{Na}^+$, $\\text{K}^+$, $\\text{Rb}^+$, $\\text{Cs}^+$",
+      "$\\text{F}^-$, $\\text{Cl}^-$, $\\text{Br}^-$, $\\text{I}^-$, $\\text{At}^-$",
+      "$\\text{O}^{2-}$, $\\text{S}^{2-}$, $\\text{Se}^{2-}$, $\\text{Te}^{2-}$, $\\text{Po}^{2-}$",
+      "$\\text{C}$, $\\text{N}$, $\\text{O}$, $\\text{F}$, $\\text{Ne}$"
+    ],
+    spiegazione: "Specie isoelettroniche possiedono lo stesso numero totale di elettroni. Con $Z(\\text{N})=7$, $Z(\\text{O})=8$, $Z(\\text{F})=9$, $Z(\\text{Na})=11$, $Z(\\text{Mg})=12$: $\\text{N}^{3-}$ ha $7+3=10\\ e^-$, $\\text{O}^{2-}$ ha $8+2=10\\ e^-$, $\\text{F}^-$ ha $9+1=10\\ e^-$, $\\text{Na}^+$ ha $11-1=10\\ e^-$, $\\text{Mg}^{2+}$ ha $12-2=10\\ e^-$. Tutte hanno esattamente 10 elettroni (isoelettroniche con il gas nobile Neon).",
+    fonte: "Lotto S4 del progetto — S4-05 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 566,
+    materia: "Scienze",
+    domanda: "In base al modello atomico a livelli quantizzati, qual è il numero massimo di elettroni che può essere ospitato complessivamente nel terzo livello energetico principale ($n = 3$)?",
+    rispostaCorretta: "$18\\text{ elettroni}$",
+    risposteErrate: [
+      "$8\\text{ elettroni}$",
+      "$32\\text{ elettroni}$",
+      "$6\\text{ elettroni}$",
+      "$9\\text{ elettroni}$"
+    ],
+    spiegazione: "La capacità massima di elettroni di un livello quantico principale $n$ è data dalla formula $2n^2$. Per $n = 3$, il numero massimo di elettroni è $2 \\cdot (3)^2 = 2 \\cdot 9 = 18\\text{ elettroni}$ (suddivisi nei sottolivelli $3s$ con 2 elettroni, $3p$ con 6 elettroni e $3d$ con 10 elettroni).",
+    fonte: "Lotto S4 del progetto — S4-06 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 567,
+    materia: "Scienze",
+    domanda: "Quanti orbitali atomici costituiscono complessivamente un sottolivello di tipo $p$ e quanti elettroni può contenere al massimo tale sottolivello?",
+    rispostaCorretta: "$3\\text{ orbitali}$, per un massimo di $6\\text{ elettroni}$",
+    risposteErrate: [
+      "$1\\text{ orbitale}$, per un massimo di $2\\text{ elettroni}$",
+      "$5\\text{ orbitali}$, per un massimo di $10\\text{ elettroni}$",
+      "$3\\text{ orbitali}$, per un massimo di $3\\text{ elettroni}$",
+      "$6\\text{ orbitali}$, per un massimo di $12\\text{ elettroni}$"
+    ],
+    spiegazione: "Un sottolivello di tipo $p$ (corrispondente a numero quantico secondario $l = 1$) è composto da $2l + 1 = 3$ orbitali degeneri ($p_x, p_y, p_z$). Poiché ciascun orbitale può ospitare al massimo 2 elettroni con spin antiparallelo (principio di Pauli), la capacità massima complessiva del sottolivello $p$ è $3 \\times 2 = 6\\text{ elettroni}$.",
+    fonte: "Lotto S4 del progetto — S4-07 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 568,
+    materia: "Scienze",
+    domanda: "Il cloro naturale è costituito da una miscela di due isotopi stabili: $^{35}\\text{Cl}$ (massa isotopica $35{,}0\\text{ u}$, abbondanza relativa $75\\%$) e $^{37}\\text{Cl}$ (massa isotopica $37{,}0\\text{ u}$, abbondanza relativa $25\\%$). Qual è la massa atomica relativa media del cloro?",
+    rispostaCorretta: "$35{,}5\\text{ u}$",
+    risposteErrate: [
+      "$36{,}0\\text{ u}$",
+      "$35{,}25\\text{ u}$",
+      "$36{,}5\\text{ u}$",
+      "$34{,}5\\text{ u}$"
+    ],
+    spiegazione: "La massa atomica relativa media è la media ponderata delle masse degli isotopi moltiplicate per le rispettive abbondanze percentuali: $\\bar{M} = \\frac{35{,}0 \\cdot 75 + 37{,}0 \\cdot 25}{100} = \\frac{2625 + 925}{100} = \\frac{3550}{100} = 35{,}5\\text{ u}$.",
+    fonte: "Lotto S4 del progetto — S4-08 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 569,
+    materia: "Scienze",
+    domanda: "Il silicio possiede numero atomico $Z = 14$. Qual è la corretta configurazione elettronica del silicio nel suo stato fondamentale?",
+    rispostaCorretta: "$1s^2\\,2s^2\\,2p^6\\,3s^2\\,3p^2$",
+    risposteErrate: [
+      "$1s^2\\,2s^2\\,2p^6\\,3s^4$",
+      "$1s^2\\,2s^2\\,2p^6\\,3p^4$",
+      "$1s^2\\,2s^2\\,2p^4\\,3s^2\\,3p^4$",
+      "$1s^2\\,2s^2\\,2p^6\\,3s^1\\,3p^3$"
+    ],
+    spiegazione: "Distribuendo i 14 elettroni secondo il principio di Aufbau (ordine crescente di energia): $1s^2$ (2 elettroni), $2s^2$ (2 elettroni), $2p^6$ (6 elettroni, totale 10), $3s^2$ (2 elettroni, totale 12), $3p^2$ (2 elettroni, totale 14). La configurazione dello stato fondamentale è dunque $1s^2\\,2s^2\\,2p^6\\,3s^2\\,3p^2$.",
+    fonte: "Lotto S4 del progetto — S4-09 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 570,
+    materia: "Scienze",
+    domanda: "Il potassio ha numero atomico $Z = 19$. Qual è la configurazione elettronica dello ione potassio $\\text{K}^+$ nello stato fondamentale?",
+    rispostaCorretta: "$1s^2\\,2s^2\\,2p^6\\,3s^2\\,3p^6$",
+    risposteErrate: [
+      "$1s^2\\,2s^2\\,2p^6\\,3s^2\\,3p^6\\,4s^1$",
+      "$1s^2\\,2s^2\\,2p^6\\,3s^2\\,3p^6\\,4s^2$",
+      "$1s^2\\,2s^2\\,2p^6\\,3s^2\\,3p^5$",
+      "$1s^2\\,2s^2\\,2p^6\\,3s^1\\,3p^6$"
+    ],
+    spiegazione: "L'atomo neutro di potassio ($Z = 19$) ha configurazione $1s^2\\,2s^2\\,2p^6\\,3s^2\\,3p^6\\,4s^1$. Formando il catione $\\text{K}^+$, perde l'unico elettrone di valenza $4s^1$, assumendo la configurazione a guscio chiuso con 18 elettroni $1s^2\\,2s^2\\,2p^6\\,3s^2\\,3p^6$, isoelettronica con il gas nobile Argon.",
+    fonte: "Lotto S4 del progetto — S4-10 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 571,
+    materia: "Scienze",
+    domanda: "Il fosforo ha numero atomico $Z = 15$. Quanti sono gli elettroni di valenza presenti nel livello energetico più esterno di un atomo di fosforo?",
+    rispostaCorretta: "$5\\text{ elettroni di valenza}$",
+    risposteErrate: [
+      "$3\\text{ elettroni di valenza}$",
+      "$15\\text{ elettroni di valenza}$",
+      "$2\\text{ elettroni di valenza}$",
+      "$8\\text{ elettroni di valenza}$"
+    ],
+    spiegazione: "La configurazione elettronica del fosforo ($Z = 15$) è $1s^2\\,2s^2\\,2p^6\\,3s^2\\,3p^3$. Gli elettroni di valenza sono quelli situati nel guscio principale più esterno ($n = 3$), ossia $2\\text{ elettroni in }3s + 3\\text{ elettroni in }3p = 5\\text{ elettroni di valenza}$ (coerente con l'appartenenza al gruppo 15 / V A).",
+    fonte: "Lotto S4 del progetto — S4-11 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 572,
+    materia: "Scienze",
+    domanda: "Un elemento neutro $X$ presenta la seguente configurazione elettronica nello stato fondamentale: $1s^2\\,2s^2\\,2p^6\\,3s^2\\,3p^5$. A quale periodo e a quale gruppo della tavola periodica appartiene?",
+    rispostaCorretta: "Periodo 3 e Gruppo 17 (VII A, alogeni)",
+    risposteErrate: [
+      "Periodo 2 e Gruppo 15 (V A)",
+      "Periodo 3 e Gruppo 15 (V A)",
+      "Periodo 5 e Gruppo 17 (VII A)",
+      "Periodo 3 e Gruppo 7 (metalli di transizione)"
+    ],
+    spiegazione: "Il livello principale massimo occupato è $n = 3$, indicando che l'elemento appartiene al Periodo 3. Il numero di elettroni di valenza nel livello 3 è $2 + 5 = 7$, corrispondente al Gruppo 17 (o VII A dei gruppi principali, famiglia degli alogeni; si tratta dell'atomo di cloro, $Z = 17$).",
+    fonte: "Lotto S4 del progetto — S4-12 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 573,
+    materia: "Scienze",
+    domanda: "Quale delle seguenti terne di elementi chimici è formata, nell’ordine esatto, da un metallo alcalino, un alogeno e un gas nobile?",
+    rispostaCorretta: "Sodio ($\\text{Na}$), Cloro ($\\text{Cl}$), Elio ($\\text{He}$)",
+    risposteErrate: [
+      "Calcio ($\\text{Ca}$), Fluoro ($\\text{F}$), Neon ($\\text{Ne}$)",
+      "Potassio ($\\text{K}$), Zolfo ($\\text{S}$), Argon ($\\text{Ar}$)",
+      "Magnesio ($\\text{Mg}$), Bromo ($\\text{Br}$), Cripton ($\\text{Kr}$)",
+      "Litio ($\\text{Li}$), Azoto ($\\text{N}$), Xeno ($\\text{Xe}$)"
+    ],
+    spiegazione: "Il sodio ($\\text{Na}$) appartiene al gruppo 1 (metalli alcalini); il cloro ($\\text{Cl}$) appartiene al gruppo 17 (alogeni); l'elio ($\\text{He}$) appartiene al gruppo 18 (gas nobili). Calcio e magnesio sono metalli alcalino-terrosi (gruppo 2), mentre zolfo e azoto non sono alogeni.",
+    fonte: "Lotto S4 del progetto — S4-13 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 574,
+    materia: "Scienze",
+    domanda: "Perché gli elementi appartenenti allo stesso gruppo principale (gruppi 1, 2 e 13–18) della tavola periodica manifestano proprietà chimiche tra loro molto simili?",
+    rispostaCorretta: "Perché possiedono lo stesso numero e la medesima configurazione di elettroni nel guscio di valenza",
+    risposteErrate: [
+      "Perché possiedono lo stesso numero totale di protoni nel nucleo",
+      "Perché hanno tutti lo stesso identico raggio atomico e massa",
+      "Perché possiedono lo stesso numero di livelli energetici occupati",
+      "Perché hanno tutti la medesima temperatura di fusione ed ebollizione"
+    ],
+    spiegazione: "Le proprietà chimiche e la reattività di un elemento dei gruppi principali dipendono primariamente dagli elettroni di valenza (quelli del guscio più esterno). Gli elementi dello stesso gruppo condividono la medesima configurazione elettronica esterna (ad esempio $ns^1$ per gli alcalini, $ns^2\\,np^5$ per gli alogeni), determinando comportamenti chimici analoghi.",
+    fonte: "Lotto S4 del progetto — S4-14 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 575,
+    materia: "Scienze",
+    domanda: "Come varia generalmente il raggio atomico degli elementi chimici lungo la tavola periodica?",
+    rispostaCorretta: "Aumenta scendendo lungo un gruppo e diminuisce procedendo da sinistra verso destra lungo un periodo",
+    risposteErrate: [
+      "Diminuisce scendendo lungo un gruppo e aumenta da sinistra verso destra lungo un periodo",
+      "Aumenta sia scendendo lungo un gruppo sia procedendo da sinistra verso destra lungo un periodo",
+      "Diminuisce sia scendendo lungo un gruppo sia procedendo da sinistra verso destra lungo un periodo",
+      "Rimane costante lungo i periodi e varia solo in funzione del numero di massa"
+    ],
+    spiegazione: "Scendendo lungo un gruppo si aggiungono nuovi livelli quantici principali ($n$), allontanando gli elettroni esterni dal nucleo e aumentando il raggio. Muovendosi da sinistra a destra lungo un periodo, il numero quantico $n$ resta lo stesso ma aumenta la carica nucleare efficace ($Z_{\\text{eff}}$), attirando più fortemente gli elettroni verso il nucleo e riducendo il raggio atomico.",
+    fonte: "Lotto S4 del progetto — S4-15 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 576,
+    materia: "Scienze",
+    domanda: "L’energia di prima ionizzazione è l’energia minima necessaria per rimuovere l'elettrone più debolmente legato da un atomo gassoso neutro isolato. Quale dei seguenti elementi presenta la maggiore energia di prima ionizzazione?",
+    rispostaCorretta: "Elio ($\\text{He}$)",
+    risposteErrate: [
+      "Cesio ($\\text{Cs}$)",
+      "Sodio ($\\text{Na}$)",
+      "Litio ($\\text{Li}$)",
+      "Bario ($\\text{Ba}$)"
+    ],
+    spiegazione: "L'energia di prima ionizzazione cresce dal basso verso l'alto lungo i gruppi e da sinistra a destra lungo i periodi. L'elio ($\\text{He}$), situato in alto a destra nella tavola periodica, possiede il guscio $1s^2$ completo vicinissimo al nucleo senza schermatura da livelli interni, risultando l'elemento con la più alta energia di prima ionizzazione dell'intera tavola periodica.",
+    fonte: "Lotto S4 del progetto — S4-16 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 577,
+    materia: "Scienze",
+    domanda: "L'elettronegatività misura la tendenza di un atomo ad attrarre verso di sé gli elettroni di legame. Quale elemento chimico presenta il valore di elettronegatività più elevato secondo la scala di Pauling?",
+    rispostaCorretta: "Fluoro ($\\text{F}$)",
+    risposteErrate: [
+      "Francio ($\\text{Fr}$)",
+      "Cloro ($\\text{Cl}$)",
+      "Ossigeno ($\\text{O}$)",
+      "Sodio ($\\text{Na}$)"
+    ],
+    spiegazione: "Sulla scala di Pauling, l'elettronegatività aumenta da sinistra a destra lungo un periodo e dal basso verso l'alto lungo un gruppo. Escludendo i gas nobili non reattivi, il fluoro ($\\text{F}$) ha la massima elettronegatività assoluta (valore convenzionale $3{,}98 \\approx 4{,}0$), seguito dall'ossigeno ($3{,}44$).",
+    fonte: "Lotto S4 del progetto — S4-17 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 578,
+    materia: "Scienze",
+    domanda: "Tra quali delle seguenti coppie di elementi è massima la probabilità che si instauri un legame prevalentemente ionico?",
+    rispostaCorretta: "Potassio ($\\text{K}$) e Cloro ($\\text{Cl}$)",
+    risposteErrate: [
+      "Carbonio ($\\text{C}$) e Idrogeno ($\\text{H}$)",
+      "Azoto ($\\text{N}$) e Ossigeno ($\\text{O}$)",
+      "Cloro ($\\text{Cl}$) e Cloro ($\\text{Cl}$)",
+      "Silicio ($\\text{Si}$) e Ossigeno ($\\text{O}$)"
+    ],
+    spiegazione: "Un legame è tipicamente ionico quando si forma tra un elemento a bassissima elettronegatività (metallo alcalino come il potassio, $\\chi \\approx 0{,}8$) e un elemento a elevata elettronegatività (non metallo come il cloro, $\\chi \\approx 3{,}2$). La grande differenza di elettronegatività ($\\Delta\\chi \\approx 2{,}4 > 1{,}7$) comporta il trasferimento di un elettrone e l'attrazione elettrostatica tra $\\text{K}^+$ e $\\text{Cl}^-$.",
+    fonte: "Lotto S4 del progetto — S4-18 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 579,
+    materia: "Scienze",
+    domanda: "Qual è la formula chimica minima del composto ionico neutro formato dagli ioni magnesio $\\text{Mg}^{2+}$ e dagli ioni nitruro $\\text{N}^{3-}$?",
+    rispostaCorretta: "$\\text{Mg}_3\\text{N}_2$",
+    risposteErrate: [
+      "$\\text{Mg}_2\\text{N}_3$",
+      "$\\text{MgN}$",
+      "$\\text{MgN}_2$",
+      "$\\text{Mg}_3\\text{N}$"
+    ],
+    spiegazione: "In un composto ionico neutro la somma algebrica delle cariche deve essere rigorosamente nulla. Combinando 3 ioni $\\text{Mg}^{2+}$ ($3 \\times (+2) = +6$) con 2 ioni $\\text{N}^{3-}$ ($2 \\times (-3) = -6$), si ottiene la neutralità elettrica complessiva ($+6 - 6 = 0$). La formula minima corretta è dunque $\\text{Mg}_3\\text{N}_2$.",
+    fonte: "Lotto S4 del progetto — S4-19 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 580,
+    materia: "Scienze",
+    domanda: "I composti ionici come il cloruro di sodio ($\\text{NaCl}$) solidi presentano proprietà caratteristiche. Quale delle seguenti affermazioni sul loro comportamento è corretta?",
+    rispostaCorretta: "Allo stato solido sono isolanti elettrici, ma diventano buoni conduttori quando vengono fusi o disciolti in acqua",
+    risposteErrate: [
+      "Conducono sempre la corrente elettrica sia allo stato solido che fuso grazie alla presenza di elettroni liberi",
+      "Hanno temperature di fusione ed ebollizione molto basse a causa della debolezza del legame ionico",
+      "Sono materiali estremamente malleabili e duttili che si deformano facilmente senza fratturarsi",
+      "Sono completamente insolubili in qualsiasi solvente polare come l'acqua"
+    ],
+    spiegazione: "Nei solidi ionici gli ioni sono bloccati nelle posizioni fisse del reticolo cristallino tridimensionale, impedendo il trasporto di carica (isolanti allo stato solido). Quando il reticolo viene demolito tramite fusione termica o solvatazione in acqua, gli ioni $\\text{Na}^+$ e $\\text{Cl}^-$ acquistano mobilità, permettendo la conduzione elettrica per trasporto ionico.",
+    fonte: "Lotto S4 del progetto — S4-20 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 581,
+    materia: "Scienze",
+    domanda: "Il modello del legame metallico noto come «mare di elettroni» (o nube elettronica delocalizzata) spiega molte proprietà fisiche dei metalli. Quale delle seguenti caratteristiche deriva direttamente dalla delocalizzazione elettronica?",
+    rispostaCorretta: "L'elevata conducibilità elettrica e termica allo stato solido",
+    risposteErrate: [
+      "La fragilità cristallina e la tendenza a frantumarsi sotto percussione",
+      "La totale trasparenza ottica alla luce visibile",
+      "La formazione di molecole discrete gassose a temperatura ambiente",
+      "L'incapacità di condurre il calore lungo il reticolo"
+    ],
+    spiegazione: "Nel legame metallico i cationi metallici occupano nodi reticolari regolari, mentre gli elettroni di valenza sono liberi di muoversi attraverso l'intero reticolo solido. Questa elevata mobilità degli elettroni delocalizzati spiega sia l'eccellente conducibilità elettrica (flusso di elettroni sotto campo elettrico) sia la conducibilità termica e la malleabilità dei metalli.",
+    fonte: "Lotto S4 del progetto — S4-21 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 582,
+    materia: "Scienze",
+    domanda: "Una molecola biatomica di azoto ($\\text{N}_2$) è tenuta unita da un legame covalente. Quante coppie di elettroni (doppietti elettronici) sono complessivamente condivise tra i due atomi di azoto?",
+    rispostaCorretta: "$3\\text{ coppie di elettroni}$ (legame covalente triplo, pari a 6 elettroni condivisi)",
+    risposteErrate: [
+      "$1\\text{ coppia di elettroni}$ (legame covalente singolo, pari a 2 elettroni condivisi)",
+      "$2\\text{ coppie di elettroni}$ (legame covalente doppio, pari a 4 elettroni condivisi)",
+      "$4\\text{ coppie di elettroni}$ (legame quadruplo, pari a 8 elettroni condivisi)",
+      "$5\\text{ coppie di elettroni}$ (pari a 10 elettroni condivisi)"
+    ],
+    spiegazione: "L'azoto ($Z = 7$) ha 5 elettroni di valenza ($2s^2\\,2p^3$). Per raggiungere la configurazione stabile a ottetto (8 elettroni), ciascun atomo di azoto deve condividere 3 elettroni. I due atomi formano così un legame covalente triplo ($:\\text{N}\\equiv\\text{N}:$), condividendo esattamente 3 doppietti (6 elettroni in totale), oltre a possedere ciascuno un doppietto solitario non condiviso.",
+    fonte: "Lotto S4 del progetto — S4-22 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 583,
+    materia: "Scienze",
+    domanda: "Confrontando un legame covalente singolo $\\text{C}-\\text{C}$, un legame doppio $\\text{C}=\\text{C}$ e un legame triplo $\\text{C}\\equiv\\text{C}$ tra atomi di carbonio, quale affermazione è corretta?",
+    rispostaCorretta: "Il legame triplo ha la massima energia di dissociazione e la minore lunghezza di legame",
+    risposteErrate: [
+      "Il legame singolo ha la massima energia di legame e la minore lunghezza di legame",
+      "Il legame triplo è il più lungo e il più debole tra i tre",
+      "Tutti e tre i legami presentano la stessa lunghezza e la stessa energia di rottura",
+      "Il legame doppio ha lunghezza maggiore rispetto al legame singolo"
+    ],
+    spiegazione: "All'aumentare dell'ordine di legame tra la stessa coppia di atomi di carbonio, aumenta la densità elettronica condivisa tra i nuclei, determinando una maggiore attrazione elettrostatica nucleo-elettroni. Ne consegue che il legame triplo $\\text{C}\\equiv\\text{C}$ è il più corto (circa $0{,}120\\text{ nm}$ vs $0{,}154\\text{ nm}$ del singolo) e possiede la più alta energia di legame (dissociazione più difficile).",
+    fonte: "Lotto S4 del progetto — S4-23 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 584,
+    materia: "Scienze",
+    domanda: "Nella molecola di acido cloridrico ($\\text{H}-\\text{Cl}$), il legame tra idrogeno e cloro è di tipo:",
+    rispostaCorretta: "Covalente polare, con parziale carica negativa $\\delta^-$ localizzata sul cloro",
+    risposteErrate: [
+      "Covalente puro (omopolare), con distribuzione perfettamente simmetrica della carica",
+      "Covalente polare, con parziale carica negativa $\\delta^-$ localizzata sull'idrogeno",
+      "Prevalentemente ionico, costituito da ioni liberi separati a temperatura ambiente",
+      "Metallico, con elettroni completamente delocalizzati tra le molecole"
+    ],
+    spiegazione: "Il cloro ha un'elettronegatività ($\\chi \\approx 3{,}16$) sensibilmente superiore a quella dell'idrogeno ($\\chi \\approx 2{,}20$), con una differenza $\\Delta\\chi \\approx 0{,}96$. La coppia di elettroni condivisa è attratta maggiormente verso il nucleo del cloro, generando un dipolo permanente con parziale carica negativa $\\delta^-$ sul cloro e parziale carica positiva $\\delta^+$ sull'idrogeno.",
+    fonte: "Lotto S4 del progetto — S4-24 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 585,
+    materia: "Scienze",
+    domanda: "In cosa consiste un legame covalente dativo (o di coordinazione), come quello presente nello ione ammonio $\\text{NH}_4^+$ o nello ione idronio $\\text{H}_3\\text{O}^+$?",
+    rispostaCorretta: "La coppia di elettroni condivisa è fornita per intero da uno solo dei due atomi (donatore) a un orbitale vuoto dell'altro (accettore)",
+    risposteErrate: [
+      "Entrambi gli atomi cedono un elettrone ciascuno per formare una nube delocalizzata",
+      "Uno ione positivo e uno negativo si attraggono senza alcuna condivisione di elettroni",
+      "Un atomo cede definitivamente due elettroni trasformandosi in anione stabile",
+      "Il legame si instaura esclusivamente per attrazione gravitazionale tra i due nuclei"
+    ],
+    spiegazione: "Nel legame dativo (o di coordinazione), il doppietto elettronico di legame proviene interamente da un solo atomo (donatore, dotato di una coppia di elettroni solitaria / lone pair), che lo condivide con un secondo atomo o ione (accettore) che dispone di un orbitale di valenza vuoto (come il protone $\\text{H}^+$ che si lega alla coppia solitaria dell'azoto in $\\text{NH}_3$ formando $\\text{NH}_4^+$).",
+    fonte: "Lotto S4 del progetto — S4-25 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 586,
+    materia: "Scienze",
+    domanda: "Secondo la regola dell’ottetto enunciata da Lewis, gli atomi degli elementi dei gruppi principali tendono a combinarsi chimicamente per:",
+    rispostaCorretta: "Raggiungere una configurazione elettronica esterna con 8 elettroni di valenza ($ns^2\\,np^6$), caratteristica dei gas nobili dal neon in poi",
+    risposteErrate: [
+      "Avere sempre un numero totale di 8 protoni all’interno del nucleo atomico",
+      "Riempire completamente tutti i livelli energetici quantici fino a $n = 4$",
+      "Assumere una carica elettrica netta complessiva pari a $+8$ oppure $-8$",
+      "Dimezzare il proprio numero di massa per massimizzare l’energia di legame nucleare"
+    ],
+    spiegazione: "La regola dell'ottetto stabilisce che gli atomi dei gruppi principali tendono a cedere, acquistare o condividere elettroni fino a raggiungere una configurazione a guscio di valenza completo con 8 elettroni ($ns^2\\,np^6$), corrispondente alla massima stabilità tipica dei gas nobili dal neon in poi (l'idrogeno e l'elio fanno eccezione stabilizzandosi con il duetto $1s^2$).",
+    fonte: "Lotto S4 del progetto — S4-26 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 587,
+    materia: "Scienze",
+    domanda: "Nella struttura di Lewis della molecola d'acqua ($\\text{H}_2\\text{O}$), quanti doppietti elettronici di legame e quanti doppietti solitari (lone pairs) sono presenti attorno all'atomo centrale di ossigeno?",
+    rispostaCorretta: "$2\\text{ doppietti di legame}$ e $2\\text{ doppietti solitari}$",
+    risposteErrate: [
+      "$4\\text{ doppietti di legame}$ e $0\\text{ doppietti solitari}$",
+      "$1\\text{ doppietto di legame}$ e $3\\text{ doppietti solitari}$",
+      "$3\\text{ doppietti di legame}$ e $1\\text{ doppietto solitario}$",
+      "$2\\text{ doppietti di legame}$ e $0\\text{ doppietti solitari}$"
+    ],
+    spiegazione: "L'ossigeno ha 6 elettroni di valenza e ogni idrogeno ne ha 1, per un totale di 8 elettroni di valenza (4 coppie). L'ossigeno forma due legami singoli $\\text{O}-\\text{H}$ (usando 2 coppie di legame, 4 elettroni) e conserva i rimanenti 4 elettroni come 2 doppietti non condivisi (lone pairs), completando l'ottetto.",
+    fonte: "Lotto S4 del progetto — S4-27 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 588,
+    materia: "Scienze",
+    domanda: "Nella struttura di Lewis della molecola di ammoniaca ($\\text{NH}_3$), quanti doppietti di legame e quanti doppietti solitari circondano l'atomo centrale di azoto?",
+    rispostaCorretta: "$3\\text{ doppietti di legame}$ e $1\\text{ doppietto solitario}$",
+    risposteErrate: [
+      "$3\\text{ doppietti di legame}$ e $0\\text{ doppietti solitari}$",
+      "$2\\text{ doppietti di legame}$ e $2\\text{ doppietti solitari}$",
+      "$1\\text{ doppietto di legame}$ e $3\\text{ doppietti solitari}$",
+      "$4\\text{ doppietti di legame}$ e $0\\text{ doppietti solitari}$"
+    ],
+    spiegazione: "L'azoto possiede 5 elettroni di valenza e i 3 idrogeni forniscono 1 elettrone ciascuno, per un totale di 8 elettroni (4 doppietti). L'azoto forma 3 legami covalenti singoli $\\text{N}-\\text{H}$ (3 doppietti di legame) e presenta 1 doppietto solitario (lone pair) non condiviso.",
+    fonte: "Lotto S4 del progetto — S4-28 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 589,
+    materia: "Scienze",
+    domanda: "Quale delle seguenti molecole costituisce un classico esempio di eccezione alla regola dell'ottetto per difetto (specie ipovalente con ottetto incompleto sull'atomo centrale)?",
+    rispostaCorretta: "Trifluoruro di boro ($\\text{BF}_3$)",
+    risposteErrate: [
+      "Metano ($\\text{CH}_4$)",
+      "Acqua ($\\text{H}_2\\text{O}$)",
+      "Tetracloruro di carbonio ($\\text{CCl}_4$)",
+      "Anidride carbonica ($\\text{CO}_2$)"
+    ],
+    spiegazione: "Nel trifluoruro di boro ($\\text{BF}_3$), il boro ($Z = 5$, gruppo 13) possiede 3 elettroni di valenza e forma 3 legami covalenti singoli con i 3 atomi di fluoro. Attorno al boro sono presenti solo 6 elettroni di valenza (3 coppie di legame), configurando una specie chimica ipovalente stabile con ottetto incompleto.",
+    fonte: "Lotto S4 del progetto — S4-29 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 590,
+    materia: "Scienze",
+    domanda: "In base alla teoria VSEPR (repulsione delle coppie elettroniche di valenza), quale geometria molecolare e quale angolo di legame presenta la molecola di anidride carbonica ($\\text{CO}_2$)?",
+    rispostaCorretta: "Lineare, con angolo di legame pari a $180^\\circ$",
+    risposteErrate: [
+      "Piegata (angolare), con angolo di legame pari a circa $104{,}5^\\circ$",
+      "Trigonale planare, con angolo di legame pari a $120^\\circ$",
+      "Tetraedrica, con angolo di legame pari a $109{,}5^\\circ$",
+      "Piramidale trigonale, con angolo di legame pari a circa $107^\\circ$"
+    ],
+    spiegazione: "Nella molecola $\\text{O}=\\text{C}=\\text{O}$, l'atomo centrale di carbonio forma due doppi legami con i due atomi di ossigeno e non possiede doppietti elettronici solitari (lone pairs). I due domini elettronici si dispongono alla massima distanza angolare possibile per minimizzare la repulsione, determinando una geometria rigorosamente lineare con angolo di legame di $180^\\circ$.",
+    fonte: "Lotto S4 del progetto — S4-30 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 591,
+    materia: "Scienze",
+    domanda: "Qual è la geometria molecolare prevista dalla teoria VSEPR per la molecola di metano ($\\text{CH}_4$) e quanto vale l'angolo di legame $\\text{H}-\\text{C}-\\text{H}$?",
+    rispostaCorretta: "Tetraedrica, con angoli di legame pari a circa $109{,}5^\\circ$",
+    risposteErrate: [
+      "Quadrata planare, con angoli di legame pari a $90^\\circ$",
+      "Trigonale planare, con angoli di legame pari a $120^\\circ$",
+      "Piramidale a base quadrata, con angoli di legame pari a $90^\\circ$",
+      "Lineare, con angoli di legame pari a $180^\\circ$"
+    ],
+    spiegazione: "Nel metano ($\\text{CH}_4$), il carbonio centrale è circondato da 4 coppie elettroniche di legame identiche e nessun doppietto solitario. La disposizione spaziale che massimizza la distanza tra 4 coppie equivalenti è il tetraedro regolare, con angoli di legame $\\text{H}-\\text{C}-\\text{H}$ pari a circa $109{,}5^\\circ$.",
+    fonte: "Lotto S4 del progetto — S4-31 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 592,
+    materia: "Scienze",
+    domanda: "Perché l'angolo di legame $\\text{H}-\\text{O}-\\text{H}$ nella molecola d'acqua (circa $104{,}5^\\circ$) è inferiore all'angolo ideale tetraedrico ($109{,}5^\\circ$) presente nel metano?",
+    rispostaCorretta: "Perché la repulsione reciproca esercitata dai due doppietti solitari (lone pairs) è maggiore di quella tra doppietti di legame, comprimendo l'angolo",
+    risposteErrate: [
+      "Perché l'atomo di ossigeno ha un numero di protoni inferiore rispetto al carbonio",
+      "Perché l'idrogeno nell'acqua non condivide elettroni con l'ossigeno",
+      "Perché nella molecola d'acqua è presente un legame covalente triplo rigido",
+      "Perché la molecola d'acqua presenta una geometria quadrata planare simmetrica"
+    ],
+    spiegazione: "Secondo la teoria VSEPR, i doppietti solitari (lone pairs) sono trattenuti da un solo nucleo e occupano un volume angolare maggiore rispetto ai doppietti di legame condivisi tra due nuclei. La repulsione tra lone pairs comprime l'angolo tra i legami $\\text{O}-\\text{H}$, riducendolo da $109{,}5^\\circ$ a circa $104{,}5^\\circ$.",
+    fonte: "Lotto S4 del progetto — S4-32 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 593,
+    materia: "Scienze",
+    domanda: "Sia il tetracloruro di carbonio ($\\text{CCl}_4$) sia l'anidride carbonica ($\\text{CO}_2$) contengono legami covalenti fortemente polari. Perché entrambe le molecole risultano globalmente apolari (momento di dipolo netto nullo, $\\mu = 0$)?",
+    rispostaCorretta: "Perché l'elevata simmetria geometrica delle molecole fa sì che la somma vettoriale dei singoli momenti di dipolo di legame sia esattamente nulla",
+    risposteErrate: [
+      "Perché il carbonio annulla l'elettronegatività degli altri atomi quando forma 4 legami",
+      "Perché i legami $\\text{C}-\\text{Cl}$ e $\\text{C}=\\text{O}$ diventano istantaneamente omopolari allo stato gassoso",
+      "Perché le molecole ruotano così rapidamente da impedire qualsiasi interazione elettrostatica",
+      "Perché la differenza di elettronegatività tra carbonio, cloro e ossigeno è rigorosamente pari a zero"
+    ],
+    spiegazione: "La polarità complessiva di una molecola dipende dalla somma vettoriale dei singoli momenti di dipolo di legame. Nella molecola lineare $\\text{CO}_2$ i due vettori uguali e opposti si annullano ($\\vec{\\mu}_1 + \\vec{\\mu}_2 = \\vec{0}$); nel $\\text{CCl}_4$, la perfetta simmetria tetraedrica annulla la risultante dei 4 dipoli di legame, rendendo entrambe le molecole apolari.",
+    fonte: "Lotto S4 del progetto — S4-33 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 594,
+    materia: "Scienze",
+    domanda: "Quale tra le seguenti sostanze liquide presenta un punto di ebollizione notevolmente più elevato rispetto ad altre molecole di massa molecolare analoga, grazie alla presenza di estesi legami a idrogeno intermolecolari?",
+    rispostaCorretta: "Acqua ($\\text{H}_2\\text{O}$)",
+    risposteErrate: [
+      "Metano ($\\text{CH}_4$)",
+      "Solfuro di idrogeno ($\\text{H}_2\\text{S}$)",
+      "Idruro di silicio ($\\text{SiH}_4$)",
+      "Clorometano ($\\text{CH}_3\\text{Cl}$)"
+    ],
+    spiegazione: "Il legame a idrogeno è una forza intermolecolare particolarmente intensa che si forma quando l'idrogeno è legato covalentemente a un atomo piccolo e fortemente elettronegativo ($\\text{F}, \\text{O}, \\text{N}$) dotato di lone pairs. Nell'acqua ($\\text{H}_2\\text{O}$), ciascuna molecola può formare fino a 4 legami a idrogeno, conferendo all'acqua un punto di ebollizione straordinariamente alto ($100^\\circ\\text{C}$) rispetto ad analoghi più pesanti come $\\text{H}_2\\text{S}$ (ebollizione a $-60^\\circ\\text{C}$).",
+    fonte: "Lotto S4 del progetto — S4-34 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 595,
+    materia: "Scienze",
+    domanda: "Si consideri la molecola di biossido di zolfo ($\\text{SO}_2$). Sapendo che lo zolfo ($Z = 16$) e l'ossigeno ($Z = 8$) appartengono entrambi al gruppo 16, quanti elettroni di valenza totali possiede la molecola, quale geometria molecolare presenta secondo la teoria VSEPR e qual è il suo comportamento rispetto alla polarità?",
+    rispostaCorretta: "$18\\text{ elettroni di valenza}$, geometria piegata (angolare con angolo $< 120^\\circ$) e molecola polare ($\\mu \\ne 0$)",
+    risposteErrate: [
+      "$16\\text{ elettroni di valenza}$, geometria lineare ($180^\\circ$) e molecola apolare ($\\mu = 0$)",
+      "$18\\text{ elettroni di valenza}$, geometria lineare ($180^\\circ$) e molecola apolare ($\\mu = 0$)",
+      "$18\\text{ elettroni di valenza}$, geometria trigonale planare ($120^\\circ$) e molecola apolare ($\\mu = 0$)",
+      "$18\\text{ elettroni di valenza}$, geometria piegata (angolare con angolo $< 120^\\circ$) e molecola apolare ($\\mu = 0$)"
+    ],
+    spiegazione: "1) Conteggio elettroni di valenza: lo zolfo ha 6 elettroni e ciascun ossigeno ha 6 elettroni $\\implies 6 + 2 \\times 6 = 18\\text{ elettroni di valenza}$ (9 coppie). 2) Struttura di Lewis e VSEPR: lo zolfo centrale è legato ai due ossigeni e possiede 1 doppietto solitario (lone pair), corrispondente a 3 domini elettronici (geometria elettronica trigonale planare). La presenza del lone pair conferisce alla molecola una geometria molecolare piegata (angolare) con angolo $\\text{O}-\\text{S}-\\text{O} < 120^\\circ$ (circa $119^\\circ$). 3) Polarità: a causa della geometria asimmetrica piegata, i dipoli dei legami $\\text{S}-\\text{O}$ non si elidono vettorialmente, rendendo $\\text{SO}_2$ una molecola polare ($\\mu \\ne 0$).",
+    fonte: "Lotto S4 del progetto — S4-35 (Struttura atomica, sistema periodico e legami chimici)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
   }
 ];
 

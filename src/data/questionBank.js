@@ -10235,6 +10235,762 @@ const questionBank = [
     numeroVolteProposta: 0,
     numeroRisposteCorrette: 0,
     numeroRisposteErrate: 0
+  },
+  {
+    id: 596,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "In un recipiente chiuso e a tenuta stagna avvengono la combustione e la completa trasformazione di $12{,}0\\text{ g}$ di carbonio puro con $32{,}0\\text{ g}$ di ossigeno gassoso, secondo la reazione $\\text{C} + \\text{O}_2 \\to \\text{CO}_2$. In base alla legge di conservazione della massa di Lavoisier, quale massa complessiva di biossido di carbonio si ottiene al termine del processo?",
+    rispostaCorretta: "$44{,}0\\text{ g}$",
+    risposteErrate: [
+      "$20{,}0\\text{ g}$",
+      "$24{,}0\\text{ g}$",
+      "$32{,}0\\text{ g}$",
+      "$56{,}0\\text{ g}$"
+    ],
+    spiegazione: "In base alla legge di conservazione della massa (Lavoisier), in un sistema chiuso la massa totale dei prodotti deve essere esattamente uguale alla massa totale dei reagenti consumati: $m_{\\text{totale}} = m_{\\text{C}} + m_{\\text{O}_2} = 12{,}0\\text{ g} + 32{,}0\\text{ g} = 44{,}0\\text{ g}$ di $\\text{CO}_2$.",
+    fonte: "Lotto S5 del progetto — S5-01 (Reazioni chimiche e bilanciamento (Lavoisier))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 597,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Si consideri la reazione di combustione completa del propano: $a\\,\\text{C}_3\\text{H}_8 + b\\,\\text{O}_2 \\to c\\,\\text{CO}_2 + d\\,\\text{H}_2\\text{O}$. Qual è il valore del coefficiente stechiometrico $b$ relativo all’ossigeno quando l’equazione è bilanciata con i minimi coefficienti interi?",
+    rispostaCorretta: "$5$",
+    risposteErrate: [
+      "$3$",
+      "$4$",
+      "$7$",
+      "$10$"
+    ],
+    spiegazione: "Bilanciando gli atomi: per $3$ atomi di C nei reagenti occorrono $3\\,\\text{CO}_2$ ($c = 3$); per $8$ atomi di H occorrono $4\\,\\text{H}_2\\text{O}$ ($d = 4$). A destra si hanno complessivamente $(3 \\times 2) + (4 \\times 1) = 6 + 4 = 10$ atomi di ossigeno, che richiedono $b = 10 / 2 = 5$ molecole di $\\text{O}_2$. L’equazione bilanciata è $\\text{C}_3\\text{H}_8 + 5\\,\\text{O}_2 \\to 3\\,\\text{CO}_2 + 4\\,\\text{H}_2\\text{O}$.",
+    fonte: "Lotto S5 del progetto — S5-02 (Reazioni chimiche e bilanciamento (combustione propano))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 598,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Si consideri la reazione chimica non bilanciata: $\\text{Al} + \\text{H}_2\\text{SO}_4 \\to \\text{Al}_2(\\text{SO}_4)_3 + \\text{H}_2$. Qual è la somma di tutti i coefficienti stechiometrici interi minimi dell’equazione chimica bilanciata?",
+    rispostaCorretta: "$9$",
+    risposteErrate: [
+      "$7$",
+      "$8$",
+      "$10$",
+      "$11$"
+    ],
+    spiegazione: "Bilanciando la reazione: $2\\,\\text{Al} + 3\\,\\text{H}_2\\text{SO}_4 \\to 1\\,\\text{Al}_2(\\text{SO}_4)_3 + 3\\,\\text{H}_2$. La somma di tutti i coefficienti stechiometrici interi minimi è pari a $2 + 3 + 1 + 3 = 9$.",
+    fonte: "Lotto S5 del progetto — S5-03 (Reazioni chimiche e bilanciamento (somma coefficienti minimi))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 599,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Mescolando due soluzioni acquose limpide di cloruro di bario ($\\text{BaCl}_2$) e di solfato di sodio ($\\text{Na}_2\\text{SO}_4$), si osserva l’immediata formazione di un solido bianco insolubile (precipitato) di solfato di bario: $\\text{BaCl}_2\\text{(aq)} + \\text{Na}_2\\text{SO}_4\\text{(aq)} \\to \\text{BaSO}_4\\text{(s)} + 2\\,\\text{NaCl}\\text{(aq)}$. A quale tipologia appartiene questa trasformazione?",
+    rispostaCorretta: "Reazione di doppio scambio (o metatesi) con precipitazione",
+    risposteErrate: [
+      "Reazione di sintesi diretta",
+      "Reazione di decomposizione termica",
+      "Reazione di scambio semplice (o spostamento)",
+      "Reazione di combustione redox"
+    ],
+    spiegazione: "Una reazione di doppio scambio (metatesi) avviene quando due composti ionici in soluzione si scambiano i rispettivi partner ionici ($\text{Ba}^{2+}$ si unisce a $\text{SO}_4^{2-}$ e $\text{Na}^+$ a $\text{Cl}^-$), portando alla formazione di un sale insolubile che precipita.",
+    fonte: "Lotto S5 del progetto — S5-04 (Reazioni chimiche e bilanciamento (doppio scambio e precipitazione))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 600,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Qual è il numero di ossidazione dell’atomo di manganese nel composto permanganato di potassio ($\\text{KMnO}_4$)?",
+    rispostaCorretta: "$+7$",
+    risposteErrate: [
+      "$+2$",
+      "$+4$",
+      "$+5$",
+      "$+6$"
+    ],
+    spiegazione: "Nel composto neutro $\\text{KMnO}_4$, il potassio ha numero di ossidazione $+1$ e ciascun ossigeno ha $-2$. Ponendo la somma algebrica pari a zero: $(+1) + x + 4(-2) = 0 \\implies 1 + x - 8 = 0 \\implies x - 7 = 0 \\implies x = +7$.",
+    fonte: "Lotto S5 del progetto — S5-05 (Reazioni chimiche e bilanciamento (numero ossidazione manganese))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 601,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Nella reazione di ossidoriduzione $\\text{Zn}\\text{(s)} + 2\\,\\text{HCl}\\text{(aq)} \\to \\text{ZnCl}_2\\text{(aq)} + \\text{H}_2\\text{(g)}$, quale specie chimica subisce il processo di ossidazione comportandosi da agente riducente?",
+    rispostaCorretta: "Lo zinco metallico ($\\text{Zn}$), il cui numero di ossidazione passa da $0$ a $+2$",
+    risposteErrate: [
+      "Lo ione idrogeno ($\\text{H}^+$), il cui numero di ossidazione passa da $+1$ a $0$",
+      "Lo ione cloruro ($\\text{Cl}^-$), il cui numero di ossidazione passa da $-1$ a $0$",
+      "L’idrogeno molecolare ($\\text{H}_2$), il cui numero di ossidazione passa da $0$ a $+1$",
+      "Lo ione zinco ($\\text{Zn}^{2+}$), che acquista due elettroni dal cloro"
+    ],
+    spiegazione: "L’ossidazione consiste nella perdita di elettroni con aumento del numero di ossidazione. Lo zinco metallico passa da stato di ossidazione $0$ a $+2$ in $\\text{ZnCl}_2$, perdendo $2$ elettroni e fungendo quindi da agente riducente.",
+    fonte: "Lotto S5 del progetto — S5-06 (Reazioni chimiche e bilanciamento (ossidazione e agente riducente))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 602,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Facendo reagire una soluzione acquosa di acido cloridrico ($\\text{HCl}$) con una soluzione di idrossido di sodio ($\\text{NaOH}$), quali specie svolgono esclusivamente il ruolo di «ioni spettatori» nell’equazione ionica netta?",
+    rispostaCorretta: "$\\text{Na}^+$ e $\\text{Cl}^-$",
+    risposteErrate: [
+      "$\\text{H}^+$ e $\\text{OH}^-$",
+      "$\\text{H}^+$ e $\\text{Cl}^-$",
+      "$\\text{Na}^+$ e $\\text{OH}^-$",
+      "Esclusivamente $\\text{H}_2\\text{O}$"
+    ],
+    spiegazione: "L’equazione ionica completa è $\\text{H}^+ + \\text{Cl}^- + \\text{Na}^+ + \\text{OH}^- \\to \\text{H}_2\\text{O} + \\text{Na}^+ + \\text{Cl}^-$. Gli ioni $\\text{Na}^+$ e $\\text{Cl}^-$ rimangono invariati e dissociati in soluzione prima e dopo la reazione, costituendo gli ioni spettatori, mentre la reazione netta è $\\text{H}^+ + \\text{OH}^- \\to \\text{H}_2\\text{O}$.",
+    fonte: "Lotto S5 del progetto — S5-07 (Reazioni chimiche e bilanciamento (ioni spettatori))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 603,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Qual è il numero di ossidazione del cromo nello ione poliatomico dicromato ($\\text{Cr}_2\\text{O}_7^{2-}$)?",
+    rispostaCorretta: "$+6$",
+    risposteErrate: [
+      "$+3$",
+      "$+4$",
+      "$+5$",
+      "$+7$"
+    ],
+    spiegazione: "Nello ione $\\text{Cr}_2\\text{O}_7^{2-}$, la somma algebrica dei numeri di ossidazione deve essere pari alla carica complessiva dello ione ($-2$). Sapendo che ciascun atomo di ossigeno ha numero di ossidazione $-2$: $2x + 7(-2) = -2 \\implies 2x - 14 = -2 \\implies 2x = +12 \\implies x = +6$.",
+    fonte: "Lotto S5 del progetto — S5-08 (Reazioni chimiche e bilanciamento (numero ossidazione cromo in dicromato))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 604,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Nel Sistema Internazionale, che cosa rappresenta una «mole» di una determinata sostanza chimica?",
+    rispostaCorretta: "La quantità di sostanza che contiene esattamente un numero di entità elementari pari alla costante di Avogadro ($N_A \\approx 6{,}022 \\times 10^{23}$)",
+    risposteErrate: [
+      "La massa in grammi di esattamente $1\\text{ litro}$ di gas a temperatura ambiente",
+      "Il volume occupato da $1\\text{ grammo}$ di idrogeno gassoso a $0^\\circ\\text{C}$",
+      "Il numero totale di elettroni presenti in un chilogrammo di sostanza pura",
+      "La quantità di materia avente un volume pari a $22{,}4\\text{ dm}^3$ a qualsiasi pressione"
+    ],
+    spiegazione: "La mole è l’unità di misura della quantità di sostanza nel SI ed è definita come la quantità di materia che contiene esattamente $6{,}02214076 \\times 10^{23}$ entità elementari (atomi, molecole, ioni o altre particelle designate).",
+    fonte: "Lotto S5 del progetto — S5-09 (Mole, costante di Avogadro e massa molare (definizione mole))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 605,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Sapendo che le masse atomiche relative sono $\\text{C} = 12{,}0\\text{ u}$, $\\text{H} = 1{,}0\\text{ u}$ e $\\text{O} = 16{,}0\\text{ u}$, qual è la massa molare del glucosio ($\\text{C}_6\\text{H}_{12}\\text{O}_6$)?",
+    rispostaCorretta: "$180{,}0\\text{ g/mol}$",
+    risposteErrate: [
+      "$90{,}0\\text{ g/mol}$",
+      "$150{,}0\\text{ g/mol}$",
+      "$216{,}0\\text{ g/mol}$",
+      "$360{,}0\\text{ g/mol}$"
+    ],
+    spiegazione: "La massa molare del glucosio $\\text{C}_6\\text{H}_{12}\\text{O}_6$ si calcola sommando le masse molari dei singoli atomi: $M = (6 \\times 12{,}0) + (12 \\times 1{,}0) + (6 \\times 16{,}0) = 72{,}0 + 12{,}0 + 96{,}0 = 180{,}0\\text{ g/mol}$.",
+    fonte: "Lotto S5 del progetto — S5-10 (Mole, costante di Avogadro e massa molare (massa molare glucosio))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 606,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Un campione di glucosio puro ($\\text{C}_6\\text{H}_{12}\\text{O}_6$, massa molare $M = 180{,}0\\text{ g/mol}$) ha una massa pari a $45{,}0\\text{ g}$. A quante moli di glucosio corrisponde tale quantità?",
+    rispostaCorretta: "$0{,}250\\text{ mol}$",
+    risposteErrate: [
+      "$0{,}125\\text{ mol}$",
+      "$0{,}500\\text{ mol}$",
+      "$2{,}00\\text{ mol}$",
+      "$4{,}00\\text{ mol}$"
+    ],
+    spiegazione: "Il numero di moli $n$ è dato dal rapporto tra la massa del campione in grammi e la massa molare del composto: $n = \\frac{m}{M} = \\frac{45{,}0\\text{ g}}{180{,}0\\text{ g/mol}} = 0{,}250\\text{ mol}$.",
+    fonte: "Lotto S5 del progetto — S5-11 (Mole, costante di Avogadro e massa molare (calcolo moli da massa))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 607,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Un campione d’acqua distillata contiene esattamente $0{,}50\\text{ mol}$ di molecole di $\\text{H}_2\\text{O}$. Assumendo per la costante di Avogadro il valore $N_A = 6{,}0 \\times 10^{23}\\text{ mol}^{-1}$, qual è il numero complessivo di atomi di idrogeno presenti nel campione?",
+    rispostaCorretta: "$6{,}0 \\times 10^{23}\\text{ atomi}$",
+    risposteErrate: [
+      "$3{,}0 \\times 10^{23}\\text{ atomi}$",
+      "$9{,}0 \\times 10^{23}\\text{ atomi}$",
+      "$1{,}2 \\times 10^{24}\\text{ atomi}$",
+      "$1{,}5 \\times 10^{23}\\text{ atomi}$"
+    ],
+    spiegazione: "In $0{,}50\\text{ mol}$ di molecole d’acqua ci sono $0{,}50 \\times N_A = 0{,}50 \\times 6{,}0 \\times 10^{23} = 3{,}0 \\times 10^{23}$ molecole di $\\text{H}_2\\text{O}$. Poiché ciascuna molecola contiene $2$ atomi di idrogeno, il numero complessivo di atomi di H è pari a $2 \\times 3{,}0 \\times 10^{23} = 6{,}0 \\times 10^{23}$ atomi.",
+    fonte: "Lotto S5 del progetto — S5-12 (Mole, costante di Avogadro e massa molare (numero atomi idrogeno))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 608,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Sapendo che le masse atomiche relative sono $\\text{C} = 12{,}0\\text{ u}$ e $\\text{O} = 16{,}0\\text{ u}$, qual è la percentuale in massa di carbonio presente nell’anidride carbonica (biossido di carbonio, $\\text{CO}_2$, massa molare $44{,}0\\text{ g/mol}$)?",
+    rispostaCorretta: "Circa il $27{,}3\\%$",
+    risposteErrate: [
+      "Circa il $12{,}0\\%$",
+      "Circa il $33{,}3\\%$",
+      "Circa il $50{,}0\\%$",
+      "Circa il $72{,}7\\%$"
+    ],
+    spiegazione: "La percentuale in massa del carbonio in $\\text{CO}_2$ è data dal rapporto tra la massa di carbonio e la massa molare complessiva: $\\%\\text{C} = \\frac{12{,}0\\text{ g/mol}}{44{,}0\\text{ g/mol}} \\times 100\\% \\approx 27{,}27\\% \\approx 27{,}3\\%$.",
+    fonte: "Lotto S5 del progetto — S5-13 (Mole, costante di Avogadro e massa molare (percentuale in massa carbonio))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 609,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Assumendo per i gas ideali le condizioni standard tradizionali ($0^\\circ\\text{C}$ e $1\\text{ atm}$) con volume molare $V_m = 22{,}4\\text{ L/mol}$, quale volume occupano $2{,}5\\text{ moli}$ di ossigeno gassoso ($\\text{O}_2$)?",
+    rispostaCorretta: "$56{,}0\\text{ L}$",
+    risposteErrate: [
+      "$22{,}4\\text{ L}$",
+      "$44{,}8\\text{ L}$",
+      "$67{,}2\\text{ L}$",
+      "$112{,}0\\text{ L}$"
+    ],
+    spiegazione: "Il volume di un gas ideale alle condizioni standard fissate ($V_m = 22{,}4\\text{ L/mol}$) è dato dal prodotto tra il numero di moli e il volume molare: $V = n \\times V_m = 2{,}5\\text{ mol} \\times 22{,}4\\text{ L/mol} = 56{,}0\\text{ L}$.",
+    fonte: "Lotto S5 del progetto — S5-14 (Mole, costante di Avogadro e massa molare (volume molare STP))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 610,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Si consideri la reazione di sintesi dell’ammoniaca: $\\text{N}_2\\text{(g)} + 3\\,\\text{H}_2\\text{(g)} \\to 2\\,\\text{NH}_3\\text{(g)}$. Facendo reagire completamente $6{,}0\\text{ moli}$ di idrogeno molecolare ($\\text{H}_2$) con una quantità in eccesso di azoto, quante moli di ammoniaca ($\\text{NH}_3$) si formano?",
+    rispostaCorretta: "$4{,}0\\text{ moli}$",
+    risposteErrate: [
+      "$2{,}0\\text{ moli}$",
+      "$3{,}0\\text{ moli}$",
+      "$6{,}0\\text{ moli}$",
+      "$9{,}0\\text{ moli}$"
+    ],
+    spiegazione: "Dal rapporto stechiometrico dell’equazione bilanciata, $3\\text{ moli}$ di $\\text{H}_2$ producono $2\\text{ moli}$ di $\\text{NH}_3$. Pertanto, $n_{\\text{NH}_3} = 6{,}0\\text{ mol }\\text{H}_2 \\times \\frac{2\\text{ mol }\\text{NH}_3}{3\\text{ mol }\\text{H}_2} = 4{,}0\\text{ moli di }\\text{NH}_3$.",
+    fonte: "Lotto S5 del progetto — S5-15 (Stechiometria, reagente limitante e resa (rapporto molare sintesi NH3))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 611,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "La decomposizione termica del carbonato di calcio avviene secondo la reazione: $\\text{CaCO}_3\\text{(s)} \\to \\text{CaO}\\text{(s)} + \\text{CO}_2\\text{(g)}$. Sapendo che le masse molari sono $\\text{CaCO}_3 = 100{,}0\\text{ g/mol}$ e $\\text{CaO} = 56{,}0\\text{ g/mol}$, quale massa di ossido di calcio ($\\text{CaO}$) si ottiene dalla decomposizione completa di $250{,}0\\text{ g}$ di carbonato di calcio puro?",
+    rispostaCorretta: "$140{,}0\\text{ g}$",
+    risposteErrate: [
+      "$56{,}0\\text{ g}$",
+      "$112{,}0\\text{ g}$",
+      "$194{,}0\\text{ g}$",
+      "$224{,}0\\text{ g}$"
+    ],
+    spiegazione: "Moli di $\\text{CaCO}_3$: $n = \\frac{250{,}0\\text{ g}}{100{,}0\\text{ g/mol}} = 2{,}50\\text{ mol}$. Poiché il rapporto stechiometrico con $\\text{CaO}$ è $1:1$, si formano $2{,}50\\text{ mol}$ di $\\text{CaO}$. La massa ottenuta è $m = n \\times M = 2{,}50\\text{ mol} \\times 56{,}0\\text{ g/mol} = 140{,}0\\text{ g}$.",
+    fonte: "Lotto S5 del progetto — S5-16 (Stechiometria, reagente limitante e resa (calcolo massa CaO da CaCO3))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 612,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Si consideri la reazione di formazione dell’acqua: $2\\,\\text{H}_2 + \\text{O}_2 \\to 2\\,\\text{H}_2\\text{O}$. Se in un reattore vengono introdotte $6{,}0\\text{ moli}$ di $\\text{H}_2$ e $4{,}0\\text{ moli}$ di $\\text{O}_2$, quale delle due specie agisce come «reagente limitante»?",
+    rispostaCorretta: "L’idrogeno ($\\text{H}_2$), perché per reagire completamente richiederebbe solo $3{,}0\\text{ moli}$ di $\\text{O}_2$, che è presente in eccesso",
+    risposteErrate: [
+      "L’ossigeno ($\\text{O}_2$), perché è presente in minor numero di moli iniziali ($4{,}0\\text{ mol}$ contro $6{,}0\\text{ mol}$)",
+      "Nessuno dei due, perché entrambi i reagenti si consumano esattamente nello stesso istante",
+      "L’acqua ($\\text{H}_2\\text{O}$), perché è il prodotto con il coefficiente stechiometrico più alto",
+      "L’idrogeno ($\\text{H}_2$), perché la sua massa molare è minore di quella dell’ossigeno"
+    ],
+    spiegazione: "La reazione richiede un rapporto molare $\\text{H}_2 : \\text{O}_2 = 2 : 1$. Per consumare interamente $6{,}0\\text{ mol}$ di $\\text{H}_2$ occorrono $\\frac{6{,}0}{2} = 3{,}0\\text{ mol}$ di $\\text{O}_2$. Poiché sono disponibili $4{,}0\\text{ mol}$ di $\\text{O}_2$, l’ossigeno è in eccesso e l’idrogeno $\\text{H}_2$ è il reagente limitante che esaurisce la reazione.",
+    fonte: "Lotto S5 del progetto — S5-17 (Stechiometria, reagente limitante e resa (individuazione reagente limitante))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 613,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Facendo reagire $6{,}0\\text{ moli}$ di $\\text{H}_2$ con $4{,}0\\text{ moli}$ di $\\text{O}_2$ secondo la reazione $2\\,\\text{H}_2 + \\text{O}_2 \\to 2\\,\\text{H}_2\\text{O}$, quante moli di acqua ($\\text{H}_2\\text{O}$) si formano teoricamente al termine della trasformazione?",
+    rispostaCorretta: "$6{,}0\\text{ moli}$",
+    risposteErrate: [
+      "$4{,}0\\text{ moli}$",
+      "$8{,}0\\text{ moli}$",
+      "$10{,}0\\text{ moli}$",
+      "$12{,}0\\text{ moli}$"
+    ],
+    spiegazione: "Essendo $\\text{H}_2$ il reagente limitante ($6{,}0\\text{ mol}$), la quantità massima di acqua che si può formare dipende esclusivamente da esso. Poiché il rapporto stechiometrico tra $\\text{H}_2$ e $\\text{H}_2\\text{O}$ è $2 : 2$ (ovvero $1 : 1$), si formano esattamente $6{,}0\\text{ moli}$ di $\\text{H}_2\\text{O}$.",
+    fonte: "Lotto S5 del progetto — S5-18 (Stechiometria, reagente limitante e resa (calcolo prodotto da reagente limitante))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 614,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Nella reazione $2\\,\\text{H}_2 + \\text{O}_2 \\to 2\\,\\text{H}_2\\text{O}$, partendo da una miscela iniziale contenente $6{,}0\\text{ moli}$ di $\\text{H}_2$ e $4{,}0\\text{ moli}$ di $\\text{O}_2$, quante moli del reagente in eccesso restano non reagite nel recipiente al termine del processo?",
+    rispostaCorretta: "$1{,}0\\text{ mole di }\\text{O}_2$",
+    risposteErrate: [
+      "$0{,}5\\text{ moli di }\\text{O}_2$",
+      "$2{,}0\\text{ moli di }\\text{O}_2$",
+      "$1{,}0\\text{ mole di }\\text{H}_2$",
+      "$3{,}0\\text{ moli di }\\text{O}_2$"
+    ],
+    spiegazione: "Il reagente limitante $\\text{H}_2$ ($6{,}0\\text{ mol}$) reagisce consumando $\\frac{6{,}0}{2} = 3{,}0\\text{ mol}$ di $\\text{O}_2$. Le moli iniziali di $\\text{O}_2$ erano $4{,}0\\text{ mol}$, quindi le moli residue non reagite sono $n_{\\text{residue}} = 4{,}0 - 3{,}0 = 1{,}0\\text{ mole di }\\text{O}_2$.",
+    fonte: "Lotto S5 del progetto — S5-19 (Stechiometria, reagente limitante e resa (moli residue reagente in eccesso))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 615,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "In una sintesi organica, la resa teorica calcolata in base alla stechiometria della reazione è pari a $80{,}0\\text{ g}$ di prodotto. Al termine della purificazione sperimentale in laboratorio, vengono effettivamente isolati $64{,}0\\text{ g}$ di sostanza pura. Qual è la resa percentuale del processo?",
+    rispostaCorretta: "$80{,}0\\%$",
+    risposteErrate: [
+      "$64{,}0\\%$",
+      "$75{,}0\\%$",
+      "$85{,}0\\%$",
+      "$90{,}0\\%$"
+    ],
+    spiegazione: "La resa percentuale è definita come il rapporto percentuale tra la resa effettiva sperimentale e la resa teorica stechiometrica: $\\text{Resa }\\% = \\frac{m_{\\text{effettiva}}}{m_{\\text{teorica}}} \\times 100\\% = \\frac{64{,}0\\text{ g}}{80{,}0\\text{ g}} \\times 100\\% = 0{,}800 \\times 100\\% = 80{,}0\\%$.",
+    fonte: "Lotto S5 del progetto — S5-20 (Stechiometria, reagente limitante e resa (calcolo resa percentuale))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 616,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Una reazione chimica industriale ha una resa teorica prevista pari a $120{,}0\\text{ kg}$ di prodotto. Sapendo che l’impianto opera con una resa percentuale accertata dell’$85{,}0\\%$, quale massa effettiva di prodotto viene ricavata?",
+    rispostaCorretta: "$102{,}0\\text{ kg}$",
+    risposteErrate: [
+      "$85{,}0\\text{ kg}$",
+      "$96{,}0\\text{ kg}$",
+      "$108{,}0\\text{ kg}$",
+      "$115{,}0\\text{ kg}$"
+    ],
+    spiegazione: "La massa effettivamente ottenuta è data dal prodotto tra la resa teorica e la frazione di resa: $m_{\\text{effettiva}} = m_{\\text{teorica}} \\times \\frac{\\text{Resa }\\%}{100} = 120{,}0\\text{ kg} \\times 0{,}850 = 102{,}0\\text{ kg}$.",
+    fonte: "Lotto S5 del progetto — S5-21 (Stechiometria, reagente limitante e resa (calcolo massa effettiva da resa %))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 617,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "In chimica, che cosa si intende per «soluzione satura» di un solido in un dato solvente liquido a una temperatura fissata?",
+    rispostaCorretta: "Una soluzione in cui è disciolta la massima quantità possibile di soluto a quella temperatura, in equilibrio dinamico con l’eventuale corpo di fondo solido",
+    risposteErrate: [
+      "Una soluzione in cui il soluto ha una concentrazione esattamente pari al $50\\%$ in massa",
+      "Una soluzione che non è più in grado di condurre la corrente elettrica",
+      "Una miscela eterogenea in cui il solvente è completamente evaporato",
+      "Una soluzione in cui il numero di moli di soluto è esattamente uguale al numero di moli di solvente"
+    ],
+    spiegazione: "Una soluzione si definisce satura quando contiene la massima quantità di soluto che può rimanere stabilmente disciolta in una determinata quantità di solvente a una specifica temperatura; ogni ulteriore aggiunta di soluto si deposita sul fondo come corpo di fondo indisciolto.",
+    fonte: "Lotto S5 del progetto — S5-22 (Soluzioni, concentrazione e diluizioni (definizione soluzione satura))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 618,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Vengono disciolti $25{,}0\\text{ g}$ di cloruro di sodio ($\\text{NaCl}$) in $225{,}0\\text{ g}$ di acqua distillata. Qual è la concentrazione percentuale in massa $(\\%\\text{ m/m})$ della soluzione acquosa così ottenuta?",
+    rispostaCorretta: "$10{,}0\\%\\text{ m/m}$",
+    risposteErrate: [
+      "$9{,}0\\%\\text{ m/m}$",
+      "$11{,}1\\%\\text{ m/m}$",
+      "$12{,}5\\%\\text{ m/m}$",
+      "$25{,}0\\%\\text{ m/m}$"
+    ],
+    spiegazione: "La massa totale della soluzione è data dalla somma della massa del soluto e del solvente: $m_{\\text{soluzione}} = 25{,}0\\text{ g} + 225{,}0\\text{ g} = 250{,}0\\text{ g}$. La concentrazione percentuale in massa è: $\\%\\text{ m/m} = \\frac{m_{\\text{soluto}}}{m_{\\text{soluzione}}} \\times 100\\% = \\frac{25{,}0\\text{ g}}{250{,}0\\text{ g}} \\times 100\\% = 10{,}0\\%$.",
+    fonte: "Lotto S5 del progetto — S5-23 (Soluzioni, concentrazione e diluizioni (concentrazione percentuale massa su massa))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 619,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Quanti grammi di glucosio puro sono contenuti in $200\\text{ mL}$ di una soluzione acquosa zuccherina avente una concentrazione percentuale massa su volume pari al $5{,}0\\%\\text{ m/V}$?",
+    rispostaCorretta: "$10{,}0\\text{ g}$",
+    risposteErrate: [
+      "$2{,}5\\text{ g}$",
+      "$5{,}0\\text{ g}$",
+      "$20{,}0\\text{ g}$",
+      "$40{,}0\\text{ g}$"
+    ],
+    spiegazione: "Una concentrazione del $5{,}0\\%\\text{ m/V}$ indica che sono presenti $5{,}0\\text{ g}$ di soluto per ogni $100\\text{ mL}$ di soluzione. In $200\\text{ mL}$ di soluzione la massa di soluto è: $m = 5{,}0\\text{ g} \\times \\frac{200\\text{ mL}}{100\\text{ mL}} = 10{,}0\\text{ g}$.",
+    fonte: "Lotto S5 del progetto — S5-24 (Soluzioni, concentrazione e diluizioni (concentrazione percentuale massa su volume))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 620,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Vengono disciolte $0{,}40\\text{ moli}$ di idrossido di potassio ($\\text{KOH}$) in acqua fino a raggiungere un volume complessivo finale di soluzione pari a $800\\text{ mL} = 0{,}80\\text{ L}$. Qual è la concentrazione molare (molarità $M$) della soluzione?",
+    rispostaCorretta: "$0{,}50\\text{ M}$ (ossia $0{,}50\\text{ mol/L}$)",
+    risposteErrate: [
+      "$0{,}20\\text{ M}$",
+      "$0{,}32\\text{ M}$",
+      "$0{,}40\\text{ M}$",
+      "$2{,}00\\text{ M}$"
+    ],
+    spiegazione: "La concentrazione molare (molarità $M$) è definita come il rapporto tra il numero di moli di soluto e il volume della soluzione espresso in litri: $M = \\frac{n}{V} = \\frac{0{,}40\\text{ mol}}{0{,}80\\text{ L}} = 0{,}50\\text{ mol/L} = 0{,}50\\text{ M}$.",
+    fonte: "Lotto S5 del progetto — S5-25 (Soluzioni, concentrazione e diluizioni (calcolo concentrazione molare))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 621,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Quale massa di idrossido di sodio ($\\text{NaOH}$, massa molare $M = 40{,}0\\text{ g/mol}$) è necessaria per preparare esattamente $250\\text{ mL} = 0{,}250\\text{ L}$ di una soluzione acquosa a concentrazione $0{,}20\\text{ mol/L}$?",
+    rispostaCorretta: "$2{,}00\\text{ g}$",
+    risposteErrate: [
+      "$1{,}00\\text{ g}$",
+      "$4{,}00\\text{ g}$",
+      "$8{,}00\\text{ g}$",
+      "$10{,}00\\text{ g}$"
+    ],
+    spiegazione: "Moli di $\\text{NaOH}$ necessarie: $n = M \\times V = 0{,}20\\text{ mol/L} \\times 0{,}250\\text{ L} = 0{,}050\\text{ mol}$. La massa in grammi richiesta è: $m = n \\times M = 0{,}050\\text{ mol} \\times 40{,}0\\text{ g/mol} = 2{,}00\\text{ g}$.",
+    fonte: "Lotto S5 del progetto — S5-26 (Soluzioni, concentrazione e diluizioni (massa soluto per molarità data))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 622,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Quale volume di una soluzione concentrata di acido cloridrico $2{,}0\\text{ M}$ deve essere prelevato e diluito con acqua distillata per preparare $500\\text{ mL}$ di una soluzione diluita a concentrazione $0{,}10\\text{ M}$?",
+    rispostaCorretta: "$25\\text{ mL}$",
+    risposteErrate: [
+      "$10\\text{ mL}$",
+      "$50\\text{ mL}$",
+      "$100\\text{ mL}$",
+      "$250\\text{ mL}$"
+    ],
+    spiegazione: "Applicando l’equazione fondamentale delle diluizioni $M_1 V_1 = M_2 V_2$: $V_1 = \\frac{M_2 V_2}{M_1} = \\frac{0{,}10\\text{ M} \\times 500\\text{ mL}}{2{,}0\\text{ M}} = \\frac{50}{2{,}0} = 25\\text{ mL}$.",
+    fonte: "Lotto S5 del progetto — S5-27 (Soluzioni, concentrazione e diluizioni (formula delle diluizioni))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 623,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "A $100\\text{ mL}$ di una soluzione acquosa di glucosio a concentrazione $0{,}60\\text{ M}$ vengono aggiunti $200\\text{ mL}$ di acqua distillata (assumendo i volumi perfettamente additivi per un volume totale di $300\\text{ mL}$). Qual è la molarità della soluzione diluita finale?",
+    rispostaCorretta: "$0{,}20\\text{ M}$",
+    risposteErrate: [
+      "$0{,}15\\text{ M}$",
+      "$0{,}30\\text{ M}$",
+      "$0{,}40\\text{ M}$",
+      "$0{,}50\\text{ M}$"
+    ],
+    spiegazione: "Le moli di soluto rimangono costanti durante la diluizione: $n = M_1 V_1 = 0{,}60\\text{ M} \\times 0{,}100\\text{ L} = 0{,}060\\text{ mol}$. Il volume totale finale è $V_2 = 100\\text{ mL} + 200\\text{ mL} = 300\\text{ mL} = 0{,}300\\text{ L}$. La concentrazione finale è $M_2 = \\frac{n}{V_2} = \\frac{0{,}060\\text{ mol}}{0{,}300\\text{ L}} = 0{,}20\\text{ M}$.",
+    fonte: "Lotto S5 del progetto — S5-28 (Soluzioni, concentrazione e diluizioni (molarità finale post-diluizione))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 624,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Quale tra le seguenti sostanze, una volta disciolta in acqua, si comporta come un «non elettrolita», ovvero non produce ioni e non rende la soluzione conduttrice di elettricità?",
+    rispostaCorretta: "Saccarosio (zucchero da tavola, $\\text{C}_{12}\\text{H}_{22}\\text{O}_{11}$)",
+    risposteErrate: [
+      "Cloruro di sodio ($\\text{NaCl}$)",
+      "Acido cloridrico ($\\text{HCl}$)",
+      "Idrossido di potassio ($\\text{KOH}$)",
+      "Solfato di magnesio ($\\text{MgSO}_4$)"
+    ],
+    spiegazione: "Il saccarosio è un composto molecolare a legami covalenti che in acqua si scioglie mantenendo integre le singole molecole neutre senza dissociarsi o ionizzarsi in ioni; perciò non conduce la corrente elettrica ed è un non elettrolita.",
+    fonte: "Lotto S5 del progetto — S5-29 (Elettroliti e dissociazione ionica (non elettroliti molecolari))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 625,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Una soluzione acquosa contiene cloruro di calcio ($\\text{CaCl}_2$, elettrolita forte che si dissocia completamente secondo $\\text{CaCl}_2\\text{(aq)} \\to \\text{Ca}^{2+}\\text{(aq)} + 2\\,\\text{Cl}^-\\text{(aq)}$) a concentrazione $0{,}15\\text{ mol/L}$. Qual è la concentrazione molare complessiva di tutti gli ioni presenti in soluzione?",
+    rispostaCorretta: "$0{,}45\\text{ mol/L}$",
+    risposteErrate: [
+      "$0{,}15\\text{ mol/L}$",
+      "$0{,}30\\text{ mol/L}$",
+      "$0{,}60\\text{ mol/L}$",
+      "$0{,}75\\text{ mol/L}$"
+    ],
+    spiegazione: "Per ogni mole di $\\text{CaCl}_2$ dissociata si formano $1\\text{ mole}$ di ioni $\\text{Ca}^{2+}$ e $2\\text{ moli}$ di ioni $\\text{Cl}^-$, per un totale di $3\\text{ moli}$ di ioni. Pertanto, la concentrazione ionica totale è pari a $3 \\times 0{,}15\\text{ mol/L} = 0{,}45\\text{ mol/L}$ ($[\\text{Ca}^{2+}] = 0{,}15\\text{ M}$ e $[\\text{Cl}^-] = 0{,}30\\text{ M}$).",
+    fonte: "Lotto S5 del progetto — S5-30 (Elettroliti e dissociazione ionica (concentrazione ionica totale CaCl2))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 626,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Assumendo un modello di dissociazione ionica completa e ideale in soluzione acquosa secondo la reazione $\\text{Al}_2(\\text{SO}_4)_3\\text{(s)} \\to 2\\,\\text{Al}^{3+}\\text{(aq)} + 3\\,\\text{SO}_4^{2-}\\text{(aq)}$, qual è il valore del coefficiente di van ’t Hoff teorico ($i$) per il solfato di alluminio?",
+    rispostaCorretta: "$i = 5$",
+    risposteErrate: [
+      "$i = 2$",
+      "$i = 3$",
+      "$i = 4$",
+      "$i = 6$"
+    ],
+    spiegazione: "In base al modello di dissociazione completa e ideale, da ciascuna unità formula di $\\text{Al}_2(\\text{SO}_4)_3$ si liberano $2$ cationi $\\text{Al}^{3+}$ e $3$ anioni $\\text{SO}_4^{2-}$. Il numero totale di particelle ioniche prodotte per unità formula è pertanto pari a $i = 2 + 3 = 5$.",
+    fonte: "Lotto S5 del progetto — S5-31 (Elettroliti e dissociazione ionica (coefficiente di van ’t Hoff teorico))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 627,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "A parità di concentrazione molare iniziale ($0{,}10\\text{ M}$ a $25^\\circ\\text{C}$), quale delle seguenti soluzioni acquose presenterà una conducibilità elettrica marcatamente inferiore rispetto alle altre?",
+    rispostaCorretta: "Acido acetico ($\\text{CH}_3\\text{COOH}$)",
+    risposteErrate: [
+      "Acido cloridrico ($\\text{HCl}$)",
+      "Idrossido di sodio ($\\text{NaOH}$)",
+      "Nitrato di potassio ($\\text{KNO}_3$)",
+      "Cloruro di bario ($\\text{BaCl}_2$)"
+    ],
+    spiegazione: "L’acido acetico è un acido debole (elettrolita debole) che in acqua si ionizza solo parzialmente (meno dell’$1\\text{--}2\\%$ a $0{,}10\\text{ M}$), lasciando la maggior parte delle molecole indissociate. Le altre sostanze sono elettroliti forti completamente dissociati, con concentrazione ionica e conducibilità enormemente maggiori.",
+    fonte: "Lotto S5 del progetto — S5-32 (Elettroliti e dissociazione ionica (conducibilità elettrolita debole))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 628,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Secondo la teoria acido-base formulata da Brønsted e Lowry, una sostanza si comporta come una «base» se e solo se:",
+    rispostaCorretta: "È in grado di accettare uno ione idrogeno (protone, $\\text{H}^+$) da un’altra specie chimica",
+    risposteErrate: [
+      "In soluzione acquosa libera esclusivamente ioni ossidrile $\\text{OH}^-$ dissociandosi",
+      "È in grado di donare un doppietto elettronico per formare un legame covalente dativo",
+      "Contiene obbligatoriamente un atomo di metallo alcalino nella propria formula",
+      "È in grado di cedere uno ione idrogeno (protone, $\\text{H}^+$) all’ambiente circostante"
+    ],
+    spiegazione: "Secondo la teoria di Brønsted-Lowry, un acido è una specie capace di donare un protone ($\text{H}^+$), mentre una base è una specie capace di accettare un protone ($\text{H}^+$).",
+    fonte: "Lotto S5 del progetto — S5-33 (Acidi, basi, pH, pOH e neutralizzazione (definizione base Brønsted-Lowry))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 629,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "In chimica, lo ione idrogenocarbonato ($\\text{HCO}_3^-$) e l’acqua ($\\text{H}_2\\text{O}$) sono classificati come specie «anfotere» (o anfiprotiche). Che cosa significa questa proprietà?",
+    rispostaCorretta: "Che possono comportarsi sia da acido (donando un protone) sia da base (accettando un protone) a seconda del partner di reazione",
+    risposteErrate: [
+      "Che hanno una solubilità infinita in qualsiasi solvente polare e apolare",
+      "Che si dissociano completamente in ioni solo a temperature superiori a $100^\\circ\\text{C}$",
+      "Che non possono partecipare ad alcuna reazione di trasferimento protonico",
+      "Che formano soluzioni aventi sempre e rigorosamente un $\\text{pH} = 7{,}0$"
+    ],
+    spiegazione: "Una specie è anfotera (o anfiprotica) se è in grado sia di donare un protone (agendo da acido di Brønsted, es. $\text{HCO}_3^- \to \text{H}^+ + \text{CO}_3^{2-}$) sia di accettare un protone (agendo da base di Brønsted, es. $\text{HCO}_3^- + \text{H}^+ \to \text{H}_2\text{CO}_3$).",
+    fonte: "Lotto S5 del progetto — S5-34 (Acidi, basi, pH, pOH e neutralizzazione (specie anfotere anfiprotiche))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 630,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "A $25^\\circ\\text{C}$, il prodotto ionico dell’acqua vale $K_w = [\\text{H}^+][\\text{OH}^-] = 1{,}0 \\times 10^{-14}$. Se in una soluzione acquosa la concentrazione degli ioni idrogeno è pari a $[\\text{H}^+] = 1{,}0 \\times 10^{-4}\\text{ mol/L}$, qual è la concentrazione degli ioni ossidrile $[\\text{OH}^-]$?",
+    rispostaCorretta: "$1{,}0 \\times 10^{-10}\\text{ mol/L}$",
+    risposteErrate: [
+      "$1{,}0 \\times 10^{-4}\\text{ mol/L}$",
+      "$1{,}0 \\times 10^{-7}\\text{ mol/L}$",
+      "$1{,}0 \\times 10^{-14}\\text{ mol/L}$",
+      "$1{,}0 \\times 10^{-18}\\text{ mol/L}$"
+    ],
+    spiegazione: "Dal prodotto ionico dell’acqua $K_w = [\\text{H}^+][\\text{OH}^-] = 1{,}0 \\times 10^{-14}$: $[\\text{OH}^-] = \\frac{K_w}{[\\text{H}^+]} = \\frac{1{,}0 \\times 10^{-14}}{1{,}0 \\times 10^{-4}} = 1{,}0 \\times 10^{-10}\\text{ mol/L}$.",
+    fonte: "Lotto S5 del progetto — S5-35 (Acidi, basi, pH, pOH e neutralizzazione (calcolo [OH-] da Kw a 25°C))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 631,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Come è definita matematicamente la scala di acidità del $\\text{pH}$ per una soluzione acquosa diluita?",
+    rispostaCorretta: "$\\text{pH} = -\\log_{10}[\\text{H}^+]$",
+    risposteErrate: [
+      "$\\text{pH} = \\log_{10}[\\text{H}^+]$",
+      "$\\text{pH} = -\\ln[\\text{OH}^-]$",
+      "$\\text{pH} = \\frac{1}{[\\text{H}^+]}$",
+      "$\\text{pH} = 10^{-[\\text{H}^+]}$"
+    ],
+    spiegazione: "Il $\\text{pH}$ (introdotto da Sørensen) è definito come il logaritmo decimale negativo della concentrazione molare (più rigorosamente attività) degli ioni idrogeno $\\text{H}^+$ (o idronio $\\text{H}_3\\text{O}^+$): $\\text{pH} = -\\log_{10}[\\text{H}^+]$.",
+    fonte: "Lotto S5 del progetto — S5-36 (Acidi, basi, pH, pOH e neutralizzazione (definizione matematica del pH))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 632,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Qual è il $\\text{pH}$ di una soluzione acquosa di acido nitrico ($\\text{HNO}_3$, acido forte monoprotico completamente dissociato) a concentrazione $0{,}0010\\text{ mol/L}$ ($1{,}0 \\times 10^{-3}\\text{ M}$)?",
+    rispostaCorretta: "$\\text{pH} = 3{,}0$",
+    risposteErrate: [
+      "$\\text{pH} = 1{,}0$",
+      "$\\text{pH} = 2{,}0$",
+      "$\\text{pH} = 4{,}0$",
+      "$\\text{pH} = 11{,}0$"
+    ],
+    spiegazione: "Essendo $\\text{HNO}_3$ un acido forte monoprotico a dissociazione totale: $[\\text{H}^+] = C_a = 1{,}0 \\times 10^{-3}\\text{ M}$. Il $\\text{pH}$ vale quindi: $\\text{pH} = -\\log_{10}(1{,}0 \\times 10^{-3}) = 3{,}0$.",
+    fonte: "Lotto S5 del progetto — S5-37 (Acidi, basi, pH, pOH e neutralizzazione (calcolo pH acido forte))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 633,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Qual è il $\\text{pH}$ a $25^\\circ\\text{C}$ di una soluzione acquosa di idrossido di sodio ($\\text{NaOH}$, base forte a dissociazione completa) a concentrazione $0{,}010\\text{ mol/L}$ ($1{,}0 \\times 10^{-2}\\text{ M}$)?",
+    rispostaCorretta: "$\\text{pH} = 12{,}0$",
+    risposteErrate: [
+      "$\\text{pH} = 2{,}0$",
+      "$\\text{pH} = 7{,}0$",
+      "$\\text{pH} = 10{,}0$",
+      "$\\text{pH} = 14{,}0$"
+    ],
+    spiegazione: "La base forte $\\text{NaOH}$ si dissocia completamente: $[\\text{OH}^-] = 1{,}0 \\times 10^{-2}\\text{ M}$. Il $\\text{pOH}$ è pari a $\\text{pOH} = -\\log_{10}(1{,}0 \\times 10^{-2}) = 2{,}0$. Poiché a $25^\\circ\\text{C}$ $\\text{pH} + \\text{pOH} = 14{,}0$, si ottiene: $\\text{pH} = 14{,}0 - 2{,}0 = 12{,}0$.",
+    fonte: "Lotto S5 del progetto — S5-38 (Acidi, basi, pH, pOH e neutralizzazione (calcolo pH base forte))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 634,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Una soluzione acquosa di acido cloridrico ha un $\\text{pH} = 2{,}0$. Se viene diluita con acqua distillata di un fattore $100$ (aumentando il volume di $100$ volte), quale valore assume il $\\text{pH}$ della nuova soluzione a $25^\\circ\\text{C}$?",
+    rispostaCorretta: "$\\text{pH} = 4{,}0$",
+    risposteErrate: [
+      "$\\text{pH} = 0{,}02$",
+      "$\\text{pH} = 1{,}0$",
+      "$\\text{pH} = 3{,}0$",
+      "$\\text{pH} = 8{,}0$"
+    ],
+    spiegazione: "A $\\text{pH} = 2{,}0$, $[\\text{H}^+] = 10^{-2}\\text{ M} = 0{,}010\\text{ M}$. Diluendo di $100$ volte ($10^2$), la concentrazione degli ioni idrogeno si riduce di un fattore $100$: $[\\text{H}^+]_{\\text{nuovo}} = \\frac{10^{-2}\\text{ M}}{100} = 10^{-4}\\text{ M}$. Il nuovo $\\text{pH}$ è $\\text{pH} = -\\log_{10}(10^{-4}) = 4{,}0$ (aumento di $2$ unità di pH).",
+    fonte: "Lotto S5 del progetto — S5-39 (Acidi, basi, pH, pOH e neutralizzazione (variazione pH per diluizione 100x))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 635,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Quante moli di idrossido di sodio ($\\text{NaOH}$) sono necessarie per neutralizzare completamente $0{,}15\\text{ moli}$ di acido solforico ($\\text{H}_2\\text{SO}_4$, acido diprotico) secondo la reazione $\\text{H}_2\\text{SO}_4 + 2\\,\\text{NaOH} \\to \\text{Na}_2\\text{SO}_4 + 2\\,\\text{H}_2\\text{O}$?",
+    rispostaCorretta: "$0{,}30\\text{ moli}$",
+    risposteErrate: [
+      "$0{,}075\\text{ moli}$",
+      "$0{,}15\\text{ moli}$",
+      "$0{,}45\\text{ moli}$",
+      "$0{,}60\\text{ moli}$"
+    ],
+    spiegazione: "L’acido solforico $\\text{H}_2\\text{SO}_4$ è un acido diprotico che libera $2\\text{ moli}$ di $\\text{H}^+$ per ogni mole di acido. Dalla stechiometria della reazione bilanciata, occorrono $2\\text{ moli}$ di $\\text{NaOH}$ per ogni mole di $\\text{H}_2\\text{SO}_4$. Dunque: $n_{\\text{NaOH}} = 2 \\times 0{,}15\\text{ mol} = 0{,}30\\text{ moli}$.",
+    fonte: "Lotto S5 del progetto — S5-40 (Acidi, basi, pH, pOH e neutralizzazione (moli NaOH neutralizzazione H2SO4))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 636,
+    materia: "Scienze",
+    difficolta: "medio",
+    domanda: "Quale volume di una soluzione di idrossido di potassio ($\\text{KOH}$) a concentrazione $0{,}20\\text{ M}$ è necessario per neutralizzare completamente $100\\text{ mL}$ di una soluzione di acido cloridrico ($\\text{HCl}$) a concentrazione $0{,}10\\text{ M}$?",
+    rispostaCorretta: "$50\\text{ mL}$",
+    risposteErrate: [
+      "$25\\text{ mL}$",
+      "$100\\text{ mL}$",
+      "$150\\text{ mL}$",
+      "$200\\text{ mL}$"
+    ],
+    spiegazione: "La reazione di neutralizzazione tra $\\text{HCl}$ e $\\text{KOH}$ è $1:1$ ($\\text{HCl} + \\text{KOH} \\to \\text{KCl} + \\text{H}_2\\text{O}$). Moli di acido: $n_{\\text{HCl}} = M_a V_a = 0{,}10\\text{ M} \\times 0{,}100\\text{ L} = 0{,}010\\text{ mol}$. All’equivalenza $n_{\\text{KOH}} = n_{\\text{HCl}} = 0{,}010\\text{ mol}$. Il volume richiesto di base è $V_b = \\frac{n_{\\text{KOH}}}{M_b} = \\frac{0{,}010\\text{ mol}}{0{,}20\\text{ mol/L}} = 0{,}050\\text{ L} = 50\\text{ mL}$.",
+    fonte: "Lotto S5 del progetto — S5-41 (Acidi, basi, pH, pOH e neutralizzazione (volume KOH per titolazione HCl))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 637,
+    materia: "Scienze",
+    difficolta: "medio-difficile",
+    domanda: "Vengono mescolati $100\\text{ mL}$ di una soluzione acquosa di acido cloridrico ($\\text{HCl}$) a concentrazione $0{,}30\\text{ M}$ con $100\\text{ mL}$ di una soluzione acquosa di idrossido di sodio ($\\text{NaOH}$) a concentrazione $0{,}10\\text{ M}$. Assumendo che i volumi siano perfettamente additivi ($V_{\\text{totale}} = 200\\text{ mL} = 0{,}20\\text{ L}$) e che la temperatura sia $25^\\circ\\text{C}$, quali sono la concentrazione residua di ioni $[\\text{H}^+]$ e il $\\text{pH}$ finale della soluzione risultante?",
+    rispostaCorretta: "$[\\text{H}^+] = 0{,}10\\text{ M}$ e $\\text{pH} = 1{,}0$",
+    risposteErrate: [
+      "$[\\text{H}^+] = 0{,}20\\text{ M}$ e $\\text{pH} = 0{,}70$",
+      "$[\\text{H}^+] = 0{,}020\\text{ M}$ e $\\text{pH} = 1{,}7$",
+      "$[\\text{H}^+] = 1{,}0 \\times 10^{-7}\\text{ M}$ e $\\text{pH} = 7{,}0$ (soluzione perfettamente neutra)",
+      "$[\\text{H}^+] = 0{,}15\\text{ M}$ e $\\text{pH} = 0{,}82$"
+    ],
+    spiegazione: "1) Moli iniziali di acido: $n_{\\text{H}^+} = 0{,}30\\text{ mol/L} \\times 0{,}100\\text{ L} = 0{,}030\\text{ mol}$. 2) Moli iniziali di base: $n_{\\text{OH}^-} = 0{,}10\\text{ mol/L} \\times 0{,}100\\text{ L} = 0{,}010\\text{ mol}$. 3) Reazione di neutralizzazione: $\\text{H}^+ + \\text{OH}^- \\to \\text{H}_2\\text{O}$. La base è il reagente limitante e si consuma interamente. Moli di $\\text{H}^+$ residue in eccesso: $n_{\\text{H}^+}^{\\text{res}} = 0{,}030 - 0{,}010 = 0{,}020\\text{ mol}$. 4) Volume totale: $V_{\\text{tot}} = 100\\text{ mL} + 100\\text{ mL} = 200\\text{ mL} = 0{,}20\\text{ L}$. 5) Concentrazione finale: $[\\text{H}^+] = \\frac{0{,}020\\text{ mol}}{0{,}20\\text{ L}} = 0{,}10\\text{ mol/L} = 10^{-1}\\text{ M}$. 6) $\\text{pH}$ finale: $\\text{pH} = -\\log_{10}(0{,}10) = 1{,}0$.",
+    fonte: "Lotto S5 del progetto — S5-42 (Acidi, basi, pH, pOH e neutralizzazione (problema multi-step neutralizzazione con eccesso))",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
   }
 ];
 

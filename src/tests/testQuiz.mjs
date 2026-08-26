@@ -42,19 +42,19 @@ function makeMockQuestion(id, materia) {
   };
 }
 
-// ─── 1. BANCA DATI FISICA (590 RECORD) ───
-section('1. Banca Dati Fisica (590 Record)');
+// ─── 1. BANCA DATI FISICA (632 RECORD) ───
+section('1. Banca Dati Fisica (632 Record)');
 check(Array.isArray(questionBank), 'questionBank è un array');
-check(questionBank.length === 590, `questionBank contiene esattamente 590 record fisici (trovati: ${questionBank.length})`);
+check(questionBank.length === 632, `questionBank contiene esattamente 632 record fisici (trovati: ${questionBank.length})`);
 
 const allAllQuestions = await getAllQuestions();
-check(allAllQuestions.length === 590, `getAllQuestions() restituisce tutti i 590 record fisici (trovati: ${allAllQuestions.length})`);
+check(allAllQuestions.length === 632, `getAllQuestions() restituisce tutti i 632 record fisici (trovati: ${allAllQuestions.length})`);
 
 const allIds = questionBank.map((q) => q.id);
 const uniqueIds = new Set(allIds);
-check(uniqueIds.size === 590, `Tutti i 590 ID sono univoci (trovati: ${uniqueIds.size})`);
+check(uniqueIds.size === 632, `Tutti i 632 ID sono univoci (trovati: ${uniqueIds.size})`);
 check(Math.min(...allIds) === 1, `ID minimo = 1 (trovato: ${Math.min(...allIds)})`);
-check(Math.max(...allIds) === 595, `ID massimo = 595 (trovato: ${Math.max(...allIds)})`);
+check(Math.max(...allIds) === 637, `ID massimo = 637 (trovato: ${Math.max(...allIds)})`);
 
 // Preservazione buchi storici
 const historicalHoles = [2, 18, 25, 78, 202];
@@ -670,6 +670,75 @@ check(
   'Quesito S4-35 (ID 595, MD) analisi multi-step SO2 (18 elettroni, piegata < 120°, polare)'
 );
 
+// ─── 2J. CENSIMENTO LOTTO S5 (ID 596–637) ───
+section('2J. Censimento e Validazione Lotto S5 (ID 596–637)');
+const s5Questions = questionBank.filter((q) => q.id >= 596 && q.id <= 637);
+check(s5Questions.length === 42, `Lotto S5: esattamente 42 quesiti nel range ID 596–637 (trovati: ${s5Questions.length})`);
+
+const s5AllScience = s5Questions.every((q) => q.materia === 'Scienze');
+check(s5AllScience, 'Tutti i 42 quesiti di S5 appartengono alla materia Scienze');
+
+const s5OptionsCheck = s5Questions.every((q) => (
+  typeof q.rispostaCorretta === 'string' &&
+  Array.isArray(q.risposteErrate) &&
+  q.risposteErrate.length === 4
+));
+check(s5OptionsCheck, 'Tutti i 42 quesiti di S5 hanno 1 risposta corretta e 4 errate (5 opzioni totali)');
+
+const s5StatsZeroed = s5Questions.every((q) => (
+  q.numeroVolteProposta === 0 &&
+  q.numeroRisposteCorrette === 0 &&
+  q.numeroRisposteErrate === 0
+));
+check(s5StatsZeroed, 'Tutti i 42 quesiti di S5 hanno i contatori statistici azzerati (numeroVolteProposta=0, corrette=0, errate=0)');
+
+const s5FonteCheck = s5Questions.every((q) => (
+  typeof q.fonte === 'string' &&
+  q.fonte.includes('Lotto S5 del progetto') &&
+  !q.fonte.toLowerCase().includes('cisia')
+));
+check(s5FonteCheck, 'Tutti i 42 quesiti di S5 indicano chiaramente "Lotto S5 del progetto" nella fonte senza attribuzioni esterne');
+
+const s5NoLegacyFlag = s5Questions.every((q) => q.excludedFromTolcPool !== true);
+check(s5NoLegacyFlag, 'Nessun quesito di S5 possiede excludedFromTolcPool: true (tutti nel pool attivo)');
+
+// Regression checks specifici per casi rifiniti S5
+const q596 = questionBank.find((q) => q.id === 596);
+check(
+  Boolean(q596 && q596.domanda.includes('Lavoisier') && q596.rispostaCorretta === '$44{,}0\\text{ g}$'),
+  'Quesito S5-01 (ID 596) legge di conservazione della massa con risposta $44{,}0\\text{ g}$'
+);
+
+const q600 = questionBank.find((q) => q.id === 600);
+check(
+  Boolean(q600 && q600.domanda.includes('KMnO}_4') && q600.rispostaCorretta === '$+7$'),
+  'Quesito S5-05 (ID 600) numero di ossidazione del manganese in KMnO4 pari a $+7$'
+);
+
+const q603 = questionBank.find((q) => q.id === 603);
+check(
+  Boolean(q603 && q603.domanda.includes('Cr}_2\\text{O}_7^{2-}') && q603.rispostaCorretta === '$+6$'),
+  'Quesito S5-08 (ID 603) numero di ossidazione del cromo in Cr2O7(2-) pari a $+6$'
+);
+
+const q609 = questionBank.find((q) => q.id === 609);
+check(
+  Boolean(q609 && q609.domanda.includes('V_m = 22{,}4\\text{ L/mol}') && q609.rispostaCorretta === '$56{,}0\\text{ L}$'),
+  'Quesito S5-14 (ID 609) volume molare standard con condizioni esplicite e risposta $56{,}0\\text{ L}$'
+);
+
+const q626 = questionBank.find((q) => q.id === 626);
+check(
+  Boolean(q626 && q626.domanda.includes('modello di dissociazione ionica completa e ideale') && q626.rispostaCorretta === '$i = 5$'),
+  'Quesito S5-31 (ID 626) coefficiente di van ’t Hoff teorico con risposta $i = 5$'
+);
+
+const q637 = questionBank.find((q) => q.id === 637);
+check(
+  Boolean(q637 && q637.difficolta === 'medio-difficile' && q637.rispostaCorretta === '$[\\text{H}^+] = 0{,}10\\text{ M}$ e $\\text{pH} = 1{,}0$'),
+  'Quesito S5-42 (ID 637, MD) neutralizzazione multi-step con eccesso, [H+] = 0,10 M e pH = 1,0'
+);
+
 // ─── 3. ISOLAMENTO 35 RECORD LEGACY ED ESCLUSIONE ───
 section('3. Isolamento 35 Record Legacy (excludedFromTolcPool: true)');
 const legacyRecords = questionBank.filter((q) => q.excludedFromTolcPool === true);
@@ -722,14 +791,14 @@ check(typeof id315FromCatalog?.brano === 'string' && id315FromCatalog.brano.leng
 const id315Raw = getRawQuestionById(315);
 check(Boolean(id315Raw && id315Raw.id === 315), 'ID 315 è recuperabile tramite getRawQuestionById(315)');
 
-// ─── 5. POOL ATTIVO 555 QUESITI E RIPARTIZIONE PER MATERIA ───
-section('5. Pool Attivo 555 Quesiti e Ripartizione per Materia');
-check(activeQuestionsFromService.length === 555, `getQuestions() restituisce esattamente 555 quesiti attivi (trovati: ${activeQuestionsFromService.length})`);
+// ─── 5. POOL ATTIVO 597 QUESITI E RIPARTIZIONE PER MATERIA ───
+section('5. Pool Attivo 597 Quesiti e Ripartizione per Materia');
+check(activeQuestionsFromService.length === 597, `getQuestions() restituisce esattamente 597 quesiti attivi (trovati: ${activeQuestionsFromService.length})`);
 
 const activeSubjects = {
   Matematica: 250,
   Logica: 48,
-  Scienze: 208,
+  Scienze: 250,
   'Comprensione verbale': 49
 };
 
@@ -740,11 +809,11 @@ activeQuestionsFromService.forEach((q) => {
 
 check(activeDistribution['Matematica'] === 250, `Matematica attiva: 250 (trovati: ${activeDistribution['Matematica']})`);
 check(activeDistribution['Logica'] === 48, `Logica attiva: 48 (trovati: ${activeDistribution['Logica']})`);
-check(activeDistribution['Scienze'] === 208, `Scienze attiva: 208 (trovati: ${activeDistribution['Scienze']})`);
+check(activeDistribution['Scienze'] === 250, `Scienze attiva: 250 (trovati: ${activeDistribution['Scienze']})`);
 check(activeDistribution['Comprensione verbale'] === 49, `Comprensione verbale attiva: 49 (trovati: ${activeDistribution['Comprensione verbale']})`);
 
 const totalActiveSum = Object.values(activeDistribution).reduce((sum, v) => sum + v, 0);
-check(totalActiveSum === 555, `Somma per materia pool attivo = 555 (250 + 48 + 208 + 49 = ${totalActiveSum})`);
+check(totalActiveSum === 597, `Somma per materia pool attivo = 597 (250 + 48 + 250 + 49 = ${totalActiveSum})`);
 
 const serviceMaterie = (await getMaterie()).sort();
 check(serviceMaterie.length === 4, `getMaterie() restituisce esattamente 4 materie attive (${serviceMaterie.join(', ')})`);
@@ -864,11 +933,12 @@ const s1Count = 35;
 const s2Count = 35;
 const s3Count = 35;
 const s4Count = 35;
+const s5Count = 42;
 const physicalTotal = questionBank.length;
 const legacyCount = questionBank.filter((q) => q.excludedFromTolcPool === true).length;
 const activeTotal = activeQuestionsFromService.length;
 
-check(baseCount + m1Count + m2Count + m3Count + m4Count + m5Count + s1Count + s2Count + s3Count + s4Count === physicalTotal, `Uguaglianza fisica verificata: ${baseCount} (base) + ${m1Count} (M1) + ${m2Count} (M2) + ${m3Count} (M3) + ${m4Count} (M4) + ${m5Count} (M5) + ${s1Count} (S1) + ${s2Count} (S2) + ${s3Count} (S3) + ${s4Count} (S4) = ${physicalTotal} (fisici)`);
+check(baseCount + m1Count + m2Count + m3Count + m4Count + m5Count + s1Count + s2Count + s3Count + s4Count + s5Count === physicalTotal, `Uguaglianza fisica verificata: ${baseCount} (base) + ${m1Count} (M1) + ${m2Count} (M2) + ${m3Count} (M3) + ${m4Count} (M4) + ${m5Count} (M5) + ${s1Count} (S1) + ${s2Count} (S2) + ${s3Count} (S3) + ${s4Count} (S4) + ${s5Count} (S5) = ${physicalTotal} (fisici)`);
 check(physicalTotal - legacyCount === activeTotal, `Uguaglianza attiva verificata: ${physicalTotal} (fisici) - ${legacyCount} (legacy) = ${activeTotal} (attivi)`);
 
 console.log(`\nRisultato testQuiz.mjs: ${passed} test passati, ${failed} falliti.`);

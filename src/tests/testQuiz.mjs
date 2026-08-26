@@ -42,19 +42,19 @@ function makeMockQuestion(id, materia) {
   };
 }
 
-// ─── 1. BANCA DATI FISICA (392 RECORD) ───
-section('1. Banca Dati Fisica (392 Record)');
+// ─── 1. BANCA DATI FISICA (417 RECORD) ───
+section('1. Banca Dati Fisica (417 Record)');
 check(Array.isArray(questionBank), 'questionBank è un array');
-check(questionBank.length === 392, `questionBank contiene esattamente 392 record fisici (trovati: ${questionBank.length})`);
+check(questionBank.length === 417, `questionBank contiene esattamente 417 record fisici (trovati: ${questionBank.length})`);
 
 const allAllQuestions = await getAllQuestions();
-check(allAllQuestions.length === 392, `getAllQuestions() restituisce tutti i 392 record fisici (trovati: ${allAllQuestions.length})`);
+check(allAllQuestions.length === 417, `getAllQuestions() restituisce tutti i 417 record fisici (trovati: ${allAllQuestions.length})`);
 
 const allIds = questionBank.map((q) => q.id);
 const uniqueIds = new Set(allIds);
-check(uniqueIds.size === 392, `Tutti i 392 ID sono univoci (trovati: ${uniqueIds.size})`);
+check(uniqueIds.size === 417, `Tutti i 417 ID sono univoci (trovati: ${uniqueIds.size})`);
 check(Math.min(...allIds) === 1, `ID minimo = 1 (trovato: ${Math.min(...allIds)})`);
-check(Math.max(...allIds) === 397, `ID massimo = 397 (trovato: ${Math.max(...allIds)})`);
+check(Math.max(...allIds) === 422, `ID massimo = 422 (trovato: ${Math.max(...allIds)})`);
 
 // Preservazione buchi storici
 const historicalHoles = [2, 18, 25, 78, 202];
@@ -166,6 +166,87 @@ check(
   'Quesito M3-24 (ID 396) contiene la quantificazione esplicita "con k in Z"'
 );
 
+// ─── 2D. CENSIMENTO LOTTO M4 (ID 398–422) ───
+section('2D. Censimento e Validazione Lotto M4 (ID 398–422)');
+const m4Questions = questionBank.filter((q) => q.id >= 398 && q.id <= 422);
+check(m4Questions.length === 25, `Lotto M4: esattamente 25 quesiti nel range ID 398–422 (trovati: ${m4Questions.length})`);
+
+const m4AllMath = m4Questions.every((q) => q.materia === 'Matematica');
+check(m4AllMath, 'Tutti i 25 quesiti di M4 appartengono alla materia Matematica');
+
+const m4OptionsCheck = m4Questions.every((q) => (
+  typeof q.rispostaCorretta === 'string' &&
+  Array.isArray(q.risposteErrate) &&
+  q.risposteErrate.length === 4
+));
+check(m4OptionsCheck, 'Tutti i 25 quesiti di M4 hanno 1 risposta corretta e 4 errate (5 opzioni totali)');
+
+const m4StatsZeroed = m4Questions.every((q) => (
+  q.numeroVolteProposta === 0 &&
+  q.numeroRisposteCorrette === 0 &&
+  q.numeroRisposteErrate === 0
+));
+check(m4StatsZeroed, 'Tutti i 25 quesiti di M4 hanno i contatori statistici azzerati (numeroVolteProposta=0, corrette=0, errate=0)');
+
+const m4FonteCheck = m4Questions.every((q) => (
+  typeof q.fonte === 'string' &&
+  q.fonte.includes('Lotto M4 del progetto') &&
+  !q.fonte.toLowerCase().includes('cisia')
+));
+check(m4FonteCheck, 'Tutti i 25 quesiti di M4 indicano chiaramente "Lotto M4 del progetto" nella fonte senza attribuzioni esterne');
+
+const m4NoLegacyFlag = m4Questions.every((q) => q.excludedFromTolcPool !== true);
+check(m4NoLegacyFlag, 'Nessun quesito di M4 possiede excludedFromTolcPool: true (tutti nel pool attivo)');
+
+// Regression checks su casi rifiniti M4
+const q398 = questionBank.find((q) => q.id === 398);
+check(
+  Boolean(q398 && q398.domanda.includes('angolo esterno misura $45^\\circ$') && q398.rispostaCorretta === '8'),
+  'Quesito M4-01 (ID 398) contiene la versione rifinita sull’angolo esterno da 45° con risposta 8'
+);
+
+const q404 = questionBank.find((q) => q.id === 404);
+check(
+  Boolean(q404 && q404.domanda.includes('semicircolo') && q404.rispostaCorretta === '$32 + 8\\pi\\text{ cm}^2$'),
+  'Quesito M4-07 (ID 404) contiene la figura composta rettangolo-semicircolo con risposta corretta $32 + 8\\pi\\text{ cm}^2$'
+);
+
+const q406 = questionBank.find((q) => q.id === 406);
+check(
+  Boolean(q406 && q406.domanda.includes('rapporto tra la nuova superficie totale e quella iniziale') && q406.rispostaCorretta === '9'),
+  'Quesito M4-09 (ID 406) contiene la formulazione adimensionale sul rapporto delle superfici con risposta 9'
+);
+
+const q412 = questionBank.find((q) => q.id === 412);
+check(
+  Boolean(q412 && q412.risposteErrate.includes('$400\\text{ cm}^2$') && !q412.risposteErrate.some(opt => opt.includes('cm}^3'))),
+  'Quesito M4-15 (ID 412) contiene il distrattore omogeneo $400\\text{ cm}^2$ (senso volume scambiato per area)'
+);
+
+const q416 = questionBank.find((q) => q.id === 416);
+check(
+  Boolean(q416 && q416.domanda.includes('$36\\text{ cm}$') && q416.domanda.includes('$10\\text{ cm}$') && q416.rispostaCorretta === '$60\\text{ cm}^2$'),
+  'Quesito M4-19 (ID 416) contiene la configurazione distinta perimetro 36 cm, base 10 cm con area $60\\text{ cm}^2$'
+);
+
+const q420 = questionBank.find((q) => q.id === 420);
+check(
+  Boolean(q420 && !q420.domanda.endsWith('?"') && q420.risposteErrate.includes('$5\\text{ cm}$')),
+  'Quesito M4-23 (ID 420) ha testo pulito senza virgolette spurie e include il distrattore $5\\text{ cm}$'
+);
+
+const q421 = questionBank.find((q) => q.id === 421);
+check(
+  Boolean(q421 && q421.risposteErrate.includes('$24\\text{ cm}$') && q421.risposteErrate.includes('$8\\text{ cm}$')),
+  'Quesito M4-24 (ID 421) include i quattro distrattori geometrici approvati [7, 4, 24, 8]'
+);
+
+const q422 = questionBank.find((q) => q.id === 422);
+check(
+  Boolean(q422 && q422.rispostaCorretta === '$1250\\text{ cm}^2$'),
+  'Quesito M4-25 (ID 422) contiene la superficie totale esatta $1250\\text{ cm}^2$'
+);
+
 // ─── 3. ISOLAMENTO 35 RECORD LEGACY ED ESCLUSIONE ───
 section('3. Isolamento 35 Record Legacy (excludedFromTolcPool: true)');
 const legacyRecords = questionBank.filter((q) => q.excludedFromTolcPool === true);
@@ -218,12 +299,12 @@ check(typeof id315FromCatalog?.brano === 'string' && id315FromCatalog.brano.leng
 const id315Raw = getRawQuestionById(315);
 check(Boolean(id315Raw && id315Raw.id === 315), 'ID 315 è recuperabile tramite getRawQuestionById(315)');
 
-// ─── 5. POOL ATTIVO 357 QUESITI E RIPARTIZIONE PER MATERIA ───
-section('5. Pool Attivo 357 Quesiti e Ripartizione per Materia');
-check(activeQuestionsFromService.length === 357, `getQuestions() restituisce esattamente 357 quesiti attivi (trovati: ${activeQuestionsFromService.length})`);
+// ─── 5. POOL ATTIVO 382 QUESITI E RIPARTIZIONE PER MATERIA ───
+section('5. Pool Attivo 382 Quesiti e Ripartizione per Materia');
+check(activeQuestionsFromService.length === 382, `getQuestions() restituisce esattamente 382 quesiti attivi (trovati: ${activeQuestionsFromService.length})`);
 
 const activeSubjects = {
-  Matematica: 192,
+  Matematica: 217,
   Logica: 48,
   Scienze: 68,
   'Comprensione verbale': 49
@@ -234,13 +315,13 @@ activeQuestionsFromService.forEach((q) => {
   activeDistribution[q.materia] = (activeDistribution[q.materia] || 0) + 1;
 });
 
-check(activeDistribution['Matematica'] === 192, `Matematica attiva: 192 (trovati: ${activeDistribution['Matematica']})`);
+check(activeDistribution['Matematica'] === 217, `Matematica attiva: 217 (trovati: ${activeDistribution['Matematica']})`);
 check(activeDistribution['Logica'] === 48, `Logica attiva: 48 (trovati: ${activeDistribution['Logica']})`);
 check(activeDistribution['Scienze'] === 68, `Scienze attiva: 68 (trovati: ${activeDistribution['Scienze']})`);
 check(activeDistribution['Comprensione verbale'] === 49, `Comprensione verbale attiva: 49 (trovati: ${activeDistribution['Comprensione verbale']})`);
 
 const totalActiveSum = Object.values(activeDistribution).reduce((sum, v) => sum + v, 0);
-check(totalActiveSum === 357, `Somma per materia pool attivo = 357 (192 + 48 + 68 + 49 = ${totalActiveSum})`);
+check(totalActiveSum === 382, `Somma per materia pool attivo = 382 (217 + 48 + 68 + 49 = ${totalActiveSum})`);
 
 const serviceMaterie = (await getMaterie()).sort();
 check(serviceMaterie.length === 4, `getMaterie() restituisce esattamente 4 materie attive (${serviceMaterie.join(', ')})`);
@@ -354,11 +435,12 @@ const baseCount = 317;
 const m1Count = 25;
 const m2Count = 25;
 const m3Count = 25;
+const m4Count = 25;
 const physicalTotal = questionBank.length;
 const legacyCount = questionBank.filter((q) => q.excludedFromTolcPool === true).length;
 const activeTotal = activeQuestionsFromService.length;
 
-check(baseCount + m1Count + m2Count + m3Count === physicalTotal, `Uguaglianza fisica verificata: ${baseCount} (base) + ${m1Count} (M1) + ${m2Count} (M2) + ${m3Count} (M3) = ${physicalTotal} (fisici)`);
+check(baseCount + m1Count + m2Count + m3Count + m4Count === physicalTotal, `Uguaglianza fisica verificata: ${baseCount} (base) + ${m1Count} (M1) + ${m2Count} (M2) + ${m3Count} (M3) + ${m4Count} (M4) = ${physicalTotal} (fisici)`);
 check(physicalTotal - legacyCount === activeTotal, `Uguaglianza attiva verificata: ${physicalTotal} (fisici) - ${legacyCount} (legacy) = ${activeTotal} (attivi)`);
 
 console.log(`\nRisultato testQuiz.mjs: ${passed} test passati, ${failed} falliti.`);

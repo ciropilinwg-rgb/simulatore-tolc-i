@@ -6868,6 +6868,431 @@ const questionBank = [
     numeroVolteProposta: 0,
     numeroRisposteCorrette: 0,
     numeroRisposteErrate: 0
+  },
+  {
+    id: 398,
+    materia: "Matematica",
+    domanda: "In un poligono regolare ciascun angolo esterno misura $45^\\circ$. Quanti lati ha il poligono?",
+    rispostaCorretta: "8",
+    risposteErrate: [
+      "4",
+      "6",
+      "10",
+      "12"
+    ],
+    spiegazione: "In qualunque poligono convesso la somma delle ampiezze degli angoli esterni è sempre pari a $360^\\circ$. Poiché il poligono è regolare, gli $n$ angoli esterni sono tutti congruenti. Dalla relazione $n \\cdot 45^\\circ = 360^\\circ$, ricaviamo il numero di lati: $n = \\frac{360^\\circ}{45^\\circ} = 8$.",
+    fonte: "Lotto M4 del progetto — M4-01 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 399,
+    materia: "Matematica",
+    domanda: "Un triangolo equilatero ha il lato che misura $6\\text{ cm}$. Qual è la sua area?",
+    rispostaCorretta: "$9\\sqrt{3}\\text{ cm}^2$",
+    risposteErrate: [
+      "$18\\sqrt{3}\\text{ cm}^2$",
+      "$18\\text{ cm}^2$",
+      "$36\\sqrt{3}\\text{ cm}^2$",
+      "$9\\text{ cm}^2$"
+    ],
+    spiegazione: "L’altezza di un triangolo equilatero di lato $\\ell$ è $h = \\frac{\\sqrt{3}}{2}\\ell = \\frac{\\sqrt{3}}{2} \\cdot 6 = 3\\sqrt{3}\\text{ cm}$. L’area è quindi: $\\text{Area} = \\frac{1}{2} \\cdot \\text{base} \\cdot \\text{altezza} = \\frac{1}{2} \\cdot 6 \\cdot 3\\sqrt{3} = 9\\sqrt{3}\\text{ cm}^2$.",
+    fonte: "Lotto M4 del progetto — M4-02 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 400,
+    materia: "Matematica",
+    domanda: "In un rombo, le due diagonali misurano rispettivamente $10\\text{ cm}$ e $24\\text{ cm}$. Quanto misura il perimetro del rombo?",
+    rispostaCorretta: "$52\\text{ cm}$",
+    risposteErrate: [
+      "$26\\text{ cm}$",
+      "$68\\text{ cm}$",
+      "$48\\text{ cm}$",
+      "$120\\text{ cm}$"
+    ],
+    spiegazione: "Le diagonali di un rombo sono perpendicolari e si tagliano a metà. Ciascuno dei quattro triangoli rettangoli formati dalle diagonali ha cateti pari a $5\\text{ cm}$ e $12\\text{ cm}$. Per il teorema di Pitagora, il lato del rombo misura $\\ell = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13\\text{ cm}$. Il perimetro è $4\\ell = 4 \\cdot 13 = 52\\text{ cm}$.",
+    fonte: "Lotto M4 del progetto — M4-03 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 401,
+    materia: "Matematica",
+    domanda: "Se il volume di un cubo è pari a $64\\text{ cm}^3$, qual è la sua superficie totale?",
+    rispostaCorretta: "$96\\text{ cm}^2$",
+    risposteErrate: [
+      "$64\\text{ cm}^2$",
+      "$48\\text{ cm}^2$",
+      "$16\\text{ cm}^2$",
+      "$144\\text{ cm}^2$"
+    ],
+    spiegazione: "Dalla relazione del volume $V = \\ell^3 = 64\\text{ cm}^3$, ricaviamo lo spigolo del cubo: $\\ell = \\sqrt[3]{64} = 4\\text{ cm}$. La superficie totale di un cubo è data dalla somma delle aree delle sue 6 facce quadrate: $S_t = 6 \\cdot \\ell^2 = 6 \\cdot 4^2 = 6 \\cdot 16 = 96\\text{ cm}^2$.",
+    fonte: "Lotto M4 del progetto — M4-04 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 402,
+    materia: "Matematica",
+    domanda: "Un trapezio ha la base maggiore lunga $14\\text{ cm}$, la base minore lunga $6\\text{ cm}$ e l’altezza lunga $5\\text{ cm}$. Qual è la sua area?",
+    rispostaCorretta: "$50\\text{ cm}^2$",
+    risposteErrate: [
+      "$100\\text{ cm}^2$",
+      "$70\\text{ cm}^2$",
+      "$40\\text{ cm}^2$",
+      "$30\\text{ cm}^2$"
+    ],
+    spiegazione: "L’area del trapezio è data dal semiprodotto della somma delle basi per l’altezza: $\\text{Area} = \\frac{(B + b) \\cdot h}{2} = \\frac{(14 + 6) \\cdot 5}{2} = \\frac{20 \\cdot 5}{2} = 50\\text{ cm}^2$.",
+    fonte: "Lotto M4 del progetto — M4-05 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 403,
+    materia: "Matematica",
+    domanda: "Un cilindro retto ha raggio di base pari a $3\\text{ cm}$ e altezza pari a $5\\text{ cm}$. Qual è il suo volume?",
+    rispostaCorretta: "$45\\pi\\text{ cm}^3$",
+    risposteErrate: [
+      "$15\\pi\\text{ cm}^3$",
+      "$30\\pi\\text{ cm}^3$",
+      "$90\\pi\\text{ cm}^3$",
+      "$75\\pi\\text{ cm}^3$"
+    ],
+    spiegazione: "Il volume di un cilindro retto di raggio di base $r$ e altezza $h$ è dato dal prodotto dell’area di base per l’altezza: $V = \\pi r^2 h = \\pi \\cdot 3^2 \\cdot 5 = 45\\pi\\text{ cm}^3$.",
+    fonte: "Lotto M4 del progetto — M4-06 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 404,
+    materia: "Matematica",
+    domanda: "Una figura piana è formata da un rettangolo di dimensioni $8\\text{ cm}$ e $4\\text{ cm}$ e da un semicircolo esterno avente come diametro uno dei lati del rettangolo lungo $8\\text{ cm}$. Le due parti non si sovrappongono. Qual è l’area complessiva della figura?",
+    rispostaCorretta: "$32 + 8\\pi\\text{ cm}^2$",
+    risposteErrate: [
+      "$32 + 16\\pi\\text{ cm}^2$",
+      "$32 + 2\\pi\\text{ cm}^2$",
+      "$32 + 4\\pi\\text{ cm}^2$",
+      "$32 + 32\\pi\\text{ cm}^2$"
+    ],
+    spiegazione: "L’area del rettangolo è data dal prodotto delle dimensioni: $A_{\\text{rett}} = 8 \\cdot 4 = 32\\text{ cm}^2$. Il semicircolo ha come diametro il lato da $8\\text{ cm}$, quindi il suo raggio è $r = \\frac{8}{2} = 4\\text{ cm}$. L’area del semicircolo è $A_{\\text{semic}} = \\frac{1}{2}\\pi r^2 = \\frac{1}{2}\\pi \\cdot 4^2 = 8\\pi\\text{ cm}^2$. L’area complessiva della figura è la somma delle due aree: $A_{\\text{tot}} = 32 + 8\\pi\\text{ cm}^2$.",
+    fonte: "Lotto M4 del progetto — M4-07 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 405,
+    materia: "Matematica",
+    domanda: "Un parallelepipedo rettangolo ha le tre dimensioni che misurano $2\\text{ cm}$, $3\\text{ cm}$ e $6\\text{ cm}$. Quanto misura la sua diagonale principale?",
+    rispostaCorretta: "$7\\text{ cm}$",
+    risposteErrate: [
+      "$11\\text{ cm}$",
+      "$\\sqrt{13}\\text{ cm}$",
+      "$\\sqrt{45}\\text{ cm}$",
+      "$49\\text{ cm}$"
+    ],
+    spiegazione: "La lunghezza della diagonale spaziale di un parallelepipedo rettangolo di dimensioni $a, b, c$ è data da $d = \\sqrt{a^2 + b^2 + c^2} = \\sqrt{2^2 + 3^2 + 6^2} = \\sqrt{4 + 9 + 36} = \\sqrt{49} = 7\\text{ cm}$.",
+    fonte: "Lotto M4 del progetto — M4-08 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 406,
+    materia: "Matematica",
+    domanda: "Se il raggio di una sfera viene triplicato, qual è il rapporto tra la nuova superficie totale e quella iniziale?",
+    rispostaCorretta: "9",
+    risposteErrate: [
+      "3",
+      "27",
+      "6",
+      "12"
+    ],
+    spiegazione: "La superficie di una sfera di raggio $r$ è data da $S = 4\\pi r^2$. Triplicando il raggio ($r' = 3r$), la nuova superficie totale diventa $S' = 4\\pi (3r)^2 = 4\\pi \\cdot 9r^2 = 9 \\cdot (4\\pi r^2) = 9S$. Il rapporto tra la nuova superficie e quella iniziale è quindi $\\frac{S'}{S} = 9$.",
+    fonte: "Lotto M4 del progetto — M4-09 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 407,
+    materia: "Matematica",
+    domanda: "In un triangolo rettangolo, l’ipotenusa misura $25\\text{ cm}$ e la proiezione di un cateto sull’ipotenusa misura $9\\text{ cm}$. Quanto misura tale cateto?",
+    rispostaCorretta: "$15\\text{ cm}$",
+    risposteErrate: [
+      "$12\\text{ cm}$",
+      "$20\\text{ cm}$",
+      "$16\\text{ cm}$",
+      "$\\frac{25}{3}\\text{ cm}$"
+    ],
+    spiegazione: "Per il primo teorema di Euclide, in un triangolo rettangolo il quadrato costruito su un cateto è equivalente al rettangolo avente per dimensioni l’ipotenusa e la proiezione del cateto stesso sull’ipotenusa ($c^2 = i \\cdot p$). Sostituendo: $c = \\sqrt{25 \\cdot 9} = \\sqrt{225} = 15\\text{ cm}$.",
+    fonte: "Lotto M4 del progetto — M4-10 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 408,
+    materia: "Matematica",
+    domanda: "Un cono circolare retto ha raggio di base $r = 6\\text{ cm}$ e apotema $a = 10\\text{ cm}$. Quanto misura la sua altezza?",
+    rispostaCorretta: "$8\\text{ cm}$",
+    risposteErrate: [
+      "$4\\text{ cm}$",
+      "$\\sqrt{136}\\text{ cm}$",
+      "$16\\text{ cm}$",
+      "$12\\text{ cm}$"
+    ],
+    spiegazione: "Nel cono retto, l’asse, il raggio di base e l’apotema formano un triangolo rettangolo in cui l’apotema è l’ipotenusa. Per il teorema di Pitagora, l’altezza è: $h = \\sqrt{a^2 - r^2} = \\sqrt{10^2 - 6^2} = \\sqrt{100 - 36} = \\sqrt{64} = 8\\text{ cm}$.",
+    fonte: "Lotto M4 del progetto — M4-11 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 409,
+    materia: "Matematica",
+    domanda: "In una circonferenza, un angolo alla circonferenza insiste su un arco $AB$ ed ha ampiezza pari a $35^\\circ$. Qual è l’ampiezza del corrispondente angolo al centro che insiste sullo stesso arco?",
+    rispostaCorretta: "$70^\\circ$",
+    risposteErrate: [
+      "$35^\\circ$",
+      "$17{,}5^\\circ$",
+      "$145^\\circ$",
+      "$110^\\circ$"
+    ],
+    spiegazione: "Per un fondamentale teorema della geometria euclidea, ogni angolo al centro ha un’ampiezza che è esattamente il doppio dell’ampiezza di qualsiasi angolo alla circonferenza che insiste sul medesimo arco. Quindi: $\\text{angolo al centro} = 2 \\cdot 35^\\circ = 70^\\circ$.",
+    fonte: "Lotto M4 del progetto — M4-12 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 410,
+    materia: "Matematica",
+    domanda: "Due prismi retti simili hanno il rapporto tra l’altezza del prisma minore e quella del prisma maggiore pari a $\\frac{2}{3}$. Se il volume del prisma minore è $40\\text{ cm}^3$, qual è il volume del prisma maggiore?",
+    rispostaCorretta: "$135\\text{ cm}^3$",
+    risposteErrate: [
+      "$60\\text{ cm}^3$",
+      "$90\\text{ cm}^3$",
+      "$120\\text{ cm}^3$",
+      "$270\\text{ cm}^3$"
+    ],
+    spiegazione: "Per due solidi simili, il rapporto tra i volumi è uguale al cubo del rapporto di similitudine lineare tra le altezze: $\\frac{V_1}{V_2} = \\left(\\frac{2}{3}\\right)^3 = \\frac{8}{27}$. Poiché $V_1 = 40\\text{ cm}^3$, ricaviamo il volume del prisma maggiore: $V_2 = 40 \\cdot \\frac{27}{8} = 5 \\cdot 27 = 135\\text{ cm}^3$.",
+    fonte: "Lotto M4 del progetto — M4-13 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 411,
+    materia: "Matematica",
+    domanda: "Un esagono regolare ha il perimetro pari a $36\\text{ cm}$. Qual è la sua area?",
+    rispostaCorretta: "$54\\sqrt{3}\\text{ cm}^2$",
+    risposteErrate: [
+      "$108\\sqrt{3}\\text{ cm}^2$",
+      "$27\\sqrt{3}\\text{ cm}^2$",
+      "$54\\text{ cm}^2$",
+      "$36\\sqrt{3}\\text{ cm}^2$"
+    ],
+    spiegazione: "Il lato dell’esagono regolare è $\\ell = \\frac{36}{6} = 6\\text{ cm}$. Un esagono regolare è formato da 6 triangoli equilateri congruenti di lato $\\ell$. L’area di ciascun triangolo è $\\frac{\\sqrt{3}}{4}\\ell^2 = \\frac{\\sqrt{3}}{4} \\cdot 36 = 9\\sqrt{3}\\text{ cm}^2$. L’area totale dell’esagono è quindi: $\\text{Area} = 6 \\cdot 9\\sqrt{3} = 54\\sqrt{3}\\text{ cm}^2$.",
+    fonte: "Lotto M4 del progetto — M4-14 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 412,
+    materia: "Matematica",
+    domanda: "Una piramide retta ha per base un quadrato di lato $10\\text{ cm}$ e ha altezza pari a $12\\text{ cm}$. Qual è la sua superficie totale?",
+    rispostaCorretta: "$360\\text{ cm}^2$",
+    risposteErrate: [
+      "$260\\text{ cm}^2$",
+      "$340\\text{ cm}^2$",
+      "$400\\text{ cm}^2$",
+      "$520\\text{ cm}^2$"
+    ],
+    spiegazione: "L’area di base è $A_b = 10^2 = 100\\text{ cm}^2$. L’apotema della piramide si calcola con il teorema di Pitagora tra l’altezza e la metà del lato di base: $a = \\sqrt{12^2 + 5^2} = \\sqrt{169} = 13\\text{ cm}$. L’area laterale è $A_l = \\frac{\\text{perimetro} \\cdot a}{2} = \\frac{40 \\cdot 13}{2} = 260\\text{ cm}^2$. La superficie totale è quindi $S_t = A_b + A_l = 100 + 260 = 360\\text{ cm}^2$.",
+    fonte: "Lotto M4 del progetto — M4-15 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 413,
+    materia: "Matematica",
+    domanda: "In un triangolo rettangolo i due cateti misurano $a = 6\\text{ cm}$ e $b = 8\\text{ cm}$. Qual è il raggio della circonferenza inscritta nel triangolo?",
+    rispostaCorretta: "$2\\text{ cm}$",
+    risposteErrate: [
+      "$5\\text{ cm}$",
+      "$4\\text{ cm}$",
+      "$3\\text{ cm}$",
+      "$2{,}4\\text{ cm}$"
+    ],
+    spiegazione: "L’ipotenusa misura $c = \\sqrt{6^2 + 8^2} = 10\\text{ cm}$. L’area del triangolo è $\\text{Area} = \\frac{6 \\cdot 8}{2} = 24\\text{ cm}^2$ e il semiperimetro è $p = \\frac{6 + 8 + 10}{2} = 12\\text{ cm}$. Il raggio della circonferenza inscritta è $r = \\frac{\\text{Area}}{p} = \\frac{24}{12} = 2\\text{ cm}$ (oppure, per i triangoli rettangoli, $r = \\frac{a + b - c}{2} = \\frac{6 + 8 - 10}{2} = 2\\text{ cm}$).",
+    fonte: "Lotto M4 del progetto — M4-16 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 414,
+    materia: "Matematica",
+    domanda: "Un solido è formato da un cilindro circolare retto sormontato da un cono avente la stessa base di raggio $r = 3\\text{ cm}$. Se l’altezza del cilindro è $4\\text{ cm}$ e l’altezza del cono è $4\\text{ cm}$, qual è il volume complessivo del solido?",
+    rispostaCorretta: "$48\\pi\\text{ cm}^3$",
+    risposteErrate: [
+      "$72\\pi\\text{ cm}^3$",
+      "$24\\pi\\text{ cm}^3$",
+      "$36\\pi\\text{ cm}^3$",
+      "$54\\pi\\text{ cm}^3$"
+    ],
+    spiegazione: "Il volume del cilindro è $V_{\\text{cil}} = \\pi r^2 h_{\\text{cil}} = \\pi \\cdot 3^2 \\cdot 4 = 36\\pi\\text{ cm}^3$. Il volume del cono è $V_{\\text{cono}} = \\frac{1}{3}\\pi r^2 h_{\\text{cono}} = \\frac{1}{3}\\pi \\cdot 3^2 \\cdot 4 = 12\\pi\\text{ cm}^3$. Il volume complessivo del solido è: $V_{\\text{tot}} = 36\\pi + 12\\pi = 48\\pi\\text{ cm}^3$.",
+    fonte: "Lotto M4 del progetto — M4-17 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 415,
+    materia: "Matematica",
+    domanda: "In un cerchio di raggio $R = 6\\text{ cm}$, un settore circolare ha un angolo al centro di ampiezza pari a $60^\\circ$. Qual è l’area del settore circolare?",
+    rispostaCorretta: "$6\\pi\\text{ cm}^2$",
+    risposteErrate: [
+      "$12\\pi\\text{ cm}^2$",
+      "$2\\pi\\text{ cm}^2$",
+      "$36\\pi\\text{ cm}^2$",
+      "$3\\pi\\text{ cm}^2$"
+    ],
+    spiegazione: "L’area di un settore circolare è proporzionale all’angolo al centro: $\\text{Area} = \\pi R^2 \\cdot \\frac{\\alpha}{360^\\circ} = \\pi \\cdot 6^2 \\cdot \\frac{60^\\circ}{360^\\circ} = 36\\pi \\cdot \\frac{1}{6} = 6\\pi\\text{ cm}^2$.",
+    fonte: "Lotto M4 del progetto — M4-18 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 416,
+    materia: "Matematica",
+    domanda: "Un triangolo isoscele ha il perimetro pari a $36\\text{ cm}$ e la base lunga $10\\text{ cm}$. Qual è la sua area?",
+    rispostaCorretta: "$60\\text{ cm}^2$",
+    risposteErrate: [
+      "$120\\text{ cm}^2$",
+      "$65\\text{ cm}^2$",
+      "$30\\text{ cm}^2$",
+      "$50\\text{ cm}^2$"
+    ],
+    spiegazione: "Ciascuno dei due lati obliqui misura $\\ell = \\frac{36 - 10}{2} = 13\\text{ cm}$. L’altezza relativa alla base divide il triangolo in due triangoli rettangoli congruenti aventi ipotenusa pari a $13\\text{ cm}$ e un cateto (la semibase) pari a $\\frac{10}{2} = 5\\text{ cm}$. Per il teorema di Pitagora, l’altezza misura $h = \\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12\\text{ cm}$. L’area del triangolo è quindi: $\\text{Area} = \\frac{\\text{base} \\cdot \\text{altezza}}{2} = \\frac{10 \\cdot 12}{2} = 60\\text{ cm}^2$.",
+    fonte: "Lotto M4 del progetto — M4-19 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 417,
+    materia: "Matematica",
+    domanda: "In un triangolo rettangolo, l’altezza relativa all’ipotenusa divide l’ipotenusa in due segmenti lunghi $4\\text{ cm}$ e $9\\text{ cm}$. Quanto misura tale altezza?",
+    rispostaCorretta: "$6\\text{ cm}$",
+    risposteErrate: [
+      "$6{,}5\\text{ cm}$",
+      "$13\\text{ cm}$",
+      "$36\\text{ cm}$",
+      "$\\sqrt{97}\\text{ cm}$"
+    ],
+    spiegazione: "Per il secondo teorema di Euclide, in un triangolo rettangolo il quadrato dell’altezza relativa all’ipotenusa è equivalente al rettangolo avente per dimensioni le proiezioni dei due cateti sull’ipotenusa ($h^2 = p_1 \\cdot p_2$). Dunque: $h = \\sqrt{4 \\cdot 9} = \\sqrt{36} = 6\\text{ cm}$.",
+    fonte: "Lotto M4 del progetto — M4-20 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 418,
+    materia: "Matematica",
+    domanda: "Un trapezio rettangolo ha la base maggiore di $10\\text{ cm}$, la base minore di $6\\text{ cm}$ e il lato obliquo di $5\\text{ cm}$. Qual è la sua area?",
+    rispostaCorretta: "$24\\text{ cm}^2$",
+    risposteErrate: [
+      "$40\\text{ cm}^2$",
+      "$48\\text{ cm}^2$",
+      "$32\\text{ cm}^2$",
+      "$18\\text{ cm}^2$"
+    ],
+    spiegazione: "Tracciando l’altezza dal vertice della base minore, si ottiene un triangolo rettangolo con ipotenusa pari al lato obliquo ($5\\text{ cm}$) e base pari a $B - b = 10 - 6 = 4\\text{ cm}$. Per il teorema di Pitagora, l’altezza misura $h = \\sqrt{5^2 - 4^2} = \\sqrt{9} = 3\\text{ cm}$. L’area del trapezio è: $\\text{Area} = \\frac{(B + b) \\cdot h}{2} = \\frac{(10 + 6) \\cdot 3}{2} = 24\\text{ cm}^2$.",
+    fonte: "Lotto M4 del progetto — M4-21 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 419,
+    materia: "Matematica",
+    domanda: "Una sfera è inscritta in un cilindro circolare retto equilatero (avente altezza pari al diametro di base, $h = 2R$). Qual è il rapporto tra il volume della sfera e il volume del cilindro?",
+    rispostaCorretta: "$\\frac{2}{3}$",
+    risposteErrate: [
+      "$\\frac{1}{2}$",
+      "$\\frac{3}{4}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{4}{5}$"
+    ],
+    spiegazione: "Il volume della sfera di raggio $R$ è $V_{\\text{sfera}} = \\frac{4}{3}\\pi R^3$. Il cilindro circoscritto ha raggio di base $R$ e altezza $h = 2R$, dunque il suo volume è $V_{\\text{cil}} = \\pi R^2 (2R) = 2\\pi R^3$. Il rapporto tra i due volumi è: $\\frac{V_{\\text{sfera}}}{V_{\\text{cil}}} = \\frac{\\frac{4}{3}\\pi R^3}{2\\pi R^3} = \\frac{4}{3} \\cdot \\frac{1}{2} = \\frac{2}{3}$.",
+    fonte: "Lotto M4 del progetto — M4-22 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 420,
+    materia: "Matematica",
+    domanda: "In un parallelogramma, due lati consecutivi misurano $a = 15\\text{ cm}$ e $b = 10\\text{ cm}$. Se l’altezza relativa al lato maggiore $a$ misura $h_a = 6\\text{ cm}$, quanto misura l’altezza $h_b$ relativa al lato minore $b$?",
+    rispostaCorretta: "$9\\text{ cm}$",
+    risposteErrate: [
+      "$4\\text{ cm}$",
+      "$6\\text{ cm}$",
+      "$5\\text{ cm}$",
+      "$12\\text{ cm}$"
+    ],
+    spiegazione: "L’area del parallelogramma è data dal prodotto di un lato per la rispettiva altezza: $\\text{Area} = a \\cdot h_a = 15 \\cdot 6 = 90\\text{ cm}^2$. Poiché l’area si esprime anche come $b \\cdot h_b$, si ha: $10 \\cdot h_b = 90 \\implies h_b = \\frac{90}{10} = 9\\text{ cm}$.",
+    fonte: "Lotto M4 del progetto — M4-23 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 421,
+    materia: "Matematica",
+    domanda: "In una circonferenza, due corde $AB$ e $CD$ si intersecano internamente nel punto $P$. Sapendo che i segmenti sulla prima corda misurano $AP = 3\\text{ cm}$ e $PB = 8\\text{ cm}$, e che sulla seconda corda si ha $CP = 4\\text{ cm}$, quanto misura il segmento $PD$?",
+    rispostaCorretta: "$6\\text{ cm}$",
+    risposteErrate: [
+      "$7\\text{ cm}$",
+      "$4\\text{ cm}$",
+      "$24\\text{ cm}$",
+      "$8\\text{ cm}$"
+    ],
+    spiegazione: "Per il teorema delle corde, se due corde di una circonferenza si intersecano in un punto interno $P$, i segmenti determinati su una corda formano un prodotto uguale al prodotto dei segmenti determinati sull’altra: $AP \\cdot PB = CP \\cdot PD$. Sostituendo: $3 \\cdot 8 = 4 \\cdot PD \\implies 24 = 4 \\cdot PD \\implies PD = \\frac{24}{4} = 6\\text{ cm}$.",
+    fonte: "Lotto M4 del progetto — M4-24 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 422,
+    materia: "Matematica",
+    domanda: "Una piramide retta ha per base un rombo le cui diagonali misurano $30\\text{ cm}$ e $40\\text{ cm}$. Sapendo che l’altezza della piramide misura $5\\text{ cm}$, qual è l’area della superficie totale della piramide?",
+    rispostaCorretta: "$1250\\text{ cm}^2$",
+    risposteErrate: [
+      "$650\\text{ cm}^2$",
+      "$1000\\text{ cm}^2$",
+      "$850\\text{ cm}^2$",
+      "$1100\\text{ cm}^2$"
+    ],
+    spiegazione: "1. Nel rombo di base, le semidiagonali misurano $15\\text{ cm}$ e $20\\text{ cm}$. Il lato del rombo è $\\ell = \\sqrt{15^2 + 20^2} = \\sqrt{225 + 400} = \\sqrt{625} = 25\\text{ cm}$, per cui il perimetro è $2p = 4 \\cdot 25 = 100\\text{ cm}$. 2. L’area di base è $A_b = \\frac{30 cdot 40}{2} = 600\\text{ cm}^2$. 3. Il raggio del cerchio inscritto nella base (apotema di base) è $r = \\frac{A_b}{\\text{semiperimetro}} = \\frac{600}{50} = 12\\text{ cm}$. 4. L’apotema della piramide si ottiene applicando il teorema di Pitagora tra l’altezza e il raggio inscritto: $a = \\sqrt{h^2 + r^2} = \\sqrt{5^2 + 12^2} = \\sqrt{169} = 13\\text{ cm}$. 5. L’area laterale è $A_l = \\frac{2p \\cdot a}{2} = \\frac{100 \\cdot 13}{2} = 650\\text{ cm}^2$. 6. La superficie totale è quindi: $S_t = A_b + A_l = 600 + 650 = 1250\\text{ cm}^2$.",
+    fonte: "Lotto M4 del progetto — M4-25 (Geometria piana e solida)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
   }
 ];
 

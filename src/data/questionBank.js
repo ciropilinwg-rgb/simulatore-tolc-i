@@ -7855,6 +7855,602 @@ const questionBank = [
     numeroRisposteCorrette: 0,
     numeroRisposteErrate: 0
   }
+,
+  {
+    id: 456,
+    materia: "Scienze",
+    domanda: "In base all’analisi dimensionale nel Sistema Internazionale, in quali unità di misura fondamentali si esprime la costante elastica $k$ di una molla ideale definita dalla legge di Hooke ($F = k \\cdot \\Delta x$)?",
+    rispostaCorretta: "$\\text{kg}\\cdot\\text{s}^{-2}$",
+    risposteErrate: [
+      "$\\text{kg}\\cdot\\text{m}\\cdot\\text{s}^{-2}$",
+      "$\\text{kg}\\cdot\\text{m}^{-1}\\cdot\\text{s}^{-2}$",
+      "$\\text{kg}\\cdot\\text{m}^2\\cdot\\text{s}^{-2}$",
+      "$\\text{kg}\\cdot\\text{s}^{-1}$"
+    ],
+    spiegazione: "Dalla legge di Hooke $F = k \\cdot \\Delta x$, si ricava $k = \\frac{F}{\\Delta x}$. Nel SI, la forza si misura in newton ($\\text{N} = \\text{kg}\\cdot\\text{m}\\cdot\\text{s}^{-2}$) e l’allungamento $\\Delta x$ in metri ($\\text{m}$). Quindi le dimensioni di $k$ sono: $[k] = \\frac{\\text{kg}\\cdot\\text{m}\\cdot\\text{s}^{-2}}{\\text{m}} = \\text{kg}\\cdot\\text{s}^{-2}$ (equivalente a $\\text{N/m}$).",
+    fonte: "Lotto S1 del progetto — S1-01 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 457,
+    materia: "Scienze",
+    domanda: "Due forze complanari perpendicolari tra loro, di modulo rispettivamente pari a $F_1 = 6\\text{ N}$ e $F_2 = 8\\text{ N}$, sono applicate contemporaneamente al medesimo punto materiale. Qual è il modulo della forza risultante applicata al corpo?",
+    rispostaCorretta: "$10\\text{ N}$",
+    risposteErrate: [
+      "$14\\text{ N}$",
+      "$2\\text{ N}$",
+      "$7\\text{ N}$",
+      "$48\\text{ N}$"
+    ],
+    spiegazione: "Trattandosi di due vettori ortogonali, il modulo della forza risultante si calcola mediante il teorema di Pitagora: $F_{\\text{tot}} = \\sqrt{F_1^2 + F_2^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10\\text{ N}$.",
+    fonte: "Lotto S1 del progetto — S1-02 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 458,
+    materia: "Scienze",
+    domanda: "Un blocco di massa $m = 4\\text{ kg}$ è posato su un piano inclinato liscio che forma un angolo di $30^\\circ$ rispetto all’orizzontale. Assumendo l’accelerazione di gravità $g = 10\\text{ m/s}^2$, qual è il modulo della componente della forza peso parallela al piano inclinato?",
+    rispostaCorretta: "$20\\text{ N}$",
+    risposteErrate: [
+      "$40\\text{ N}$",
+      "$20\\sqrt{3}\\text{ N}$",
+      "$40\\sqrt{3}\\text{ N}$",
+      "$10\\text{ N}$"
+    ],
+    spiegazione: "Il modulo della forza peso totale è $P = m \\cdot g = 4\\text{ kg} \\cdot 10\\text{ m/s}^2 = 40\\text{ N}$. La componente della forza peso parallela al piano inclinato è data da $P_\\parallel = P \\cdot \\sin(30^\\circ) = 40 \\cdot 0{,}5 = 20\\text{ N}$.",
+    fonte: "Lotto S1 del progetto — S1-03 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 459,
+    materia: "Scienze",
+    domanda: "Una forza costante di modulo $F = 50\\text{ N}$, inclinata di un angolo di $60^\\circ$ rispetto alla direzione orizzontale, trascina un carrello su una guida orizzontale priva di attrito per uno spostamento $s = 4\\text{ m}$. Qual è il lavoro complessivo compiuto dalla forza?",
+    rispostaCorretta: "$100\\text{ J}$",
+    risposteErrate: [
+      "$200\\text{ J}$",
+      "$100\\sqrt{3}\\text{ J}$",
+      "$25\\text{ J}$",
+      "$50\\text{ J}$"
+    ],
+    spiegazione: "Il lavoro compiuto da una forza costante è dato dal prodotto scalare $L = F \\cdot s \\cdot \\cos(\\alpha)$. Con $\\alpha = 60^\\circ$, si ha $\\cos(60^\\circ) = 0{,}5$. Dunque: $L = 50\\text{ N} \\cdot 4\\text{ m} \\cdot 0{,}5 = 100\\text{ J}$.",
+    fonte: "Lotto S1 del progetto — S1-04 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 460,
+    materia: "Scienze",
+    domanda: "Due automobili $A$ e $B$ viaggiano su una strada rettilinea l’una verso l’altra con velocità costanti rispettivamente pari a $v_A = 20\\text{ m/s}$ e $v_B = 30\\text{ m/s}$. Se all’istante iniziale $t = 0$ la loro distanza reciproca è di $500\\text{ m}$, dopo quanti secondi avverrà l’incrocio tra le due vetture?",
+    rispostaCorretta: "$10\\text{ s}$",
+    risposteErrate: [
+      "$25\\text{ s}$",
+      "$50\\text{ s}$",
+      "$16{,}7\\text{ s}$",
+      "$5\\text{ s}$"
+    ],
+    spiegazione: "Muovendosi in versi opposti l’uno verso l’altro, la velocità relativa di avvicinamento è la somma delle velocità: $v_{\\text{rel}} = v_A + v_B = 20 + 30 = 50\\text{ m/s}$. Il tempo di incontro è: $t = \\frac{d}{v_{\\text{rel}}} = \\frac{500\\text{ m}}{50\\text{ m/s}} = 10\\text{ s}$.",
+    fonte: "Lotto S1 del progetto — S1-05 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 461,
+    materia: "Scienze",
+    domanda: "Un punto materiale, inizialmente fermo, si muove lungo una retta con accelerazione costante pari a $a = 3\\text{ m/s}^2$. Qual è la velocità raggiunta dal punto materiale dopo aver percorso uno spazio di $24\\text{ m}$ a partire dalla posizione di quiete?",
+    rispostaCorretta: "$12\\text{ m/s}$",
+    risposteErrate: [
+      "$8\\text{ m/s}$",
+      "$72\\text{ m/s}$",
+      "$144\\text{ m/s}$",
+      "$6\\text{ m/s}$"
+    ],
+    spiegazione: "Applicando la formula di Torricelli per il moto uniformemente accelerato con partenza da fermo ($v_0 = 0$): $v^2 = 2 \\cdot a \\cdot s = 2 \\cdot 3\\text{ m/s}^2 \\cdot 24\\text{ m} = 144\\text{ m}^2/\\text{s}^2$. Estraendo la radice quadrata: $v = \\sqrt{144} = 12\\text{ m/s}$.",
+    fonte: "Lotto S1 del progetto — S1-06 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 462,
+    materia: "Scienze",
+    domanda: "Un sasso viene lasciato cadere da fermo dalla sommità di una torre alta $45\\text{ m}$. Trascurando la resistenza dell’aria e ponendo $g = 10\\text{ m/s}^2$, quanto tempo impiega il sasso a raggiungere il suolo?",
+    rispostaCorretta: "$3\\text{ s}$",
+    risposteErrate: [
+      "$4{,}5\\text{ s}$",
+      "$9\\text{ s}$",
+      "$2{,}25\\text{ s}$",
+      "$1{,}5\\text{ s}$"
+    ],
+    spiegazione: "Dalla legge oraria della caduta libera con partenza da fermo: $h = \\frac{1}{2} g t^2$. Esplicitando il tempo: $t = \\sqrt{\\frac{2h}{g}} = \\sqrt{\\frac{2 \\cdot 45}{10}} = \\sqrt{\\frac{90}{10}} = \\sqrt{9} = 3\\text{ s}$.",
+    fonte: "Lotto S1 del progetto — S1-07 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 463,
+    materia: "Scienze",
+    domanda: "Un corpo viene lanciato verticalmente verso l’alto dal livello del suolo con una velocità iniziale di $20\\text{ m/s}$. Trascurando ogni attrito con l’aria e assumendo $g = 10\\text{ m/s}^2$, quale altezza massima raggiunge il corpo rispetto al punto di lancio?",
+    rispostaCorretta: "$20\\text{ m}$",
+    risposteErrate: [
+      "$40\\text{ m}$",
+      "$10\\text{ m}$",
+      "$2\\text{ m}$",
+      "$200\\text{ m}$"
+    ],
+    spiegazione: "Nel punto di massima altezza la velocità si annulla ($v = 0$). Per la conservazione dell’energia meccanica (oppure dalla cinematica $0 = v_0^2 - 2gh_{\\max}$): $h_{\\max} = \\frac{v_0^2}{2g} = \\frac{20^2}{2 \\cdot 10} = \\frac{400}{20} = 20\\text{ m}$.",
+    fonte: "Lotto S1 del progetto — S1-08 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 464,
+    materia: "Scienze",
+    domanda: "Un carrello si muove lungo una traiettoria rettilinea. Il grafico della velocità in funzione del tempo ha forma triangolare: parte da $v = 0\\text{ m/s}$ a $t = 0\\text{ s}$, raggiunge linearmente la velocità di picco $v = 10\\text{ m/s}$ a $t = 3\\text{ s}$, e decelera linearmente fino a fermarsi ($v = 0\\text{ m/s}$) all’istante $t = 6\\text{ s}$. Qual è lo spazio totale percorso dal carrello nei $6\\text{ s}$?",
+    rispostaCorretta: "$30\\text{ m}$",
+    risposteErrate: [
+      "$60\\text{ m}$",
+      "$15\\text{ m}$",
+      "$20\\text{ m}$",
+      "$45\\text{ m}$"
+    ],
+    spiegazione: "In un grafico velocità-tempo, lo spazio percorso corrisponde all’area sottesa dalla curva. Per un profilo triangolare con base $b = 6\\text{ s}$ e altezza $h = 10\\text{ m/s}$, l’area è data da: $\\Delta s = \\frac{1}{2} \\cdot \\text{base} \\cdot \\text{altezza} = \\frac{1}{2} \\cdot 6\\text{ s} \\cdot 10\\text{ m/s} = 30\\text{ m}$.",
+    fonte: "Lotto S1 del progetto — S1-09 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 465,
+    materia: "Scienze",
+    domanda: "Una biglia viene lanciata orizzontalmente con velocità $v_x = 15\\text{ m/s}$ dal bordo di un tavolo alto $h = 20\\text{ m}$ rispetto al pavimento. Trascurando la resistenza dell’aria e ponendo $g = 10\\text{ m/s}^2$, a quale distanza orizzontale dalla base del tavolo la biglia tocca terra?",
+    rispostaCorretta: "$30\\text{ m}$",
+    risposteErrate: [
+      "$15\\text{ m}$",
+      "$60\\text{ m}$",
+      "$45\\text{ m}$",
+      "$20\\text{ m}$"
+    ],
+    spiegazione: "Il moto verticale è una caduta libera da fermo: $h = \\frac{1}{2} g t^2 \\implies t = \\sqrt{\\frac{2h}{g}} = \\sqrt{\\frac{2 \\cdot 20}{10}} = \\sqrt{4} = 2\\text{ s}$. Il moto orizzontale è rettilineo uniforme: la gittata orizzontale è data da $x = v_x \\cdot t = 15\\text{ m/s} \\cdot 2\\text{ s} = 30\\text{ m}$.",
+    fonte: "Lotto S1 del progetto — S1-10 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 466,
+    materia: "Scienze",
+    domanda: "Un corpo di massa $m = 5\\text{ kg}$ è posto su un piano orizzontale privo di attrito ed è soggetto a tre forze orizzontali: $F_1 = 12\\text{ N}$ e $F_2 = 8\\text{ N}$ dirette verso destra, e $F_3 = 5\\text{ N}$ diretta verso sinistra. Qual è l’accelerazione del corpo?",
+    rispostaCorretta: "$3\\text{ m/s}^2$",
+    risposteErrate: [
+      "$5\\text{ m/s}^2$",
+      "$4\\text{ m/s}^2$",
+      "$1\\text{ m/s}^2$",
+      "$15\\text{ m/s}^2$"
+    ],
+    spiegazione: "La forza netta risultante agente sul corpo lungo la direzione orizzontale è: $F_{\\text{net}} = F_1 + F_2 - F_3 = 12 + 8 - 5 = 15\\text{ N}$ (verso destra). Per il secondo principio della dinamica ($F_{\\text{net}} = m \\cdot a$): $a = \\frac{F_{\\text{net}}}{m} = \\frac{15\\text{ N}}{5\\text{ kg}} = 3\\text{ m/s}^2$.",
+    fonte: "Lotto S1 del progetto — S1-11 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 467,
+    materia: "Scienze",
+    domanda: "Un cavallo trascina un carretto esercitando su di esso una forza orizzontale in avanti pari a $600\\text{ N}$. In base al terzo principio della dinamica (azione e reazione), quale forza esercita contemporaneamente il carretto sul cavallo?",
+    rispostaCorretta: "Una forza di modulo esattamente pari a $600\\text{ N}$, diretta all’indietro",
+    risposteErrate: [
+      "Una forza di modulo inferiore a $600\\text{ N}$, altrimenti il sistema non potrebbe accelerare in avanti",
+      "Una forza di modulo nullo, poiché il carretto è un corpo passivo trainato",
+      "Una forza di modulo superiore a $600\\text{ N}$, dovuta alla presenza dell’attrito con il terreno",
+      "Una forza di modulo pari a $600\\text{ N}$, ma diretta nello stesso verso del moto del cavallo"
+    ],
+    spiegazione: "Per il terzo principio di Newton (principio di azione e reazione), le forze di interazione tra due corpi sono sempre uguali in modulo, opposte in verso e applicate a corpi distinti. Il carretto esercita sul cavallo una forza di modulo esattamente pari a $600\\text{ N}$ diretta in verso opposto (all’indietro).",
+    fonte: "Lotto S1 del progetto — S1-12 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 468,
+    materia: "Scienze",
+    domanda: "Una cassa di massa $m = 6\\text{ kg}$ scivola su un pavimento orizzontale con coefficiente di attrito dinamico $\\mu_d = 0{,}25$. Assumendo $g = 10\\text{ m/s}^2$, qual è il modulo della forza di attrito dinamico che si oppone allo scivolamento della cassa?",
+    rispostaCorretta: "$15\\text{ N}$",
+    risposteErrate: [
+      "$60\\text{ N}$",
+      "$1{,}5\\text{ N}$",
+      "$240\\text{ N}$",
+      "$2{,}5\\text{ N}$"
+    ],
+    spiegazione: "Su un piano orizzontale, la reazione vincolare normale $N$ eguaglia la forza peso: $N = m \\cdot g = 6\\text{ kg} \\cdot 10\\text{ m/s}^2 = 60\\text{ N}$. La forza di attrito dinamico è data da: $F_{\\text{att}} = \\mu_d \\cdot N = 0{,}25 \\cdot 60\\text{ N} = 15\\text{ N}$.",
+    fonte: "Lotto S1 del progetto — S1-13 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 469,
+    materia: "Scienze",
+    domanda: "Un blocco di massa $m = 10\\text{ kg}$ è fermo su un tavolo orizzontale. Il coefficiente di attrito statico tra blocco e piano è $\\mu_s = 0{,}40$ ($g = 10\\text{ m/s}^2$). Se al blocco viene applicata una forza orizzontale $F = 25\\text{ N}$, qual è il modulo della forza di attrito statico effettivamente agente sul blocco?",
+    rispostaCorretta: "$25\\text{ N}$",
+    risposteErrate: [
+      "$40\\text{ N}$",
+      "$100\\text{ N}$",
+      "$0\\text{ N}$",
+      "$15\\text{ N}$"
+    ],
+    spiegazione: "La forza di attrito statico massima (forza di primo distacco) è $F_{s,\\max} = \\mu_s \\cdot m \\cdot g = 0{,}40 \\cdot 100\\text{ N} = 40\\text{ N}$. Poiché la forza applicata $F = 25\\text{ N}$ è inferiore a $F_{s,\\max}$, il blocco rimane fermo in equilibrio statico; pertanto la forza di attrito statico bilancia esattamente la forza applicata, assumendo il valore di $25\\text{ N}$.",
+    fonte: "Lotto S1 del progetto — S1-14 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 470,
+    materia: "Scienze",
+    domanda: "Una persona di massa $m = 70\\text{ kg}$ si trova in piedi sopra una bilancia all’interno di un ascensore. Se l’ascensore accelera verso l’alto con accelerazione costante $a = 2\\text{ m/s}^2$, quale valore di forza normale (peso apparente) registra la bilancia? (Si assuma $g = 10\\text{ m/s}^2$)",
+    rispostaCorretta: "$840\\text{ N}$",
+    risposteErrate: [
+      "$700\\text{ N}$",
+      "$560\\text{ N}$",
+      "$140\\text{ N}$",
+      "$980\\text{ N}$"
+    ],
+    spiegazione: "Applicando il secondo principio di Newton lungo la verticale: $N - P = m \\cdot a \\implies N = m(g + a)$. Sostituendo i valori numerici: $N = 70\\text{ kg} \\cdot (10 + 2)\\text{ m/s}^2 = 70 \\cdot 12 = 840\\text{ N}$.",
+    fonte: "Lotto S1 del progetto — S1-15 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 471,
+    materia: "Scienze",
+    domanda: "In una macchina di Atwood ideale, due masse $m_1 = 3\\text{ kg}$ e $m_2 = 2\\text{ kg}$ sono collegate agli estremi di un filo inestensibile e privo di massa che scorre su una carrucola ideale priva di attrito e di inerzia. Posto $g = 10\\text{ m/s}^2$, qual è l’accelerazione del sistema una volta lasciato libero di muoversi?",
+    rispostaCorretta: "$2\\text{ m/s}^2$",
+    risposteErrate: [
+      "$10\\text{ m/s}^2$",
+      "$5\\text{ m/s}^2$",
+      "$3{,}3\\text{ m/s}^2$",
+      "$1\\text{ m/s}^2$"
+    ],
+    spiegazione: "L’accelerazione di una macchina di Atwood ideale è data da: $a = \\frac{m_1 - m_2}{m_1 + m_2} \\cdot g$. Sostituendo i valori numerici: $a = \\frac{3 - 2}{3 + 2} \\cdot 10 = \\frac{1}{5} \\cdot 10 = 2\\text{ m/s}^2$.",
+    fonte: "Lotto S1 del progetto — S1-16 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 472,
+    materia: "Scienze",
+    domanda: "Due blocchi $A$ e $B$ di massa $m_A = 2\\text{ kg}$ e $m_B = 3\\text{ kg}$ sono appoggiati su un piano orizzontale liscio e collegati tra loro da una corda inestensibile di massa trascurabile. Se al blocco $B$ viene applicata una forza orizzontale costante $F = 20\\text{ N}$ che traina l’intero sistema, qual è la tensione $T$ nella corda che unisce i due blocchi?",
+    rispostaCorretta: "$8\\text{ N}$",
+    risposteErrate: [
+      "$12\\text{ N}$",
+      "$20\\text{ N}$",
+      "$10\\text{ N}$",
+      "$4\\text{ N}$"
+    ],
+    spiegazione: "L’accelerazione comune dell’intero sistema è $a = \\frac{F}{m_A + m_B} = \\frac{20\\text{ N}}{2 + 3\\text{ kg}} = 4\\text{ m/s}^2$. La tensione $T$ è l’unica forza orizzontale che accelera il blocco $A$: $T = m_A \\cdot a = 2\\text{ kg} \\cdot 4\\text{ m/s}^2 = 8\\text{ N}$.",
+    fonte: "Lotto S1 del progetto — S1-17 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 473,
+    materia: "Scienze",
+    domanda: "Un’automobile di massa $m = 1200\\text{ kg}$ accelera lungo un tratto rettilineo raddoppiando la propria velocità da $v_1 = 10\\text{ m/s}$ a $v_2 = 20\\text{ m/s}$. Di quanto aumenta la sua energia cinetica?",
+    rispostaCorretta: "$180\\text{ kJ}$",
+    risposteErrate: [
+      "$360\\text{ kJ}$",
+      "$60\\text{ kJ}$",
+      "$240\\text{ kJ}$",
+      "$300\\text{ kJ}$"
+    ],
+    spiegazione: "La variazione di energia cinetica è: $\\Delta E_c = \\frac{1}{2} m v_2^2 - \\frac{1}{2} m v_1^2 = \\frac{1}{2} m (v_2^2 - v_1^2)$. Sostituendo: $\\Delta E_c = \\frac{1}{2} \\cdot 1200\\text{ kg} \\cdot (20^2 - 10^2)\\text{ m}^2/\\text{s}^2 = 600 \\cdot (400 - 100) = 600 \\cdot 300 = 180\\,000\\text{ J} = 180\\text{ kJ}$.",
+    fonte: "Lotto S1 del progetto — S1-18 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 474,
+    materia: "Scienze",
+    domanda: "Una molla ideale di costante elastica $k = 400\\text{ N/m}$ viene compressa di una quantità $\\Delta x = 10\\text{ cm} = 0{,}10\\text{ m}$ rispetto alla sua lunghezza di riposo. Qual è l’energia potenziale elastica immagazzinata nella molla compressa?",
+    rispostaCorretta: "$2\\text{ J}$",
+    risposteErrate: [
+      "$4\\text{ J}$",
+      "$20\\text{ J}$",
+      "$40\\text{ J}$",
+      "$0{,}2\\text{ J}$"
+    ],
+    spiegazione: "L’energia potenziale elastica è data da: $E_{pe} = \\frac{1}{2} k (\\Delta x)^2$. Sostituendo i valori numerici in unità SI: $E_{pe} = \\frac{1}{2} \\cdot 400\\text{ N/m} \\cdot (0{,}10\\text{ m})^2 = 200 \\cdot 0{,}01 = 2\\text{ J}$.",
+    fonte: "Lotto S1 del progetto — S1-19 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 475,
+    materia: "Scienze",
+    domanda: "Un carrellino di massa $m = 0{,}5\\text{ kg}$ è appoggiato a una molla orizzontale compressa di $x = 0{,}10\\text{ m}$ con costante elastica $k = 200\\text{ N/m}$. Se il sistema viene rilasciato da fermo su un piano privo di attrito, con quale velocità il carrellino si separa dalla molla nel momento in cui essa torna alla lunghezza di riposo?",
+    rispostaCorretta: "$2\\text{ m/s}$",
+    risposteErrate: [
+      "$4\\text{ m/s}$",
+      "$1\\text{ m/s}$",
+      "$20\\text{ m/s}$",
+      "$0{,}2\\text{ m/s}$"
+    ],
+    spiegazione: "In assenza di attriti, l’energia potenziale elastica iniziale si trasforma interamente in energia cinetica del carrello: $\\frac{1}{2} k x^2 = \\frac{1}{2} m v^2 \\implies v = x \\sqrt{\\frac{k}{m}}$. Sostituendo: $v = 0{,}10 \\cdot \\sqrt{\\frac{200}{0{,}5}} = 0{,}10 \\cdot \\sqrt{400} = 0{,}10 \\cdot 20 = 2\\text{ m/s}$.",
+    fonte: "Lotto S1 del progetto — S1-20 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 476,
+    materia: "Scienze",
+    domanda: "Un blocco di massa $m = 2\\text{ kg}$, animato da una velocità iniziale di modulo $v_0 = 6\\text{ m/s}$, scivola su un pavimento orizzontale scabro fino a fermarsi completamente per effetto dell’attrito. Qual è il lavoro complessivo compiuto dalla forza di attrito durante la frenata?",
+    rispostaCorretta: "$-36\\text{ J}$",
+    risposteErrate: [
+      "$+36\\text{ J}$",
+      "$-72\\text{ J}$",
+      "$-18\\text{ J}$",
+      "$-12\\text{ J}$"
+    ],
+    spiegazione: "Per il teorema dell’energia cinetica (forze vive), il lavoro totale compiuto sul corpo è uguale alla variazione di energia cinetica: $L = \\Delta E_c = E_{c,f} - E_{c,i} = 0 - \\frac{1}{2} m v_0^2 = -\\frac{1}{2} \\cdot 2\\text{ kg} \\cdot (6\\text{ m/s})^2 = -36\\text{ J}$ (il segno negativo indica che la forza di attrito dissipa energia compiendo lavoro resistente).",
+    fonte: "Lotto S1 del progetto — S1-21 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 477,
+    materia: "Scienze",
+    domanda: "Un motore elettrico solleva verticalmente a velocità costante un carico di massa $m = 300\\text{ kg}$ fino a un’altezza $h = 10\\text{ m}$ in un intervallo di tempo pari a $15\\text{ s}$. Assumendo $g = 10\\text{ m/s}^2$, qual è la potenza media erogata dal motore?",
+    rispostaCorretta: "$2\\text{ kW}$",
+    risposteErrate: [
+      "$30\\text{ kW}$",
+      "$200\\text{ W}$",
+      "$450\\text{ kW}$",
+      "$1\\text{ kW}$"
+    ],
+    spiegazione: "Il lavoro compiuto per sollevare il carico è $L = m \\cdot g \\cdot h = 300\\text{ kg} \\cdot 10\\text{ m/s}^2 \\cdot 10\\text{ m} = 30\\,000\\text{ J}$. La potenza media è il rapporto tra lavoro e tempo: $P = \\frac{L}{\\Delta t} = \\frac{30\\,000\\text{ J}}{15\\text{ s}} = 2000\\text{ W} = 2\\text{ kW}$.",
+    fonte: "Lotto S1 del progetto — S1-22 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 478,
+    materia: "Scienze",
+    domanda: "Un blocco di massa $m = 4\\text{ kg}$ scivola partendo da fermo dalla sommità di un piano inclinato alto $h = 3\\text{ m}$. A causa dell’attrito con la superficie del piano, il blocco giunge alla base con una velocità di modulo $v = 3\\text{ m/s}$. Assumendo $g = 10\\text{ m/s}^2$, qual è la quantità complessiva di energia termica dissipata dalla forza di attrito durante la discesa?",
+    rispostaCorretta: "$102\\text{ J}$",
+    risposteErrate: [
+      "$120\\text{ J}$",
+      "$18\\text{ J}$",
+      "$138\\text{ J}$",
+      "$84\\text{ J}$"
+    ],
+    spiegazione: "L’energia meccanica iniziale è puramente potenziale gravitazionale: $E_i = m \\cdot g \\cdot h = 4\\text{ kg} \\cdot 10\\text{ m/s}^2 \\cdot 3\\text{ m} = 120\\text{ J}$. L’energia cinetica finale alla base è: $E_f = \\frac{1}{2} m v^2 = \\frac{1}{2} \\cdot 4\\text{ kg} \\cdot (3\\text{ m/s})^2 = 18\\text{ J}$. L’energia dissipata dall’attrito corrisponde alla perdita di energia meccanica: $Q = E_i - E_f = 120 - 18 = 102\\text{ J}$.",
+    fonte: "Lotto S1 del progetto — S1-23 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 479,
+    materia: "Scienze",
+    domanda: "Una forza costante orizzontale $F$ agisce su un corpo di massa $m = 4\\text{ kg}$ per un intervallo di tempo $\\Delta t = 0{,}5\\text{ s}$, incrementandone la velocità da $v_1 = 2\\text{ m/s}$ a $v_2 = 8\\text{ m/s}$. Qual è il modulo della forza $F$ applicata?",
+    rispostaCorretta: "$48\\text{ N}$",
+    risposteErrate: [
+      "$24\\text{ N}$",
+      "$12\\text{ N}$",
+      "$6\\text{ N}$",
+      "$96\\text{ N}$"
+    ],
+    spiegazione: "Per il teorema dell’impulso: $I = F \\cdot \\Delta t = \\Delta p = m(v_2 - v_1)$. Sostituendo i valori numerici: $F \\cdot 0{,}5 = 4 \\cdot (8 - 2) = 4 \\cdot 6 = 24\\text{ kg}\\cdot\\text{m/s} \\implies F = \\frac{24}{0{,}5} = 48\\text{ N}$.",
+    fonte: "Lotto S1 del progetto — S1-24 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 480,
+    materia: "Scienze",
+    domanda: "Un cannone di massa $M = 1000\\text{ kg}$, inizialmente fermo su una superficie orizzontale priva di attrito, spara orizzontalmente un proiettile di massa $m = 10\\text{ kg}$ con velocità $v = 400\\text{ m/s}$. Qual è il modulo della velocità di rinculo del cannone subito dopo lo sparo?",
+    rispostaCorretta: "$4\\text{ m/s}$",
+    risposteErrate: [
+      "$40\\text{ m/s}$",
+      "$0{,}4\\text{ m/s}$",
+      "$400\\text{ m/s}$",
+      "$2\\text{ m/s}$"
+    ],
+    spiegazione: "Essendo nulle le forze esterne orizzontali, la quantità di moto totale del sistema si conserva: $P_{\\text{tot}} = 0 \\implies M \\cdot V_{\\text{rinculo}} - m \\cdot v = 0 \\implies V_{\\text{rinculo}} = \\frac{m \\cdot v}{M} = \\frac{10\\text{ kg} \\cdot 400\\text{ m/s}}{1000\\text{ kg}} = \\frac{4000}{1000} = 4\\text{ m/s}$.",
+    fonte: "Lotto S1 del progetto — S1-25 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 481,
+    materia: "Scienze",
+    domanda: "Un carrello $A$ di massa $m_A = 2\\text{ kg}$ si muove su un binario rettilineo privo di attrito con velocità $v_A = 6\\text{ m/s}$ e urta un carrello $B$ di massa $m_B = 4\\text{ kg}$ inizialmente fermo. Se dopo l’urto i due carrelli rimangono uniti muovendosi assieme (urto perfettamente anelastico), qual è la loro velocità finale comune?",
+    rispostaCorretta: "$2\\text{ m/s}$",
+    risposteErrate: [
+      "$3\\text{ m/s}$",
+      "$6\\text{ m/s}$",
+      "$4\\text{ m/s}$",
+      "$1{,}5\\text{ m/s}$"
+    ],
+    spiegazione: "Nel corso dell’urto si conserva la quantità di moto totale: $m_A \\cdot v_A + m_B \\cdot 0 = (m_A + m_B) \\cdot v_f$. Da cui: $v_f = \\frac{m_A \\cdot v_A}{m_A + m_B} = \\frac{2\\text{ kg} \\cdot 6\\text{ m/s}}{2 + 4\\text{ kg}} = \\frac{12}{6} = 2\\text{ m/s}$.",
+    fonte: "Lotto S1 del progetto — S1-26 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 482,
+    materia: "Scienze",
+    domanda: "Una sferetta di massa $m$, in moto rettilineo con velocità $v$ su un piano liscio, urta frontalmente ed elasticamente una seconda sferetta identica (di pari massa $m$) inizialmente ferma. Cosa accade alle velocità delle due sferette subito dopo l’urto?",
+    rispostaCorretta: "La prima sferetta si ferma completamente e la seconda si muove in avanti con velocità $v$",
+    risposteErrate: [
+      "Entrambe le sferette proseguono assieme in avanti con velocità $v/2$",
+      "La prima sferetta rimbalza all’indietro con velocità $-v$ e la seconda resta ferma",
+      "Entrambe le sferette proseguono in avanti con la medesima velocità $v$",
+      "La prima sferetta rimbalza all’indietro con velocità $-v/2$ e la seconda avanza con velocità $v/2$"
+    ],
+    spiegazione: "In un urto elastico frontale tra due corpi di uguale massa in cui uno è inizialmente fermo, la conservazione simultanea della quantità di moto ($m v = m v_1 + m v_2$) e dell’energia cinetica ($\\frac{1}{2}mv^2 = \\frac{1}{2}mv_1^2 + \\frac{1}{2}mv_2^2$) impone lo scambio completo delle velocità: il corpo incidente si ferma ($v_1 = 0$) e il corpo bersaglio acquisisce la velocità iniziale $v_2 = v$.",
+    fonte: "Lotto S1 del progetto — S1-27 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 483,
+    materia: "Scienze",
+    domanda: "Una palla di massa $m = 0{,}20\\text{ kg}$ viaggia orizzontalmente con velocità $v = 15\\text{ m/s}$, urta perpendicolarmente una parete rigida verticale e rimbalza all’indietro in senso opposto con la medesima velocità in modulo ($15\\text{ m/s}$). Qual è il modulo della variazione della quantità di moto della palla?",
+    rispostaCorretta: "$6\\text{ kg}\\cdot\\text{m/s}$",
+    risposteErrate: [
+      "$0\\text{ kg}\\cdot\\text{m/s}$",
+      "$3\\text{ kg}\\cdot\\text{m/s}$",
+      "$1{,}5\\text{ kg}\\cdot\\text{m/s}$",
+      "$30\\text{ kg}\\cdot\\text{m/s}$"
+    ],
+    spiegazione: "Tenendo conto della natura vettoriale della quantità di moto, fissato un asse orizzontale concorde alla velocità iniziale ($p_i = +m \\cdot v = +0{,}20 \\cdot 15 = +3\\text{ kg}\\cdot\\text{m/s}$), dopo il rimbalzo la velocità è invertita ($p_f = -m \\cdot v = -3\\text{ kg}\\cdot\\text{m/s}$). La variazione è: $\\Delta p = p_f - p_i = -3 - (+3) = -6\\text{ kg}\\cdot\\text{m/s}$, il cui modulo è $|\\Delta p| = 6\\text{ kg}\\cdot\\text{m/s}$.",
+    fonte: "Lotto S1 del progetto — S1-28 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 484,
+    materia: "Scienze",
+    domanda: "Un punto materiale si muove di moto circolare uniforme lungo una circonferenza di raggio $R = 0{,}5\\text{ m}$ compiendo $2$ giri completi al secondo (frequenza $f = 2\\text{ Hz}$). Qual è il modulo della sua velocità tangenziale?",
+    rispostaCorretta: "$2\\pi\\text{ m/s}$",
+    risposteErrate: [
+      "$\\pi\\text{ m/s}$",
+      "$4\\pi\\text{ m/s}$",
+      "$2\\text{ m/s}$",
+      "$0{,}5\\pi\\text{ m/s}$"
+    ],
+    spiegazione: "Nel moto circolare uniforme, la velocità tangenziale è data da $v = 2\\pi \\cdot f \\cdot R = \\omega \\cdot R$. Sostituendo $f = 2\\text{ s}^{-1}$ e $R = 0{,}5\\text{ m}$: $v = 2\\pi \\cdot 2 \\cdot 0{,}5 = 2\\pi\\text{ m/s}$.",
+    fonte: "Lotto S1 del progetto — S1-29 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 485,
+    materia: "Scienze",
+    domanda: "Un’automobile percorre a velocità costante pari a $v = 20\\text{ m/s}$ ($72\\text{ km/h}$) una curva circolare pianeggiante di raggio $R = 80\\text{ m}$. Qual è l’accelerazione centripeta a cui è sottoposto il veicolo?",
+    rispostaCorretta: "$5\\text{ m/s}^2$",
+    risposteErrate: [
+      "$0{,}25\\text{ m/s}^2$",
+      "$2{,}5\\text{ m/s}^2$",
+      "$0{,}20\\text{ m/s}^2$",
+      "$10\\text{ m/s}^2$"
+    ],
+    spiegazione: "L’accelerazione centripeta in un moto circolare uniforme è data dalla relazione: $a_c = \\frac{v^2}{R}$. Sostituendo i valori: $a_c = \\frac{20^2}{80} = \\frac{400}{80} = 5\\text{ m/s}^2$.",
+    fonte: "Lotto S1 del progetto — S1-30 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 486,
+    materia: "Scienze",
+    domanda: "Un sasso di massa $m = 0{,}5\\text{ kg}$ è fissato a un estremo di una fune inestensibile di lunghezza $r = 2\\text{ m}$, il cui altro estremo è vincolato al centro di una guida circolare su un piano orizzontale liscio. Se il sasso ruota a velocità angolare costante $\\omega = 4\\text{ rad/s}$, qual è la tensione $T$ esercitata dalla fune sul sasso?",
+    rispostaCorretta: "$16\\text{ N}$",
+    risposteErrate: [
+      "$4\\text{ N}$",
+      "$8\\text{ N}$",
+      "$32\\text{ N}$",
+      "$64\\text{ N}$"
+    ],
+    spiegazione: "Sul piano orizzontale liscio, la tensione della fune fornisce interamente la forza centripeta necessaria a mantenere il sasso in traiettoria circolare: $T = F_c = m \\cdot \\omega^2 \\cdot r$. Sostituendo i valori numerici: $T = 0{,}5\\text{ kg} \\cdot (4\\text{ rad/s})^2 \\cdot 2\\text{ m} = 0{,}5 \\cdot 16 \\cdot 2 = 16\\text{ N}$.",
+    fonte: "Lotto S1 del progetto — S1-31 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 487,
+    materia: "Scienze",
+    domanda: "Un pianeta sferico ha massa pari al doppio di quella terrestre ($M_P = 2 M_T$) e raggio pari al doppio di quello terrestre ($R_P = 2 R_T$). Sapendo che l’accelerazione di gravità sulla superficie della Terra vale $g_T = 10\\text{ m/s}^2$, qual è il valore dell’accelerazione di gravità $g_P$ sulla superficie di tale pianeta?",
+    rispostaCorretta: "$5\\text{ m/s}^2$",
+    risposteErrate: [
+      "$10\\text{ m/s}^2$",
+      "$20\\text{ m/s}^2$",
+      "$2{,}5\\text{ m/s}^2$",
+      "$40\\text{ m/s}^2$"
+    ],
+    spiegazione: "L’accelerazione di gravità sulla superficie di un pianeta di massa $M$ e raggio $R$ è data dalla legge di gravitazione: $g = G \\frac{M}{R^2}$. Per il pianeta considerato: $g_P = G \\frac{M_P}{R_P^2} = G \\frac{2 M_T}{(2 R_T)^2} = G \\frac{2 M_T}{4 R_T^2} = \\frac{1}{2} \\left(G \\frac{M_T}{R_T^2}\\right) = \\frac{1}{2} g_T = \\frac{1}{2} \\cdot 10\\text{ m/s}^2 = 5\\text{ m/s}^2$.",
+    fonte: "Lotto S1 del progetto — S1-32 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 488,
+    materia: "Scienze",
+    domanda: "Per serrare un bullone, un meccanico applica una forza perpendicolare di modulo $F = 80\\text{ N}$ all’estremità di una chiave inglese lunga $L = 25\\text{ cm} = 0{,}25\\text{ m}$. Qual è il modulo del momento della forza applicata rispetto al centro del bullone?",
+    rispostaCorretta: "$20\\text{ N}\\cdot\\text{m}$",
+    risposteErrate: [
+      "$2000\\text{ N}\\cdot\\text{m}$",
+      "$320\\text{ N}\\cdot\\text{m}$",
+      "$40\\text{ N}\\cdot\\text{m}$",
+      "$10\\text{ N}\\cdot\\text{m}$"
+    ],
+    spiegazione: "Il momento di una forza rispetto a un polo è dato dal prodotto vettoriale del braccio per la forza. Essendo la forza perpendicolare al braccio: $M = F \\cdot b = 80\\text{ N} \\cdot 0{,}25\\text{ m} = 20\\text{ N}\\cdot\\text{m}$.",
+    fonte: "Lotto S1 del progetto — S1-33 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 489,
+    materia: "Scienze",
+    domanda: "Un’asta rigida orizzontale di massa trascurabile è incernierata su un fulcro. A sinistra del fulcro, a una distanza $b_1 = 0{,}40\\text{ m}$, è applicato un peso di $150\\text{ N}$. Quale forza $F_2$ diretta verso il basso deve essere applicata a destra del fulcro, a una distanza $b_2 = 1{,}20\\text{ m}$, per mantenere l’asta in perfetto equilibrio orizzontale?",
+    rispostaCorretta: "$50\\text{ N}$",
+    risposteErrate: [
+      "$450\\text{ N}$",
+      "$60\\text{ N}$",
+      "$75\\text{ N}$",
+      "$100\\text{ N}$"
+    ],
+    spiegazione: "La condizione di equilibrio per una leva alla rotazione rispetto al fulcro è l’annullamento della somma dei momenti: $F_1 \\cdot b_1 = F_2 \\cdot b_2$. Ricavando $F_2$: $F_2 = \\frac{F_1 \\cdot b_1}{b_2} = \\frac{150\\text{ N} \\cdot 0{,}40\\text{ m}}{1{,}20\\text{ m}} = \\frac{60}{1{,}20} = 50\\text{ N}$.",
+    fonte: "Lotto S1 del progetto — S1-34 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 490,
+    materia: "Scienze",
+    domanda: "Una trave omogenea di massa $M = 20\\text{ kg}$ e lunghezza $L$ è incernierata a una parete verticale in corrispondenza del suo estremo sinistro. L’estremo destro della trave è sostenuto da un cavo tirante inclinato di $30^\\circ$ rispetto alla trave stessa. Assumendo $g = 10\\text{ m/s}^2$, qual è la tensione $T$ nel cavo per mantenere la trave in equilibrio statico orizzontale?",
+    rispostaCorretta: "$200\\text{ N}$",
+    risposteErrate: [
+      "$100\\text{ N}$",
+      "$400\\text{ N}$",
+      "$\\frac{200}{\\sqrt{3}}\\text{ N}$",
+      "$\\frac{400}{\\sqrt{3}}\\text{ N}$"
+    ],
+    spiegazione: "Trattandosi di una trave omogenea, la forza peso totale $P = M \\cdot g = 20\\text{ kg} \\cdot 10\\text{ m/s}^2 = 200\\text{ N}$ è applicata nel baricentro a distanza $L/2$ dalla cerniera. Il momento orario del peso rispetto alla cerniera è: $M_P = P \\cdot \\frac{L}{2} = 200 \\cdot \\frac{L}{2} = 100 L$. La tensione $T$ del cavo, applicata all’estremo a distanza $L$, esercita una componente verticale verso l’alto $T \\sin(30^\\circ) = 0{,}5 T$, generando un momento antiorario: $M_T = (T \\sin(30^\\circ)) \\cdot L = 0{,}5 T L$. Uguagliando i momenti per l’equilibrio statico: $0{,}5 T L = 100 L \\implies T = \\frac{100}{0{,}5} = 200\\text{ N}$.",
+    fonte: "Lotto S1 del progetto — S1-35 (Meccanica)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  }
 ];
 
 export default questionBank;

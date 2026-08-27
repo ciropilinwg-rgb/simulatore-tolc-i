@@ -42,19 +42,19 @@ function makeMockQuestion(id, materia) {
   };
 }
 
-// ─── 1. BANCA DATI FISICA (834 RECORD) ───
-section('1. Banca Dati Fisica (834 Record)');
+// ─── 1. BANCA DATI FISICA (874 RECORD) ───
+section('1. Banca Dati Fisica (874 Record)');
 check(Array.isArray(questionBank), 'questionBank è un array');
-check(questionBank.length === 834, `questionBank contiene esattamente 834 record fisici (trovati: ${questionBank.length})`);
+check(questionBank.length === 874, `questionBank contiene esattamente 874 record fisici (trovati: ${questionBank.length})`);
 
 const allAllQuestions = await getAllQuestions();
-check(allAllQuestions.length === 834, `getAllQuestions() restituisce tutti i 834 record fisici (trovati: ${allAllQuestions.length})`);
+check(allAllQuestions.length === 874, `getAllQuestions() restituisce tutti i 874 record fisici (trovati: ${allAllQuestions.length})`);
 
 const allIds = questionBank.map((q) => q.id);
 const uniqueIds = new Set(allIds);
-check(uniqueIds.size === 834, `Tutti i 834 ID sono univoci (trovati: ${uniqueIds.size})`);
+check(uniqueIds.size === 874, `Tutti i 874 ID sono univoci (trovati: ${uniqueIds.size})`);
 check(Math.min(...allIds) === 1, `ID minimo = 1 (trovato: ${Math.min(...allIds)})`);
-check(Math.max(...allIds) === 839, `ID massimo = 839 (trovato: ${Math.max(...allIds)})`);
+check(Math.max(...allIds) === 879, `ID massimo = 879 (trovato: ${Math.max(...allIds)})`);
 
 // Preservazione buchi storici
 const historicalHoles = [2, 18, 25, 78, 202];
@@ -1129,6 +1129,83 @@ check(
   'Quesito L4-52 (ID 839, MD) terna intera consecutiva con prodotto 990'
 );
 
+// ─── 2J. CENSIMENTO LOTTO C1 (ID 840–879) ───
+section('2J. Censimento e Validazione Lotto C1 (ID 840–879)');
+const c1Questions = questionBank.filter((q) => q.id >= 840 && q.id <= 879);
+check(c1Questions.length === 40, `Lotto C1: esattamente 40 quesiti nel range ID 840–879 (trovati: ${c1Questions.length})`);
+
+const c1AllVerb = c1Questions.every((q) => q.materia === 'Comprensione verbale');
+check(c1AllVerb, 'Tutti i 40 quesiti di C1 appartengono alla materia Comprensione verbale');
+
+const c1OptionsCheck = c1Questions.every((q) => (
+  typeof q.rispostaCorretta === 'string' &&
+  Array.isArray(q.risposteErrate) &&
+  q.risposteErrate.length === 4
+));
+check(c1OptionsCheck, 'Tutti i 40 quesiti di C1 hanno 1 risposta corretta e 4 errate (5 opzioni totali)');
+
+const c1StatsZeroed = c1Questions.every((q) => (
+  q.numeroVolteProposta === 0 &&
+  q.numeroRisposteCorrette === 0 &&
+  q.numeroRisposteErrate === 0
+));
+check(c1StatsZeroed, 'Tutti i 40 quesiti di C1 hanno i contatori statistici azzerati (numeroVolteProposta=0, corrette=0, errate=0)');
+
+const c1FonteCheck = c1Questions.every((q) => (
+  typeof q.fonte === 'string' &&
+  q.fonte.includes('Lotto C1 del progetto') &&
+  !q.fonte.toLowerCase().includes('cisia')
+));
+check(c1FonteCheck, 'Tutti i 40 quesiti di C1 indicano chiaramente "Lotto C1 del progetto" nella fonte senza attribuzioni esterne');
+
+const c1NoLegacyFlag = c1Questions.every((q) => q.excludedFromTolcPool !== true);
+check(c1NoLegacyFlag, 'Nessun quesito di C1 possiede excludedFromTolcPool: true (tutti nel pool attivo)');
+
+const c1PassagesCheck = c1Questions.every((q) => (
+  typeof q.brano === 'string' && q.brano.length >= 200 &&
+  typeof q.titoloBrano === 'string' && q.titoloBrano.length >= 5
+));
+check(c1PassagesCheck, 'Tutti i 40 quesiti di C1 possiedono brano e titoloBrano completi e formattati');
+
+const c1MCount = c1Questions.filter((q) => q.difficolta === 'medio').length;
+const c1MdCount = c1Questions.filter((q) => q.difficolta === 'medio-difficile').length;
+const c1MfCount = c1Questions.filter((q) => q.difficolta === 'medio-facile').length;
+check(
+  c1MCount === 31 && c1MdCount === 9 && c1MfCount === 0,
+  `Distribuzione difficoltà C1 esatta: 31 M, 9 MD, 0 MF (trovati: ${c1MCount} M, ${c1MdCount} MD, ${c1MfCount} MF)`
+);
+
+// Regression checks specifici su quesiti C1
+const q840 = questionBank.find((q) => q.id === 840);
+check(
+  Boolean(q840 && q840.difficolta === 'medio' && q840.domanda.includes('impronta spettrale') && q840.rispostaCorretta.includes('Confrontando la luce registrata')),
+  'Quesito C1-01 (ID 840, M) spettroscopia di trasmissione su esopianeti'
+);
+
+const q843 = questionBank.find((q) => q.id === 843);
+check(
+  Boolean(q843 && q843.difficolta === 'medio-difficile' && q843.domanda.includes('Cas9') && q843.rispostaCorretta.includes('taglio enzimatico') && q843.rispostaCorretta.includes('RNA guida')),
+  'Quesito C1-04 (ID 843, MD) specificità bersaglio CRISPR determinata da RNA guida'
+);
+
+const q851 = questionBank.find((q) => q.id === 851);
+check(
+  Boolean(q851 && q851.difficolta === 'medio-difficile' && q851.domanda.includes('nucleo esterno') && q851.spiegazione.includes('nucleo esterno')),
+  'Quesito C1-12 (ID 851, MD) deduzione stato fuso del nucleo esterno terrestre da onde S'
+);
+
+const q864 = questionBank.find((q) => q.id === 864);
+check(
+  Boolean(q864 && q864.difficolta === 'medio' && q864.rispostaCorretta === 'La presenza di un proprio DNA circolare privo di istoni' && q864.brano.includes('ciclo separato')),
+  'Quesito C1-25 (ID 864, M) endosimbiosi con proprio DNA circolare e ciclo separato'
+);
+
+const q879 = questionBank.find((q) => q.id === 879);
+check(
+  Boolean(q879 && q879.difficolta === 'medio-difficile' && q879.domanda.includes('osservazione passiva') && q879.rispostaCorretta.includes('interroga attivamente la natura')),
+  'Quesito C1-40 (ID 879, MD) distinzione galileiana tra osservazione passiva e interrogazione sperimentale'
+);
+
 // ─── 3. ISOLAMENTO 35 RECORD LEGACY ED ESCLUSIONE ───
 section('3. Isolamento 35 Record Legacy (excludedFromTolcPool: true)');
 const legacyRecords = questionBank.filter((q) => q.excludedFromTolcPool === true);
@@ -1165,13 +1242,13 @@ for (const { mode, name } of modesToTest) {
   const selection = selectQuestions({
     questions: questionBank,
     selectedSubjects: ['Comprensione verbale'],
-    count: 100, // supera il totale di 49 quesiti attivi di Comprensione verbale
+    count: 100, // supera il totale di 89 quesiti attivi di Comprensione verbale
     selectionMode: mode,
     userStats: mockStatsWith315
   });
 
   check(!selection.some((q) => q.id === 315), `ID 315 non viene mai estratto in modalità ${name} su Comprensione verbale`);
-  check(selection.length === 49, `Selezione ${name} su Comprensione verbale restituisce tutti e soli i 49 quesiti attivi`);
+  check(selection.length === 89, `Selezione ${name} su Comprensione verbale restituisce tutti e soli i 89 quesiti attivi`);
 }
 
 const id315FromCatalog = await getQuestionById(315);
@@ -1181,15 +1258,15 @@ check(typeof id315FromCatalog?.brano === 'string' && id315FromCatalog.brano.leng
 const id315Raw = getRawQuestionById(315);
 check(Boolean(id315Raw && id315Raw.id === 315), 'ID 315 è recuperabile tramite getRawQuestionById(315)');
 
-// ─── 5. POOL ATTIVO 799 QUESITI E RIPARTIZIONE PER MATERIA ───
-section('5. Pool Attivo 799 Quesiti e Ripartizione per Materia');
-check(activeQuestionsFromService.length === 799, `getQuestions() restituisce esattamente 799 quesiti attivi (trovati: ${activeQuestionsFromService.length})`);
+// ─── 5. POOL ATTIVO 839 QUESITI E RIPARTIZIONE PER MATERIA ───
+section('5. Pool Attivo 839 Quesiti e Ripartizione per Materia');
+check(activeQuestionsFromService.length === 839, `getQuestions() restituisce esattamente 839 quesiti attivi (trovati: ${activeQuestionsFromService.length})`);
 
 const activeSubjects = {
   Matematica: 250,
   Logica: 250,
   Scienze: 250,
-  'Comprensione verbale': 49
+  'Comprensione verbale': 89
 };
 
 const activeDistribution = {};
@@ -1200,10 +1277,10 @@ activeQuestionsFromService.forEach((q) => {
 check(activeDistribution['Matematica'] === 250, `Matematica attiva: 250 (trovati: ${activeDistribution['Matematica']})`);
 check(activeDistribution['Logica'] === 250, `Logica attiva: 250 (trovati: ${activeDistribution['Logica']})`);
 check(activeDistribution['Scienze'] === 250, `Scienze attiva: 250 (trovati: ${activeDistribution['Scienze']})`);
-check(activeDistribution['Comprensione verbale'] === 49, `Comprensione verbale attiva: 49 (trovati: ${activeDistribution['Comprensione verbale']})`);
+check(activeDistribution['Comprensione verbale'] === 89, `Comprensione verbale attiva: 89 (trovati: ${activeDistribution['Comprensione verbale']})`);
 
 const totalActiveSum = Object.values(activeDistribution).reduce((sum, v) => sum + v, 0);
-check(totalActiveSum === 799, `Somma per materia pool attivo = 799 (250 + 250 + 250 + 49 = ${totalActiveSum})`);
+check(totalActiveSum === 839, `Somma per materia pool attivo = 839 (250 + 250 + 250 + 89 = ${totalActiveSum})`);
 
 const serviceMaterie = (await getMaterie()).sort();
 check(serviceMaterie.length === 4, `getMaterie() restituisce esattamente 4 materie attive (${serviceMaterie.join(', ')})`);
@@ -1328,11 +1405,12 @@ const l1Count = 50;
 const l2Count = 50;
 const l3Count = 50;
 const l4Count = 52;
+const c1Count = 40;
 const physicalTotal = questionBank.length;
 const legacyCount = questionBank.filter((q) => q.excludedFromTolcPool === true).length;
 const activeTotal = activeQuestionsFromService.length;
 
-check(baseCount + m1Count + m2Count + m3Count + m4Count + m5Count + s1Count + s2Count + s3Count + s4Count + s5Count + l1Count + l2Count + l3Count + l4Count === physicalTotal, `Uguaglianza fisica verificata: ${baseCount} (base) + ${m1Count} (M1) + ${m2Count} (M2) + ${m3Count} (M3) + ${m4Count} (M4) + ${m5Count} (M5) + ${s1Count} (S1) + ${s2Count} (S2) + ${s3Count} (S3) + ${s4Count} (S4) + ${s5Count} (S5) + ${l1Count} (L1) + ${l2Count} (L2) + ${l3Count} (L3) + ${l4Count} (L4) = ${physicalTotal} (fisici)`);
+check(baseCount + m1Count + m2Count + m3Count + m4Count + m5Count + s1Count + s2Count + s3Count + s4Count + s5Count + l1Count + l2Count + l3Count + l4Count + c1Count === physicalTotal, `Uguaglianza fisica verificata: ${baseCount} (base) + ${m1Count} (M1) + ${m2Count} (M2) + ${m3Count} (M3) + ${m4Count} (M4) + ${m5Count} (M5) + ${s1Count} (S1) + ${s2Count} (S2) + ${s3Count} (S3) + ${s4Count} (S4) + ${s5Count} (S5) + ${l1Count} (L1) + ${l2Count} (L2) + ${l3Count} (L3) + ${l4Count} (L4) + ${c1Count} (C1) = ${physicalTotal} (fisici)`);
 check(physicalTotal - legacyCount === activeTotal, `Uguaglianza attiva verificata: ${physicalTotal} (fisici) - ${legacyCount} (legacy) = ${activeTotal} (attivi)`);
 
 console.log(`\nRisultato testQuiz.mjs: ${passed} test passati, ${failed} falliti.`);

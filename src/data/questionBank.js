@@ -12793,6 +12793,907 @@ const questionBank = [
     numeroRisposteCorrette: 0,
     numeroRisposteErrate: 0
   }
+,
+  {
+    id: 738,
+    materia: "Logica",
+    difficolta: "medio-facile",
+    domanda: "Quattro atleti — Anna, Bruno, Carlo e Dario — partecipano a una gara a cronometro e ottengono tempi tutti diversi tra loro. Sono noti i seguenti fatti:\n1. Anna è arrivata prima di Bruno ($A < B$);\n2. Dario è arrivato prima di Carlo ($D < C$);\n3. Bruno è arrivato prima di Dario ($B < D$).\nQuale delle seguenti affermazioni DEVE essere necessariamente vera?",
+    rispostaCorretta: "Anna ha vinto la gara (è arrivata prima in classifica)",
+    risposteErrate: [
+      "Carlo è arrivato secondo in classifica",
+      "Dario è arrivato prima di Bruno",
+      "Bruno è arrivato ultimo in classifica",
+      "Non è possibile stabilire chi sia arrivato primo"
+    ],
+    spiegazione: "Dalle tre premesse di ordinamento lineare stretto: 1) $A < B$, 2) $D < C$, 3) $B < D$. Concatenando le disuguaglianze per transitività, otteniamo l’ordinamento completo e univoco: $A < B < D < C$. Anna è dunque 1ª, Bruno 2°, Dario 3° e Carlo 4°. Ne consegue con assoluta necessità logica che Anna ha vinto la gara.",
+    fonte: "Lotto L3 del progetto — L3-01 (ID 738)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 739,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Cinque progetti informatici ($P_1, P_2, P_3, P_4, P_5$) devono essere collaudati in sequenza temporale dal 1° al 5° turno (un solo progetto per turno), rispettando i seguenti vincoli:\n1. $P_3$ viene collaudato al 1° turno;\n2. $P_4$ viene collaudato al 5° turno;\n3. $P_2$ viene collaudato immediatamente prima di $P_5$;\n4. $P_1$ viene collaudato prima di $P_2$.\nQuale progetto DEVE essere collaudato al 4° turno?",
+    rispostaCorretta: "$P_5$",
+    risposteErrate: [
+      "$P_1$",
+      "$P_2$",
+      "$P_3$",
+      "Non è possibile determinarlo in modo univoco"
+    ],
+    spiegazione: "I turni disponibili sono 1, 2, 3, 4, 5. I turni 1 e 5 sono occupati rispettivamente da $P_3$ e $P_4$. Restano liberi i turni 2, 3, 4 per i progetti $P_1, P_2, P_5$. Poiché $P_2$ precede immediatamente $P_5$ (turno di $P_5 = \\text{turno di } P_2 + 1$) e $P_1$ deve precedere $P_2$, l’unica disposizione compatibile con i turni rimasti è: turno 2 = $P_1$, turno 3 = $P_2$, turno 4 = $P_5$. L’assegnazione completa è $(P_3, P_1, P_2, P_5, P_4)$. Al 4° turno deve quindi necessariamente esserci $P_5$.",
+    fonte: "Lotto L3 del progetto — L3-02 (ID 739)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 740,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Cinque conferenze universitarie ($A, B, C, D, E$) si tengono nella stessa aula in cinque fasce orarie consecutive (dalla fascia 1 alla fascia 5). Sono stabiliti i seguenti vincoli:\n1. La conferenza $C$ si tiene nella fascia 3;\n2. La conferenza $A$ precede la conferenza $B$ con esattamente una conferenza intermedia tra loro (ossia: $\\text{fascia}(B) = \\text{fascia}(A) + 2$);\n3. La conferenza $D$ precede la conferenza $E$ (non necessariamente in modo consecutivo).\nIn quale fascia oraria DEVE tenersi la conferenza $A$?",
+    rispostaCorretta: "Nella fascia 2",
+    risposteErrate: [
+      "Nella fascia 1",
+      "Nella fascia 4",
+      "Nella fascia 5",
+      "Indifferentemente nella fascia 1 o nella fascia 2"
+    ],
+    spiegazione: "Poiché la fascia 3 è occupata da $C$, la coppia $(A, B)$ con distanza 2 non può partire dalla fascia 1 (altrimenti $B$ cadrebbe nella fascia 3, in conflitto con $C$) né dalla fascia 4 o 5 (poiché $B$ eccederebbe le 5 fasce). L’unica posizione ammissibile per $A$ è dunque la fascia 2, da cui $B$ si colloca nella fascia 4. Le fasce rimaste (1 e 5) vengono occupate rispettivamente da $D$ ed $E$ per soddisfare il vincolo $D < E$. La sequenza completa è $(D, A, C, B, E)$, e la conferenza $A$ deve necessariamente tenersi nella fascia 2.",
+    fonte: "Lotto L3 del progetto — L3-03 (ID 740)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 741,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Cinque studenti — Elena, Fabio, Giorgio, Ilaria e Luca — hanno ottenuto voti distinti in un esame. Sono note le seguenti relazioni:\n1. Elena ha ottenuto un voto superiore a Fabio ($E > F$);\n2. Giorgio ha ottenuto un voto superiore a Ilaria ($G > I$);\n3. Fabio ha ottenuto un voto superiore a Giorgio ($F > G$);\n4. Ilaria ha ottenuto un voto superiore a Luca ($I > L$).\nQuale posizione occupa con certezza assoluta lo studente Giorgio nella graduatoria ordinata dal voto più alto al più basso?",
+    rispostaCorretta: "La 3ª posizione",
+    risposteErrate: [
+      "La 2ª posizione",
+      "La 4ª posizione",
+      "La 1ª posizione",
+      "La posizione di Giorgio non è determinabile univocamente"
+    ],
+    spiegazione: "Concatenando i vincoli di disuguaglianza transitiva: $E > F$ (da 1), $F > G$ (da 3), $G > I$ (da 2), $I > L$ (da 4). L’ordinamento completo decrescente è rigorosamente: $E > F > G > I > L$. Le posizioni sono: 1ª Elena, 2° Fabio, 3° Giorgio, 4ª Ilaria, 5° Luca. Giorgio si trova quindi con certezza assoluta al 3° posto.",
+    fonte: "Lotto L3 del progetto — L3-04 (ID 741)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 742,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "I cinque vagoni di un treno merci sono numerati da 1 a 5 (dove 1 è la testa e 5 è la coda) e trasportano cinque materiali diversi ($V, W, X, Y, Z$). Valgono le seguenti regole di sicurezza:\n1. Il carico $X$ è collocato nel vagone 3;\n2. Il carico $Y$ è collocato nel vagone 5;\n3. I carichi $V$ e $W$ devono trovarsi in due vagoni direttamente adiacenti;\n4. Il carico $Z$ NON può trovarsi nel vagone 1.\nQuale carico si trova NECESSARIAMENTE nel vagone 4?",
+    rispostaCorretta: "$Z$",
+    risposteErrate: [
+      "$V$",
+      "$W$",
+      "$X$",
+      "Non è possibile stabilire con certezza quale carico si trovi nel vagone 4"
+    ],
+    spiegazione: "I vagoni 3 e 5 sono già assegnati rispettivamente a $X$ e $Y$. I vagoni rimasti da assegnare sono 1, 2 e 4 per i materiali $V, W, Z$. Poiché $V$ e $W$ devono essere adiacenti, essi devono occupare due vagoni contigui: l’unica coppia contigua libera è ${1, 2}$. Di conseguenza, i vagoni 1 e 2 sono occupati da $V$ e $W$ (in un ordine qualsiasi). Il vagone 4 rimane come unico spazio per $Z$ (il che rispetta anche il vincolo che $Z$ non sia nel vagone 1). Nel vagone 4 deve quindi trovarsi necessariamente il carico $Z$.",
+    fonte: "Lotto L3 del progetto — L3-05 (ID 742)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 743,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro dipendenti — Aldo, Bea, Carlo e Dario — lavorano in un edificio a 4 piani (piani 1, 2, 3, 4, con un solo dipendente per piano). Sono noti i seguenti vincoli:\n1. Carlo lavora al 1° piano;\n2. Aldo lavora a un piano più alto di Bea ($\\text{piano}(A) > \\text{piano}(B)$);\n3. Dario NON lavora al 4° piano.\nChi lavora NECESSARIAMENTE al 4° piano?",
+    rispostaCorretta: "Aldo",
+    risposteErrate: [
+      "Bea",
+      "Carlo",
+      "Dario",
+      "Non è possibile determinarlo senza conoscere il piano esatto di Dario"
+    ],
+    spiegazione: "Il piano 1 è occupato da Carlo. I piani 2, 3, 4 devono essere ripartiti tra Aldo, Bea e Dario. Dario non può stare al piano 4 (vincolo 3). Bea non può stare al piano 4 perché Aldo deve trovarsi a un piano superiore al suo (vincolo 2). Carlo è già al piano 1. L’unico dipendente che può occupare il 4° piano è dunque necessariamente Aldo (mentre Bea e Dario occuperanno i piani 2 e 3 in ordine compatibile).",
+    fonte: "Lotto L3 del progetto — L3-06 (ID 743)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 744,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro relatori — Rossi, Bianchi, Verdi e Neri — tengono le loro lezioni in quattro aule distinte ($A_1, A_2, A_3, A_4$, un relatore per aula). Valgono le seguenti informazioni:\n1. Bianchi è assegnato all’aula $A_3$;\n2. Rossi NON può essere assegnato né all’aula $A_1$ né all’aula $A_4$;\n3. Neri non è assegnato all’aula $A_2$.\nIn quale aula DEVE essere assegnato il relatore Rossi?",
+    rispostaCorretta: "Nell’aula $A_2$",
+    risposteErrate: [
+      "Nell’aula $A_1$",
+      "Nell’aula $A_4$",
+      "Indifferentemente nell’aula $A_1$ o nell’aula $A_2$",
+      "L’aula di Rossi dipende dall’assegnazione di Verdi"
+    ],
+    spiegazione: "Le aule sono $A_1, A_2, A_3, A_4$. Bianchi è in $A_3$. Rossi non può andare in $A_1$, non può andare in $A_4$ (vincolo 2) e l’aula $A_3$ è già occupata da Bianchi. L’unica aula rimasta accessibile per Rossi è l’aula $A_2$. Dunque Rossi deve necessariamente essere assegnato all’aula $A_2$.",
+    fonte: "Lotto L3 del progetto — L3-07 (ID 744)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 745,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro server ($S_1, S_2, S_3, S_4$) devono essere configurati ciascuno con un indirizzo di rete distinto scelto tra $IP_A, IP_B, IP_C, IP_D$. Valgono i seguenti vincoli di configurazione:\n1. Il server $S_1$ è configurato con l’indirizzo $IP_C$;\n2. Il server $S_3$ NON può avere l’indirizzo $IP_B$ né l’indirizzo $IP_D$;\n3. Il server $S_2$ NON può avere l’indirizzo $IP_A$.\nQuale associazione DEVE essere necessariamente vera?",
+    rispostaCorretta: "Il server $S_3$ è configurato con $IP_A$",
+    risposteErrate: [
+      "Il server $S_2$ è configurato con $IP_A$",
+      "Il server $S_4$ è configurato con $IP_C$",
+      "Il server $S_3$ è configurato con $IP_D$",
+      "Il server $S_4$ non può avere l’indirizzo $IP_D$"
+    ],
+    spiegazione: "$S_1$ ha $IP_C$. Gli indirizzi liberi per $S_2, S_3, S_4$ sono $IP_A, IP_B, IP_D$. Per il vincolo 2, $S_3$ non può avere $IP_B$ né $IP_D$ (e $IP_C$ è già di $S_1$); l’unico indirizzo possibile per $S_3$ è quindi $IP_A$. Ne segue che $S_2$ e $S_4$ si dividono $IP_B$ e $IP_D$; poiché $S_2$ non può avere $IP_A$ (già soddisfatto), la conclusione certa e necessaria è che $S_3$ ha $IP_A$.",
+    fonte: "Lotto L3 del progetto — L3-08 (ID 745)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 746,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro autisti ($A_1, A_2, A_3, A_4$) guidano ciascuno un mezzo di trasporto diverso tra Bus, Tram, Metro e Taxi. Si sa che:\n1. $A_3$ guida il Bus;\n2. $A_1$ guida il Taxi;\n3. $A_4$ NON guida la Metro;\n4. $A_2$ non guida il Taxi.\nQuale mezzo guida con certezza assoluta l’autista $A_2$?",
+    rispostaCorretta: "La Metro",
+    risposteErrate: [
+      "Il Tram",
+      "Il Bus",
+      "Il Taxi",
+      "Non è possibile stabilire se $A_2$ guidi la Metro o il Tram"
+    ],
+    spiegazione: "I mezzi Bus e Taxi sono assegnati rispettivamente ad $A_3$ e $A_1$. Rimangono i mezzi Metro e Tram da assegnare ad $A_2$ e $A_4$. Poiché $A_4$ non guida la Metro (vincolo 3), $A_4$ deve necessariamente guidare il Tram. Di conseguenza, l’autista $A_2$ deve guidare con certezza assoluta la Metro.",
+    fonte: "Lotto L3 del progetto — L3-09 (ID 746)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 747,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro veicoli ($V_1, V_2, V_3, V_4$) sono parcheggiati in quattro stalli numerati da 1 a 4 in linea retta. Si conoscono le seguenti regole:\n1. Il veicolo $V_3$ è parcheggiato nello stallo 1;\n2. I veicoli $V_1$ e $V_2$ occupano due stalli contigui ($|\\text{stallo}(V_1) - \\text{stallo}(V_2)| = 1$);\n3. Lo stallo di $V_4$ ha un numero maggiore rispetto a quello di $V_2$ ($\\text{stallo}(V_4) > \\text{stallo}(V_2)$).\nIn quale stallo si trova NECESSARIAMENTE il veicolo $V_4$?",
+    rispostaCorretta: "Nello stallo 4",
+    risposteErrate: [
+      "Nello stallo 2",
+      "Nello stallo 3",
+      "Nello stallo 1",
+      "Indifferentemente nello stallo 2 o nello stallo 4"
+    ],
+    spiegazione: "Lo stallo 1 è occupato da $V_3$. Restano liberi gli stalli 2, 3, 4 per $V_1, V_2, V_4$. Poiché $V_1$ e $V_2$ devono essere contigui, essi devono occupare la coppia di stalli ${2, 3}$. Il restante stallo 4 è obbligatoriamente assegnato a $V_4$. Ciò soddisfa anche la condizione $\\text{stallo}(V_4) > \\text{stallo}(V_2)$, poiché $4 > 2$ e $4 > 3$. Quindi $V_4$ è necessariamente nello stallo 4.",
+    fonte: "Lotto L3 del progetto — L3-10 (ID 747)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 748,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Da un gruppo di sei esperti ($A, B, C, D, E, F$) si deve comporre una commissione di esattamente tre membri. Valgono le seguenti regole di selezione:\n1. Se viene scelto $A$, allora deve essere scelto anche $B$ ($A \\to B$);\n2. $C$ e $D$ sono incompatibili (non possono fare entrambi parte della commissione);\n3. Se viene scelto $E$, allora $B$ non può essere scelto ($E \\to \\neg B$);\n4. Gli esperti $A$ e $C$ sono entrambi obbligatoriamente inclusi nella commissione.\nQuale terna di esperti costituisce l’UNICA commissione ammissibile?",
+    rispostaCorretta: "$\\{A, B, C\\}$",
+    risposteErrate: [
+      "$\\{A, B, D\\}$",
+      "$\\{A, B, E\\}$",
+      "$\\{A, C, F\\}$",
+      "$\\{B, C, E\\}$"
+    ],
+    spiegazione: "Dato che $A$ e $C$ sono inclusi per la regola 4: poiché $A$ è scelto, per la regola 1 anche $B$ deve essere scelto. I tre membri selezionati sono quindi $A, B, C$, saturando i 3 posti disponibili. Verifichiamo la coerenza con le altre regole: $C$ è presente, quindi $D$ è escluso (regola 2, soddisfatta); $B$ è presente, quindi per contronominale della regola 3 $E$ è escluso (soddisfatta). La terna unica e priva di contraddizioni è $\\{A, B, C\\}$.",
+    fonte: "Lotto L3 del progetto — L3-11 (ID 748)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 749,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Sei partecipanti ($M, N, P, Q, R, S$) devono essere divisi in due squadre di tre persone ciascuna (Squadra Alfa e Squadra Beta). Valgono le seguenti regole:\n1. $M$ ed $N$ devono appartenere alla stessa squadra;\n2. $P$ e $Q$ non possono appartenere alla stessa squadra;\n3. $R$ appartiene alla Squadra Alfa;\n4. $M$ appartiene alla Squadra Beta.\nQuale delle seguenti affermazioni DEVE essere necessariamente vera?",
+    rispostaCorretta: "Il partecipante $N$ appartiene alla Squadra Beta",
+    risposteErrate: [
+      "Il partecipante $P$ appartiene alla Squadra Beta",
+      "Il partecipante $S$ appartiene alla Squadra Alfa",
+      "Il partecipante $Q$ appartiene necessariamente alla Squadra Beta",
+      "$R$ ed $M$ appartengono alla stessa squadra"
+    ],
+    spiegazione: "Dal vincolo 4 sappiamo che $M \\in \\text{Beta}$. Dal vincolo 1, $M$ ed $N$ devono stare insieme, quindi anche $N \\in \\text{Beta}$. Questa deduzione è immediata e categorica, indipendentemente dalla ripartizione degli altri partecipanti ($P, Q, S, R$). L’affermazione che $N$ appartiene alla Squadra Beta deve quindi essere necessariamente vera.",
+    fonte: "Lotto L3 del progetto — L3-12 (ID 749)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 750,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Uno studente universitario deve inserire nel proprio piano di studi esattamente tre corsi scelti tra cinque opzioni ($C_1, C_2, C_3, C_4, C_5$). I regolamenti stabiliscono che:\n1. Non è consentito scegliere contemporaneamente $C_1$ e $C_2$;\n2. Se si sceglie il corso $C_3$, è obbligatorio scegliere anche $C_4$ ($C_3 \\to C_4$);\n3. Se non si sceglie il corso $C_5$, non si può scegliere il corso $C_4$ (ossia: $\\neg C_5 \\to \\neg C_4$, equivalente a $C_4 \\to C_5$).\nSapendo che lo studente ha inserito nel piano il corso $C_3$, quale terna di corsi ha scelto con certezza assoluta?",
+    rispostaCorretta: "$\\{C_3, C_4, C_5\\}$",
+    risposteErrate: [
+      "$\\{C_1, C_3, C_4\\}$",
+      "$\\{C_2, C_3, C_4\\}$",
+      "$\\{C_1, C_2, C_3\\}$",
+      "Non è possibile stabilire se lo studente abbia scelto $C_5$"
+    ],
+    spiegazione: "Poiché lo studente sceglie $C_3$: per la regola 2 ($C_3 \\to C_4$), sceglie obbligatoriamente anche $C_4$. Per la regola 3 nella sua forma contronominale ($C_4 \\to C_5$), avendo scelto $C_4$ deve obbligatoriamente scegliere anche $C_5$. Avendo selezionato $C_3, C_4, C_5$, il limite di esattamente 3 corsi è completato e i corsi $C_1, C_2$ restano esclusi (rispettando anche la regola 1). La terna scelta è univocamente $\\{C_3, C_4, C_5\\}$.",
+    fonte: "Lotto L3 del progetto — L3-13 (ID 750)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 751,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Un sistema operativo deve attivare esattamente tre servizi scelti tra cinque disponibili ($S_1, S_2, S_3, S_4, S_5$). Valgono i seguenti requisiti formali:\n1. L’attivazione di $S_1$ richiede l’attivazione di $S_2$ ($S_1 \\to S_2$);\n2. Il servizio $S_2$ è incompatibile con $S_3$ (non possono essere attivi insieme);\n3. Il servizio $S_4$ richiede per funzionare il servizio $S_3$ ($S_4 \\to S_3$);\n4. Il servizio $S_1$ è impostato come attivo.\nQuale terna di servizi DEVE essere attivata?",
+    rispostaCorretta: "$\\{S_1, S_2, S_5\\}$",
+    risposteErrate: [
+      "$\\{S_1, S_2, S_3\\}$",
+      "$\\{S_1, S_2, S_4\\}$",
+      "$\\{S_1, S_4, S_5\\}$",
+      "$\\{S_2, S_3, S_5\\}$"
+    ],
+    spiegazione: "Poiché $S_1$ è attivo: per il requisito 1, anche $S_2$ deve essere attivo. Per il requisito 2, essendo $S_2$ attivo, $S_3$ deve essere disattivato. Per il requisito 3, per contronominale $\\neg S_3 \\to \\neg S_4$, essendo $S_3$ disattivato anche $S_4$ deve essere disattivato. Per raggiungere esattamente tre servizi attivi tra i cinque, l’unico servizio rimasto disponibile è $S_5$. La terna attiva è quindi necessariamente $\\{S_1, S_2, S_5\\}$.",
+    fonte: "Lotto L3 del progetto — L3-14 (ID 751)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 752,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Cinque delegati ($D_1, D_2, D_3, D_4, D_5$) sono ripartiti in due commissioni: Commissione A (esattamente 2 membri) e Commissione B (esattamente 3 membri). Valgono i seguenti vincoli:\n1. $D_1$ e $D_2$ sono assegnati a commissioni diverse;\n2. $D_3$ e $D_4$ sono assegnati alla stessa commissione;\n3. Se $D_5$ è assegnato alla Commissione A, allora $D_1$ è assegnato alla Commissione A ($D_5 \\in A \\to D_1 \\in A$);\n4. Il delegato $D_3$ è assegnato alla Commissione B.\nQuali delegati compongono la Commissione A?",
+    rispostaCorretta: "$\\{D_1, D_5\\}$",
+    risposteErrate: [
+      "$\\{D_2, D_5\\}$",
+      "$\\{D_1, D_2\\}$",
+      "$\\{D_3, D_4\\}$",
+      "La composizione della Commissione A non è determinabile in modo univoco"
+    ],
+    spiegazione: "Dato che $D_3 \\in B$, per il vincolo 2 anche $D_4 \\in B$. Quindi la Commissione B contiene già $\\{D_3, D_4\\}$ e ha spazio per un solo ulteriore membro. Se $D_1$ fosse assegnato a B, allora B sarebbe $\\{D_3, D_4, D_1\\}$ e la Commissione A sarebbe composta da $\\{D_2, D_5\\}$. Ma se $D_5 \\in A$, per il vincolo 3 dovremmo avere $D_1 \\in A$, generando una contraddizione. Dunque $D_1$ deve essere in A. Per il vincolo 1, $D_2$ va in B. La Commissione B è completa: $\\{D_3, D_4, D_2\\}$. La Commissione A è quindi formata univocamente da $\\{D_1, D_5\\}$.",
+    fonte: "Lotto L3 del progetto — L3-15 (ID 752)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 753,
+    materia: "Logica",
+    difficolta: "medio-difficile",
+    domanda: "In un laboratorio chimico si deve preparare una soluzione contenente esattamente tre reagenti scelti tra cinque sostanze ipotetiche ($R_1, R_2, R_3, R_4, R_5$). Valgono le seguenti regole di compatibilità e sicurezza:\n1. La presenza del reagente $R_1$ richiede obbligatoriamente la presenza del reagente $R_2$ ($R_1 \\to R_2$);\n2. I reagenti $R_2$ e $R_4$ sono incompatibili e non possono essere presenti insieme nella stessa soluzione ($\\neg(R_2 \\land R_4)$);\n3. Se nella miscela è presente $R_3$, allora NON può essere presente $R_5$ ($R_3 \\to \\neg R_5$);\n4. Se il reagente $R_4$ NON è presente nella miscela, allora il reagente $R_5$ DEVE essere presente ($\\neg R_4 \\to R_5$);\n5. Il reagente $R_1$ è stato inserito obbligatoriamente nella soluzione.\nQuale terna di reagenti costituisce l’UNICA miscela ammissibile?",
+    rispostaCorretta: "$\\{R_1, R_2, R_5\\}$",
+    risposteErrate: [
+      "$\\{R_1, R_2, R_3\\}$",
+      "$\\{R_1, R_2, R_4\\}$",
+      "$\\{R_1, R_3, R_5\\}$",
+      "$\\{R_2, R_4, R_5\\}$"
+    ],
+    spiegazione: "Procediamo per deduzione a catena: 1) Dal vincolo 5, $R_1$ è presente. 2) Dal vincolo 1 ($R_1 \\to R_2$), ne segue che $R_2$ è presente. 3) Dal vincolo 2 (incompatibilità tra $R_2$ e $R_4$), essendo $R_2$ presente, $R_4$ è categoricamente assente ($\\neg R_4$). 4) Dal vincolo 4 ($\\neg R_4 \\to R_5$), essendo $R_4$ assente, $R_5$ deve essere obbligatoriamente presente. 5) Dal vincolo 3 per contronominale ($R_5 \\to \\neg R_3$), essendo $R_5$ presente, $R_3$ è categoricamente escluso. La miscela deve contenere esattamente 3 reagenti, e abbiamo determinato la presenza di $R_1, R_2, R_5$ e l’esclusione di $R_3, R_4$. L’unica combinazione ammissibile è rigorosamente $\\{R_1, R_2, R_5\\}$. I distrattori risultano tutti inammissibili: $\\{R_1, R_2, R_3\\}$ viola il vincolo 4 (l’assenza di $R_4$ impone la presenza di $R_5$, assente in questa terna); $\\{R_1, R_2, R_4\\}$ viola il vincolo 2 di incompatibilità tra $R_2$ e $R_4$; $\\{R_1, R_3, R_5\\}$ viola il vincolo 1 (manca $R_2$) e il vincolo 3 (compresenza vietata di $R_3$ e $R_5$); $\\{R_2, R_4, R_5\\}$ manca del reagente obbligatorio $R_1$ e viola il vincolo 2.",
+    fonte: "Lotto L3 del progetto — L3-16 (ID 753)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 754,
+    materia: "Logica",
+    difficolta: "medio-facile",
+    domanda: "Una centrale di monitoraggio riceve i segnali da quattro allarmi indipendenti ($A_1, A_2, A_3, A_4$). Valgono le seguenti condizioni operative:\n1. La sirena generale scatta se e solo se risultano attivi contemporaneamente almeno due allarmi;\n2. Gli allarmi $A_1$ e $A_2$ sono mutuamente esclusivi (non possono essere attivi insieme);\n3. L’allarme $A_3$ è guasto ed è permanentemente disattivato.\nAffinché la sirena generale possa scattare, quale allarme DEVE essere necessariamente attivo?",
+    rispostaCorretta: "$A_4$",
+    risposteErrate: [
+      "$A_1$",
+      "$A_2$",
+      "$A_3$",
+      "Nessun allarme singolo è indispensabile"
+    ],
+    spiegazione: "Per far scattare la sirena occorrono almeno 2 allarmi attivi. L’allarme $A_3$ è disattivato (0 allarmi). Tra $A_1$ e $A_2$ può essercene al massimo uno attivo a causa della mutua esclusione. Pertanto, l’unico modo per raggiungere la quota minima di 2 allarmi attivi è avere attivo l’allarme $A_4$ insieme a uno tra $A_1$ o $A_2$. L’allarme $A_4$ è quindi una condizione necessaria indispensabile.",
+    fonte: "Lotto L3 del progetto — L3-17 (ID 754)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 755,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro agenti di sicurezza ($G_1, G_2, G_3, G_4$) presidiano due postazioni (Postazione Nord e Postazione Sud) in due turni distinti (Turno Diurno e Turno Notturno), con esattamente un agente per postazione in ogni turno (4 assegnazioni biunivoche in totale). Sono noti i seguenti vincoli:\n1. L’agente $G_1$ è assegnato al Turno Notturno;\n2. La Postazione Nord nel Turno Diurno è presidiata dall’agente $G_2$;\n3. L’agente $G_3$ NON può svolgere il Turno Notturno;\n4. L’agente $G_4$ NON presidia la Postazione Sud.\nQuale agente presidia la Postazione Sud nel Turno Notturno?",
+    rispostaCorretta: "$G_1$",
+    risposteErrate: [
+      "$G_2$",
+      "$G_3$",
+      "$G_4$",
+      "Non è possibile stabilirlo in modo univoco"
+    ],
+    spiegazione: "Analisi delle 4 caselle: (Diurno, Nord), (Diurno, Sud), (Notturno, Nord), (Notturno, Sud). Dal vincolo 2: (Diurno, Nord) = $G_2$. Restano libere tre caselle per $G_1, G_3, G_4$. Dal vincolo 3: $G_3$ non fa la notte, quindi $G_3$ deve fare il giorno, ossia (Diurno, Sud) = $G_3$. Rimangono le due caselle notturne per $G_1$ e $G_4$. Dal vincolo 4: $G_4$ non può stare a Sud, quindi $G_4$ è assegnato a (Notturno, Nord). Di conseguenza, la casella (Notturno, Sud) deve essere presidiata necessariamente da $G_1$.",
+    fonte: "Lotto L3 del progetto — L3-18 (ID 755)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 756,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Un tecnico deve installare esattamente due schede di espansione scelte tra quattro modelli disponibili ($C_1, C_2, C_3, C_4$). Valgono le seguenti regole di compatibilità hardware:\n1. Se si installa la scheda $C_1$, NON è possibile installare la scheda $C_3$ ($\\neg(C_1 \\land C_3)$);\n2. Se NON si installa la scheda $C_4$, è obbligatorio installare la scheda $C_3$ (ossia: $\\neg C_4 \\to C_3$);\n3. Si decide di installare la scheda $C_1$.\nQuale altra scheda DEVE essere necessariamente installata insieme a $C_1$?",
+    rispostaCorretta: "$C_4$",
+    risposteErrate: [
+      "$C_2$",
+      "$C_3$",
+      "Indifferentemente $C_2$ o $C_3$",
+      "Nessuna scheda è compatibile con $C_1$"
+    ],
+    spiegazione: "Poiché $C_1$ viene installata: per la regola 1, la scheda $C_3$ non può essere installata ($\\neg C_3$). Applicando la contronominale alla regola 2 ($\\neg C_3 \\to C_4$), dall’assenza di $C_3$ consegue categoricamente che la scheda $C_4$ deve essere installata. Avendo raggiunto il limite stabilito di esattamente due schede ($C_1$ e $C_4$), la scheda $C_4$ deve essere necessariamente installata.",
+    fonte: "Lotto L3 del progetto — L3-19 (ID 756)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 757,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro reperti museali ($R_A, R_B, R_C, R_D$) sono esposti in quattro vetrine allineate e numerate da 1 a 4. Valgono le seguenti condizioni di allestimento:\n1. Il reperto $R_A$ è collocato nella vetrina 2;\n2. Il reperto $R_B$ si trova in una vetrina con numero inferiore rispetto a quella del reperto $R_C$ ($\\text{vetrina}(R_B) < \\text{vetrina}(R_C)$);\n3. Il reperto $R_D$ NON può essere collocato nella vetrina 4.\nIn quale vetrina DEVE essere collocato il reperto $R_C$?",
+    rispostaCorretta: "Nella vetrina 4",
+    risposteErrate: [
+      "Nella vetrina 1",
+      "Nella vetrina 3",
+      "Indifferentemente nella vetrina 3 o nella vetrina 4",
+      "La posizione di $R_C$ dipende da quella di $R_A$"
+    ],
+    spiegazione: "La vetrina 2 è occupata da $R_A$. Le vetrine libere per $R_B, R_C, R_D$ sono 1, 3 e 4. La vetrina 4 non può essere occupata da $R_D$ (vincolo 3) e non può essere occupata da $R_B$ (poiché $R_B < R_C$ e 4 è il numero massimo, $R_B$ in 4 non lascerebbe spazio per $R_C$). Di conseguenza, la vetrina 4 deve essere obbligatoriamente occupata dal reperto $R_C$.",
+    fonte: "Lotto L3 del progetto — L3-20 (ID 757)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 758,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Tre colleghi ($A, B, C$) partecipano a un seminario e scelgono ciascuno una tra due sessioni tematiche: Sessione X ($X$) o Sessione Y ($Y$). Valgono le seguenti condizioni:\n1. Almeno un collega partecipa alla Sessione X e almeno uno partecipa alla Sessione Y;\n2. Se $A$ sceglie la Sessione X, allora anche $B$ sceglie la Sessione X ($A_X \\to B_X$);\n3. Il collega $C$ sceglie sempre una sessione diversa da quella scelta da $B$ ($C_X \\leftrightarrow B_Y$).\nQuale delle seguenti affermazioni DEVE essere necessariamente vera in tutte le configurazioni ammissibili?",
+    rispostaCorretta: "$B$ e $C$ partecipano sempre a due sessioni diverse",
+    risposteErrate: [
+      "$A$ partecipa sempre alla Sessione X",
+      "$A$ partecipa sempre alla Sessione Y",
+      "$B$ partecipa sempre alla Sessione X",
+      "$C$ partecipa sempre alla Sessione X"
+    ],
+    spiegazione: "Analizziamo le configurazioni ammissibili delle scelte $(A, B, C)$: 1) Se $A=X \\implies B=X \\implies C=Y$, terna $(X, X, Y)$ (valida, sono presenti sia X sia Y). 2) Se $A=Y$: se poniamo $B=X \\implies C=Y$, terna $(Y, X, Y)$ (valida); se poniamo $B=Y \\implies C=X$, terna $(Y, Y, X)$ (valida). In tutte e tre le configurazioni ammissibili, per la regola 3, $B$ e $C$ scelgono rigorosamente sessioni opposte. Questa affermazione è vera in ogni modello possibile (ossia DEVE essere vera).",
+    fonte: "Lotto L3 del progetto — L3-21 (ID 758)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 759,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro corridori ($W, X, Y, Z$) tagliano il traguardo in quattro posizioni distinte (dal 1° al 4° posto). Sono note le seguenti tre relazioni di arrivo:\n1. $W$ è arrivato prima di $X$ ($W < X$);\n2. $Y$ è arrivato prima di $Z$ ($Y < Z$);\n3. $W$ è arrivato prima di $Z$ ($W < Z$).\nQuale delle seguenti affermazioni PUÒ essere vera (è logicamente compatibile con i vincoli, pur non essendo necessaria)?",
+    rispostaCorretta: "$Y$ vince la gara arrivando al 1° posto",
+    risposteErrate: [
+      "$X$ vince la gara arrivando al 1° posto",
+      "$Z$ arriva prima di $W$",
+      "$Z$ arriva prima di $Y$",
+      "$X$ arriva prima di $W$"
+    ],
+    spiegazione: "I vincoli impongono: $W < X$, $Y < Z$, $W < Z$. Una configurazione valida è $(Y, W, X, Z)$ in cui $Y$ arriva 1°, $W$ 2°, $X$ 3°, $Z$ 4° (rispetta tutti i vincoli: $W<X, Y<Z, W<Z$). Dunque l’affermazione «$Y$ vince la gara» PUÒ essere vera. Al contrario: $X$ non può essere 1° (perché $W < X$); $Z$ non può precedere $W$ né $Y$ (violerebbe i vincoli); $X$ non può precedere $W$.",
+    fonte: "Lotto L3 del progetto — L3-22 (ID 759)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 760,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro scatole chiuse (numerate 1, 2, 3, 4) contengono ciascuna una pallina di colore diverso: Rossa ($R$), Verde ($V$), Blu ($B$), Gialla ($G$). Si sa che:\n1. La pallina Rossa si trova nella scatola 1 oppure nella scatola 2;\n2. La pallina Verde si trova in una scatola con numero maggiore rispetto a quella della pallina Blu ($\\text{scatola}(V) > \\text{scatola}(B)$);\n3. La pallina Gialla si trova nella scatola 4.\nQuale delle seguenti affermazioni NON PUÒ in nessun caso essere vera?",
+    rispostaCorretta: "La pallina Verde si trova nella scatola 1",
+    risposteErrate: [
+      "La pallina Blu si trova nella scatola 1",
+      "La pallina Rossa si trova nella scatola 1",
+      "La pallina Rossa si trova nella scatola 2",
+      "La pallina Verde si trova nella scatola 3"
+    ],
+    spiegazione: "La scatola 4 contiene la pallina Gialla. Le scatole 1, 2, 3 ospitano le palline Rossa, Blu, Verde. Poiché la pallina Verde deve trovarsi in una scatola con indice maggiore di quella Blu ($\\text{scatola}(V) > \\text{scatola}(B)$), la scatola 1 non può in nessun caso contenere la pallina Verde (non esisterebbe alcuna scatola con numero inferiore a 1 per la Blu). Dunque l’affermazione «La pallina Verde si trova nella scatola 1» è categoricamente impossibile.",
+    fonte: "Lotto L3 del progetto — L3-23 (ID 760)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 761,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un concorso per un singolo posto di lavoro sono in lizza tre candidati ($P, Q, R$). Valgono le seguenti regole:\n1. Se viene assunto $P$, allora $Q$ non viene assunto ($P \\to \\neg Q$);\n2. Se $Q$ non viene assunto, allora viene assunto $R$ ($\\neg Q \\to R$);\n3. Viene assunto esattamente un solo candidato.\nSi appura ufficialmente che il candidato $R$ NON è stato assunto ($\\neg R$). Quale conclusione segue con assoluta certezza logica?",
+    rispostaCorretta: "Il candidato $Q$ è stato assunto e il candidato $P$ non è stato assunto",
+    risposteErrate: [
+      "Il candidato $P$ è stato assunto",
+      "Nessun candidato è stato assunto",
+      "Sono stati assunti sia $P$ sia $Q$",
+      "Non è possibile stabilire se sia stato assunto $P$ o $Q$"
+    ],
+    spiegazione: "Dato che $\\neg R$ è vero: per contronominale della regola 2 ($R$ falso $\\implies \\neg Q$ falso), ne deduciamo con certezza che $Q$ è stato assunto. Poiché il posto disponibile è esattamente uno (regola 3), l’assunzione di $Q$ implica che nessun altro può essere assunto, quindi $P$ non è stato assunto. L’esito certo è: $Q$ assunto e $P$ non assunto.",
+    fonte: "Lotto L3 del progetto — L3-24 (ID 761)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 762,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Un menu degustazione deve essere composto selezionando esattamente tre portate distinte da una lista di cinque piatti ($A, B, C, D, E$). Valgono le seguenti regole dello chef:\n1. Non è consentito inserire contemporaneamente i piatti $A$ e $B$ nella stessa ordinazione ($\\neg(A \\land B)$);\n2. La scelta del piatto $C$ comporta obbligatoriamente la scelta del piatto $D$ ($C \\to D$);\n3. La scelta del piatto $E$ impone di inserire obbligatoriamente SIA il piatto $A$ SIA il piatto $B$ ($E \\to (A \\land B)$).\nQuale piatto è CATEGORICAMENTE ESCLUSO da qualsiasi menu valido?",
+    rispostaCorretta: "Il piatto $E$",
+    risposteErrate: [
+      "Il piatto $A$",
+      "Il piatto $B$",
+      "Il piatto $C$",
+      "Il piatto $D$"
+    ],
+    spiegazione: "Se si includesse il piatto $E$, per la regola 3 si dovrebbero includere obbligatoriamente sia $A$ sia $B$. Ma la regola 1 vieta categoricamente la compresenza di $A$ e $B$. Di conseguenza, l’inclusione di $E$ genera una contraddizione logica insanabile con la regola 1 (per contronominale, $\\neg(A \\land B) \\to \\neg E$). Il piatto $E$ non può quindi fare parte di nessun menu valido.",
+    fonte: "Lotto L3 del progetto — L3-25 (ID 762)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 763,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Un prezioso documento è custodito in uno solo tra tre forzieri (Oro, Argento, Bronzo). Su ciascun forziere è incisa una frase:\n- Forziere d’Oro: «Il documento è in questo forziere»;\n- Forziere d’Argento: «Il documento non è in questo forziere»;\n- Forziere di Bronzo: «Il documento non è nel forziere d’Oro».\nSi sa per certo che ESATTAMENTE UNA delle tre frasi è VERA, mentre le altre due sono FALSE. In quale forziere si trova il documento?",
+    rispostaCorretta: "Nel forziere d’Argento",
+    risposteErrate: [
+      "Nel forziere d’Oro",
+      "Nel forziere di Bronzo",
+      "In nessuno dei tre forzieri",
+      "Il problema ammette due soluzioni diverse"
+    ],
+    spiegazione: "Analizziamo i tre casi possibili: 1) Se il documento è nell’Oro: Oro dice il VERO, Argento dice il VERO (non è in Argento), Bronzo dice il FALSO (ci sarebbero 2 frasi vere: incompatibile con l’ipotesi). 2) Se il documento è nel Bronzo: Oro dice il FALSO, Argento dice il VERO (non è in Argento), Bronzo dice il VERO (non è in Oro) (ci sarebbero 2 frasi vere: incompatibile). 3) Se il documento è nell’Argento: Oro dice il FALSO, Argento dice il FALSO (è in Argento), Bronzo dice il VERO (non è in Oro). In questo caso vi è esattamente 1 frase vera (quella del Bronzo) e 2 false. Il documento si trova quindi necessariamente nel forziere d’Argento.",
+    fonte: "Lotto L3 del progetto — L3-26 (ID 763)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 764,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Tre sospettati ($A, B, C$) vengono interrogati su un reato commesso da uno solo di loro. Ciascuno rilascia una sola dichiarazione:\n- $A$ dichiara: «Il colpevole è $B$»;\n- $B$ dichiara: «Io non sono il colpevole»;\n- $C$ dichiara: «Il colpevole non è $A$».\nSi sa che ESATTAMENTE UNA dichiarazione è VERA e DUE sono FALSE. Chi è il colpevole del reato?",
+    rispostaCorretta: "$A$",
+    risposteErrate: [
+      "$B$",
+      "$C$",
+      "Nessuno dei tre",
+      "Non è possibile individuare il colpevole con certezza"
+    ],
+    spiegazione: "Valutiamo i tre scenari: 1) Se il colpevole è $A$: la dichiarazione di $A$ è FALSA ($B$ non è colpevole); la dichiarazione di $B$ è VERA ($B$ non è colpevole); la dichiarazione di $C$ è FALSA ($C$ dice che non è $A$). In questo caso abbiamo esattamente 1 VERA ($B$) e 2 FALSE ($A$ e $C$), coerente con le premesse. 2) Se il colpevole è $B$: $A$ è VERA, $B$ è FALSA, $C$ è VERA (2 vere). 3) Se il colpevole è $C$: $A$ è FALSA, $B$ è VERA, $C$ è VERA (2 vere). L’unico caso con una sola dichiarazione vera si verifica quando il colpevole è $A$.",
+    fonte: "Lotto L3 del progetto — L3-27 (ID 764)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 765,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Un sistema di sicurezza informatica assegna due livelli di privilegio in base alle credenziali possedute:\n- Livello Super: concesso se e solo se l’utente possiede contemporaneamente sia il Badge ($B$) sia il PIN ($P$) ($B \\land P$);\n- Livello Base: concesso se l’utente possiede o il Badge ($B$) o il Token ($T$) (disgiunzione inclusiva $B \\lor T$).\nUn utente NON possiede il Badge ($\\neg B$), ma possiede regolarmente sia il Token ($T$) sia il PIN ($P$). A quale livello di accesso è ammesso questo utente?",
+    rispostaCorretta: "Soltanto al livello Base (non al livello Super)",
+    risposteErrate: [
+      "A entrambi i livelli (sia Super sia Base)",
+      "A nessun livello di accesso",
+      "Soltanto al livello Super",
+      "Non è possibile stabilirlo senza conoscere la validità del Token"
+    ],
+    spiegazione: "Verifichiamo le due condizioni logiche con i dati dell’utente ($B=0, P=1, T=1$): 1) Livello Super: $B \\land P = 0 \\land 1 = 0$ (FALSO, accesso negato). 2) Livello Base: $B \\lor T = 0 \\lor 1 = 1$ (VERO, accesso concesso). Dunque l’utente ottiene l’accesso esclusivamente al livello Base.",
+    fonte: "Lotto L3 del progetto — L3-28 (ID 765)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 766,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Un circuito logico di controllo è regolato dallo stato di tre interruttori ($I_1, I_2, I_3$), ciascuno dei quali può essere impostato su ON (1) oppure su OFF (0). Valgono le seguenti regole di dipendenza:\n1. Se $I_1$ è impostato su ON, allora $I_2$ è impostato su OFF ($I_1 = 1 \\to I_2 = 0$);\n2. Se $I_2$ è impostato su OFF, allora $I_3$ è impostato su ON ($I_2 = 0 \\to I_3 = 1$);\n3. Dai sensori di monitoraggio risulta che $I_3$ è impostato su OFF ($I_3 = 0$).\nQual è lo stato certo degli interruttori $I_1$ e $I_2$?",
+    rispostaCorretta: "$I_1 = \\text{OFF}$ e $I_2 = \\text{ON}$",
+    risposteErrate: [
+      "$I_1 = \\text{ON}$ e $I_2 = \\text{OFF}$",
+      "$I_1 = \\text{ON}$ e $I_2 = \\text{ON}$",
+      "$I_1 = \\text{OFF}$ e $I_2 = \\text{OFF}$",
+      "Lo stato di $I_1$ è indeterminato"
+    ],
+    spiegazione: "Procediamo a ritroso tramite Modus Tollens (contronominali): 1) Dal dato certo $I_3 = 0$ e dalla regola 2 ($I_2 = 0 \\to I_3 = 1$), per contronominale ($I_3 = 0 \\to I_2 = 1$) otteniamo $I_2 = 1$ (ON). 2) Dalla regola 1 ($I_1 = 1 \\to I_2 = 0$), per contronominale ($I_2 = 1 \\to I_1 = 0$) otteniamo $I_1 = 0$ (OFF). Lo stato dedotto con necessità logica è dunque $I_1 = \\text{OFF}$ e $I_2 = \\text{ON}$.",
+    fonte: "Lotto L3 del progetto — L3-29 (ID 766)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 767,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro professionisti — Aldo, Bruno, Carlo e Dario — svolgono quattro professioni diverse tra Medico, Avvocato, Ingegnere e Architetto (una professione ciascuno). Si conoscono le seguenti informazioni certe:\n1. Il Medico e l’Ingegnere abitano entrambi nello stesso stabile di Aldo (il quale ha una professione diversa da entrambi);\n2. Bruno NON è né l’Avvocato né l’Ingegnere;\n3. Carlo è l’Architetto.\nQual è la professione svolta da Aldo?",
+    rispostaCorretta: "L’Avvocato",
+    risposteErrate: [
+      "Il Medico",
+      "L’Ingegnere",
+      "L’Architetto",
+      "La professione di Aldo non è determinabile"
+    ],
+    spiegazione: "Dalla premessa 1, Aldo non è né il Medico né l’Ingegnere. Dalla premessa 3, l’Architetto è Carlo, quindi Aldo non è l’Architetto. L’unica professione rimasta disponibile per Aldo è l’Avvocato. Di conseguenza, Aldo è con certezza assoluta l’Avvocato (e ne segue che Bruno è il Medico e Dario è l’Ingegnere).",
+    fonte: "Lotto L3 del progetto — L3-30 (ID 767)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 768,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Cinque lezioni universitarie ($L_1, L_2, L_3, L_4, L_5$) devono essere collocate nei giorni feriali dal Lunedì al Venerdì (esattamente una lezione al giorno). Sono stabiliti i seguenti vincoli di calendario:\n1. La lezione $L_3$ si tiene di Lunedì;\n2. La lezione $L_2$ si tiene di Mercoledì;\n3. La lezione $L_5$ si tiene nel giorno immediatamente successivo a quello della lezione $L_4$;\n4. La lezione $L_1$ si tiene prima della lezione $L_4$.\nIn quale giorno della settimana DEVE tenersi la lezione $L_5$?",
+    rispostaCorretta: "Venerdì",
+    risposteErrate: [
+      "Martedì",
+      "Mercoledì",
+      "Giovedì",
+      "Indifferentemente Martedì o Venerdì"
+    ],
+    spiegazione: "I giorni Lunedì e Mercoledì sono occupati rispettivamente da $L_3$ e $L_2$. I giorni liberi sono Martedì, Giovedì, Venerdì. Le lezioni $L_4$ e $L_5$ devono tenersi in due giorni consecutivi (vincolo 3): l’unica coppia di giorni consecutivi liberi nel calendario è (Giovedì, Venerdì), quindi $L_4$ è Giovedì e $L_5$ è Venerdì. Il Martedì rimane assegnato a $L_1$ (che precede $L_4$, soddisfacendo anche il vincolo 4). La lezione $L_5$ si tiene quindi necessariamente di Venerdì.",
+    fonte: "Lotto L3 del progetto — L3-31 (ID 768)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 769,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro apparecchiature industriali ($M_A, M_B, M_C, M_D$) vengono sottoposte a revisione in quattro turni sequenziali numerati da 1 a 4. Valgono le seguenti condizioni:\n1. L’apparecchiatura $M_A$ viene revisionata prima di $M_B$ ($\\text{turno}(M_A) < \\text{turno}(M_B)$);\n2. L’apparecchiatura $M_B$ viene revisionata prima di $M_C$ ($\\text{turno}(M_B) < \\text{turno}(M_C)$);\n3. Tra il turno di $M_A$ e il turno di $M_C$ trascorrono esattamente due turni intermedi (ossia: $\\text{turno}(M_C) - \\text{turno}(M_A) = 3$).\nQuale apparecchiatura DEVE essere revisionata al 4° turno?",
+    rispostaCorretta: "$M_C$",
+    risposteErrate: [
+      "$M_A$",
+      "$M_B$",
+      "$M_D$",
+      "Non è possibile stabilirlo univocamente"
+    ],
+    spiegazione: "Poiché i turni sono quattro (1, 2, 3, 4) e la differenza tra il turno di $M_C$ e quello di $M_A$ è esattamente pari a 3 con $M_A < M_C$, l’unica combinazione numerica possibile è $\\text{turno}(M_A) = 1$ e $\\text{turno}(M_C) = 4$. Al 4° turno deve quindi trovarsi necessariamente l’apparecchiatura $M_C$.",
+    fonte: "Lotto L3 del progetto — L3-32 (ID 769)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 770,
+    materia: "Logica",
+    difficolta: "medio-difficile",
+    domanda: "Un processore esegue cinque processi distinti ($T_1, T_2, T_3, T_4, T_5$) in cinque cicli temporali successivi ($t_1, t_2, t_3, t_4, t_5$, un processo per ciclo). Sono imposti i seguenti vincoli di precedenza e allocazione:\n1. Il processo $T_1$ deve essere completato prima dell’inizio di $T_2$ ($t(T_1) < t(T_2)$);\n2. Il processo $T_2$ deve essere completato prima dell’inizio di $T_3$ ($t(T_2) < t(T_3)$);\n3. Il processo $T_4$ è allocato al ciclo $t_2$;\n4. Il processo $T_5$ NON può essere eseguito né al ciclo $t_1$ né al ciclo $t_5$.\nQuale processo DEVE essere eseguito al ciclo $t_5$?",
+    rispostaCorretta: "$T_3$",
+    risposteErrate: [
+      "$T_1$",
+      "$T_2$",
+      "$T_4$",
+      "$T_5$"
+    ],
+    spiegazione: "Analizziamo i 5 slot ($t_1, t_2, t_3, t_4, t_5$): il ciclo $t_2$ è occupato da $T_4$. Restano i quattro slot ${t_1, t_3, t_4, t_5}$ per i processi $T_1, T_2, T_3, T_5$. Dal vincolo 4, $T_5$ non può stare in $t_1$ né in $t_5$, quindi $T_5$ deve necessariamente occupare uno tra $t_3$ o $t_4$. I tre slot rimanenti sono quindi occupati dalla catena d’ordine $T_1 < T_2 < T_3$. Tra questi slot, il ciclo con indice temporale più alto è $t_5$ e quello con indice più basso è $t_1$. Poiché $T_3$ è l’elemento terminale della catena $T_1 < T_2 < T_3$ e $T_5$ non può occupare $t_5$, il ciclo $t_5$ deve essere assegnato con necessità assoluta al processo $T_3$.",
+    fonte: "Lotto L3 del progetto — L3-33 (ID 770)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 771,
+    materia: "Logica",
+    difficolta: "medio-facile",
+    domanda: "Una navetta automatizzata effettua un percorso unidirezionale che tocca quattro fermate ($F_1, F_2, F_3, F_4$). Valgono le seguenti regole:\n1. La partenza avviene dalla fermata $F_1$ (1ª fermata della sequenza);\n2. Il capolinea finale è la fermata $F_4$ (4ª fermata della sequenza);\n3. La fermata $F_2$ precede immediatamente la fermata $F_3$.\nQual è la sequenza esatta delle quattro fermate effettuate dalla navetta?",
+    rispostaCorretta: "$F_1 \\to F_2 \\to F_3 \\to F_4$",
+    risposteErrate: [
+      "$F_1 \\to F_3 \\to F_2 \\to F_4$",
+      "$F_2 \\to F_3 \\to F_1 \\to F_4$",
+      "$F_1 \\to F_4 \\to F_2 \\to F_3$",
+      "$F_4 \\to F_3 \\to F_2 \\to F_1$"
+    ],
+    spiegazione: "La 1ª posizione è $F_1$ e la 4ª posizione è $F_4$. Restano le posizioni 2 e 3. Poiché $F_2$ precede immediatamente $F_3$, la 2ª posizione deve essere $F_2$ e la 3ª posizione deve essere $F_3$. La sequenza completa e univoca è dunque $F_1 \\to F_2 \\to F_3 \\to F_4$.",
+    fonte: "Lotto L3 del progetto — L3-34 (ID 771)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 772,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro sessioni di lavoro ($S_A, S_B, S_C, S_D$) sono ripartite nella giornata in quattro slot: due al Mattino (slot 1 e slot 2) e due al Pomeriggio (slot 3 e slot 4). Valgono le seguenti regole:\n1. La sessione $S_A$ deve tenersi al Mattino;\n2. La sessione $S_B$ si tiene nello slot immediatamente precedente a quello di $S_C$ (ossia: $\\text{slot}(S_C) = \\text{slot}(S_B) + 1$);\n3. La sessione $S_D$ è collocata nello slot 4 (fine pomeriggio).\nIn quale slot DEVE tenersi la sessione $S_A$?",
+    rispostaCorretta: "Nello slot 1",
+    risposteErrate: [
+      "Nello slot 2",
+      "Nello slot 3",
+      "Nello slot 4",
+      "Indifferentemente nello slot 1 o nello slot 2"
+    ],
+    spiegazione: "Lo slot 4 è occupato da $S_D$. Restano liberi gli slot 1, 2, 3. La coppia consecutiva $(S_B, S_C)$ può occupare gli slot ${1, 2}$ oppure ${2, 3}$. Se occupasse gli slot ${1, 2}$, la sessione $S_A$ rimarrebbe nello slot 3 (Pomeriggio), violando il vincolo 1 che impone che $S_A$ sia al Mattino (slot 1 o 2). Di conseguenza, la coppia $(S_B, S_C)$ deve occupare necessariamente gli slot ${2, 3}$, lasciando lo slot 1 (Mattino) alla sessione $S_A$.",
+    fonte: "Lotto L3 del progetto — L3-35 (ID 772)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 773,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Tre colleghi ($P, Q, R$) lavorano in tre reparti diversi (Vendite, IT, Amministrazione) in tre città diverse (Roma, Milano, Napoli). Si conoscono le seguenti informazioni biunivoche:\n1. $P$ lavora nella sede di Milano;\n2. Il dipendente del reparto IT lavora nella sede di Roma;\n3. $Q$ lavora nel reparto Amministrazione.\nIn quale città lavora $Q$ e in quale reparto lavora $P$?",
+    rispostaCorretta: "$Q$ lavora a Napoli e $P$ lavora alle Vendite",
+    risposteErrate: [
+      "$Q$ lavora a Roma e $P$ lavora all’IT",
+      "$Q$ lavora a Milano e $P$ lavora all’Amministrazione",
+      "$Q$ lavora a Napoli e $P$ lavora all’IT",
+      "$Q$ lavora a Roma e $P$ lavora alle Vendite"
+    ],
+    spiegazione: "Analizziamo gli incroci: la sede IT è a Roma (premessa 2). Poiché $P$ è a Milano (premessa 1), $P$ non lavora all’IT. Poiché $Q$ è all’Amministrazione (premessa 3), neanche $Q$ lavora all’IT. Dunque all’IT a Roma lavora necessariamente $R$. Restano le sedi di Milano e Napoli per $P$ e $Q$: $P$ è a Milano, quindi $Q$ è a Napoli (all’Amministrazione). A Milano, per esclusione, $P$ lavora al reparto Vendite. L’abbinamento corretto è: $Q$ a Napoli e $P$ alle Vendite.",
+    fonte: "Lotto L3 del progetto — L3-36 (ID 773)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 774,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In uno studio microbiologico su quattro ceppi batterici ($C_1, C_2, C_3, C_4$) e quattro sostanze antibatteriche ($A_1, A_2, A_3, A_4$), sono state accertate le seguenti proprietà:\n1. Il ceppo $C_1$ è resistente esclusivamente alla sostanza $A_1$;\n2. Il ceppo $C_2$ è resistente esattamente alle sostanze $A_2$ e $A_3$;\n3. Il ceppo $C_3$ è resistente a tutte le sostanze a cui è resistente $C_2$, più alla sostanza $A_4$ (e a nessun’altra);\n4. Il ceppo $C_4$ non resiste alla sostanza $A_4$.\nA quale combinazione esatta di sostanze è resistente il ceppo $C_3$?",
+    rispostaCorretta: "Alle sostanze $A_2, A_3, A_4$",
+    risposteErrate: [
+      "Alle sostanze $A_1, A_2, A_3$",
+      "Esclusivamente alla sostanza $A_4$",
+      "A tutte e quattro le sostanze ($A_1, A_2, A_3, A_4$)",
+      "Alle sostanze $A_1, A_4$"
+    ],
+    spiegazione: "Dalla premessa 2, il ceppo $C_2$ è resistente ad $A_2$ e $A_3$. Dalla premessa 3, il ceppo $C_3$ eredita tutte le resistenze di $C_2$ (quindi $A_2$ e $A_3$) con l’aggiunta specifica di $A_4$, senza ulteriori resistenze. Il ceppo $C_3$ è quindi resistente esattamente alla terna ${A_2, A_3, A_4}$.",
+    fonte: "Lotto L3 del progetto — L3-37 (ID 774)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 775,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro squadre ($A, B, C, D$) disputano un torneo a girone all’italiana (ogni squadra affronta tutte le altre esattamente una volta, per un totale di 3 partite a squadra). Il punteggio assegna: 3 punti per la vittoria, 1 punto per il pareggio, 0 punti per la sconfitta. Al termine del torneo:\n- La squadra $A$ ha ottenuto 9 punti;\n- La squadra $B$ ha ottenuto 4 punti;\n- La squadra $C$ ha ottenuto 4 punti.\nQuanti punti ha totalizzato la squadra $D$?",
+    rispostaCorretta: "0 punti",
+    risposteErrate: [
+      "1 punto",
+      "2 punti",
+      "3 punti",
+      "Non è possibile stabilirlo senza conoscere i gol segnati"
+    ],
+    spiegazione: "Poiché la squadra $A$ ha 9 punti su 3 partite, ha vinto tutte le sue partite, sconfiggendo $B, C, D$. La squadra $B$ ha perso contro $A$ (0 pt); per totalizzare 4 punti nelle restanti 2 partite (contro $C$ e $D$), $B$ deve aver ottenuto 1 vittoria e 1 pareggio. Analogamente, la squadra $C$ ha perso contro $A$ (0 pt) e deve aver ottenuto 1 vittoria e 1 pareggio contro $B$ e $D$. L’unico pareggio possibile per entrambe è lo scontro diretto tra $B$ e $C$ (1 pt ciascuna). Ne segue che sia $B$ sia $C$ hanno vinto contro $D$. La squadra $D$ ha quindi perso tutte le 3 partite (contro $A$, contro $B$ e contro $C$), totalizzando esattamente 0 punti.",
+    fonte: "Lotto L3 del progetto — L3-38 (ID 775)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 776,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Tre database aziendali ($D_A, D_B, D_C$) vengono allocati su tre server distinti aventi capacità di memoria RAM rispettivamente di 8 GB, 16 GB e 32 GB. Valgono le seguenti informazioni:\n1. Il database $D_A$ richiede una quantità di memoria RAM strettamente maggiore rispetto a $D_B$ ($\\text{RAM}(D_A) > \\text{RAM}(D_B)$);\n2. Il database $D_C$ è allocato sul server con 16 GB di RAM.\nQuale server con specifica capacità di RAM DEVE essere assegnato al database $D_A$?",
+    rispostaCorretta: "Il server da 32 GB",
+    risposteErrate: [
+      "Il server da 8 GB",
+      "Il server da 16 GB",
+      "Indifferentemente il server da 16 GB o da 32 GB",
+      "L’assegnazione non è determinabile univocamente"
+    ],
+    spiegazione: "Il server da 16 GB è assegnato a $D_C$. Restano disponibili i due server da 8 GB e da 32 GB per i database $D_A$ e $D_B$. Poiché il vincolo 1 impone $\\text{RAM}(D_A) > \\text{RAM}(D_B)$, al database $D_A$ deve essere assegnato necessariamente il server di capacità superiore, ossia quello da 32 GB (mentre a $D_B$ andrà quello da 8 GB).",
+    fonte: "Lotto L3 del progetto — L3-39 (ID 776)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 777,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un impianto automatizzato tre sensori diagnostici ($S_1, S_2, S_3$) possono trovarsi nello stato Funzionante ($F$) oppure Guasto ($G$). Valgono le seguenti regole di dipendenza logica:\n1. Se $S_1$ è Guasto, allora $S_2$ è Funzionante ($S_1 = G \\to S_2 = F$);\n2. Se $S_2$ è Funzionante, allora $S_3$ è Guasto ($S_2 = F \\to S_3 = G$);\n3. Dalla telemetria risulta con certezza che $S_3$ è Funzionante ($S_3 = F$).\nQual è lo stato certo del sensore $S_1$?",
+    rispostaCorretta: "$S_1$ è Funzionante",
+    risposteErrate: [
+      "$S_1$ è Guasto",
+      "$S_1$ è in standby non diagnosticabile",
+      "Lo stato di $S_1$ dipende dallo stato di alimentazione ausiliaria",
+      "Nessuna conclusione è deducibile per $S_1$"
+    ],
+    spiegazione: "Dato $S_3 = F$ (non guasto): applicando il Modus Tollens alla regola 2 ($S_2 = F \\to S_3 = G$), per contronominale ($S_3 = F \\to S_2 = G$) otteniamo che $S_2$ è Guasto. Applicando nuovamente il Modus Tollens alla regola 1 ($S_1 = G \\to S_2 = F$), per contronominale ($S_2 = G \\to S_1 = F$) deduciamo con certezza che $S_1$ è Funzionante.",
+    fonte: "Lotto L3 del progetto — L3-40 (ID 777)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 778,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Una condotta idraulica è dotata di quattro valvole automatizzate ($V_1, V_2, V_3, V_4$), ciascuna delle quali può essere Aperta ($A$) o Chiusa ($C$). Il sistema opera secondo le seguenti regole di propagazione:\n1. L’apertura della valvola $V_1$ causa la chiusura della valvola $V_2$ ($V_1 = A \\to V_2 = C$);\n2. La chiusura della valvola $V_2$ causa l’apertura della valvola $V_3$ ($V_2 = C \\to V_3 = A$);\n3. L’apertura della valvola $V_3$ causa la chiusura della valvola $V_4$ ($V_3 = A \\to V_4 = C$).\nSapendo che la valvola $V_1$ viene Aperta ($V_1 = A$), quale configurazione finale assumono con certezza le altre tre valvole?",
+    rispostaCorretta: "$V_2 = C$, $V_3 = A$, $V_4 = C$",
+    risposteErrate: [
+      "$V_2 = A$, $V_3 = C$, $V_4 = A$",
+      "$V_2 = C$, $V_3 = C$, $V_4 = C$",
+      "$V_2 = A$, $V_3 = A$, $V_4 = A$",
+      "$V_2 = C$, $V_3 = A$, $V_4 = A$"
+    ],
+    spiegazione: "Seguiamo la catena causale passo per passo: 1) $V_1 = A \\implies$ per la regola 1 si ha $V_2 = C$; 2) $V_2 = C \\implies$ per la regola 2 si ha $V_3 = A$; 3) $V_3 = A \\implies$ per la regola 3 si ha $V_4 = C$. La terna di stati conseguente è quindi rigorosamente: $V_2 = C$, $V_3 = A$, $V_4 = C$.",
+    fonte: "Lotto L3 del progetto — L3-41 (ID 778)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 779,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un sistema di autorizzazioni aziendali vigono le seguenti definizioni formali:\n1. Il profilo «Amministratore» garantisce sia il permesso di Scrittura sia il permesso di Lettura;\n2. Il profilo «Redattore» garantisce sia il permesso di Scrittura sia il permesso di Lettura, ma esclude il permesso di Cancellazione;\n3. L’utente Mario possiede il permesso di Scrittura, ma NON possiede il permesso di Lettura.\nQuale conclusione segue con necessità logica assoluta?",
+    rispostaCorretta: "Mario non può possedere né il profilo Amministratore né il profilo Redattore",
+    risposteErrate: [
+      "Mario possiede sicuramente il profilo Redattore",
+      "Mario possiede sicuramente il profilo Amministratore",
+      "Mario possiede sicuramente il permesso di Cancellazione",
+      "La configurazione dei permessi di Mario è contraddittoria con il sistema"
+    ],
+    spiegazione: "Sia il profilo Amministratore sia il profilo Redattore richiedono come condizione necessaria il possesso del permesso di Lettura. Poiché Mario è privo del permesso di Lettura, per Modus Tollens non può essere associato a nessuno dei due profili.",
+    fonte: "Lotto L3 del progetto — L3-42 (ID 779)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 780,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Un workflow di collaudo software prevede quattro fasi sequenziali ($F_1, F_2, F_3, F_4$). Le regole di transizione stabiliscono che:\n1. La fase $F_2$ viene eseguita solo se $F_1$ ha avuto esito Positivo ($F_1 = P$);\n2. La fase $F_3$ viene eseguita solo se $F_2$ ha avuto esito Positivo ($F_2 = P$);\n3. La fase $F_4$ viene eseguita solo se $F_3$ ha avuto esito Positivo ($F_3 = P$).\nSi appura che un test ha raggiunto ed eseguito con successo la fase finale $F_4$. Cosa si può dedurre con certezza?",
+    rispostaCorretta: "Le fasi $F_1, F_2, F_3$ hanno avuto tutte esito Positivo",
+    risposteErrate: [
+      "Almeno una tra $F_1$ o $F_2$ ha avuto esito Negativo",
+      "Solo la fase $F_3$ ha avuto esito Positivo",
+      "La fase $F_1$ è stata saltata per override di sistema",
+      "Non è possibile determinare l’esito della fase $F_1$"
+    ],
+    spiegazione: "Per raggiungere la fase $F_4$ è necessario che $F_3$ sia stata positiva. Per aver eseguito $F_3$ è necessario che $F_2$ sia stata positiva. Per aver eseguito $F_2$ è necessario che $F_1$ sia stata positiva. Dunque l’esecuzione della fase finale $F_4$ garantisce con certezza assoluta che tutte le fasi propedeutiche $F_1, F_2, F_3$ hanno registrato esito Positivo.",
+    fonte: "Lotto L3 del progetto — L3-43 (ID 780)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 781,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro veicoli ($A, B, C, D$) giungono contemporaneamente a un incrocio regolato da diritti di precedenza relativi. Valgono i seguenti vincoli:\n1. Il veicolo $A$ deve dare la precedenza al veicolo $B$ (transita dopo $B$, $B \\prec A$);\n2. Il veicolo $B$ deve dare la precedenza al veicolo $C$ ($C \\prec B$);\n3. Il veicolo $C$ ha la destra libera e transita per primo;\n4. Il veicolo $D$ transita per ultimo dopo che tutti gli altri veicoli hanno liberato l’incrocio.\nQual è l’ordine esatto e univoco di transito dei quattro veicoli?",
+    rispostaCorretta: "$C \\to B \\to A \\to D$",
+    risposteErrate: [
+      "$B \\to C \\to A \\to D$",
+      "$C \\to A \\to B \\to D$",
+      "$A \\to B \\to C \\to D$",
+      "$D \\to C \\to B \\to A$"
+    ],
+    spiegazione: "Concatenando i vincoli: $C$ è il primo (1° posto). $B$ transita dopo $C$ ma prima di $A$ (poiché $C \\prec B \\prec A$). Dunque $B$ è al 2° posto e $A$ al 3° posto. $D$ transita per ultimo (4° posto). L’ordine completo e privo di ambiguità è $C \\to B \\to A \\to D$.",
+    fonte: "Lotto L3 del progetto — L3-44 (ID 781)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 782,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Un protocollo di firma crittografica multifattoriale impiega tre chiavi ($K_1, K_2, K_3$). La transazione viene autorizzata se e solo se risultano valide contemporaneamente almeno due chiavi su tre. Si verifica la seguente situazione:\n1. La chiave $K_1$ risulta revocata e non valida;\n2. Le chiavi $K_2$ e $K_3$ risultano entrambe perfettamente integre e valide.\nQual è l’esito formale dell’operazione?",
+    rispostaCorretta: "La transazione viene autorizzata grazie alla congiunzione valida di $K_2$ e $K_3$",
+    risposteErrate: [
+      "La transazione viene respinta perché è richiesta la validità di tutte e tre le chiavi",
+      "La transazione viene respinta a causa della revoca di $K_1$",
+      "La transazione viene congelata in attesa del ripristino di $K_1$",
+      "La transazione viene autorizzata con un livello di sicurezza nullo"
+    ],
+    spiegazione: "La condizione necessaria e sufficiente per l’autorizzazione è avere almeno 2 chiavi valide tra ${K_1, K_2, K_3}$. Con $K_1 = 0, K_2 = 1, K_3 = 1$, il numero di chiavi valide è esattamente 2 (pari alla soglia minima richiesta). La transazione viene quindi regolarmente e pienamente autorizzata.",
+    fonte: "Lotto L3 del progetto — L3-45 (ID 782)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 783,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quattro persone ($A, B, C, D$) siedono attorno a un tavolo quadrato avente quattro posti numerati da 1 a 4 in senso orario (il posto 1 è opposto al posto 3, il posto 2 è opposto al posto 4). Valgono i seguenti vincoli di seduta:\n1. La persona $A$ siede al posto 1;\n2. La persona $B$ siede di fronte ad $A$ (al posto 3);\n3. La persona $C$ siede a destra di $A$ (al posto 2 in senso orario).\nIn quale posizione siede la persona $D$?",
+    rispostaCorretta: "Al posto 4 (a sinistra di $A$ e di fronte a $C$)",
+    risposteErrate: [
+      "Al posto 2 (a destra di $A$)",
+      "Al posto 3 (di fronte ad $A$)",
+      "Al posto 1 (accanto ad $A$)",
+      "La posizione di $D$ non è univoca"
+    ],
+    spiegazione: "I posti 1, 2 e 3 sono già occupati rispettivamente da $A$, $C$ e $B$. L’unico posto rimasto per la persona $D$ è il posto 4. Nel tavolo circolare/quadrato, il posto 4 si trova a sinistra di $A$ e direttamente di fronte al posto 2 occupato da $C$.",
+    fonte: "Lotto L3 del progetto — L3-46 (ID 783)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 784,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Tre logici ($P_1, P_2, P_3$) sono disposti in fila indiana: $P_3$ vede i cappelli di $P_2$ e $P_1$; $P_2$ vede solo il cappello di $P_1$; $P_1$ non vede alcun cappello. I tre sanno che sono disponibili in totale 2 cappelli Neri e 3 cappelli Bianchi, e che ciascuno indossa uno di questi 5 cappelli. Viene chiesto nell’ordine:\n1. A $P_3$: «Sai di che colore è il tuo cappello?», e $P_3$ risponde: «No»;\n2. A $P_2$: «Sai di che colore è il tuo cappello?», e $P_2$ risponde: «No»;\n3. Viene quindi chiesto a $P_1$ il colore del proprio cappello.\nCosa può affermare con assoluta certezza logica $P_1$?",
+    rispostaCorretta: "«Il mio cappello è Bianco»",
+    risposteErrate: [
+      "«Il mio cappello è Nero»",
+      "«Non posso conoscere il colore del mio cappello»",
+      "«Il mio cappello ha lo stesso colore di quello di $P_3$»",
+      "«I cappelli di $P_1$ e $P_2$ sono entrambi Neri»"
+    ],
+    spiegazione: "Analisi di metaragionamento: 1) Se $P_3$ avesse visto due cappelli Neri davanti a sé (su $P_2$ e $P_1$), sapendo che i cappelli Neri totali sono solo 2, avrebbe dedotto che il proprio cappello era Bianco. Avendo risposto «No», $P_3$ rivela a tutti che la coppia $(P_1, P_2)$ NON è $(N, N)$. 2) $P_2$ ascolta la risposta di $P_3$ e sa che non possono essere entrambi Neri. Se $P_2$ vedesse un cappello Nero su $P_1$, dedurrebbe subito che il proprio deve essere Bianco. Avendo risposto «No», $P_2$ dimostra che $P_1$ non ha un cappello Nero. 3) $P_1$, ascoltando le due risposte, deduce con certezza logica assoluta che il proprio cappello è BIANCO.",
+    fonte: "Lotto L3 del progetto — L3-47 (ID 784)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 785,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Su una bilancia a due piatti vengono confrontate quattro sfere piene ($S_1, S_2, S_3, S_4$) aventi pesi incogniti. Si ottengono i seguenti esiti sperimentali certi:\n1. Prima pesata: la coppia $(S_1 + S_2)$ è in perfetto equilibrio con la coppia $(S_3 + S_4)$ (ossia: $S_1 + S_2 = S_3 + S_4$);\n2. Seconda pesata: la sfera $S_4$ è strettamente più pesante della sfera $S_1$ (ossia: $S_4 > S_1$).\nQuale relazione d’ordine tra i pesi delle sfere $S_2$ e $S_3$ DEVE essere necessariamente vera?",
+    rispostaCorretta: "$S_2$ è strettamente più pesante di $S_3$ ($S_2 > S_3$)",
+    risposteErrate: [
+      "$S_3$ è strettamente più pesante di $S_2$ ($S_3 > S_2$)",
+      "$S_2$ e $S_3$ hanno esattamente lo stesso peso ($S_2 = S_3$)",
+      "$S_1$ è più pesante di $S_2$",
+      "Non è possibile stabilire alcuna relazione tra $S_2$ e $S_3$"
+    ],
+    spiegazione: "Dall’uguaglianza della prima pesata: $S_1 + S_2 = S_3 + S_4 \\iff S_2 - S_3 = S_4 - S_1$. Dalla seconda pesata sappiamo che $S_4 > S_1$, il che implica che la quantità $(S_4 - S_1)$ è strettamente positiva ($S_4 - S_1 > 0$). Di conseguenza, anche $(S_2 - S_3)$ deve essere strettamente positiva ($S_2 - S_3 > 0$), da cui segue necessariamente $S_2 > S_3$.",
+    fonte: "Lotto L3 del progetto — L3-48 (ID 785)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 786,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Una rete di trasmissione dati è strutturata su cinque nodi ($N_1, N_2, N_3, N_4, N_5$) collegati da canali unidirezionali orientati:\n- Da $N_1$ partono canali verso $N_2$ e verso $N_3$;\n- Da $N_2$ parte un canale verso $N_4$;\n- Da $N_3$ parte un canale verso $N_4$;\n- Da $N_4$ parte un canale verso $N_5$.\nA causa di un guasto, il nodo $N_2$ è completamente bloccato e non può ricevere né trasmettere dati. Qual è l’UNICO percorso orientato ammissibile per trasmettere un pacchetto dati da $N_1$ a $N_5$?",
+    rispostaCorretta: "$N_1 \\to N_3 \\to N_4 \\to N_5$",
+    risposteErrate: [
+      "$N_1 \\to N_2 \\to N_4 \\to N_5$",
+      "$N_1 \\to N_4 \\to N_5$",
+      "$N_1 \\to N_3 \\to N_5$",
+      "Non esiste alcun percorso valido a causa del guasto"
+    ],
+    spiegazione: "I percorsi possibili da $N_1$ a $N_5$ nel grafo sono originariamente due: 1) $N_1 \\to N_2 \\to N_4 \\to N_5$; 2) $N_1 \\to N_3 \\to N_4 \\to N_5$. Essendo il nodo $N_2$ bloccato e inaccessibile, il primo percorso è interrotto. Il secondo percorso $N_1 \\to N_3 \\to N_4 \\to N_5$ non transita per $N_2$, rispetta tutti i collegamenti orientati esistenti e costituisce l’unico tragitto ammissibile.",
+    fonte: "Lotto L3 del progetto — L3-49 (ID 786)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 787,
+    materia: "Logica",
+    difficolta: "medio-difficile",
+    domanda: "Cinque ingegneri informatici ($A, B, C, D, E$) sviluppano cinque progetti software distinti ($P_1, P_2, P_3, P_4, P_5$), impiegando ciascuno un linguaggio di programmazione differente scelto tra Python, C++, Java, Rust e Go. Sono noti i seguenti vincoli di assegnazione biunivoca:\n1. L’ingegnere che programma in Rust lavora al progetto $P_3$;\n2. L’ingegnere $A$ programma in Python ed è assegnato al progetto $P_1$;\n3. L’ingegnere $B$ lavora al progetto $P_2$, ma NON programma né in Go né in Java;\n4. L’ingegnere $C$ programma in Java;\n5. L’ingegnere $D$ NON lavora al progetto $P_3$.\nIn quale linguaggio programma l’ingegnere $E$ e a quale progetto software è assegnato?",
+    rispostaCorretta: "L’ingegnere $E$ programma in Rust ed è assegnato al progetto $P_3$",
+    risposteErrate: [
+      "L’ingegnere $E$ programma in Go ed è assegnato al progetto $P_4$",
+      "L’ingegnere $E$ programma in C++ ed è assegnato al progetto $P_2$",
+      "L’ingegnere $E$ programma in Java ed è assegnato al progetto $P_5$",
+      "Non è possibile stabilire il linguaggio di $E$ senza conoscere l’assegnazione di $D$"
+    ],
+    spiegazione: "Procediamo con la deduzione completa a matrice: 1) $A$ è assegnato a $(P_1, \\text{Python})$ (vincolo 2). 2) $B$ è assegnato a $P_2$ (vincolo 3); per il linguaggio di $B$, escludiamo Python (di $A$), Java e Go (vietati dal vincolo 3), e Rust (poiché Rust è legato a $P_3$, vincolo 1): ne consegue che $B$ programma necessariamente in C++. 3) $C$ programma in Java (vincolo 4), quindi non può essere su $P_3$ (che richiede Rust). 4) Dobbiamo assegnare la coppia $(P_3, \\text{Rust})$ a uno tra gli ingegneri rimasti ($D$ o $E$). Poiché il vincolo 5 stabilisce esplicitamente che $D$ non lavora a $P_3$, l’assegnazione della coppia $(P_3, \\text{Rust})$ spetta con assoluta necessità logica all’ingegnere $E$.",
+    fonte: "Lotto L3 del progetto — L3-50 (ID 787)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  }
 ];
 
 export default questionBank;

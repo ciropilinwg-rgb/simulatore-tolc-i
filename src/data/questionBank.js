@@ -13694,6 +13694,943 @@ const questionBank = [
     numeroRisposteCorrette: 0,
     numeroRisposteErrate: 0
   }
+,
+  {
+    id: 788,
+    materia: "Logica",
+    difficolta: "medio-facile",
+    domanda: "In una classe di 100 studenti, 60 studiano la lingua inglese, 45 studiano la lingua francese e 20 studiano entrambe le lingue. Quanti studenti non studiano né l’inglese né il francese?",
+    rispostaCorretta: "15",
+    risposteErrate: [
+          "20",
+          "25",
+          "10",
+          "5"
+    ],
+    spiegazione: "Applichiamo il principio di inclusione-esclusione per determinare il numero di studenti che studiano almeno una delle due lingue: $|A \\cup B| = |A| + |B| - |A \\cap B| = 60 + 45 - 20 = 85$. Il numero di studenti che non studiano alcuna lingua è dato dal complemento rispetto all’universo totale: $100 - 85 = 15$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 789,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Siano $A, B, C$ tre insiemi non vuoti. Si sa che $A$ è un sottoinsieme proprio di $B$ ($A \\subset B$) e che $B$ e $C$ sono disgiunti ($B \\cap C = \\emptyset$). Quale delle seguenti affermazioni è NECESSARIAMENTE vera?",
+    rispostaCorretta: "$A$ e $C$ sono disgiunti ($A \\cap C = \\emptyset$)",
+    risposteErrate: [
+          "$A \\cup C = B$",
+          "$A$ contiene elementi di $C$",
+          "$B \\subset C$",
+          "$A \\cup B = C$"
+    ],
+    spiegazione: "Poiché ogni elemento di $A$ appartiene anche a $B$ ($A \\subset B$) e nessun elemento di $B$ appartiene a $C$ ($B \\cap C = \\emptyset$), ne consegue per transitività dell’inclusione e disgiunzione che nessun elemento di $A$ può appartenere a $C$. Pertanto $A \\cap C = \\emptyset$ è necessariamente vera.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 790,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Siano $A, B, C$ tre insiemi finiti con cardinalità $|A| = 30$, $|B| = 25$ e $|C| = 20$. Sapendo che $B$ e $C$ sono disgiunti ($B \\cap C = \\emptyset$), qual è la cardinalità dell’insieme $A \\cup (B \\cap C)$?",
+    rispostaCorretta: "30",
+    risposteErrate: [
+          "75",
+          "55",
+          "50",
+          "0"
+    ],
+    spiegazione: "Poiché $B \\cap C = \\emptyset$ (l’intersezione tra due insiemi disgiunti è l’insieme vuoto), l’espressione $A \\cup (B \\cap C)$ si riduce a $A \\cup \\emptyset = A$. La cardinalità cercata è quindi semplicemente $|A| = 30$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 791,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Un gruppo di 50 programmatori utilizza tre linguaggi: Python ($P$), C++ ($C$) e Java ($J$). I dati rilevati mostrano che:\n1. 30 programmatori usano Python;\n2. 25 programmatori usano C++;\n3. 20 programmatori usano Java;\n4. Nessun programmatore usa tutti e tre i linguaggi contemporaneamente ($|P \\cap C \\cap J| = 0$);\n5. Tutti i 50 programmatori usano almeno uno dei tre linguaggi ($|P \\cup C \\cup J| = 50$).\nQuanti programmatori utilizzano ESATTAMENTE due linguaggi?",
+    rispostaCorretta: "25",
+    risposteErrate: [
+          "15",
+          "20",
+          "30",
+          "10"
+    ],
+    spiegazione: "Per la formula di inclusione-esclusione a 3 insiemi: $|P \\cup C \\cup J| = (|P|+|C|+|J|) - \\sum |\\text{intersezioni a due}| + |P \\cap C \\cap J|$. Sostituendo i valori: $50 = (30 + 25 + 20) - \\sum |\\text{intersezioni a due}| + 0 \\implies 50 = 75 - \\sum |\\text{intersezioni a due}| \\implies \\sum |\\text{intersezioni a due}| = 25$. Poiché l’intersezione tripla è vuota, la somma delle intersezioni a due coincide esattamente con il numero di persone che usano esattamente due linguaggi, ovvero 25.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 792,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Sia $U = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}$ l’universo di riferimento. Siano $A = \\{x \\in U \\mid x \\text{ è pari}\\}$ e $B = \\{x \\in U \\mid x \\text{ è multiplo di 3}\\}$. Qual è la cardinalità del complemento dell’intersezione, ossia $|(A \\cap B)^c|$?",
+    rispostaCorretta: "9",
+    risposteErrate: [
+          "8",
+          "7",
+          "1",
+          "10"
+    ],
+    spiegazione: "Gli elementi di $A$ sono i numeri pari: $A = \\{2, 4, 6, 8, 10\\}$. Gli elementi di $B$ sono i multipli di 3: $B = \\{3, 6, 9\\}$. L’intersezione $A \\cap B$ è data dai numeri sia pari sia multipli di 3 (multipli di 6), quindi $A \\cap B = \\{6\\}$, con cardinalità $|A \\cap B| = 1$. Il complemento in $U$ ha cardinalità $|U| - |A \\cap B| = 10 - 1 = 9$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 793,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "La differenza simmetrica tra due insiemi $A$ e $B$ è definita come $A \\Delta B = (A \\setminus B) \\cup (B \\setminus A)$. Sapendo che $|A| = 18$, $|B| = 14$ e $|A \\cap B| = 6$, quanto vale $|A \\Delta B|$?",
+    rispostaCorretta: "20",
+    risposteErrate: [
+          "26",
+          "32",
+          "8",
+          "12"
+    ],
+    spiegazione: "Calcoliamo le cardinalità delle differenze: $|A \\setminus B| = |A| - |A \\cap B| = 18 - 6 = 12$. $|B \\setminus A| = |B| - |A \\cap B| = 14 - 6 = 8$. Poiché $(A \\setminus B)$ e $(B \\setminus A)$ sono disgiunti per definizione, $|A \\Delta B| = |A \\setminus B| + |B \\setminus A| = 12 + 8 = 20$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 794,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Siano $A$ e $B$ due insiemi tali che l’intersezione $A \\cap B$ contenga esattamente 3 elementi. Quanti elementi possiede l’insieme delle parti dell’intersezione, ossia $\\mathcal{P}(A \\cap B)$?",
+    rispostaCorretta: "8",
+    risposteErrate: [
+          "6",
+          "9",
+          "3",
+          "16"
+    ],
+    spiegazione: "Dato un insieme finito $S$ con $k$ elementi, il suo insieme delle parti $\\mathcal{P}(S)$ contiene esattamente $2^k$ sottoinsiemi. Avendo $A \\cap B$ cardinalità pari a 3, l’insieme delle parti possiede $2^3 = 8$ elementi.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 795,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si considerino le seguenti premesse insiemistiche:\n1. Tutti gli ingegneri sono laureati ($I \\subseteq L$);\n2. Nessun laureato è minorenne ($L \\cap M = \\emptyset$);\n3. Alcuni atleti sono ingegneri ($A \\cap I \\ne \\emptyset$).\nQuale conclusione segue NECESSARIAMENTE dalle premesse?",
+    rispostaCorretta: "Alcuni atleti non sono minorenni",
+    risposteErrate: [
+          "Tutti gli atleti sono laureati",
+          "Nessun atleta è minorenne",
+          "Tutti i laureati sono atleti",
+          "Nessun ingegnere è un atleta"
+    ],
+    spiegazione: "Dalla premessa 3 esiste almeno un elemento $x \\in A \\cap I$. Poiché $x \\in I$ e per la premessa 1 $I \\subseteq L$, ne segue $x \\in L$. Dalla premessa 2 $L \\cap M = \\emptyset$, quindi $x \\notin M$. Ne consegue che tale elemento $x$ appartiene ad $A$ ma non ad $M$. Dunque è necessariamente vero che «alcuni atleti non sono minorenni».",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 796,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un circolo di 40 soci si praticano tre attività: Tennis ($T$), Nuoto ($N$) e Scacchi ($S$). Si rilevano i seguenti dati:\n- Ogni socio pratica almeno un’attività ($|T \\cup N \\cup S| = 40$);\n- $|T| = 22$, $|N| = 20$, $|S| = 18$;\n- Chi fa Tennis e Nuoto sono 8 ($|T \\cap N| = 8$);\n- Chi fa Tennis e Scacchi sono 7 ($|T \\cap S| = 7$);\n- Chi fa Nuoto e Scacchi sono 6 ($|N \\cap S| = 6$).\nQuanti soci praticano TUTTE e tre le attività contemporaneamente?",
+    rispostaCorretta: "1",
+    risposteErrate: [
+          "0",
+          "3",
+          "5",
+          "2"
+    ],
+    spiegazione: "Applichiamo la formula di inclusione-esclusione a 3 insiemi: $|T \\cup N \\cup S| = |T| + |N| + |S| - (|T \\cap N| + |T \\cap S| + |N \\cap S|) + |T \\cap N \\cap S|$. Sostituendo i numeri noti: $40 = 22 + 20 + 18 - (8 + 7 + 6) + |T \\cap N \\cap S| \\implies 40 = 60 - 21 + |T \\cap N \\cap S| \\implies 40 = 39 + |T \\cap N \\cap S| \\implies |T \\cap N \\cap S| = 1$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 797,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Una partizione di un insieme $X$ è una famiglia di sottoinsiemi non vuoti di $X$ a due a due disgiunti la cui unione è $X$. Se $\\{A_1, A_2, A_3\\}$ è una partizione di $X$ con $|A_1| = 8$, $|A_2| = 12$ e $|A_3| = 15$, qual è la cardinalità di $X$?",
+    rispostaCorretta: "35",
+    risposteErrate: [
+          "27",
+          "30",
+          "40",
+          "Non determinabile senza conoscere le intersezioni"
+    ],
+    spiegazione: "Per definizione di partizione, i sottoinsiemi $A_1, A_2, A_3$ sono a due a due disgiunti ($A_i \\cap A_j = \\emptyset$ per $i \\ne j$) e la loro unione ricopre interamente $X$. Pertanto la cardinalità dell’unione è data esattamente dalla somma delle singole cardinalità: $|X| = |A_1| + |A_2| + |A_3| = 8 + 12 + 15 = 35$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 798,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Sia $U = \\{n \\in \\mathbb{N} \\mid 1 \\le n \\le 60\\}$. Definiamo $A = \\{n \\in U \\mid n \\text{ è multiplo di 4}\\}$ e $B = \\{n \\in U \\mid n \\text{ è multiplo di 6}\\}$. Quanti elementi appartengono all’insieme differenza $A \\setminus B$?",
+    rispostaCorretta: "10",
+    risposteErrate: [
+          "15",
+          "5",
+          "12",
+          "8"
+    ],
+    spiegazione: "I multipli di 4 compresi tra 1 e 60 sono $60 / 4 = 15$, quindi $|A| = 15$. Gli elementi appartenenti all’intersezione $A \\cap B$ sono i numeri multipli sia di 4 sia di 6, cioè i multipli del loro minimo comune multiplo $\\text{mcm}(4, 6) = 12$. I multipli di 12 tra 1 e 60 sono $60 / 12 = 5$. L’insieme differenza $A \\setminus B$ contiene $|A| - |A \\cap B| = 15 - 5 = 10$ elementi.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 799,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è il numero che completa logicamente la seguente successione numerica?\n$$3, \\; 6, \\; 5, \\; 10, \\; 9, \\; 18, \\; 17, \\; ?$$",
+    rispostaCorretta: "34",
+    risposteErrate: [
+          "16",
+          "35",
+          "18",
+          "24"
+    ],
+    spiegazione: "La sequenza segue uno schema a due operazioni alternate: moltiplicare per 2, poi sottrarre 1. Verifichiamo: $3 \\times 2 = 6$; $6 - 1 = 5$; $5 \\times 2 = 10$; $10 - 1 = 9$; $9 \\times 2 = 18$; $18 - 1 = 17$; $17 \\times 2 = 34$. Il termine successivo è 34.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 800,
+    materia: "Logica",
+    difficolta: "medio-difficile",
+    domanda: "Si consideri la seguente successione numerica a binari intrecciati in cui le posizioni dispari e le posizioni pari seguono ciascuna una propria legge di ricorrenza deterministica:\n$$2, \\; 3, \\; 5, \\; 9, \\; 11, \\; 27, \\; 23, \\; 81, \\; 47, \\; ?$$Quale numero deve sostituire il punto interrogativo?",
+    rispostaCorretta: "243",
+    risposteErrate: [
+          "95",
+          "162",
+          "240",
+          "108"
+    ],
+    spiegazione: "Separiamo i due binari: 1) Posizioni dispari (1ª, 3ª, 5ª, 7ª, 9ª): $2, 5, 11, 23, 47$. La legge è $a_{n+1} = 2a_n + 1$ (oppure incrementi $+3, +6, +12, +24$). 2) Posizioni pari (2ª, 4ª, 6ª, 8ª, 10ª): $3, 9, 27, 81, ?$. La legge è $b_{n+1} = 3b_n$ (potenze di 3: $3^1, 3^2, 3^3, 3^4, 3^5$). Il termine da trovare si trova alla 10ª posizione (pari), quindi $81 \\times 3 = 243$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 801,
+    materia: "Logica",
+    difficolta: "medio-facile",
+    domanda: "Qual è il termine successivo della seguente serie numerica?\n$$2, \\; 5, \\; 10, \\; 17, \\; 26, \\; ?$$",
+    rispostaCorretta: "37",
+    risposteErrate: [
+          "35",
+          "36",
+          "38",
+          "40"
+    ],
+    spiegazione: "I termini della sequenza corrispondono alla regola $n^2 + 1$ per $n = 1, 2, 3, 4, 5$: $1^2+1=2$, $2^2+1=5$, $3^2+1=10$, $4^2+1=17$, $5^2+1=26$. Il termine successivo corrisponde a $n=6$, ossia $6^2 + 1 = 37$ (equivalente ad applicare differenze crescenti $+3, +5, +7, +9, +11$).",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 802,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quale numero completa la seguente successione basata su somme additive progressive?\n$$2, \\; 3, \\; 5, \\; 8, \\; 13, \\; 21, \\; ?$$",
+    rispostaCorretta: "34",
+    risposteErrate: [
+          "32",
+          "35",
+          "29",
+          "30"
+    ],
+    spiegazione: "Ogni termine a partire dal terzo è pari alla somma dei due termini che lo precedono immediatamente: $2+3=5$; $3+5=8$; $5+8=13$; $8+13=21$; $13+21=34$. Il termine successivo è dunque 34.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 803,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Individua la coppia alfanumerica che completa coerentemente la serie:\n$$\\text{A2}, \\; \\text{C4}, \\; \\text{E8}, \\; \\text{G16}, \\; ?$$",
+    rispostaCorretta: "I32",
+    risposteErrate: [
+          "H32",
+          "I24",
+          "H20",
+          "J32"
+    ],
+    spiegazione: "La serie è composta da due regole indipendenti: 1) Lettere dell’alfabeto a passo +2: A, C (+2), E (+2), G (+2), I (+2). 2) Numeri che raddoppiano a ogni passaggio (potenze di 2): 2, 4, 8, 16, 32. Combinando le due parti si ottiene I32.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 804,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si consideri la seguente griglia numerica $3 \\times 3$ in cui gli elementi di ogni riga obbediscono alla stessa relazione logico-matematica:\n$$\\begin{matrix} 4 & 7 & 28 \\\\ 5 & 9 & 45 \\\\ 6 & 8 & ? \\end{matrix}$$\nQuale valore deve sostituire il punto interrogativo?",
+    rispostaCorretta: "48",
+    risposteErrate: [
+          "42",
+          "14",
+          "54",
+          "46"
+    ],
+    spiegazione: "In ogni riga, il terzo elemento è il prodotto dei primi due: prima riga $4 \\times 7 = 28$; seconda riga $5 \\times 9 = 45$. Applicando la medesima regola alla terza riga si ottiene $6 \\times 8 = 48$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 805,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quale numero completa logicamente la successione seguente?\n$$1, \\; 4, \\; 9, \\; 16, \\; 25, \\; 36, \\; ?$$",
+    rispostaCorretta: "49",
+    risposteErrate: [
+          "45",
+          "48",
+          "50",
+          "64"
+    ],
+    spiegazione: "La sequenza è formata dai quadrati perfetti dei numeri naturali consecutivi: $1^2=1, 2^2=4, 3^2=9, 4^2=16, 5^2=25, 6^2=36$. Il termine successivo è $7^2 = 49$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 806,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Una stringa binaria viene trasformata mediante la seguente regola di riscrittura a passi discreti:\n- A ogni passo, ogni cifra «0» viene sostituita da «01»;\n- A ogni passo, ogni cifra «1» viene sostituita da «10».\nPartendo al Passo 0 dalla stringa «0»:\n- Passo 0: «0»\n- Passo 1: «01»\n- Passo 2: «0110»\nQuante cifre «1» sono presenti nella stringa ottenuta al Passo 4?",
+    rispostaCorretta: "8",
+    risposteErrate: [
+          "4",
+          "6",
+          "12",
+          "16"
+    ],
+    spiegazione: "Analizziamo i passaggi: Passo 0: «0» (lunghezza 1, zeri: 1, uni: 0). Passo 1: «01» (lunghezza 2, zeri: 1, uni: 1). Passo 2: «0110» (lunghezza 4, zeri: 2, uni: 2). Passo 3: «01101001» (lunghezza 8, zeri: 4, uni: 4). Passo 4: lunghezza 16, con esattamente 8 zeri e 8 uni. Il numero di cifre «1» al Passo 4 è 8.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 807,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quale frazione completa coerentemente la seguente successione?\n$$\\frac{1}{2}, \\; \\frac{3}{4}, \\; \\frac{5}{8}, \\; \\frac{7}{16}, \\; ?$$",
+    rispostaCorretta: "$\\frac{9}{32}$",
+    risposteErrate: [
+          "$\\frac{9}{24}$",
+          "$\\frac{8}{32}$",
+          "$\\frac{11}{32}$",
+          "$\\frac{9}{64}$"
+    ],
+    spiegazione: "La successione è formata da due progressioni: il numeratore è una progressione aritmetica di numeri dispari consecutivi ($+2$ a ogni passo: $1, 3, 5, 7 \\to 9$); il denominatore è una progressione geometrica di ragione 2 ($2, 4, 8, 16 \\to 32$). La frazione risultante è $\\frac{9}{32}$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 808,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si consideri la serie di terne numeriche in cui ogni terna ha la stessa somma invariante $S$:\n$$(3, 8, 4), \\; (6, 2, 7), \\; (5, 9, ?)$$\nQuale numero completa la terza terna?",
+    rispostaCorretta: "1",
+    risposteErrate: [
+          "2",
+          "3",
+          "0",
+          "4"
+    ],
+    spiegazione: "Calcoliamo la somma della prima terna: $3 + 8 + 4 = 15$. La seconda terna ha somma $6 + 2 + 7 = 15$. Affinché anche la terza terna abbia somma 15, deve valere $5 + 9 + ? = 15 \\implies 14 + ? = 15 \\implies ? = 1$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 809,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Nell’insieme dei numeri reali si definisce un nuovo operatore binario $\\odot$ tramite la regola: $x \\odot y = 2x + 3y - xy$. Quanto vale l’espressione $4 \\odot 5$?",
+    rispostaCorretta: "3",
+    risposteErrate: [
+          "23",
+          "-3",
+          "13",
+          "0"
+    ],
+    spiegazione: "Sostituiamo $x = 4$ e $y = 5$ nella definizione formale dell’operatore: $4 \\odot 5 = 2(4) + 3(5) - (4)(5) = 8 + 15 - 20 = 23 - 20 = 3$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 810,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Sia definito l’operatore binario $\\star$ su $\\mathbb{R}$ come $a \\star b = a + b + 2ab$. Quale delle seguenti proprietà è verificata dall’operatore $\\star$?",
+    rispostaCorretta: "L’operatore è commutativo ($a \\star b = b \\star a$ per ogni $a, b$)",
+    risposteErrate: [
+          "L’operatore non è mai commutativo",
+          "$a \\star b = 0$ per ogni coppia di reali",
+          "L’elemento neutro è 2",
+          "$a \\star a = 0$ per ogni $a$"
+    ],
+    spiegazione: "Poiché l’addizione e la moltiplicazione tra numeri reali sono entrambe commutatitive, si ha: $a \\star b = a + b + 2ab = b + a + 2ba = b \\star a$. L’operatore è quindi sempre commutativo.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 811,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un cifrario a scorrimento (cifrario di Cesare con scostamento di $+3$ posizioni in avanti nell’alfabeto inglese A-Z), la parola «LOGICA» viene cifrata come «ORJLFD». Con la stessa regola di cifratura, come viene cifrata la parola «TEST»?",
+    rispostaCorretta: "WHVW",
+    risposteErrate: [
+          "VDUV",
+          "WGVW",
+          "XHWX",
+          "WHVV"
+    ],
+    spiegazione: "Applichiamo lo spostamento di $+3$ lettere a ciascun carattere di «TEST»: T (+3) $\\to$ W; E (+3) $\\to$ H; S (+3) $\\to$ V; T (+3) $\\to$ W. La parola cifrata risultante è WHVW.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 812,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Sull’insieme dei numeri interi $\\mathbb{Z}$ si definisce la relazione $R$ ponendo $x R y$ se e solo se $x - y$ è un multiplo intero di 5 ($x \\equiv y \\pmod 5$). Quante sono le classi di equivalenza distinte generate da tale relazione?",
+    rispostaCorretta: "5",
+    risposteErrate: [
+          "Infinite",
+          "1",
+          "10",
+          "4"
+    ],
+    spiegazione: "Ogni numero intero $x$, diviso per 5, lascia un unico resto $r \\in \\{0, 1, 2, 3, 4\\}$. Due numeri sono in relazione $R$ se e solo se hanno lo stesso resto nella divisione per 5. Le classi di equivalenza distinte corrispondono ai 5 possibili resti, dunque sono esattamente 5.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 813,
+    materia: "Logica",
+    difficolta: "medio-difficile",
+    domanda: "Si consideri l’insieme di numeri interi $S = \\{2, 3, 4, 6, 12, 18, 36\\}$ parzialmente ordinato dalla relazione di divisibilità ($a \\le b \\iff a \\text{ divide } b$). Quali sono gli elementi minimali e l’elemento massimo assoluto di questo insieme parzialmente ordinato (poset)?",
+    rispostaCorretta: "Elementi minimali: $\\{2, 3\\}$; Massimo assoluto: $36$",
+    risposteErrate: [
+          "Elemento minimale: $\\{2\\}$; Massimo assoluto: non esiste",
+          "Elementi minimali: $\\{2, 3\\}$; Elementi massimali: $\\{12, 18, 36\\}$ senza massimo assoluto",
+          "Elemento minimale: $\\{3\\}$; Massimo assoluto: $36$",
+          "Non esistono elementi minimali"
+    ],
+    spiegazione: "Un elemento è minimale se nessun altro elemento di $S$ lo divide strettamente. In $S$, né 2 né 3 sono divisibili da altri elementi di $S$, quindi i minimali sono $\\{2, 3\\}$. Un elemento è massimo assoluto se è divisibile da TUTTI gli elementi di $S$. Il numero 36 è divisibile da 2, 3, 4, 6, 12, 18 e 36. Pertanto 36 è il massimo assoluto univoco.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 814,
+    materia: "Logica",
+    difficolta: "medio-facile",
+    domanda: "Una relazione $R$ su un insieme di persone è definita da: «$x R y$ se e solo se $x$ e $y$ hanno la stessa altezza in centimetri». Quali proprietà logiche caratterizzano questa relazione?",
+    rispostaCorretta: "È una relazione di equivalenza (riflessiva, simmetrica e transitiva)",
+    risposteErrate: [
+          "È solo simmetrica ma non transitiva",
+          "È una relazione d’ordine stretto",
+          "È antiriflessiva e asimmetrica",
+          "È transitiva ma non riflessiva"
+    ],
+    spiegazione: "La relazione soddisfa: 1) Riflessività: ogni persona ha la stessa altezza di se stessa ($x R x$); 2) Simmetria: se $x$ ha la stessa altezza di $y$, allora $y$ ha la stessa altezza di $x$ ($x R y \\implies y R x$); 3) Transitività: se $x$ ha la stessa altezza di $y$ e $y$ ha la stessa altezza di $z$, allora $x$ ha la stessa altezza di $z$. Avendo tutte e tre le proprietà, è una relazione di equivalenza.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 815,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un sistema di codifica simbolico additivo valgono le seguenti corrispondenze di valore:\n- $\\Delta = 10$\n- $\\square = 5$\n- $\\circ = 1$\nIl valore di una sequenza è dato dalla somma dei valori dei singoli simboli. Quanto vale la stringa $\\Delta \\Delta \\square \\circ \\circ \\circ$?",
+    rispostaCorretta: "28",
+    risposteErrate: [
+          "25",
+          "27",
+          "30",
+          "18"
+    ],
+    spiegazione: "La stringa è composta da due triangoli ($2 \\times 10 = 20$), un quadrato ($1 \\times 5 = 5$) e tre cerchi ($3 \\times 1 = 3$). Sommando i valori: $20 + 5 + 3 = 28$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 816,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Analizzando le relazioni familiari in una genealogia si stabilisce che: «Marco è il figlio dell’unico figlio del padre di Giovanni». Sapendo che Giovanni non ha fratelli, che relazione di parentela intercorre tra Marco e Giovanni?",
+    rispostaCorretta: "Marco è il figlio di Giovanni",
+    risposteErrate: [
+          "Marco è il fratello di Giovanni",
+          "Marco è il nipote (figlio della sorella) di Giovanni",
+          "Marco è il padre di Giovanni",
+          "Marco e Giovanni sono cugini di primo grado"
+    ],
+    spiegazione: "Decostruiamo l’enunciato a ritroso: «il padre di Giovanni» ha come «unico figlio» Giovanni stesso (poiché Giovanni è figlio unico). Quindi «il figlio dell’unico figlio del padre di Giovanni» equivale a «il figlio di Giovanni». Dunque Marco è il figlio di Giovanni.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 817,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In una lingua artificiale sono note le seguenti traduzioni di frasi di due parole:\n1. «kalo moro» significa «casa grande»;\n2. «kalo lupu» significa «casa bianca»;\n3. «somi moro» significa «albero grande».\nQuale parola in questa lingua corrisponde con certezza all’aggettivo «bianca»?",
+    rispostaCorretta: "lupu",
+    risposteErrate: [
+          "kalo",
+          "moro",
+          "somi",
+          "Non è possibile stabilirlo"
+    ],
+    spiegazione: "Confrontando la frase 1 («kalo moro» = «casa grande») e la frase 2 («kalo lupu» = «casa bianca»), l’elemento comune è «kalo» che corrisponde a «casa». Di conseguenza, nella frase 2 la parola «lupu» corrisponde univocamente all’aggettivo «bianca» (confermata dal fatto che «moro» corrisponde a «grande» tramite la frase 3).",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 818,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Sia data la funzione $f: \\mathbb{N} \\to \\mathbb{N}$ definita per casi come segue:\n- $f(n) = \\frac{n}{2}$ se $n$ è pari;\n- $f(n) = 3n + 1$ se $n$ è dispari.\nPartendo da $n = 13$, qual è il valore ottenuto applicando la funzione tre volte consecutive, ossia $f(f(f(13)))$?",
+    rispostaCorretta: "10",
+    risposteErrate: [
+          "20",
+          "40",
+          "5",
+          "16"
+    ],
+    spiegazione: "Eseguiamo i 3 passaggi di calcolo: 1) $n = 13$ è dispari $\\implies f(13) = 3(13) + 1 = 39 + 1 = 40$. 2) $n = 40$ è pari $\\implies f(40) = 40 / 2 = 20$. 3) $n = 20$ è pari $\\implies f(20) = 20 / 2 = 10$. Dunque $f(f(f(13))) = 10$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 819,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quanti anagrammi distinti (anche privi di senso compiuto) si possono formare con tutte le lettere della parola «STATO»?",
+    rispostaCorretta: "60",
+    risposteErrate: [
+          "120",
+          "24",
+          "30",
+          "72"
+    ],
+    spiegazione: "La parola «STATO» è composta da 5 lettere in cui la lettera T si ripete 2 volte (S, T, A, T, O). Il numero di permutazioni con ripetizione è dato da $\\frac{5!}{2!} = \\frac{120}{2} = 60$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 820,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Un codice di sicurezza è formato da una lettera scelta tra $\\{A, B, C\\}$ seguita da due cifre numeriche distinte scelte tra $\\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\}$. Quanti codici di sicurezza diversi è possibile generare?",
+    rispostaCorretta: "270",
+    risposteErrate: [
+          "300",
+          "240",
+          "180",
+          "90"
+    ],
+    spiegazione: "Per il principio moltiplicativo fondamentale del conteggio: ci sono 3 scelte possibili per la lettera; 10 scelte per la prima cifra numerica; 9 scelte per la seconda cifra numerica (poiché le due cifre devono essere distinte). Il numero totale di codici è $3 \\times 10 \\times 9 = 270$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 821,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un cassetto buio vi sono 10 calzini blu e 10 calzini neri, identici per forma e tessuto. Qual è il numero minimo di calzini che occorre estrarre alla cieca per avere la certezza assoluta di aver ottenuto almeno un paio di calzini dello stesso colore?",
+    rispostaCorretta: "3",
+    risposteErrate: [
+          "2",
+          "11",
+          "12",
+          "4"
+    ],
+    spiegazione: "Per il principio dei cassetti (pigeonhole principle), i possibili «colori» (cassetti) sono 2 (blu e nero). Nel caso peggiore, le prime 2 estrazioni potrebbero fornire due calzini di colori diversi (uno blu e uno nero). Con una terza estrazione ($2 + 1 = 3$), il calzino estratto dovrà necessariamente condividere il colore con uno dei due già estratti, garantendo una coppia dello stesso colore.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 822,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è il numero minimo di persone che devono essere presenti in una stanza affinché si abbia la certezza matematica che almeno 3 di esse siano nate nello stesso mese dell’anno?",
+    rispostaCorretta: "25",
+    risposteErrate: [
+          "24",
+          "36",
+          "37",
+          "13"
+    ],
+    spiegazione: "L’anno ha 12 mesi. Nel caso più sfavorevole, possiamo avere al massimo 2 persone nate in ciascuno dei 12 mesi, per un totale di $2 \\times 12 = 24$ persone senza che vi sia alcun mese con 3 nati. Aggiungendo una persona in più ($24 + 1 = 25$), per il principio dei cassetti generalizzato essa dovrà necessariamente nascere in un mese in cui vi sono già 2 persone, portando quel mese ad almeno 3 nati.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 823,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Da un gruppo composto da 5 studenti maschi e 4 studentesse femmine si deve formare una commissione di 3 membri composta da esattamente 2 maschi e 1 femmina. Quante diverse commissioni è possibile costituire?",
+    rispostaCorretta: "40",
+    risposteErrate: [
+          "20",
+          "84",
+          "30",
+          "60"
+    ],
+    spiegazione: "Il numero di modi per scegliere 2 maschi tra 5 è dato dalle combinazioni $\\binom{5}{2} = \\frac{5 \\times 4}{2} = 10$. Il numero di modi per scegliere 1 femmina tra 4 è $\\binom{4}{1} = 4$. Per il principio del prodotto, le commissioni possibili sono $10 \\times 4 = 40$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 824,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In una competizione podistica a cui partecipano 8 atleti vengono assegnate le medaglie d’Oro, d’Argento e di Bronzo ai primi tre classificati. Escludendo ex aequo, in quanti modi distinti può essere formato il podio?",
+    rispostaCorretta: "336",
+    risposteErrate: [
+          "56",
+          "512",
+          "120",
+          "384"
+    ],
+    spiegazione: "L’ordine dei primi tre classificati è rilevante (Oro, Argento, Bronzo), quindi si tratta di disposizioni semplici di 8 elementi presi a gruppi di 3: $D_{8,3} = 8 \\times 7 \\times 6 = 336$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 825,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si lanciano contemporaneamente due dadi a sei facce regolari e non truccati. Qual è la probabilità che la somma dei due punteggi ottenuti sia esattamente uguale a 7?",
+    rispostaCorretta: "$\\frac{1}{6}$",
+    risposteErrate: [
+          "$\\frac{1}{12}$",
+          "$\\frac{7}{36}$",
+          "$\\frac{5}{36}$",
+          "$\\frac{1}{7}$"
+    ],
+    spiegazione: "I casi totali possibili sono $6 \\times 6 = 36$. Le coppie ordinate che danno somma 7 sono 6: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$. La probabilità è data dal rapporto tra casi favorevoli e casi possibili: $\\frac{6}{36} = \\frac{1}{6}$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 826,
+    materia: "Logica",
+    difficolta: "medio-difficile",
+    domanda: "Un’urna contiene 4 palline rosse e 2 palline blu. Si estraggono contemporaneamente due palline a caso senza reimbussolamento. Sapendo che almeno una delle due palline estratte è rossa, qual è la probabilità che entrambe le palline siano rosse?",
+    rispostaCorretta: "$\\frac{3}{7}$",
+    risposteErrate: [
+          "$\\frac{1}{2}$",
+          "$\\frac{2}{5}$",
+          "$\\frac{3}{5}$",
+          "$\\frac{4}{7}$"
+    ],
+    spiegazione: "Il numero totale di modi per estrarre 2 palline su 6 è $\\binom{6}{2} = 15$. L’unico esito in cui non compare alcuna pallina rossa è l’estrazione delle 2 palline blu, che si verifica in $\\binom{2}{2} = 1$ modo. I casi in cui «almeno una pallina è rossa» sono quindi $15 - 1 = 14$ (spazio campionario condizionato). I casi favorevoli in cui entrambe le palline sono rosse sono $\\binom{4}{2} = 6$. La probabilità condizionata richiesta è $P(\\text{2 rosse} \\mid \\text{almeno 1 rossa}) = \\frac{6}{14} = \\frac{3}{7}$. Il distrattore $\\frac{4}{7}$ corrisponde invece al calcolo errato della probabilità complementare di estrarre esattamente 1 rossa e 1 blu ($8/14 = 4/7$).",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 827,
+    materia: "Logica",
+    difficolta: "medio-facile",
+    domanda: "Da un mazzo di 40 carte da gioco tradizionali viene estratta una carta a caso. Qual è la probabilità che la carta estratta sia un Asso oppure un Re?",
+    rispostaCorretta: "$20\\%$",
+    risposteErrate: [
+          "$10\\%$",
+          "$25\\%$",
+          "$15\\%$",
+          "$8\\%$"
+    ],
+    spiegazione: "In un mazzo da 40 carte vi sono 4 Assi e 4 Re. Poiché i due eventi sono incompatibili (una carta non può essere contemporaneamente un Asso e un Re), i casi favorevoli totali sono $4 + 4 = 8$. La probabilità è $\\frac{8}{40} = \\frac{1}{5} = 0{,}20 = 20\\%$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 828,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Una moneta equilibrata viene lanciata 4 volte di seguito. Qual è la probabilità di ottenere la faccia «Testa» almeno una volta?",
+    rispostaCorretta: "$\\frac{15}{16}$",
+    risposteErrate: [
+          "$\\frac{1}{16}$",
+          "$\\frac{7}{8}$",
+          "$\\frac{3}{4}$",
+          "$\\frac{1}{2}$"
+    ],
+    spiegazione: "Calcoliamo la probabilità dell’evento complementare «nessuna Testa» (ovvero ottenere 4 volte consecutive «Croce»). Poiché ogni lancio è indipendente con probabilità $1/2$, si ha $P(\\text{4 Croci}) = (1/2)^4 = 1/16$. La probabilità di ottenere almeno una Testa è $1 - P(\\text{4 Croci}) = 1 - 1/16 = 15/16$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 829,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In una griglia di strade perpendicolari, un robot parte dal punto $(0,0)$ e deve raggiungere il punto $(2,2)$ muovendosi esclusivamente di un’unità alla volta verso destra ($D$) o verso l’alto ($A$). Quanti percorsi minimi distinti può compiere il robot?",
+    rispostaCorretta: "6",
+    risposteErrate: [
+          "4",
+          "8",
+          "12",
+          "24"
+    ],
+    spiegazione: "Ogni percorso minimo da $(0,0)$ a $(2,2)$ deve essere composto da esattamente 4 passi complessivi: 2 passi verso destra ($D$) e 2 passi verso l’alto ($A$). Il numero di percorsi coincide con il numero di modi di scegliere quali dei 4 passi sono verso destra, ossia $\\binom{4}{2} = \\frac{4 \\times 3}{2} = 6$. I 6 percorsi sono: $DDAA, DADA, DAAD, ADDA, ADAD, AADD$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 830,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Sulla lavagna sono scritti i numeri interi da 1 a 10. A ogni mossa, uno studente sceglie due numeri qualsiasi $a$ e $b$, li cancella e scrive al loro posto il numero $(a + b - 1)$. Dopo 9 mosse consecutive sulla lavagna rimane un solo numero. Quale affermazione sulla parità del numero finale è NECESSARIAMENTE vera?",
+    rispostaCorretta: "Il numero finale è sicuramente pari",
+    risposteErrate: [
+          "Il numero finale è sicuramente dispari",
+          "La parità dipende dall’ordine delle scelte effettuate",
+          "Il numero finale è sempre uguale a 55",
+          "Non è possibile determinare la parità a priori"
+    ],
+    spiegazione: "La somma iniziale di tutti i numeri è $S = 1 + 2 + \\dots + 10 = \\frac{10 \\times 11}{2} = 55$. A ogni mossa la somma totale dei numeri presenti sulla lavagna diminuisce esattamente di 1, poiché sostituiamo $(a + b)$ con $(a + b - 1)$. Dopo 9 mosse la somma è diminuita di 9. Il valore dell’unico numero rimasto è quindi $55 - 9 = 46$, che è un numero pari, indipendentemente dalle coppie scelte.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 831,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si dispone di una botte con 8 litri di succo e di due caraffe vuote graduate solo per capacità massima da 5 litri e 3 litri. Qual è il numero minimo di travasi necessari per ottenere esattamente 4 litri di succo nella botte iniziale o in una caraffa?",
+    rispostaCorretta: "6",
+    risposteErrate: [
+          "4",
+          "5",
+          "7",
+          "8"
+    ],
+    spiegazione: "Rappresentiamo lo stato come terna (Botte 8L, Caraffa 5L, Caraffa 3L):\n- Stato iniziale: $(8, 0, 0)$\n- 1° travaso (da 8 a 5): $(3, 5, 0)$\n- 2° travaso (da 5 a 3): $(3, 2, 3)$\n- 3° travaso (da 3 a 8): $(6, 2, 0)$\n- 4° travaso (da 5 a 3): $(6, 0, 2)$\n- 5° travaso (da 8 a 5): $(1, 5, 2)$\n- 6° travaso (da 5 a 3 fino a riempirlo): $(1, 4, 3)$.\nAl 6° travaso si ottengono esattamente 4 litri nella caraffa da 5 litri. Il numero minimo di travasi è 6.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 832,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "La somma delle età attuali di Marco e Luca è pari a 40 anni. Quando Marco aveva l’età che Luca ha adesso, l’età di Marco era esattamente il triplo dell’età che aveva Luca a quel tempo. Quanti anni ha Marco adesso?",
+    rispostaCorretta: "25",
+    risposteErrate: [
+          "24",
+          "30",
+          "28",
+          "20"
+    ],
+    spiegazione: "Siano $M$ e $L$ le età attuali di Marco e Luca, con $M + L = 40$. La differenza di età è costante: $d = M - L$. Il momento passato considerato risale a $d$ anni fa, quando Marco aveva età $M - d = L$ e Luca aveva età $L - d = L - (M - L) = 2L - M$. La condizione stabilisce che l’età di Marco a quel tempo era il triplo di quella di Luca: $L = 3(2L - M) \\implies L = 6L - 3M \\implies 3M = 5L \\implies M = \\frac{5}{3}L$. Sostituendo in $M + L = 40$: $\\frac{5}{3}L + L = 40 \\implies \\frac{8}{3}L = 40 \\implies L = 15$. Quindi $M = 40 - 15 = 25$ anni.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 833,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Due candele di uguale lunghezza iniziale bruciano a velocità costante: la candela A si consuma completamente in 4 ore, mentre la candela B si consuma completamente in 3 ore. Se vengono accese nello stesso istante, dopo quanto tempo la lunghezza residua della candela A sarà esattamente il doppio della lunghezza residua della candela B?",
+    rispostaCorretta: "2 ore e 24 minuti",
+    risposteErrate: [
+          "2 ore e 30 minuti",
+          "2 ore e 15 minuti",
+          "1 ora e 45 minuti",
+          "2 ore"
+    ],
+    spiegazione: "Sia $L = 1$ la lunghezza iniziale. Dopo $t$ ore, la candela A ha lunghezza $1 - \\frac{t}{4}$ e la candela B ha lunghezza $1 - \\frac{t}{3}$. Poniamo la condizione: $1 - \\frac{t}{4} = 2\\left(1 - \\frac{t}{3}\\right) \\implies 1 - \\frac{t}{4} = 2 - \\frac{2t}{3} \\implies \\frac{2t}{3} - \\frac{t}{4} = 1 \\implies \\frac{8t - 3t}{12} = 1 \\implies \\frac{5t}{12} = 1 \\implies t = \\frac{12}{5} = 2{,}4\\text{ ore}$. Poiché $0{,}4\\text{ ore} = 0{,}4 \\times 60 = 24\\text{ minuti}$, il tempo cercato è 2 ore e 24 minuti.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 834,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si hanno 9 monete all’apparenza identiche. Si sa che 8 di esse hanno lo stesso peso, mentre una è contraffatta ed è più leggera delle altre. Disponendo di una bilancia a due piatti senza pesi, qual è il numero MINIMO di pesate sufficiente a individuare con certezza assoluta la moneta falsa?",
+    rispostaCorretta: "2",
+    risposteErrate: [
+          "1",
+          "3",
+          "4",
+          "5"
+    ],
+    spiegazione: "Dividiamo le 9 monete in tre gruppi da 3: $G_1, G_2, G_3$. 1ª pesata: confrontiamo $G_1$ e $G_2$. Se la bilancia è in equilibrio, la moneta falsa è in $G_3$; se un piatto sale, la moneta falsa è in quel gruppo. Abbiamo così ridotto la ricerca a 3 monete. 2ª pesata: prendiamo 2 monete delle 3 sospette e le confrontiamo sui piatti. Se uno sale, quella è la moneta falsa; se sono in equilibrio, la moneta falsa è la terza non pesata. Sono quindi sufficienti esattamente 2 pesate.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 835,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si vuole determinare se un numero intero positivo $N$ è pari. Si dispone delle seguenti due informazioni:\n(1) Il numero $3N + 1$ è dispari;\n(2) Il numero $N^2 + N$ è pari.\nQuale delle seguenti opzioni esprime la corretta valutazione di sufficienza delle informazioni?",
+    rispostaCorretta: "L’informazione (1) da sola è sufficiente, mentre la (2) da sola non è sufficiente",
+    risposteErrate: [
+          "L’informazione (2) da sola è sufficiente, mentre la (1) da sola non è sufficiente",
+          "Entrambe le informazioni insieme sono necessarie per rispondere",
+          "Ciascuna informazione presa singolarmente è sufficiente",
+          "Nessuna delle due informazioni, nemmeno prese insieme, è sufficiente"
+    ],
+    spiegazione: "Analizziamo (1): $3N + 1$ è dispari $\\implies 3N$ è pari $\\implies N$ è pari (perché il prodotto di 3 per $N$ è pari solo se $N$ è pari). Dunque (1) da sola è sufficiente. Analizziamo (2): $N^2 + N = N(N+1)$ è il prodotto di due interi consecutivi, che è SEMPRE pari per qualsiasi intero positivo $N$ (sia pari sia dispari). Di conseguenza (2) non fornisce alcuna informazione sulla parità di $N$. Dunque l’informazione (1) da sola è sufficiente, mentre la (2) no.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 836,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si desidera calcolare l’area di un rettangolo avente lati di lunghezza $b$ e $h$. Sono fornite le seguenti due informazioni:\n(1) Il perimetro del rettangolo è pari a $24\\text{ cm}$ ($2b + 2h = 24$);\n(2) La diagonale del rettangolo misura $\\sqrt{74}\\text{ cm}$ ($b^2 + h^2 = 74$).\nQuale affermazione sulla sufficienza dei dati è corretta?",
+    rispostaCorretta: "Entrambe le informazioni prese insieme sono sufficienti, ma nessuna delle due da sola è sufficiente",
+    risposteErrate: [
+          "L’informazione (1) da sola è sufficiente",
+          "L’informazione (2) da sola è sufficiente",
+          "Ciascuna informazione da sola è sufficiente",
+          "Le informazioni non sono sufficienti neppure se combinate"
+    ],
+    spiegazione: "Da sola, la (1) fornisce solo $b + h = 12$, compatibile con infinite coppie $(b, h)$ aventi aree diverse. Da sola, la (2) fornisce solo $b^2 + h^2 = 74$, anch’essa compatibile con infinite aree. Combinando (1) e (2): elevando al quadrato $b + h = 12$ otteniamo $(b + h)^2 = b^2 + h^2 + 2bh = 144$. Sostituendo $b^2 + h^2 = 74$, abbiamo $74 + 2bh = 144 \\implies 2bh = 70 \\implies \\text{Area} = bh = 35\\text{ cm}^2$. L’area è univocamente determinata solo utilizzando entrambe le informazioni congiuntamente.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 837,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un gruppo di 5 persone l’età media è esattamente pari a 24 anni. Sapendo che nessuna persona del gruppo ha un’età inferiore a 20 anni compiuti, qual è l’età MASSIMA possibile che può avere la persona più anziana del gruppo?",
+    rispostaCorretta: "40 anni",
+    risposteErrate: [
+          "36 anni",
+          "44 anni",
+          "48 anni",
+          "32 anni"
+    ],
+    spiegazione: "La somma totale delle età delle 5 persone è data da $5 \\times 24 = 120$ anni. Per massimizzare l’età della persona più anziana, dobbiamo minimizzare l’età delle restanti 4 persone. Poiché il vincolo inferiore stabilisce che nessuno ha meno di 20 anni, assegniamo 20 anni a ciascuna delle altre 4 persone: somma minima dei 4 = $4 \\times 20 = 80$ anni. L’età massima per la quinta persona è quindi $120 - 80 = 40$ anni.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 838,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un test a risposta multipla composto da 20 quesiti totali, il punteggio viene attribuito secondo le seguenti regole:\n- $+1{,}0$ punto per ogni risposta corretta;\n- $0$ punti per ogni risposta non data (omessa);\n- $-0{,}25$ punti per ogni risposta errata.\nUno studente sostiene di aver totalizzato un punteggio finale di $18{,}5$ punti. Quale deduzione logica è corretta riguardo a questa affermazione?",
+    rispostaCorretta: "L’affermazione è logicamente impossibile: non esiste alcuna combinazione di risposte che dia $18{,}5$ punti su 20 quesiti",
+    risposteErrate: [
+          "Lo studente ha fornito 19 risposte corrette e 2 errate",
+          "Lo studente ha fornito 18 risposte corrette e 0 errate",
+          "Lo studente ha fornito 19 risposte corrette e 1 errata",
+          "L’affermazione è coerente con 18 risposte corrette e 2 omesse"
+    ],
+    spiegazione: "Siano $C, E, O$ il numero di risposte corrette, errate e omesse, con $C + E + O = 20$ e $C, E, O \\ge 0$. Il punteggio è $P = C - 0{,}25E = C - \\frac{E}{4} = 18{,}5$. Moltiplicando per 4: $4C - E = 74 \\implies E = 4C - 74$. Poiché $C \\le 20$: se $C = 20$, $E = 80 - 74 = 6$, ma allora $C + E = 20 + 6 = 26 > 20$, impossibile; se $C = 19$, $E = 76 - 74 = 2$, ma allora $C + E = 19 + 2 = 21 > 20$, impossibile; se $C \\le 18$, $E \\le 72 - 74 = -2$, impossibile. Non esiste alcuna soluzione con $C + E \\le 20$. Il punteggio dichiarato è impossibile.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 839,
+    materia: "Logica",
+    difficolta: "medio-difficile",
+    domanda: "Tre numeri interi positivi $x, y, z$ soddisfano contemporaneamente le seguenti condizioni:\n1. Sono strettamente crescenti: $x < y < z$;\n2. La loro somma è 30: $x + y + z = 30$;\n3. La differenza tra il massimo e il minimo è pari a 2 ($z - x = 2$).\nQual è il valore del prodotto $x \\times y \\times z$?",
+    rispostaCorretta: "990",
+    risposteErrate: [
+          "1000",
+          "960",
+          "720",
+          "840"
+    ],
+    spiegazione: "Dato che $x, y, z$ sono interi con $x < y < z$ e $z - x = 2$, l’unico intero compreso strettamente tra $x$ e $x+2$ è $y = x + 1$. I tre numeri sono quindi tre interi consecutivi: $x, x+1, x+2$. La loro somma è $x + (x+1) + (x+2) = 3x + 3 = 30 \\implies 3x = 27 \\implies x = 9$. Ne segue che i tre numeri sono univocamente $x = 9, y = 10, z = 11$. Il loro prodotto è $9 \\times 10 \\times 11 = 990$.",
+    fonte: 'Lotto L4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  }
 ];
 
 export default questionBank;

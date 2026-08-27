@@ -42,19 +42,19 @@ function makeMockQuestion(id, materia) {
   };
 }
 
-// ─── 1. BANCA DATI FISICA (782 RECORD) ───
-section('1. Banca Dati Fisica (782 Record)');
+// ─── 1. BANCA DATI FISICA (834 RECORD) ───
+section('1. Banca Dati Fisica (834 Record)');
 check(Array.isArray(questionBank), 'questionBank è un array');
-check(questionBank.length === 782, `questionBank contiene esattamente 782 record fisici (trovati: ${questionBank.length})`);
+check(questionBank.length === 834, `questionBank contiene esattamente 834 record fisici (trovati: ${questionBank.length})`);
 
 const allAllQuestions = await getAllQuestions();
-check(allAllQuestions.length === 782, `getAllQuestions() restituisce tutti i 782 record fisici (trovati: ${allAllQuestions.length})`);
+check(allAllQuestions.length === 834, `getAllQuestions() restituisce tutti i 834 record fisici (trovati: ${allAllQuestions.length})`);
 
 const allIds = questionBank.map((q) => q.id);
 const uniqueIds = new Set(allIds);
-check(uniqueIds.size === 782, `Tutti i 782 ID sono univoci (trovati: ${uniqueIds.size})`);
+check(uniqueIds.size === 834, `Tutti i 834 ID sono univoci (trovati: ${uniqueIds.size})`);
 check(Math.min(...allIds) === 1, `ID minimo = 1 (trovato: ${Math.min(...allIds)})`);
-check(Math.max(...allIds) === 787, `ID massimo = 787 (trovato: ${Math.max(...allIds)})`);
+check(Math.max(...allIds) === 839, `ID massimo = 839 (trovato: ${Math.max(...allIds)})`);
 
 // Preservazione buchi storici
 const historicalHoles = [2, 18, 25, 78, 202];
@@ -1040,6 +1040,95 @@ check(
   'Quesito L3-50 (ID 787, MD) matrice logica completa con E in Rust su P3'
 );
 
+// ─── 2I. CENSIMENTO LOTTO L4 (ID 788–839) ───
+section('2I. Censimento e Validazione Lotto L4 (ID 788–839)');
+const l4Questions = questionBank.filter((q) => q.id >= 788 && q.id <= 839);
+check(l4Questions.length === 52, `Lotto L4: esattamente 52 quesiti nel range ID 788–839 (trovati: ${l4Questions.length})`);
+
+const l4AllLogic = l4Questions.every((q) => q.materia === 'Logica');
+check(l4AllLogic, 'Tutti i 52 quesiti di L4 appartengono alla materia Logica');
+
+const l4OptionsCheck = l4Questions.every((q) => (
+  typeof q.rispostaCorretta === 'string' &&
+  Array.isArray(q.risposteErrate) &&
+  q.risposteErrate.length === 4
+));
+check(l4OptionsCheck, 'Tutti i 52 quesiti di L4 hanno 1 risposta corretta e 4 errate (5 opzioni totali)');
+
+const l4StatsZeroed = l4Questions.every((q) => (
+  q.numeroVolteProposta === 0 &&
+  q.numeroRisposteCorrette === 0 &&
+  q.numeroRisposteErrate === 0
+));
+check(l4StatsZeroed, 'Tutti i 52 quesiti di L4 hanno i contatori statistici azzerati (numeroVolteProposta=0, corrette=0, errate=0)');
+
+const l4FonteCheck = l4Questions.every((q) => (
+  typeof q.fonte === 'string' &&
+  q.fonte.includes('Lotto L4 del progetto') &&
+  !q.fonte.toLowerCase().includes('cisia')
+));
+check(l4FonteCheck, 'Tutti i 52 quesiti di L4 indicano chiaramente "Lotto L4 del progetto" nella fonte senza attribuzioni esterne');
+
+const l4NoLegacyFlag = l4Questions.every((q) => q.excludedFromTolcPool !== true);
+check(l4NoLegacyFlag, 'Nessun quesito di L4 possiede excludedFromTolcPool: true (tutti nel pool attivo)');
+
+const l4MfCount = l4Questions.filter((q) => q.difficolta === 'medio-facile').length;
+const l4MCount = l4Questions.filter((q) => q.difficolta === 'medio').length;
+const l4MdCount = l4Questions.filter((q) => q.difficolta === 'medio-difficile').length;
+check(
+  l4MfCount === 4 && l4MCount === 44 && l4MdCount === 4,
+  `Distribuzione difficoltà L4 esatta: 4 MF, 44 M, 4 MD (trovati: ${l4MfCount} MF, ${l4MCount} M, ${l4MdCount} MD)`
+);
+
+// Regression checks specifici su quesiti L4
+const q788 = questionBank.find((q) => q.id === 788);
+check(
+  Boolean(q788 && q788.difficolta === 'medio-facile' && q788.domanda.includes('classe di 100 studenti') && q788.rispostaCorretta === '15'),
+  'Quesito L4-01 (ID 788, MF) inclusione-esclusione a 2 insiemi con risposta 15'
+);
+
+const q800 = questionBank.find((q) => q.id === 800);
+check(
+  Boolean(q800 && q800.difficolta === 'medio-difficile' && q800.domanda.includes('binari intrecciati') && q800.rispostaCorretta === '243'),
+  'Quesito L4-13 (ID 800, MD) sequenza a due binari intrecciati con risposta 243'
+);
+
+const q801 = questionBank.find((q) => q.id === 801);
+check(
+  Boolean(q801 && q801.difficolta === 'medio-facile' && q801.domanda.includes('serie numerica') && q801.rispostaCorretta === '37'),
+  'Quesito L4-14 (ID 801, MF) successione quadratica n^2+1 con risposta 37'
+);
+
+const q813 = questionBank.find((q) => q.id === 813);
+check(
+  Boolean(q813 && q813.difficolta === 'medio-difficile' && q813.domanda.includes('parzialmente ordinato') && q813.rispostaCorretta.includes('Massimo assoluto: $36$')),
+  'Quesito L4-26 (ID 813, MD) poset per divisibilità con minimali {2,3} e max 36'
+);
+
+const q814 = questionBank.find((q) => q.id === 814);
+check(
+  Boolean(q814 && q814.difficolta === 'medio-facile' && q814.domanda.includes('stessa altezza') && q814.rispostaCorretta.includes('relazione di equivalenza')),
+  'Quesito L4-27 (ID 814, MF) proprietà di relazione di equivalenza su altezza'
+);
+
+const q826 = questionBank.find((q) => q.id === 826);
+check(
+  Boolean(q826 && q826.difficolta === 'medio-difficile' && q826.rispostaCorretta === '$\\frac{3}{7}$' && q826.risposteErrate.includes('$\\frac{4}{7}$') && !q826.risposteErrate.includes('$\\frac{6}{15}$')),
+  'Quesito L4-39 (ID 826, MD) probabilità condizionata con 3/7, distrattore 4/7 e assenza del vecchio 6/15'
+);
+
+const q827 = questionBank.find((q) => q.id === 827);
+check(
+  Boolean(q827 && q827.difficolta === 'medio-facile' && q827.domanda.includes('40 carte') && q827.rispostaCorretta === '$20\\%$'),
+  'Quesito L4-40 (ID 827, MF) probabilità eventi incompatibili pari a 20%'
+);
+
+const q839 = questionBank.find((q) => q.id === 839);
+check(
+  Boolean(q839 && q839.difficolta === 'medio-difficile' && q839.domanda.includes('strettamente crescenti') && q839.rispostaCorretta === '990'),
+  'Quesito L4-52 (ID 839, MD) terna intera consecutiva con prodotto 990'
+);
+
 // ─── 3. ISOLAMENTO 35 RECORD LEGACY ED ESCLUSIONE ───
 section('3. Isolamento 35 Record Legacy (excludedFromTolcPool: true)');
 const legacyRecords = questionBank.filter((q) => q.excludedFromTolcPool === true);
@@ -1092,13 +1181,13 @@ check(typeof id315FromCatalog?.brano === 'string' && id315FromCatalog.brano.leng
 const id315Raw = getRawQuestionById(315);
 check(Boolean(id315Raw && id315Raw.id === 315), 'ID 315 è recuperabile tramite getRawQuestionById(315)');
 
-// ─── 5. POOL ATTIVO 747 QUESITI E RIPARTIZIONE PER MATERIA ───
-section('5. Pool Attivo 747 Quesiti e Ripartizione per Materia');
-check(activeQuestionsFromService.length === 747, `getQuestions() restituisce esattamente 747 quesiti attivi (trovati: ${activeQuestionsFromService.length})`);
+// ─── 5. POOL ATTIVO 799 QUESITI E RIPARTIZIONE PER MATERIA ───
+section('5. Pool Attivo 799 Quesiti e Ripartizione per Materia');
+check(activeQuestionsFromService.length === 799, `getQuestions() restituisce esattamente 799 quesiti attivi (trovati: ${activeQuestionsFromService.length})`);
 
 const activeSubjects = {
   Matematica: 250,
-  Logica: 198,
+  Logica: 250,
   Scienze: 250,
   'Comprensione verbale': 49
 };
@@ -1109,12 +1198,12 @@ activeQuestionsFromService.forEach((q) => {
 });
 
 check(activeDistribution['Matematica'] === 250, `Matematica attiva: 250 (trovati: ${activeDistribution['Matematica']})`);
-check(activeDistribution['Logica'] === 198, `Logica attiva: 198 (trovati: ${activeDistribution['Logica']})`);
+check(activeDistribution['Logica'] === 250, `Logica attiva: 250 (trovati: ${activeDistribution['Logica']})`);
 check(activeDistribution['Scienze'] === 250, `Scienze attiva: 250 (trovati: ${activeDistribution['Scienze']})`);
 check(activeDistribution['Comprensione verbale'] === 49, `Comprensione verbale attiva: 49 (trovati: ${activeDistribution['Comprensione verbale']})`);
 
 const totalActiveSum = Object.values(activeDistribution).reduce((sum, v) => sum + v, 0);
-check(totalActiveSum === 747, `Somma per materia pool attivo = 747 (250 + 198 + 250 + 49 = ${totalActiveSum})`);
+check(totalActiveSum === 799, `Somma per materia pool attivo = 799 (250 + 250 + 250 + 49 = ${totalActiveSum})`);
 
 const serviceMaterie = (await getMaterie()).sort();
 check(serviceMaterie.length === 4, `getMaterie() restituisce esattamente 4 materie attive (${serviceMaterie.join(', ')})`);
@@ -1238,11 +1327,12 @@ const s5Count = 42;
 const l1Count = 50;
 const l2Count = 50;
 const l3Count = 50;
+const l4Count = 52;
 const physicalTotal = questionBank.length;
 const legacyCount = questionBank.filter((q) => q.excludedFromTolcPool === true).length;
 const activeTotal = activeQuestionsFromService.length;
 
-check(baseCount + m1Count + m2Count + m3Count + m4Count + m5Count + s1Count + s2Count + s3Count + s4Count + s5Count + l1Count + l2Count + l3Count === physicalTotal, `Uguaglianza fisica verificata: ${baseCount} (base) + ${m1Count} (M1) + ${m2Count} (M2) + ${m3Count} (M3) + ${m4Count} (M4) + ${m5Count} (M5) + ${s1Count} (S1) + ${s2Count} (S2) + ${s3Count} (S3) + ${s4Count} (S4) + ${s5Count} (S5) + ${l1Count} (L1) + ${l2Count} (L2) + ${l3Count} (L3) = ${physicalTotal} (fisici)`);
+check(baseCount + m1Count + m2Count + m3Count + m4Count + m5Count + s1Count + s2Count + s3Count + s4Count + s5Count + l1Count + l2Count + l3Count + l4Count === physicalTotal, `Uguaglianza fisica verificata: ${baseCount} (base) + ${m1Count} (M1) + ${m2Count} (M2) + ${m3Count} (M3) + ${m4Count} (M4) + ${m5Count} (M5) + ${s1Count} (S1) + ${s2Count} (S2) + ${s3Count} (S3) + ${s4Count} (S4) + ${s5Count} (S5) + ${l1Count} (L1) + ${l2Count} (L2) + ${l3Count} (L3) + ${l4Count} (L4) = ${physicalTotal} (fisici)`);
 check(physicalTotal - legacyCount === activeTotal, `Uguaglianza attiva verificata: ${physicalTotal} (fisici) - ${legacyCount} (legacy) = ${activeTotal} (attivi)`);
 
 console.log(`\nRisultato testQuiz.mjs: ${passed} test passati, ${failed} falliti.`);

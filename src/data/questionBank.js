@@ -17031,6 +17031,808 @@ const questionBank = [
     numeroRisposteErrate: 0,
     brano: "La scuola della scelta pubblica (Public Choice) applica gli strumenti analitici dell’economia allo studio dei comportamenti istituzionali e politici, superando l’assunto ingenuo che gli attori pubblici agiscano sempre e disinteressatamente in vista del bene comune. Politici, burocrati ed elettori rispondono anch’essi a strutture di incentivi razionali: i primi cercano la massimizzazione del consenso elettorale per conservare il potere, i secondi mirano all’espansione del bilancio e delle competenze del proprio ufficio. Uno dei fenomeni cardine indagati da tale approccio è l’asimmetria tra benefici concentrati e costi diffusi nelle politiche pubbliche. Quando un provvedimento normativo garantisce vantaggi consistenti e mirati a una specifica categoria professionale ben organizzata, ma distribuisce l’onere finanziario su milioni di contribuenti in quote impercettibili per il singolo, il gruppo beneficiario eserciterà una pressione lobbistica fortissima, mentre la maggioranza dei cittadini non avrà alcun incentivo economico razionale a mobilitarsi per contrastarlo.",
     titoloBrano: "La teoria della scelta pubblica e i trade-off della decisione politica",
+  },
+
+  // ─── LOTTO C4: COMPRENSIONE VERBALE — TESTI SOCIOECONOMICI E UMANISTICI (ID 960–999) ───
+  {
+    id: 960,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Reti associative e tipologie di capitale sociale',
+    brano: 'Nell’analisi sociologica contemporanea, il capitale sociale è definito come l’insieme delle relazioni fiduciarie, delle norme di reciprocità e delle reti civiche che facilitano l’azione cooperativa all’interno di una collettività. Gli studiosi distinguono solitamente due manifestazioni principali di tale risorsa: il capitale sociale di tipo "bonding" (o vincolante) e quello di tipo "bridging" (o connettivo). Il primo si sviluppa tra individui omogenei per appartenenza etnica, classe sociale o fede religiosa, rafforzando la solidarietà interna e la lealtà comunitaria, ma rischiando di generare chiusura ed esclusione verso l’esterno. Il secondo, al contrario, si costituisce attraverso legami trasversali tra persone e gruppi eterogenei per estrazione sociale e orientamento culturale. Questa forma aperta di capitale sociale risulta essenziale nelle società complesse, poiché favorisce la coesione democratica, la tolleranza e la circolazione delle opportunità economiche oltre i confini del proprio nucleo ristretto.',
+    domanda: 'In che cosa si differenzia il capitale sociale di tipo "bridging" da quello di tipo "bonding" secondo il brano?',
+    rispostaCorretta: 'Nel fatto di stabilire legami fiduciari trasversali tra gruppi sociali eterogenei anziché limitarsi a rafforzare la solidarietà interna a un gruppo omogeneo',
+    risposteErrate: [
+      'Nel richiedere l’intervento esclusivo dello Stato per vietare qualsiasi forma di associazione privata',
+      'Nell’impedire ai cittadini di comunicare con persone esterne alla propria comunità locale',
+      'Nel garantire un rendimento finanziario prefissato a chi investe in obbligazioni bancarie',
+      'Nel basarsi unicamente su transazioni economiche stipulate in moneta estera tra grandi imprese'
+    ],
+    spiegazione: 'Il testo contrappone chiaramente il bonding (sviluppato tra individui omogenei che rafforza la solidarietà interna ma rischia chiusura) al bridging, che «si costituisce attraverso legami trasversali tra persone e gruppi eterogenei per estrazione sociale e orientamento culturale».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 961,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Reti associative e tipologie di capitale sociale',
+    brano: 'Nell’analisi sociologica contemporanea, il capitale sociale è definito come l’insieme delle relazioni fiduciarie, delle norme di reciprocità e delle reti civiche che facilitano l’azione cooperativa all’interno di una collettività. Gli studiosi distinguono solitamente due manifestazioni principali di tale risorsa: il capitale sociale di tipo "bonding" (o vincolante) e quello di tipo "bridging" (o connettivo). Il primo si sviluppa tra individui omogenei per appartenenza etnica, classe sociale o fede religiosa, rafforzando la solidarietà interna e la lealtà comunitaria, ma rischiando di generare chiusura ed esclusione verso l’esterno. Il secondo, al contrario, si costituisce attraverso legami trasversali tra persone e gruppi eterogenei per estrazione sociale e orientamento culturale. Questa forma aperta di capitale sociale risulta essenziale nelle società complesse, poiché favorisce la coesione democratica, la tolleranza e la circolazione delle opportunità economiche oltre i confini del proprio nucleo ristretto.',
+    domanda: 'Quale rischio sociale può comportare la presenza esclusiva di capitale sociale di tipo "bonding" in una comunità?',
+    rispostaCorretta: 'La frammentazione della collettività e l’irrigidimento di barriere difensive ed escludenti verso coloro che non appartengono al gruppo',
+    risposteErrate: [
+      'L’azzeramento totale della fedeltà e dell’aiuto reciproco tra i membri interni della famiglia',
+      'La rapida trasformazione della comunità in una metropoli cosmopolita senza legami tradizionali',
+      'L’obbligo per tutti gli individui di aderire simultaneamente a molteplici culti religiosi differenti',
+      'La scomparsa di ogni regola morale o comportamentale all’interno del gruppo sociale'
+    ],
+    spiegazione: 'Il brano sottolinea esplicitamente che il capitale bonding, pur rafforzando la solidarietà interna, comporta il pericolo «di generare chiusura ed esclusione verso l’esterno», ostacolando i legami con il resto della società.',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 962,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Razionalizzazione industriale e parcellizzazione del lavoro',
+    brano: 'La rivoluzione organizzativa avviata dal taylorismo e consolidata dalla catena di montaggio fordista si basava su un principio cardine: la scomposizione analitica di ogni processo produttivo complesso in una sequenza di mansioni elementari, rigidamente temporizzate e standardizzate. Attraverso la netta separazione tra la funzione dirigenziale di progettazione (il "pensiero") e quella esecutiva affidata alla manodopera operaia (il "fare"), il modello industriale ottenne straordinari incrementi di produttività ed economie di scala senza precedenti. Ciononostante, questa iper-razionalizzazione impose un gravoso costo umano. L’operaio, privato di qualsiasi autonomia decisionale e ridotto a mero ingranaggio subordinato al ritmo meccanico del nastro trasportatore, sperimentava una profonda alienazione dal prodotto del proprio lavoro e una sistematica dequalificazione professionale.',
+    domanda: 'Qual era il presupposto organizzativo fondamentale del modello taylorista-fordista descritto nel testo?',
+    rispostaCorretta: 'La divisione rigorosa tra l’ideazione direzionale del processo e l’esecuzione frammentata e standardizzata delle mansioni',
+    risposteErrate: [
+      'L’affidamento della gestione aziendale e delle decisioni strategiche a comitati composti da soli operai',
+      'La costante variazione artigianale dei metodi di lavoro decisa giorno per giorno dal singolo lavoratore',
+      'La rinuncia consapevole a qualsiasi tecnologia meccanizzata per preservare i mestieri tradizionali',
+      'L’eliminazione definitiva di ogni controllo gerarchico e orario all’interno della fabbrica'
+    ],
+    spiegazione: 'Il testo indica esplicitamente come presupposto «la netta separazione tra la funzione dirigenziale di progettazione... e quella esecutiva affidata alla manodopera operaia», articolata in mansioni standardizzate.',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 963,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio-difficile',
+    titoloBrano: 'Razionalizzazione industriale e parcellizzazione del lavoro',
+    brano: 'La rivoluzione organizzativa avviata dal taylorismo e consolidata dalla catena di montaggio fordista si basava su un principio cardine: la scomposizione analitica di ogni processo produttivo complesso in una sequenza di mansioni elementari, rigidamente temporizzate e standardizzate. Attraverso la netta separazione tra la funzione dirigenziale di progettazione (il "pensiero") e quella esecutiva affidata alla manodopera operaia (il "fare"), il modello industriale ottenne straordinari incrementi di produttività ed economie di scala senza precedenti. Ciononostante, questa iper-razionalizzazione impose un gravoso costo umano. L’operaio, privato di qualsiasi autonomia decisionale e ridotto a mero ingranaggio subordinato al ritmo meccanico del nastro trasportatore, sperimentava una profonda alienazione dal prodotto del proprio lavoro e una sistematica dequalificazione professionale.',
+    domanda: 'Quale delle seguenti deduzioni sintetizza il trade-off strutturale insito nel modello industriale descritto?',
+    rispostaCorretta: 'L’ottimizzazione quantitativa e la riduzione dei tempi produttivi sono state ottenute al prezzo dell’impoverimento del contenuto professionale e della subordinazione umana del lavoratore',
+    risposteErrate: [
+      'L’adozione della catena di montaggio ha garantito l’immediata scomparsa di qualsiasi fabbrica di grandi dimensioni',
+      'La parcellizzazione del lavoro ha permesso agli operai di acquisire una padronanza completa dell’intero ciclo ingegneristico',
+      'Gli incrementi di produttività hanno reso superfluo il calcolo dei costi di produzione da parte della dirigenza',
+      'La dequalificazione della manodopera ha impedito alle imprese di raggiungere economie di scala'
+    ],
+    spiegazione: 'Il testo contrappone i guadagni di produttività ed economie di scala al prezzo umano dell’alienazione, della perdita di autonomia decisionale e della dequalificazione professionale dell’operaio.',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 964,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Gentrificazione e trasformazioni dello spazio metropolitano',
+    brano: 'Il termine gentrificazione descrive la complessa dinamica urbana attraverso cui quartieri storicamente popolari o ex aree industriali degradate vengono progressivamente risanati, riqualificati e colonizzati da nuovi residenti appartenenti a ceti medi o medio-alti dotati di elevato capitale culturale ed economico. L’arrivo di questa nuova popolazione stimola investimenti immobiliari, l’apertura di esercizi commerciali di fascia alta e il miglioramento del decoro urbano; tuttavia, produce al contempo un rapido incremento dei valori fondiari e dei canoni di locazione. I residenti storici a basso reddito e le piccole botteghe tradizionali, non essendo più in grado di sostenere i costi dell’abitare e della gestione commerciale, sono progressivamente costretti a trasferirsi verso periferie sempre più distanti e prive di servizi essenziali, generando fenomeni di segregazione socio-spaziale.',
+    domanda: 'Qual è il fattore scatenante del processo di gentrificazione secondo l’analisi del testo?',
+    rispostaCorretta: 'La riqualificazione di aree popolari o industriali degradate e il conseguente insediamento di ceti a reddito e istruzione medio-alti',
+    risposteErrate: [
+      'Il trasferimento forzato di tutte le fabbriche pesanti nei centri storici monumentali',
+      'Il blocco permanente di qualsiasi investimento privato nel settore dell’edilizia residenziale',
+      'La fuga generalizzata della popolazione benestante dalle aree urbane verso zone montane isolate',
+      'L’azzeramento totale delle rendite fondiarie e dei canoni di locazione in tutta la città'
+    ],
+    spiegazione: 'Il brano definisce la gentrificazione come la trasformazione in cui quartieri popolari degradati «vengono progressivamente risanati, riqualificati e colonizzati da nuovi residenti appartenenti a ceti medi o medio-alti».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 965,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Gentrificazione e trasformazioni dello spazio metropolitano',
+    brano: 'Il termine gentrificazione descrive la complessa dinamica urbana attraverso cui quartieri storicamente popolari o ex aree industriali degradate vengono progressivamente risanati, riqualificati e colonizzati da nuovi residenti appartenenti a ceti medi o medio-alti dotati di elevato capitale culturale ed economico. L’arrivo di questa nuova popolazione stimola investimenti immobiliari, l’apertura di esercizi commerciali di fascia alta e il miglioramento del decoro urbano; tuttavia, produce al contempo un rapido incremento dei valori fondiari e dei canoni di locazione. I residenti storici a basso reddito e le piccole botteghe tradizionali, non essendo più in grado di sostenere i costi dell’abitare e della gestione commerciale, sono progressivamente costretti a trasferirsi verso periferie sempre più distanti e prive di servizi essenziali, generando fenomeni di segregazione socio-spaziale.',
+    domanda: 'Quale impatto negativo subiscono gli abitanti originari del quartiere a causa della gentrificazione?',
+    rispostaCorretta: 'L’espulsione indiretta dal quartiere d’origine verso periferie marginali a causa dell’insostenibilità dei nuovi costi abitativi',
+    risposteErrate: [
+      'L’obbligo legale di acquistare immediatamente gli immobili di lusso del quartiere',
+      'La perdita totale dei diritti civili e politici all’interno dell’ordinamento nazionale',
+      'La chiusura forzata di tutti gli uffici pubblici situati nei comuni limitrofi',
+      'L’impossibilità materiale di utilizzare il denaro contante per gli acquisti quotidiani'
+    ],
+    spiegazione: 'Il testo sottolinea che i residenti storici a basso reddito, non potendo sostenere i rincari di affitti e spese, «sono progressivamente costretti a trasferirsi verso periferie sempre più distanti e prive di servizi».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 966,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'L’economia del dono e la teoria della reciprocità',
+    brano: 'Nel suo celebre saggio antropologico sul dono, Marcel Mauss ha dimostrato che nelle società arcaiche lo scambio di beni non rispondeva a una logica puramente utilitaristica o commerciale, bensì a una complessa struttura sociale fondata sul triplice obbligo: dare, ricevere e ricambiare. Il dono non è mai una prestazione totalmente gratuita o disinteressata; esso rappresenta un "fatto sociale totale", in cui si intrecciano simultaneamente dimensioni religiose, giuridiche, economiche e morali. Donare un bene significa cedere una parte della propria persona e impegnare l’onore del ricevente, il quale, accettando il regalo, contrae un debito simbolico che potrà essere estinto unicamente attraverso un contro-dono di valore pari o superiore. In tale prospettiva, la circolazione cerimoniale delle cose funge da potente dispositivo relazionale: trasforma potenziali rivalità violente in patti di cooperazione e mantiene attive le alleanze comunitarie.',
+    domanda: 'In base al testo, quale funzione primaria svolgeva lo scambio cerimoniale di doni nelle società studiate da Mauss?',
+    rispostaCorretta: 'Istituire e consolidare patti di alleanza e relazioni di reciprocità per prevenire conflitti distruttivi',
+    risposteErrate: [
+      'Permettere l’accumulazione illimitata di moneta metallica da parte di singoli banchieri privati',
+      'Garantire l’isolamento autarchico e autosufficiente di ciascun individuo dal resto della tribù',
+      'Sostituire la totalità delle leggi consuetudinarie con contratti d’affitto notarili scritti',
+      'Eliminare qualsiasi forma di interazione tra villaggi confinanti'
+    ],
+    spiegazione: 'Il testo evidenzia che la circolazione dei doni «trasforma potenziali rivalità violente in patti di cooperazione e mantiene attive le alleanze comunitarie», fungendo da dispositivo di legame relazionale.',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 967,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio-difficile',
+    titoloBrano: 'L’economia del dono e la teoria della reciprocità',
+    brano: 'Nel suo celebre saggio antropologico sul dono, Marcel Mauss ha dimostrato che nelle società arcaiche lo scambio di beni non rispondeva a una logica puramente utilitaristica o commerciale, bensì a una complessa struttura sociale fondata sul triplice obbligo: dare, ricevere e ricambiare. Il dono non è mai una prestazione totalmente gratuita o disinteressata; esso rappresenta un "fatto sociale totale", in cui si intrecciano simultaneamente dimensioni religiose, giuridiche, economiche e morali. Donare un bene significa cedere una parte della propria persona e impegnare l’onore del ricevente, il quale, accettando il regalo, contrae un debito simbolico che potrà essere estinto unicamente attraverso un contro-dono di valore pari o superiore. In tale prospettiva, la circolazione cerimoniale delle cose funge da potente dispositivo relazionale: trasforma potenziali rivalità violente in patti di cooperazione e mantiene attive le alleanze comunitarie.',
+    domanda: 'Quale delle seguenti affermazioni interpreta correttamente la natura del dono come «fatto sociale totale»?',
+    rispostaCorretta: 'Il dono è una pratica che coinvolge simultaneamente la sfera economica, simbolica, morale e relazionale della comunità, superando la dicotomia tra puro disinteresse e mero calcolo mercantile',
+    risposteErrate: [
+      'Il dono è un reato economico punito con l’esilio temporaneo del donatore da parte dell’assemblea dei capi',
+      'Il dono coincide perfettamente con la compravendita a saldo regolata da listini ufficiali di borsa',
+      'Il dono è un atto puramente istintivo e privo di qualsiasi significato culturale o convenzione sociale',
+      'Il fatto sociale totale implica che il dono sia riservato unicamente alle cerimonie funebri'
+    ],
+    spiegazione: 'Il testo definisce il fatto sociale totale come un intreccio in cui «si intrecciano simultaneamente dimensioni religiose, giuridiche, economiche e morali», mostrando come non sia né mera gratuità ingenua né scambio mercantile astratto.',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 968,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Politiche di welfare e disincentivi all’occupazione',
+    brano: 'Nella progettazione dei moderni sistemi di sicurezza sociale, una delle sfide più complesse risiede nell’evitare la cosiddetta "trappola della povertà". Questo fenomeno distorsivo si manifesta prevalentemente nei programmi assistenziali ad accesso selettivo (means-tested), in cui l’erogazione del sussidio pubblico è subordinata alla condizione che il reddito del beneficiario non superi una determinata soglia critica. Qualora l’accettazione di un lavoro a bassa retribuzione o a tempo parziale comporti l’immediata e integrale decadenza del beneficio economico e delle relative agevolazioni accessorie, il lavoratore si trova di fronte a un’aliquota marginale effettiva implicita prossima o superiore al cento per cento: il reddito netto complessivo derivante dall’occupazione risulta pari o inferiore a quello garantito dall’inazione assistita. Per ovviare a tale esito perverso, le politiche contemporanee tendono a introdurre schemi a scalare (decalage), in cui il sussidio si riduce solo gradualmente all’aumentare del reddito da lavoro.',
+    domanda: 'Qual è la causa determinante della "trappola della povertà" secondo il testo?',
+    rispostaCorretta: 'La perdita immediata e totale del sussidio assistenziale al superamento della soglia di reddito, che annulla il guadagno netto derivante dall’ingresso nel mercato del lavoro',
+    risposteErrate: [
+      'L’eccessiva tassazione imposta alle grandi imprese multinazionali che riduce gli stipendi dirigenziali',
+      'Il divieto imposto ai beneficiari di sussidi di presentare la dichiarazione dei redditi annuale',
+      'L’obbligo per i lavoratori a tempo pieno di restituire allo Stato l’intero ammontare del proprio stipendio',
+      'La completa assenza di qualsiasi misura di previdenza sociale nelle democrazie moderne'
+    ],
+    spiegazione: 'Il brano illustra che la trappola scatta quando «l’accettazione di un lavoro... comporti l’immediata e integrale decadenza del beneficio», rendendo il reddito netto dal lavoro pari o inferiore al sussidio.',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 969,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Politiche di welfare e disincentivi all’occupazione',
+    brano: 'Nella progettazione dei moderni sistemi di sicurezza sociale, una delle sfide più complesse risiede nell’evitare la cosiddetta "trappola della povertà". Questo fenomeno distorsivo si manifesta prevalentemente nei programmi assistenziali ad accesso selettivo (means-tested), in cui l’erogazione del sussidio pubblico è subordinata alla condizione che il reddito del beneficiario non superi una determinata soglia critica. Qualora l’accettazione di un lavoro a bassa retribuzione o a tempo parziale comporti l’immediata e integrale decadenza del beneficio economico e delle relative agevolazioni accessorie, il lavoratore si trova di fronte a un’aliquota marginale effettiva implicita prossima o superiore al cento per cento: il reddito netto complessivo derivante dall’occupazione risulta pari o inferiore a quello garantito dall’inazione assistita. Per ovviare a tale esito perverso, le politiche contemporanee tendono a introdurre schemi a scalare (decalage), in cui il sussidio si riduce solo gradualmente all’aumentare del reddito da lavoro.',
+    domanda: 'Quale soluzione correttiva viene proposta nel finale del brano per preservare l’incentivo al lavoro?',
+    rispostaCorretta: 'L’adozione di un meccanismo di riduzione graduale del beneficio assistenziale man mano che cresce il reddito da lavoro',
+    risposteErrate: [
+      'L’eliminazione immediata e definitiva di ogni forma di welfare e di tutela sanitaria pubblica',
+      'La concessione dei sussidi assistenziali unicamente a chi dimostra di percepire stipendi elevati',
+      'L’obbligo di svolgere solo mansioni di volontariato non retribuito per poter mantenere il sussidio',
+      'Il raddoppio delle tasse sui consumi primari per scoraggiare l’inattività'
+    ],
+    spiegazione: 'Il passaggio finale spiega che per superare il problema si ricorre a «schemi a scalare (decalage), in cui il sussidio si riduce solo gradualmente all’aumentare del reddito da lavoro».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 970,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Prospettive antropologiche: dall’etnocentrismo al metodo relativista',
+    brano: 'L’etnocentrismo costituisce l’inclinazione spontanea e culturalmente condizionata a considerare i costumi, le credenze e le categorie concettuali del proprio gruppo di appartenenza come il metro di misura universale e normativo per giudicare le altre culture. Storicamente, questo atteggiamento ha generato gerarchie arbitrarie tra popoli "civili" e "barbari". In reazione a tale etnocentrismo dogmatico, l’antropologia moderna ha elaborato il principio del relativismo culturale come presupposto metodologico irrinunciabile per la ricerca sul campo: ogni credenza, rito o istituzione deve essere compreso e interpretato all’interno del contesto simbolico e storico specifico in cui si è originato, e non secondo parametri esterni. Tale postura metodologica non va tuttavia confusa con un relativismo etico estremo: comprendere le ragioni interne di una pratica sociale non equivale a giustificarla incondizionatamente sul piano morale, ma costituisce il passo preliminare necessario per evitare semplificazioni scioviniste.',
+    domanda: 'Qual è il nucleo definitorio dell’etnocentrismo secondo il testo?',
+    rispostaCorretta: 'La tendenza ad assumere i valori e le norme della propria cultura come criterio universale e superiore di valutazione degli altri popoli',
+    risposteErrate: [
+      'La convinzione che tutte le lingue umane abbiano una struttura grammaticale perfettamente identica',
+      'La scelta consapevole di abbandonare le proprie tradizioni per assimilarsi completamente a un’altra comunità',
+      'L’abitudine scientifica di studiare le culture umane esclusivamente attraverso test genetici',
+      'La volontà di tradurre tutti i testi letterari mondiali in un unico idioma artificiale'
+    ],
+    spiegazione: 'Il brano definisce l’etnocentrismo come «l’inclinazione... a considerare i costumi, le credenze e le categorie concettuali del proprio gruppo... come il metro di misura universale e normativo per giudicare le altre culture».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 971,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio-difficile',
+    titoloBrano: 'Prospettive antropologiche: dall’etnocentrismo al metodo relativista',
+    brano: 'L’etnocentrismo costituisce l’inclinazione spontanea e culturalmente condizionata a considerare i costumi, le credenze e le categorie concettuali del proprio gruppo di appartenenza come il metro di misura universale e normativo per giudicare le altre culture. Storicamente, questo atteggiamento ha generato gerarchie arbitrarie tra popoli "civili" e "barbari". In reazione a tale etnocentrismo dogmatico, l’antropologia moderna ha elaborato il principio del relativismo culturale come presupposto metodologico irrinunciabile per la ricerca sul campo: ogni credenza, rito o istituzione deve essere compreso e interpretato all’interno del contesto simbolico e storico specifico in cui si è originato, e non secondo parametri esterni. Tale postura metodologica non va tuttavia confusa con un relativismo etico estremo: comprendere le ragioni interne di una pratica sociale non equivale a giustificarla incondizionatamente sul piano morale, ma costituisce il passo preliminare necessario per evitare semplificazioni scioviniste.',
+    domanda: 'Quale distinzione fondamentale traccia l’autore tra «relativismo culturale metodologico» e «relativismo etico estremo»?',
+    rispostaCorretta: 'Il relativismo metodologico è uno strumento di comprensione contestuale non valutativo, che non implica la necessaria approvazione morale di qualsiasi consuetudine osservata',
+    risposteErrate: [
+      'Il relativismo etico impone di distruggere ogni manufatto storico che provenga da culture non occidentali',
+      'Il relativismo metodologico stabilisce che gli antropologi non devono mai viaggiare al di fuori dei propri confini nazionali',
+      'Il relativismo etico sostiene l’assoluta superiorità del diritto positivo europeo su qualsiasi altra norma',
+      'Le due forme di relativismo coincidono perfettamente e obbligano lo scienziato sociale a rinunciare a qualsiasi legge penale'
+    ],
+    spiegazione: 'L’autore chiarisce che il relativismo metodologico serve per comprendere pratiche nel loro contesto, ma «non va confuso con un relativismo etico estremo: comprendere le ragioni interne... non equivale a giustificarla incondizionatamente sul piano morale».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 972,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Capitale umano e disallineamento delle competenze nel lavoro moderno',
+    brano: 'Nelle economie avanzate incentrate sulla conoscenza e sulla trasformazione digitale, la competitività non dipende più primariamente dalla disponibilità di risorse materiali o manodopera indifferenziata a basso costo, bensì dall’accumulazione di capitale umano immateriale e competenze specializzate. In questo scenario in rapida evoluzione, i sistemi produttivi affrontano frequentemente il fenomeno del disallineamento delle competenze (skill mismatch): una marcata divergenza quantitativa e qualitativa tra le abilità formate dai percorsi di istruzione tradizionali e le competenze effettivamente richieste dalle imprese innovative. L’accelerazione tecnologica riduce l’orizzonte di validità delle nozioni tecniche specifiche, trasformando la formazione da evento concluso nella giovinezza a processo permanente (lifelong learning). Di conseguenza, accanto al sapere specialistico, assumono un valore cruciale le competenze cognitive trasversali, quali la capacità di apprendimento continuo, il pensiero critico e l’attitudine a risolvere problemi inediti in contesti complessi.',
+    domanda: 'In che cosa consiste il fenomeno del «disallineamento delle competenze» (skill mismatch) secondo il testo?',
+    rispostaCorretta: 'Nella discrepanza tra il tipo di preparazione fornita dai percorsi formativi tradizionali e i requisiti professionali richiesti dal sistema economico innovativo',
+    risposteErrate: [
+      'Nella perfetta coincidenza tra il numero di laureati in materie umanistiche e i posti di lavoro nel settore chimico',
+      'Nell’obbligo per tutti i dipendenti di cambiare mansione e azienda ogni tre mesi',
+      'Nella scomparsa totale dell’istruzione scolastica a vantaggio dell’addestramento militare',
+      'Nel divieto di utilizzare strumenti informatici all’interno delle aziende moderne'
+    ],
+    spiegazione: 'Il testo definisce lo skill mismatch come la «marcata divergenza quantitativa e qualitativa tra le abilità formate dai percorsi di istruzione tradizionali e le competenze effettivamente richieste dalle imprese innovative».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 973,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Capitale umano e disallineamento delle competenze nel lavoro moderno',
+    brano: 'Nelle economie avanzate incentrate sulla conoscenza e sulla trasformazione digitale, la competitività non dipende più primariamente dalla disponibilità di risorse materiali o manodopera indifferenziata a basso costo, bensì dall’accumulazione di capitale umano immateriale e competenze specializzate. In questo scenario in rapida evoluzione, i sistemi produttivi affrontano frequentemente il fenomeno del disallineamento delle competenze (skill mismatch): una marcata divergenza quantitativa e qualitativa tra le abilità formate dai percorsi di istruzione tradizionali e le competenze effettivamente richieste dalle imprese innovative. L’accelerazione tecnologica riduce l’orizzonte di validità delle nozioni tecniche specifiche, trasformando la formazione da evento concluso nella giovinezza a processo permanente (lifelong learning). Di conseguenza, accanto al sapere specialistico, assumono un valore cruciale le competenze cognitive trasversali, quali la capacità di apprendimento continuo, il pensiero critico e l’attitudine a risolvere problemi inediti in contesti complessi.',
+    domanda: 'Per quale motivo le competenze trasversali e l’apprendimento permanente acquistano un ruolo primario secondo il testo?',
+    rispostaCorretta: 'Perché la rapida obsolescenza delle conoscenze tecniche specifiche rende indispensabile la capacità di adattamento continuo e di auto-apprendimento',
+    risposteErrate: [
+      'Perché i datori di lavoro rifiutano qualsiasi dipendente che sappia leggere e scrivere',
+      'Perché le tecnologie digitali hanno reso le mansioni lavorative del tutto prive di contenuto intellettuale',
+      'Perché i diplomi universitari sono stati legalmente dichiarati privi di qualsiasi valore legale',
+      'Perché la competitività economica dipende esclusivamente dal possesso di giacimenti di carbone'
+    ],
+    spiegazione: 'Il brano afferma che «l’accelerazione tecnologica riduce l’orizzonte di validità delle nozioni tecniche specifiche, trasformando la formazione... in un processo permanente», valorizzando abilità trasversali come apprendimento continuo e problem solving.',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 974,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Oltre la tragedia dei beni comuni: la gestione comunitaria',
+    brano: 'La celebre tesi di Garrett Hardin sulla "tragedia dei beni comuni" sosteneva che le risorse condivise ad accesso libero (come pascoli, foreste o bacini idrici) fossero inevitabilmente condannate al sovrasfruttamento e all’esaurimento, poiché ciascun individuo, guidato dal proprio tornaconto razionale di breve termine, avrebbe tratto il massimo beneficio personale scaricando i costi della distruzione sull’intera collettività. Secondo questa visione tradizionale, le uniche soluzioni percorribili erano la privatizzazione dei beni o la rigida regolamentazione autoritaria statale. Tuttavia, le ricerche empiriche condotte dall’economista Elinor Ostrom hanno confutato l’universalità di questo dilemma. Attraverso lo studio comparato di comunità storiche di pescatori, pastori e agricoltori, la Ostrom ha dimostrato che gli utenti locali sono spesso capaci di ideare istituzioni autonome efficaci per gestire le risorse comuni senza ricorrere al mercato privato né allo Stato centrale, purché sussistano confini d’accesso chiari, regole condivise proporzionate ai bisogni locali e meccanismi di monitoraggio reciproco.',
+    domanda: 'Quale condizione è indispensabile per il successo dell’autogoverno dei beni comuni secondo gli studi di Elinor Ostrom?',
+    rispostaCorretta: 'L’esistenza di regole condivise adeguate al contesto locale, limiti chiari di accesso e sistemi di monitoraggio reciproco tra gli utenti',
+    risposteErrate: [
+      'La totale assenza di qualsiasi regola o controllo sull’uso delle risorse naturali',
+      'L’affidamento esclusivo della proprietà a una sola società per azioni privata a scopo di lucro',
+      'L’invio permanente dell’esercito statale per sorvegliare ogni singolo pascolo montano',
+      'Il divieto assoluto per gli abitanti locali di utilizzare le risorse idriche o forestali'
+    ],
+    spiegazione: 'Il brano chiarisce che l’autogoverno locale funziona «purché sussistano confini d’accesso chiari, regole condivise proporzionate ai bisogni locali e meccanismi di monitoraggio reciproco».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 975,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio-difficile',
+    titoloBrano: 'Oltre la tragedia dei beni comuni: la gestione comunitaria',
+    brano: 'La celebre tesi di Garrett Hardin sulla "tragedia dei beni comuni" sosteneva che le risorse condivise ad accesso libero (come pascoli, foreste o bacini idrici) fossero inevitabilmente condannate al sovrasfruttamento e all’esaurimento, poiché ciascun individuo, guidato dal proprio tornaconto razionale di breve termine, avrebbe tratto il massimo beneficio personale scaricando i costi della distruzione sull’intera collettività. Secondo questa visione tradizionale, le uniche soluzioni percorribili erano la privatizzazione dei beni o la rigida regolamentazione autoritaria statale. Tuttavia, le ricerche empiriche condotte dall’economista Elinor Ostrom hanno confutato l’universalità di questo dilemma. Attraverso lo studio comparato di comunità storiche di pescatori, pastori e agricoltori, la Ostrom ha dimostrato che gli utenti locali sono spesso capaci di ideare istituzioni autonome efficaci per gestire le risorse comuni senza ricorrere al mercato privato né allo Stato centrale, purché sussistano confini d’accesso chiari, regole condivise proporzionate ai bisogni locali e meccanismi di monitoraggio reciproco.',
+    domanda: 'Quale conseguenza teorica fondamentale scaturisce dalla confutazione apportata da Elinor Ostrom alla tesi di Hardin?',
+    rispostaCorretta: 'La dimostrazione che la dicotomia tra privatizzazione di mercato e controllo statale non esaurisce le modalità razionali ed efficaci di conservazione delle risorse comuni',
+    risposteErrate: [
+      'La prova definitiva che le risorse naturali sono illimitate e non necessitano di alcuna forma di gestione',
+      'L’obbligo di abolire per legge tutti i mercati economici in favore di un’economia di puro baratto arcaico',
+      'La dimostrazione che Hardin aveva ragione nel considerare gli esseri umani incapaci di qualsiasi accordo locale',
+      'L’abbandono di qualsiasi ricerca scientifica ed empirica in ambito economico e sociologico'
+    ],
+    spiegazione: 'La tesi di Ostrom scardina l’assunto tradizionale secondo cui «le uniche soluzioni percorribili erano la privatizzazione dei beni o la rigida regolamentazione autoritaria statale», rivelando l’efficacia di una terza via istituzionale comunitaria.',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 976,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Struttura dei riti di passaggio e dinamica della liminarità',
+    brano: 'Nell’analisi antropologica inaugurata da Arnold Van Gennep e approfondita da Victor Turner, i riti di passaggio rappresentano sequenze cerimoniali codificate che accompagnano il transito degli individui da una posizione sociale a un’altra (come nei riti di iniziazione all’età adulta, nei matrimoni o nelle investiture pubbliche). Tale percorso si articola invariabilmente in tre stadi successivi: separazione, margine (o fase liminare) e riaggregazione. La fase liminare costituisce il momento cruciale e più denso di significato: gli iniziandi vengono temporaneamente distaccati dal loro status precedente ma non hanno ancora acquisito quello successivo. In questa condizione liminare di "soglia" — in cui le gerarchie ordinarie e le distinzioni di ruolo risultano temporaneamente sospese —, i partecipanti sperimentano un sentimento profondo di uguaglianza e fratellanza indifferenziata (communitas), prima di essere reintegrati nell’ordine sociale con nuovi doveri e diritti riconosciuti dalla comunità.',
+    domanda: 'Quale tratto distintivo caratterizza la "fase liminare" all’interno dei riti di passaggio secondo il brano?',
+    rispostaCorretta: 'La temporanea sospensione dello status e delle gerarchie ordinarie in una condizione intermedia di transizione e uguaglianza tra gli iniziandi',
+    risposteErrate: [
+      'L’assegnazione immediata e definitiva dei massimi poteri politici al candidato più giovane',
+      'La definitiva cancellazione di qualsiasi regola sociale all’interno dell’intera comunità per sempre',
+      'L’obbligo per gli iniziandi di abbandonare permanentemente la propria lingua madre',
+      'La trasformazione del rito religioso in una transazione monetaria registrata presso un tribunale statale'
+    ],
+    spiegazione: 'Il testo descrive la fase liminare come la condizione in cui gli individui «vengono temporaneamente distaccati dal loro status precedente ma non hanno ancora acquisito quello successivo... in cui le gerarchie ordinarie e le distinzioni di ruolo risultano temporaneamente sospese».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 977,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Struttura dei riti di passaggio e dinamica della liminarità',
+    brano: 'Nell’analisi antropologica inaugurata da Arnold Van Gennep e approfondita da Victor Turner, i riti di passaggio rappresentano sequenze cerimoniali codificate che accompagnano il transito degli individui da una posizione sociale a un’altra (come nei riti di iniziazione all’età adulta, nei matrimoni o nelle investiture pubbliche). Tale percorso si articola invariabilmente in tre stadi successivi: separazione, margine (o fase liminare) e riaggregazione. La fase liminare costituisce il momento cruciale e più denso di significato: gli iniziandi vengono temporaneamente distaccati dal loro status precedente ma non hanno ancora acquisito quello successivo. In questa condizione liminare di "soglia" — in cui le gerarchie ordinarie e le distinzioni di ruolo risultano temporaneamente sospese —, i partecipanti sperimentano un sentimento profondo di uguaglianza e fratellanza indifferenziata (communitas), prima di essere reintegrati nell’ordine sociale con nuovi doveri e diritti riconosciuti dalla comunità.',
+    domanda: 'Qual è la funzione sociale dell’ultimo stadio rituale (la riaggregazione) descritto nel testo?',
+    rispostaCorretta: 'Reintegrare formalmente l’individuo nella struttura comunitaria con l’attribuzione del nuovo status sociale e dei relativi obblighi',
+    risposteErrate: [
+      'Espellere per sempre l’iniziando dalla società considerandolo pericoloso per l’ordine pubblico',
+      'Imporre che tutti i cittadini della tribù rimangano nella fase liminare senza mai assumere ruoli stabili',
+      'Cancellare ogni differenza di età o di competenza all’interno dell’organizzazione economica',
+      'Costringere la comunità a ripetere la cerimonia ogni giorno dall’inizio'
+    ],
+    spiegazione: 'Il brano chiarisce che la riaggregazione serve per essere «reintegrati nell’ordine sociale con nuovi doveri e diritti riconosciuti dalla comunità».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 978,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Architettura delle scelte e spinte gentili nelle decisioni pubbliche',
+    brano: 'L’economia comportamentale ha messo in discussione il postulato neoclassico dell’homo oeconomicus, dimostrando che le decisioni umane reali sono soggette a razionalità limitata, scorciatoie mentali (euristiche) ed errori sistematici (bias cognitivi). Partendo da queste evidenze, Richard Thaler e Cass Sunstein hanno elaborato la teoria del "paternalismo libertario" e l’approccio dei "nudge" (spinte gentili). L’idea centrale risiede nella progettazione consapevole dell’architettura delle scelte: modificare il modo in cui le opzioni sono presentate ai cittadini per incoraggiare comportamenti socialmente desiderabili (come il risparmio previdenziale, un’alimentazione sana o l’adesione alla donazione di organi) senza tuttavia proibire alcuna alternativa né alterare significativamente gli incentivi economici monetari. Un esempio classico è l’impostazione della scelta predefinita (default): impostare l’adesione automatica a un fondo pensione, lasciando al lavoratore la piena facoltà di revocare la sottoscrizione con un semplice clic, incrementa drasticamente i tassi di partecipazione rispettando l’autonomia individuale.',
+    domanda: 'Come opera una "spinta gentile" (nudge) secondo la definizione fornita nel testo?',
+    rispostaCorretta: 'Modifica la modalità di presentazione delle opzioni per orientare le decisioni verso esiti preferibili senza imporre divieti né sanzioni economiche',
+    risposteErrate: [
+      'Impedisce per legge ai cittadini di scegliere opzioni diverse da quella approvata dal governo',
+      'Applica multe finanziarie severissime a chiunque non adotti uno stile di vita salutare',
+      'Abolisce la proprietà privata imponendo la collettivizzazione forzata di tutti i risparmi',
+      'Elimina qualsiasi tipo di informazione sulle alternative disponibili per confondere i decisori'
+    ],
+    spiegazione: 'Il testo definisce il nudge come la modifica dell’architettura delle scelte volta a «incoraggiare comportamenti socialmente desiderabili... senza tuttavia proibire alcuna alternativa né alterare significativamente gli incentivi economici».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 979,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio-difficile',
+    titoloBrano: 'Architettura delle scelte e spinte gentili nelle decisioni pubbliche',
+    brano: 'L’economia comportamentale ha messo in discussione il postulato neoclassico dell’homo oeconomicus, dimostrando che le decisioni umane reali sono soggette a razionalità limitata, scorciatoie mentali (euristiche) ed errori sistematici (bias cognitivi). Partendo da queste evidenze, Richard Thaler e Cass Sunstein hanno elaborato la teoria del "paternalismo libertario" e l’approccio dei "nudge" (spinte gentili). L’idea centrale risiede nella progettazione consapevole dell’architettura delle scelte: modificare il modo in cui le opzioni sono presentate ai cittadini per incoraggiare comportamenti socialmente desiderabili (come il risparmio previdenziale, un’alimentazione sana o l’adesione alla donazione di organi) senza tuttavia proibire alcuna alternativa né alterare significativamente gli incentivi economici monetari. Un esempio classico è l’impostazione della scelta predefinita (default): impostare l’adesione automatica a un fondo pensione, lasciando al lavoratore la piena facoltà di revocare la sottoscrizione con un semplice clic, incrementa drasticamente i tassi di partecipazione rispettando l’autonomia individuale.',
+    domanda: 'Quale principio concettuale giustifica l’apparente paradosso dell’espressione «paternalismo libertario» nel brano?',
+    rispostaCorretta: 'L’intervento pubblico indirizza le persone verso il proprio benessere sfruttando la tendenza all’inerzia, pur mantenendo formalmente e praticamente aperta ogni libertà di scelta e recesso',
+    risposteErrate: [
+      'I cittadini vengono privati di ogni diritto di voto ma ricevono un sussidio monetario garantito',
+      'Lo Stato obbliga i singoli a seguire ordini militari ma permette loro di scegliere quale divisa indossare',
+      'Il governo vieta il commercio privato ma incentiva le donazioni volontarie alle casse comunali',
+      'Le istituzioni pubbliche rinunciano del tutto a raccogliere imposte confidando nella generosità individuale'
+    ],
+    spiegazione: 'Il termine coniuga "paternalismo" (indirizzare verso scelte benefiche mediante la scelta predefinita) e "libertario" (preservare la piena libertà di opt-out e di scelta alternativa senza costi o divieti).',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 980,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'L’industria culturale e la standardizzazione della coscienza',
+    brano: 'Nella riflessione critica elaborata da Theodor Adorno e Max Horkheimer, la nascita dell’industria culturale nelle società capitalistiche avanzate ha segnato la metamorfosi dell’arte da espressione autentica e disinteressata della creatività umana a merce seriale subordinata alle leggi della valorizzazione economica. Attraverso il cinema commerciale, la musica leggera, la radio e la pubblicità, i prodotti culturali vengono fabbricati secondo schemi standardizzati e formule narrative ripetitive, calibrate per soddisfare il minimo comune denominatore del pubblico di massa. Questa produzione seriale non risponde a bisogni genuini espressi autonomamente dalla società, ma genera essa stessa desideri artificiali e prevedibili. L’effetto sociale primario dell’industria culturale è la neutralizzazione del potenziale critico dell’individuo: offrendo un intrattenimento compensativo e privo di asperità, essa favorisce l’integrazione passiva delle masse nell’ordine economico costituito, trasformando il tempo libero in un prolungamento dell’assuefazione al lavoro alienato.',
+    domanda: 'In base al testo, quale trasformazione subisce l’opera d’arte con l’avvento dell’industria culturale?',
+    rispostaCorretta: 'Viene convertita in un bene di consumo seriale e standardizzato, subordinato ai meccanismi del mercato e del profitto economico',
+    risposteErrate: [
+      'Diventa uno strumento esclusivo per la contemplazione religiosa nei monasteri medievali',
+      'Viene protetta dalla censura statale tramite la distruzione di tutte le macchine tipografiche',
+      'Acquisisce una purezza estetica totalmente slegata da qualsiasi valore monetario o diffusione pubblica',
+      'Viene riservata unicamente alla fruizione gratuita da parte dei lavoratori non retribuiti'
+    ],
+    spiegazione: 'Il testo dichiara esplicitamente che l’arte subisce la «metamorfosi da espressione autentica e disinteressata... a merce seriale subordinata alle leggi della valorizzazione economica».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 981,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'L’industria culturale e la standardizzazione della coscienza',
+    brano: 'Nella riflessione critica elaborata da Theodor Adorno e Max Horkheimer, la nascita dell’industria culturale nelle società capitalistiche avanzate ha segnato la metamorfosi dell’arte da espressione autentica e disinteressata della creatività umana a merce seriale subordinata alle leggi della valorizzazione economica. Attraverso il cinema commerciale, la musica leggera, la radio e la pubblicità, i prodotti culturali vengono fabbricati secondo schemi standardizzati e formule narrative ripetitive, calibrate per soddisfare il minimo comune denominatore del pubblico di massa. Questa produzione seriale non risponde a bisogni genuini espressi autonomamente dalla società, ma genera essa stessa desideri artificiali e prevedibili. L’effetto sociale primario dell’industria culturale è la neutralizzazione del potenziale critico dell’individuo: offrendo un intrattenimento compensativo e privo di asperità, essa favorisce l’integrazione passiva delle masse nell’ordine economico costituito, trasformando il tempo libero in un prolungamento dell’assuefazione al lavoro alienato.',
+    domanda: 'Quale conseguenza sociale dell’intrattenimento di massa viene denunciata dagli autori della Scuola di Francoforte?',
+    rispostaCorretta: 'L’indebolimento dell’autonomia critica degli individui e la loro conformazione passiva all’assetto socioeconomico dominante',
+    risposteErrate: [
+      'L’esplosione incontrollata di rivolte popolari armate contro qualsiasi tipo di spettacolo televisivo',
+      'La scomparsa della lingua scritta a favore di una comunicazione basata esclusivamente su segnali di fumo',
+      'L’aumento repentino dell’orario di lavoro nelle industrie fino a 20 ore giornaliere per tutti i cittadini',
+      'La totale emancipazione degli operai dal controllo dei datori di lavoro'
+    ],
+    spiegazione: 'Il brano evidenzia come effetto primario «la neutralizzazione del potenziale critico dell’individuo... favorendo l’integrazione passiva delle masse nell’ordine economico costituito».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 982,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Capitale culturale e meccanismi di riproduzione sociale',
+    brano: 'Nell’indagine sociologica di Pierre Bourdieu, la disuguaglianza sociale non si trasmette unicamente attraverso l’eredità patrimoniale materiale (capitale economico), ma soprattutto attraverso la trasmissione invisibile del capitale culturale. Quest’ultimo si presenta sotto forma di competenze linguistiche elevate, familiarità con i codici dell’alta cultura, stili di consumo e abitudini cognitive interiorizzate precocemente all’interno dell’ambiente familiare d’origine. L’istituzione scolastica, presentandosi formalmente come neutrale e meritocratica, tende in realtà a valorizzare e premiare proprio quel patrimonio linguistico e simbolico che gli studenti delle classi agiate hanno acquisito per osmosi familiare, trattando come "doti o talenti naturali" ciò che è in verità il risultato di un privilegio di classe. In questo modo, il sistema educativo trasforma le disparità sociali pregresse in differenze di merito accademico certificato, legittimando e riproducendo nel tempo la stratificazione socioeconomica esistente.',
+    domanda: 'In che modo il capitale culturale influisce sul rendimento scolastico secondo la teoria di Bourdieu?',
+    rispostaCorretta: 'Fornisce agli studenti delle classi favorite competenze linguistiche e simboliche precoci che la scuola riconosce e premia come meriti individuali',
+    risposteErrate: [
+      'Garantisce il pagamento diretto in contanti dei docenti da parte delle famiglie per comprare i voti',
+      'Impedisce agli studenti agiati di frequentare le università pubbliche costringendoli all’istruzione privata',
+      'Abolisce l’insegnamento della lingua nazionale in favore di dialetti locali privi di grammatica',
+      'Consente di ottenere diplomi accademici senza aver mai sostenuto alcuna prova d’esame'
+    ],
+    spiegazione: 'Il testo spiega che la scuola premia il «patrimonio linguistico e simbolico che gli studenti delle classi agiate hanno acquisito per osmosi familiare, trattando come doti naturali ciò che è il risultato di un privilegio».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 983,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio-difficile',
+    titoloBrano: 'Capitale culturale e meccanismi di riproduzione sociale',
+    brano: 'Nell’indagine sociologica di Pierre Bourdieu, la disuguaglianza sociale non si trasmette unicamente attraverso l’eredità patrimoniale materiale (capitale economico), ma soprattutto attraverso la trasmissione invisibile del capitale culturale. Quest’ultimo si presenta sotto forma di competenze linguistiche elevate, familiarità con i codici dell’alta cultura, stili di consumo e abitudini cognitive interiorizzate precocemente all’interno dell’ambiente familiare d’origine. L’istituzione scolastica, presentandosi formalmente come neutrale e meritocratica, tende in realtà a valorizzare e premiare proprio quel patrimonio linguistico e simbolico che gli studenti delle classi agiate hanno acquisito per osmosi familiare, trattando come "doti o talenti naturali" ciò che è in verità il risultato di un privilegio di classe. In questo modo, il sistema educativo trasforma le disparità sociali pregresse in differenze di merito accademico certificato, legittimando e riproducendo nel tempo la stratificazione socioeconomica esistente.',
+    domanda: 'Quale tesi critica sulla neutralità della meritocrazia scolastica scaturisce dall’analisi del brano?',
+    rispostaCorretta: 'La valutazione scolastica formalmente paritaria occulta e legittima le asimmetrie di partenza, convertendo i privilegi culturali ereditati in presunta superiorità di merito',
+    risposteErrate: [
+      'Il sistema educativo premia sistematicamente solo gli allievi provenienti da famiglie a basso reddito',
+      'I titoli di studio non hanno alcuna influenza sulla collocazione lavorativa e sociale degli individui',
+      'Le famiglie povere posseggono un capitale culturale istituzionalizzato superiore a quello delle classi colte',
+      'L’uguaglianza formale di fronte agli esami garantisce da sola la totale cancellazione di ogni svantaggio ereditato'
+    ],
+    spiegazione: 'Il brano evidenzia che la scuola «trasforma le disparità sociali pregresse in differenze di merito accademico certificato, legittimando e riproducendo... la stratificazione socioeconomica», mostrando come la meritocrazia formale celi disuguaglianze di partenza.',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 984,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Transizione post-fordista e flessibilizzazione del lavoro',
+    brano: 'A partire dagli ultimi decenni del Novecento, la crisi del modello fordista ha aperto la strada al paradigma post-fordista della "produzione snella" (lean production) e del "just-in-time", imperniato sulla rapida adattabilità dei cicli produttivi alle continue fluttuazioni della domanda globale. L’abbandono dei grandi magazzini di scorte e della produzione di massa standardizzata ha imposto una radicale riorganizzazione della manodopera all’insegna della flessibilità funzionale, temporale e contrattuale. Nelle economie avanzate, questa trasformazione ha alimentato una crescente segmentazione del mercato del lavoro, strutturato attorno alla polarizzazione tra un nucleo ristretto di lavoratori stabili e altamente qualificati (insiders) — dotati di contratti a tempo indeterminato, benefit e percorsi di carriera — e una fascia periferica ed espansa di lavoratori precari, atipici o in somministrazione (outsiders), costretti a sostenere l’intero peso dell’incertezza economica e della discontinuità retributiva.',
+    domanda: 'Quale caratteristica distingue la produzione "just-in-time" post-fordista dal modello tradizionale precedente?',
+    rispostaCorretta: 'La capacità di adeguare tempestivamente i flussi produttivi alla domanda effettiva, eliminando l’accumulazione rigida di scorte di magazzino',
+    risposteErrate: [
+      'L’obbligo di produrre merci identiche in quantitativi illimitati senza considerare le vendite reali',
+      'La chiusura completa di tutti gli scambi commerciali con i mercati internazionali esteri',
+      'L’abbandono di qualsiasi macchinario elettronico in favore del lavoro manuale non specializzato',
+      'La concessione di contratti a vita e stipendi identici a tutti i cittadini senza distinzione'
+    ],
+    spiegazione: 'Il testo definisce il just-in-time come il sistema «imperniato sulla rapida adattabilità dei cicli produttivi alle continue fluttuazioni della domanda globale», caratterizzato dall’abbandono delle scorte rigide.',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 985,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Transizione post-fordista e flessibilizzazione del lavoro',
+    brano: 'A partire dagli ultimi decenni del Novecento, la crisi del modello fordista ha aperto la strada al paradigma post-fordista della "produzione snella" (lean production) e del "just-in-time", imperniato sulla rapida adattabilità dei cicli produttivi alle continue fluttuazioni della domanda globale. L’abbandono dei grandi magazzini di scorte e della produzione di massa standardizzata ha imposto una radicale riorganizzazione della manodopera all’insegna della flessibilità funzionale, temporale e contrattuale. Nelle economie avanzate, questa trasformazione ha alimentato una crescente segmentazione del mercato del lavoro, strutturato attorno alla polarizzazione tra un nucleo ristretto di lavoratori stabili e altamente qualificati (insiders) — dotati di contratti a tempo indeterminato, benefit e percorsi di carriera — e una fascia periferica ed espansa di lavoratori precari, atipici o in somministrazione (outsiders), costretti a sostenere l’intero peso dell’incertezza economica e della discontinuità retributiva.',
+    domanda: 'Quale asimmetria sociale scaturisce dalla segmentazione tra «insiders» e «outsiders» descritta nel testo?',
+    rispostaCorretta: 'Il trasferimento del rischio economico e dell’instabilità occupazionale sui lavoratori periferici precari a fronte della tutela riservata al nucleo centrale',
+    risposteErrate: [
+      'La parità assoluta di stipendio e di tutele legali garantita per legge a qualsiasi tipologia contrattuale',
+      'L’obbligo per i lavoratori stabili di svolgere gratuitamente il doppio delle ore dei colleghi precari',
+      'L’eliminazione totale della disoccupazione giovanile in tutte le aree geografiche',
+      'La scomparsa della figura del lavoratore qualificato all’interno delle aziende tecnologiche'
+    ],
+    spiegazione: 'Il brano illustra la frattura: gli insiders godono di stabilità e benefit, mentre la fascia degli outsiders è «costretta a sostenere l’intero peso dell’incertezza economica e della discontinuità retributiva».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 986,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'La funzione strutturale della proibizione dell’incesto',
+    brano: 'Nell’antropologia strutturale di Claude Lévi-Strauss, la proibizione universale dell’incesto costituisce la soglia fondamentale che segna il passaggio definitivo dallo stato di natura allo stato di cultura. Respingendo le spiegazioni meramente biologiche o igienistiche, l’antropologo francese ha dimostrato che la natura di tale divieto non è primariamente negativa, bensì positiva e relazionale: interdire l’unione sessuale e matrimoniale all’interno del nucleo biologico primario obbliga ciascun gruppo familiare a cercare alleanze all’esterno (esogamia). Rinunciando alle proprie donne per offrirle ad altri gruppi, le famiglie impongono una rete obbligatoria di scambi reciproci e alleanze pacifiche che unisce tribù altrimenti isolate o ostili. Il tabù dell’incesto non è dunque una semplice interdizione morale o biologica, ma la regola sociale primigenia che fonda la reciprocità, trasformando la mera riproduzione naturale in un ordinamento istituzionale di relazioni umane.',
+    domanda: 'Secondo la teoria strutturalista di Lévi-Strauss, quale funzione positiva essenziale svolge la proibizione dell’incesto?',
+    rispostaCorretta: 'Imporre l’esogamia e lo scambio reciproco matrimoniale tra gruppi diversi, stabilendo alleanze sociali stabili al di fuori del nucleo consanguineo',
+    risposteErrate: [
+      'Garantire che ogni famiglia viva in completo isolamento senza alcun contatto con la popolazione circostante',
+      'Impedire per legge a chiunque di contrarre matrimonio prima dei cinquant’anni di età',
+      'Favorire l’accumulazione privata di bestiame all’interno del solo nucleo materno',
+      'Eliminare qualsiasi regola di parentela a vantaggio di una convivenza casuale e non regolata'
+    ],
+    spiegazione: 'Il brano spiega che il divieto «non è primariamente negativo, bensì positivo e relazionale: interdire l’unione all’interno del nucleo... obbliga a cercare alleanze all’esterno (esogamia)», fondando la reciprocità e le alleanze.',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 987,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio-difficile',
+    titoloBrano: 'La funzione strutturale della proibizione dell’incesto',
+    brano: 'Nell’antropologia strutturale di Claude Lévi-Strauss, la proibizione universale dell’incesto costituisce la soglia fondamentale che segna il passaggio definitivo dallo stato di natura allo stato di cultura. Respingendo le spiegazioni meramente biologiche o igienistiche, l’antropologo francese ha dimostrato che la natura di tale divieto non è primariamente negativa, bensì positiva e relazionale: interdire l’unione sessuale e matrimoniale all’interno del nucleo biologico primario obbliga ciascun gruppo familiare a cercare alleanze all’esterno (esogamia). Rinunciando alle proprie donne per offrirle ad altri gruppi, le famiglie impongono una rete obbligatoria di scambi reciproci e alleanze pacifiche che unisce tribù altrimenti isolate o ostili. Il tabù dell’incesto non è dunque una semplice interdizione morale o biologica, ma la regola sociale primigenia che fonda la reciprocità, trasformando la mera riproduzione naturale in un ordinamento istituzionale di relazioni umane.',
+    domanda: 'Quale inferenza teorica spiega perché la proibizione dell’incesto segna il passaggio dalla «natura» alla «cultura»?',
+    rispostaCorretta: 'Perché sostituisce all’accoppiamento biologico casuale o endogamico una norma sociale vincolante basata sulla reciprocità e sulla convenzione comunitaria',
+    risposteErrate: [
+      'Perché dimostra che le leggi genetiche determinano in modo assoluto e immutabile qualsiasi costume umano',
+      'Perché impone la scomparsa delle famiglie nucleari in favore di un allevamento collettivo dei figli gestito dallo Stato',
+      'Perché abolisce per sempre qualsiasi tipo di legame linguistico tra generazioni diverse',
+      'Perché stabilisce che le istituzioni umane sono create unicamente da organismi biologici unicellulari'
+    ],
+    spiegazione: 'L’autore argomenta che il tabù segna il passaggio alla cultura perché «trasforma la mera riproduzione naturale in un ordinamento istituzionale di relazioni umane», introducendo la regola e la reciprocità convenzionale.',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 988,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Sviluppo spaziale e divario tra poli urbani e aree interne',
+    brano: 'I processi di sviluppo economico contemporaneo tendono a produrre profonde disparità territoriali: mentre le grandi aree metropolitane concentrano investimenti tecnologici, infrastrutture digitali, servizi sanitari avanzati e offerta formativa d’eccellenza, i territori marginali e le "aree interne" (valli alpine, dorsali appenniniche e zone rurali isolate) subiscono un progressivo spopolamento e declino economico. La contrazione demografica innesca un circolo vizioso: la riduzione della popolazione residente induce le amministrazioni a tagliare o accentrare i servizi pubblici essenziali (trasporti locali, presidi ospedalieri, plessi scolastici), rendendo tali territori ancora meno attrattivi per i giovani e le famiglie. Per contrastare questa spirale regressiva, le politiche territoriali più avanzate evidenziano che i meri trasferimenti monetari compensativi a pioggia sono insufficienti: occorre ripristinare la cittadinanza sostanziale garantendo un’infrastrutturazione minima dei servizi fondamentali e incentivando forme di economia locale sostenibile.',
+    domanda: 'Quale meccanismo alimenta il circolo vizioso dello spopolamento delle aree interne secondo il testo?',
+    rispostaCorretta: 'La diminuzione della popolazione causa il taglio o la chiusura dei servizi pubblici essenziali, rendendo il territorio ulteriormente sfavorevole alla permanenza dei residenti',
+    risposteErrate: [
+      'L’eccessiva concentrazione di ospedali e università all’interno dei piccoli borghi montani',
+      'Il divieto imposto dallo Stato ai giovani di trasferirsi nelle grandi città universitarie',
+      'L’obbligo per tutti i residenti metropolitani di dedicarsi all’agricoltura di montagna',
+      'L’azzeramento totale delle imposte statali a favore dei soli abitanti dei capoluoghi regionali'
+    ],
+    spiegazione: 'Il testo descrive chiaramente la spirale: la riduzione dei residenti induce a «tagliare o accentrare i servizi pubblici essenziali... rendendo tali territori ancora meno attrattivi per i giovani e le famiglie».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 989,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Sviluppo spaziale e divario tra poli urbani e aree interne',
+    brano: 'I processi di sviluppo economico contemporaneo tendono a produrre profonde disparità territoriali: mentre le grandi aree metropolitane concentrano investimenti tecnologici, infrastrutture digitali, servizi sanitari avanzati e offerta formativa d’eccellenza, i territori marginali e le "aree interne" (valli alpine, dorsali appenniniche e zone rurali isolate) subiscono un progressivo spopolamento e declino economico. La contrazione demografica innesca un circolo vizioso: la riduzione della popolazione residente induce le amministrazioni a tagliare o accentrare i servizi pubblici essenziali (trasporti locali, presidi ospedalieri, plessi scolastici), rendendo tali territori ancora meno attrattivi per i giovani e le famiglie. Per contrastare questa spirale regressiva, le politiche territoriali più avanzate evidenziano che i meri trasferimenti monetari compensativi a pioggia sono insufficienti: occorre ripristinare la cittadinanza sostanziale garantendo un’infrastrutturazione minima dei servizi fondamentali e incentivando forme di economia locale sostenibile.',
+    domanda: 'Quale indirizzo strategico viene ritenuto prioritario nel brano per rigenerare le aree interne?',
+    rispostaCorretta: 'Garantire l’accesso e la tenuta delle infrastrutture e dei servizi essenziali unitamente al sostegno di economie locali compatibili',
+    risposteErrate: [
+      'Distribuire esclusivamente sussidi in denaro a pioggia senza investire in scuole o trasporti',
+      'Deportare forzatamente l’intera popolazione delle metropoli nei borghi montani abbandonati',
+      'Sospendere a tempo indeterminato la costruzione di qualsiasi rete di telecomunicazione o fibra ottica',
+      'Abolire i governi comunali per affidare la gestione del territorio a consorzi esteri'
+    ],
+    spiegazione: 'Il passaggio finale sottolinea che i trasferimenti a pioggia sono inadeguati e che occorre «ripristinare la cittadinanza sostanziale garantendo un’infrastrutturazione minima dei servizi fondamentali e incentivando forme di economia locale sostenibile».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 990,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Algoritmi di profilazione e polarizzazione dell’informazione digitale',
+    brano: 'La fruizione di contenuti sulle piattaforme digitali e sui social network è ampiamente mediata da algoritmi di raccomandazione ottimizzati per massimizzare il tempo di permanenza e il coinvolgimento emotivo degli utenti. Per raggiungere questo obiettivo commerciale, i sistemi algoritmici profilano i comportamenti individuali e selezionano prioritariamente notizie, post e opinioni conformi alle preferenze e alle credenze pregresse del fruitore. Questo meccanismo di filtraggio personalizzato favorisce la genesi delle cosiddette "bolle di filtraggio" (filter bubbles) e "camere d’eco" (echo chambers), in cui gli individui vengono esposti unicamente a narrazioni che confermano i propri pregiudizi, rimanendo isolati da punti di vista alternativi o smentite fattuali. La frammentazione dell’opinione pubblica in aggregati autoreferenziali e ideologicamente impermeabili alimenta la polarizzazione affettiva e mina alla radice le basi del confronto deliberativo democratico, il quale richiede un terreno condiviso di fatti accertati e argomentazioni razionali.',
+    domanda: 'In che modo gli algoritmi di raccomandazione favoriscono la formazione delle "camere d’eco" secondo il brano?',
+    rispostaCorretta: 'Selezionando contenuti affini ai pregiudizi dell’utente per accrescere l’interazione, isolandolo dal confronto con informazioni contrastanti',
+    risposteErrate: [
+      'Costringendo tutti gli utenti a leggere obbligatoriamente solo saggi accademici di astronomia',
+      'Cancellando i profili di chiunque esprima opinioni politiche sui social network',
+      'Inviando a ciascun cittadino una copia cartacea identica di tutti i quotidiani nazionali',
+      'Impedendo agli utenti di salvare password o account sui propri dispositivi digitali'
+    ],
+    spiegazione: 'Il testo spiega che gli algoritmi «profilano i comportamenti... e selezionano prioritariamente notizie, post e opinioni conformi alle preferenze e alle credenze pregresse... isolando da punti di vista alternativi».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 991,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Algoritmi di profilazione e polarizzazione dell’informazione digitale',
+    brano: 'La fruizione di contenuti sulle piattaforme digitali e sui social network è ampiamente mediata da algoritmi di raccomandazione ottimizzati per massimizzare il tempo di permanenza e il coinvolgimento emotivo degli utenti. Per raggiungere questo obiettivo commerciale, i sistemi algoritmici profilano i comportamenti individuali e selezionano prioritariamente notizie, post e opinioni conformi alle preferenze e alle credenze pregresse del fruitore. Questo meccanismo di filtraggio personalizzato favorisce la genesi delle cosiddette "bolle di filtraggio" (filter bubbles) e "camere d’eco" (echo chambers), in cui gli individui vengono esposti unicamente a narrazioni che confermano i propri pregiudizi, rimanendo isolati da punti di vista alternativi o smentite fattuali. La frammentazione dell’opinione pubblica in aggregati autoreferenziali e ideologicamente impermeabili alimenta la polarizzazione affettiva e mina alla radice le basi del confronto deliberativo democratico, il quale richiede un terreno condiviso di fatti accertati e argomentazioni razionali.',
+    domanda: 'Quale pericolo per il dibattito democratico scaturisce dalla frammentazione dell’opinione pubblica in bolle autoreferenziali?',
+    rispostaCorretta: 'La polarizzazione ideologica e l’erosione di un orizzonte comune di fatti accertati necessario alla deliberazione razionale',
+    risposteErrate: [
+      'L’aumento repentino dell’affluenza alle urne oltre il novantanove per cento degli elettori',
+      'La totale scomparsa della pubblicità commerciale da tutti i siti web mondiali',
+      'L’accordo unanime e spontaneo tra tutti i partiti politici su ogni disegno di legge',
+      'La nazionalizzazione obbligatoria di tutte le reti telefoniche e telegrafiche private'
+    ],
+    spiegazione: 'Il passaggio finale sottolinea che la frammentazione «alimenta la polarizzazione affettiva e mina alla radice le basi del confronto deliberativo democratico, il quale richiede un terreno condiviso di fatti accertati».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 992,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'La costruzione sociale della devianza nella teoria dell’etichettamento',
+    brano: 'La sociologia della devianza fondata sulla teoria dell’etichettamento (labelling theory), sviluppata da Howard Becker, ha rovesciato l’approccio positivista tradizionale secondo cui la devianza costituirebbe una proprietà intrinseca all’atto compiuto o una patologia biologica dell’individuo. Al contrario, la devianza è un processo di costruzione sociale: un comportamento diventa "deviante" solo quando una collettività o un gruppo dotato di potere normativo definisce determinate regole e applica con successo l’etichetta di deviante a chi le trasgredisce. In questa dinamica, gli studiosi distinguono tra devianza primaria e devianza secondaria. La devianza primaria consiste nella trasgressione iniziale, spesso occasionale e priva di un impatto duraturo sull’identità del soggetto. La devianza secondaria, invece, si innesca quando la reazione sociale, lo stigma pubblico e la sanzione istituzionale inducono l’individuo a interiorizzare l’etichetta assegnatagli, riorganizzando la propria identità e la propria condotta attorno al ruolo deviante che gli è stato attribuito.',
+    domanda: 'Qual è il postulato centrale della teoria dell’etichettamento di Howard Becker?',
+    rispostaCorretta: 'La devianza non è una qualità innata dell’atto, ma il risultato di un processo sociale di definizione normativa e di attribuzione di un’etichetta',
+    risposteErrate: [
+      'Tutti i comportamenti umani sono geneticamente predeterminati fin dalla nascita e non modificabili',
+      'Le leggi penali vengono create unicamente per proteggere i soggetti che commettono reati',
+      'La devianza scompare completamente qualora vengano aboliti i tribunali e la polizia',
+      'Ogni individuo trasgressore possiede anomalie fisiche craniche chiaramente misurabili'
+    ],
+    spiegazione: 'Il brano afferma che «la devianza è un processo di costruzione sociale: un comportamento diventa "deviante" solo quando una collettività... definisce determinate regole e applica con successo l’etichetta».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 993,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio-difficile',
+    titoloBrano: 'La costruzione sociale della devianza nella teoria dell’etichettamento',
+    brano: 'La sociologia della devianza fondata sulla teoria dell’etichettamento (labelling theory), sviluppata da Howard Becker, ha rovesciato l’approccio positivista tradizionale secondo cui la devianza costituirebbe una proprietà intrinseca all’atto compiuto o una patologia biologica dell’individuo. Al contrario, la devianza è un processo di costruzione sociale: un comportamento diventa "deviante" solo quando una collettività o un gruppo dotato di potere normativo definisce determinate regole e applica con successo l’etichetta di deviante a chi le trasgredisce. In questa dinamica, gli studiosi distinguono tra devianza primaria e devianza secondaria. La devianza primaria consiste nella trasgressione iniziale, spesso occasionale e priva di un impatto duraturo sull’identità del soggetto. La devianza secondaria, invece, si innesca quando la reazione sociale, lo stigma pubblico e la sanzione istituzionale inducono l’individuo a interiorizzare l’etichetta assegnatagli, riorganizzando la propria identità e la propria condotta attorno al ruolo deviante che gli è stato attribuito.',
+    domanda: 'Quale meccanismo trasforma la «devianza primaria» in «devianza secondaria» secondo il testo?',
+    rispostaCorretta: 'L’interiorizzazione dello stigma e del ruolo sociale attribuiti all’individuo a seguito della reazione formale e punitiva della collettività',
+    risposteErrate: [
+      'Il fallimento scolastico causato unicamente da una cattiva alimentazione nell’infanzia',
+      'La decisione autonoma del tribunale di assolvere l’imputato senza applicare alcuna etichetta',
+      'L’ereditarietà cromosomica verificata attraverso test di laboratorio sui familiari del soggetto',
+      'L’abbandono spontaneo di qualsiasi condotta trasgressiva da parte dell’autore del reato'
+    ],
+    spiegazione: 'Il testo specifica che la devianza secondaria nasce quando «la reazione sociale, lo stigma pubblico e la sanzione istituzionale inducono l’individuo a interiorizzare l’etichetta... riorganizzando la propria identità attorno al ruolo deviante».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 994,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'La misurazione economica oltre il Prodotto Interno Lordo',
+    brano: 'Il Prodotto Interno Lordo (PIL) è stato storicamente adottato come indicatore sintetico primario per misurare la crescita economica e lo stato di salute di una nazione. Tuttavia, la letteratura economica e sociale contemporanea ne ha evidenziato profondi limiti concettuali se impiegato come misura di progresso o benessere reale. Il PIL contabilizza esclusivamente il valore monetario di mercato dei beni e dei servizi finali scambiati, ignorando dimensioni fondamentali della qualità della vita: non tiene conto della distribuzione delle risorse tra le diverse fasce della popolazione, non rileva le esternalità ambientali negative (come l’inquinamento o il consumo di capitale naturale, che paradossalmente possono incrementare il PIL mediante le spese di bonifica) ed esclude l’intero valore del lavoro domestico, di cura e di volontariato non retribuito. Per queste ragioni, istituzioni statistiche internazionali hanno sviluppato indici multidimensionali integrati (quali l’Indice di Sviluppo Umano o gli indicatori di Benessere Equo e Sostenibile) per affiancare alla pura crescita quantitativa la sostenibilità ecologica e la coesione sociale.',
+    domanda: 'Quale limite strutturale del PIL come indicatore di progresso viene evidenziato nel brano?',
+    rispostaCorretta: 'La sua incapacità di misurare la distribuzione della ricchezza, la sostenibilità ecologica e le attività non retribuite di cura e volontariato',
+    risposteErrate: [
+      'L’impossibilità teorica di sommare i prezzi di mercato dei beni industriali venduti nei negozi',
+      'L’obbligo di calcolare il reddito nazionale unicamente in lingotti d’oro anziché in valuta legale',
+      'Il fatto di essere calcolato solo ogni cinquant’anni da istituti di statistica non autorizzati',
+      'La mancata inclusione delle esportazioni di merci verso i paesi appartenenti all’Unione Europea'
+    ],
+    spiegazione: 'Il testo spiega che il PIL ignora dimensioni cruciali quali «la distribuzione delle risorse... le esternalità ambientali negative... ed esclude l’intero valore del lavoro domestico, di cura e di volontariato non retribuito».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 995,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'La misurazione economica oltre il Prodotto Interno Lordo',
+    brano: 'Il Prodotto Interno Lordo (PIL) è stato storicamente adottato come indicatore sintetico primario per misurare la crescita economica e lo stato di salute di una nazione. Tuttavia, la letteratura economica e sociale contemporanea ne ha evidenziato profondi limiti concettuali se impiegato come misura di progresso o benessere reale. Il PIL contabilizza esclusivamente il valore monetario di mercato dei beni e dei servizi finali scambiati, ignorando dimensioni fondamentali della qualità della vita: non tiene conto della distribuzione delle risorse tra le diverse fasce della popolazione, non rileva le esternalità ambientali negative (come l’inquinamento o il consumo di capitale naturale, che paradossalmente possono incrementare il PIL mediante le spese di bonifica) ed esclude l’intero valore del lavoro domestico, di cura e di volontariato non retribuito. Per queste ragioni, istituzioni statistiche internazionali hanno sviluppato indici multidimensionali integrati (quali l’Indice di Sviluppo Umano o gli indicatori di Benessere Equo e Sostenibile) per affiancare alla pura crescita quantitativa la sostenibilità ecologica e la coesione sociale.',
+    domanda: 'Per quale motivo sono stati introdotti indicatori multidimensionali come il Benessere Equo e Sostenibile (BES)?',
+    rispostaCorretta: 'Per valutare la salute di una società integrando la crescita quantitativa con parametri ambientali, sociali ed equitativi',
+    risposteErrate: [
+      'Per sostituire la valuta cartacea con crediti digitali non spendibili nei mercati ordinari',
+      'Per vietare per legge alle imprese private di realizzare qualsiasi forma di profitto economico',
+      'Per eliminare ogni controllo fiscale sulle transazioni commerciali internazionali',
+      'Per calcolare la spesa pubblica basandosi unicamente sul numero di residenti maggiorenni'
+    ],
+    spiegazione: 'La parte finale illustra che tali indici sono stati introdotti «per affiancare alla pura crescita quantitativa la sostenibilità ecologica e la coesione sociale».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 996,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Modelli di integrazione socioculturale: assimilazione e multiculturalismo',
+    brano: 'Nelle società contemporanee ad elevata pluralità demografica, il dibattito politologico e sociologico si è storicamente strutturato attorno a due paradigmi idealtipici di integrazione: il modello assimilazionista e il modello multiculturalista. Il modello assimilazionista (di matrice repubblicana) esige che i cittadini di origine straniera interiorizzino pienamente la lingua, le norme civiche e i valori universali della nazione ospitante, relegando l’espressione delle identità religiose o comunitarie particolari alla sfera rigidamente privata; tale impostazione favorisce l’uguaglianza formale nello spazio pubblico, ma rischia di risultare cieca di fronte alle discriminazioni sostanziali e di reprimere la diversità. All’opposto, il modello multiculturalista riconosce e valorizza le comunità culturali come soggetti collettivi portatori di diritti differenziati nello spazio pubblico; tuttavia, se portato all’eccesso, esso può incoraggiare la frammentazione identitaria, l’auto-segregazione in quartieri etnici e la lesione dei diritti individuali all’interno dei gruppi tradizionali chiusi.',
+    domanda: 'Quale principio cardine caratterizza il modello di integrazione assimilazionista secondo il testo?',
+    rispostaCorretta: 'L’adesione ai valori civici universali nello spazio pubblico e il confinamento delle differenze culturali e religiose nella sfera privata',
+    risposteErrate: [
+      'Il riconoscimento di statuti giuridici e codici penali speciali per ciascuna comunità etnica',
+      'L’obbligo per tutti i cittadini autoctoni di convertirsi alle fedi religiose dei nuovi residenti',
+      'L’espulsione automatica di qualsiasi lavoratore che parli più di una lingua straniera',
+      'La sostituzione della costituzione nazionale con i regolamenti interni dei quartieri'
+    ],
+    spiegazione: 'Il testo descrive l’assimilazionismo come il modello che «esige che i cittadini... interiorizzino pienamente la lingua, le norme civiche e i valori universali... relegando l’espressione delle identità religiose o comunitarie alla sfera rigidamente privata».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 997,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Modelli di integrazione socioculturale: assimilazione e multiculturalismo',
+    brano: 'Nelle società contemporanee ad elevata pluralità demografica, il dibattito politologico e sociologico si è storicamente strutturato attorno a due paradigmi idealtipici di integrazione: il modello assimilazionista e il modello multiculturalista. Il modello assimilazionista (di matrice repubblicana) esige che i cittadini di origine straniera interiorizzino pienamente la lingua, le norme civiche e i valori universali della nazione ospitante, relegando l’espressione delle identità religiose o comunitarie particolari alla sfera rigidamente privata; tale impostazione favorisce l’uguaglianza formale nello spazio pubblico, ma rischia di risultare cieca di fronte alle discriminazioni sostanziali e di reprimere la diversità. All’opposto, il modello multiculturalista riconosce e valorizza le comunità culturali come soggetti collettivi portatori di diritti differenziati nello spazio pubblico; tuttavia, se portato all’eccesso, esso può incoraggiare la frammentazione identitaria, l’auto-segregazione in quartieri etnici e la lesione dei diritti individuali all’interno dei gruppi tradizionali chiusi.',
+    domanda: 'Quale rischio potenziale dell’approccio multiculturalista viene evidenziato dall’autore?',
+    rispostaCorretta: 'La frammentazione della coesione civica, l’auto-segregazione comunitaria e la possibile compressione dei diritti individuali',
+    risposteErrate: [
+      'L’imposizione di una lingua unica mondiale stabilita con referendum internazionale',
+      'L’azzeramento totale di qualsiasi forma di migrazione verso i paesi industrializzati',
+      'La scomparsa definitiva delle tradizioni culturali autoctone della nazione ospitante',
+      'La nazionalizzazione obbligatoria di tutte le imprese commerciali gestite da privati'
+    ],
+    spiegazione: 'Il brano evidenzia che il multiculturalismo esasperato «può incoraggiare la frammentazione identitaria, l’auto-segregazione in quartieri etnici e la lesione dei diritti individuali all’interno dei gruppi».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 998,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio',
+    titoloBrano: 'Transizione ecologica ed equità distributiva',
+    brano: 'La necessaria riconversione verso la neutralità climatica e la decarbonizzazione delle economie globali richiede riforme strutturali nei sistemi energetici, industriali e dei trasporti. Tuttavia, la letteratura di economia politica ecologica sottolinea che la transizione ambientale non è socialmente neutra: politiche climatiche basate unicamente su tasse sui consumi energetici o sulla chiusura immediata di impianti inquinanti rischiano di produrre impatti regressivi sproporzionati sulle fasce di popolazione a basso reddito e sui lavoratori delle industrie tradizionali ad alta intensità di carbonio. Da questa consapevolezza è emerso il principio di "transizione giusta" (just transition), il quale postula che gli oneri economici e occupazionali della transizione ecologica debbano essere redistribuiti equamente. Ciò richiede politiche pubbliche attive che integrino gli obiettivi di decarbonizzazione con ammortizzatori sociali mirati, programmi di riqualificazione professionale per i lavoratori dei settori fossili e investimenti straordinari nella rigenerazione economica dei distretti industriali in dismissione.',
+    domanda: 'Qual è l’obiettivo essenziale del principio di «transizione giusta» (just transition) descritto nel brano?',
+    rispostaCorretta: 'Garantire che la riconversione ecologica non gravi sui ceti vulnerabili e sui lavoratori dei settori fossili, ripartendo equamente i costi della sostenibilità',
+    risposteErrate: [
+      'Rinviare a tempo indeterminato qualsiasi piano di riduzione delle emissioni inquinanti',
+      'Abolire l’industria manifatturiera per sostituirla con l’estrazione mineraria di carbone',
+      'Imporre che tutti i costi della transizione energetica siano pagati unicamente dai comuni montani',
+      'Vietare l’uso di fonti di energia rinnovabile nelle aree urbane ad alta densità'
+    ],
+    spiegazione: 'Il testo definisce la just transition come il principio per cui «gli oneri economici e occupazionali della transizione ecologica debbano essere redistribuiti equamente... integrando la decarbonizzazione con ammortizzatori sociali e riqualificazione».',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 999,
+    materia: 'Comprensione verbale',
+    difficolta: 'medio-difficile',
+    titoloBrano: 'Transizione ecologica ed equità distributiva',
+    brano: 'La necessaria riconversione verso la neutralità climatica e la decarbonizzazione delle economie globali richiede riforme strutturali nei sistemi energetici, industriali e dei trasporti. Tuttavia, la letteratura di economia politica ecologica sottolinea che la transizione ambientale non è socialmente neutra: politiche climatiche basate unicamente su tasse sui consumi energetici o sulla chiusura immediata di impianti inquinanti rischiano di produrre impatti regressivi sproporzionati sulle fasce di popolazione a basso reddito e sui lavoratori delle industrie tradizionali ad alta intensità di carbonio. Da questa consapevolezza è emerso il principio di "transizione giusta" (just transition), il quale postula che gli oneri economici e occupazionali della transizione ecologica debbano essere redistribuiti equamente. Ciò richiede politiche pubbliche attive che integrino gli obiettivi di decarbonizzazione con ammortizzatori sociali mirati, programmi di riqualificazione professionale per i lavoratori dei settori fossili e investimenti straordinari nella rigenerazione economica dei distretti industriali in dismissione.',
+    domanda: 'Quale delle seguenti inferenze sintetizza il trade-off politico-economico affrontato nel testo?',
+    rispostaCorretta: 'La sostenibilità climatica rischia di perdere legittimazione democratica ed efficacia se perseguita attraverso misure regressive prive di compensazioni e tutele per il lavoro',
+    risposteErrate: [
+      'L’introduzione di tasse sui combustibili fossili genera automaticamente un arricchimento immediato per tutti i lavoratori disoccupati',
+      'La chiusura degli impianti industriali inquinanti elimina da sola qualsiasi problema di disuguaglianza economica',
+      'Le politiche ambientali hanno costi nulli e non richiedono alcuna forma di spesa pubblica o ammortizzatore sociale',
+      'La neutralità climatica può essere raggiunta unicamente bloccando l’innovazione tecnologica nei trasporti'
+    ],
+    spiegazione: 'Il brano evidenzia che la transizione non è socialmente neutra e rischia di generare effetti regressivi se non accompagnata da redistribuzione equa e investimenti nel lavoro, minacciando la coesione sociale.',
+    fonte: 'Lotto C4 del progetto',
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
   }
 ];
 

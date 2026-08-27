@@ -42,19 +42,19 @@ function makeMockQuestion(id, materia) {
   };
 }
 
-// ─── 1. BANCA DATI FISICA (682 RECORD) ───
-section('1. Banca Dati Fisica (682 Record)');
+// ─── 1. BANCA DATI FISICA (732 RECORD) ───
+section('1. Banca Dati Fisica (732 Record)');
 check(Array.isArray(questionBank), 'questionBank è un array');
-check(questionBank.length === 682, `questionBank contiene esattamente 682 record fisici (trovati: ${questionBank.length})`);
+check(questionBank.length === 732, `questionBank contiene esattamente 732 record fisici (trovati: ${questionBank.length})`);
 
 const allAllQuestions = await getAllQuestions();
-check(allAllQuestions.length === 682, `getAllQuestions() restituisce tutti i 682 record fisici (trovati: ${allAllQuestions.length})`);
+check(allAllQuestions.length === 732, `getAllQuestions() restituisce tutti i 732 record fisici (trovati: ${allAllQuestions.length})`);
 
 const allIds = questionBank.map((q) => q.id);
 const uniqueIds = new Set(allIds);
-check(uniqueIds.size === 682, `Tutti i 682 ID sono univoci (trovati: ${uniqueIds.size})`);
+check(uniqueIds.size === 732, `Tutti i 732 ID sono univoci (trovati: ${uniqueIds.size})`);
 check(Math.min(...allIds) === 1, `ID minimo = 1 (trovato: ${Math.min(...allIds)})`);
-check(Math.max(...allIds) === 687, `ID massimo = 687 (trovato: ${Math.max(...allIds)})`);
+check(Math.max(...allIds) === 737, `ID massimo = 737 (trovato: ${Math.max(...allIds)})`);
 
 // Preservazione buchi storici
 const historicalHoles = [2, 18, 25, 78, 202];
@@ -820,6 +820,149 @@ check(
   'Quesito L1-49 (ID 686) proprietà di verità vacua dell’implicazione materiale senza pseudo-Scoto'
 );
 
+// ─── 2G. CENSIMENTO LOTTO L2 (ID 688–737) ───
+section('2G. Censimento e Validazione Lotto L2 (ID 688–737)');
+const l2Questions = questionBank.filter((q) => q.id >= 688 && q.id <= 737);
+check(l2Questions.length === 50, `Lotto L2: esattamente 50 quesiti nel range ID 688–737 (trovati: ${l2Questions.length})`);
+
+const l2AllLogic = l2Questions.every((q) => q.materia === 'Logica');
+check(l2AllLogic, 'Tutti i 50 quesiti di L2 appartengono alla materia Logica');
+
+const l2OptionsCheck = l2Questions.every((q) => (
+  typeof q.rispostaCorretta === 'string' &&
+  Array.isArray(q.risposteErrate) &&
+  q.risposteErrate.length === 4
+));
+check(l2OptionsCheck, 'Tutti i 50 quesiti di L2 hanno 1 risposta corretta e 4 errate (5 opzioni totali)');
+
+const l2StatsZeroed = l2Questions.every((q) => (
+  q.numeroVolteProposta === 0 &&
+  q.numeroRisposteCorrette === 0 &&
+  q.numeroRisposteErrate === 0
+));
+check(l2StatsZeroed, 'Tutti i 50 quesiti di L2 hanno i contatori statistici azzerati (numeroVolteProposta=0, corrette=0, errate=0)');
+
+const l2FonteCheck = l2Questions.every((q) => (
+  typeof q.fonte === 'string' &&
+  q.fonte.includes('Lotto L2 del progetto') &&
+  !q.fonte.toLowerCase().includes('cisia')
+));
+check(l2FonteCheck, 'Tutti i 50 quesiti di L2 indicano chiaramente "Lotto L2 del progetto" nella fonte senza attribuzioni esterne');
+
+const l2NoLegacyFlag = l2Questions.every((q) => q.excludedFromTolcPool !== true);
+check(l2NoLegacyFlag, 'Nessun quesito di L2 possiede excludedFromTolcPool: true (tutti nel pool attivo)');
+
+const l2MfCount = l2Questions.filter((q) => q.difficolta === 'medio-facile').length;
+const l2MCount = l2Questions.filter((q) => q.difficolta === 'medio').length;
+const l2MdCount = l2Questions.filter((q) => q.difficolta === 'medio-difficile').length;
+check(
+  l2MfCount === 3 && l2MCount === 44 && l2MdCount === 3,
+  `Distribuzione difficoltà L2 esatta: 3 MF, 44 M, 3 MD (trovati: ${l2MfCount} MF, ${l2MCount} M, ${l2MdCount} MD)`
+);
+
+// Regression checks specifici su quesiti L2
+const q688 = questionBank.find((q) => q.id === 688);
+check(
+  Boolean(q688 && q688.difficolta === 'medio-facile' && q688.domanda.includes('condizione $P$ è «sufficiente»') && q688.rispostaCorretta.includes('garantisce con certezza')),
+  'Quesito L2-01 (ID 688, MF) formalizzazione di condizione sufficiente'
+);
+
+const q690 = questionBank.find((q) => q.id === 690);
+check(
+  Boolean(q690 && q690.domanda.includes('tre condizioni sufficienti alternative') && q690.rispostaCorretta.includes('sufficiente ma non necessaria')),
+  'Quesito L2-03 (ID 690) pluralità di condizioni sufficienti alternative'
+);
+
+const q691 = questionBank.find((q) => q.id === 691);
+check(
+  Boolean(q691 && q691.domanda.includes('chiave crittografica') && q691.rispostaCorretta.includes('pur essendo priva di una chiave crittografica')),
+  'Quesito L2-04 (ID 691) violazione diretta di una condizione necessaria'
+);
+
+const q698 = questionBank.find((q) => q.id === 698);
+check(
+  Boolean(q698 && q698.domanda.includes('Super-Eco') && (q698.rispostaCorretta.includes('IMPOSSIBILE') || q698.rispostaCorretta.includes('oppure non opera'))),
+  'Quesito L2-11 (ID 698) stati operativi impossibili determinati da bicondizionale'
+);
+
+const q703 = questionBank.find((q) => q.id === 703);
+check(
+  Boolean(q703 && q703.difficolta === 'medio-difficile' && q703.domanda.includes('sistema assiomatico ipotetico') && q703.rispostaCorretta.includes('condizione necessaria e sufficiente')),
+  'Quesito L2-16 (ID 703, MD) bicondizionale strutturato con doppio antecedente'
+);
+
+const q707 = questionBank.find((q) => q.id === 707);
+check(
+  Boolean(q707 && q707.domanda.includes('*solo se*') && q707.rispostaCorretta.includes('\\neg S') && q707.rispostaCorretta.includes('\\neg A')),
+  'Quesito L2-20 (ID 707) deduzione valida da "solo se" tramite contronominale'
+);
+
+const q709 = questionBank.find((q) => q.id === 709);
+check(
+  Boolean(q709 && q709.domanda.includes('SEMPRE e rigorosamente lo stesso identico valore') && q709.rispostaCorretta.includes('contronominale')),
+  'Quesito L2-22 (ID 709) invarianza logica della contronominale rispetto a converso e inverso'
+);
+
+const q714 = questionBank.find((q) => q.id === 714);
+check(
+  Boolean(q714 && q714.domanda.includes('telemetria') && q714.rispostaCorretta.includes('\\neg A') && q714.rispostaCorretta.includes('\\neg B')),
+  'Quesito L2-27 (ID 714) applicazione valida della contronominale in contesto diagnostico'
+);
+
+const q715 = questionBank.find((q) => q.id === 715);
+check(
+  Boolean(q715 && q715.domanda.includes('a meno che sia presente') && q715.rispostaCorretta.includes('$P \\to A$')),
+  'Quesito L2-28 (ID 715) formalizzazione univoca di "a meno che"'
+);
+
+const q720 = questionBank.find((q) => q.id === 720);
+check(
+  Boolean(q720 && q720.difficolta === 'medio-difficile' && q720.domanda.includes('reattore') && q720.rispostaCorretta.includes('reattore non può essere avviato')),
+  'Quesito L2-33 (ID 720, MD) condizioni composte complesse'
+);
+
+const q721 = questionBank.find((q) => q.id === 721);
+check(
+  Boolean(q721 && q721.difficolta === 'medio-facile' && q721.domanda.includes('partita viene rinviata') && q721.rispostaCorretta === '$(P \\lor N) \\to R$'),
+  'Quesito L2-34 (ID 721, MF) congiunzione di condizioni necessarie'
+);
+
+const q725 = questionBank.find((q) => q.id === 725);
+check(
+  Boolean(q725 && q725.domanda.includes('Esperto') && q725.rispostaCorretta.includes('5 anni di servizio ($S$)') && !q725.spiegazione.includes('P \\to Q \\to S')),
+  'Quesito L2-38 (ID 725) transitività da condizioni necessarie e sufficienti senza catene non parentesizzate'
+);
+
+const q727 = questionBank.find((q) => q.id === 727);
+check(
+  Boolean(q727 && q727.domanda.includes('tre implicazioni distinte') && q727.rispostaCorretta.includes('necessariamente FALSE')),
+  'Quesito L2-40 (ID 727) Modus Tollens a ritroso lungo premesse numerate separate'
+);
+
+const q729 = questionBank.find((q) => q.id === 729);
+check(
+  Boolean(q729 && q729.domanda.includes('modulo web') && q729.rispostaCorretta.includes('\\neg N') && q729.rispostaCorretta.includes('\\neg E')),
+  'Quesito L2-42 (ID 729) deduzione formale da interfaccia web con dimostrazione passo-passo'
+);
+
+const q732 = questionBank.find((q) => q.id === 732);
+check(
+  Boolean(q732 && q732.domanda.includes('logica proposizionale classica') && q732.rispostaCorretta.includes('$Y \\lor Z$')),
+  'Quesito L2-45 (ID 732) principio del terzo escluso con implicazioni disgiunte'
+);
+
+const q735 = questionBank.find((q) => q.id === 735);
+check(
+  Boolean(q735 && q735.domanda.includes('logica proposizionale classica bivalente') && q735.rispostaCorretta.includes('In ogni assegnazione di verità che rende vere entrambe le implicazioni')),
+  'Quesito L2-48 (ID 735) conseguenza necessaria condizionata alla verità di entrambe le premesse'
+);
+
+const q737 = questionBank.find((q) => q.id === 737);
+check(
+  Boolean(q737 && q737.difficolta === 'medio-difficile' && q737.domanda.includes('robotica') && q737.rispostaCorretta.includes('contraddittorio')),
+  'Quesito L2-50 (ID 737, MD) identificazione formale di contraddizione multi-step'
+);
+
 // ─── 3. ISOLAMENTO 35 RECORD LEGACY ED ESCLUSIONE ───
 section('3. Isolamento 35 Record Legacy (excludedFromTolcPool: true)');
 const legacyRecords = questionBank.filter((q) => q.excludedFromTolcPool === true);
@@ -872,13 +1015,13 @@ check(typeof id315FromCatalog?.brano === 'string' && id315FromCatalog.brano.leng
 const id315Raw = getRawQuestionById(315);
 check(Boolean(id315Raw && id315Raw.id === 315), 'ID 315 è recuperabile tramite getRawQuestionById(315)');
 
-// ─── 5. POOL ATTIVO 647 QUESITI E RIPARTIZIONE PER MATERIA ───
-section('5. Pool Attivo 647 Quesiti e Ripartizione per Materia');
-check(activeQuestionsFromService.length === 647, `getQuestions() restituisce esattamente 647 quesiti attivi (trovati: ${activeQuestionsFromService.length})`);
+// ─── 5. POOL ATTIVO 697 QUESITI E RIPARTIZIONE PER MATERIA ───
+section('5. Pool Attivo 697 Quesiti e Ripartizione per Materia');
+check(activeQuestionsFromService.length === 697, `getQuestions() restituisce esattamente 697 quesiti attivi (trovati: ${activeQuestionsFromService.length})`);
 
 const activeSubjects = {
   Matematica: 250,
-  Logica: 98,
+  Logica: 148,
   Scienze: 250,
   'Comprensione verbale': 49
 };
@@ -889,12 +1032,12 @@ activeQuestionsFromService.forEach((q) => {
 });
 
 check(activeDistribution['Matematica'] === 250, `Matematica attiva: 250 (trovati: ${activeDistribution['Matematica']})`);
-check(activeDistribution['Logica'] === 98, `Logica attiva: 98 (trovati: ${activeDistribution['Logica']})`);
+check(activeDistribution['Logica'] === 148, `Logica attiva: 148 (trovati: ${activeDistribution['Logica']})`);
 check(activeDistribution['Scienze'] === 250, `Scienze attiva: 250 (trovati: ${activeDistribution['Scienze']})`);
 check(activeDistribution['Comprensione verbale'] === 49, `Comprensione verbale attiva: 49 (trovati: ${activeDistribution['Comprensione verbale']})`);
 
 const totalActiveSum = Object.values(activeDistribution).reduce((sum, v) => sum + v, 0);
-check(totalActiveSum === 647, `Somma per materia pool attivo = 647 (250 + 98 + 250 + 49 = ${totalActiveSum})`);
+check(totalActiveSum === 697, `Somma per materia pool attivo = 697 (250 + 148 + 250 + 49 = ${totalActiveSum})`);
 
 const serviceMaterie = (await getMaterie()).sort();
 check(serviceMaterie.length === 4, `getMaterie() restituisce esattamente 4 materie attive (${serviceMaterie.join(', ')})`);
@@ -1016,11 +1159,12 @@ const s3Count = 35;
 const s4Count = 35;
 const s5Count = 42;
 const l1Count = 50;
+const l2Count = 50;
 const physicalTotal = questionBank.length;
 const legacyCount = questionBank.filter((q) => q.excludedFromTolcPool === true).length;
 const activeTotal = activeQuestionsFromService.length;
 
-check(baseCount + m1Count + m2Count + m3Count + m4Count + m5Count + s1Count + s2Count + s3Count + s4Count + s5Count + l1Count === physicalTotal, `Uguaglianza fisica verificata: ${baseCount} (base) + ${m1Count} (M1) + ${m2Count} (M2) + ${m3Count} (M3) + ${m4Count} (M4) + ${m5Count} (M5) + ${s1Count} (S1) + ${s2Count} (S2) + ${s3Count} (S3) + ${s4Count} (S4) + ${s5Count} (S5) + ${l1Count} (L1) = ${physicalTotal} (fisici)`);
+check(baseCount + m1Count + m2Count + m3Count + m4Count + m5Count + s1Count + s2Count + s3Count + s4Count + s5Count + l1Count + l2Count === physicalTotal, `Uguaglianza fisica verificata: ${baseCount} (base) + ${m1Count} (M1) + ${m2Count} (M2) + ${m3Count} (M3) + ${m4Count} (M4) + ${m5Count} (M5) + ${s1Count} (S1) + ${s2Count} (S2) + ${s3Count} (S3) + ${s4Count} (S4) + ${s5Count} (S5) + ${l1Count} (L1) + ${l2Count} (L2) = ${physicalTotal} (fisici)`);
 check(physicalTotal - legacyCount === activeTotal, `Uguaglianza attiva verificata: ${physicalTotal} (fisici) - ${legacyCount} (legacy) = ${activeTotal} (attivi)`);
 
 console.log(`\nRisultato testQuiz.mjs: ${passed} test passati, ${failed} falliti.`);

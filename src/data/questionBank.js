@@ -11892,6 +11892,907 @@ const questionBank = [
     numeroRisposteCorrette: 0,
     numeroRisposteErrate: 0
   }
+,
+  {
+    id: 688,
+    materia: "Logica",
+    difficolta: "medio-facile",
+    domanda: "In logica formale, che cosa si intende quando si afferma che la condizione $P$ è «sufficiente» per il verificarsi dell’evento $Q$?",
+    rispostaCorretta: "Che il verificarsi di $P$ garantisce con certezza assoluta il verificarsi di $Q$ (ossia vale l’implicazione $P \\to Q$)",
+    risposteErrate: [
+      "Che $Q$ non può verificarsi in nessun caso se non si è prima verificato $P$",
+      "Che $P$ e $Q$ devono obbligatoriamente verificarsi sempre e solo contemporaneamente",
+      "Che il verificarsi di $Q$ rende impossibile il verificarsi di $P$",
+      "Che $P$ è l’unica causa possibile capace di produrre l’evento $Q$"
+    ],
+    spiegazione: "Affermare che $P$ è condizione sufficiente per $Q$ significa che ogni volta che $P$ è vera, anche $Q$ è necessariamente vera ($P \\to Q$). Ciò non esclude che $Q$ possa verificarsi anche in assenza di $P$ per altre vie (quindi $P$ non è necessariamente una condizione necessaria).",
+    fonte: "Lotto L2 del progetto — L2-01 (ID 688)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 689,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In logica formale, che cosa esprime l’affermazione: «La condizione $Q$ è *necessaria* per il verificarsi di $P$»?",
+    rispostaCorretta: "Che se $Q$ non si verifica, allora $P$ non può in alcun modo verificarsi (ossia $\\neg Q \\to \\neg P$, equivalente a $P \\to Q$)",
+    risposteErrate: [
+      "Che il verificarsi di $Q$ è sufficiente a garantire da solo il verificarsi di $P$",
+      "Che ogni volta che si verifica $Q$, si verifica automaticamente anche $P$",
+      "Che $P$ e $Q$ sono due eventi tra loro mutuamente esclusivi e incompatibili",
+      "Che $Q$ si verifica solo ed esclusivamente quando $P$ è falsa"
+    ],
+    spiegazione: "Una condizione $Q$ è necessaria per $P$ se la sua presenza è indispensabile affinché $P$ possa sussistere: in assenza di $Q$, $P$ non può accadere ($\\neg Q \\to \\neg P$). Per contrapposizione, ciò equivale alla forma condizionale $P \\to Q$.",
+    fonte: "Lotto L2 del progetto — L2-02 (ID 689)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 690,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un sistema di accreditamento formale sono stabilite tre condizioni sufficienti alternative e indipendenti per ottenere la qualifica «Special» ($S$):\n1. «Aver superato il test teorico $A$ è sufficiente per ottenere la qualifica $S$ ($A \\to S$)»;\n2. «Aver completato il progetto pratico $B$ è sufficiente per ottenere la qualifica $S$ ($B \\to S$)»;\n3. «Aver maturato la certificazione esterna $C$ è sufficiente per ottenere la qualifica $S$ ($C \\to S$)».\nSapendo che un candidato NON ha superato il test teorico $A$ ($\\neg A$), quale conclusione segue necessariamente sul piano logico?",
+    rispostaCorretta: "Non è possibile escludere il candidato dalla qualifica $S$, poiché potrebbe comunque ottenerla tramite il progetto $B$ o la certificazione $C$ (la condizione $A$ è sufficiente ma non necessaria)",
+    risposteErrate: [
+      "Il candidato non potrà in nessun caso conseguire la qualifica $S$",
+      "Il candidato consegue automaticamente la qualifica $S$ grazie agli altri requisiti",
+      "Il candidato deve obbligatoriamente possedere sia il requisito $B$ sia il requisito $C$",
+      "La regola iniziale $A \\to S$ risulta invalidata e contraddittoria"
+    ],
+    spiegazione: "La struttura logica complessiva è $(A \\lor B \\lor C) \\to S$. Sapere che $\\neg A$ è vero elimina solo una delle tre vie sufficienti, ma non esclude che $B$ o $C$ possano essere veri. Concludere categoricamente $\\neg S$ da $\\neg A$ costituirebbe un’indebita assunzione di necessità per una condizione puramente sufficiente.",
+    fonte: "Lotto L2 del progetto — L2-03 (ID 690)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 691,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un protocollo di sicurezza è stabilito che: «Il possesso di una chiave crittografica attiva ($K$) è condizione necessaria per autorizzare una transazione ($T$)». Quale delle seguenti situazioni reali costituisce una violazione diretta e inequivocabile di questa regola formale?",
+    rispostaCorretta: "Una transazione viene autorizzata ($T$) pur essendo priva di una chiave crittografica attiva ($\\neg K$)",
+    risposteErrate: [
+      "Un utente possiede una chiave crittografica attiva ($K$) ma la sua transazione non viene autorizzata ($\\neg T$)",
+      "Un utente privo di chiave crittografica ($\\neg K$) non vede autorizzata la propria transazione ($\\neg T$)",
+      "Una chiave crittografica attiva ($K$) viene utilizzata per autorizzare con successo una transazione ($T$)",
+      "Tutte le chiavi crittografiche vengono revocate contemporaneamente"
+    ],
+    spiegazione: "Una condizione necessaria per $T$ si formalizza come $T \\to K$ (ossia $\\neg K \\to \\neg T$). L’unico caso in cui un’implicazione materiale $T \\to K$ risulta falsa (violata) si verifica quando l’antecedente è vero e il conseguente è falso, ossia quando una transazione viene autorizzata in assenza di chiave ($T \\land \\neg K$). Il caso di chiave presente senza autorizzazione ($K \\land \\neg T$) non viola la regola, poiché la chiave è necessaria ma non necessariamente sufficiente.",
+    fonte: "Lotto L2 del progetto — L2-04 (ID 691)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 692,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si consideri l’enunciato: «Per attivare la garanzia convenzionale di un dispositivo *basta* conservare la ricevuta d’acquisto». Come si traduce rigorosamente in termini di condizioni logiche questa affermazione?",
+    rispostaCorretta: "Conservare la ricevuta d’acquisto è una condizione sufficiente per attivare la garanzia",
+    risposteErrate: [
+      "Conservare la ricevuta d’acquisto è una condizione necessaria ma non sufficiente per attivare la garanzia",
+      "La ricevuta d’acquisto è l’unico documento accettato per qualsiasi reclamo",
+      "Attivare la garanzia è una condizione sufficiente per conservare la ricevuta d’acquisto",
+      "Conservare la ricevuta d’acquisto rende impossibile l’attivazione della garanzia"
+    ],
+    spiegazione: "Nel linguaggio naturale, l’avverbio o verbo «bastare / è sufficiente» esprime formalmente una condizione sufficiente: $\\text{Ricevuta} \\to \\text{Attivazione Garanzia}$. Non implica che sia l’unica modalità possibile (non è necessariamente condizione necessaria).",
+    fonte: "Lotto L2 del progetto — L2-05 (ID 692)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 693,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si consideri la prescrizione: «Per essere ammessi alla prova orale occorre aver ottenuto almeno 18 punti nella prova scritta». Qual è il corretto significato logico di questa affermazione?",
+    rispostaCorretta: "Aver ottenuto almeno 18 punti allo scritto è condizione necessaria per l’ammissione all’orale",
+    risposteErrate: [
+      "Aver ottenuto almeno 18 punti allo scritto è condizione sufficiente per essere promossi all’esame finale",
+      "Chiunque ottenga 18 punti allo scritto è automaticamente esentato dal sostenere la prova orale",
+      "Ottenere meno di 18 punti allo scritto garantisce l’ammissione con riserva alla prova orale",
+      "L’ammissione all’orale è condizione sufficiente per ottenere 30 punti allo scritto"
+    ],
+    spiegazione: "I termini «occorre», «è richiesto», «è indispensabile» esprimono una condizione necessaria: $\\text{Ammesso Orale} \\to \\text{Punteggio Scritto} \\ge 18$. Se non si ottengono almeno 18 punti allo scritto, non si può accedere all’orale.",
+    fonte: "Lotto L2 del progetto — L2-06 (ID 693)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 694,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Siano date le seguenti premesse assunte come vere:\n1. «Il verificarsi dell’evento $A$ è condizione sufficiente per il verificarsi dell’evento $B$»;\n2. «L’evento $B$ NON si è verificato».\nQuale conclusione logica segue necessariamente?",
+    rispostaCorretta: "L’evento $A$ non si è verificato",
+    risposteErrate: [
+      "L’evento $A$ si è verificato con certezza",
+      "L’evento $B$ è condizione necessaria per $A$, ma $A$ può comunque verificarsi",
+      "Non è possibile trarre alcuna conclusione circa il verificarsi dell’evento $A$",
+      "L’evento $A$ e l’evento $B$ si sono verificati entrambi simultaneamente"
+    ],
+    spiegazione: "Dalla premessa 1 abbiamo l’implicazione $A \\to B$. Dalla premessa 2 sappiamo che $\\neg B$ è vero. Applicando la regola d’inferenza classica del *Modus Tollens* (o contronominale $\\neg B \\to \\neg A$), si deduce in modo inoppugnabile che $\\neg A$, ossia che l’evento $A$ non si è verificato.",
+    fonte: "Lotto L2 del progetto — L2-07 (ID 694)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 695,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si assumano come vere le due affermazioni:\n1. «Avere compiuto 25 anni è condizione necessaria per essere eletti al Senato del Paese Fantasia»;\n2. «Dario ha compiuto 28 anni ed è cittadino del Paese Fantasia».\nQuale deduzione è logicamente corretta?",
+    rispostaCorretta: "Dario possiede il requisito anagrafico necessario, ma non si può concludere con certezza che sia stato eletto al Senato",
+    risposteErrate: [
+      "Dario è sicuramente un senatore eletto del Paese Fantasia",
+      "Dario non potrà mai essere eletto al Senato del Paese Fantasia",
+      "L’età di 25 anni è condizione sufficiente per l’elezione automatica al Senato",
+      "Tutti i cittadini del Paese Fantasia che hanno più di 25 anni sono senatori"
+    ],
+    spiegazione: "La premessa stabilisce una condizione necessaria: $\\text{Senatore} \\to \\text{Età} \\ge 25$. Dario soddisfa la condizione necessaria (ha 28 anni), ma la condizione necessaria non è sufficiente a garantire l’elezione (occorre candidarsi, ricevere voti, ecc.). Dunque la sua elezione non è una conseguenza logica certa.",
+    fonte: "Lotto L2 del progetto — L2-08 (ID 695)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 696,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In teoria degli insiemi, sia $A$ un sottoinsieme proprio di $B$ ($A \\subset B$, con $A \\neq \\emptyset$ e $A \\neq B$). Quale delle seguenti affermazioni descrive correttamente le relazioni di necessità e sufficienza tra l’appartenenza a $A$ e l’appartenenza a $B$?",
+    rispostaCorretta: "Appartenere ad $A$ è condizione sufficiente per appartenere a $B$, mentre appartenere a $B$ è condizione necessaria per appartenere ad $A$",
+    risposteErrate: [
+      "Appartenere ad $A$ è condizione necessaria e sufficiente per appartenere a $B$",
+      "Appartenere a $B$ è condizione sufficiente per appartenere ad $A$",
+      "Appartenere ad $A$ è condizione necessaria ma non sufficiente per appartenere a $B$",
+      "Nessun elemento appartenente a $A$ può appartenere anche all’insieme $B$"
+    ],
+    spiegazione: "Dato che $A \\subset B$, ogni elemento di $A$ appartiene a $B$ ($x \\in A \\implies x \\in B$), quindi essere in $A$ è condizione sufficiente per essere in $B$. Al contempo, se un elemento non appartiene a $B$, non può appartenere ad $A$ ($x \\notin B \\implies x \\notin A$), rendendo l’appartenenza a $B$ condizione necessaria per appartenere ad $A$.",
+    fonte: "Lotto L2 del progetto — L2-09 (ID 696)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 697,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Un candidato afferma: «Sapendo che piovere è condizione sufficiente affinché il prato sia bagnato, ne deduco che se non piove il prato non può essere bagnato». Quale errore logico è stato commesso in questa deduzione?",
+    rispostaCorretta: "È stata trattata una condizione semplicemente sufficiente come se fosse anche una condizione necessaria",
+    risposteErrate: [
+      "È stata applicata correttamente la regola della contronominale",
+      "È stata confusa una proposizione falsa con una tautologia",
+      "È stata invertita la congiunzione con la disgiunzione inclusiva",
+      "Nessun errore: la deduzione del candidato è logicamente inoppugnabile"
+    ],
+    spiegazione: "L’affermazione «Piove $\\implies$ Prato bagnato» stabilisce la sufficienza della pioggia. Sostenere che senza pioggia il prato non possa bagnarsi ($\\neg \\text{Piove} \\implies \\neg \\text{Bagnato}$) confonde la sufficienza con la necessità, ignorando che il prato potrebbe essere bagnato da irrigatori o idranti.",
+    fonte: "Lotto L2 del progetto — L2-10 (ID 697)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 698,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si assuma come vera la definizione formale: «Un apparato elettronico opera in modalità Super-Eco ($E$) se e solo se la tensione di alimentazione è inferiore a 12 Volt ($V$)». In base a questa sola definizione ($E \\leftrightarrow V$), quale delle seguenti combinazioni di stati operativi è logicamente IMPOSSIBILE?",
+    rispostaCorretta: "L’apparato opera in modalità Super-Eco ($E$) con tensione non inferiore a 12 Volt ($\\neg V$), oppure non opera in modalità Super-Eco ($\\neg E$) con tensione inferiore a 12 Volt ($V$)",
+    risposteErrate: [
+      "L’apparato opera in modalità Super-Eco ($E$) con tensione pari a 9 Volt ($V$)",
+      "L’apparato non opera in modalità Super-Eco ($\\neg E$) con tensione pari a 24 Volt ($\\neg V$)",
+      "La tensione di alimentazione viene mantenuta a 15 Volt ($\\neg V$) e l’apparato non opera in modalità Super-Eco ($\\neg E$)",
+      "La tensione di alimentazione scende a 5 Volt ($V$) e l’apparato si attiva in modalità Super-Eco ($E$)"
+    ],
+    spiegazione: "Il bicondizionale $E \\leftrightarrow V$ è vero se e solo se $E$ e $V$ hanno lo stesso valore di verità ($V \\land V$ oppure $F \\land F$). I casi discordi ($E \\land \\neg V$ e $\\neg E \\land V$) rendono falsa la relazione e sono pertanto logicamente impossibili nel sistema dato. Tutte le altre quattro alternative descrivono stati operativi perfettamente conformi e compatibili con la definizione.",
+    fonte: "Lotto L2 del progetto — L2-11 (ID 698)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 699,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un sistema formale di controllo accessi è definita la regola: «Una richiesta è autorizzata *se e solo se* il certificato digitale è valido». Quale delle seguenti affermazioni è formalmente corretta?",
+    rispostaCorretta: "La validità del certificato digitale è condizione necessaria e sufficiente per l’autorizzazione della richiesta",
+    risposteErrate: [
+      "La validità del certificato digitale è condizione sufficiente ma non necessaria per l’autorizzazione",
+      "La validità del certificato digitale è condizione necessaria ma non sufficiente per l’autorizzazione",
+      "Una richiesta può essere autorizzata anche se il certificato digitale non è valido",
+      "Se una richiesta non è autorizzata, il certificato digitale è sicuramente valido"
+    ],
+    spiegazione: "La locuzione «se e solo se» esprime per definizione la doppia implicazione (equivalenza logica): $\\text{Autorizzata} \\leftrightarrow \\text{Certificato Valido}$. Ciò rende la validità del certificato condizione sia necessaria sia sufficiente per l’autorizzazione.",
+    fonte: "Lotto L2 del progetto — L2-12 (ID 699)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 700,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si assuma come vera la proposizione: «Un poligono regolare è un triangolo equilatero se e solo se ha esattamente tre lati». Sapendo che il poligono $K$ NON ha esattamente tre lati, quale conclusione segue necessariamente?",
+    rispostaCorretta: "Il poligono $K$ non è un triangolo equilatero",
+    risposteErrate: [
+      "Il poligono $K$ è sicuramente un quadrato",
+      "Il poligono $K$ potrebbe comunque essere un triangolo equilatero",
+      "Non è possibile stabilire la natura del poligono $K$",
+      "Tutti i poligoni regolari hanno più di tre lati"
+    ],
+    spiegazione: "Data la relazione $T \\leftrightarrow L_3$, l’equivalenza logica impone che $T$ e $L_3$ abbiano sempre lo stesso valore di verità. Poiché $L_3$ è falsa (non ha tre lati), anche $T$ deve essere necessariamente falsa (il poligono non è un triangolo equilatero).",
+    fonte: "Lotto L2 del progetto — L2-13 (ID 700)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 701,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Date due proposizioni $P$ e $Q$ legate dalla relazione di equivalenza $P \\leftrightarrow Q$, se si constata che $Q$ è VERA, cosa si può dedurre con certezza su $P$?",
+    rispostaCorretta: "$P$ è necessariamente VERA",
+    risposteErrate: [
+      "$P$ è necessariamente FALSA",
+      "$P$ può essere sia vera sia falsa",
+      "Il valore di verità di $P$ dipende da una terza variabile non specificata",
+      "$P$ assume valore falso solo se $Q$ è una tautologia"
+    ],
+    spiegazione: "La tavola di verità del bicondizionale $P \\leftrightarrow Q$ è vera solo quando $P$ e $Q$ concordano. Se $P \\leftrightarrow Q$ è vera e $Q$ è vera, l’unico valore possibile per $P$ affinché il bicondizionale resti vero è $P = \\text{Vero}$.",
+    fonte: "Lotto L2 del progetto — L2-14 (ID 701)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 702,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quale delle seguenti terne di enunciati distingue correttamente il significato formale delle locuzioni «se», «solo se» e «se e solo se» tra due proposizioni $A$ e $B$?",
+    rispostaCorretta: "«$A$ se $B$» equivale a $B \\to A$; «$A$ solo se $B$» equivale a $A \\to B$; «$A$ se e solo se $B$» equivale a $A \\leftrightarrow B$",
+    risposteErrate: [
+      "«$A$ se $B$» equivale a $A \\to B$; «$A$ solo se $B$» equivale a $B \\to A$; «$A$ se e solo se $B$» equivale a $A \\leftrightarrow B$",
+      "«$A$ se $B$» equivale a $A \\land B$; «$A$ solo se $B$» equivale a $A \\lor B$; «$A$ se e solo se $B$» equivale a $A \\to B$",
+      "«$A$ se $B$» equivale a $B \\to A$; «$A$ solo se $B$» equivale a $\\neg A \\to B$; «$A$ se e solo se $B$» equivale a $A \\oplus B$",
+      "Non vi è alcuna differenza logica formale tra «$A$ se $B$» e «$A$ solo se $B$»"
+    ],
+    spiegazione: "In logica formale: 1) «$A$ se $B$» indica che $B$ è sufficiente per $A$ ($B \\to A$); 2) «$A$ solo se $B$» indica che $B$ è necessaria per $A$ ($A \\to B$); 3) «$A$ se e solo se $B$» unisce entrambe le direzioni ($A \\leftrightarrow B$).",
+    fonte: "Lotto L2 del progetto — L2-15 (ID 702)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 703,
+    materia: "Logica",
+    difficolta: "medio-difficile",
+    domanda: "In un sistema assiomatico ipotetico valgono le seguenti tre regole formali:\n1. Se $A$ e $B$ sono entrambi veri, allora $C$ è vero ($A \\land B \\to C$);\n2. Se $C$ è vero, allora $A$ è vero ($C \\to A$);\n3. Se $C$ è vero, allora $B$ è vero ($C \\to B$).\nQuale relazione logica esatta sussiste tra la congiunzione $A \\land B$ e la proposizione $C$?",
+    rispostaCorretta: "$A \\land B$ è condizione necessaria e sufficiente per $C$ (ossia $(A \\land B) \\leftrightarrow C$)",
+    risposteErrate: [
+      "$A \\land B$ è condizione sufficiente ma non necessaria per $C$",
+      "$A \\land B$ è condizione necessaria ma non sufficiente per $C$",
+      "$A \\land B$ è incompatibile con $C$",
+      "Nessuna relazione logica può essere stabilita tra $A \\land B$ e $C$"
+    ],
+    spiegazione: "Dalla regola 1 abbiamo la sufficienza: $(A \\land B) \\to C$. Dalle regole 2 e 3 abbiamo che se $C$ è vero, sia $A$ sia $B$ sono veri, quindi $C \\to (A \\land B)$, che rappresenta la necessità di $(A \\land B)$ per $C$. Essendo vere entrambe le implicazioni dirette e inverse, $(A \\land B) \\leftrightarrow C$ costituisce una condizione necessaria e sufficiente.",
+    fonte: "Lotto L2 del progetto — L2-16 (ID 703)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 704,
+    materia: "Logica",
+    difficolta: "medio-facile",
+    domanda: "Si assuma come vera la definizione: «In un insieme di numeri interi, un numero $n$ è pari se e solo se è divisibile per 2». Quale conclusione è direttamente equivalente a questa definizione?",
+    rispostaCorretta: "La divisibilità per 2 è condizione necessaria e sufficiente affinché un numero intero sia pari",
+    risposteErrate: [
+      "La divisibilità per 2 è condizione sufficiente ma non necessaria per essere pari",
+      "La divisibilità per 2 è condizione necessaria ma non sufficiente per essere pari",
+      "Esistono numeri pari che non sono divisibili per 2",
+      "Un numero intero è pari solo se è divisibile per 4"
+    ],
+    spiegazione: "La locuzione «se e solo se» stabilisce per definizione che la proprietà di essere divisibile per 2 è contemporaneamente necessaria e sufficiente per appartenere all’insieme dei numeri interi pari.",
+    fonte: "Lotto L2 del progetto — L2-17 (ID 704)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 705,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Che cosa occorre mostrare per confutare (smentire) la tesi secondo cui la condizione $P$ sarebbe «necessaria e sufficiente» per $Q$?",
+    rispostaCorretta: "È sufficiente trovare un caso in cui si verifichi $P$ ma non $Q$, oppure un caso in cui si verifichi $Q$ ma non $P$",
+    risposteErrate: [
+      "Occorre dimostrare che $P$ e $Q$ non si verificano mai contemporaneamente in nessun caso",
+      "Occorre dimostrare che sia $P$ sia $Q$ sono sempre entrambe false in ogni circostanza",
+      "È necessario mostrare che $P$ implica $\\neg Q$",
+      "Non è possibile confutare una condizione necessaria e sufficiente"
+    ],
+    spiegazione: "Poiché $P \\leftrightarrow Q$ equivale a $(P \\to Q) \\land (Q \\to P)$, per smentirla basta confutare almeno una delle due implicazioni: o mostrando che $P$ non è sufficiente (esiste $P \\land \\neg Q$) oppure mostrando che $P$ non è necessaria (esiste $\\neg P \\land Q$).",
+    fonte: "Lotto L2 del progetto — L2-18 (ID 705)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 706,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Nel linguaggio formale, a quale formula logica corrisponde esattamente la proposizione: «Il semaforo emette luce rossa ($R$) se la centralina rileva un guasto ($G$)»?",
+    rispostaCorretta: "$G \\to R$",
+    risposteErrate: [
+      "$R \\to G$",
+      "$R \\leftrightarrow G$",
+      "$\\neg G \\to \\neg R$",
+      "$R \\land G$"
+    ],
+    spiegazione: "La struttura «$A$ se $B$» pone $B$ come antecedente (premessa/condizione sufficiente) e $A$ come conseguente. Dunque «$R$ se $G$» si formalizza rigorosamente come $G \\to R$.",
+    fonte: "Lotto L2 del progetto — L2-19 (ID 706)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 707,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Dato l’enunciato: «Un sensore di pressione emette un segnale d’allarme ($A$) *solo se* la pressione interna supera la soglia critica ($S$)», quale delle seguenti deduzioni è logicamente valida e necessaria?",
+    rispostaCorretta: "Se la pressione interna non supera la soglia critica ($\\neg S$), allora il sensore non emette il segnale d’allarme ($\\neg A$)",
+    risposteErrate: [
+      "Se la pressione interna supera la soglia critica ($S$), allora il sensore emette sicuramente il segnale d’allarme ($A$)",
+      "Se il sensore non emette il segnale d’allarme ($\\neg A$), allora la pressione interna è sicuramente sotto la soglia critica ($\\neg S$)",
+      "Superare la soglia critica ($S$) è condizione sufficiente affinché il sensore emetta l’allarme ($A$)",
+      "Il sensore emette il segnale d’allarme in modo casuale e continuo"
+    ],
+    spiegazione: "La locuzione «$A$ solo se $S$» si formalizza rigorosamente come $A \\to S$ ($S$ è condizione necessaria per $A$). La sua contronominale logicamente equivalente è $\\neg S \\to \\neg A$: se la pressione non supera la soglia critica, l’allarme non può essere emesso. La formula $S \\to A$ rappresenta il converso dell’implicazione originaria (non equivalente ad essa) e scambia indebitamente la condizione necessaria con una condizione sufficiente; inferire la conclusione $A$ dalla sola premessa $S$ costituirebbe inoltre la fallacia dell’affermazione del conseguente.",
+    fonte: "Lotto L2 del progetto — L2-20 (ID 707)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 708,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la relazione logica tra i due enunciati: 1. «La sirena suona se c’è fumo» ($F \\to S$); 2. «La sirena suona solo se c’è fumo» ($S \\to F$)?",
+    rispostaCorretta: "Il primo enunciato stabilisce che la presenza di fumo è condizione sufficiente per il suono della sirena; il secondo stabilisce che la presenza di fumo è condizione necessaria",
+    risposteErrate: [
+      "I due enunciati hanno esattamente lo stesso significato logico e sono reciprocamente equivalenti",
+      "Il primo enunciato stabilisce una condizione necessaria, mentre il secondo stabilisce una condizione sufficiente",
+      "Il primo enunciato esprime un bicondizionale, mentre il secondo esprime una disgiunzione",
+      "I due enunciati sono entrambi falsi per contraddizione logica interna"
+    ],
+    spiegazione: "«$S$ se $F$» significa $F \\to S$ ($F$ è sufficiente per $S$). «$S$ solo se $F$» significa $S \\to F$ ($F$ è necessaria per $S$). Si tratta di due implicazioni con orientamento opposto (una è la conversa dell’altra).",
+    fonte: "Lotto L2 del progetto — L2-21 (ID 708)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 709,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Data la proposizione condizionale $P \\to Q$, quale tra le seguenti formule ha SEMPRE e rigorosamente lo stesso identico valore di verità di $P \\to Q$ in qualsiasi assegnazione di verità delle variabili $P$ e $Q$?",
+    rispostaCorretta: "La contronominale $\\neg Q \\to \\neg P$ (mentre il converso $Q \\to P$ e l’inverso $\\neg P \\to \\neg Q$ non sono logicamente equivalenti a $P \\to Q$)",
+    risposteErrate: [
+      "Il converso $Q \\to P$",
+      "L’inverso $\\neg P \\to \\neg Q$",
+      "La negazione congiunta $\\neg P \\land \\neg Q$",
+      "La disgiunzione esclusiva $P \\oplus Q$"
+    ],
+    spiegazione: "Nelle trasformazioni condizionali, l’unica forma logicamente equivalente all’implicazione originaria $P \\to Q$ è la contronominale $\\neg Q \\to \\neg P$. Il converso ($Q \\to P$) e l’inverso ($\\neg P \\to \\neg Q$) sono equivalenti tra loro, ma NON equivalgono all’implicazione di partenza.",
+    fonte: "Lotto L2 del progetto — L2-22 (ID 709)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 710,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Data la proposizione condizionale $P \\to Q$, quale formula ne rappresenta il «converso» e quale relazione di equivalenza sussiste con $P \\to Q$?",
+    rispostaCorretta: "Il converso è $Q \\to P$, e NON è logicamente equivalente a $P \\to Q$",
+    risposteErrate: [
+      "Il converso è $\\neg Q \\to \\neg P$, ed è logicamente equivalente a $P \\to Q$",
+      "Il converso è $\\neg P \\to \\neg Q$, ed è logicamente equivalente a $P \\to Q$",
+      "Il converso è $P \\leftrightarrow Q$, ed è sempre vero",
+      "Il converso è $\\neg P \\lor Q$, ed è logicamente equivalente a $P \\to Q$"
+    ],
+    spiegazione: "Il converso di $P \\to Q$ è $Q \\to P$, ottenuto invertendo l’antecedente con il conseguente. In generale, $P \\to Q \\not\\equiv Q \\to P$; confonderli costituisce la fallacia dell’affermazione del conseguente.",
+    fonte: "Lotto L2 del progetto — L2-23 (ID 710)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 711,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Data la proposizione condizionale $P \\to Q$, quale formula ne rappresenta l’«inverso» e a quale altra forma condizionale esso risulta logicamente equivalente?",
+    rispostaCorretta: "L’inverso è $\\neg P \\to \\neg Q$, ed è logicamente equivalente al converso ($Q \\to P$)",
+    risposteErrate: [
+      "L’inverso è $\\neg Q \\to \\neg P$, ed è logicamente equivalente all’implicazione originale ($P \\to Q$)",
+      "L’inverso è $Q \\to P$, ed è logicamente equivalente a $P \\to Q$",
+      "L’inverso è $P \\land \\neg Q$, ed è logicamente equivalente alla negazione di $P$",
+      "L’inverso è $\\neg P \\lor \\neg Q$, ed è una tautologia"
+    ],
+    spiegazione: "L’inverso di $P \\to Q$ è $\\neg P \\to \\neg Q$ (si negano antecedente e conseguente senza scambiarli). L’inverso non è equivalente all’implicazione originaria $P \\to Q$, ma è la contronominale del converso $Q \\to P$, ed è quindi logicamente equivalente a quest’ultimo ($\\neg P \\to \\neg Q \\equiv Q \\to P$).",
+    fonte: "Lotto L2 del progetto — L2-24 (ID 711)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 712,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Quale delle seguenti coppie di proposizioni condizionali è composta da due formule tra loro logicamente equivalenti?",
+    rispostaCorretta: "Il converso ($Q \\to P$) e l’inverso ($\\neg P \\to \\neg Q$)",
+    risposteErrate: [
+      "L’implicazione diretta ($P \\to Q$) e il converso ($Q \\to P$)",
+      "L’implicazione diretta ($P \\to Q$) e l’inverso ($\\neg P \\to \\neg Q$)",
+      "La contronominale ($\\neg Q \\to \\neg P$) e il converso ($Q \\to P$)",
+      "La contronominale ($\\neg Q \\to \\neg P$) e l’inverso ($\\neg P \\to \\neg Q$)"
+    ],
+    spiegazione: "In un quadrato di relazioni condizionali: 1) L’implicazione diretta ($P \\to Q$) è equivalente alla sua contronominale ($\\neg Q \\to \\neg P$); 2) Il converso ($Q \\to P$) è equivalente all’inverso ($\\neg P \\to \\neg Q$).",
+    fonte: "Lotto L2 del progetto — L2-25 (ID 712)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 713,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si assuma come vera la regola: «Se un file è crittografato con chiave RSA ($C$), allora il suo contenuto non è leggibile in chiaro ($\\neg L$)». Quale dei seguenti enunciati ne esprime la contronominale logicamente certa?",
+    rispostaCorretta: "Se il contenuto di un file è leggibile in chiaro ($L$), allora il file non è crittografato con chiave RSA ($\\neg C$)",
+    risposteErrate: [
+      "Se il contenuto di un file non è leggibile in chiaro ($\\neg L$), allora il file è crittografato con chiave RSA ($C$)",
+      "Se un file non è crittografato con chiave RSA ($\\neg C$), allora il suo contenuto è leggibile in chiaro ($L$)",
+      "Un file è crittografato con chiave RSA se e solo se non è leggibile in chiaro",
+      "Tutti i file non leggibili in chiaro sono privi di crittografia RSA"
+    ],
+    spiegazione: "L’implicazione iniziale è $C \\to \\neg L$. La contronominale si ottiene negando e scambiando i termini: $\\neg(\\neg L) \\to \\neg C$, ossia $L \\to \\neg C$ («Se è leggibile in chiaro, allora non è crittografato con chiave RSA»).",
+    fonte: "Lotto L2 del progetto — L2-26 (ID 713)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 714,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un sistema di telemetria industriale è assunta come vera la regola: «Se l’attuatore principale è bloccato ($B$), allora la telemetria registra un assorbimento di corrente anomalo ($A$)». Quale delle seguenti deduzioni NON commette alcuna fallacia logica ed è formalmente valida e inoppugnabile?",
+    rispostaCorretta: "Se la telemetria non registra alcun assorbimento anomalo ($\\neg A$), allora l’attuatore principale non è bloccato ($\\neg B$)",
+    risposteErrate: [
+      "Se la telemetria registra un assorbimento anomalo ($A$), allora l’attuatore principale è sicuramente bloccato ($B$)",
+      "Se l’attuatore principale non è bloccato ($\\neg B$), allora la telemetria non può registrare alcun assorbimento anomalo ($\\neg A$)",
+      "L’assorbimento anomalo ($A$) è condizione sufficiente per il blocco dell’attuatore ($B$)",
+      "Registrare un assorbimento anomalo e avere l’attuatore bloccato sono eventi incompatibili"
+    ],
+    spiegazione: "La premessa stabilisce $B \\to A$. L’unica inferenza valida dedotta direttamente dalla regola è la sua contronominale $\\neg A \\to \\neg B$ (Modus Tollens). Dedurre $A \\to B$ costituisce la fallacia dell’affermazione del conseguente; dedurre $\\neg B \\to \\neg A$ costituisce la fallacia della negazione dell’antecedente.",
+    fonte: "Lotto L2 del progetto — L2-27 (ID 714)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 715,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In logica proposizionale, si consideri la regola formale: «L’esecuzione del processo $P$ è inibita a meno che sia presente il flag di autorizzazione $A$» (ossia: in assenza del flag $\\neg A$, il processo $P$ non può essere eseguito $\\neg P$). A quale delle seguenti formule condizionali è logicamente equivalente questa regola?",
+    rispostaCorretta: "$P \\to A$ (ossia $\\neg A \\to \\neg P$: la presenza del flag $A$ è condizione necessaria per l’esecuzione di $P$)",
+    risposteErrate: [
+      "$A \\to P$ (il flag $A$ è condizione sufficiente per l’esecuzione automatica di $P$)",
+      "$P \\land \\neg A$",
+      "$\\neg P \\to \\neg A$",
+      "$P \\leftrightarrow \\neg A$"
+    ],
+    spiegazione: "La proposizione stabilisce in modo univoco che in assenza del flag ($\\neg A$) il processo non può essere eseguito ($\\neg P$), da cui $\\neg A \\to \\neg P$. Per contronominale, $\\neg A \\to \\neg P \\equiv P \\to A$. Il flag $A$ è dunque una condizione necessaria (ma non necessariamente sufficiente) per l’esecuzione del processo $P$.",
+    fonte: "Lotto L2 del progetto — L2-28 (ID 715)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 716,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si assuma come vera la regola: «Se un candidato possiede sia la laurea in fisica ($F$) sia la conoscenza dell’inglese ($I$), allora viene ammesso al colloquio ($A$)». Sapendo che un candidato possiede la laurea in fisica ($F$) ma NON conosce l’inglese ($\\neg I$), cosa si può dedurre con certezza sulla sua ammissione ($A$)?",
+    rispostaCorretta: "Non è possibile stabilire con certezza se sarà ammesso o meno al colloquio",
+    risposteErrate: [
+      "Il candidato non sarà sicuramente ammesso al colloquio",
+      "Il candidato sarà sicuramente ammesso al colloquio",
+      "Il candidato è automaticamente escluso da tutte le selezioni future",
+      "La regola formale iniziale viene smentita ed è falsa"
+    ],
+    spiegazione: "La regola è $(F \\land I) \\to A$. La congiunzione $F \\land I$ è falsa poiché il candidato non conosce l’inglese. Con antecedente falso, l’implicazione non fornisce alcuna informazione sul valore di $A$ (il candidato potrebbe essere ammesso in base ad altri titoli previsti dal bando).",
+    fonte: "Lotto L2 del progetto — L2-29 (ID 716)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 717,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la corretta contronominale dell’implicazione con condizione sufficiente congiunta $(A \\land B) \\to C$?",
+    rispostaCorretta: "$\\neg C \\to (\\neg A \\lor \\neg B)$",
+    risposteErrate: [
+      "$\\neg C \\to (\\neg A \\land \\neg B)$",
+      "$(A \\lor B) \\to \\neg C$",
+      "$\\neg A \\lor \\neg B \\to C$",
+      "$C \\to (A \\land B)$"
+    ],
+    spiegazione: "La contronominale di $P \\to Q$ è $\\neg Q \\to \\neg P$. Ponendo $P = (A \\land B)$ e $Q = C$, si ha $\\neg C \\to \\neg(A \\land B)$. Applicando la legge di De Morgan a $\\neg(A \\land B)$, otteniamo $\\neg C \\to (\\neg A \\lor \\neg B)$.",
+    fonte: "Lotto L2 del progetto — L2-30 (ID 717)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 718,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si assuma come vera la regola: «Se un articolo è in saldo ($S$) oppure è acquistato con un buono sconto ($B$), allora l’acquirente ha diritto alla spedizione gratuita ($G$)». Sapendo che un cliente NON ha diritto alla spedizione gratuita ($\\neg G$), quale conclusione è logicamente certa?",
+    rispostaCorretta: "L’articolo non è in saldo e non è stato acquistato con un buono sconto ($\\neg S \\land \\neg B$)",
+    risposteErrate: [
+      "L’articolo non è in saldo oppure non è stato acquistato con un buono sconto ($\\neg S \\lor \\neg B$)",
+      "L’articolo è in saldo ma il cliente non ha usato il buono sconto",
+      "L’articolo è stato acquistato a prezzo pieno ma con spedizione aerea",
+      "Non si può stabilire se l’articolo fosse o meno in saldo"
+    ],
+    spiegazione: "La regola è $(S \\lor B) \\to G$. Per contronominale, $\\neg G \\to \\neg(S \\lor B)$. Per la legge di De Morgan, $\\neg(S \\lor B) \\equiv \\neg S \\land \\neg B$. Dunque, in assenza di spedizione gratuita, l’articolo non è in saldo E non è stato usato il buono.",
+    fonte: "Lotto L2 del progetto — L2-31 (ID 718)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 719,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Qual è la contronominale logicamente equivalente dell’implicazione con condizione sufficiente disgiunta $(A \\lor B) \\to C$?",
+    rispostaCorretta: "$\\neg C \\to (\\neg A \\land \\neg B)$",
+    risposteErrate: [
+      "$\\neg C \\to (\\neg A \\lor \\neg B)$",
+      "$(A \\land B) \\to \\neg C$",
+      "$\\neg A \\land \\neg B \\to \\neg C$",
+      "$C \\to (A \\lor B)$"
+    ],
+    spiegazione: "La contronominale di $(A \\lor B) \\to C$ è $\\neg C \\to \\neg(A \\lor B)$. Applicando la legge di De Morgan alla disgiunzione negata, $\\neg(A \\lor B) \\equiv \\neg A \\land \\neg B$. Quindi otteniamo $\\neg C \\to (\\neg A \\land \\neg B)$.",
+    fonte: "Lotto L2 del progetto — L2-32 (ID 719)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 720,
+    materia: "Logica",
+    difficolta: "medio-difficile",
+    domanda: "In un protocollo di sicurezza industriale si stabilisce che: «Affinché il reattore possa essere avviato ($R$), è necessario che siano attivi sia il sistema di raffreddamento primario ($C_1$) sia il sistema di raffreddamento ausiliario ($C_2$)». Se durante un controllo si rileva che il sistema ausiliario $C_2$ è GUASTO ($\\neg C_2$), quale conclusione segue necessariamente?",
+    rispostaCorretta: "Il reattore non può essere avviato ($\\neg R$), indipendentemente dallo stato del sistema primario $C_1$",
+    risposteErrate: [
+      "Il reattore può essere avviato purché il sistema primario $C_1$ funzioni a potenza doppia",
+      "Il reattore non può essere avviato solo se anche il sistema primario $C_1$ risulta guasto",
+      "Il sistema primario $C_1$ è sicuramente guasto a sua volta",
+      "Non si può dedurre alcunché sullo stato di avvio del reattore"
+    ],
+    spiegazione: "La condizione necessaria multipla si formalizza come $R \\to (C_1 \\land C_2)$. Per contronominale, $\\neg(C_1 \\land C_2) \\to \\neg R$, ossia $(\\neg C_1 \\lor \\neg C_2) \\to \\neg R$. Poiché $\\neg C_2$ è vero, la disgiunzione è soddisfatta e ne consegue inconfutabilmente che il reattore non può essere avviato ($\\neg R$).",
+    fonte: "Lotto L2 del progetto — L2-33 (ID 720)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 721,
+    materia: "Logica",
+    difficolta: "medio-facile",
+    domanda: "Siano date le due regole: 1. «Se piove ($P$), allora la partita viene rinviata ($R$)»; 2. «Se c’è nebbia fitta ($N$), allora la partita viene rinviata ($R$)». Quale singola formula riassume correttamente queste due condizioni sufficienti alternative?",
+    rispostaCorretta: "$(P \\lor N) \\to R$",
+    risposteErrate: [
+      "$(P \\land N) \\to R$",
+      "$R \\to (P \\land N)$",
+      "$(P \\lor N) \\leftrightarrow R$",
+      "$\\neg P \\land \\neg N \\to R$"
+    ],
+    spiegazione: "Avendo $P \\to R$ e $N \\to R$, per le proprietà dell’implicazione vale l’equivalenza $(P \\to R) \\land (N \\to R) \\equiv (P \\lor N) \\to R$. Dunque basta che si verifichi almeno uno tra pioggia o nebbia affinché la partita sia rinviata.",
+    fonte: "Lotto L2 del progetto — L2-34 (ID 721)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 722,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si assuma come vera la proposizione: «Se un veicolo ottiene l’omologazione ecologica ($E$), allora deve avere emissioni di ossidi di azoto inferiori alla soglia ($N$) ed emissioni di particolato inferiori alla soglia ($P$)». Sapendo che un veicolo presenta emissioni di particolato SUPERIORI alla soglia ($\\neg P$), cosa si può dedurre con certezza?",
+    rispostaCorretta: "Il veicolo non ha ottenuto l’omologazione ecologica ($\\neg E$)",
+    risposteErrate: [
+      "Il veicolo ha ottenuto l’omologazione ecologica purché rispetti la soglia $N$",
+      "Il veicolo ha sicuramente emissioni di ossidi di azoto superiori alla soglia ($\\neg N$)",
+      "Non si può stabilire se il veicolo abbia o meno ottenuto l’omologazione ecologica",
+      "Tutti i veicoli con emissioni di particolato superiori alla soglia sono alimentati a gasolio"
+    ],
+    spiegazione: "L’implicazione è $E \\to (N \\land P)$. La contronominale è $\\neg(N \\land P) \\to \\neg E \\equiv (\\neg N \\lor \\neg P) \\to \\neg E$. Poiché $\\neg P$ è vero, la condizione d’innesco $(\\neg N \\lor \\neg P)$ è soddisfatta, da cui segue necessariamente $\\neg E$ (nessuna omologazione).",
+    fonte: "Lotto L2 del progetto — L2-35 (ID 722)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 723,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si consideri la regola vera: «Se una transazione finanziaria viene segnalata come sospetta ($S$), allora deve essere sottoposta a verifica manuale ($V$) oppure essere bloccata automaticamente ($B$)». Sapendo che una transazione è stata segnalata come sospetta ($S$) e che NON è stata bloccata automaticamente ($\\neg B$), quale conclusione è logicamente certa?",
+    rispostaCorretta: "La transazione è stata necessariamente sottoposta a verifica manuale ($V$)",
+    risposteErrate: [
+      "La transazione è stata annullata dal cliente",
+      "La transazione non era in realtà sospetta ($\\neg S$)",
+      "La transazione non è stata sottoposta a verifica manuale",
+      "Non è possibile stabilire se la verifica manuale abbia avuto luogo"
+    ],
+    spiegazione: "Dalla regola $S \\to (V \\lor B)$, essendo $S$ vero (Modus Ponens), ne consegue $V \\lor B$. Sapendo che $\\neg B$ è vero, per il sillogismo disgiuntivo su $V \\lor B$ e $\\neg B$ segue necessariamente $V$ (verifica manuale).",
+    fonte: "Lotto L2 del progetto — L2-36 (ID 723)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 724,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Data l’implicazione $P \\to (Q \\lor R)$, quale delle seguenti combinazioni di verità dei componenti falsifica categoricamente l’enunciato condizionale?",
+    rispostaCorretta: "$P$ è VERA, $Q$ è FALSA e $R$ è FALSA",
+    risposteErrate: [
+      "$P$ è FALSA, $Q$ è VERA e $R$ è VERA",
+      "$P$ è VERA, $Q$ è VERA e $R$ è FALSA",
+      "$P$ è FALSA, $Q$ è FALSA e $R$ è FALSA",
+      "$P$ è VERA, $Q$ è FALSA e $R$ è VERA"
+    ],
+    spiegazione: "Un condizionale $P \\to X$ è falso se e solo se l’antecedente $P$ è vero e il conseguente $X$ è falso. Poiché $X = Q \\lor R$, la disgiunzione è falsa solo quando sia $Q$ sia $R$ sono entrambe false. Dunque l’implicazione è falsa quando $P = V$, $Q = F$, $R = F$.",
+    fonte: "Lotto L2 del progetto — L2-37 (ID 724)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 725,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un regolamento accademico sono stabilite due regole distinte per l’accesso alla qualifica «Esperto» ($Q$):\n1. «Aver completato 5 anni di servizio ($S$) è condizione necessaria per ottenere la qualifica ($Q \\to S$)»;\n2. «Aver vinto un premio scientifico internazionale ($P$) è condizione sufficiente per ottenere la qualifica ($P \\to Q$)».\nIn base a queste due sole regole, quale delle seguenti conclusioni è logicamente certa?",
+    rispostaCorretta: "Chiunque vinca un premio scientifico internazionale ($P$) ottiene sicuramente la qualifica ($Q$) e possiede quindi necessariamente 5 anni di servizio ($S$)",
+    risposteErrate: [
+      "Aver completato 5 anni di servizio ($S$) è sufficiente da solo per ottenere automaticamente la qualifica ($Q$)",
+      "Chi non vince il premio scientifico ($P$) non può in nessun caso ottenere la qualifica ($Q$)",
+      "La qualifica $Q$ e il servizio $S$ sono condizioni reciprocamente necessarie e sufficienti ($Q \\leftrightarrow S$)",
+      "Vincere il premio scientifico ($P$) è una condizione necessaria per ottenere la qualifica ($Q$)"
+    ],
+    spiegazione: "Dalle premesse abbiamo $P \\to Q$ (sufficienza di $P$ per $Q$) e $Q \\to S$ (necessità di $S$ per $Q$). Dalle due implicazioni $P \\to Q$ e $Q \\to S$ segue per transitività (sillogismo ipotetico) che $P \\to S$. Dunque, chiunque vinca il premio consegue la qualifica $Q$ e possiede necessariamente anche il requisito dei 5 anni di servizio $S$.",
+    fonte: "Lotto L2 del progetto — L2-38 (ID 725)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 726,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Siano date le premesse vere:\n1. «Se l’interruttore $A$ è chiuso, allora la lampada $B$ si accende ($A \\to B$)»;\n2. «Se la lampada $B$ si accende, allora il sensore $C$ invia un segnale ($B \\to C$)»;\n3. «Il sensore $C$ NON ha inviato alcun segnale ($\\neg C$)».\nQuale conclusione segue necessariamente?",
+    rispostaCorretta: "L’interruttore $A$ non è chiuso ($\\neg A$)",
+    risposteErrate: [
+      "L’interruttore $A$ è chiuso ($A$)",
+      "La lampada $B$ si è accesa ma il sensore $C$ è guasto",
+      "Il sensore $C$ non ha inviato il segnale perché la lampada $B$ è fulminata",
+      "Non è possibile trarre alcuna conclusione sullo stato dell’interruttore $A$"
+    ],
+    spiegazione: "Per transitività (sillogismo ipotetico), dalle premesse 1 e 2 segue $A \\to C$. Sapendo che $\\neg C$ è vero, per Modus Tollens si deduce inconfutabilmente $\\neg A$ (l’interruttore $A$ non è chiuso).",
+    fonte: "Lotto L2 del progetto — L2-39 (ID 726)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 727,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si considerino le seguenti tre implicazioni distinte assunte come vere in un sistema formale:\n1. $P \\to Q$;\n2. $Q \\to R$;\n3. $R \\to S$.\nSapendo con certezza che la proposizione $S$ è FALSA ($\\neg S$), quale conclusione segue necessariamente applicando la regola del Modus Tollens lungo la catena?",
+    rispostaCorretta: "Le proposizioni $P$, $Q$ ed $R$ sono tutte e tre necessariamente FALSE",
+    risposteErrate: [
+      "La proposizione $P$ è vera, mentre $Q$ ed $R$ sono false",
+      "Solo la proposizione $R$ è falsa, mentre $P$ e $Q$ possono essere vere",
+      "Le proposizioni $P$, $Q$ ed $R$ sono tutte e tre necessariamente VERE",
+      "Non si può determinare il valore di verità di alcuna delle proposizioni $P, Q, R$"
+    ],
+    spiegazione: "Dalle tre premesse separate e dal dato $\\neg S$, applicando iterativamente il Modus Tollens a ritroso: 1) da $R \\to S$ e $\\neg S$ segue $\\neg R$; 2) da $Q \\to R$ e $\\neg R$ segue $\\neg Q$; 3) da $P \\to Q$ e $\\neg Q$ segue $\\neg P$. Pertanto $P, Q, R$ sono tutte rigorosamente false.",
+    fonte: "Lotto L2 del progetto — L2-40 (ID 727)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 728,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Siano date le tre premesse assunte come vere:\n1. «Se $A$ è vero, allora $B$ è falso ($A \\to \\neg B$)»;\n2. «$B$ è vero oppure $C$ è vero ($B \\lor C$)»;\n3. «$A$ è vero».\nQuale conclusione segue necessariamente?",
+    rispostaCorretta: "$C$ è necessariamente VERO",
+    risposteErrate: [
+      "$C$ è necessariamente FALSO",
+      "$B$ è necessariamente VERO",
+      "$A$ e $C$ sono entrambi FALSI",
+      "Le premesse sono tra loro contraddittorie e incompatibili"
+    ],
+    spiegazione: "1) Poiché $A$ è vero (premessa 3), da $A \\to \\neg B$ (premessa 1) per Modus Ponens segue che $\\neg B$ è vero ($B$ è falso). 2) Dalla premessa 2 abbiamo $B \\lor C$. Essendo $B$ falso, per il sillogismo disgiuntivo ne consegue necessariamente che $C$ è VERO.",
+    fonte: "Lotto L2 del progetto — L2-41 (ID 728)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 729,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un algoritmo di controllo di un modulo web valgono tre regole formali:\n1. «Se il campo Nome è vuoto ($N$), allora il form è bloccato ($B$)» ($N \\to B$);\n2. «Se il campo Email non è valido ($E$), allora il form è bloccato ($B$)» ($E \\to B$);\n3. «Se il form è bloccato ($B$), allora il pulsante Invia è disabilitato ($D$)» ($B \\to D$).\nSapendo che il pulsante Invia è ABILITATO ($\\neg D$, ossia non è disabilitato), quale deduzione segue rigorosamente dalle sole premesse?",
+    rispostaCorretta: "Il campo Nome non è vuoto ($\\neg N$) e il campo Email è valido ($\\neg E$)",
+    risposteErrate: [
+      "Il campo Nome non è vuoto oppure il campo Email è valido ($\\neg N \\lor \\neg E$)",
+      "Il form è bloccato ($B$) ma il pulsante è abilitato",
+      "Il campo Nome è vuoto ma l’email è valida",
+      "Dalle sole premesse non è possibile stabilire lo stato dei campi Nome ed Email"
+    ],
+    spiegazione: "Dimostrazione passo-passo:\n1) Dalla regola 3 ($B \\to D$) e dal dato $\\neg D$, per Modus Tollens segue $\\neg B$ (il form non è bloccato);\n2) Dalla regola 1 ($N \\to B$) e da $\\neg B$, per Modus Tollens segue $\\neg N$ (il campo Nome non è vuoto);\n3) Dalla regola 2 ($E \\to B$) e da $\\neg B$, per Modus Tollens segue $\\neg E$ (il campo Email è valido);\n4) Congiungendo i risultati, vale sia $\\neg N$ sia $\\neg E$, ossia $\\neg N \\land \\neg E$.",
+    fonte: "Lotto L2 del progetto — L2-42 (ID 729)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 730,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Si consideri la premessa: «Se un metallo viene riscaldato oltre la sua temperatura di fusione ($R$), allora passa allo stato liquido ($L$)». Quale ulteriore premessa è necessaria e sufficiente per poter dedurre validamente che «Il metallo non è stato riscaldato oltre la sua temperatura di fusione ($\\neg R$)»?",
+    rispostaCorretta: "«Il metallo non è passato allo stato liquido ($\\neg L$)»",
+    risposteErrate: [
+      "«Il metallo è passato allo stato liquido ($L$)»",
+      "«Il metallo è stato raffreddato»",
+      "«Tutti i metalli fondono a temperature elevate»",
+      "«Il metallo è solido e conduce calore»"
+    ],
+    spiegazione: "Per dedurre $\\neg R$ dall’implicazione $R \\to L$ tramite la regola di inferenza valida del Modus Tollens ($\\neg L \\to \\neg R$), la premessa indispensabile da accertare è la negazione del conseguente, ossia $\\neg L$ («il metallo non è passato allo stato liquido»).",
+    fonte: "Lotto L2 del progetto — L2-43 (ID 730)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 731,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Se sappiamo che la condizione $A$ è sufficiente per $B$ ($A \\to B$) e che $B$ è a sua volta sufficiente per $C$ ($B \\to C$), quale affermazione esprime correttamente il ruolo logico di $C$ rispetto ad $A$?",
+    rispostaCorretta: "$C$ è condizione necessaria per $A$ (e $A$ è condizione sufficiente per $C$)",
+    risposteErrate: [
+      "$C$ è condizione sufficiente per $A$",
+      "$C$ è condizione necessaria e sufficiente per $A$",
+      "$C$ è indipendente da $A$",
+      "$A$ è condizione necessaria per $C$"
+    ],
+    spiegazione: "Per transitività, $A \\to B$ e $B \\to C$ implicano $A \\to C$. In ogni implicazione $A \\to C$, l’antecedente $A$ è condizione sufficiente per il conseguente $C$, mentre il conseguente $C$ è condizione necessaria per l’antecedente $A$ (poiché $\\neg C \\implies \\neg A$).",
+    fonte: "Lotto L2 del progetto — L2-44 (ID 731)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 732,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Nel contesto della logica proposizionale classica (in cui vale il principio del terzo escluso $X \\lor \\neg X$), si considerino due implicazioni vere: 1. $X \\to Y$; 2. $\\neg X \\to Z$. Quale delle seguenti conclusioni è sempre vera in ogni possibile valutazione di verità?",
+    rispostaCorretta: "Almeno una tra le proposizioni $Y$ e $Z$ è vera ($Y \\lor Z$ è vera)",
+    risposteErrate: [
+      "$Y$ e $Z$ sono entrambe contemporaneamente vere ($Y \\land Z$)",
+      "Né $Y$ né $Z$ possono essere vere ($\\neg Y \\land \\neg Z$)",
+      "Se $Y$ è vera, allora $Z$ deve essere necessariamente falsa ($Y \\to \\neg Z$)",
+      "Non si può dedurre alcuna informazione sulla verità di $Y$ e $Z$"
+    ],
+    spiegazione: "In logica classica bivalente, la variabile $X$ è o vera ($X$) oppure falsa ($\\neg X$). Se $X$ è vera, per la regola 1 si deduce $Y$; se $X$ è falsa, per la regola 2 si deduce $Z$. In tutti i casi possibili si verifica almeno una tra $Y$ o $Z$, rendendo la disgiunzione $Y \\lor Z$ una conseguenza logica tautologica del sistema $((X \\to Y) \\land (\\neg X \\to Z) \\implies Y \\lor Z)$.",
+    fonte: "Lotto L2 del progetto — L2-45 (ID 732)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 733,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Date le premesse:\n1. «Se piove ($P$), allora resto a casa ($C$)»;\n2. «Se c’è vento forte ($V$), allora leggo un libro ($L$)»;\n3. «Oggi piove oppure c’è vento forte ($P \\lor V$)».\nIn base alla regola logica del *dilemma costruttivo*, quale conclusione segue necessariamente?",
+    rispostaCorretta: "Oggi resto a casa oppure leggo un libro ($C \\lor L$)",
+    risposteErrate: [
+      "Oggi resto a casa e leggo un libro ($C \\land L$)",
+      "Oggi non resto a casa e non leggo un libro",
+      "Se resto a casa, allora leggo sicuramente un libro",
+      "Nessuna conclusione è garantita dalle premesse fornite"
+    ],
+    spiegazione: "La regola classica del dilemma costruttivo stabilisce che da $(P \\to C) \\land (V \\to L)$ e dalla disgiunzione delle premesse $(P \\lor V)$, ne consegue la disgiunzione dei rispettivi conseguenti: $C \\lor L$ («resto a casa oppure leggo un libro»).",
+    fonte: "Lotto L2 del progetto — L2-46 (ID 733)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 734,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Date le premesse:\n1. «Se $A$ è vero, allora $B$ è vero ($A \\to B$)»;\n2. «Se $C$ è vero, allora $D$ è vero ($C \\to D$)»;\n3. «$B$ è falso oppure $D$ è falso ($\\neg B \\lor \\neg D$)».\nIn base alla regola logica del *dilemma distruttivo*, quale conclusione è logicamente certa?",
+    rispostaCorretta: "$A$ è falso oppure $C$ è falso ($\\neg A \\lor \\neg C$)",
+    risposteErrate: [
+      "$A$ è falso e $C$ è falso ($\\neg A \\land \\neg C$)",
+      "$A$ è vero oppure $C$ è vero ($A \\lor C$)",
+      "$B$ e $D$ sono entrambi contemporaneamente falsi",
+      "Non è possibile determinare alcuna relazione tra $A$ e $C$"
+    ],
+    spiegazione: "Il dilemma distruttivo è l’estensione disgiuntiva del Modus Tollens: da $(A \\to B) \\land (C \\to D)$ e $(\\neg B \\lor \\neg D)$ segue necessariamente la disgiunzione delle negazioni degli antecedenti: $\\neg A \\lor \\neg C$.",
+    fonte: "Lotto L2 del progetto — L2-47 (ID 734)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 735,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "Nel contesto della logica proposizionale classica bivalente, siano date come vere entrambe le implicazioni: 1. $P \\to Q$; 2. $\\neg P \\to Q$. Che cosa si può affermare con certezza sul valore di verità della proposizione $Q$?",
+    rispostaCorretta: "In ogni assegnazione di verità che rende vere entrambe le implicazioni date, la proposizione $Q$ è necessariamente VERA",
+    risposteErrate: [
+      "La proposizione $Q$ è necessariamente FALSA",
+      "La proposizione $Q$ è vera solo nel caso in cui $P$ sia vera",
+      "La proposizione $Q$ ha necessariamente lo stesso valore di verità di $P$",
+      "Le due premesse date contengono una contraddizione insanabile"
+    ],
+    spiegazione: "In logica proposizionale classica vale il principio del terzo escluso $P \\lor \\neg P = \\text{Vero}$. Poiché entrambe le ipotesi $P$ e $\\neg P$ implicano $Q$, congiungendo le premesse si ha $(P \\to Q) \\land (\\neg P \\to Q) \\equiv (P \\lor \\neg P) \\to Q \\equiv \\text{Vero} \\to Q \\equiv Q$. Pertanto, sotto l’assunzione che entrambe le implicazioni siano vere, la proposizione $Q$ è necessariamente vera.",
+    fonte: "Lotto L2 del progetto — L2-48 (ID 735)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 736,
+    materia: "Logica",
+    difficolta: "medio",
+    domanda: "In un test di coerenza logica, si hanno le seguenti quattro affermazioni assunte come vere:\n1. «Se $A$ è vero, allora $B$ è vero ($A \\to B$)»;\n2. «Se $B$ è vero, allora $C$ è falso ($B \\to \\neg C$)»;\n3. «Se $D$ è falso, allora $C$ è vero ($\\neg D \\to C$)»;\n4. «$A$ è vero».\nQuale affermazione è sicuramente VERA?",
+    rispostaCorretta: "$D$ è necessariamente VERO",
+    risposteErrate: [
+      "$D$ è necessariamente FALSO",
+      "$C$ è necessariamente VERO",
+      "$B$ è necessariamente FALSO",
+      "Non si può dedurre il valore di verità di $D$"
+    ],
+    spiegazione: "1) Da $A$ e $A \\to B$ segue $B$. 2) Da $B$ e $B \\to \\neg C$ segue $\\neg C$ ($C$ è falso). 3) Dalla regola $\\neg D \\to C$, per contronominale abbiamo $\\neg C \\to \\neg(\\neg D) \\equiv \\neg C \\to D$. Poiché $\\neg C$ è vero, segue necessariamente che $D$ è VERO.",
+    fonte: "Lotto L2 del progetto — L2-49 (ID 736)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  },
+  {
+    id: 737,
+    materia: "Logica",
+    difficolta: "medio-difficile",
+    domanda: "In un sistema formale di classificazione robotica sono stabilite cinque premesse assunte come vere:\n1. «Un robot è classificato Alpha ($A$) solo se possiede sensori laser ($L$)» ($A \\to L$);\n2. «Possedere sensori laser ($L$) e batteria al grafene ($G$) è condizione sufficiente per essere classificato Explorer ($E$)» ($(L \\land G) \\to E$);\n3. «Un robot è classificato Explorer ($E$) solo se ha superato il test di navigazione ($N$)» ($E \\to N$);\n4. «Il robot R-100 è classificato Alpha ($A$) e possiede una batteria al grafene ($G$)» ($A \\land G$);\n5. «Il robot R-100 NON ha superato il test di navigazione ($\\neg N$)».\nQuale conclusione segue necessariamente dall’analisi logica dell’insieme delle premesse 1–5?",
+    rispostaCorretta: "L’insieme delle premesse 1–5 è logicamente incoerente (contraddittorio), poiché dalle premesse 1, 2, 3 e 4 si deduce che R-100 soddisfa $N$, in contraddizione diretta con la premessa 5 ($\\neg N$)",
+    risposteErrate: [
+      "Le premesse 1–5 sono reciprocamente compatibili e dimostrano che R-100 non possiede sensori laser ($\\neg L$)",
+      "Il robot R-100 è classificato Alpha ma non può essere classificato Explorer",
+      "La batteria al grafene è una condizione necessaria per la classificazione Alpha",
+      "Non è possibile stabilire se vi sia contraddizione senza informazioni aggiuntive sul software di navigazione"
+    ],
+    spiegazione: "Ricostruzione formale passo-passo della contraddizione:\n1) Dalla premessa 4 si ha $A$ e $G$;\n2) Da $A$ e dalla premessa 1 ($A \\to L$), per Modus Ponens segue $L$;\n3) Da $L$ e $G$, per introduzione della congiunzione segue $L \\land G$;\n4) Da $L \\land G$ e dalla premessa 2 ($(L \\land G) \\to E$), per Modus Ponens segue $E$;\n5) Da $E$ e dalla premessa 3 ($E \\to N$), per Modus Ponens segue $N$;\n6) La premessa 5 asserisce categoricamente $\\neg N$.\nPoiché dall’insieme si deriva contemporaneamente $N$ e $\\neg N$, l’insieme delle premesse 1–5 è formalmente insoddisfacibile (contraddittorio).",
+    fonte: "Lotto L2 del progetto — L2-50 (ID 737)",
+    numeroVolteProposta: 0,
+    numeroRisposteCorrette: 0,
+    numeroRisposteErrate: 0
+  }
 ];
 
 export default questionBank;

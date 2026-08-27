@@ -29,9 +29,9 @@ function section(title) {
 }
 
 section('Deduplicazione e Catalogo');
-check(rawQuestionBank.length === 682, 'La banca dati fisica contiene 682 record totali');
-check(QUESTION_CATALOG_SUMMARY.totalCanonicalQuestions === 682, 'Il catalogo canonico contiene 682 domande');
-check(QUESTION_CATALOG_SUMMARY.totalTolcPoolQuestions === 647, 'Il pool attivo TOLC-I contiene 647 quesiti');
+check(rawQuestionBank.length === 732, 'La banca dati fisica contiene 732 record totali');
+check(QUESTION_CATALOG_SUMMARY.totalCanonicalQuestions === 732, 'Il catalogo canonico contiene 732 domande');
+check(QUESTION_CATALOG_SUMMARY.totalTolcPoolQuestions === 697, 'Il pool attivo TOLC-I contiene 697 quesiti');
 check(QUESTION_CATALOG_SUMMARY.totalLegacyExcluded === 35, 'I record legacy esclusi sono esattamente 35');
 check(QUESTION_CATALOG_SUMMARY.totalExactDuplicateGroups === 0, 'Non sono più presenti gruppi di duplicati certi');
 check(QUESTION_CATALOG_SUMMARY.totalExactDuplicateRows === 0, 'Non sono più presenti copie ridondanti');

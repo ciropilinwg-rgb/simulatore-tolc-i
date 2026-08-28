@@ -6,10 +6,15 @@ import {
   syncUserProfile
 } from './firebaseRepository.js';
 import {
+  computeStudyFramework,
+  formatCoveragePercentage,
   getQuestionById,
+  getTolcPoolQuestions,
   mergeQuestionStatsByCanonicalId,
   QUESTION_BANK_VERSION
 } from '../data/questionCatalog.js';
+
+export { computeStudyFramework, formatCoveragePercentage };
 
 function toNumber(value) {
   return Number.isFinite(value) ? value : Number(value || 0);
@@ -131,9 +136,12 @@ export async function getStatsOverview() {
       })
       .slice(0, 5);
 
+  const studyFramework = computeStudyFramework(mergedStatsMap, getTolcPoolQuestions());
+
   return {
     overview: {
       user: buildAppUser(currentUser, profile),
+      studyFramework,
       totals,
       hardestQuestions,
       leastPracticedQuestions

@@ -1,6 +1,12 @@
 import questionBank from '../data/questionBank.js';
 import { getQuestions, getAllQuestions, getMaterie, getQuestionsByMaterie, getQuestionById } from '../data/dataService.js';
-import { getRawQuestionById, QUESTION_CATALOG_SUMMARY } from '../data/questionCatalog.js';
+import {
+  computeStudyFramework,
+  formatCoveragePercentage,
+  getRawQuestionById,
+  getTolcPoolQuestions,
+  QUESTION_CATALOG_SUMMARY
+} from '../data/questionCatalog.js';
 import { prepareShuffledOptions } from '../utils/shuffle.js';
 import {
   createEmptyAnswers,
@@ -1761,6 +1767,70 @@ const activeTotal = activeQuestionsFromService.length;
 
 check(baseCount + m1Count + m2Count + m3Count + m4Count + m5Count + s1Count + s2Count + s3Count + s4Count + s5Count + l1Count + l2Count + l3Count + l4Count + c1Count + c2Count + c3Count + c4Count + c5Count === physicalTotal, `Uguaglianza fisica verificata: ${baseCount} (base) + ${m1Count} (M1) + ${m2Count} (M2) + ${m3Count} (M3) + ${m4Count} (M4) + ${m5Count} (M5) + ${s1Count} (S1) + ${s2Count} (S2) + ${s3Count} (S3) + ${s4Count} (S4) + ${s5Count} (S5) + ${l1Count} (L1) + ${l2Count} (L2) + ${l3Count} (L3) + ${l4Count} (L4) + ${c1Count} (C1) + ${c2Count} (C2) + ${c3Count} (C3) + ${c4Count} (C4) + ${c5Count} (C5) = ${physicalTotal} (fisici)`);
 check(physicalTotal - legacyCount === activeTotal, `Uguaglianza attiva verificata: ${physicalTotal} (fisici) - ${legacyCount} (legacy) = ${activeTotal} (attivi)`);
+
+// ─── 9. QUADRO DI STUDIO (STUDY FRAMEWORK METRICS) ───
+section('9. Quadro di Studio (Copertura e Conoscenza Banca Dati)');
+
+const fwInitial = computeStudyFramework({});
+check(fwInitial.totaleDomandeAttiveBancaDati === 1000, 'Quadro di studio: totale banca dati ricavato dinamicamente (1000)');
+check(fwInitial.domandeConosciute90 === 0, 'Quadro di studio iniziale: 0 domande conosciute >= 90%');
+check(fwInitial.maiRisposte === 1000, 'Quadro di studio iniziale: 1000 domande mai risposte');
+check(fwInitial.conoscenzaBancaDati === 0 && fwInitial.conoscenzaBancaDatiFormatted === '0%', 'Quadro di studio iniziale: 0% conoscenza banca dati');
+
+// Caso 1: 1 corretta / 1 totale -> 100% (conosciuta >= 90%)
+const fwCase1 = computeStudyFramework({
+  '1': { numeroRisposteCorrette: 1, numeroRisposteErrate: 0 }
+});
+check(fwCase1.domandeConosciute90 === 1, '1 corretta / 1 totale (100%) -> conosciuta >= 90%');
+check(fwCase1.maiRisposte === 999, '1 domanda con risposta -> 999 mai risposte');
+check(fwCase1.conoscenzaBancaDatiFormatted === '0,1%', '1 / 1000 -> formattato come 0,1%');
+
+// Caso 2: 9 corrette / 10 totali -> 90% (conosciuta >= 90%)
+const fwCase2 = computeStudyFramework({
+  '1': { numeroRisposteCorrette: 9, numeroRisposteErrate: 1 }
+});
+check(fwCase2.domandeConosciute90 === 1, '9 corrette / 10 totali (90%) -> conosciuta >= 90%');
+
+// Caso 3: 8 corrette / 10 totali -> 80% (NON conosciuta >= 90%)
+const fwCase3 = computeStudyFramework({
+  '1': { numeroRisposteCorrette: 8, numeroRisposteErrate: 2 }
+});
+check(fwCase3.domandeConosciute90 === 0, '8 corrette / 10 totali (80%) -> NON conosciuta >= 90%');
+check(fwCase3.maiRisposte === 999, 'Domanda con 8 corrette e 2 errate -> NON mai risposta');
+
+// Caso 4: 0 corrette + 0 errate (domanda solo mostrata)
+const fwCase4 = computeStudyFramework({
+  '1': { numeroVolteProposta: 10, numeroRisposteCorrette: 0, numeroRisposteErrate: 0 }
+});
+check(fwCase4.domandeConosciute90 === 0, '0 corrette + 0 errate -> NON conosciuta >= 90%');
+check(fwCase4.maiRisposte === 1000, 'Domanda solo mostrata ma senza risposte -> rimane tra le Mai risposte (1000/1000)');
+
+// Caso 5: 1 errata / 1 totale
+const fwCase5 = computeStudyFramework({
+  '1': { numeroRisposteCorrette: 0, numeroRisposteErrate: 1 }
+});
+check(fwCase5.domandeConosciute90 === 0, '1 errata / 1 totale -> NON conosciuta');
+check(fwCase5.maiRisposte === 999, '1 errata / 1 totale -> NON Mai risposta (risposta data)');
+
+// Caso 6: Invarianti matematiche
+check(fwCase1.domandeConosciute90 <= fwCase1.totaleDomandeAttiveBancaDati, 'Invariante: domandeConosciute90 <= totaleDomandeAttiveBancaDati');
+check(fwCase1.maiRisposte >= 0 && fwCase1.maiRisposte <= fwCase1.totaleDomandeAttiveBancaDati, 'Invariante: 0 <= maiRisposte <= totaleDomandeAttiveBancaDati');
+check(fwCase1.conoscenzaBancaDati >= 0 && fwCase1.conoscenzaBancaDati <= 100, 'Invariante: 0 <= conoscenzaBancaDati <= 100');
+
+// Caso 7: Formattazione percentuali
+check(formatCoveragePercentage(0) === '0%', 'formatCoveragePercentage(0) = "0%"');
+check(formatCoveragePercentage(0.1) === '0,1%', 'formatCoveragePercentage(0.1) = "0,1%"');
+check(formatCoveragePercentage(0.2) === '0,2%', 'formatCoveragePercentage(0.2) = "0,2%"');
+check(formatCoveragePercentage(1.5) === '1,5%', 'formatCoveragePercentage(1.5) = "1,5%"');
+check(formatCoveragePercentage(17.8) === '17,8%', 'formatCoveragePercentage(17.8) = "17,8%"');
+check(formatCoveragePercentage(100) === '100%', 'formatCoveragePercentage(100) = "100%"');
+
+// Caso 8: Record legacy esclusi dal pool TOLC-I (es. ID 315 con excludedFromTolcPool: true)
+const fwLegacy = computeStudyFramework({
+  '315': { numeroRisposteCorrette: 10, numeroRisposteErrate: 0 }
+});
+check(fwLegacy.domandeConosciute90 === 0, 'I quesiti legacy esclusi non incrementano domandeConosciute90 nel pool TOLC-I');
+check(fwLegacy.totaleDomandeAttiveBancaDati === 1000, 'I quesiti legacy esclusi non alterano il totale attivo (1000)');
 
 console.log(`\nRisultato testQuiz.mjs: ${passed} test passati, ${failed} falliti.`);
 

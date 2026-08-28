@@ -186,3 +186,49 @@ export function mergeQuestionStatsByCanonicalId(items = []) {
 export function normalizeQuestionAnswerText(value = '') {
   return normalizeComparableText(value);
 }
+
+export function formatCoveragePercentage(value) {
+  const num = Number(value || 0);
+  if (num <= 0) return '0%';
+  if (num >= 100) return '100%';
+  const formatted = num % 1 === 0 ? num.toFixed(0) : num.toFixed(1);
+  return `${formatted.replace('.', ',')}%`;
+}
+
+export function computeStudyFramework(mergedStatsMap = {}, tolcPoolQuestions = null) {
+  const pool = Array.isArray(tolcPoolQuestions) && tolcPoolQuestions.length > 0
+    ? tolcPoolQuestions
+    : getTolcPoolQuestions();
+
+  const totaleDomandeAttiveBancaDati = pool.length;
+  let domandeConosciute90 = 0;
+  let domandeConAlmenoUnaRisposta = 0;
+
+  pool.forEach((question) => {
+    const item = mergedStatsMap[String(question.id)];
+    const corrette = Number(item?.numeroRisposteCorrette || 0);
+    const errate = Number(item?.numeroRisposteErrate || 0);
+    const totalAnswers = corrette + errate;
+
+    if (totalAnswers > 0) {
+      domandeConAlmenoUnaRisposta += 1;
+      const accuracy = (corrette / totalAnswers) * 100;
+      if (accuracy >= 90) {
+        domandeConosciute90 += 1;
+      }
+    }
+  });
+
+  const maiRisposte = Math.max(0, totaleDomandeAttiveBancaDati - domandeConAlmenoUnaRisposta);
+  const conoscenzaBancaDati = totaleDomandeAttiveBancaDati > 0
+    ? (domandeConosciute90 / totaleDomandeAttiveBancaDati) * 100
+    : 0;
+
+  return {
+    conoscenzaBancaDati,
+    conoscenzaBancaDatiFormatted: formatCoveragePercentage(conoscenzaBancaDati),
+    domandeConosciute90,
+    maiRisposte,
+    totaleDomandeAttiveBancaDati
+  };
+}

@@ -1,25 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext.jsx';
-import MathText from '../components/MathText.jsx';
-import { getStatsHistory, getStatsOverview } from '../services/statsService.js';
+import { getStatsOverview } from '../services/statsService.js';
 import './StatsPage.css';
-
-function formatMode(mode) {
-  switch (mode) {
-    case 'HIGHEST_ERROR_RATE':
-      return 'Maggiori errori';
-    case 'LEAST_PRACTICED':
-      return 'Meno svolte';
-    case 'RANDOM':
-    default:
-      return 'Casuale';
-  }
-}
 
 export default function StatsPage() {
   const { legacyStatus } = useAuth();
   const [overview, setOverview] = useState(null);
-  const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -28,14 +14,10 @@ export default function StatsPage() {
 
     async function load() {
       try {
-        const [overviewResponse, historyResponse] = await Promise.all([
-          getStatsOverview(),
-          getStatsHistory()
-        ]);
+        const overviewResponse = await getStatsOverview();
 
         if (!active) return;
         setOverview(overviewResponse.overview || null);
-        setHistory(historyResponse.items || []);
       } catch (apiError) {
         if (!active) return;
         const code = String(apiError?.code || '');
@@ -44,7 +26,7 @@ export default function StatsPage() {
         setError({
           title: isPermissionIssue
             ? 'Le statistiche personali non sono ancora disponibili'
-            : 'Non riesco a caricare lo storico personale',
+            : 'Non riesco a caricare il quadro di studio',
           message: isPermissionIssue
             ? 'Sto ancora sincronizzando l’accesso sicuro del tuo account con Firebase. Ricarica la pagina oppure esci e rientra una sola volta.'
             : apiError.message
@@ -62,13 +44,21 @@ export default function StatsPage() {
     };
   }, []);
 
+  const framework = overview?.studyFramework || {
+    conoscenzaBancaDatiFormatted: '0%',
+    domandeConosciute90: 0,
+    maiRisposte: 0,
+    totaleDomandeAttiveBancaDati: 0
+  };
+
   return (
     <div className="stats-page">
       <div className="stats-page__header">
-        <p className="eyebrow">Statistiche personali</p>
-        <h1 className="stats-page__title">Storico e progressi del tuo account</h1>
+        <p className="eyebrow">Quadro di studio</p>
+        <h1 className="stats-page__title">Copertura e conoscenza della banca dati</h1>
         <p className="stats-page__subtitle">
-          Le metriche qui sotto sono calcolate solo sul tuo profilo autenticato.
+          Il quadro di studio misura la copertura effettiva della banca dati TOLC-I,
+          i quesiti consolidati e le domande ancora mai affrontate con una risposta.
         </p>
       </div>
 
@@ -78,7 +68,7 @@ export default function StatsPage() {
         </div>
       ) : null}
 
-      {loading ? <div className="stats-page__state page-card">Sto caricando il tuo storico personale.</div> : null}
+      {loading ? <div className="stats-page__state page-card">Sto caricando il tuo quadro di studio.</div> : null}
       {error ? (
         <section className="stats-page__state stats-page__state--error page-card">
           <p className="stats-page__state-label">Area statistiche</p>
@@ -88,120 +78,35 @@ export default function StatsPage() {
       ) : null}
 
       {overview ? (
-        <>
-          <section className="stats-page__grid">
+        <div className="stats-page__framework">
+          <section className="stats-page__grid stats-page__grid--pair">
             <article className="stats-page__card stats-page__card--summary page-card">
-              <span className="stats-page__label">Profilo</span>
-              <h2 className="stats-page__card-title">{overview.user.firstName} {overview.user.lastName}</h2>
-              <p className="stats-page__copy">{overview.user.email}</p>
-              <p className="stats-page__copy">{overview.user.phone}</p>
+              <span className="stats-page__label">Conoscenza banca dati</span>
+              <strong className="stats-page__metric">{framework.conoscenzaBancaDatiFormatted}</strong>
+              <p className="stats-page__copy">Percentuale dei quesiti attivi conosciuti almeno al 90%.</p>
             </article>
 
             <article className="stats-page__card stats-page__card--summary page-card">
-              <span className="stats-page__label">Quiz completati</span>
-              <strong className="stats-page__metric">{overview.totals.quizCompletati}</strong>
-              <p className="stats-page__copy">Sessioni concluse e salvate nel tuo storico.</p>
-            </article>
-
-            <article className="stats-page__card stats-page__card--summary page-card">
-              <span className="stats-page__label">Accuratezza media</span>
-              <strong className="stats-page__metric">{overview.totals.accuratezzaMedia}%</strong>
-              <p className="stats-page__copy">Calcolata solo sulle esercitazioni del tuo account.</p>
-            </article>
-
-            <article className="stats-page__card stats-page__card--summary page-card">
-              <span className="stats-page__label">Domande monitorate</span>
-              <strong className="stats-page__metric">{overview.totals.domandeMonitorate}</strong>
-              <p className="stats-page__copy">Quesiti con statistiche personali registrate.</p>
+              <span className="stats-page__label">Domande conosciute ≥90%</span>
+              <strong className="stats-page__metric">{framework.domandeConosciute90} / {framework.totaleDomandeAttiveBancaDati}</strong>
+              <p className="stats-page__copy">Quesiti con accuratezza consolidata pari o superiore al 90%.</p>
             </article>
           </section>
 
-          <section className="stats-page__grid stats-page__grid--wide">
-            <article className="stats-page__card page-card">
-              <span className="stats-page__label">Riepilogo risposte</span>
-              <div className="stats-page__totals">
-                <div>
-                  <strong>{overview.totals.risposteCorrette}</strong>
-                  <span>Corrette</span>
-                </div>
-                <div>
-                  <strong>{overview.totals.risposteErrate}</strong>
-                  <span>Errate</span>
-                </div>
-                <div>
-                  <strong>{overview.totals.nonRisposte}</strong>
-                  <span>Non risposte</span>
-                </div>
-                <div>
-                  <strong>{overview.totals.domandeNeiQuiz}</strong>
-                  <span>Domande nei quiz</span>
-                </div>
-              </div>
+          <section className="stats-page__grid stats-page__grid--pair">
+            <article className="stats-page__card stats-page__card--summary page-card">
+              <span className="stats-page__label">Mai risposte</span>
+              <strong className="stats-page__metric">{framework.maiRisposte}</strong>
+              <p className="stats-page__copy">Quesiti attivi a cui non hai ancora fornito alcuna risposta.</p>
             </article>
 
-            <article className="stats-page__card page-card">
-              <span className="stats-page__label">Maggiori errori</span>
-              <div className="stats-page__list">
-                {overview.hardestQuestions.map((item) => (
-                  <div key={item.questionId} className="stats-page__list-item">
-                    <div>
-                      <strong>{item.materia}</strong>
-                      <MathText as="p" text={item.domanda} />
-                    </div>
-                    <span>{item.percentualeErrore}% errori</span>
-                  </div>
-                ))}
-                {overview.hardestQuestions.length === 0 ? (
-                  <p className="stats-page__empty">Non ci sono ancora errori registrati nel tuo profilo.</p>
-                ) : null}
-              </div>
-            </article>
-
-            <article className="stats-page__card page-card">
-              <span className="stats-page__label">Meno svolte</span>
-              <div className="stats-page__list">
-                {overview.leastPracticedQuestions.map((item) => (
-                  <div key={item.questionId} className="stats-page__list-item">
-                    <div>
-                      <strong>{item.materia}</strong>
-                      <MathText as="p" text={item.domanda} />
-                    </div>
-                    <span>{item.numeroVolteSvolta} svolgimenti</span>
-                  </div>
-                ))}
-                {overview.leastPracticedQuestions.length === 0 ? (
-                  <p className="stats-page__empty">Non ci sono ancora domande registrate per il tuo account.</p>
-                ) : null}
-              </div>
+            <article className="stats-page__card stats-page__card--summary page-card">
+              <span className="stats-page__label">Domande in banca dati</span>
+              <strong className="stats-page__metric">{framework.totaleDomandeAttiveBancaDati}</strong>
+              <p className="stats-page__copy">Totale complessivo dei quesiti attivi nel pool TOLC-I.</p>
             </article>
           </section>
-
-          <section className="stats-page__history page-card">
-            <div className="stats-page__history-head">
-              <span className="stats-page__label">Storico esercitazioni</span>
-              <h2 className="stats-page__card-title">Ultime sessioni</h2>
-            </div>
-
-            <div className="stats-page__history-table">
-              {history.map((attempt) => (
-                <div key={attempt.sessionKey} className="stats-page__history-row">
-                  <div>
-                    <strong>{formatMode(attempt.selectionMode)}</strong>
-                    <p>{attempt.selectedSubjects.join(', ') || 'Tutte le materie'}</p>
-                  </div>
-                  <span>{attempt.totalQuestions} quesiti</span>
-                  <span>{attempt.correctCount} corrette</span>
-                  <span>{attempt.wrongCount} errate</span>
-                  <span>{attempt.percentage}%</span>
-                  <span>{new Date(attempt.finishedAt).toLocaleDateString('it-IT')}</span>
-                </div>
-              ))}
-              {history.length === 0 ? (
-                <p className="stats-page__empty">Completa la prima esercitazione per iniziare a costruire lo storico personale.</p>
-              ) : null}
-            </div>
-          </section>
-        </>
+        </div>
       ) : null}
     </div>
   );

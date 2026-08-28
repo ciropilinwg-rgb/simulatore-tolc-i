@@ -130,16 +130,11 @@ export default function HomePage() {
             {framework ? (
               <>
                 <div className="home-preview__grid">
-                  <div className="home-preview__metric-card">
+                  <div className="home-preview__metric-card home-preview__metric-card--knowledge">
                     <span className="home-preview__metric-label">Conoscenza banca dati</span>
-                    <strong className="home-preview__metric-value">{framework.conoscenzaBancaDatiFormatted}</strong>
-                    <span className="home-preview__metric-copy">Percentuale dei quesiti attivi conosciuti almeno al 90%.</span>
-                  </div>
-
-                  <div className="home-preview__metric-card">
-                    <span className="home-preview__metric-label">Domande conosciute ≥90%</span>
                     <strong className="home-preview__metric-value">{framework.domandeConosciute90} / {framework.totaleDomandeAttiveBancaDati}</strong>
-                    <span className="home-preview__metric-copy">Quesiti con almeno il 90% di risposte corrette.</span>
+                    <span className="home-preview__metric-percentage">{framework.conoscenzaBancaDatiFormatted.replace('%', ' %')}</span>
+                    <span className="home-preview__metric-copy">Domande con almeno il 90% di risposte corrette</span>
                   </div>
 
                   <div className="home-preview__metric-card">

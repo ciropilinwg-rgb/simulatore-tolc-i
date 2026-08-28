@@ -1,39 +1,22 @@
 // HomePage — Schermata iniziale
 
 import { useEffect, useState } from 'react';
-import MathText from '../components/MathText.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
 import { useQuiz } from '../context/QuizContext.jsx';
 import { QUESTION_CATALOG_SUMMARY } from '../data/questionCatalog.js';
-import { getStatsHistory, getStatsOverview } from '../services/statsService.js';
+import { getStatsOverview } from '../services/statsService.js';
 import './HomePage.css';
-
-function formatMode(mode) {
-  switch (mode) {
-    case 'HIGHEST_ERROR_RATE':
-      return 'Maggiori errori';
-    case 'LEAST_PRACTICED':
-      return 'Meno svolte';
-    case 'RANDOM':
-    default:
-      return 'Casuale';
-  }
-}
 
 export default function HomePage() {
   const { goToConfig, isLoading, allQuestions, availableMaterie } = useQuiz();
   const { legacyStatus } = useAuth();
   const [overview, setOverview] = useState(null);
-  const [history, setHistory] = useState([]);
   const [statsLoading, setStatsLoading] = useState(true);
   const [statsError, setStatsError] = useState(null);
 
   const questionBankCount = allQuestions.length || QUESTION_CATALOG_SUMMARY.totalTolcPoolQuestions || QUESTION_CATALOG_SUMMARY.totalCanonicalQuestions;
   const subjectCount = availableMaterie.length || 4;
-  const latestSession = history[0] || null;
-  const focusQuestions = overview?.hardestQuestions?.length
-    ? overview.hardestQuestions.slice(0, 2)
-    : overview?.leastPracticedQuestions?.slice(0, 2) || [];
+  const framework = overview?.studyFramework || null;
 
   const handleStart = () => {
     goToConfig();
@@ -44,19 +27,15 @@ export default function HomePage() {
 
     async function loadStats() {
       try {
-        const [overviewResponse, historyResponse] = await Promise.all([
-          getStatsOverview(),
-          getStatsHistory(3)
-        ]);
+        const overviewResponse = await getStatsOverview();
 
         if (!active) return;
         setOverview(overviewResponse.overview || null);
-        setHistory(historyResponse.items || []);
         setStatsError(null);
       } catch (apiError) {
         if (!active) return;
         setStatsError(
-          apiError?.message || 'Non riesco a caricare il riepilogo personale in questo momento.'
+          apiError?.message || 'Non riesco a caricare il quadro di studio in questo momento.'
         );
       } finally {
         if (active) {
@@ -124,10 +103,9 @@ export default function HomePage() {
           <div className="home-preview page-card">
             <div className="home-preview__head">
               <span className="home-preview__label">Quadro di studio</span>
-              <h2 className="home-preview__title">Tutto resta nel tuo account</h2>
+              <h2 className="home-preview__title">Copertura e conoscenza della banca dati</h2>
               <p className="home-preview__copy">
-                Storico, accuratezza, errori ricorrenti e priorità di ripasso vengono
-                letti subito senza cambiare flusso.
+                Copertura qualificata del pool TOLC-I, quesiti consolidati e domande ancora mai affrontate con una risposta.
               </p>
             </div>
 
@@ -139,7 +117,7 @@ export default function HomePage() {
 
             {statsLoading ? (
               <div className="home-preview__state">
-                Sto caricando il riepilogo personale del tuo account.
+                Sto caricando il quadro di studio del tuo account.
               </div>
             ) : null}
 
@@ -149,83 +127,37 @@ export default function HomePage() {
               </div>
             ) : null}
 
-            {overview ? (
+            {framework ? (
               <>
-                <dl className="home-preview__summary-list">
-                  <div className="home-preview__summary-row">
-                    <dt>Quiz completati</dt>
-                    <dd>{overview.totals.quizCompletati}</dd>
+                <div className="home-preview__grid">
+                  <div className="home-preview__metric-card">
+                    <span className="home-preview__metric-label">Conoscenza banca dati</span>
+                    <strong className="home-preview__metric-value">{framework.conoscenzaBancaDatiFormatted}</strong>
+                    <span className="home-preview__metric-copy">Percentuale dei quesiti attivi conosciuti almeno al 90%.</span>
                   </div>
-                  <div className="home-preview__summary-row">
-                    <dt>Accuratezza media</dt>
-                    <dd>{overview.totals.accuratezzaMedia}%</dd>
-                  </div>
-                  <div className="home-preview__summary-row">
-                    <dt>Corrette</dt>
-                    <dd>{overview.totals.risposteCorrette}</dd>
-                  </div>
-                  <div className="home-preview__summary-row">
-                    <dt>Errate</dt>
-                    <dd>{overview.totals.risposteErrate}</dd>
-                  </div>
-                  <div className="home-preview__summary-row">
-                    <dt>Domande monitorate</dt>
-                    <dd>{overview.totals.domandeMonitorate}</dd>
-                  </div>
-                  <div className="home-preview__summary-row">
-                    <dt>Non risposte</dt>
-                    <dd>{overview.totals.nonRisposte}</dd>
-                  </div>
-                  <div className="home-preview__summary-row">
-                    <dt>Domande nei quiz</dt>
-                    <dd>{overview.totals.domandeNeiQuiz}</dd>
-                  </div>
-                </dl>
 
-                <div className="home-preview__block">
-                  <span className="home-preview__label">Ultima sessione</span>
-                  {latestSession ? (
-                    <div className="home-preview__snapshot">
-                      <div className="home-preview__snapshot-row">
-                        <span>Modalità</span>
-                        <strong>{formatMode(latestSession.selectionMode)}</strong>
-                      </div>
-                      <div className="home-preview__snapshot-row">
-                        <span>Materie</span>
-                        <strong>{latestSession.selectedSubjects.join(', ') || 'Tutte le materie'}</strong>
-                      </div>
-                      <div className="home-preview__snapshot-row">
-                        <span>Risultato</span>
-                        <strong>{latestSession.percentage}%</strong>
-                      </div>
-                    </div>
-                  ) : (
-                    <p className="home-preview__empty">
-                      Completa la prima esercitazione per iniziare a riempire il tuo storico personale.
-                    </p>
-                  )}
-                </div>
+                  <div className="home-preview__metric-card">
+                    <span className="home-preview__metric-label">Domande conosciute ≥90%</span>
+                    <strong className="home-preview__metric-value">{framework.domandeConosciute90} / {framework.totaleDomandeAttiveBancaDati}</strong>
+                    <span className="home-preview__metric-copy">Quesiti con almeno il 90% di risposte corrette.</span>
+                  </div>
 
-                <div className="home-preview__block">
-                  <span className="home-preview__label">Focus consigliato</span>
-                  <div className="home-preview__list">
-                    {focusQuestions.map((item) => (
-                      <div key={`${item.questionId}-${item.materia}`} className="home-preview__list-item">
-                        <strong>{item.materia}</strong>
-                        <MathText as="p" text={item.domanda} />
-                      </div>
-                    ))}
-                    {focusQuestions.length === 0 ? (
-                      <p className="home-preview__empty">
-                        Quando inizierai a svolgere quiz, qui compariranno subito gli argomenti da ripassare.
-                      </p>
-                    ) : null}
+                  <div className="home-preview__metric-card">
+                    <span className="home-preview__metric-label">Mai risposte</span>
+                    <strong className="home-preview__metric-value">{framework.maiRisposte}</strong>
+                    <span className="home-preview__metric-copy">Quesiti attivi a cui non hai ancora fornito alcuna risposta.</span>
+                  </div>
+
+                  <div className="home-preview__metric-card">
+                    <span className="home-preview__metric-label">Domande in banca dati</span>
+                    <strong className="home-preview__metric-value">{framework.totaleDomandeAttiveBancaDati}</strong>
+                    <span className="home-preview__metric-copy">Totale complessivo dei quesiti attivi nel pool TOLC-I.</span>
                   </div>
                 </div>
 
                 <div className="home-preview__footer">
                   <span>Banca dati aggiornata</span>
-                  <strong>{questionBankCount} quesiti TOLC-I</strong>
+                  <strong>{framework.totaleDomandeAttiveBancaDati} quesiti TOLC-I</strong>
                 </div>
               </>
             ) : null}

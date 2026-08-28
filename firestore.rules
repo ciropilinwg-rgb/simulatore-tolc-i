@@ -70,8 +70,8 @@ service cloud.firestore {
       && isNonNegativeInteger(request.resource.data.numeroRisposteCorrette)
       && isNonNegativeInteger(request.resource.data.numeroRisposteErrate)
       && isNonNegativeNumber(request.resource.data.percentualeErrore)
-      && isOptionalString(request.resource.data.lastShownAt, 40)
-      && isOptionalString(request.resource.data.lastAnsweredAt, 40)
+      && isOptionalString(request.resource.data.get('lastShownAt', null), 40)
+      && isOptionalString(request.resource.data.get('lastAnsweredAt', null), 40)
       && isRequiredString(request.resource.data.updatedAt, 40);
     }
 
